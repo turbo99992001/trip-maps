@@ -4,7 +4,14 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="theme-color" content="#0d47a1">
-<link rel="icon" href="data:,">
+<link rel="icon" type="image/png" sizes="192x192" href="icons/icon-192.png">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="安宏行程">
+<meta name="application-name" content="安宏行程">
 <title>安宏旅行社｜互動行程（景點＋餐廳）</title>
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
 <style>
@@ -51,7 +58,8 @@ main[hidden],#bnav[hidden]{display:none!important}
 .mc{font-family:ui-monospace,Menlo,monospace;background:#f1f3f5;padding:2px 6px;border-radius:6px;font-size:13px}
 .todo{color:#c62828;font-weight:700}
 .pk{border-top:1px solid var(--line);padding-top:6px;margin-top:6px}.pk:first-of-type{border-top:0;margin-top:0;padding-top:0}
-.pkmeta{font-size:12px;color:var(--mut)}
+.pkmeta{font-size:12px;color:var(--mut)}.mcsrc{font-size:11px;color:#8a99a8}.alts a{color:var(--rest)}
+#swbar{position:fixed;left:50%;bottom:calc(70px + env(safe-area-inset-bottom));transform:translateX(-50%);z-index:3000;background:#0d47a1;color:#fff;padding:8px 12px;border-radius:10px;box-shadow:0 4px 14px rgba(0,0,0,.3);display:none;gap:8px;align-items:center;font-size:14px}#swbar.on{display:flex}#swbar span,#swbar button{white-space:nowrap}#swbar button{border:0;border-radius:6px;padding:5px 10px;background:#fff;color:#0d47a1;font-weight:700}
 .days{display:flex;gap:4px;overflow-x:auto;padding-bottom:6px;margin-bottom:6px;-webkit-overflow-scrolling:touch}
 .days button{flex:0 0 auto;border:1px solid var(--line);background:#fff;border-radius:8px;padding:4px 8px;font-size:12px;cursor:pointer;line-height:1.3}
 .days button.on{background:var(--pri);color:#fff;border-color:var(--pri)}
@@ -60,6 +68,9 @@ main[hidden],#bnav[hidden]{display:none!important}
 .it{display:flex;gap:6px;align-items:flex-start}.it .ord{flex:0 0 26px;height:26px;border-radius:13px;background:var(--spot);color:#fff;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700}
 .it.rest .ord{background:var(--rest)}.it .body{flex:1;min-width:0}
 .tn{display:flex;gap:6px;margin:6px 0;flex-wrap:wrap}.tn input{border:1px solid var(--line);border-radius:6px;padding:4px 6px;font-size:13px;min-width:0}.tn input[type=time]{flex:0 0 auto;width:110px}.tn input[type=text]{flex:1 1 140px}
+.att{border:1px solid #ffe0b2;background:#fff8f0;border-radius:8px;padding:8px;margin-top:8px}.att .row{display:flex;flex-wrap:wrap;align-items:center;gap:6px;margin:4px 0}.atth{font-size:14px}.atth b{cursor:pointer;color:#e65100}
+.alert{color:#c62828;font-weight:700;font-size:13px;margin:4px 0}
+.mergedicon{background:#1e88e5;border:3px solid #ef6c00;border-radius:50%;width:24px;height:24px;line-height:18px;text-align:center;font-size:12px;box-shadow:0 1px 3px rgba(0,0,0,.4)}
 .drive{font-size:12px;color:#455a64;margin:2px 0 6px 32px}
 .tools{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0}
 .tools h4{flex:1 1 100%;margin:8px 0 0;font-size:13px;color:var(--mut)}
@@ -156,6 +167,9 @@ pre.json{background:#f4f6f8;border-radius:8px;padding:8px;font-size:11px;max-hei
     <h4>定案</h4>
     <button class="btn ok" id="finalBtn">✅ 送出定案（final.json）</button>
     <button class="btn warn" id="reset">重設為建議行程（本路線）</button>
+    <h4>離線使用（加到主畫面）</h4>
+    <label class="cnt"><input type="checkbox" id="tileCache"> 離線保存看過的地圖圖磚（最多 400 張）</label>
+    <div class="cnt" id="swState"></div>
    </div>
    <div class="cnt" id="storeNote"></div>
   </div>
@@ -176,11 +190,12 @@ pre.json{background:#f4f6f8;border-radius:8px;padding:8px;font-size:11px;max-hei
 </nav>
 <div id="modal"><div class="box"><button class="x" id="mx" aria-label="關閉">×</button><div id="mbody"></div></div></div>
 <div id="toast"></div>
+<div id="swbar" role="status"><span>有新版本可用</span><button id="swUpd">更新</button><button id="swLater" aria-label="稍後">稍後</button></div>
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
 <script>
 (function(){
 "use strict";
-const APPV="plan-multi-1.0";
+const APPV="plan-multi-1.2";
 const CAT={popular:"熱門",natural:"自然絕景",shrine:"神社寺院",historic:"歷史",onsen:"溫泉",hidden:"私房",food:"美食",experience:"親子／體驗",anime:"動漫",anime_game:"🎮 動漫・遊戲周邊",festival:"活動／花季"};
 const MEAL={lunch:"午餐",dinner:"晚餐",breakfast:"早餐",cafe:"甜點咖啡",snack:"甜點咖啡／小吃"};
 const $=s=>document.querySelector(s), esc=s=>String(s==null?"":s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
@@ -244,24 +259,73 @@ function normRest(r){
 }
 function get(it){return it.type==="restaurant"?RS[it.id]:SP[it.id];}
 /* ---------- itinerary ---------- */
+/* ---------- 同一站（same_stop_as）與建議時間／插入位置（restaurant_plan v1.2 選用欄位） ---------- */
+let SAME={}, PLANINFO={};
+function indexPlan(){ SAME={}; PLANINFO={}; if(!RPLAN) return;
+ for(const r of Object.keys(RPLAN)){ if(!Array.isArray(RPLAN[r])) continue; RPLAN[r].forEach(dd=>(dd.items||[]).forEach(x=>{ if(!x||!x.id) return; PLANINFO[r+"|"+dd.day+"|"+x.id]=x; if(x.same_stop_as&&(x.type||"restaurant")==="restaurant") SAME[x.id]=x.same_stop_as; })); }
+ if(D&&Array.isArray(D.spots)) D.spots.forEach(s=>{ if(s&&s.duplicate_of&&!SAME[s.duplicate_of]) SAME[s.duplicate_of]=s.id; }); }
+function pinfo(r,d,id){return PLANINFO[r+"|"+d+"|"+id]||null;}
+function sameOf(it){return it&&it.type==="restaurant"?(it.same_stop_as||SAME[it.id]||null):null;}
+function planSpotIds(r,d){const di=dayInfo(r,d); return new Set(di?di.items.map(x=>x.id):[]);}
+/* 把一天的項目分成「站」：same_stop_as 指到的景點在當天 spot_plan → 餐廳掛在景點下（同一站）；
+   景點已不在 spot_plan（景點部移除）但使用者行程仍有 → 以餐廳版為準、隱藏景點版。 */
+function stopsOf(arr,r,d){
+ const has=new Set(arr.filter(x=>x.type==="spot").map(x=>x.id)); const ps=planSpotIds(r,d);
+ const attachTo={}, hide=new Set();
+ arr.forEach((x,i)=>{const t=sameOf(x); if(!t||!has.has(t)) return; if(ps.has(t)) attachTo[i]=t; else hide.add(t);});
+ const stops=[], byMain={};
+ arr.forEach((x,i)=>{ if(attachTo[i]!=null) return; if(x.type==="spot"&&hide.has(x.id)) return; const s={main:x,idx:i,att:[],hid:[]}; stops.push(s); if(x.type==="spot"&&!byMain[x.id]) byMain[x.id]=s; });
+ arr.forEach((x,i)=>{ if(attachTo[i]!=null){const s=byMain[attachTo[i]]; if(s) s.att.push({x,idx:i});} });
+ arr.forEach((x,i)=>{ if(x.type==="spot"&&hide.has(x.id)){ const s=stops.find(s=>s.main.type==="restaurant"&&sameOf(s.main)===x.id); if(s) s.hid.push({x,idx:i}); else stops.push({main:x,idx:i,att:[],hid:[]}); } });
+ return stops;
+}
+function flattenStops(stops){const out=[]; stops.forEach(s=>{out.push(s.main); s.att.forEach(a=>out.push(a.x)); s.hid.forEach(h=>out.push(h.x));}); return out;}
+function pkKey(p){const m=String((p.source||"")+" "+(p.note||"")+" "+(p.name||"")).match(/(way|node|relation)\/(\d+)/); if(m) return m[1]+"/"+m[2]; if(p.lat!=null&&p.lng!=null) return (+p.lat).toFixed(4)+","+(+p.lng).toFixed(4); return "n:"+(p.name||"");}
+function mergedParkings(list){const seen=new Set(), out=[]; list.forEach(p=>{ if(!p) return; const k=p.exists===false?"none":pkKey(p); if(seen.has(k)) return; seen.add(k); out.push(p);});
+ const real=out.filter(p=>p.exists!==false); return real.length?real:out;}
 const MEAL_ORDER={breakfast:0,lunch:1,snack:2,cafe:2,dinner:3};
 function mealOf(it){if(it.meal) return it.meal; const r=it.type==="restaurant"?RS[it.id]:null; const m=r&&[].concat(r.meal||[]); return m&&m.length===1?m[0]:null;}
 function mergeByMeal(arr,items){
- arr=arr.slice();
- (items||[]).forEach(x=>{ if(!x||!x.id) return; const it={type:x.type||"restaurant",id:String(x.id)}; if(x.meal) it.meal=x.meal;
-  if(it.type==="restaurant"&&!RS[it.id]) return;
-  if(arr.some(y=>y.type===it.type&&y.id===it.id)) return;
+ arr=arr.slice(); const pending=[];
+ const at=id=>arr.findIndex(y=>y.id===id);
+ const afterGroup=i=>{let j=i+1; const mid=arr[i].id; while(j<arr.length&&arr[j].type==="restaurant"&&sameOf(arr[j])===mid) j++; return j;};
+ const place=(it,x,last)=>{
+  const t=sameOf(it);
+  if(t){const i=at(t); if(i>=0&&arr[i].type==="spot"){arr.splice(afterGroup(i),0,it); return true;}}
+  if(x.insert_after){const i=at(x.insert_after); if(i>=0){arr.splice(afterGroup(i),0,it); return true;} if(!last) return false;}
+  if(x.insert_before){const i=at(x.insert_before); if(i>=0){arr.splice(i,0,it); return true;} if(!last) return false;}
   const m=it.meal; const spots=arr.filter(y=>y.type!=="restaurant").length;
   const idxOfMeal=k=>{let i=-1; arr.forEach((y,j)=>{if(y.type==="restaurant"&&mealOf(y)===k) i=j;}); return i;};
-  if(m==="breakfast"){arr.unshift(it);return;}
-  if(m==="dinner"){arr.push(it);return;}
-  if(m==="snack"||m==="cafe"){const li=idxOfMeal("lunch"); if(li>=0){arr.splice(li+1,0,it);return;}}
-  if(m==="lunch"){const si=idxOfMeal("snack"); if(si>=0){arr.splice(si,0,it);return;}}
-  let cnt=0,pos=arr.length; const half=Math.ceil(spots/2);
-  if(half===0){pos=arr.findIndex(y=>y.type==="restaurant"&&mealOf(y)==="dinner"); if(pos<0) pos=arr.length;}
-  else for(let j=0;j<arr.length;j++){ if(arr[j].type!=="restaurant"){cnt++; if(cnt===half){pos=j+1; while(pos<arr.length&&arr[pos].type==="restaurant"&&MEAL_ORDER[mealOf(arr[pos])]<=MEAL_ORDER[m||"lunch"]) pos++; break;}} }
-  arr.splice(pos,0,it);
- });
+  let pos=-1;
+  if(m==="breakfast") pos=0;
+  else if(m==="dinner") pos=arr.length;
+  else if((m==="snack"||m==="cafe")&&idxOfMeal("lunch")>=0) pos=afterGroup(idxOfMeal("lunch"));
+  else if(m==="lunch"&&idxOfMeal("snack")>=0) pos=idxOfMeal("snack");
+  if(pos<0){ let cnt=0; pos=arr.length; const half=Math.ceil(spots/2);
+   if(half===0){pos=arr.findIndex(y=>y.type==="restaurant"&&mealOf(y)==="dinner"); if(pos<0) pos=arr.length;}
+   else for(let j=0;j<arr.length;j++){ if(arr[j].type!=="restaurant"){cnt++; if(cnt===half){pos=j+1; while(pos<arr.length&&arr[pos].type==="restaurant"&&(sameOf(arr[pos])===arr[j].id||MEAL_ORDER[mealOf(arr[pos])]<=MEAL_ORDER[m||"lunch"])) pos++; break;}} } }
+  if(it.time){ // 有建議時間：與其他有時間的項目保持時間先後
+   for(let j=0;j<pos;j++){ if(arr[j].time&&arr[j].time>it.time){pos=j; break;} }
+   for(let j=arr.length-1;j>=pos;j--){ if(arr[j].time&&arr[j].time<it.time){pos=j+1; break;} }
+   while(pos>0&&pos<arr.length&&sameOf(arr[pos])&&arr.slice(0,pos).some(y=>y.id===sameOf(arr[pos]))) pos++;
+  }
+  arr.splice(pos,0,it); return true;
+ };
+ (items||[]).forEach(x=>{ if(!x||!x.id) return; const it={type:x.type||"restaurant",id:String(x.id)}; if(x.meal) it.meal=x.meal; if(x.time) it.time=String(x.time).slice(0,5); if(x.same_stop_as) it.same_stop_as=String(x.same_stop_as);
+  if(it.type==="restaurant"&&!RS[it.id]) return;
+  if(arr.some(y=>y.type===it.type&&y.id===it.id)) return;
+  if(!place(it,x,false)) pending.push([it,x]); });
+ pending.forEach(([it,x])=>{ if(!arr.some(y=>y.type===it.type&&y.id===it.id)) place(it,x,true); });
+ // 最後一輪：沒有錨點、只有建議時間的餐廳，依時間與其他有時間的項目排先後（例：D Day7 09:40 朝ラー 在 12:45 午餐之前）
+ const src={}; (items||[]).forEach(x=>{if(x&&x.id) src[String(x.id)]=x;});
+ arr.filter(y=>y.type==="restaurant"&&y.time&&src[y.id]&&!src[y.id].insert_after&&!src[y.id].insert_before).forEach(y=>{
+  const t=sameOf(y); if(t){const k=at(t); if(k>=0&&arr[k].type==="spot") return;}
+  const i=at(y.id); let pos=i;
+  for(let j=0;j<i;j++){ if(arr[j].time&&arr[j].time>y.time){pos=j; break;} }
+  if(pos===i) for(let j=arr.length-1;j>i;j--){ if(arr[j].time&&arr[j].time<y.time){pos=afterGroup(j); break;} }
+  if(pos===i) return;
+  if(pos<arr.length){const t2=sameOf(arr[pos]); const k=t2?at(t2):-1; if(k>=0&&k<pos) pos=k;}
+  arr.splice(i,1); if(pos>i) pos--; arr.splice(pos,0,y); });
  return arr;
 }
 function suggested(r){
@@ -310,13 +374,18 @@ function navBlock(o){
   if(p.exists===false){h+=`<div class="pk pk-none"><div class="row"><b>無專用停車場</b></div><div class="pkmeta">${esc(p.note||"請改用下方附近停車場")}</div></div>`;return;}
   h+=`<div class="pk"><div class="row"><b>P${i+1} ${esc(p.name||"停車場")}</b>${tag}</div><div class="row">`+
    (p.lat!=null&&p.lng!=null?`<a class="btn pri navbtn" target="_blank" rel="noopener" href="${navUrl(p.lat,p.lng)}">▶ 開始導航（停車場座標）</a>`:`<span class="todo">導航座標待查</span>（可先導航到${nm}本身）`)+
-   `</div><div class="row">停車場 MapCode：${mcHtml(p.mapcode)}</div><div class="pkmeta">費用：${fee}｜車位：${cap}｜${wk}${p.note?"｜"+esc(p.note):""}</div></div>`;
+   `</div><div class="row">停車場 MapCode：${mcHtml(p.mapcode)}</div><div class="pkmeta">費用：${fee}｜車位：${cap}｜${wk}${p.note?"｜"+esc(p.note):""}${p.mapcode_source?`<br><span class="mcsrc">MapCode 來源：${esc(mcSrc(p.mapcode_source))}</span>`:""}</div></div>`;
  });
  return h+"</div>";
 }
 /* ---------- lists ---------- */
 function routeBases(r){return [...new Set(D.plan.routes[r].days.map(d=>d.base))];}
-function inRoute(o){return (o.routes||[]).includes(route)||(o.base&&routeBases(route).includes(o.base)&&o.type==="spot"&&o.category==="festival");}
+let ROUTEIDS={rk:null,set:null};
+function routePlanIds(){ if(ROUTEIDS.rk===TID+"|"+route&&ROUTEIDS.set) return ROUTEIDS.set; const st=new Set();
+ ((D&&D.plan&&D.plan.routes&&D.plan.routes[route]&&D.plan.routes[route].days)||[]).forEach(d=>(d.items||[]).forEach(x=>st.add(x.id)));
+ if(RPLAN&&Array.isArray(RPLAN[route])) RPLAN[route].forEach(d=>(d.items||[]).concat(d.alternatives||[]).forEach(x=>x&&st.add(x.id)));
+ ROUTEIDS={rk:TID+"|"+route,set:st}; return st;}
+function inRoute(o){return (o.routes||[]).includes(route)||routePlanIds().has(o.id)||(o.base&&routeBases(route).includes(o.base)&&o.type==="spot"&&o.category==="festival");}
 function dayLabel(d){return `Day ${d.day} ${d.date.slice(5).replace("-","/")}（${String(d.weekday||"").slice(-1)}）${BASEN[d.base]?BASEN[d.base].split("（")[0]:""}`;}
 function fillSelects(){
  const rb=routeBases(route); const allb=D.bases.map(b=>b.key);
@@ -328,7 +397,7 @@ function fillSelects(){
 }
 function spotCard(s,sel){
  const tags=[`<span class="tag ${s.category==="anime_game"?"ag":""}">${esc(CAT[s.category]||s.category)}</span>`,s.event?`<span class="tag ev">📅 ${esc((s.date_label||"").slice(0,22))}</span>`:"",s.nearest_station?`<span class="tag">🚉 ${esc(s.nearest_station.split("／")[0].slice(0,24))}</span>`:"",s.base?`<span class="tag">${esc((BASEN[s.base]||s.base).split("（")[0])}</span>`:`<span class="tag">${esc(s.region||"")}</span>`,
-  s.rain_ok?'<span class="tag rain">☔ 雨天可</span>':"", s.stay_minutes?`<span class="tag">建議 ${s.stay_minutes} 分</span>`:"", (s.routes||[]).length?`<span class="tag">路線 ${esc(s.routes.join("/"))}</span>`:""].join("");
+  Object.keys(SAME).filter(k=>SAME[k]===s.id&&RS[k]).map(k=>`<span class="tag rest">🍴 同一站：${esc(RS[k].name.split("（")[0])}</span>`).join(""), s.rain_ok?'<span class="tag rain">☔ 雨天可</span>':"", s.stay_minutes?`<span class="tag">建議 ${s.stay_minutes} 分</span>`:"", (s.routes||[]).length?`<span class="tag">路線 ${esc(s.routes.join("/"))}</span>`:""].join("");
  return `<div class="card" data-id="${esc(s.id)}"><h3 data-open="spot:${esc(s.id)}">${esc(s.name)}</h3><div class="tags">${tags}</div><div class="desc">${esc((s.description||"").slice(0,90))}${(s.description||"").length>90?"…":""}</div>
  <div class="btns"><button class="btn" data-open="spot:${esc(s.id)}">詳情／導航</button><button class="btn pri addbtn" data-add="spot:${esc(s.id)}" data-sel="${sel}">＋加入行程</button></div></div>`;
 }
@@ -336,7 +405,7 @@ function resvTxt(v){if(v==null||v==="") return ""; if(typeof v!=="object") retur
 function restCard(r,sel){
  const sc=[r.tabelog_score!=null?`<span class="tag rest">Tabelog ${esc(r.tabelog_score)}</span>`:"",r.google_rating!=null?`<span class="tag rest">Google ${esc(r.google_rating)}</span>`:"",
   r.cuisine?`<span class="tag">${esc(r.cuisine)}</span>`:"",r.price_range?`<span class="tag">${esc(r.price_range)}</span>`:"",r.meal?`<span class="tag">${esc([].concat(r.meal).map(m=>MEAL[m]||m).join("／"))}</span>`:"",
-  resvTxt(r.reservation)?`<span class="tag">訂位：${esc(resvTxt(r.reservation).slice(0,30))}</span>`:"",r.checked_date?`<span class="tag">查核 ${esc(r.checked_date)}</span>`:""].join("");
+  r.base_area?`<span class="tag">📍 ${esc(String(r.base_area).split("（")[0])}</span>`:"",SAME[r.id]&&SP[SAME[r.id]]?`<span class="tag rest">🔗 與景點同一站：${esc(SP[SAME[r.id]].name.split("（")[0])}</span>`:"",resvTxt(r.reservation)?`<span class="tag">訂位：${esc(resvTxt(r.reservation).slice(0,30))}</span>`:"",r.checked_date?`<span class="tag">查核 ${esc(r.checked_date)}</span>`:""].join("");
  return `<div class="card" data-id="${esc(r.id)}"><h3 data-open="restaurant:${esc(r.id)}">🍴 ${esc(r.name)}</h3><div class="tags">${sc}</div><div class="desc">${esc((r.description||"").slice(0,90))}</div>
  <div class="btns"><button class="btn" data-open="restaurant:${esc(r.id)}">詳情／導航</button><button class="btn pri addbtn" data-add="restaurant:${esc(r.id)}" data-sel="${sel}">＋加入行程</button></div></div>`;
 }
@@ -367,25 +436,36 @@ function renderDays(){
  $("#days").innerHTML=days.map(d=>`<button data-day="${d.day}" class="${d.day===curDay?"on":""}">Day ${d.day}<br>${d.date.slice(5).replace("-","/")}${String(d.weekday||"").slice(-1)}</button>`).join("");
  const on=$("#days button.on"); if(on){const c=$("#days"); c.scrollLeft=on.offsetLeft-c.offsetLeft-c.clientWidth/2+on.clientWidth/2;}
 }
+function mcSrc(t){t=String(t||"");return /mapcode_reconcile/.test(t)?"景點部 mapcode_reconcile.json 定案":/Mapion/i.test(t)?"Mapion（回讀座標核對）":t.slice(0,40);}
+function planBits(r,d,it){const p=it.type==="restaurant"?pinfo(r,d,it.id):null; return (p&&p.alert?`<div class="alert">${esc(p.alert)}</div>`:"")+(p&&p.note?`<div class="cnt">📝 ${esc(p.note)}</div>`:"");}
+function tnHtml(i,it){return `<div class="tn"><input type="time" data-time="${i}" value="${esc(it.time||"")}" aria-label="時間"><input type="text" data-note="${i}" value="${esc(it.note||"")}" placeholder="備註（例：先訂位、買伴手禮）" aria-label="備註"></div>`;}
 function renderItin(){
  renderDays(); const di=dayInfo(route,curDay); const arr=itin(route)[curDay]||[]; const sug={}; di.items.forEach(x=>sug[x.id]=x);
  const rp=RPLAN&&Array.isArray(RPLAN[route])?RPLAN[route].find(x=>x.day===curDay):null;
  const lg=lodgingOn(route,di.date);
- $("#dayhead").innerHTML=(rp&&(rp.note||rp.dinner_note)?`<div class="cnt">${rp.dinner_included?'<span class="tag rest">🍶 旅館含晚餐</span> ':''}🍴 用餐建議：${esc([rp.note,rp.dinner_note].filter(Boolean).join("｜"))}</div>`:"")+`<b>Day ${di.day}｜${di.date}（${esc(di.weekday)}）</b>｜住：${esc(BASEN[di.base]||di.base)}${lg?"（"+esc(lg.name)+"）":""}｜${esc(di.mode)}<br>出發：${esc(di.start&&di.start.name)} → 結束：${esc(di.end&&di.end.name)}${di.total_drive_min!=null?`｜建議行程總車程約 ${di.total_drive_min} 分（含緩衝 ${di.total_drive_min_buffered} 分）`:""}${di.total_train_walk_min!=null?`｜🚃 電車＋步行合計約 ${di.total_train_walk_min} 分`:""}<br>💡 ${esc(di.note||"")}`;
+ $("#dayhead").innerHTML=(rp&&(rp.note||rp.dinner_note)?`<div class="cnt">${rp.dinner_included?'<span class="tag rest">🍶 旅館含晚餐</span> ':''}🍴 用餐建議：${esc([rp.note,rp.dinner_note].filter(Boolean).join("｜"))}</div>`:"")+(rp&&Array.isArray(rp.alternatives)&&rp.alternatives.length?`<div class="cnt alts">🔁 替代餐廳：${rp.alternatives.filter(a=>a&&RS[a.id]).map(a=>`<a href="#" data-open="restaurant:${esc(a.id)}">${esc(RS[a.id].name)}</a>`).join("、")}</div>`:"")+`<b>Day ${di.day}｜${di.date}（${esc(di.weekday)}）</b>｜住：${esc(BASEN[di.base]||di.base)}${lg?"（"+esc(lg.name)+"）":""}｜${esc(di.mode)}<br>出發：${esc(di.start&&di.start.name)} → 結束：${esc(di.end&&di.end.name)}${di.total_drive_min!=null?`｜建議行程總車程約 ${di.total_drive_min} 分（含緩衝 ${di.total_drive_min_buffered} 分）`:""}${di.total_train_walk_min!=null?`｜🚃 電車＋步行合計約 ${di.total_train_walk_min} 分`:""}<br>💡 ${esc(di.note||"")}`;
  $("#daynote").value=dayNote(route,curDay);
- let h=""; arr.forEach((it,i)=>{const o=get(it);
-  if(!o){h+=`<div class="card">（找不到資料：${esc(it.type)} ${esc(it.id)}${it.type==="restaurant"&&!RESTS.length?"，餐廳資料可能尚未載入":""}）<div class="btns"><button class="btn sm warn" data-del="${i}">刪除</button></div></div>`;return;}
+ const stops=stopsOf(arr,route,curDay); let h="";
+ stops.forEach((st,si)=>{ const it=st.main, i=st.idx, o=get(it);
+  if(!o){h+=`<div class="card">（找不到資料：${esc(it.type)} ${esc(it.id)}${it.type==="restaurant"&&!RESTS.length?"，餐廳資料可能尚未載入":""}）<div class="btns"><button class="btn sm warn" data-delstop="${si}">刪除</button></div></div>`;return;}
   const s=sug[it.id]; let dr=""; if(s&&s.train_from_prev) dr=`<div class="train">🚃 從上一點：${esc(s.train_from_prev.how)}｜約 ${s.train_from_prev.min} 分</div>`; else if(s&&s.drive_min_from_prev!=null) dr=`<div class="drive">🚗 建議順序時，從上一點約 ${s.drive_min_from_prev} 分（${s.drive_km_from_prev} km，含緩衝 ${s.drive_min_buffered} 分）</div>`;
-  const isR=it.type==="restaurant";
-  h+=dr+`<div class="card it ${isR?"rest":""}" data-idx="${i}"><div class="ord">${i+1}</div><div class="body"><h3 data-open="${it.type}:${esc(it.id)}">${isR?"🍴 ":""}${esc(o.name)}${mealOf(it)?`（${esc(MEAL[mealOf(it)]||mealOf(it))}）`:""}</h3>
+  const isR=it.type==="restaurant"; const atts=st.att.map(a=>({a,o:get(a.x)})).filter(z=>z.o);
+  const pks=mergedParkings([].concat(o.parkings||[],...atts.map(z=>z.o.parkings||[])));
+  const title=`${isR?"🍴 ":""}${esc(o.name)}${mealOf(it)?`（${esc(MEAL[mealOf(it)]||mealOf(it))}）`:""}`;
+  let ah=""; atts.forEach(({a,o:ro})=>{ const m=mealOf(a.x);
+   ah+=`<div class="att" data-att="${esc(a.x.id)}"><div class="atth">🍴 ${esc(MEAL[m]||"用餐")}：<b data-open="restaurant:${esc(a.x.id)}">${esc(ro.name)}</b> <span class="cnt">（${esc(a.x.id)}，與本景點同一站，停留與車程以景點為準）</span></div>${planBits(route,curDay,a.x)}${tnHtml(a.idx,a.x)}
+    <div class="row">${ro.lat!=null?`<a class="btn sm navbtn" target="_blank" rel="noopener" href="${navUrl(ro.lat,ro.lng)}">▶ 餐廳導航（餐廳座標）</a>`:""}<span class="cnt">餐廳 MapCode：</span>${mcHtml(ro.mapcode)}</div>
+    <div class="btns"><button class="btn sm" data-open="restaurant:${esc(a.x.id)}">餐廳詳情</button><button class="btn sm warn" data-del="${a.idx}">移除這家餐廳</button></div></div>`;});
+  const hid=st.hid.map(z=>get(z.x)).filter(Boolean).map(so=>`<div class="cnt">🔗 已合併同店景點「${esc(so.name)}」（${esc(so.id)}），以餐廳版為準</div>`).join("");
+  h+=dr+`<div class="card it ${isR?"rest":""} ${atts.length?"merged":""}" data-idx="${i}" data-stop="${si}"><div class="ord">${si+1}</div><div class="body"><h3 data-open="${it.type}:${esc(it.id)}">${title}${atts.length?` <span class="tag rest">＋🍴 ${esc(atts.map(z=>z.o.name.split("（")[0]).join("、"))}</span>`:""}</h3>
    <div class="tags">${o.category==="anime_game"?'<span class="tag ag">🎮 動漫・遊戲周邊</span>':""}${isR&&o.tabelog_score!=null?`<span class="tag rest">Tabelog ${esc(o.tabelog_score)}</span>`:""}${isR&&o.google_rating!=null?`<span class="tag rest">Google ${esc(o.google_rating)}</span>`:""}${o.stay_minutes?`<span class="tag">停留約 ${o.stay_minutes} 分</span>`:""}${o.rain_ok?'<span class="tag rain">☔ 雨天可</span>':""}${o.hours?`<span class="tag">${esc(String(o.hours).slice(0,40))}</span>`:""}</div>
-   <div class="tn"><input type="time" data-time="${i}" value="${esc(it.time||"")}" aria-label="時間"><input type="text" data-note="${i}" value="${esc(it.note||"")}" placeholder="備註（例：先訂位、買伴手禮）" aria-label="備註"></div>
-   ${navBlock(o)}
-   <div class="btns"><button class="btn sm" data-mv="${i}:-1" ${i===0?"disabled":""}>↑ 上移</button><button class="btn sm" data-mv="${i}:1" ${i===arr.length-1?"disabled":""}>↓ 下移</button><button class="btn sm warn" data-del="${i}">刪除</button><button class="btn sm" data-open="${it.type}:${esc(it.id)}">詳情</button></div></div></div>`;});
+   ${planBits(route,curDay,it)}${hid}${tnHtml(i,it)}
+   ${navBlock(Object.assign({},o,{parkings:pks}))}${ah}
+   <div class="btns"><button class="btn sm" data-mv="${si}:-1" ${si===0?"disabled":""}>↑ 上移</button><button class="btn sm" data-mv="${si}:1" ${si===stops.length-1?"disabled":""}>↓ 下移</button><button class="btn sm warn" data-delstop="${si}">刪除${atts.length?"（整站）":""}</button><button class="btn sm" data-open="${it.type}:${esc(it.id)}">詳情</button></div></div></div>`;});
  if(di.train_to_end) h+=`<div class="train">🏨 到住宿／機場：${esc(di.train_to_end.how)}｜約 ${di.train_to_end.min} 分</div>`;
  if(di.drive_min_to_end!=null) h+=`<div class="drive">🏨 最後一點到住宿約 ${di.drive_min_to_end} 分</div>`;
  $("#ilist").innerHTML=h||'<div class="card">這天還沒有行程，可從景點／餐廳列表或地圖「加入行程」。</div>';
- $("#storeNote").textContent=`修改會自動存在本機瀏覽器（localStorage：${K.it}），每個行程分開存。${store()[route]?"本路線已有自訂修改。":"本路線目前是建議行程。"}`;
+ $("#storeNote").textContent=`修改會自動存在本機瀏覽器（localStorage：${K.it}），每個行程分開存。${store()[route]?"本路線已有自訂修改（要套用最新建議排序請按「重設為建議行程」）。":"本路線目前是建議行程。"}`;
  renderMarkers();
 }
 /* ---------- modal ---------- */
@@ -394,7 +474,7 @@ function closeModal(){$("#modal").classList.remove("on");}
 function openDetail(type,id){
  const o=type==="restaurant"?RS[id]:SP[id]; if(!o) return;
  const rows=[]; const add=(k,v)=>{if(v!=null&&v!=="") rows.push(`<tr><td>${k}</td><td>${esc(v)}</td></tr>`);};
- if(type==="restaurant"){add("料理",o.cuisine);add("類型",o.category);add("餐別",[].concat(o.meal||[]).map(m=>MEAL[m]||m).join("／"));add("價位",o.price_range);add("訂位",resvTxt(o.reservation));add("所屬據點",o.base?BASEN[o.base]||o.base:"");add("路線",(o.routes||[]).join("/"));add("地址",o.address);add("Tabelog",o.tabelog_score);add("Google 評分",o.google_rating);add("資料查核日",o.checked_date);}
+ if(type==="restaurant"){add("料理",o.cuisine);add("類型",o.category);add("餐別",[].concat(o.meal||[]).map(m=>MEAL[m]||m).join("／"));add("價位",o.price_range);add("訂位",resvTxt(o.reservation));add("所屬據點",o.base?BASEN[o.base]||o.base:"");add("細分區域",o.base_area);add("MapCode 來源",o.mapcode_source?mcSrc(o.mapcode_source):"");add("路線",(o.routes||[]).join("/"));add("地址",o.address);add("Tabelog",o.tabelog_score);add("Google 評分",o.google_rating);add("資料查核日",o.checked_date);}
  else{add("類別",CAT[o.category]||o.category);add("地區",o.region+"（"+(o.prefecture||"")+"）");add("所屬據點",o.base?BASEN[o.base]:"非本次路線");add("路線",(o.routes||[]).join("/"));add("建議停留",o.stay_minutes?o.stay_minutes+" 分":"");}
  if(o.event){add("活動日期",o.date_label);add("日期狀態",{official:"2027 官方公布",estimated:"依往年推估",unconfirmed:"未確認"}[o.date_status]||o.date_status);}add("想買什麼",o.what_to_buy);add("最近車站",o.nearest_station);add("免稅",o.tax_free);add("營業時間",o.hours);add("休日",o.closed);add("門票",o.admission);add("電話",o.phone);add("雨天",o.rain_ok?"可（室內或雨天也適合）":"不建議");add("6～7 月注意",o.june_july_note||o.rainy_season);add("查詢日期",o.info_checked_at||o.checked_date);
  const src=(o.sources||[]).map(u=>{const url=typeof u==="string"?u:(u.url||"");const t=typeof u==="string"?(/youtube\.com|youtu\.be/.test(u)?"▶ YouTube："+u:u):(u.title||u.url);return url?`<a href="${esc(url)}" target="_blank" rel="noopener">${esc(t)}</a>`:"";}).join("");
@@ -419,12 +499,24 @@ function pkIcon(p){return L.divIcon({className:"",html:`<div style="background:$
 function bindPk(m,obj){m.on("popupopen",()=>{pkLayer.clearLayers(); (obj.parkings||[]).forEach(p=>{if(p.lat==null||p.lng==null) return; L.marker([p.lat,p.lng],{icon:pkIcon(p)}).bindTooltip(esc(p.name||"停車場")).addTo(pkLayer);});}); m.on("popupclose",()=>pkLayer.clearLayers());}
 function renderMarkers(){
  if(!map||!D) return; layer.clearLayers(); pkLayer.clearLayers(); const pts=[];
- const dayOnly=$("#lday").checked; const dayset=new Set((itin(route)[curDay]||[]).map(x=>x.type+":"+x.id));
+ const dayOnly=$("#lday").checked; const dayArr=itin(route)[curDay]||[]; const dayset=new Set(dayArr.map(x=>x.type+":"+x.id));
+ const dayStops=dayOnly?stopsOf(dayArr,route,curDay):null; const hiddenSpots=new Set(dayStops?[].concat(...dayStops.map(s=>s.hid.map(h=>h.x.id))):[]);
+ const spotsDrawn=[]; (dayOnly?D.spots.filter(s=>dayset.has("spot:"+s.id)):filtSpots()).forEach(s=>{const f=s.category==="festival", ag=s.category==="anime_game"; if(f&&!$("#lfest").checked) return; if(ag&&!$("#lanime").checked) return; if(!f&&!ag&&!$("#lspot").checked) return; if(dayOnly&&(!dayset.has("spot:"+s.id)||hiddenSpots.has(s.id))) return; spotsDrawn.push(s);});
+ const drawnIds=new Set(spotsDrawn.map(s=>s.id));
+ const restsDrawn=$("#lrest").checked&&RESTS.length?(dayOnly?RESTS.filter(r=>dayset.has("restaurant:"+r.id)):filtRests()):[];
+ // 同一站：餐廳掛到已畫出的景點上，不另畫一點
+ const attach={}; const restsSolo=restsDrawn.filter(r=>{const t=SAME[r.id]||(dayOnly?sameOf(dayArr.find(x=>x.type==="restaurant"&&x.id===r.id)||{}):null); if(t&&drawnIds.has(t)){(attach[t]=attach[t]||[]).push(r); return false;} return true;});
+ const popupMerged=(s)=>popup(s)+(attach[s.id]||[]).map(r=>`<div style="margin-top:6px;border-top:1px dashed #ccc;padding-top:4px">🍴 同一站：<b>${esc(r.name)}</b><br><button class="btn sm" data-open="restaurant:${esc(r.id)}">餐廳詳情</button> <button class="btn sm pri" data-add="restaurant:${esc(r.id)}">＋加入 Day ${curDay}</button></div>`).join("");
  const mk=(lat,lng,color,r,html,obj)=>{if(lat==null||lng==null) return; const m=L.circleMarker([lat,lng],{radius:r,color:"#fff",weight:1.5,fillColor:color,fillOpacity:.9}); m.bindPopup(html); m.addTo(layer); pts.push([lat,lng]); if(obj&&obj.parkings) bindPk(m,obj);};
- const mkAg=s=>{if(s.lat==null) return; const m=L.marker([s.lat,s.lng],{icon:L.divIcon({className:"",html:`<div class="agicon${s.event?" ev":""}" title="${esc(CAT.anime_game)}">${s.event?"📅":"🎮"}</div>`,iconSize:[24,24],iconAnchor:[12,12],popupAnchor:[0,-10]}),zIndexOffset:500}); m.bindPopup(popup(s)); m.addTo(layer); pts.push([s.lat,s.lng]); bindPk(m,s);};
- filtSpots().forEach(s=>{const f=s.category==="festival", ag=s.category==="anime_game"; if(f&&!$("#lfest").checked) return; if(ag&&!$("#lanime").checked) return; if(!f&&!ag&&!$("#lspot").checked) return; if(dayOnly&&!dayset.has("spot:"+s.id)) return; if(ag) mkAg(s); else mk(s.lat,s.lng,f?"#8e24aa":"#1e88e5",7,popup(s),s);});
- if($("#lrest").checked) (RESTS.length?filtRests():[]).forEach(r=>{if(dayOnly&&!dayset.has("restaurant:"+r.id)) return; mk(r.lat,r.lng,RCOL[r.category]||"#ef6c00",7,popup(r),r);});
+ const mkIcon=(s,html,cls,txt)=>{const m=L.marker([s.lat,s.lng],{icon:L.divIcon({className:"",html:`<div class="${cls}">${txt}</div>`,iconSize:[24,24],iconAnchor:[12,12],popupAnchor:[0,-10]}),zIndexOffset:500}); m.bindPopup(html); m.addTo(layer); pts.push([s.lat,s.lng]); return m;};
+ spotsDrawn.forEach(s=>{ if(s.lat==null) return; const ag=s.category==="anime_game", f=s.category==="festival"; const att=attach[s.id];
+  const pkObj=att?{parkings:mergedParkings([].concat(s.parkings||[],...att.map(r=>r.parkings||[])))}:s;
+  if(ag){ bindPk(mkIcon(s,popupMerged(s),"agicon"+(s.event?" ev":""),s.event?"📅":"🎮"),pkObj); return; }
+  if(att){ const m=mkIcon(s,popupMerged(s),"mergedicon","🍴"); m.options.title="同一站"; bindPk(m,pkObj); return; }
+  mk(s.lat,s.lng,f?"#8e24aa":"#1e88e5",7,popup(s),s);});
+ restsSolo.forEach(r=>mk(r.lat,r.lng,RCOL[r.category]||"#ef6c00",7,popup(r),r));
  if($("#llodge").checked) (D.lodging||[]).filter(l=>l.route===route).forEach(l=>mk(l.lat,l.lng,"#d32f2f",9,`<b>🏨 ${esc(l.name)}</b><br>${esc(l.area)}<br>${esc(l.check_in)}～${esc(l.check_out)}（${l.nights} 晚）${l.status==="top_pick"?"<br><small>住宿部首推（未訂）</small>":""}<br><a class="btn sm pri" target="_blank" rel="noopener" href="${navUrl(l.lat,l.lng)}">▶ 開始導航</a>`));
+ window.__markerCount=pts.length; window.__mergedOnMap=Object.keys(attach).length;
  if(dayOnly&&pts.length) map.fitBounds(pts,{padding:[30,30],maxZoom:13});
 }
 let needFit=false;
@@ -476,7 +568,7 @@ function openTrip(id,opt){opt=opt||{};
  const seq=++loadSeq; $("#loading").hidden=false; $("#loading").textContent="載入「"+e.title+"」資料中…";
  return loadTripData(e).then(d=>{ if(seq!==loadSeq) return;
   TID=e.id; TE=e; D=d; RESTS=d.rests; RPLAN=d.rplan; SP={}; RS={}; BASEN={};
-  D.spots.forEach(s=>SP[s.id]=s); RESTS.forEach(r=>RS[r.id]=r); D.bases.forEach(b=>BASEN[b.key]=b.area);
+  D.spots.forEach(s=>SP[s.id]=s); RESTS.forEach(r=>RS[r.id]=r); D.bases.forEach(b=>BASEN[b.key]=b.area); indexPlan();
   const mig=migrateLegacy(); const fm=mergeFoodOnce();
   $("#ttl").textContent=e.title; document.title=e.title+"｜互動行程"; fillTripSel(); fillRcat();
   $("#loading").hidden=true; $("#tripList").hidden=true; $("#app").hidden=false; $("#bnav").hidden=false;
@@ -505,49 +597,60 @@ function applyUrl(push){
  if(t===TID&&D){ if(r&&r!==route&&D.plan.routes[r]) setRoute(r,{day:d}); else if(d&&d!==curDay&&dayInfo(route,d)){curDay=d; fillSelects(); renderItin();} return Promise.resolve(); }
  return openTrip(t,{route:r,day:d,push});
 }
-/* ---------- export ---------- */
+/* ---------- export（以「站」為單位：同一站的餐廳併在景點底下，不另算一站） ---------- */
 function routeDaysExport(){
  const R=D.plan.routes[route], it=itin(route);
  return R.days.map(d=>{const arr=it[d.day]||[]; const rp=RPLAN&&Array.isArray(RPLAN[route])?RPLAN[route].find(x=>x.day===d.day):null; const lg=lodgingOn(route,d.date);
-  return {d,rp,lg,note:dayNote(route,d.day),items:arr.map((x,i)=>({x,o:get(x),seq:i+1}))};});
+  const stops=stopsOf(arr,route,d.day).map((s,i)=>({x:s.main,o:get(s.main),seq:i+1,att:s.att.map(a=>({x:a.x,o:get(a.x)})),hid:s.hid.map(h=>({x:h.x,o:get(h.x)}))}));
+  return {d,rp,lg,note:dayNote(route,d.day),items:stops};});
 }
+function stopTime(st){return st.x.time||(st.att.find(a=>a.x.time)||{x:{}}).x.time||null;}
 function exportJson(){
  const t=D.meta.trip; const R=D.plan.routes[route]; const unresolved=[];
+ const one=(x,o,extra)=>Object.assign({kind:x.type,name:o?o.name:"",name_zh:o&&o.name_zh||null,prefecture:o&&o.prefecture||null,meal:x.type==="restaurant"?(mealOf(x)||null):null,
+    time:x.time||null,stay_min:o&&o.stay_minutes||null,lat:o?o.lat:null,lng:o?o.lng:null,gmaps_url:o?gmUrl(o):null,mapcode:o&&o.mapcode||null,
+    note:x.note||null,raw:null,confidence:o?1:0,match:{ref:x.id,status:o?"matched":"not_found"}},extra||{});
  const days=routeDaysExport().map(({d,rp,lg,note,items})=>({
   day:d.day,date:d.date,weekday:d.weekday,area:BASEN[d.base]||d.base,base:d.base,mode:d.mode,
   lodging:{name:lg?lg.name:"",candidates:[],meals_included:rp&&rp.dinner_included?["dinner"]:[],status:lg?lg.status:null},
-  items:items.map(({x,o,seq})=>{ if(!o) unresolved.push({day:d.day,text:x.type+" "+x.id,question:"網頁資料找不到這個 id"});
-   return {seq,kind:x.type,name:o?o.name:"",name_zh:o&&o.name_zh||null,prefecture:o&&o.prefecture||null,meal:x.type==="restaurant"?(mealOf(x)||null):null,
-    time:x.time||null,stay_min:o&&o.stay_minutes||null,lat:o?o.lat:null,lng:o?o.lng:null,gmaps_url:o?gmUrl(o):null,mapcode:o&&o.mapcode||null,
-    note:x.note||null,raw:null,confidence:o?1:0,match:{ref:x.id,status:o?"matched":"not_found"}};}),
+  items:items.map(st=>{ if(!st.o) unresolved.push({day:d.day,text:st.x.type+" "+st.x.id,question:"網頁資料找不到這個 id"});
+   const e=one(st.x,st.o,{seq:st.seq});
+   if(st.att.length) e.merged_items=st.att.map(a=>one(a.x,a.o,{same_stop_as:st.x.id}));
+   if(st.hid.length){ e.same_stop_as=st.hid[0].x.id; e.replaces=st.hid.map(h=>h.x.id); }
+   return e;}),
   notes:note}));
  const data={schema:"agency.itinerary.v0",
   source:{type:"web_export",ref:location.href,author:"安宏（trip-maps 互動行程網頁）",captured_at:nowISO(),parsed_by:"trip-maps plan 網頁（旅遊資訊部 "+APPV+"）"},
   trip:{id:TID,route_key:route,title:(t.title||TID)+"｜路線 "+route+"："+(R.name||""),start_date:t.start_date,end_date:t.end_date,travelers:t.travelers||null,style:t.style||null,origin_airport:t.origin_airport||null},
   flights:D.meta.flights||[],days,constraints:{must:[],avoid:[],budget_twd:t.budget_twd==null?null:t.budget_twd},unresolved,
-  x_web:{app:APPV,storage_key:K.it,edited:!!store()[route],data_version:TE.data_version}};
+  x_web:{app:APPV,storage_key:K.it,edited:!!store()[route],data_version:TE.data_version,stop_rule:"items[] 一筆＝一站；同一站的餐廳放在 merged_items[]（same_stop_as＝景點 id）"}};
  download(TID+"_"+route+"_itinerary.json",JSON.stringify(data,null,1),"application/json"); toast("已匯出 JSON（路線 "+route+"）"); return data;
 }
-function itemDesc(x,o){
+function itemDesc(x,o,att,dayN){
  const a=[]; if(x.type==="restaurant"){a.push("餐廳："+(o.cuisine||o.category||"")); const m=mealOf(x); if(m) a.push("餐別："+(MEAL[m]||m));} else a.push("類別："+(CAT[o.category]||o.category||""));
  if(x.time) a.push("時間："+x.time); if(o.stay_minutes) a.push("建議停留："+o.stay_minutes+" 分");
  a.push("MapCode："+(o.mapcode||"待查"));
- const p=(o.parkings||[]).find(p=>p.exists!==false&&p.lat!=null); if(p) a.push("停車場："+(p.name||"")+"｜MapCode："+(p.mapcode||"待查")+"｜導航："+navUrl(p.lat,p.lng));
+ const pks=mergedParkings([].concat(o.parkings||[],...(att||[]).map(z=>z.o&&z.o.parkings||[])));
+ const p=pks.find(p=>p.exists!==false&&p.lat!=null); if(p) a.push("停車場："+(p.name||"")+"｜MapCode："+(p.mapcode||"待查")+"｜導航："+navUrl(p.lat,p.lng));
  if(o.hours) a.push("營業："+String(o.hours).slice(0,80)); if(o.phone) a.push("電話："+o.phone);
  a.push("Google 地圖："+gmUrl(o)); if(x.note) a.push("備註："+x.note);
+ const pa=x.type==="restaurant"&&dayN?pinfo(route,dayN,x.id):null; if(pa&&pa.alert) a.push("⚠️ "+pa.alert);
+ (att||[]).forEach(({x:ax,o:ao})=>{ if(!ao) return; const m=mealOf(ax); const pb=pinfo(route,dayN,ax.id);
+  a.push("🍴 同一站 "+(MEAL[m]||"用餐")+"："+ao.name+"（"+ax.id+"）"+(ax.time?"｜時間 "+ax.time:"")+"｜餐廳 MapCode："+(ao.mapcode||"待查")+(ao.lat!=null?"｜餐廳導航："+navUrl(ao.lat,ao.lng):"")+(ax.note?"｜備註："+ax.note:"")+(pb&&pb.alert?"｜⚠️ "+pb.alert:""));});
  return a;
 }
 function xmlEsc(s){return String(s==null?"":s).replace(/[<>&'"]/g,c=>({"<":"&lt;",">":"&gt;","&":"&amp;","'":"&apos;",'"':"&quot;"}[c]));}
 function cdata(s){return "<![CDATA["+String(s).replace(/]]>/g,"]]]]><![CDATA[>")+"]]>";}
-function linkify(s){return esc(s).replace(/(https?:\/\/[^\s<]+)/g,'<a href="$1">$1</a>');}
+function linkify(s){return esc(s).replace(/(https?:\/\/[^\s<｜]+)/g,'<a href="$1">$1</a>');}
+function stopName(st){return st.o.name+(st.att.length?" ＋🍴 "+st.att.filter(a=>a.o).map(a=>a.o.name.split("（")[0]).join("、"):"");}
 function buildKml(){
  const t=D.meta.trip, R=D.plan.routes[route]; let x=`<?xml version="1.0" encoding="UTF-8"?>\n<kml xmlns="http://www.opengis.net/kml/2.2"><Document><name>${xmlEsc((t.title||TID)+" 路線 "+route)}</name><description>${xmlEsc((R.name||"")+"｜匯出 "+nowISO()+"｜trip-maps 互動行程")}</description>\n`;
  x+=`<Style id="spot"><IconStyle><color>ffe5881e</color></IconStyle></Style><Style id="restaurant"><IconStyle><color>ff006cef</color></IconStyle></Style><Style id="lodging"><IconStyle><color>ff2f2fd3</color></IconStyle></Style>\n`;
  routeDaysExport().forEach(({d,lg,note,items})=>{
   x+=`<Folder><name>${xmlEsc(`Day ${d.day} ${d.date.slice(5).replace("-","/")}（${String(d.weekday||"").slice(-1)}）${(BASEN[d.base]||"").split("（")[0]}`)}</name>${note?`<description>${xmlEsc(note)}</description>`:""}\n`;
-  items.forEach(({x:it,o,seq})=>{ if(!o||o.lat==null) return;
-   x+=`<Placemark><name>${xmlEsc(`D${d.day}-${seq} ${o.name}`)}</name><styleUrl>#${it.type}</styleUrl><description>${cdata(itemDesc(it,o).map(linkify).join("<br>"))}</description>`+
-   `<ExtendedData><Data name="Day"><value>${d.day}</value></Data><Data name="Date"><value>${d.date}</value></Data><Data name="Seq"><value>${seq}</value></Data><Data name="Type"><value>${it.type}</value></Data><Data name="Time"><value>${xmlEsc(it.time||"")}</value></Data><Data name="MapCode"><value>${xmlEsc(o.mapcode||"")}</value></Data><Data name="Google Maps"><value>${xmlEsc(gmUrl(o))}</value></Data><Data name="ID"><value>${xmlEsc(it.id)}</value></Data></ExtendedData>`+
+  items.forEach(st=>{ const it=st.x,o=st.o,seq=st.seq; if(!o||o.lat==null) return;
+   x+=`<Placemark><name>${xmlEsc(`D${d.day}-${seq} ${stopName(st)}`)}</name><styleUrl>#${it.type}</styleUrl><description>${cdata(itemDesc(it,o,st.att,d.day).map(linkify).join("<br>"))}</description>`+
+   `<ExtendedData><Data name="Day"><value>${d.day}</value></Data><Data name="Date"><value>${d.date}</value></Data><Data name="Seq"><value>${seq}</value></Data><Data name="Type"><value>${it.type}</value></Data><Data name="Time"><value>${xmlEsc(stopTime(st)||"")}</value></Data><Data name="MapCode"><value>${xmlEsc(o.mapcode||"")}</value></Data><Data name="Google Maps"><value>${xmlEsc(gmUrl(o))}</value></Data><Data name="ID"><value>${xmlEsc(it.id)}</value></Data><Data name="Same Stop"><value>${xmlEsc(st.att.map(a=>a.x.id).join(" "))}</value></Data></ExtendedData>`+
    `<Point><coordinates>${o.lng},${o.lat},0</coordinates></Point></Placemark>\n`;});
   if(lg&&lg.lat!=null) x+=`<Placemark><name>${xmlEsc(`D${d.day} 🏨 ${lg.name}`)}</name><styleUrl>#lodging</styleUrl><description>${cdata(`住宿 ${esc(lg.check_in)}～${esc(lg.check_out)}（${lg.nights} 晚）${lg.status==="top_pick"?"｜住宿部首推（未訂）":""}<br>導航：${linkify(navUrl(lg.lat,lg.lng))}`)}</description><Point><coordinates>${lg.lng},${lg.lat},0</coordinates></Point></Placemark>\n`;
   x+=`</Folder>\n`;});
@@ -555,32 +658,41 @@ function buildKml(){
 }
 function csvCell(v){v=v==null?"":String(v); return /[",\n\r]/.test(v)?'"'+v.replace(/"/g,'""')+'"':v;}
 function buildCsv(){
- const head=["Name","Latitude","Longitude","Day","Date","Seq","Type","Meal","Time","Description","MapCode","Parking","Parking MapCode","Parking Latitude","Parking Longitude","Google Maps","Navigation","Note","Day Note","ID"];
+ const head=["Name","Latitude","Longitude","Day","Date","Seq","Type","Meal","Time","Description","MapCode","Parking","Parking MapCode","Parking Latitude","Parking Longitude","Google Maps","Navigation","Same Stop Restaurant","Same Stop IDs","Alert","Note","Day Note","ID"];
  const rows=[head];
- routeDaysExport().forEach(({d,note,items})=>items.forEach(({x,o,seq})=>{ if(!o) return; const p=(o.parkings||[]).find(p=>p.exists!==false&&p.lat!=null)||{};
-  rows.push([o.name,o.lat,o.lng,"Day "+String(d.day).padStart(2,"0"),d.date,seq,x.type==="restaurant"?"餐廳":(CAT[o.category]||"景點"),x.type==="restaurant"?(MEAL[mealOf(x)]||""):"",x.time||"",
-   (o.description||"").slice(0,300),o.mapcode||"待查",p.name||"",p.mapcode||"",p.lat==null?"":p.lat,p.lng==null?"":p.lng,gmUrl(o),o.lat!=null?navUrl(o.lat,o.lng):"",x.note||"",seq===1?note:"",x.id]);}));
+ routeDaysExport().forEach(({d,note,items})=>items.forEach(st=>{ const x=st.x,o=st.o,seq=st.seq; if(!o) return;
+  const p=mergedParkings([].concat(o.parkings||[],...st.att.map(a=>a.o&&a.o.parkings||[]))).find(p=>p.exists!==false&&p.lat!=null)||{};
+  const atts=st.att.filter(a=>a.o); const meals=[x.type==="restaurant"?MEAL[mealOf(x)]:""].concat(atts.map(a=>MEAL[mealOf(a.x)]||"")).filter(Boolean).join("／");
+  const alerts=[x].concat(atts.map(a=>a.x)).map(y=>y.type==="restaurant"&&pinfo(route,d.day,y.id)).filter(z=>z&&z.alert).map(z=>z.alert).join("；");
+  rows.push([stopName(st),o.lat,o.lng,"Day "+String(d.day).padStart(2,"0"),d.date,seq,x.type==="restaurant"?"餐廳":(CAT[o.category]||"景點")+(atts.length?"＋餐廳":""),meals,stopTime(st)||"",
+   (o.description||"").slice(0,300),o.mapcode||"待查",p.name||"",p.mapcode||"",p.lat==null?"":p.lat,p.lng==null?"":p.lng,gmUrl(o),o.lat!=null?navUrl(o.lat,o.lng):"",
+   atts.map(a=>a.o.name+(a.x.time?" "+a.x.time:"")+"｜MapCode "+(a.o.mapcode||"待查")).join("；"),atts.map(a=>a.x.id).join(" "),alerts,
+   [x.note].concat(atts.map(a=>a.x.note)).filter(Boolean).join("；"),seq===1?note:"",x.id]);}));
  return "\ufeff"+rows.map(r=>r.map(csvCell).join(",")).join("\r\n")+"\r\n";
 }
 /* ---------- import ---------- */
-function normItem(x){ if(!x) return null; const id=x.id||(x.match&&x.match.ref); const k=x.type||x.kind; const type=k==="restaurant"?"restaurant":(k==="spot"||!k?"spot":null);
- if(!id||!type) return null; const y={type,id:String(id)}; if(x.meal) y.meal=x.meal; if(x.time) y.time=String(x.time).slice(0,5); if(x.note) y.note=String(x.note); return y;}
+function normItem(x,sameAs){ if(!x) return null; const id=x.id||(x.match&&x.match.ref); const k=x.type||x.kind; const type=k==="restaurant"?"restaurant":(k==="spot"||!k?"spot":null);
+ if(!id||!type) return null; const y={type,id:String(id)}; if(x.meal) y.meal=x.meal; if(x.time) y.time=String(x.time).slice(0,5); if(x.note) y.note=String(x.note);
+ const sa=sameAs||x.same_stop_as; if(sa&&type==="restaurant") y.same_stop_as=String(sa); return y;}
+function flatStop(x,mergedKey){ // 一站 → [主項目, 同一站餐廳…]
+ const main=normItem(x); if(!main) return []; const out=[main];
+ (x[mergedKey]||[]).forEach(m=>{const y=normItem(m,main.type==="spot"?main.id:null); if(y) out.push(y);}); return out;}
 function parseImport(j){
  if(!j||typeof j!=="object") return null;
  if(j.schema==="agency.itinerary.v0"&&Array.isArray(j.days)){
   const r=j.trip&&j.trip.route_key; const o={}, n={};
-  j.days.forEach(d=>{o[d.day]=(d.items||[]).filter(x=>["spot","restaurant"].includes(x.kind)).map(normItem).filter(Boolean); if(d.notes) n[d.day]=d.notes;});
+  j.days.forEach(d=>{o[d.day]=[].concat(...(d.items||[]).filter(x=>["spot","restaurant"].includes(x.kind)).map(x=>flatStop(x,"merged_items"))); if(d.notes) n[d.day]=d.notes;});
   return {trip:j.trip&&j.trip.id,routes:{[r]:o},notes:{[r]:n}};
  }
  if(j.schema==="agency.final.v0"){
   const r=j.route; const o={}, n={};
-  if(Array.isArray(j.days)) j.days.forEach(d=>{o[d.day]=(d.items||[]).map(normItem).filter(Boolean); if(d.note) n[d.day]=d.note;});
-  else if(j.itinerary) Object.keys(j.itinerary).forEach(k=>o[k]=(j.itinerary[k]||[]).map(normItem).filter(Boolean));
+  if(Array.isArray(j.days)) j.days.forEach(d=>{o[d.day]=[].concat(...(d.items||[]).map(x=>flatStop(x,"merged"))); if(d.note) n[d.day]=d.note;});
+  else if(j.itinerary) Object.keys(j.itinerary).forEach(k=>o[k]=(j.itinerary[k]||[]).map(x=>normItem(x)).filter(Boolean));
   return {trip:j.trip_id,routes:{[r]:o},notes:{[r]:n}};
  }
  const it=j.itinerary||j; const routes={};
  for(const r of Object.keys(it)){ if(!it[r]||typeof it[r]!=="object"||Array.isArray(it[r])) continue; const o={}; let ok=false;
-  for(const d of Object.keys(it[r])){ if(Array.isArray(it[r][d])){o[d]=it[r][d].map(normItem).filter(Boolean); ok=true;} } if(ok) routes[r]=o; }
+  for(const d of Object.keys(it[r])){ if(Array.isArray(it[r][d])){o[d]=it[r][d].map(x=>normItem(x)).filter(Boolean); ok=true;} } if(ok) routes[r]=o; }
  if(!Object.keys(routes).length) return null;
  return {trip:j.trip_id||null,legacy:true,routes,notes:{}};
 }
@@ -614,15 +726,22 @@ function shortHash(str){ if(window.crypto&&crypto.subtle&&window.isSecureContext
  let h=0x811c9dc5; for(let i=0;i<str.length;i++){h^=str.charCodeAt(i);h=Math.imul(h,0x01000193)>>>0;} return Promise.resolve("fnv1a-"+h.toString(16).padStart(8,"0"));}
 function buildFinal(notes){
  const R=D.plan.routes[route], t=D.meta.trip, ver=(parseInt(ls.get(K.fver)||"0",10)||0)+1, now=nowISO();
- const exp=routeDaysExport(); const itinerary={}; let ns=0, nr=0; const warn=[];
- const days=exp.map(({d,lg,note,items})=>{ itinerary[d.day]=items.map(({x})=>{const y={type:x.type,id:x.id}; if(x.type==="restaurant"&&mealOf(x)) y.meal=mealOf(x); if(x.time) y.time=x.time; if(x.note) y.note=x.note; return y;});
+ const exp=routeDaysExport(); const itinerary={}; let ns=0, nr=0, nst=0, nmerged=0; const warn=[];
+ const compact=x=>{const y={type:x.type,id:x.id}; if(x.type==="restaurant"&&mealOf(x)) y.meal=mealOf(x); if(x.time) y.time=x.time; if(x.note) y.note=x.note; if(x.type==="restaurant"&&x.same_stop_as) y.same_stop_as=x.same_stop_as; return y;};
+ const days=exp.map(({d,lg,note,items})=>{
+  itinerary[d.day]=[].concat(...items.map(st=>[compact(st.x)].concat(st.att.map(a=>Object.assign(compact(a.x),{same_stop_as:st.x.id})))));
   if(!items.length) warn.push("Day "+d.day+" 沒有任何地點");
-  items.forEach(({x,o})=>{ if(!o) warn.push("Day "+d.day+" 有找不到資料的 "+x.id); else if(x.type==="restaurant") nr++; else ns++; });
+  items.forEach(st=>{ nst++; if(!st.o) warn.push("Day "+d.day+" 有找不到資料的 "+st.x.id); else if(st.x.type==="restaurant") nr++; else ns++; st.att.forEach(a=>{nr++; nmerged++;}); });
   return {day:d.day,date:d.date,weekday:d.weekday,base:d.base,area:BASEN[d.base]||d.base,mode:d.mode,lodging:lg?{name:lg.name,status:lg.status,check_in:lg.check_in,check_out:lg.check_out}:null,note:note||"",
-   items:items.map(({x,o,seq})=>({seq,type:x.type,id:x.id,name:o?o.name:null,meal:x.type==="restaurant"?(mealOf(x)||null):null,time:x.time||null,note:x.note||null,lat:o?o.lat:null,lng:o?o.lng:null,mapcode:o&&o.mapcode||null}))};});
+   items:items.map(st=>{const x=st.x,o=st.o; const e={seq:st.seq,type:x.type,id:x.id,name:o?o.name:null,meal:x.type==="restaurant"?(mealOf(x)||null):null,time:x.time||null,note:x.note||null,lat:o?o.lat:null,lng:o?o.lng:null,mapcode:o&&o.mapcode||null};
+    if(st.att.length) e.merged=st.att.map(a=>({type:"restaurant",id:a.x.id,name:a.o?a.o.name:null,meal:mealOf(a.x)||null,time:a.x.time||null,note:a.x.note||null,same_stop_as:x.id,lat:a.o?a.o.lat:null,lng:a.o?a.o.lng:null,mapcode:a.o&&a.o.mapcode||null}));
+    if(st.hid.length){e.same_stop_as=st.hid[0].x.id; e.replaces=st.hid.map(h=>h.x.id);}
+    return e;})};});
  const f={schema:"agency.final.v0",trip_id:TID,trip_title:t.title||TID,route,route_name:R.name||"",version:ver,generated_at:now,finalized_at:now,
   generated_by:"trip-maps 互動行程網頁（"+APPV+"）",source_url:location.href,data_version:TE.data_version,based_on_suggested:!store()[route],
-  notes:notes||"",counts:{days:days.length,spots:ns,restaurants:nr},warnings:warn,days,itinerary,checksum:null};
+  notes:notes||"",counts:{days:days.length,stops:nst,spots:ns,restaurants:nr,merged_restaurants:nmerged},warnings:warn,
+  stop_rule:"days[].items 一筆＝一站（seq 為站序）；同一站的餐廳在 merged[]（same_stop_as＝景點 id），不另算一站；replaces＝被餐廳版取代、已隱藏的同店景點",
+  days,itinerary,checksum:null};
  return shortHash(JSON.stringify(itinerary)).then(h=>{f.checksum=h; return f;});
 }
 function openFinal(){
@@ -633,7 +752,7 @@ function openFinal(){
  <textarea class="daynote" id="fnotes" placeholder="給總經理的備註（例：第 8 天想多留溫泉時間）" style="min-height:70px">${esc(ls.get(NK)||"")}</textarea>
  <div class="btns"><button class="btn ok" id="fdl">⬇ 下載 final.json</button><button class="btn pri" id="fcp">📋 複製到剪貼簿</button></div>
  <div class="cnt" id="fsum" style="margin-top:8px"></div><pre class="json" id="fpre"></pre>`);
- const refresh=()=>buildFinal($("#fnotes").value).then(f=>{window.__final=f; $("#fsum").innerHTML=`第 ${f.version} 版｜${f.counts.days} 天、景點 ${f.counts.spots}、餐廳 ${f.counts.restaurants}｜檢查碼 ${esc(f.checksum)}`+(f.warnings.length?`<br><span class="todo">注意：${esc(f.warnings.slice(0,5).join("；"))}${f.warnings.length>5?"…":""}</span>`:""); const js=JSON.stringify(f,null,1); $("#fpre").textContent=js.length>3000?js.slice(0,3000)+"\n…（預覽前 3000 字）":js; return f;});
+ const refresh=()=>buildFinal($("#fnotes").value).then(f=>{window.__final=f; $("#fsum").innerHTML=`第 ${f.version} 版｜${f.counts.days} 天、${f.counts.stops} 站（景點 ${f.counts.spots}、餐廳 ${f.counts.restaurants}${f.counts.merged_restaurants?"，其中 "+f.counts.merged_restaurants+" 家與景點同一站":""}）｜檢查碼 ${esc(f.checksum)}`+(f.warnings.length?`<br><span class="todo">注意：${esc(f.warnings.slice(0,5).join("；"))}${f.warnings.length>5?"…":""}</span>`:""); const js=JSON.stringify(f,null,1); $("#fpre").textContent=js.length>3000?js.slice(0,3000)+"\n…（預覽前 3000 字）":js; return f;});
  refresh(); let h=null; $("#fnotes").addEventListener("input",()=>{ls.set(NK,$("#fnotes").value); clearTimeout(h); h=setTimeout(refresh,300);});
  const commit=f=>ls.set(K.fver,String(f.version));
  $("#fdl").addEventListener("click",()=>refresh().then(f=>{download("final.json",JSON.stringify(f,null,1),"application/json"); commit(f); toast("已下載 final.json（第 "+f.version+" 版），請傳給總經理",3000);}));
@@ -643,10 +762,11 @@ function openFinal(){
 document.addEventListener("click",e=>{
  const c=e.target.closest("[data-copy]"); if(c){copyText(c.dataset.copy);return;}
  const tr=e.target.closest("[data-trip]"); if(tr){e.preventDefault(); openTrip(tr.dataset.trip,{route:tr.dataset.route||null,push:true}); return;}
- const o=e.target.closest("[data-open]"); if(o){const [t,id]=o.dataset.open.split(/:(.+)/); openDetail(t,id); return;}
+ const o=e.target.closest("[data-open]"); if(o){e.preventDefault(); const [t,id]=o.dataset.open.split(/:(.+)/); openDetail(t,id); return;}
  const a=e.target.closest("[data-add]"); if(a){const [t,id]=a.dataset.add.split(/:(.+)/); const sel=a.dataset.sel&&document.getElementById(a.dataset.sel); addTo(t,id,sel?sel.value:curDay); return;}
  const d=e.target.closest("#days [data-day]"); if(d){curDay=+d.dataset.day; document.querySelectorAll(".dsel").forEach(s=>s.value=curDay); renderItin(); syncUrl(false); return;}
- const mv=e.target.closest("[data-mv]"); if(mv){const [i,dir]=mv.dataset.mv.split(":").map(Number); const arr=(itin(route)[curDay]||[]).slice(); const j=i+dir; if(j<0||j>=arr.length) return; [arr[i],arr[j]]=[arr[j],arr[i]]; saveDay(route,curDay,arr); renderItin(); return;}
+ const mv=e.target.closest("[data-mv]"); if(mv){const [si,dir]=mv.dataset.mv.split(":").map(Number); const st=stopsOf(itin(route)[curDay]||[],route,curDay); const j=si+dir; if(j<0||j>=st.length) return; [st[si],st[j]]=[st[j],st[si]]; saveDay(route,curDay,flattenStops(st)); renderItin(); return;}
+ const ds=e.target.closest("[data-delstop]"); if(ds){const st=stopsOf(itin(route)[curDay]||[],route,curDay); st.splice(+ds.dataset.delstop,1); saveDay(route,curDay,flattenStops(st)); renderItin(); toast("已刪除"); return;}
  const del=e.target.closest("[data-del]"); if(del){const arr=(itin(route)[curDay]||[]).slice(); arr.splice(+del.dataset.del,1); saveDay(route,curDay,arr); renderItin(); toast("已刪除"); return;}
  const mo=e.target.closest("[data-more]"); if(mo){ if(mo.dataset.more==="s"){sShown+=LIMIT; renderSpots(true);} else {rShown+=LIMIT; renderRests(true);} return;}
  const tb=e.target.closest("#tabs button,#bnav button"); if(tb){showTab(tb.dataset.t); return;}
@@ -674,7 +794,29 @@ if(!isMob()){ $("#fbox1").open=true; $("#fbox2").open=true; } else { $("#legend"
 setHH();
 fetchJson("data/trips.json").then(j=>{TRIPS=j; if(!TRIPS||!Array.isArray(TRIPS.trips)) throw new Error("trips.json 格式錯誤"); fillTripSel(); return applyUrl(false);})
  .catch(err=>{console.warn(err); $("#loading").innerHTML="行程清單載入失敗："+esc(err.message)+"<br>（請用 http(s) 開啟本頁；本機測試可在 plan 的上一層執行 <code>python3 -m http.server</code>）";});
-window.__app={setRoute,openTrip,showTab,addTo,itin,suggested,store,exportJson,buildKml,buildCsv,buildFinal,importText,parseImport,
+/* ---------- PWA：service worker ---------- */
+window.__sw={state:"none"};
+(function(){
+ const st=m=>{window.__sw.state=m; const e=$("#swState"); if(e) e.textContent=m;};
+ const tc=$("#tileCache"); tc.checked=localStorage.getItem("plan:tile_cache")==="1";
+ const sendCfg=()=>{ if(navigator.serviceWorker&&navigator.serviceWorker.controller) navigator.serviceWorker.controller.postMessage({type:"TILE_CACHE",on:tc.checked}); };
+ tc.addEventListener("change",()=>{localStorage.setItem("plan:tile_cache",tc.checked?"1":"0"); sendCfg(); toast(tc.checked?"已開啟地圖圖磚離線快取":"已關閉並清除圖磚快取");});
+ if(!("serviceWorker" in navigator)){st("此瀏覽器不支援離線功能"); return;}
+ if(!/^https?:$/.test(location.protocol)){st("需用 http(s) 開啟才能離線"); return;}
+ let waiting=null, reloading=false;
+ const showUpd=w=>{waiting=w; $("#swbar").classList.add("on");};
+ $("#swUpd").addEventListener("click",()=>{ if(waiting) waiting.postMessage({type:"SKIP_WAITING"}); $("#swbar").classList.remove("on"); });
+ $("#swLater").addEventListener("click",()=>$("#swbar").classList.remove("on"));
+ navigator.serviceWorker.addEventListener("controllerchange",()=>{ if(reloading||!window.__sw.hadController) return; reloading=true; location.reload(); });
+ window.__sw.hadController=!!navigator.serviceWorker.controller;
+ navigator.serviceWorker.register("sw.js",{scope:"./"}).then(reg=>{
+  window.__sw.reg=reg; st("離線功能已啟用（"+APPV+"）"); sendCfg();
+  if(reg.waiting&&navigator.serviceWorker.controller) showUpd(reg.waiting);
+  reg.addEventListener("updatefound",()=>{const w=reg.installing; if(!w) return; w.addEventListener("statechange",()=>{ if(w.state==="installed"&&navigator.serviceWorker.controller) showUpd(w); });});
+  return navigator.serviceWorker.ready;}).then(()=>{window.__sw.ready=true; sendCfg();})
+  .catch(e=>{console.warn("SW 註冊失敗",e); st("離線功能啟用失敗："+e.message);});
+})();
+window.__app={stopsOf,mergeByMeal,get SAME(){return SAME;},setRoute,openTrip,showTab,addTo,itin,suggested,store,exportJson,buildKml,buildCsv,buildFinal,importText,parseImport,
  get trip(){return TID;},get route(){return route;},get day(){return curDay;},get RS(){return RS;},get SP(){return SP;},get D(){return D;},K};
 })();
 </script>

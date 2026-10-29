@@ -1,0 +1,20 @@
+{
+  "name": "安宏旅行社｜互動行程（景點＋餐廳）",
+  "short_name": "安宏行程",
+  "description": "2027 東京自駕等行程：每日景點、餐廳、停車場 MapCode 與導航，可離線查看。",
+  "lang": "zh-Hant-TW",
+  "dir": "ltr",
+  "id": "/trip-maps/plan/",
+  "start_url": "/trip-maps/plan/?source=pwa",
+  "scope": "/trip-maps/plan/",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#f6f7f9",
+  "theme_color": "#0d47a1",
+  "categories": ["travel", "navigation"],
+  "icons": [
+    {"src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any"},
+    {"src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any"},
+    {"src": "icons/icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable"}
+  ]
+}
