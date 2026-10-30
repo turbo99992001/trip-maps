@@ -58,7 +58,11 @@ main[hidden],#bnav[hidden]{display:none!important}
 .mc{font-family:ui-monospace,Menlo,monospace;background:#f1f3f5;padding:2px 6px;border-radius:6px;font-size:13px}
 .todo{color:#c62828;font-weight:700}
 .pk{border-top:1px solid var(--line);padding-top:6px;margin-top:6px}.pk:first-of-type{border-top:0;margin-top:0;padding-top:0}
-.pkmeta{font-size:12px;color:var(--mut)}.mcsrc{font-size:11px;color:#8a99a8}.alts a{color:var(--rest)}
+.pkmeta{font-size:12px;color:var(--mut)}
+.tag.cu{background:#e0f2f1;color:#00695c;font-weight:600}.card.custom{border-left:4px solid #00897b}
+.cubar{display:flex;gap:6px;flex-wrap:wrap;margin:0 0 8px}
+#cuform label{display:block;font-size:13px;margin:6px 0 2px;color:var(--mut)}#cuform input,#cuform select,#cuform textarea{width:100%;box-sizing:border-box;padding:8px;border:1px solid var(--line);border-radius:8px;font-size:16px}
+#cuform .err{color:#b71c1c;font-size:13px;min-height:1em;margin-top:6px}#cuform .hint{font-size:12px;color:var(--mut)}.mcsrc{font-size:11px;color:#8a99a8}.alts a{color:var(--rest)}
 #swbar{position:fixed;left:50%;bottom:calc(70px + env(safe-area-inset-bottom));transform:translateX(-50%);z-index:3000;background:#0d47a1;color:#fff;padding:8px 12px;border-radius:10px;box-shadow:0 4px 14px rgba(0,0,0,.3);display:none;gap:8px;align-items:center;font-size:14px}#swbar.on{display:flex}#swbar span,#swbar button{white-space:nowrap}#swbar button{border:0;border-radius:6px;padding:5px 10px;background:#fff;color:#0d47a1;font-weight:700}
 .days{display:flex;gap:4px;overflow-x:auto;padding-bottom:6px;margin-bottom:6px;-webkit-overflow-scrolling:touch}
 .days button{flex:0 0 auto;border:1px solid var(--line);background:#fff;border-radius:8px;padding:4px 8px;font-size:12px;cursor:pointer;line-height:1.3}
@@ -141,6 +145,7 @@ pre.json{background:#f4f6f8;border-radius:8px;padding:8px;font-size:11px;max-hei
     <select id="fcat"></select>
     <div style="display:flex;gap:10px;flex-wrap:wrap"><label><input type="checkbox" id="frain">只看雨天可去</label><label><input type="checkbox" id="froute" checked>只看本路線</label></div>
    </div></details>
+   <div class="cubar"><button class="btn pri" id="cuadd">＋新增自訂景點</button><button class="btn" id="cucopy">複製自訂景點清單</button></div>
    <div class="addto">加入行程到：<select class="dsel" id="dsel1"></select></div>
    <div class="cnt" id="scnt"></div><div id="slist"></div>
   </div>
@@ -178,6 +183,7 @@ pre.json{background:#f4f6f8;border-radius:8px;padding:8px;font-size:11px;max-hei
   <details class="legend" id="legend" open><summary>圖例</summary>
    <label><input type="checkbox" id="lspot" checked><span class="dot" style="background:var(--spot)"></span>景點</label>
    <label><input type="checkbox" id="lanime" checked><span style="font-size:13px">🎮</span>動漫・遊戲周邊</label>
+   <label><input type="checkbox" id="lcustom" checked><span class="dot" style="background:#00897b"></span>自訂景點</label>
    <label><input type="checkbox" id="lfest" checked><span class="dot" style="background:var(--fest)"></span>活動／花季</label>
    <label><input type="checkbox" id="lrest" checked><span class="dot" style="background:var(--rest)"></span>餐廳</label>
    <label><input type="checkbox" id="llodge" checked><span class="dot" style="background:var(--lodge)"></span>住宿</label>
@@ -195,8 +201,8 @@ pre.json{background:#f4f6f8;border-radius:8px;padding:8px;font-size:11px;max-hei
 <script>
 (function(){
 "use strict";
-const APPV="plan-multi-1.2";
-const CAT={popular:"熱門",natural:"自然絕景",shrine:"神社寺院",historic:"歷史",onsen:"溫泉",hidden:"私房",food:"美食",experience:"親子／體驗",anime:"動漫",anime_game:"🎮 動漫・遊戲周邊",festival:"活動／花季"};
+const APPV="plan-multi-1.3";
+const CAT={popular:"熱門",natural:"自然絕景",shrine:"神社寺院",historic:"歷史",onsen:"溫泉",hidden:"私房",food:"美食",experience:"親子／體驗",anime:"動漫",anime_game:"🎮 動漫・遊戲周邊",festival:"活動／花季",custom:"📍 自訂"};
 const MEAL={lunch:"午餐",dinner:"晚餐",breakfast:"早餐",cafe:"甜點咖啡",snack:"甜點咖啡／小吃"};
 const $=s=>document.querySelector(s), esc=s=>String(s==null?"":s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
 const isMob=()=>window.matchMedia("(max-width:820px)").matches;
@@ -221,12 +227,75 @@ function setHH(){document.documentElement.style.setProperty("--hh",$("#hdr").off
 window.addEventListener("resize",()=>{setHH(); if(map) map.invalidateSize();});
 
 /* ---------- storage（依行程分開） ---------- */
-const K={get it(){return "itin:"+TID+":v1";},get route(){return "itin:"+TID+":route";},get notes(){return "itin:"+TID+":notes:v1";},get fver(){return "itin:"+TID+":final_version";},get foodsig(){return "itin:"+TID+":food_sig";}};
+const K={get it(){return "itin:"+TID+":v1";},get route(){return "itin:"+TID+":route";},get notes(){return "itin:"+TID+":notes:v1";},get fver(){return "itin:"+TID+":final_version";},get foodsig(){return "itin:"+TID+":food_sig";},get cu(){return "custom:"+TID+":v1";}};
 const ls={get(k){try{return localStorage.getItem(k);}catch(e){return null;}},set(k,v){try{localStorage.setItem(k,v);}catch(e){toast("瀏覽器無法儲存（可能是私密模式）");}},del(k){try{localStorage.removeItem(k);}catch(e){}}};
 function store(){try{return JSON.parse(ls.get(K.it)||"{}")||{};}catch(e){return {};}}
 function notesStore(){try{return JSON.parse(ls.get(K.notes)||"{}")||{};}catch(e){return {};}}
 function dayNote(r,d){const n=notesStore();return (n[r]&&n[r][d])||"";}
 function setDayNote(r,d,v){const n=notesStore();n[r]=n[r]||{};if(v) n[r][d]=v; else delete n[r][d];ls.set(K.notes,JSON.stringify(n));}
+/* ---------- 自訂景點（localStorage：custom:<行程代號>:v1；規格同景點部 spots_app/DATA_FORMAT.md） ---------- */
+const CU_TODO="待查（請告訴景點部補查）";
+function cuLoadKey(k){try{const a=JSON.parse(ls.get(k)||"[]"); return Array.isArray(a)?a.filter(x=>x&&typeof x.id==="string"&&x.id.startsWith("custom-")&&isFinite(x.lat)&&isFinite(x.lng)&&x.name):[];}catch(e){return [];}}
+function cuLoad(){return cuLoadKey(K.cu);}
+function cuNorm(x){return {id:x.id,type:"spot",custom:true,name:String(x.name||"").slice(0,120),prefecture:String(x.prefecture||"").slice(0,20),category:x.category||"custom",lat:+x.lat,lng:+x.lng,
+ stay_minutes:+x.stay_minutes||60,note:String(x.note||"").slice(0,1000),google_maps:x.google_maps||`https://www.google.com/maps/search/?api=1&query=${+x.lat},${+x.lng}`,source_input:x.source_input||"",
+ created_at:x.created_at||nowISO(),updated_at:x.updated_at||null,region:"自訂"+(x.prefecture?"・"+x.prefecture:""),description:x.note||"",routes:Object.keys(D.plan.routes),mapcode:null,parkings:[],rain_ok:false};}
+function cuClean(o){return {id:o.id,name:o.name,prefecture:o.prefecture,category:o.category,lat:o.lat,lng:o.lng,stay_minutes:o.stay_minutes,note:o.note,google_maps:o.google_maps,source_input:o.source_input,created_at:o.created_at,updated_at:o.updated_at};}
+function cuSync(list){ for(let i=D.spots.length-1;i>=0;i--) if(D.spots[i].custom){delete SP[D.spots[i].id]; D.spots.splice(i,1);}
+ (list||cuLoad()).map(cuNorm).forEach(o=>{D.spots.push(o); SP[o.id]=o;}); }
+function cuSave(list){const clean=list.map(cuNorm).map(cuClean); ls.set(K.cu,JSON.stringify(clean)); cuSync(clean); return clean;}
+function cuMerge(arr){ // 依 id 合併（座標需通過日本範圍檢查），回傳筆數
+ if(!Array.isArray(arr)) return 0; const byId={}; cuLoad().forEach(x=>byId[x.id]=x); let n=0;
+ arr.forEach(x=>{ if(!x||typeof x.id!=="string"||!x.id.startsWith("custom-")||!x.name) return; const p=parseLoc(x.lat+","+x.lng); if(p.err) return; byId[x.id]=cuClean(cuNorm(Object.assign({},x,{lat:p.lat,lng:p.lng}))); n++; });
+ if(n) cuSave(Object.values(byId)); return n;}
+function cuMigrate(){ // 一次性把舊 key 搬到本行程（舊 key 不刪）
+ const L=D.meta.legacy_storage; if(!L||!L.custom_spots) return 0;
+ const flag="custom:"+TID+":migrated_from:"+L.custom_spots; if(ls.get(flag)) return 0;
+ const old=cuLoadKey(L.custom_spots); let n=0;
+ if(old.length){ const byId={}; old.forEach(x=>byId[x.id]=x); cuLoad().forEach(x=>byId[x.id]=x); n=old.filter(x=>!cuLoad().some(y=>y.id===x.id)).length; ls.set(K.cu,JSON.stringify(Object.values(byId).map(x=>cuClean(cuNorm(x))))); }
+ ls.set(flag,nowISO()); return n;}
+function parseLoc(raw){
+ const t=String(raw||"").trim(); if(!t) return {err:"請貼上 Google 地圖連結或座標"};
+ if(/(maps\.app\.goo\.gl|goo\.gl\/maps)/i.test(t)) return {err:"短網址（maps.app.goo.gl）無法在網頁上展開。請改貼座標（在 Google 地圖長按／右鍵點地點，最上面一行的數字即座標，點一下就會複製），或貼瀏覽器網址列的長網址。"};
+ let s=t; try{s=decodeURIComponent(t);}catch(e){}
+ const num="(-?\\d{1,3}(?:\\.\\d+)?)"; let m;
+ const tries=[new RegExp("!3d"+num+"!4d"+num), new RegExp("@"+num+","+num), new RegExp("[?&](?:q|query|ll|destination|center|daddr)=(?:loc:)?"+num+"\\s*,\\s*"+num), new RegExp("^\\(?\\s*"+num+"\\s*[,，\\s]\\s*"+num+"\\s*\\)?$")];
+ for(const re of tries){m=s.match(re); if(m) break;}
+ if(!m) return {err:/^https?:/i.test(t)?"這個連結裡找不到座標。請在 Google 地圖長按／右鍵點地點複製座標（例：35.6586, 139.7454）再貼上。":"看不懂這個格式。請貼「緯度,經度」（例：35.6586, 139.7454）或 Google 地圖長網址。"};
+ const lat=+m[1], lng=+m[2];
+ if(!(lat>=24&&lat<=46&&lng>=122&&lng<=154)) return {err:`座標 ${lat}, ${lng} 不在日本範圍（緯度 24–46、經度 122–154）。請確認沒有把緯度、經度貼反。`};
+ return {lat:Math.round(lat*1e6)/1e6,lng:Math.round(lng*1e6)/1e6};
+}
+function cuRefs(id){const s=store(); const out=[]; for(const r of Object.keys(s)) for(const d of Object.keys(s[r]||{})) if(Array.isArray(s[r][d])&&s[r][d].some(x=>x&&x.id===id)) out.push(`路線 ${r} Day ${d}`); return out;}
+function cuUsed(){const ids=new Set(); const it=itin(route); Object.keys(it).forEach(d=>(it[d]||[]).forEach(x=>{if(x&&String(x.id).startsWith("custom-")) ids.add(x.id);})); return cuLoad().filter(x=>ids.has(x.id));}
+function cuText(){const L=cuLoad(); if(!L.length) return ""; return "【自訂景點清單（"+(TE?TE.title:TID)+"），請景點部補查 MapCode／停車場】\n"+L.map((x,i)=>`${i+1}. ${x.name}｜${x.prefecture||"縣名未填"}｜${x.lat},${x.lng}${x.note?"｜備註："+x.note:""}`).join("\n");}
+function cuAfter(){fillSelects(); renderSpots(); renderItin();}
+function cuForm(id){
+ const o=id?cuLoad().find(x=>x.id===id):null; const cats=Object.keys(CAT).filter(k=>k!=="festival");
+ openModal(`<h2 style="font-size:18px;margin:0 28px 6px 0">${o?"編輯":"新增"}自訂景點</h2><form id="cuform" novalidate>
+ <label for="cu_name">名稱（必填）</label><input id="cu_name" maxlength="120" value="${esc(o?o.name:"")}" required>
+ <label for="cu_pref">縣名</label><input id="cu_pref" maxlength="20" placeholder="例：長野県" value="${esc(o?o.prefecture:"")}">
+ <label for="cu_cat">類別</label><select id="cu_cat">${cats.map(k=>`<option value="${k}" ${(o?o.category:"custom")===k?"selected":""}>${esc(CAT[k])}</option>`).join("")}</select>
+ <label for="cu_loc">Google 地圖連結或座標（必填其一）</label><input id="cu_loc" placeholder="35.6586, 139.7454 或 https://www.google.com/maps/…@35.65,139.74,17z" value="${esc(o?(o.source_input||o.lat+","+o.lng):"")}">
+ <div class="hint">在 Google 地圖長按（手機）或右鍵（電腦）點地點，最上面一行的數字就是座標，點一下即可複製。短網址 maps.app.goo.gl 無法解析。自訂景點只存在這台裝置的瀏覽器（${esc(K.cu)}），MapCode／停車場請景點部補查。</div>
+ <label for="cu_stay">停留分鐘</label><input id="cu_stay" type="number" min="5" max="720" step="5" value="${o?o.stay_minutes:60}">
+ <label for="cu_note">備註</label><textarea id="cu_note" rows="3" maxlength="1000">${esc(o?o.note:"")}</textarea>
+ <div class="err" id="cu_err"></div>
+ <div class="btns" style="margin-top:8px"><button type="submit" class="btn pri" id="cu_save">儲存</button><button type="button" class="btn" id="cu_cancel">取消</button></div></form>`);
+ $("#cu_cancel").onclick=closeModal;
+ $("#cuform").onsubmit=ev=>{ev.preventDefault(); const name=$("#cu_name").value.trim(); const err=m=>{$("#cu_err").textContent=m;};
+  if(!name) return err("請填名稱");
+  const p=parseLoc($("#cu_loc").value); if(p.err) return err(p.err);
+  const stay=Math.max(5,Math.min(720,parseInt($("#cu_stay").value,10)||60));
+  const list=cuLoad(); const rec={id:o?o.id:"custom-"+Date.now().toString(36)+Math.random().toString(36).slice(2,6),name,prefecture:$("#cu_pref").value.trim(),category:$("#cu_cat").value||"custom",lat:p.lat,lng:p.lng,stay_minutes:stay,note:$("#cu_note").value.trim(),source_input:$("#cu_loc").value.trim(),created_at:o?o.created_at:nowISO(),updated_at:o?nowISO():null};
+  rec.google_maps=`https://www.google.com/maps/search/?api=1&query=${rec.lat},${rec.lng}`;
+  const i=list.findIndex(x=>x.id===rec.id); if(i>=0) list[i]=rec; else list.push(rec); cuSave(list);
+  closeModal(); cuAfter(); toast(o?"已更新自訂景點":"已新增自訂景點");};
+}
+function cuDelete(id){const o=SP[id]; if(!o||!o.custom) return; const refs=cuRefs(id);
+ if(!confirm(refs.length?`「${o.name}」已排入行程：${refs.join("、")}。\n刪除後也會從這些行程移除，確定刪除？`:`確定刪除自訂景點「${o.name}」？`)) return;
+ if(refs.length){const s=store(); for(const r of Object.keys(s)) for(const d of Object.keys(s[r]||{})) if(Array.isArray(s[r][d])) s[r][d]=s[r][d].filter(x=>!(x&&x.id===id)); ls.set(K.it,JSON.stringify(s));}
+ cuSave(cuLoad().filter(x=>x.id!==id)); closeModal(); cuAfter(); toast("已刪除自訂景點");}
 function migrateLegacy(){
  const L=D.meta.legacy_storage; if(!L||!L.itinerary) return 0;
  const flag="itin:"+TID+":migrated_from:"+L.itinerary; if(ls.get(flag)) return 0;
@@ -362,10 +431,11 @@ function navBlock(o){
  let h=`<div class="nav nav-spot"><h4>① ${nm}導航</h4><div class="row">`;
  if(o.lat!=null&&o.lng!=null) h+=`<a class="btn pri navbtn" target="_blank" rel="noopener" href="${navUrl(o.lat,o.lng)}">▶ 開始導航（${nm}座標）</a>`;
  else h+=`<span class="todo">座標待查</span>`;
- h+=`</div><div class="row">${nm} MapCode：${mcHtml(o.mapcode)}</div></div>`;
+ h+=`</div><div class="row">${nm} MapCode：${o.custom?`<span class="todo">${CU_TODO}</span>`:mcHtml(o.mapcode)}</div></div>`;
  h+=`<div class="nav nav-park"><h4>② 停車場導航</h4>`;
  const pks=o.parkings||[];
- if(!pks.length) h+=`<div class="row"><span class="todo">停車場待查</span>（可先用上方${nm}座標導航）</div>`;
+ if(!pks.length&&o.custom) h+=`<div class="row"><span class="todo">停車場：${CU_TODO}</span>（可先用上方座標導航）</div>`;
+ else if(!pks.length) h+=`<div class="row"><span class="todo">停車場待查</span>（可先用上方${nm}座標導航）</div>`;
  pks.forEach((p,i)=>{
   const tag=p.type==="dedicated"?'<span class="tag ded">專用</span>':'<span class="tag near">附近</span>';
   const cap=p.capacity!=null&&p.capacity!==""?esc(p.capacity):'<span class="todo">待查</span>';
@@ -396,6 +466,8 @@ function fillSelects(){
  document.querySelectorAll(".dsel").forEach(s=>{s.innerHTML=dsel; s.value=curDay;});
 }
 function spotCard(s,sel){
+ if(s.custom) return `<div class="card custom" data-id="${esc(s.id)}"><h3 data-open="spot:${esc(s.id)}">📍 ${esc(s.name)}</h3><div class="tags"><span class="tag cu">自訂景點</span>${s.prefecture?`<span class="tag">${esc(s.prefecture)}</span>`:""}<span class="tag">建議 ${s.stay_minutes} 分</span><span class="tag">${s.lat}, ${s.lng}</span><span class="tag">MapCode／停車場：待查</span></div><div class="desc">${esc((s.note||"").slice(0,90))}</div>
+ <div class="btns"><button class="btn" data-open="spot:${esc(s.id)}">詳情／導航</button><button class="btn pri addbtn" data-add="spot:${esc(s.id)}" data-sel="${sel}">＋加入行程</button><button class="btn" data-cuedit="${esc(s.id)}">編輯</button><button class="btn warn" data-cudel="${esc(s.id)}">刪除</button></div></div>`;
  const tags=[`<span class="tag ${s.category==="anime_game"?"ag":""}">${esc(CAT[s.category]||s.category)}</span>`,s.event?`<span class="tag ev">📅 ${esc((s.date_label||"").slice(0,22))}</span>`:"",s.nearest_station?`<span class="tag">🚉 ${esc(s.nearest_station.split("／")[0].slice(0,24))}</span>`:"",s.base?`<span class="tag">${esc((BASEN[s.base]||s.base).split("（")[0])}</span>`:`<span class="tag">${esc(s.region||"")}</span>`,
   Object.keys(SAME).filter(k=>SAME[k]===s.id&&RS[k]).map(k=>`<span class="tag rest">🍴 同一站：${esc(RS[k].name.split("（")[0])}</span>`).join(""), s.rain_ok?'<span class="tag rain">☔ 雨天可</span>':"", s.stay_minutes?`<span class="tag">建議 ${s.stay_minutes} 分</span>`:"", (s.routes||[]).length?`<span class="tag">路線 ${esc(s.routes.join("/"))}</span>`:""].join("");
  return `<div class="card" data-id="${esc(s.id)}"><h3 data-open="spot:${esc(s.id)}">${esc(s.name)}</h3><div class="tags">${tags}</div><div class="desc">${esc((s.description||"").slice(0,90))}${(s.description||"").length>90?"…":""}</div>
@@ -418,7 +490,7 @@ function filtSpots(){
 }
 const LIMIT=80; let sShown=LIMIT, rShown=LIMIT;
 function more(n,shown,kind){return n>shown?`<button class="btn" style="width:100%" data-more="${kind}">再顯示 ${Math.min(LIMIT,n-shown)} 筆（還有 ${n-shown} 筆）</button>`:"";}
-function renderSpots(keep){if(!keep) sShown=LIMIT; const L=filtSpots(); $("#scnt").textContent=`共 ${L.length} 筆（全部 ${D.spots.length} 筆）`; $("#slist").innerHTML=(L.slice(0,sShown).map(s=>spotCard(s,"dsel1")).join("")||'<div class="cnt">沒有符合條件的景點</div>')+more(L.length,sShown,"s"); renderMarkers();}
+function renderSpots(keep){if(!keep) sShown=LIMIT; const L=filtSpots().sort((a,b)=>(b.custom?1:0)-(a.custom?1:0)); $("#scnt").textContent=`共 ${L.length} 筆（全部 ${D.spots.length} 筆）`; $("#slist").innerHTML=(L.slice(0,sShown).map(s=>spotCard(s,"dsel1")).join("")||'<div class="cnt">沒有符合條件的景點</div>')+more(L.length,sShown,"s"); renderMarkers();}
 function filtRests(){
  const q=$("#rq").value.trim().toLowerCase(), b=$("#rbase").value, m=$("#rmeal").value, ro=$("#rroute").checked;
  return RESTS.filter(r=>{ if(q&&!((r.name+" "+(r.cuisine||"")+" "+(r.description||"")).toLowerCase().includes(q))) return false;
@@ -437,7 +509,7 @@ function renderDays(){
  const on=$("#days button.on"); if(on){const c=$("#days"); c.scrollLeft=on.offsetLeft-c.offsetLeft-c.clientWidth/2+on.clientWidth/2;}
 }
 function mcSrc(t){t=String(t||"");return /mapcode_reconcile/.test(t)?"景點部 mapcode_reconcile.json 定案":/Mapion/i.test(t)?"Mapion（回讀座標核對）":t.slice(0,40);}
-function planBits(r,d,it){const p=it.type==="restaurant"?pinfo(r,d,it.id):null; return (p&&p.alert?`<div class="alert">${esc(p.alert)}</div>`:"")+(p&&p.note?`<div class="cnt">📝 ${esc(p.note)}</div>`:"");}
+function planBits(r,d,it){const p=it.type==="restaurant"?pinfo(r,d,it.id):null; return (p&&p.time&&p.end_time?`<div class="cnt ptime">⏰ 建議用餐 ${esc(p.time)}～${esc(p.end_time)}</div>`:"")+(p&&p.alert?`<div class="alert">${esc(p.alert)}</div>`:"")+(p&&p.note?`<div class="cnt">📝 ${esc(p.note)}</div>`:"");}
 function tnHtml(i,it){return `<div class="tn"><input type="time" data-time="${i}" value="${esc(it.time||"")}" aria-label="時間"><input type="text" data-note="${i}" value="${esc(it.note||"")}" placeholder="備註（例：先訂位、買伴手禮）" aria-label="備註"></div>`;}
 function renderItin(){
  renderDays(); const di=dayInfo(route,curDay); const arr=itin(route)[curDay]||[]; const sug={}; di.items.forEach(x=>sug[x.id]=x);
@@ -475,6 +547,7 @@ function openDetail(type,id){
  const o=type==="restaurant"?RS[id]:SP[id]; if(!o) return;
  const rows=[]; const add=(k,v)=>{if(v!=null&&v!=="") rows.push(`<tr><td>${k}</td><td>${esc(v)}</td></tr>`);};
  if(type==="restaurant"){add("料理",o.cuisine);add("類型",o.category);add("餐別",[].concat(o.meal||[]).map(m=>MEAL[m]||m).join("／"));add("價位",o.price_range);add("訂位",resvTxt(o.reservation));add("所屬據點",o.base?BASEN[o.base]||o.base:"");add("細分區域",o.base_area);add("MapCode 來源",o.mapcode_source?mcSrc(o.mapcode_source):"");add("路線",(o.routes||[]).join("/"));add("地址",o.address);add("Tabelog",o.tabelog_score);add("Google 評分",o.google_rating);add("資料查核日",o.checked_date);}
+ else if(o.custom){add("類別","📍 自訂景點"+(o.category&&o.category!=="custom"?"（"+(CAT[o.category]||o.category)+"）":""));add("縣名",o.prefecture);add("座標",o.lat+", "+o.lng);add("建議停留",o.stay_minutes+" 分");add("備註",o.note);add("原始輸入",o.source_input);add("說明","使用者自行新增（只存在本機瀏覽器）；MapCode、停車場、營業時間未經景點部查核");}
  else{add("類別",CAT[o.category]||o.category);add("地區",o.region+"（"+(o.prefecture||"")+"）");add("所屬據點",o.base?BASEN[o.base]:"非本次路線");add("路線",(o.routes||[]).join("/"));add("建議停留",o.stay_minutes?o.stay_minutes+" 分":"");}
  if(o.event){add("活動日期",o.date_label);add("日期狀態",{official:"2027 官方公布",estimated:"依往年推估",unconfirmed:"未確認"}[o.date_status]||o.date_status);}add("想買什麼",o.what_to_buy);add("最近車站",o.nearest_station);add("免稅",o.tax_free);add("營業時間",o.hours);add("休日",o.closed);add("門票",o.admission);add("電話",o.phone);add("雨天",o.rain_ok?"可（室內或雨天也適合）":"不建議");add("6～7 月注意",o.june_july_note||o.rainy_season);add("查詢日期",o.info_checked_at||o.checked_date);
  const src=(o.sources||[]).map(u=>{const url=typeof u==="string"?u:(u.url||"");const t=typeof u==="string"?(/youtube\.com|youtu\.be/.test(u)?"▶ YouTube："+u:u):(u.title||u.url);return url?`<a href="${esc(url)}" target="_blank" rel="noopener">${esc(t)}</a>`:"";}).join("");
@@ -501,7 +574,7 @@ function renderMarkers(){
  if(!map||!D) return; layer.clearLayers(); pkLayer.clearLayers(); const pts=[];
  const dayOnly=$("#lday").checked; const dayArr=itin(route)[curDay]||[]; const dayset=new Set(dayArr.map(x=>x.type+":"+x.id));
  const dayStops=dayOnly?stopsOf(dayArr,route,curDay):null; const hiddenSpots=new Set(dayStops?[].concat(...dayStops.map(s=>s.hid.map(h=>h.x.id))):[]);
- const spotsDrawn=[]; (dayOnly?D.spots.filter(s=>dayset.has("spot:"+s.id)):filtSpots()).forEach(s=>{const f=s.category==="festival", ag=s.category==="anime_game"; if(f&&!$("#lfest").checked) return; if(ag&&!$("#lanime").checked) return; if(!f&&!ag&&!$("#lspot").checked) return; if(dayOnly&&(!dayset.has("spot:"+s.id)||hiddenSpots.has(s.id))) return; spotsDrawn.push(s);});
+ const spotsDrawn=[]; (dayOnly?D.spots.filter(s=>dayset.has("spot:"+s.id)):filtSpots()).forEach(s=>{const f=s.category==="festival", ag=s.category==="anime_game"; if(s.custom){ if(!$("#lcustom").checked) return; if(dayOnly&&!dayset.has("spot:"+s.id)) return; spotsDrawn.push(s); return;} if(f&&!$("#lfest").checked) return; if(ag&&!$("#lanime").checked) return; if(!f&&!ag&&!$("#lspot").checked) return; if(dayOnly&&(!dayset.has("spot:"+s.id)||hiddenSpots.has(s.id))) return; spotsDrawn.push(s);});
  const drawnIds=new Set(spotsDrawn.map(s=>s.id));
  const restsDrawn=$("#lrest").checked&&RESTS.length?(dayOnly?RESTS.filter(r=>dayset.has("restaurant:"+r.id)):filtRests()):[];
  // 同一站：餐廳掛到已畫出的景點上，不另畫一點
@@ -513,7 +586,7 @@ function renderMarkers(){
   const pkObj=att?{parkings:mergedParkings([].concat(s.parkings||[],...att.map(r=>r.parkings||[])))}:s;
   if(ag){ bindPk(mkIcon(s,popupMerged(s),"agicon"+(s.event?" ev":""),s.event?"📅":"🎮"),pkObj); return; }
   if(att){ const m=mkIcon(s,popupMerged(s),"mergedicon","🍴"); m.options.title="同一站"; bindPk(m,pkObj); return; }
-  mk(s.lat,s.lng,f?"#8e24aa":"#1e88e5",7,popup(s),s);});
+  mk(s.lat,s.lng,s.custom?"#00897b":f?"#8e24aa":"#1e88e5",s.custom?9:7,popup(s),s);});
  restsSolo.forEach(r=>mk(r.lat,r.lng,RCOL[r.category]||"#ef6c00",7,popup(r),r));
  if($("#llodge").checked) (D.lodging||[]).filter(l=>l.route===route).forEach(l=>mk(l.lat,l.lng,"#d32f2f",9,`<b>🏨 ${esc(l.name)}</b><br>${esc(l.area)}<br>${esc(l.check_in)}～${esc(l.check_out)}（${l.nights} 晚）${l.status==="top_pick"?"<br><small>住宿部首推（未訂）</small>":""}<br><a class="btn sm pri" target="_blank" rel="noopener" href="${navUrl(l.lat,l.lng)}">▶ 開始導航</a>`));
  window.__markerCount=pts.length; window.__mergedOnMap=Object.keys(attach).length;
@@ -568,7 +641,7 @@ function openTrip(id,opt){opt=opt||{};
  const seq=++loadSeq; $("#loading").hidden=false; $("#loading").textContent="載入「"+e.title+"」資料中…";
  return loadTripData(e).then(d=>{ if(seq!==loadSeq) return;
   TID=e.id; TE=e; D=d; RESTS=d.rests; RPLAN=d.rplan; SP={}; RS={}; BASEN={};
-  D.spots.forEach(s=>SP[s.id]=s); RESTS.forEach(r=>RS[r.id]=r); D.bases.forEach(b=>BASEN[b.key]=b.area); indexPlan();
+  D.spots=D.spots.filter(s=>!s.custom); D.spots.forEach(s=>SP[s.id]=s); const cum=cuMigrate(); cuSync(); RESTS.forEach(r=>RS[r.id]=r); D.bases.forEach(b=>BASEN[b.key]=b.area); indexPlan();
   const mig=migrateLegacy(); const fm=mergeFoodOnce();
   $("#ttl").textContent=e.title; document.title=e.title+"｜互動行程"; fillTripSel(); fillRcat();
   $("#loading").hidden=true; $("#tripList").hidden=true; $("#app").hidden=false; $("#bnav").hidden=false;
@@ -576,7 +649,7 @@ function openTrip(id,opt){opt=opt||{};
   const r=opt.route||ls.get(K.route)||e.default_route;
   if(opt.route&&!D.plan.routes[opt.route]) toast("此行程沒有路線「"+opt.route+"」，改顯示建議路線",3000);
   curDay=1; setRoute(r,{push:opt.push,day:opt.day});
-  if(mig) toast("已把舊版瀏覽器存的行程（"+mig+" 條路線）搬到「"+e.title+"」",3500); else if(fm) toast("已併入餐廳部自訂用餐 "+fm+" 筆");
+  if(mig||cum) toast("已把舊版瀏覽器存的"+[mig?"行程（"+mig+" 條路線）":"",cum?"自訂景點 "+cum+" 筆":""].filter(Boolean).join("、")+"搬到「"+e.title+"」",3500); else if(fm) toast("已併入餐廳部自訂用餐 "+fm+" 筆");
   window.__ready=true;
  }).catch(err=>{ if(seq!==loadSeq) return; console.warn(err); $("#loading").hidden=false; $("#loading").innerHTML="資料載入失敗："+esc(err.message)+"<br>（請用 http(s) 開啟，或稍後重新整理）"; });
 }
@@ -609,7 +682,7 @@ function exportJson(){
  const t=D.meta.trip; const R=D.plan.routes[route]; const unresolved=[];
  const one=(x,o,extra)=>Object.assign({kind:x.type,name:o?o.name:"",name_zh:o&&o.name_zh||null,prefecture:o&&o.prefecture||null,meal:x.type==="restaurant"?(mealOf(x)||null):null,
     time:x.time||null,stay_min:o&&o.stay_minutes||null,lat:o?o.lat:null,lng:o?o.lng:null,gmaps_url:o?gmUrl(o):null,mapcode:o&&o.mapcode||null,
-    note:x.note||null,raw:null,confidence:o?1:0,match:{ref:x.id,status:o?"matched":"not_found"}},extra||{});
+    note:x.note||null,raw:null,confidence:o?1:0,match:{ref:x.id,status:o?(o.custom?"custom":"matched"):"not_found"}},o&&o.custom?{custom:true,mapcode_status:"待查（自訂景點，請景點部補查）"}:{},extra||{});
  const days=routeDaysExport().map(({d,rp,lg,note,items})=>({
   day:d.day,date:d.date,weekday:d.weekday,area:BASEN[d.base]||d.base,base:d.base,mode:d.mode,
   lodging:{name:lg?lg.name:"",candidates:[],meals_included:rp&&rp.dinner_included?["dinner"]:[],status:lg?lg.status:null},
@@ -623,13 +696,14 @@ function exportJson(){
   source:{type:"web_export",ref:location.href,author:"安宏（trip-maps 互動行程網頁）",captured_at:nowISO(),parsed_by:"trip-maps plan 網頁（旅遊資訊部 "+APPV+"）"},
   trip:{id:TID,route_key:route,title:(t.title||TID)+"｜路線 "+route+"："+(R.name||""),start_date:t.start_date,end_date:t.end_date,travelers:t.travelers||null,style:t.style||null,origin_airport:t.origin_airport||null},
   flights:D.meta.flights||[],days,constraints:{must:[],avoid:[],budget_twd:t.budget_twd==null?null:t.budget_twd},unresolved,
+  custom_spots:cuLoad(),custom_key:K.cu,
   x_web:{app:APPV,storage_key:K.it,edited:!!store()[route],data_version:TE.data_version,stop_rule:"items[] 一筆＝一站；同一站的餐廳放在 merged_items[]（same_stop_as＝景點 id）"}};
  download(TID+"_"+route+"_itinerary.json",JSON.stringify(data,null,1),"application/json"); toast("已匯出 JSON（路線 "+route+"）"); return data;
 }
 function itemDesc(x,o,att,dayN){
  const a=[]; if(x.type==="restaurant"){a.push("餐廳："+(o.cuisine||o.category||"")); const m=mealOf(x); if(m) a.push("餐別："+(MEAL[m]||m));} else a.push("類別："+(CAT[o.category]||o.category||""));
  if(x.time) a.push("時間："+x.time); if(o.stay_minutes) a.push("建議停留："+o.stay_minutes+" 分");
- a.push("MapCode："+(o.mapcode||"待查"));
+ if(o.custom) a.push("📍 自訂景點（使用者新增，未經景點部查核）"); a.push("MapCode："+(o.mapcode||(o.custom?CU_TODO:"待查")));
  const pks=mergedParkings([].concat(o.parkings||[],...(att||[]).map(z=>z.o&&z.o.parkings||[])));
  const p=pks.find(p=>p.exists!==false&&p.lat!=null); if(p) a.push("停車場："+(p.name||"")+"｜MapCode："+(p.mapcode||"待查")+"｜導航："+navUrl(p.lat,p.lng));
  if(o.hours) a.push("營業："+String(o.hours).slice(0,80)); if(o.phone) a.push("電話："+o.phone);
@@ -678,6 +752,10 @@ function flatStop(x,mergedKey){ // 一站 → [主項目, 同一站餐廳…]
  const main=normItem(x); if(!main) return []; const out=[main];
  (x[mergedKey]||[]).forEach(m=>{const y=normItem(m,main.type==="spot"?main.id:null); if(y) out.push(y);}); return out;}
 function parseImport(j){
+ const p=parseImport0(j); if(p&&j&&Array.isArray(j.custom_spots)) p.custom_spots=j.custom_spots;
+ if(!p&&j&&Array.isArray(j.custom_spots)&&j.custom_spots.length) return {trip:j.trip_id||null,legacy:true,routes:{},notes:{},custom_spots:j.custom_spots};
+ return p;}
+function parseImport0(j){
  if(!j||typeof j!=="object") return null;
  if(j.schema==="agency.itinerary.v0"&&Array.isArray(j.days)){
   const r=j.trip&&j.trip.route_key; const o={}, n={};
@@ -697,6 +775,7 @@ function parseImport(j){
  return {trip:j.trip_id||null,legacy:true,routes,notes:{}};
 }
 function doImport(p){
+ const nc=cuMerge(p.custom_spots); if(nc){fillSelects(); renderSpots();}
  const s=store(), ns=notesStore(); let nr=0, miss=0, tot=0; const done=[];
  for(const r0 of Object.keys(p.routes)){
   let r=r0;
@@ -707,8 +786,8 @@ function doImport(p){
  }
  ls.set(K.it,JSON.stringify(s)); ls.set(K.notes,JSON.stringify(ns));
  if(done.length&&!done.includes(route)) setRoute(done[0],{push:true}); else renderItin();
- toast(nr?`已匯入 ${nr} 條路線（${done.join("/")}），共 ${tot-miss} 個地點`+(miss?`；${miss} 個找不到資料已略過`:""):"沒有可匯入的資料",4000);
- return {routes:done,items:tot-miss,skipped:miss};
+ toast(!nr&&nc?`已匯入自訂景點 ${nc} 筆`:nr||nc?`已匯入 ${nr} 條路線（${done.join("/")}），共 ${tot-miss} 個地點`+(nc?`、自訂景點 ${nc} 筆`:"")+(miss?`；${miss} 個找不到資料已略過`:""):"沒有可匯入的資料",4000);
+ return {routes:done,items:tot-miss,skipped:miss,custom:nc};
 }
 function importText(txt){
  let j; try{j=JSON.parse(txt);}catch(err){toast("檔案不是有效 JSON");return Promise.resolve(null);}
@@ -734,14 +813,15 @@ function buildFinal(notes){
   items.forEach(st=>{ nst++; if(!st.o) warn.push("Day "+d.day+" 有找不到資料的 "+st.x.id); else if(st.x.type==="restaurant") nr++; else ns++; st.att.forEach(a=>{nr++; nmerged++;}); });
   return {day:d.day,date:d.date,weekday:d.weekday,base:d.base,area:BASEN[d.base]||d.base,mode:d.mode,lodging:lg?{name:lg.name,status:lg.status,check_in:lg.check_in,check_out:lg.check_out}:null,note:note||"",
    items:items.map(st=>{const x=st.x,o=st.o; const e={seq:st.seq,type:x.type,id:x.id,name:o?o.name:null,meal:x.type==="restaurant"?(mealOf(x)||null):null,time:x.time||null,note:x.note||null,lat:o?o.lat:null,lng:o?o.lng:null,mapcode:o&&o.mapcode||null};
+    if(o&&o.custom){e.custom=true; e.stay_minutes=o.stay_minutes; e.prefecture=o.prefecture||null; e.mapcode_status="待查";}
     if(st.att.length) e.merged=st.att.map(a=>({type:"restaurant",id:a.x.id,name:a.o?a.o.name:null,meal:mealOf(a.x)||null,time:a.x.time||null,note:a.x.note||null,same_stop_as:x.id,lat:a.o?a.o.lat:null,lng:a.o?a.o.lng:null,mapcode:a.o&&a.o.mapcode||null}));
     if(st.hid.length){e.same_stop_as=st.hid[0].x.id; e.replaces=st.hid.map(h=>h.x.id);}
     return e;})};});
  const f={schema:"agency.final.v0",trip_id:TID,trip_title:t.title||TID,route,route_name:R.name||"",version:ver,generated_at:now,finalized_at:now,
   generated_by:"trip-maps 互動行程網頁（"+APPV+"）",source_url:location.href,data_version:TE.data_version,based_on_suggested:!store()[route],
-  notes:notes||"",counts:{days:days.length,stops:nst,spots:ns,restaurants:nr,merged_restaurants:nmerged},warnings:warn,
+  notes:notes||"",counts:{days:days.length,stops:nst,spots:ns,restaurants:nr,merged_restaurants:nmerged,custom_spots:[].concat(...exp.map(e=>e.items)).filter(st=>st.o&&st.o.custom).length},warnings:warn,
   stop_rule:"days[].items 一筆＝一站（seq 為站序）；同一站的餐廳在 merged[]（same_stop_as＝景點 id），不另算一站；replaces＝被餐廳版取代、已隱藏的同店景點",
-  days,itinerary,checksum:null};
+  days,itinerary,custom_spots:cuUsed(),custom_key:K.cu,checksum:null};
  return shortHash(JSON.stringify(itinerary)).then(h=>{f.checksum=h; return f;});
 }
 function openFinal(){
@@ -760,6 +840,7 @@ function openFinal(){
 }
 /* ---------- events ---------- */
 document.addEventListener("click",e=>{
+ const ce=e.target.closest("[data-cuedit]"); if(ce){cuForm(ce.dataset.cuedit);return;} const cd=e.target.closest("[data-cudel]"); if(cd){cuDelete(cd.dataset.cudel);return;}
  const c=e.target.closest("[data-copy]"); if(c){copyText(c.dataset.copy);return;}
  const tr=e.target.closest("[data-trip]"); if(tr){e.preventDefault(); openTrip(tr.dataset.trip,{route:tr.dataset.route||null,push:true}); return;}
  const o=e.target.closest("[data-open]"); if(o){e.preventDefault(); const [t,id]=o.dataset.open.split(/:(.+)/); openDetail(t,id); return;}
@@ -778,7 +859,7 @@ $("#ilist").addEventListener("change",e=>{const tm=e.target.closest("[data-time]
 $("#daynote").addEventListener("change",e=>{setDayNote(route,curDay,e.target.value.trim()); toast("已存本日備註");});
 ["#q","#fbase","#fcat","#frain","#froute"].forEach(s=>$(s).addEventListener("input",()=>renderSpots()));
 ["#rq","#rbase","#rmeal","#rcat","#rroute"].forEach(s=>$(s).addEventListener("input",()=>renderRests()));
-["#lspot","#lanime","#lfest","#lrest","#llodge","#lday"].forEach(s=>$(s).addEventListener("change",renderMarkers));
+["#lspot","#lanime","#lcustom","#lfest","#lrest","#llodge","#lday"].forEach(s=>$(s).addEventListener("change",renderMarkers));
 document.querySelectorAll(".dsel").forEach(s=>s.addEventListener("change",()=>{curDay=+s.value; document.querySelectorAll(".dsel").forEach(x=>x.value=curDay); renderItin(); syncUrl(false);}));
 $("#reset").addEventListener("click",()=>{if(!confirm("確定把路線 "+route+" 的每日行程重設為建議行程？（時間、備註也會清除）")) return; const s=store(); delete s[route]; ls.set(K.it,JSON.stringify(s)); const n=notesStore(); delete n[route]; ls.set(K.notes,JSON.stringify(n)); renderItin(); toast("已重設");});
 $("#expJson").addEventListener("click",exportJson);
@@ -816,7 +897,9 @@ window.__sw={state:"none"};
   return navigator.serviceWorker.ready;}).then(()=>{window.__sw.ready=true; sendCfg();})
   .catch(e=>{console.warn("SW 註冊失敗",e); st("離線功能啟用失敗："+e.message);});
 })();
-window.__app={stopsOf,mergeByMeal,get SAME(){return SAME;},setRoute,openTrip,showTab,addTo,itin,suggested,store,exportJson,buildKml,buildCsv,buildFinal,importText,parseImport,
+$("#cuadd").addEventListener("click",()=>cuForm(null));
+$("#cucopy").addEventListener("click",()=>{const t=cuText(); if(!t){toast("還沒有自訂景點");return;} window.__lastCuText=t; copyText(t,"已複製自訂景點清單，可貼給景點部補查");});
+window.__app={parseLoc,cuLoad,cuText,cuMerge,stopsOf,mergeByMeal,get SAME(){return SAME;},setRoute,openTrip,showTab,addTo,itin,suggested,store,exportJson,buildKml,buildCsv,buildFinal,importText,parseImport,
  get trip(){return TID;},get route(){return route;},get day(){return curDay;},get RS(){return RS;},get SP(){return SP;},get D(){return D;},K};
 })();
 </script>
