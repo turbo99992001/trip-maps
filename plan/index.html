@@ -215,7 +215,7 @@ pre.json{background:#f4f6f8;border-radius:8px;padding:8px;font-size:11px;max-hei
 <script>
 (function(){
 "use strict";
-const APPV="plan-multi-1.8.1";
+const APPV="plan-multi-1.9";
 /* 1.8 後台自動排路線（Cloudflare Worker）：網址部署後填入。空字串＝後台未啟用，網頁維持 1.7 行為（匯出 JSON＋複製文字）。site key 是公開值。 */
 const BACKEND_CFG={url:"https://trip-intake.turbo99992001.workers.dev",turnstile_site_key:"0x4AAAAAAFs8wmzPidNkiUBU"};
 const CAT={popular:"熱門",natural:"自然絕景",shrine:"神社寺院",historic:"歷史",onsen:"溫泉",hidden:"私房",food:"美食",experience:"親子／體驗",anime:"動漫",anime_game:"🎮 動漫・遊戲周邊",festival:"活動／花季",custom:"👤 自訂地點"};
@@ -1205,7 +1205,7 @@ function dropoffDefault(){const f=FL(),o=f&&f.inbound; return o?addMin(o.date,o.
 function decLoad(){let j=null; try{j=JSON.parse(ls.get(K.dec)||"null");}catch(e){} j=j&&typeof j==="object"?j:{}; return {schema:"agency.decisions.v1",updated_at:j.updated_at||null,flights:j.flights||null,car:j.car||null,lodging:j.lodging&&typeof j.lodging==="object"?j.lodging:{},restaurants:Array.isArray(j.restaurants)?j.restaurants:[]};}
 function decSave(o){o.schema="agency.decisions.v1"; o.updated_at=nowISO(); ls.set(K.dec,JSON.stringify(o)); return o;}
 function decExport(){const d=decLoad(); let cps=[]; try{cps=cpLoad()||[];}catch(e){}
- return {schema:"agency.decisions.v1",trip_id:TID,app_version:APPV,generated_at:nowISO(),selected_routes:selectedRoutes(),buffers:Object.assign({},BUF),decisions:{flights:d.flights,car:d.car,lodging:d.lodging,restaurants:d.restaurants},custom_places:cps,backfill_queue:[]};}
+ return {schema:"agency.decisions.v1",trip_id:TID,app_version:APPV,generated_at:nowISO(),selected_routes:selectedRoutes(),buffers:Object.assign({},BUF),decisions:{flights:d.flights,car:d.car,lodging:d.lodging,restaurants:d.restaurants},custom_places:cps,bookings:bkLoad(),backfill_queue:[]};}
 function decDownload(){const j=decExport(), t=j.generated_at.replace(/[-:]/g,"").replace("T","-").slice(0,13); download(`decisions_${TID}_${t}.json`,JSON.stringify(j,null,2),"application/json"); toast("已匯出決定（decisions JSON）"); return j;}
 const DF={flights:[["airline","航空公司"],["booking_ref","訂位代號"],["out_flight","去程班號"],["out_date","去程日期","date"],["out_dep","起飛","time"],["out_arr","抵達","time"],["in_flight","回程班號"],["in_date","回程日期","date"],["in_dep","起飛","time"],["in_arr","抵達","time"],["price","價格"],["note","備註"]],
  car:[["company","租車公司"],["reservation_no","預約號碼"],["car_class","車型"],["pickup_place","取車地點"],["pickup_at","取車時間","datetime-local"],["dropoff_place","還車地點"],["dropoff_at","還車時間","datetime-local"],["price","價格"],["note","備註"]],
@@ -1289,14 +1289,18 @@ let POLL_T=null, AUTO={vc:null,status:null,result:null};
 function autoSelKey(rid){return "itin:"+rid+":selected_routes:v1";}
 function autoCardHtml(vc){return `<div class="card" id="autoPub"><h3>② 路線建議（後台自動排）</h3><div class="desc" id="autoSt">讀取狀態中…</div>
  <div class="cnt">查看網址（請存到 LINE 記事本；遺失無法找回）：<br><input class="wide" id="autoUrl" readonly value="${esc(viewUrl(vc))}"></div><div class="btns"><button class="btn" type="button" id="autoCopy">📋 複製查看網址</button><button class="btn" type="button" id="autoRefresh">🔄 重新整理</button></div><div id="autoRes"></div></div>`;}
-function autoPoll(vc,now){clearTimeout(POLL_T); AUTO.vc=vc; if(!document.getElementById("autoPub")) return;
+function autoPoll(vc,now){clearTimeout(POLL_T); if(AUTO.vc!==vc){AUTO.status=null; AUTO.result=null;} AUTO.vc=vc; if(!document.getElementById("autoPub")) return; const seq=AUTO.seq=(AUTO.seq||0)+1;
+ if(AUTO.status) autoShow(AUTO.status); if(AUTO.result) renderAutoRes(AUTO.result);
+ POLL_T=setTimeout(()=>{ if(AUTO.seq===seq&&/讀取狀態中/.test(($("#autoSt")||{}).textContent||"")) autoPoll(vc);},6000);
  bkFetch("/api/status",{headers:{Authorization:"View "+vc}}).then(r=>{const el=$("#autoSt"); if(!el) return;
   if(r.status===404){el.textContent="找不到這個代號（可能打錯或已過期 180 天）"; return;}
   if(!r.ok||!r.j){el.textContent="後台暫時連不上，稍後自動重試"; POLL_T=setTimeout(()=>autoPoll(vc),30000); return;}
-  const s=r.j; AUTO.status=s; el.innerHTML=esc(ST_TXT[s.status]||s.status)+(s.status==="queued"&&s.position?"（前面還有 "+esc(s.position)+" 件）":"")+(s.error?"<br>"+esc(s.error):"")+`<br><span class="cnt">需求 ${esc(s.request_id||"")}・更新 ${esc((s.updated_at||"").slice(0,16).replace("T"," "))}</span>`;
+  const s=r.j; AUTO.status=s; autoShow(s); clearTimeout(POLL_T);
   if(s.status==="published") return bkFetch("/api/result",{headers:{Authorization:"View "+vc}}).then(x=>{ if(x.ok&&x.j){AUTO.result=x.j; renderAutoRes(x.j);} });
   if(s.status==="failed"||s.status==="rejected") return;
   POLL_T=setTimeout(()=>autoPoll(vc),15000);}).catch(()=>{const el=$("#autoSt"); if(el) el.textContent="後台暫時連不上，稍後自動重試"; POLL_T=setTimeout(()=>autoPoll(vc),30000);});}
+function autoShow(s){const el=$("#autoSt"); if(!el) return; el.innerHTML=esc(ST_TXT[s.status]||s.status)+(s.status==="queued"&&s.position?"（前面還有 "+esc(s.position)+" 件）":"")+(s.error?"<br>"+esc(s.error):"")+`<br><span class="cnt">需求 ${esc(s.request_id||"")}・更新 ${esc((s.updated_at||"").slice(0,16).replace("T"," "))}</span>`;}
+window.addEventListener("hashchange",()=>{ if(curMod==="new"&&(hashView()||hashLodging())) renderMod();});
 function renderAutoRes(rs){const box=$("#autoRes"); if(!box) return; const rid=rs.request_id||"auto"; let sel=[]; try{sel=(JSON.parse(ls.get(autoSelKey(rid))||"null")||{}).routes||[];}catch(e){}
  box.innerHTML=`<div class="cnt">⚠️ 自動產生、${esc(rs.qa||"未核對")}；地點座標與 MapCode 以各部門核對後為準。</div>`+(rs.routes||[]).map(r=>`<details class="rpick"><summary><label><input type="checkbox" name="asel" value="${esc(r.route_id)}" ${sel.indexOf(r.route_id)>=0?"checked":""}><b>${esc(r.route_id)}｜${esc(r.title)}</b></label></summary>
   <div class="desc">${esc(r.summary||"")}</div>${(r.bases||[]).length?`<div class="cnt">住宿：${r.bases.map(b=>esc(b.area)+" "+esc(b.nights)+" 晚").join("、")}</div>`:""}
@@ -1340,6 +1344,92 @@ function reqText(dr){const r=dr.request,d=r.dates,t=r.travelers,L=[];
  [["換房",r.pace],["住宿類型",r.lodging_style.join("、")],["交通",r.car],["機票",flText(r.flights)],["抵達先住市區",r.city_nights_start],["回程前住市區",r.city_nights_end],["祭典",r.festivals],["描述",r.description],["其他",r.notes]].forEach(([k,v])=>{if(v) L.push(k+"："+v);});
  L.push("請總經理開案、企畫部提供 2～4 條路線後發布回網頁。");
  return L.join("\n");}
+/* ---------- 1.9 訂房確認信匯入（後台判讀 agency.lodging_bookings.v1）＋整理訂房資料 Excel ---------- */
+const BKF=[["check_in","入住日","date"],["check_out","退房日","date"],["nights","晚數","number"],["area","地區"],["hotel_name","飯店名稱"],["price_jpy","金額（日元）","number"],["price_twd","金額（台幣）","number"],["payment_status","付款狀態"],["payment_method","付款方式"],["booking_site","訂房網站"],["booking_code","訂房代號"],["card_verification_required","是否需刷卡確認"],["room_type","房型"],["meals","餐食"],["room_size","房間面積"],["parking","是否有停車場"],["laundry","洗衣服務"],["free_cancel_deadline","可免費取消最後期限"],["note","備註"]];
+const XLSX_COLS=["日期","地區","飯店名稱","訂房金額日元","訂房金額台幣","付款狀態","付款方式","訂房網站","訂房代號","是否需刷卡確認","房型","餐食","房間面積","是否有停車場","洗衣服務","可免費取消訂房最後期限"];
+const LJK="plan:lodging_jobs:v1";
+function bkKey(){return TID?"itin:"+TID+":bookings:v1":"plan:bookings:new:v1";}
+function bkLoad(k){try{const j=JSON.parse(ls.get(k||bkKey())||"null"); return j&&Array.isArray(j.bookings)?j.bookings:[];}catch(e){return [];}}
+function bkSave(a,k){ls.set(k||bkKey(),JSON.stringify({schema:"agency.lodging_bookings.local.v1",bookings:a,updated_at:nowISO()}));}
+function bkNights(b){if(b.nights!=null&&b.nights!=="") return +b.nights; const d=daysBetween(b.check_in,b.check_out); return d?d-1:null;}
+function bkSort(a){return a.slice().sort((x,y)=>String(x.check_in||"9").localeCompare(String(y.check_in||"9")));}
+function bkMerge(old,add){const out=old.slice(); add.forEach(b=>{const i=out.findIndex(o=>(b.booking_code&&o.booking_code===b.booking_code)||(!b.booking_code&&o.hotel_name===b.hotel_name&&o.check_in===b.check_in)); if(i>=0) out[i]=Object.assign({},out[i],b); else out.push(b);}); return bkSort(out);}
+const WK="日一二三四五六";
+function bkDateCell(b){const f=s=>{if(!s) return ""; const d=new Date(s+"T00:00:00Z"); return s.replace(/-/g,"/")+(isFinite(d)?" ("+WK[d.getUTCDay()]+")":"");}; const n=bkNights(b); return [f(b.check_in),f(b.check_out)].filter(Boolean).join(" - ")+(n?" ("+n+"晚)":"");}
+function bkRow(b){return [bkDateCell(b),b.area,b.hotel_name,b.price_jpy==null||b.price_jpy===""?"":+b.price_jpy,b.price_twd==null||b.price_twd===""?"-":+b.price_twd,b.payment_status,b.payment_method,b.booking_site,b.booking_code,b.card_verification_required,b.room_type,b.meals,b.room_size,b.parking,b.laundry,b.free_cancel_deadline].map(v=>v==null?"":v);}
+/* 輕量 xlsx（無外部 CDN）：ZIP stored＋CRC32＋inlineStr */
+const CRC_T=(()=>{const t=new Uint32Array(256); for(let n=0;n<256;n++){let c=n; for(let k=0;k<8;k++) c=c&1?0xEDB88320^(c>>>1):c>>>1; t[n]=c>>>0;} return t;})();
+function crc32(u){let c=0xFFFFFFFF; for(let i=0;i<u.length;i++) c=CRC_T[(c^u[i])&255]^(c>>>8); return (c^0xFFFFFFFF)>>>0;}
+function zipStore(files){const enc=new TextEncoder(), parts=[], cen=[]; let off=0;
+ const u16=v=>[v&255,(v>>8)&255], u32=v=>[v&255,(v>>8)&255,(v>>16)&255,(v>>>24)&255];
+ files.forEach(f=>{const nm=enc.encode(f.name), data=typeof f.data==="string"?enc.encode(f.data):f.data, c=crc32(data);
+  const lh=new Uint8Array([0x50,0x4b,3,4,...u16(20),...u16(0x0800),...u16(0),...u16(0),...u16(0x21),...u32(c),...u32(data.length),...u32(data.length),...u16(nm.length),...u16(0)]);
+  parts.push(lh,nm,data); cen.push(new Uint8Array([0x50,0x4b,1,2,...u16(20),...u16(20),...u16(0x0800),...u16(0),...u16(0),...u16(0x21),...u32(c),...u32(data.length),...u32(data.length),...u16(nm.length),...u16(0),...u16(0),...u16(0),...u16(0),...u32(0),...u32(off)]),nm);
+  off+=lh.length+nm.length+data.length;});
+ const cs=cen.reduce((s,a)=>s+a.length,0); parts.push(...cen,new Uint8Array([0x50,0x4b,5,6,0,0,0,0,...u16(files.length),...u16(files.length),...u32(cs),...u32(off),0,0]));
+ return new Blob(parts,{type:"application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"});}
+function xesc(s){return String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c])).replace(/[\u0000-\u0008\u000B\u000C\u000E-\u001F]/g,"");}
+function colName(i){let s=""; i++; while(i){const m=(i-1)%26; s=String.fromCharCode(65+m)+s; i=Math.floor((i-1)/26);} return s;}
+function buildXlsx(rows){const W=[30,16,30,12,12,14,22,12,18,10,34,18,10,12,10,34];
+ const cell=(v,r,c,st)=>{const ref=colName(c)+r; if(typeof v==="number"&&isFinite(v)) return `<c r="${ref}" s="${st?1:2}"><v>${v}</v></c>`; return v===""?`<c r="${ref}" s="${st?1:0}"/>`:`<c r="${ref}" t="inlineStr" s="${st?1:0}"><is><t xml:space="preserve">${xesc(v)}</t></is></c>`;};
+ const sd=[XLSX_COLS].concat(rows).map((row,ri)=>`<row r="${ri+1}">${row.map((v,ci)=>cell(v,ri+1,ci,ri===0)).join("")}</row>`).join("");
+ const sheet=`<?xml version="1.0" encoding="UTF-8" standalone="yes"?><worksheet xmlns="http://schemas.openxmlformats.org/spreadsheetml/2006/main"><sheetViews><sheetView workbookViewId="0"><pane ySplit="1" topLeftCell="A2" activePane="bottomLeft" state="frozen"/></sheetView></sheetViews><cols>${W.map((w,i)=>`<col min="${i+1}" max="${i+1}" width="${w}" customWidth="1"/>`).join("")}</cols><sheetData>${sd}</sheetData><autoFilter ref="A1:${colName(XLSX_COLS.length-1)}${rows.length+1}"/></worksheet>`;
+ const styles=`<?xml version="1.0" encoding="UTF-8" standalone="yes"?><styleSheet xmlns="http://schemas.openxmlformats.org/spreadsheetml/2006/main"><numFmts count="1"><numFmt numFmtId="164" formatCode="#,##0"/></numFmts><fonts count="2"><font><sz val="11"/><name val="Calibri"/></font><font><b/><sz val="11"/><name val="Calibri"/></font></fonts><fills count="3"><fill><patternFill patternType="none"/></fill><fill><patternFill patternType="gray125"/></fill><fill><patternFill patternType="solid"><fgColor rgb="FFD9E1F2"/></patternFill></fill></fills><borders count="1"><border/></borders><cellStyleXfs count="1"><xf/></cellStyleXfs><cellXfs count="3"><xf/><xf fontId="1" fillId="2" applyFont="1" applyFill="1"/><xf numFmtId="164" applyNumberFormat="1"/></cellXfs></styleSheet>`;
+ return zipStore([
+  {name:"[Content_Types].xml",data:`<?xml version="1.0" encoding="UTF-8" standalone="yes"?><Types xmlns="http://schemas.openxmlformats.org/package/2006/content-types"><Default Extension="rels" ContentType="application/vnd.openxmlformats-package.relationships+xml"/><Default Extension="xml" ContentType="application/xml"/><Override PartName="/xl/workbook.xml" ContentType="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet.main+xml"/><Override PartName="/xl/worksheets/sheet1.xml" ContentType="application/vnd.openxmlformats-officedocument.spreadsheetml.worksheet+xml"/><Override PartName="/xl/styles.xml" ContentType="application/vnd.openxmlformats-officedocument.spreadsheetml.styles+xml"/></Types>`},
+  {name:"_rels/.rels",data:`<?xml version="1.0" encoding="UTF-8" standalone="yes"?><Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships"><Relationship Id="rId1" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/officeDocument" Target="xl/workbook.xml"/></Relationships>`},
+  {name:"xl/workbook.xml",data:`<?xml version="1.0" encoding="UTF-8" standalone="yes"?><workbook xmlns="http://schemas.openxmlformats.org/spreadsheetml/2006/main" xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships"><sheets><sheet name="訂房資料" sheetId="1" r:id="rId1"/></sheets></workbook>`},
+  {name:"xl/_rels/workbook.xml.rels",data:`<?xml version="1.0" encoding="UTF-8" standalone="yes"?><Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships"><Relationship Id="rId1" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/worksheet" Target="worksheets/sheet1.xml"/><Relationship Id="rId2" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/styles" Target="styles.xml"/></Relationships>`},
+  {name:"xl/styles.xml",data:styles},{name:"xl/worksheets/sheet1.xml",data:sheet}]);}
+function bkXlsxDownload(){const a=bkSort(bkLoad()); if(!a.length){toast("還沒有訂房資料，請先匯入訂房確認信或手動輸入"); return null;}
+ const blob=buildXlsx(a.map(bkRow)), nm="訂房資料_"+(TID||"新行程")+".xlsx"; window.__lastXlsx=blob;
+ const u=URL.createObjectURL(blob), el=document.createElement("a"); el.href=u; el.download=nm; document.body.appendChild(el); el.click(); setTimeout(()=>{URL.revokeObjectURL(u); el.remove();},800); toast("已匯出 "+a.length+" 筆訂房資料"); return blob;}
+/* 匯入視窗 */
+const LG_MIME=/^(application\/pdf|message\/rfc822|text\/plain|image\/(png|jpeg|webp|heic))$/, LG_MAX=4*1024*1024;
+function lgMime(f){if(f.type&&LG_MIME.test(f.type)) return f.type; const e=(f.name.split(".").pop()||"").toLowerCase(); return {eml:"message/rfc822",pdf:"application/pdf",txt:"text/plain",png:"image/png",jpg:"image/jpeg",jpeg:"image/jpeg",webp:"image/webp",heic:"image/heic"}[e]||"";}
+function lgOpen(vc){const b=backendCfg(), n=bkLoad().length;
+ openModal(`<h3>📩 匯入訂房確認信</h3>${b?`<div class="cnt">上傳訂房確認信（PDF／.eml／截圖），或直接貼上信件文字。後台判讀後會先讓你確認、修改，再填入「每個住宿點想住幾晚」。<br>含個資：原檔判讀後立即刪除，結果 7 天後自動刪除。</div>
+ <form id="lgForm"><input type="file" id="lgFiles" multiple accept=".pdf,.eml,.txt,image/*,application/pdf,message/rfc822"><textarea id="lgText" class="wide" rows="4" placeholder="或貼上訂房確認信文字"></textarea>
+ <div class="bkf"><label>邀請碼<input name="invite" id="lgInv" autocomplete="off"></label></div><div id="tsBox" class="cnt">（點邀請碼欄後出現驗證碼）</div><div id="lgErr" class="todo"></div>
+ <div class="btns"><button class="btn ok" type="submit">📤 送去判讀</button></div></form>`:`<div class="todo">後台尚未啟用，無法自動判讀；可先手動輸入。</div>`}
+ <div id="lgSt" class="desc"></div><div id="lgEdit"></div>
+ <div class="btns"><button class="btn" type="button" id="lgManual">✏️ 手動輸入一筆</button>${n?`<button class="btn" type="button" id="lgXlsx2">📊 整理訂房資料（Excel，${n} 筆）</button>`:""}</div>`);
+ TS_ID=null; if(vc) lgPoll(vc);}
+let LG_T=null, LG={vc:null,res:null};
+function lgPoll(vc){clearTimeout(LG_T); LG.vc=vc; const st=$("#lgSt"); if(!st) return; if(!st.textContent) st.textContent="讀取判讀狀態中…";
+ bkFetch("/api/status",{headers:{Authorization:"View "+vc}}).then(r=>{const el=$("#lgSt"); if(!el||LG.vc!==vc) return;
+  if(r.status===404){el.textContent="找不到這個判讀代號（可能已超過 7 天被刪除）"; return;}
+  if(!r.ok||!r.j){el.textContent="後台暫時連不上，稍後自動重試"; LG_T=setTimeout(()=>lgPoll(vc),20000); return;}
+  el.textContent=(ST_TXT[r.j.status]||r.j.status).replace("路線已產生","判讀完成").replace("排路線中","判讀中").replace("自動排路線失敗","判讀失敗")+(r.j.error?"："+r.j.error:"");
+  if(r.j.status==="published") return bkFetch("/api/result",{headers:{Authorization:"View "+vc}}).then(x=>{ if(x.ok&&x.j&&LG.vc===vc){LG.res=x.j; lgEditor((x.j.bookings||[]).map(b=>Object.assign({},b)),x.j.warnings||[]);} });
+  if(r.j.status!=="failed"&&r.j.status!=="rejected") LG_T=setTimeout(()=>lgPoll(vc),5000);}).catch(()=>{LG_T=setTimeout(()=>lgPoll(vc),20000);});}
+function lgEditor(list,warn){const box=$("#lgEdit"); if(!box) return; window.__lgList=list;
+ box.innerHTML=(warn||[]).map(w=>`<div class="todo">⚠️ ${esc(w)}</div>`).join("")+`<div class="cnt">請確認或修改下列 ${list.length} 筆，勾選要套用的，再按「確認套用」。</div>`+list.map((b,i)=>`<fieldset class="card lgb" data-i="${i}"><legend><label><input type="checkbox" class="lgUse" checked> 第 ${i+1} 筆${b.confidence!=null?"（信心 "+Math.round(b.confidence*100)+"%）":""}</label></legend><div class="bkf">${BKF.map(([k,l,t])=>`<label>${esc(l)}<input name="${k}" ${t?`type="${t}"`:""} value="${esc(b[k]==null?"":b[k])}"></label>`).join("")}</div></fieldset>`).join("")
+  +`<div class="btns"><button class="btn ok" type="button" id="lgApply">✅ 確認套用（填入住宿點＋存訂房資料）</button></div>`;}
+function lgCollect(){return [...document.querySelectorAll("#lgEdit .lgb")].filter(f=>f.querySelector(".lgUse").checked).map(f=>{const o={}; BKF.forEach(([k,l,t])=>{const v=f.querySelector(`[name="${k}"]`).value.trim(); o[k]=v===""?null:(t==="number"?+v:v);}); const src=(window.__lgList||[])[+f.dataset.i]||{}; o.source=src.source||"manual"; o.source_file=src.source_file||null; o.saved_at=nowISO(); return o;});}
+function lgApply(){const sel=lgCollect(); if(!sel.length){toast("沒有勾選任何一筆"); return;}
+ const all=bkMerge(bkLoad(),sel); bkSave(all);
+ const rows=$("#bnrows"); if(rows){ [...rows.querySelectorAll(".bnrow")].forEach(r=>{if(!r.querySelector('[name="b_area"]').value.trim()&&!r.querySelector('[name="b_nights"]').value.trim()) r.remove();});
+  bkSort(sel).forEach(b=>{const ex=[...rows.querySelectorAll(".bnrow")].find(r=>r.querySelector('[name="b_note"]').value.trim()===(b.hotel_name||"")&&b.hotel_name); const n=bkNights(b);
+   if(ex){ex.querySelector('[name="b_area"]').value=b.area||""; ex.querySelector('[name="b_nights"]').value=n==null?"":n;} else rows.insertAdjacentHTML("beforeend",bnRow({area:b.area||"",nights:n,note:b.hotel_name||null}));});}
+ $("#modal").classList.remove("on"); toast("已套用 "+sel.length+" 筆，記得按「儲存草稿」"); const c=$("#bkCnt"); if(c) c.textContent=all.length+" 筆";}
+function fileB64(f){return new Promise((res,rej)=>{const r=new FileReader(); r.onload=()=>res(String(r.result).split(",")[1]||""); r.onerror=()=>rej(r.error); r.readAsDataURL(f);});}
+async function lgSubmit(){const err=$("#lgErr"), fs=[...($("#lgFiles").files||[])], txt=$("#lgText").value.trim(), inv=$("#lgInv").value.trim(); err.textContent="";
+ if(!fs.length&&!txt){err.textContent="請選檔案或貼上文字"; return;} if(fs.length>5){err.textContent="一次最多 5 個檔案"; return;}
+ const tot=fs.reduce((s,f)=>s+f.size,0); if(tot>LG_MAX){err.textContent="檔案總大小超過 4 MB，請分批或改貼文字"; return;}
+ const bad=fs.find(f=>!lgMime(f)); if(bad){err.textContent="不支援的檔案類型："+bad.name; return;}
+ if(txt.length>20000){err.textContent="文字太長（上限 20000 字）"; return;}
+ if(!inv){err.textContent="請填邀請碼"; return;} const tk=tsToken(); if(!tk){err.textContent="請先完成驗證碼"; return;}
+ const files=[]; for(const f of fs) files.push({name:f.name,mime:lgMime(f),data_base64:await fileB64(f)});
+ const r=await bkFetch("/api/lodging",{method:"POST",timeout:60000,body:Object.assign({invite_code:inv,turnstile_token:tk,files},TID?{request_id:TID}:{},txt?{text:txt}:{})}).catch(e=>({status:0,j:{error:"後台連不上（"+e.message+"）"}}));
+ if(r.ok&&r.j&&r.j.view_code){const a=(()=>{try{return JSON.parse(ls.get(LJK)||"[]");}catch(e){return [];}})(); a.push({view_code:r.j.view_code,job_id:r.j.job_id,trip:TID||null,sent_at:nowISO()}); ls.set(LJK,JSON.stringify(a.slice(-10)));
+  $("#lgForm").hidden=true; $("#lgSt").textContent="⏳ 已送出，判讀中…"; lgPoll(r.j.view_code); return;}
+ err.textContent="送出失敗："+((r.j&&r.j.error)||BK_ERR[r.status]||("HTTP "+r.status)); try{window.turnstile&&window.turnstile.reset(TS_ID);}catch(e){}}
+function hashLodging(){const m=/(?:^#|&)lv=([A-Za-z0-9_-]{16,64})/.exec(location.hash||""); return m?m[1]:null;}
+document.addEventListener("submit",e=>{if(e.target.id==="lgForm"){e.preventDefault(); lgSubmit();}});
+document.addEventListener("click",e=>{const id=e.target.id;
+ if(id==="lgOpen"){lgOpen(); return;} if(id==="bkXlsx"||id==="lgXlsx2"){bkXlsxDownload(); return;}
+ if(id==="lgManual"){lgEditor([{source:"manual"}],[]); return;} if(id==="lgApply"){lgApply(); return;}});
 /* 畫面 */
 function optSel(name,q,val,custom){const o=(q&&q.options)||[]; const has=val&&o.indexOf(val)<0&&custom;
  return `<select name="${name}"><option value="">（請選）</option>${o.map(x=>`<option ${x===val?"selected":""}>${esc(x)}</option>`).join("")}${q&&q.allowCustom?`<option value="__custom" ${has?"selected":""}>其他（自填）</option>`:""}</select>`;}
@@ -1353,7 +1443,7 @@ function newForm(r){r=r||{}; const d=r.dates||{}, t=r.travelers||{adults:2}, bu=
  <h4>人數與預算</h4><div class="bkf"><label>大人<input type="number" name="adults" min="0" value="${esc(t.adults==null?2:t.adults)}"></label><label>小孩<input type="number" name="children" min="0" value="${esc(t.children||0)}"></label><label>人數補充<input name="trav_note" placeholder="例：含長輩" value="${esc(t.note||"")}"></label>
  <label>${esc((Q("budget_twd")||{}).label||"總預算")}${optSel("budget",Q("budget_twd"),bu.option||(bu.custom?"__custom":""),true).replace('value="__custom" ','value="__custom" '+(!bu.option&&bu.custom?"selected ":""))}</label><label>預算補充<input name="budget_custom" placeholder="例：30 萬台幣" value="${esc(bu.custom||"")}"></label></div>
  <h4>喜好</h4>${chk("pref",Q("preferences"),pf.options||[])}<input class="wide" name="pref_custom" placeholder="其他喜好（自填）" value="${esc(pf.custom||"")}">
- <h4>每個住宿點想住幾晚</h4><div id="bnrows">${((r.bases_nights&&r.bases_nights.length)?r.bases_nights:[{}]).map(bnRow).join("")}</div><button type="button" class="btn" id="bnAdd">＋加一個住宿點</button>
+ <h4>每個住宿點想住幾晚</h4><div id="bnrows">${((r.bases_nights&&r.bases_nights.length)?r.bases_nights:[{}]).map(bnRow).join("")}</div><button type="button" class="btn" id="bnAdd">＋加一個住宿點</button> <button type="button" class="btn" id="lgOpen">📩 匯入訂房確認信</button> <button type="button" class="btn" id="bkXlsx">📊 整理訂房資料（Excel）</button> <span class="cnt">已存訂房：<span id="bkCnt">${bkLoad().length} 筆</span></span>
  <div class="bkf"><label>換房頻率${optSel("pace",Q("pace"),r.pace)}</label><label>抵達先住市區${optSel("cns",Q("city_nights_start"),r.city_nights_start)}</label><label>回程前住市區${optSel("cne",Q("city_nights_end"),r.city_nights_end)}</label></div>
  <h4>住宿類型</h4>${chk("lstyle",Q("lodging_style"),r.lodging_style||[])}
  <h4>交通與機票</h4><div class="bkf"><label>租車${optSel("car",Q("car"),r.car)}</label><label>機票${optSel("fl_status",Q("flights_status"),fl.status)}</label><label>去程班號<input name="fl_out" placeholder="例 BR192" autocapitalize="characters" value="${esc(flSplit(fl).out||"")}"></label><label>回程班號<input name="fl_in" placeholder="例 BR189" autocapitalize="characters" value="${esc(flSplit(fl).in||"")}"></label><label>祭典活動${optSel("fest",Q("festivals"),r.festivals)}</label></div>
@@ -1374,7 +1464,7 @@ function renderNew(){const P=$("#modpanel"); let h=`<h2 class="nh">➕ 新增旅
   ${DRAFT&&DRAFT.backend&&backendCfg()?autoCardHtml(DRAFT.backend.view_code):`<div class="card wait" id="waitPub"><h3>② 路線建議・③ 挑選路線</h3><div class="desc">⏳ 等待企畫部發布。<br>網頁不會自己產生路線：請按「送出需求」把 JSON 檔或複製的文字貼到總經理聊天室，企畫部做好 2～4 條路線後會發布到網頁，到時這裡就能複選。${backendCfg()?"<br>填邀請碼並完成驗證碼後送出，後台會自動排 2～4 條路線。":""}</div></div>`}`;
  }
  const ds=drVisible(); if(ds.length) h+=`<div class="card"><h3>本機草稿（${ds.length}）</h3>${ds.map(d=>`<div><a href="?trip=${encodeURIComponent(d.id)}&mod=new" data-draft="${esc(d.id)}">📝 ${esc(drTitle(d.request||{}))}</a> <span class="cnt">${esc((d.updated_at||"").slice(0,16).replace("T"," "))}${d.submitted_at?"・已送出":""}</span></div>`).join("")}</div>`;
- P.innerHTML=h; TS_ID=null; const ap=$("#autoPub"); if(ap){const v=hashView()&&!(DRAFT&&DRAFT.backend&&DRAFT.backend.view_code===hashView())?hashView():DRAFT.backend.view_code; autoPoll(v);} else clearTimeout(POLL_T);}
+ P.innerHTML=h; TS_ID=null; const lv=hashLodging(); if(lv&&LG.vc!==lv&&backendCfg()) setTimeout(()=>lgOpen(lv),0); const ap=$("#autoPub"); if(ap){const v=hashView()&&!(DRAFT&&DRAFT.backend&&DRAFT.backend.view_code===hashView())?hashView():DRAFT.backend.view_code; autoPoll(v);} else clearTimeout(POLL_T);}
 function waitHtml(){return `<div class="card wait"><h3>⏳ 等待企畫部發布</h3><div class="desc">「${esc(DRAFT?drTitle(DRAFT.request):"")}」還是本機草稿，沒有路線資料；企畫部發布後機票・租車・住宿等模組才會出現內容。</div><div class="btns"><button class="btn pri" type="button" data-m2="new">回「新增旅遊規劃」</button></div></div>`;}
 function openDraft(dr,opt){opt=opt||{}; ++loadSeq; return loadIntake().then(()=>{
  TID=dr.id; DRAFT=dr; D=null; route=null; TE={id:dr.id,title:drTitle(dr.request||{})+"（草稿）"};
@@ -1386,7 +1476,7 @@ function openNewBlank(push){++loadSeq; return loadIntake().then(()=>{TID=null; D
  $("#loading").hidden=true; $("#tripList").hidden=true; $("#mods").hidden=false; curMod="new"; fillTripSel(); showMod("new",true); syncUrl(push); setHH(); window.__ready=true;});}
 function saveDraftFrom(fm){const r=readNewForm(fm), err=reqValidate(r); if(err.length){$("#newErr").textContent="請填："+err.join("、"); return null;}
  const a=drLoad(), now=nowISO(); let dr=DRAFT&&a.find(x=>x.id===DRAFT.id);
- if(!dr){dr={id:drNewId(),created_at:now}; a.push(dr);} dr.request=r; dr.updated_at=now; drSaveAll(a); DRAFT=dr; return dr;}
+ if(!dr){dr={id:drNewId(),created_at:now}; a.push(dr); const pb=bkLoad("plan:bookings:new:v1"); if(pb.length){bkSave(bkMerge(bkLoad("itin:"+dr.id+":bookings:v1"),pb),"itin:"+dr.id+":bookings:v1"); ls.del("plan:bookings:new:v1");}} dr.request=r; dr.updated_at=now; drSaveAll(a); DRAFT=dr; return dr;}
 document.addEventListener("submit",e=>{const fm=e.target; if(fm.id!=="newForm") return; e.preventDefault();
  const act=(e.submitter&&e.submitter.dataset.act)||"save", wasNew=!DRAFT||DRAFT.id!==TID; const dr=saveDraftFrom(fm); if(!dr) return;
  if(act==="send"){dr.submitted_at=nowISO(); const a=drLoad(); const x=a.find(y=>y.id===dr.id); if(x) x.submitted_at=dr.submitted_at; drSaveAll(a);
@@ -1427,7 +1517,7 @@ document.addEventListener("click",e=>{
 
 $("#cuadd").addEventListener("click",()=>cuForm(null));
 $("#cucopy").addEventListener("click",()=>{const t=cuText(); if(!t){toast("還沒有自訂景點");return;} window.__lastCuText=t; copyText(t,"已複製自訂景點清單，可貼給景點部補查");});
-window.__app={flSplit,flJoin,flText,backendCfg,hashView,get AUTO(){return AUTO;},drLoad,drVisible,reqExport,reqText,readNewForm,selLoad,selectedRoutes,get DRAFT(){return DRAFT;},get INTAKE(){return INTAKE;},DL,BUF,decLoad,decSave,decExport,showMod,pickupDefault,dropoffDefault,get curMod(){return curMod;},bestDay,localNearby,SCATS,photonSearch,queryVariants,qTokens,localSearch,photonMulti,parseLocationInput,cpLoad,cpSave,cpId,sha1hex,searchPlaces,searchCenter,SEARCH_ENDPOINTS,openSearch,get SRVCP(){return SRVCP;},parseLoc,cuLoad,cuText,cuMerge,stopsOf,mergeByMeal,get SAME(){return SAME;},setRoute,openTrip,showTab,addTo,itin,suggested,store,exportJson,buildKml,buildCsv,buildFinal,importText,parseImport,
+window.__app={bkLoad,bkSave,bkRow,bkDateCell,buildXlsx,bkXlsxDownload,XLSX_COLS,lgOpen,flSplit,flJoin,flText,backendCfg,hashView,get AUTO(){return AUTO;},drLoad,drVisible,reqExport,reqText,readNewForm,selLoad,selectedRoutes,get DRAFT(){return DRAFT;},get INTAKE(){return INTAKE;},DL,BUF,decLoad,decSave,decExport,showMod,pickupDefault,dropoffDefault,get curMod(){return curMod;},bestDay,localNearby,SCATS,photonSearch,queryVariants,qTokens,localSearch,photonMulti,parseLocationInput,cpLoad,cpSave,cpId,sha1hex,searchPlaces,searchCenter,SEARCH_ENDPOINTS,openSearch,get SRVCP(){return SRVCP;},parseLoc,cuLoad,cuText,cuMerge,stopsOf,mergeByMeal,get SAME(){return SAME;},setRoute,openTrip,showTab,addTo,itin,suggested,store,exportJson,buildKml,buildCsv,buildFinal,importText,parseImport,
  get trip(){return TID;},get route(){return route;},get day(){return curDay;},get RS(){return RS;},get SP(){return SP;},get D(){return D;},get RESTS(){return RESTS;},K};
 })();
 </script>
