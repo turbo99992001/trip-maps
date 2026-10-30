@@ -1,5 +1,5 @@
-/* 安宏旅行社 互動行程 service worker（由 build_plan.py 產生版本號，勿手改 befb156609） */
-const VERSION = "befb156609";
+/* 安宏旅行社 互動行程 service worker（由 build_plan.py 產生版本號，勿手改 764bbbff71） */
+const VERSION = "764bbbff71";
 const SHELL = "plan-shell-" + VERSION;
 const DATA = "plan-data-v1";          // 行程資料：stale-while-revalidate（跨版本保留，舊 ?v= 會被修剪）
 const TILES = "plan-tiles-v1";        // 地圖圖磚：使用者開啟才快取，上限 TILE_MAX
@@ -7,7 +7,7 @@ const CFG = "plan-cfg";
 const SW_GEN = "2";                   // 2＝修正資料快取（舊版 1 會把新 ?v= 資料回成舊快取）
 const TILE_MAX = 400;
 const PRECACHE = ["./", "./index.html", "./manifest.webmanifest", "./icons/icon-192.png", "./icons/icon-512.png",
-  "./icons/icon-maskable-512.png", "./icons/apple-touch-icon.png", "./data/trips.json"];
+  "./icons/icon-maskable-512.png", "./icons/apple-touch-icon.png", "./data/trips.json", "./data/intake.options.json"];
 const CDN = ["https://unpkg.com/leaflet@1.9.4/dist/leaflet.css", "https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"];
 let tileOn = null;
 
