@@ -1,5 +1,5 @@
-/* 安宏旅行社 互動行程 service worker（由 build_plan.py 產生版本號，勿手改 77ca243bdd） */
-const VERSION = "77ca243bdd";
+/* 安宏旅行社 互動行程 service worker（由 build_plan.py 產生版本號，勿手改 0389eaba8b） */
+const VERSION = "0389eaba8b";
 const SHELL = "plan-shell-" + VERSION;
 const DATA = "plan-data-v1";          // 行程資料：stale-while-revalidate（跨版本保留，舊 ?v= 會被修剪）
 const TILES = "plan-tiles-v1";        // 地圖圖磚：使用者開啟才快取，上限 TILE_MAX
@@ -80,6 +80,8 @@ async function dataFetch(e, req) {
 self.addEventListener("fetch", e => {
   const req = e.request; if (req.method !== "GET") return;
   const url = new URL(req.url);
+  // 外部搜尋／地圖服務：不攔截、不快取（離線時由網頁顯示提示）
+  if (/(^|\.)(photon\.komoot\.io|overpass-api\.de|overpass\.private\.coffee|msearch\.gsi\.go\.jp|google\.[a-z.]+|goo\.gl|mapion\.co\.jp)$/.test(url.hostname)) return;
   if (/(^|\.)tile\.openstreetmap\.org$/.test(url.hostname)) {
     e.respondWith((async () => {
       try {
