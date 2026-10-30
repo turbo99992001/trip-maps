@@ -215,9 +215,9 @@ pre.json{background:#f4f6f8;border-radius:8px;padding:8px;font-size:11px;max-hei
 <script>
 (function(){
 "use strict";
-const APPV="plan-multi-1.8";
+const APPV="plan-multi-1.8.1";
 /* 1.8 後台自動排路線（Cloudflare Worker）：網址部署後填入。空字串＝後台未啟用，網頁維持 1.7 行為（匯出 JSON＋複製文字）。site key 是公開值。 */
-const BACKEND_CFG={url:"",turnstile_site_key:""};
+const BACKEND_CFG={url:"https://trip-intake.turbo99992001.workers.dev",turnstile_site_key:"0x4AAAAAAFs8wmzPidNkiUBU"};
 const CAT={popular:"熱門",natural:"自然絕景",shrine:"神社寺院",historic:"歷史",onsen:"溫泉",hidden:"私房",food:"美食",experience:"親子／體驗",anime:"動漫",anime_game:"🎮 動漫・遊戲周邊",festival:"活動／花季",custom:"👤 自訂地點"};
 const MEAL={lunch:"午餐",dinner:"晚餐",breakfast:"早餐",cafe:"甜點咖啡",snack:"甜點咖啡／小吃"};
 const $=s=>document.querySelector(s), esc=s=>String(s==null?"":s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
@@ -1271,13 +1271,13 @@ function flSplit(fl){fl=fl||{}; if(fl.outbound_flight!=null||fl.inbound_flight!=
 function flJoin(st,o,i){o=flNorm(o); i=flNorm(i); const n=[o,i].filter(Boolean).join(" / ")||null; return {status:st||null,flight_numbers:n,outbound_flight:o,inbound_flight:i};}
 function flText(fl){fl=fl||{}; const s=flSplit(fl), L=[]; if(s.out) L.push("去程 "+s.out); if(s.in) L.push("回程 "+s.in); return [fl.status,L.join("／")].filter(Boolean).join(" ");}
 /* 1.8 後台（Worker）：未設定網址＝優雅降級；本機測試可用 localStorage plan:backend_override（只在 localhost／127.0.0.1 生效） */
-function backendCfg(){let c=BACKEND_CFG; if(/^(localhost|127\.0\.0\.1)$/.test(location.hostname)){try{const o=JSON.parse(ls.get("plan:backend_override")||"null"); if(o&&o.url) c=o;}catch(e){}} return c&&c.url?{url:String(c.url).replace(/\/+$/,""),site:c.turnstile_site_key||""}:null;}
+function backendCfg(){let c=BACKEND_CFG; if(/^(localhost|127\.0\.0\.1)$/.test(location.hostname)){try{const o=JSON.parse(ls.get("plan:backend_override")||"null"); if(o&&typeof o.url==="string") c=o;}catch(e){}} return c&&c.url?{url:String(c.url).replace(/\/+$/,""),site:c.turnstile_site_key||""}:null;}
 function hashView(){const m=/(?:^#|&)v=([A-Za-z0-9_-]{16,64})/.exec(location.hash||""); return m?m[1]:null;}
 function viewUrl(vc){return location.origin+location.pathname+"?mod=new#v="+vc;}
 let TS_P=null, TS_ID=null;
 function tsLoad(){ if(window.turnstile) return Promise.resolve(window.turnstile); if(TS_P) return TS_P;
  TS_P=new Promise((res,rej)=>{const sc=document.createElement("script"); sc.src="https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit"; sc.async=true; sc.onload=()=>window.turnstile?res(window.turnstile):rej(new Error("no turnstile")); sc.onerror=()=>{TS_P=null; rej(new Error("驗證碼載入失敗"));}; document.head.appendChild(sc);}); return TS_P;}
-function tsMount(){const b=backendCfg(), el=$("#tsBox"); if(!b||!el) return; tsLoad().then(t=>{ if(!document.body.contains(el)) return; TS_ID=t.render(el,{sitekey:b.site,language:"zh-TW"});}).catch(e=>{el.textContent="⚠️ 驗證碼載入失敗（可改用匯出 JSON）";});}
+function tsMount(){const b=backendCfg(), el=$("#tsBox"); if(!b||!el||el.dataset.m) return; el.dataset.m="1"; el.textContent="驗證碼載入中…"; tsLoad().then(t=>{ if(!document.body.contains(el)) return; TS_ID=t.render(el,{sitekey:b.site,language:"zh-TW"});}).catch(e=>{el.textContent="⚠️ 驗證碼載入失敗（可改用匯出 JSON）";});}
 function tsToken(){try{return window.turnstile&&TS_ID!=null?window.turnstile.getResponse(TS_ID):"";}catch(e){return "";}}
 function bkFetch(path,opt){const b=backendCfg(); if(!b) return Promise.reject(new Error("後台未啟用")); opt=opt||{};
  const ctl=new AbortController(), tm=setTimeout(()=>ctl.abort(),opt.timeout||15000);
@@ -1359,7 +1359,7 @@ function newForm(r){r=r||{}; const d=r.dates||{}, t=r.travelers||{adults:2}, bu=
  <h4>交通與機票</h4><div class="bkf"><label>租車${optSel("car",Q("car"),r.car)}</label><label>機票${optSel("fl_status",Q("flights_status"),fl.status)}</label><label>去程班號<input name="fl_out" placeholder="例 BR192" autocapitalize="characters" value="${esc(flSplit(fl).out||"")}"></label><label>回程班號<input name="fl_in" placeholder="例 BR189" autocapitalize="characters" value="${esc(flSplit(fl).in||"")}"></label><label>祭典活動${optSel("fest",Q("festivals"),r.festivals)}</label></div>
  <h4>文字描述</h4><textarea name="desc" class="wide" rows="4" placeholder="用自己的話描述想怎麼玩（例：想泡溫泉、吃和牛，不想每天換飯店…）">${esc(r.description||"")}</textarea>
  <textarea name="notes" class="wide" rows="2" placeholder="其他要求">${esc(r.notes||"")}</textarea>
- ${backendCfg()?`<h4>送到後台自動排路線</h4><div class="bkf"><label>邀請碼<input name="invite" autocomplete="off" placeholder="安宏給的邀請碼"></label></div><div id="tsBox"></div><div class="cnt">不填邀請碼也可以只匯出 JSON 給總經理。</div>`:""}
+ ${backendCfg()?`<h4>送到後台自動排路線</h4><div class="bkf"><label>邀請碼<input name="invite" autocomplete="off" placeholder="安宏給的邀請碼"></label></div><div id="tsBox" class="cnt">（點邀請碼欄後出現驗證碼）</div><div class="cnt">不填邀請碼也可以只匯出 JSON 給總經理。</div>`:""}
  <div id="newErr" class="todo mcpend"></div>
  <div class="btns"><button class="btn" type="submit" data-act="save">💾 儲存草稿</button><button class="btn ok" type="submit" data-act="send">📤 送出需求（匯出 JSON＋複製文字）</button>${DRAFT?`<button class="btn warn" type="button" id="drDel">刪除草稿</button>`:""}</div></form>`;}
 function renderNew(){const P=$("#modpanel"); let h=`<h2 class="nh">➕ 新增旅遊規劃</h2><div class="steps"><span class="on">① 需求</span><span>② 路線建議</span><span>③ 挑選路線</span><span>→ 機票・租車・住宿…</span></div>`;
@@ -1374,7 +1374,7 @@ function renderNew(){const P=$("#modpanel"); let h=`<h2 class="nh">➕ 新增旅
   ${DRAFT&&DRAFT.backend&&backendCfg()?autoCardHtml(DRAFT.backend.view_code):`<div class="card wait" id="waitPub"><h3>② 路線建議・③ 挑選路線</h3><div class="desc">⏳ 等待企畫部發布。<br>網頁不會自己產生路線：請按「送出需求」把 JSON 檔或複製的文字貼到總經理聊天室，企畫部做好 2～4 條路線後會發布到網頁，到時這裡就能複選。${backendCfg()?"<br>填邀請碼並完成驗證碼後送出，後台會自動排 2～4 條路線。":""}</div></div>`}`;
  }
  const ds=drVisible(); if(ds.length) h+=`<div class="card"><h3>本機草稿（${ds.length}）</h3>${ds.map(d=>`<div><a href="?trip=${encodeURIComponent(d.id)}&mod=new" data-draft="${esc(d.id)}">📝 ${esc(drTitle(d.request||{}))}</a> <span class="cnt">${esc((d.updated_at||"").slice(0,16).replace("T"," "))}${d.submitted_at?"・已送出":""}</span></div>`).join("")}</div>`;
- P.innerHTML=h; tsMount(); const ap=$("#autoPub"); if(ap){const v=hashView()&&!(DRAFT&&DRAFT.backend&&DRAFT.backend.view_code===hashView())?hashView():DRAFT.backend.view_code; autoPoll(v);} else clearTimeout(POLL_T);}
+ P.innerHTML=h; TS_ID=null; const ap=$("#autoPub"); if(ap){const v=hashView()&&!(DRAFT&&DRAFT.backend&&DRAFT.backend.view_code===hashView())?hashView():DRAFT.backend.view_code; autoPoll(v);} else clearTimeout(POLL_T);}
 function waitHtml(){return `<div class="card wait"><h3>⏳ 等待企畫部發布</h3><div class="desc">「${esc(DRAFT?drTitle(DRAFT.request):"")}」還是本機草稿，沒有路線資料；企畫部發布後機票・租車・住宿等模組才會出現內容。</div><div class="btns"><button class="btn pri" type="button" data-m2="new">回「新增旅遊規劃」</button></div></div>`;}
 function openDraft(dr,opt){opt=opt||{}; ++loadSeq; return loadIntake().then(()=>{
  TID=dr.id; DRAFT=dr; D=null; route=null; TE={id:dr.id,title:drTitle(dr.request||{})+"（草稿）"};
@@ -1408,6 +1408,7 @@ document.addEventListener("click",e=>{
  if(e.target.id==="toFlights"){showMod("flights"); return;}
  const m2=e.target.closest("[data-m2]"); if(m2){showMod(m2.dataset.m2); return;}
 });
+document.addEventListener("focusin",e=>{ if(e.target.name==="invite") tsMount();});
 document.addEventListener("change",e=>{ if(e.target.name==="asel"&&AUTO.result){const v=[...document.querySelectorAll('#autoRes [name="asel"]:checked')].map(x=>x.value); ls.set(autoSelKey(AUTO.result.request_id||"auto"),JSON.stringify({routes:v,updated_at:nowISO()})); $("#aselCnt").textContent="已選 "+v.length+" 條（存在本機）"; toast("已存路線選擇"); return;}
  if(e.target.name==="rsel"){const v=[...document.querySelectorAll('#routePick [name="rsel"]:checked')].map(x=>x.value); selSave(v); $("#selCnt").textContent="已選 "+v.length+" 條（存在本機，會一起寫進 decisions 匯出）"; toast("已存路線選擇");}});
 document.addEventListener("submit",e=>{const fm=e.target;
