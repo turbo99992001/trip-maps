@@ -1,0 +1,198 @@
+{
+  "version": 1,
+  "updated": "2026-10-24",
+  "purpose": "新行程開案勾選表。PWA 勾選後，由旅遊總經理轉成 trip.json 的 meta 並派工。",
+  "questions": [
+    {
+      "id": "dates",
+      "label": "出遊日期",
+      "type": "date_range",
+      "required": true
+    },
+    {
+      "id": "region",
+      "label": "進出城市／區域",
+      "type": "single",
+      "allowCustom": true,
+      "options": [
+        "東京（羽田/成田）",
+        "大阪（關西）",
+        "名古屋",
+        "福岡（九州）",
+        "札幌（北海道）",
+        "沖繩",
+        "仙台（東北）"
+      ]
+    },
+    {
+      "id": "flights_status",
+      "label": "機票狀態",
+      "type": "single",
+      "options": [
+        "已自行訂好（填班號）",
+        "請機票部找"
+      ],
+      "followup": {
+        "已自行訂好（填班號）": {
+          "id": "flight_numbers",
+          "type": "text",
+          "label": "去程／回程班號"
+        }
+      }
+    },
+    {
+      "id": "travelers",
+      "label": "人數組成",
+      "type": "single",
+      "allowCustom": true,
+      "options": [
+        "2位大人",
+        "3位大人",
+        "4位大人",
+        "2大人＋1小孩",
+        "2大人＋2小孩",
+        "含長輩"
+      ]
+    },
+    {
+      "id": "budget_twd",
+      "label": "總預算（含機票、住宿、租車，不含購物）",
+      "type": "single",
+      "allowCustom": true,
+      "options": [
+        "15萬台幣以內",
+        "15～25萬台幣",
+        "25～40萬台幣",
+        "40萬台幣以上"
+      ]
+    },
+    {
+      "id": "preferences",
+      "label": "旅遊偏好",
+      "type": "multi",
+      "allowCustom": true,
+      "options": [
+        "溫泉",
+        "美食",
+        "自然景觀、絕景",
+        "購物、Outlet",
+        "動漫周邊購物",
+        "神社寺廟、歷史",
+        "親子或長輩同行，步調放鬆",
+        "景點多，行程排緊一點"
+      ]
+    },
+    {
+      "id": "route",
+      "label": "路線",
+      "type": "single",
+      "allowCustom": true,
+      "options": [
+        "還沒確定，請提供2～3套建議",
+        "已有想去的區域（自填）"
+      ]
+    },
+    {
+      "id": "city_nights_start",
+      "label": "抵達後先住市區幾晚（不租車）",
+      "type": "single",
+      "options": [
+        "0晚",
+        "1晚",
+        "2晚",
+        "3晚"
+      ]
+    },
+    {
+      "id": "city_nights_end",
+      "label": "回程前住市區／機場附近幾晚（不租車）",
+      "type": "single",
+      "options": [
+        "0晚",
+        "1晚",
+        "2晚",
+        "3晚"
+      ]
+    },
+    {
+      "id": "last_nights_hotel",
+      "label": "最後幾晚飯店條件",
+      "type": "multi",
+      "allowCustom": true,
+      "options": [
+        "離機場近",
+        "有機場接駁車（行李多）",
+        "靠近購物區",
+        "靠近車站"
+      ]
+    },
+    {
+      "id": "pace",
+      "label": "換房頻率",
+      "type": "single",
+      "options": [
+        "每點2晚",
+        "好的據點住3晚以上，少換房慢活",
+        "不限，景點多優先"
+      ]
+    },
+    {
+      "id": "festivals",
+      "label": "祭典活動",
+      "type": "single",
+      "options": [
+        "想參加，請排進行程",
+        "人多想避開",
+        "列出來讓我選"
+      ]
+    },
+    {
+      "id": "lodging_style",
+      "label": "住宿類型",
+      "type": "multi",
+      "options": [
+        "溫泉旅館（含晚餐）",
+        "溫泉飯店",
+        "一般飯店",
+        "公寓式／可煮食"
+      ]
+    },
+    {
+      "id": "car",
+      "label": "租車",
+      "type": "single",
+      "options": [
+        "要自駕（MapCode 導航）",
+        "不租車，搭大眾運輸"
+      ]
+    },
+    {
+      "id": "notes",
+      "label": "其他要求",
+      "type": "text"
+    }
+  ],
+  "example_2027-06-tokyo": {
+    "dates": "2027-06-19～2027-07-04",
+    "region": "東京（羽田/成田）",
+    "flights_status": "已自行訂好",
+    "flight_numbers": "BR192 / BR189",
+    "travelers": "3位大人",
+    "budget_twd": "40萬台幣以上",
+    "preferences": [
+      "溫泉",
+      "美食",
+      "自然景觀、絕景",
+      "動漫周邊購物",
+      "親子或長輩同行，步調放鬆"
+    ],
+    "route": "還沒確定，請提供2～3套建議",
+    "city_nights_start": "1～2晚",
+    "city_nights_end": "2晚",
+    "last_nights_hotel": [
+      "離機場近",
+      "有機場接駁車（行李多）"
+    ],
+    "car": "要自駕（MapCode 導航）"
+  }
+}
