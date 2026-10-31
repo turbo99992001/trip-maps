@@ -218,7 +218,7 @@ pre.json{background:#f4f6f8;border-radius:8px;padding:8px;font-size:11px;max-hei
 <script>
 (function(){
 "use strict";
-const APPV="plan-multi-1.9.5";
+const APPV="plan-multi-1.9.6";
 /* 1.8 後台自動排路線（Cloudflare Worker）：網址部署後填入。空字串＝後台未啟用，網頁維持 1.7 行為（匯出 JSON＋複製文字）。site key 是公開值。 */
 const BACKEND_CFG={url:"https://trip-intake.turbo99992001.workers.dev",turnstile_site_key:"0x4AAAAAAFs8wmzPidNkiUBU"};
 const CAT={popular:"熱門",natural:"自然絕景",shrine:"神社寺院",historic:"歷史",onsen:"溫泉",hidden:"私房",food:"美食",experience:"親子／體驗",anime:"動漫",anime_game:"🎮 動漫・遊戲周邊",festival:"活動／花季",custom:"👤 自訂地點"};
@@ -1463,12 +1463,12 @@ function bkXlsxDownload(){const a=bkSort(bkLoad()); if(!a.length){toast("還沒�
  const blob=buildXlsx(a.map(bkRow)), nm="訂房資料_"+(TID||"新行程")+".xlsx"; window.__lastXlsx=blob;
  const u=URL.createObjectURL(blob), el=document.createElement("a"); el.href=u; el.download=nm; document.body.appendChild(el); el.click(); setTimeout(()=>{URL.revokeObjectURL(u); el.remove();},800); toast("已匯出 "+a.length+" 筆訂房資料"); return blob;}
 /* 匯入視窗 */
-const LG_MIME=/^(application\/pdf|message\/rfc822|text\/plain|image\/(png|jpeg|webp|heic))$/, LG_MAX=4*1024*1024;
+const LG_MIME=/^(application\/pdf|message\/rfc822|text\/plain|image\/(png|jpeg|webp|heic))$/, LG_MAX=4*1024*1024, LG_NMAX=10;
 function lgMime(f){if(f.type&&LG_MIME.test(f.type)) return f.type; const e=(f.name.split(".").pop()||"").toLowerCase(); return {eml:"message/rfc822",pdf:"application/pdf",txt:"text/plain",png:"image/png",jpg:"image/jpeg",jpeg:"image/jpeg",webp:"image/webp",heic:"image/heic"}[e]||"";}
 function lgOpen(vc){const b=backendCfg(), n=bkLoad().length;
- openModal(`<h3>📩 匯入訂房確認信</h3>${b?`<div class="cnt">上傳訂房確認信（PDF／.eml／截圖），或直接貼上信件文字。後台判讀後會先讓你確認、修改，再填入「每個住宿點想住幾晚」。<br>含個資：原檔判讀後立即刪除，結果 7 天後自動刪除。</div>
+ openModal(`<h3>📩 匯入訂房確認信</h3>${b?`<div class="cnt">上傳訂房確認信（PDF／.eml／截圖），或直接貼上信件文字（一次最多 10 個檔案，截圖會自動壓縮）。後台判讀後會先讓你確認、修改，再填入「每個住宿點想住幾晚」。<br>含個資：原檔判讀後立即刪除，結果 7 天後自動刪除。</div>
  <form id="lgForm"><input type="file" id="lgFiles" multiple accept=".pdf,.eml,.txt,image/*,application/pdf,message/rfc822"><textarea id="lgText" class="wide" rows="4" placeholder="或貼上訂房確認信文字"></textarea>
- <div class="bkf"><label>邀請碼<input name="invite" id="lgInv" autocomplete="off"></label></div><div class="tsBox" id="lgTs"></div><div id="lgErr" class="todo"></div>
+ <div class="bkf"><label>邀請碼<input name="invite" id="lgInv" autocomplete="off"></label></div><div class="tsBox" id="lgTs"></div><div id="lgErr" class="todo" aria-live="polite"></div>
  <div class="btns"><button class="btn ok" type="submit">📤 送去判讀</button></div></form>`:`<div class="todo">後台尚未啟用，無法自動判讀；可先手動輸入。</div>`}
  <div id="lgSt" class="desc"></div><div id="lgEdit"></div>
  <div class="btns"><button class="btn" type="button" id="lgManual">✏️ 手動輸入一筆</button>${n?`<button class="btn" type="button" id="lgXlsx2">📊 整理訂房資料（Excel，${n} 筆）</button>`:""}</div>`);
@@ -1492,11 +1492,20 @@ function lgApply(){const sel=lgCollect(); if(!sel.length){toast("沒有勾選任
   bkSort(sel).forEach(b=>{const ex=[...rows.querySelectorAll(".bnrow")].find(r=>r.querySelector('[name="b_note"]').value.trim()===(b.hotel_name||"")&&b.hotel_name); const n=bkNights(b);
    if(ex){ex.querySelector('[name="b_area"]').value=b.area||""; ex.querySelector('[name="b_nights"]').value=n==null?"":n;} else rows.insertAdjacentHTML("beforeend",bnRow({area:b.area||"",nights:n,note:b.hotel_name||null}));});}
  closeModal(); toast("已套用 "+sel.length+" 筆，記得按「儲存草稿」"); const c=$("#bkCnt"); if(c) c.textContent=all.length+" 筆";}
+/* 1.9.6：一次最多 10 個檔案；大於 500 KB 的 PNG／JPEG／WebP 截圖先縮到長邊 1600px、轉 JPEG，總量仍守 4 MB（Worker 上限） */
+const lgTooMany=n=>`一次最多 ${LG_NMAX} 個檔案（目前選了 ${n} 個），請分兩次送出`;
+document.addEventListener("change",e=>{ if(e.target&&e.target.id==="lgFiles"){const n=(e.target.files||[]).length, el=$("#lgErr"); if(el) el.textContent=n>LG_NMAX?lgTooMany(n):"";}});
+async function lgShrink(f){ if(!/^image\/(png|jpeg|webp)$/.test(f.type||"")||f.size<=500*1024||typeof createImageBitmap!=="function") return f;
+ try{ const bmp=await createImageBitmap(f), k=Math.min(1,1600/Math.max(bmp.width,bmp.height)), c=document.createElement("canvas"); c.width=Math.max(1,Math.round(bmp.width*k)); c.height=Math.max(1,Math.round(bmp.height*k));
+  const g=c.getContext("2d"); g.fillStyle="#fff"; g.fillRect(0,0,c.width,c.height); g.drawImage(bmp,0,0,c.width,c.height); if(bmp.close) bmp.close();
+  const b=await new Promise(r=>c.toBlob(r,"image/jpeg",0.82)); if(!b||b.size>=f.size) return f;
+  return new File([b],f.name.replace(/\.(png|webp|jpe?g)$/i,"")+".jpg",{type:"image/jpeg"}); }catch(e){ return f; } }
 function fileB64(f){return new Promise((res,rej)=>{const r=new FileReader(); r.onload=()=>res(String(r.result).split(",")[1]||""); r.onerror=()=>rej(r.error); r.readAsDataURL(f);});}
-async function lgSubmit(){const err=$("#lgErr"), fs=[...($("#lgFiles").files||[])], txt=$("#lgText").value.trim(), inv=$("#lgInv").value.trim(); err.textContent="";
- if(!fs.length&&!txt){err.textContent="請選檔案或貼上文字"; return;} if(fs.length>5){err.textContent="一次最多 5 個檔案"; return;}
- const tot=fs.reduce((s,f)=>s+f.size,0); if(tot>LG_MAX){err.textContent="檔案總大小超過 4 MB，請分批或改貼文字"; return;}
+async function lgSubmit(){const err=$("#lgErr"); let fs=[...($("#lgFiles").files||[])]; const txt=$("#lgText").value.trim(), inv=$("#lgInv").value.trim(); err.textContent="";
+ if(!fs.length&&!txt){err.textContent="請選檔案或貼上文字"; return;} if(fs.length>LG_NMAX){err.textContent=lgTooMany(fs.length); return;}
  const bad=fs.find(f=>!lgMime(f)); if(bad){err.textContent="不支援的檔案類型："+bad.name; return;}
+ if(fs.some(f=>f.size>500*1024&&/^image\//.test(f.type||""))){err.textContent="壓縮截圖中…"; fs=await Promise.all(fs.map(lgShrink)); err.textContent="";}
+ const tot=fs.reduce((s,f)=>s+f.size,0); if(tot>LG_MAX){err.textContent="檔案總大小超過 4 MB（截圖已自動壓縮），請分兩次送出或改貼文字"; return;}
  if(txt.length>20000){err.textContent="文字太長（上限 20000 字）"; return;}
  if(!inv){err.textContent="請填邀請碼"; return;} const tsb=$("#lgTs"), tk=tsToken(tsb); if(!tk){err.textContent=tsb&&tsb.querySelector(".tsErr")?"驗證碼無法使用，請按「重試」":"請先完成驗證碼（等方塊出現打勾）"; return;}
  const files=[]; for(const f of fs) files.push({name:f.name,mime:lgMime(f),data_base64:await fileB64(f)});
@@ -1607,7 +1616,7 @@ document.addEventListener("click",e=>{
 $("#cuadd").addEventListener("click",()=>cuForm(null));
 $("#cucopy").addEventListener("click",()=>{const t=cuText(); if(!t){toast("還沒有自訂景點");return;} window.__lastCuText=t; copyText(t,"已複製自訂景點清單，可貼給景點部補查");});
 setTimeout(listPoll,1200);
-window.__app={quotaUntil,bkMsg,plQueued,plSched,QF,areaZh,zhText,userNotes,routeName,pickLoad,doneAlert,bkGate,listPoll,bkLoad,bkSave,bkRow,bkDateCell,buildXlsx,bkXlsxDownload,XLSX_COLS,lgOpen,flSplit,flJoin,flText,backendCfg,hashView,get AUTO(){return AUTO;},drLoad,drVisible,reqExport,reqText,readNewForm,selLoad,selectedRoutes,get DRAFT(){return DRAFT;},get INTAKE(){return INTAKE;},DL,BUF,decLoad,decSave,decExport,showMod,pickupDefault,dropoffDefault,get curMod(){return curMod;},bestDay,localNearby,SCATS,photonSearch,queryVariants,qTokens,localSearch,photonMulti,parseLocationInput,cpLoad,cpSave,cpId,sha1hex,searchPlaces,searchCenter,SEARCH_ENDPOINTS,openSearch,get SRVCP(){return SRVCP;},parseLoc,cuLoad,cuText,cuMerge,stopsOf,mergeByMeal,get SAME(){return SAME;},setRoute,openTrip,showTab,addTo,itin,suggested,store,exportJson,buildKml,buildCsv,buildFinal,importText,parseImport,
+window.__app={lgShrink,LG_NMAX,quotaUntil,bkMsg,plQueued,plSched,QF,areaZh,zhText,userNotes,routeName,pickLoad,doneAlert,bkGate,listPoll,bkLoad,bkSave,bkRow,bkDateCell,buildXlsx,bkXlsxDownload,XLSX_COLS,lgOpen,flSplit,flJoin,flText,backendCfg,hashView,get AUTO(){return AUTO;},drLoad,drVisible,reqExport,reqText,readNewForm,selLoad,selectedRoutes,get DRAFT(){return DRAFT;},get INTAKE(){return INTAKE;},DL,BUF,decLoad,decSave,decExport,showMod,pickupDefault,dropoffDefault,get curMod(){return curMod;},bestDay,localNearby,SCATS,photonSearch,queryVariants,qTokens,localSearch,photonMulti,parseLocationInput,cpLoad,cpSave,cpId,sha1hex,searchPlaces,searchCenter,SEARCH_ENDPOINTS,openSearch,get SRVCP(){return SRVCP;},parseLoc,cuLoad,cuText,cuMerge,stopsOf,mergeByMeal,get SAME(){return SAME;},setRoute,openTrip,showTab,addTo,itin,suggested,store,exportJson,buildKml,buildCsv,buildFinal,importText,parseImport,
  get trip(){return TID;},get route(){return route;},get day(){return curDay;},get RS(){return RS;},get SP(){return SP;},get D(){return D;},get RESTS(){return RESTS;},K};
 })();
 </script>
