@@ -129,6 +129,7 @@ pre.json{background:#f4f6f8;border-radius:8px;padding:8px;font-size:11px;max-hei
 }
 .leaflet-popup-content{font-size:13px}.leaflet-popup-content .btn{margin-top:4px}
 #sentDlg{position:fixed;inset:0;background:rgba(0,0,0,.45);z-index:9999;display:flex;align-items:center;justify-content:center;padding:16px}#sentDlg .sdBox{background:#fff;border-radius:12px;padding:16px;max-width:460px;width:100%;box-shadow:0 8px 30px rgba(0,0,0,.3);border-top:6px solid #2e7d32}#sentDlg .wide,#autoUrl{width:100%;box-sizing:border-box}.bkSteps .bad{background:#c62828;color:#fff}
+#doneDlg{position:fixed;inset:0;background:rgba(0,0,0,.45);z-index:9999;display:flex;align-items:center;justify-content:center;padding:16px}#doneDlg .sdBox{background:#fff;border-radius:12px;padding:16px;max-width:460px;width:100%;border-top:6px solid #2e7d32}.btn.big{font-size:18px;padding:12px 18px;width:100%;min-height:48px}.btn:disabled{opacity:.45;cursor:not-allowed}.btn.sm{font-size:13px;padding:4px 10px}
 </style>
 </head>
 <body>
@@ -216,7 +217,7 @@ pre.json{background:#f4f6f8;border-radius:8px;padding:8px;font-size:11px;max-hei
 <script>
 (function(){
 "use strict";
-const APPV="plan-multi-1.9.2";
+const APPV="plan-multi-1.9.3";
 /* 1.8 後台自動排路線（Cloudflare Worker）：網址部署後填入。空字串＝後台未啟用，網頁維持 1.7 行為（匯出 JSON＋複製文字）。site key 是公開值。 */
 const BACKEND_CFG={url:"https://trip-intake.turbo99992001.workers.dev",turnstile_site_key:"0x4AAAAAAFs8wmzPidNkiUBU"};
 const CAT={popular:"熱門",natural:"自然絕景",shrine:"神社寺院",historic:"歷史",onsen:"溫泉",hidden:"私房",food:"美食",experience:"親子／體驗",anime:"動漫",anime_game:"🎮 動漫・遊戲周邊",festival:"活動／花季",custom:"👤 自訂地點"};
@@ -1305,15 +1306,22 @@ let POLL_T=null, AUTO={vc:null,status:null,result:null};
 const ST_DONE={published:1,failed:1,rejected:1};
 function stPhase(st){return st==="published"?3:(st==="failed"||st==="rejected")?-1:(st==="running"||st==="validating")?2:1;}
 function stepHtml(st){const p=stPhase(st), L=["已收到","排程中",p<0?"失敗":"完成"]; return `<div class="steps bkSteps" data-phase="${p}">`+L.map((t,i)=>`<span class="${p<0?(i<2?"on":"bad"):(i<p?"on":"")}">${i+1}. ${t}</span>`).join("")+`</div>`;}
-function drSetStatus(vc,st){ if(!vc||!st) return; const a=drLoad(); let ch=false; a.forEach(d=>{ if(d.backend&&d.backend.view_code===vc&&d.backend.status!==st){d.backend.status=st; d.backend.status_at=nowISO(); ch=true;}}); if(ch) drSaveAll(a); if(DRAFT&&DRAFT.backend&&DRAFT.backend.view_code===vc) DRAFT.backend.status=st;}
-function listPoll(){ if(!backendCfg()) return; drLoad().filter(d=>d.backend&&d.backend.view_code&&!ST_DONE[d.backend.status]).forEach(d=>{const vc=d.backend.view_code;
- bkFetch("/api/status",{headers:{Authorization:"View "+vc}}).then(r=>{ if(r.ok&&r.j&&r.j.status){drSetStatus(vc,r.j.status); const el=document.querySelector(`[data-drst="${vc}"]`); if(el) el.textContent=ST_TXT[r.j.status]||r.j.status; if(!ST_DONE[r.j.status]&&document.querySelector(`[data-drst="${vc}"]`)) setTimeout(listPoll,15000);}}).catch(()=>{});});}
+function drSetStatus(vc,st){ if(!vc||!st) return; const a=drLoad(); let ch=false, done=null; a.forEach(d=>{ if(d.backend&&d.backend.view_code===vc){ if(d.backend.status!==st){d.backend.status=st; d.backend.status_at=nowISO(); ch=true;} if(st==="published"&&!d.backend.notified){d.backend.notified=nowISO(); ch=true; done=d;}}}); if(ch) drSaveAll(a); if(done) doneAlert(done); if(DRAFT&&DRAFT.backend&&DRAFT.backend.view_code===vc) DRAFT.backend.status=st;}
+/* 1.9.3 完成提示：對話框＋（允許時）Notification＋vibrate；不支援就安靜略過 */
+function notifyAsk(){try{ if(!("Notification" in window)){toast("這個瀏覽器不支援通知，完成時會在 App 內跳提示"); return;} const p=Notification.requestPermission(); const f=r=>{toast(r==="granted"?"已開啟完成通知":"未開啟通知，完成時會在 App 內跳提示"); const b=$("#notifyOn"); if(b&&r==="granted") b.remove();}; if(p&&p.then) p.then(f).catch(()=>{}); }catch(e){}}
+function doneAlert(d){const vc=d.backend.view_code, t=drTitle(d.request||{}); let x=$("#doneDlg"); if(x) x.remove(); x=document.createElement("div"); x.id="doneDlg"; x.dataset.vc=vc; x.setAttribute("role","alertdialog");
+ x.innerHTML=`<div class="sdBox"><h3>✅ 建議路線已完成</h3><div class="desc">「${esc(t)}」的建議路線已排好，可在「② 路線建議」直接勾選（③ 挑選）。</div><div class="btns"><button class="btn pri" type="button" id="doneGo">查看路線</button><button class="btn" type="button" id="doneClose">稍後</button></div></div>`; document.body.appendChild(x);
+ try{ if(navigator.vibrate) navigator.vibrate([200,100,200]); }catch(e){}
+ try{ if("Notification" in window&&Notification.permission==="granted"){ new Notification("✅ 建議路線已完成",{body:t,tag:"route-"+vc}); } }catch(e){}}
+let LP_T=null;
+function listPoll(){ if(!backendCfg()) return; clearTimeout(LP_T); if(drLoad().some(d=>d.backend&&d.backend.view_code&&!ST_DONE[d.backend.status])) LP_T=setTimeout(listPoll,15000); drLoad().filter(d=>d.backend&&d.backend.view_code&&!ST_DONE[d.backend.status]).forEach(d=>{const vc=d.backend.view_code;
+ bkFetch("/api/status",{headers:{Authorization:"View "+vc}}).then(r=>{ if(r.ok&&r.j&&r.j.status){drSetStatus(vc,r.j.status); const el=document.querySelector(`[data-drst="${vc}"]`); if(el) el.textContent=ST_TXT[r.j.status]||r.j.status; }}).catch(()=>{});});}
 function sentDlg(vc,jid){let d=$("#sentDlg"); if(d) d.remove(); d=document.createElement("div"); d.id="sentDlg"; d.setAttribute("role","dialog"); d.setAttribute("aria-modal","true");
- d.innerHTML=`<div class="sdBox"><h3>✅ 需求已送出</h3><div class="desc">後台已收到，會自動排程（約數分鐘），完成後「② 路線建議」會自動顯示。</div><div class="cnt">查詢代號：<b id="sdCode">${esc(jid||vc)}</b></div><div class="cnt">查看連結（請存到 LINE 記事本）：<input class="wide" id="sdUrl" readonly value="${esc(viewUrl(vc))}"></div><div class="btns"><button class="btn pri" type="button" id="sdCopy">📋 複製連結</button><button class="btn" type="button" id="sdClose">知道了</button></div></div>`;
+ d.innerHTML=`<div class="sdBox"><h3>✅ 已送到後台排路線</h3><div class="desc">後台已收到，會自動排程（約數分鐘），完成後「② 路線建議」會自動顯示。</div><div class="cnt">查詢代號：<b id="sdCode">${esc(jid||vc)}</b></div><div class="cnt">查看連結（請存到 LINE 記事本）：<input class="wide" id="sdUrl" readonly value="${esc(viewUrl(vc))}"></div><div class="btns"><button class="btn pri" type="button" id="sdCopy">📋 複製連結</button><button class="btn" type="button" id="sdClose">知道了</button></div></div>`;
  document.body.appendChild(d);}
 function autoSelKey(rid){return "itin:"+rid+":selected_routes:v1";}
-function autoCardHtml(vc){return `<div class="card" id="autoPub"><h3>② 路線建議（後台自動排）</h3><div class="desc" id="autoSt">讀取狀態中…</div>
- <div class="cnt">查看網址（請存到 LINE 記事本；遺失無法找回）：<br><input class="wide" id="autoUrl" readonly value="${esc(viewUrl(vc))}"></div><div class="btns"><button class="btn" type="button" id="autoCopy">📋 複製查看網址</button><button class="btn" type="button" id="autoRefresh">🔄 重新整理</button></div><div id="autoRes"></div></div>`;}
+function autoCardHtml(vc){return `<div class="card" id="autoPub"><h3>② 路線建議・③ 挑選（後台自動排）</h3><div class="desc" id="autoSt">讀取狀態中…</div>
+ <div class="cnt">查看網址（請存到 LINE 記事本；遺失無法找回）：<br><input class="wide" id="autoUrl" readonly value="${esc(viewUrl(vc))}"></div><div class="btns"><button class="btn" type="button" id="autoCopy">📋 複製查看網址</button><button class="btn" type="button" id="autoRefresh">🔄 重新整理</button>${("Notification" in window)&&Notification.permission==="default"?`<button class="btn" type="button" id="notifyOn">🔔 完成時通知我</button>`:""}</div><div id="autoRes"></div></div>`;}
 function autoPoll(vc,now){clearTimeout(POLL_T); if(AUTO.vc!==vc){AUTO.status=null; AUTO.result=null;} AUTO.vc=vc; if(!document.getElementById("autoPub")) return; const seq=AUTO.seq=(AUTO.seq||0)+1;
  if(AUTO.status) autoShow(AUTO.status); if(AUTO.result) renderAutoRes(AUTO.result);
  POLL_T=setTimeout(()=>{ if(AUTO.seq===seq&&/讀取狀態中/.test(($("#autoSt")||{}).textContent||"")) autoPoll(vc);},6000);
@@ -1340,6 +1348,10 @@ function autoSubmit(dr,j){const b=backendCfg(); if(!b) return Promise.resolve(fa
   if(r.ok&&r.j&&r.j.view_code){const a=drLoad(), x=a.find(y=>y.id===dr.id); const bk={job_id:r.j.job_id,view_code:r.j.view_code,sent_at:nowISO(),status:"queued"}; if(x){x.backend=bk; drSaveAll(a);} dr.backend=bk; return true;}
   sendErr("送出失敗："+((r.j&&r.j.error)||BK_ERR[r.status]||("HTTP "+r.status))+"；草稿已保留。"); tsReset(tsb); return null;})
  .catch(e=>{sendErr("後台連不上（"+e.message+"）；草稿已保留，可重試或改用匯出 JSON。"); tsReset(tsb); return null;});}
+/* 1.9.3 主按鈕：邀請碼＋Turnstile 都好才可按 */
+function bkGate(){const b=$("#bkSend"); if(!b) return; const inv=(($("#newForm [name=invite]")||{}).value||"").trim(), tk=tsToken($("#newForm .tsBox")), okk=!!(inv&&tk);
+ b.disabled=!okk; const h=$("#bkHint"); if(h) h.textContent=okk?"✅ 已可送出：按「🚀 送到後台排路線」，約數分鐘排好。":(!inv?"請先填邀請碼":"請完成驗證碼")+"，「🚀 送到後台排路線」才能按。";}
+setInterval(bkGate,700);
 function sendErr(m){const el=$("#newErr"); if(!el) return; el.innerHTML=esc(m)+' <button type="button" class="btn" id="sendRetry">🔄 重試送出</button>'; el.scrollIntoView({block:"center"});}
 /* 表單 → 需求 */
 function readNewForm(fm){const g=n=>{const e=fm.querySelector(`[name="${n}"]`); return e?String(e.value||"").trim():"";}, all=n=>[...fm.querySelectorAll(`[name="${n}"]:checked`)].map(e=>e.value);
@@ -1475,9 +1487,9 @@ function newForm(r){r=r||{}; const d=r.dates||{}, t=r.travelers||{adults:2}, bu=
  <h4>交通與機票</h4><div class="bkf"><label>租車${optSel("car",Q("car"),r.car)}</label><label>機票${optSel("fl_status",Q("flights_status"),fl.status)}</label><label>去程班號<input name="fl_out" placeholder="例 BR192" autocapitalize="characters" value="${esc(flSplit(fl).out||"")}"></label><label>回程班號<input name="fl_in" placeholder="例 BR189" autocapitalize="characters" value="${esc(flSplit(fl).in||"")}"></label><label>祭典活動${optSel("fest",Q("festivals"),r.festivals)}</label></div>
  <h4>文字描述</h4><textarea name="desc" class="wide" rows="4" placeholder="用自己的話描述想怎麼玩（例：想泡溫泉、吃和牛，不想每天換飯店…）">${esc(r.description||"")}</textarea>
  <textarea name="notes" class="wide" rows="2" placeholder="其他要求">${esc(r.notes||"")}</textarea>
- ${backendCfg()?`<h4>送到後台自動排路線</h4><div class="bkf"><label>邀請碼<input name="invite" autocomplete="off" placeholder="安宏給的邀請碼"></label></div><div class="tsBox" id="tsBox"></div><div class="cnt">不填邀請碼也可以只匯出 JSON 給總經理。</div>`:""}
+ ${backendCfg()?`<h4>送到後台自動排路線</h4><div class="bkf"><label>邀請碼<input name="invite" autocomplete="off" placeholder="安宏給的邀請碼"></label></div><div class="tsBox" id="tsBox"></div><div class="btns"><button class="btn pri big" type="submit" data-act="bk" id="bkSend" disabled>🚀 送到後台排路線</button></div><div class="cnt" id="bkHint">請先填邀請碼並完成驗證碼，「🚀 送到後台排路線」才能按。</div>`:""}
  <div id="newErr" class="todo mcpend"></div>
- <div class="btns"><button class="btn" type="submit" data-act="save">💾 儲存草稿</button><button class="btn ok" type="submit" data-act="send">📤 送出需求（匯出 JSON＋複製文字）</button>${DRAFT?`<button class="btn warn" type="button" id="drDel">刪除草稿</button>`:""}</div></form>`;}
+ <div class="btns"><button class="btn" type="submit" data-act="save">💾 儲存草稿</button><button class="btn sm" type="submit" data-act="send">📤 匯出 JSON／複製文字</button>${DRAFT?`<button class="btn warn" type="button" id="drDel">刪除草稿</button>`:""}</div></form>`;}
 function renderNew(){const P=$("#modpanel"); let h=`<h2 class="nh">➕ 新增旅遊規劃</h2><div class="steps"><span class="on">① 需求</span><span>② 路線建議</span><span>③ 挑選路線</span><span>→ 機票・租車・住宿…</span></div>`;
  const hv=hashView(); if(hv&&!(DRAFT&&DRAFT.backend&&DRAFT.backend.view_code===hv)){ h+=backendCfg()?autoCardHtml(hv):`<div class="card wait" id="autoOff"><h3>② 路線建議（後台自動排）</h3><div class="desc">後台尚未啟用，暫時無法用代號查看。</div></div>`;}
  if(TID&&!DRAFT&&D){ // 已發布行程
@@ -1487,7 +1499,7 @@ function renderNew(){const P=$("#modpanel"); let h=`<h2 class="nh">➕ 新增旅
    <div class="cnt" id="selCnt">已選 ${sel.length} 條（存在本機，會一起寫進 decisions 匯出）</div><div class="btns"><button class="btn pri" type="button" id="toFlights">下一步：✈️ 機票 →</button><button class="btn expDec" type="button">⬇ 匯出決定（decisions JSON）</button></div></div>`;
  } else {
   h+=`<div class="card"><h3>① 需求${DRAFT?"（草稿 "+esc(DRAFT.id)+"）":""}</h3>${newForm(DRAFT&&DRAFT.request)}</div>
-  ${DRAFT&&DRAFT.backend&&backendCfg()?autoCardHtml(DRAFT.backend.view_code):`<div class="card wait" id="waitPub"><h3>② 路線建議・③ 挑選路線</h3><div class="desc">${backendCfg()?"🤖 送出後由後台自動排程（約數分鐘），完成後會自動顯示在這裡。<br>填邀請碼並完成驗證碼後按「送出需求」，後台會排 2～4 條路線。":"⏳ 等待企畫部發布。<br>後台尚未啟用：請按「送出需求」匯出 JSON。"}</div></div>`}`;
+  ${DRAFT&&DRAFT.backend&&backendCfg()?autoCardHtml(DRAFT.backend.view_code):`<div class="card wait" id="waitPub"><h3>② 路線建議・③ 挑選路線</h3><div class="desc">${backendCfg()?"🤖 按「🚀 送到後台排路線」後由後台自動排程（約數分鐘），完成後會自動顯示在這裡。<br>填邀請碼並完成驗證碼後按「🚀 送到後台排路線」，後台會排 2～4 條路線。":"⏳ 等待企畫部發布。<br>後台尚未啟用：請按「📤 匯出 JSON／複製文字」。"}</div></div>`}`;
  }
  const ds=drVisible(); if(ds.length) h+=`<div class="card"><h3>本機草稿（${ds.length}）</h3>${ds.map(d=>`<div><a href="?trip=${encodeURIComponent(d.id)}&mod=new" data-draft="${esc(d.id)}">📝 ${esc(drTitle(d.request||{}))}</a> <span class="cnt">${esc((d.updated_at||"").slice(0,16).replace("T"," "))}${d.submitted_at?"・已送出":""}</span></div>`).join("")}</div>`;
  P.querySelectorAll(".tsBox").forEach(tsRemove); P.innerHTML=h; tsMount(P); const lv=hashLodging(); if(lv&&LG.vc!==lv&&backendCfg()) setTimeout(()=>lgOpen(lv),0); const ap=$("#autoPub"); if(ap){const v=hashView()&&!(DRAFT&&DRAFT.backend&&DRAFT.backend.view_code===hashView())?hashView():DRAFT.backend.view_code; autoPoll(v);} else clearTimeout(POLL_T);}
@@ -1505,9 +1517,9 @@ function saveDraftFrom(fm){const r=readNewForm(fm), err=reqValidate(r); if(err.l
  if(!dr){dr={id:drNewId(),created_at:now}; a.push(dr); const pb=bkLoad("plan:bookings:new:v1"); if(pb.length){bkSave(bkMerge(bkLoad("itin:"+dr.id+":bookings:v1"),pb),"itin:"+dr.id+":bookings:v1"); ls.del("plan:bookings:new:v1");}} dr.request=r; dr.updated_at=now; drSaveAll(a); DRAFT=dr; return dr;}
 document.addEventListener("submit",e=>{const fm=e.target; if(fm.id!=="newForm") return; e.preventDefault();
  const act=(e.submitter&&e.submitter.dataset.act)||"save", wasNew=!DRAFT||DRAFT.id!==TID; const dr=saveDraftFrom(fm); if(!dr) return;
- if(act==="send"){dr.submitted_at=nowISO(); const a=drLoad(); const x=a.find(y=>y.id===dr.id); if(x) x.submitted_at=dr.submitted_at; drSaveAll(a);
+ if(act==="send"||act==="bk"){dr.submitted_at=nowISO(); const a=drLoad(); const x=a.find(y=>y.id===dr.id); if(x) x.submitted_at=dr.submitted_at; drSaveAll(a);
   const j=reqExport(dr), txt=reqText(dr); window.__lastReq=j; window.__lastReqText=txt;
-  const inv=fm.querySelector("[name=invite]"); if(backendCfg()&&inv&&inv.value.trim()){ autoSubmit(dr,j).then(ok=>{ if(ok){toast("已送到後台，自動排路線中；請保存查看網址",3000); openDraft(dr,{mod:"new",push:wasNew}).then(()=>sentDlg(dr.backend.view_code,dr.backend.job_id));} }); return;}
+  if(act==="bk"&&backendCfg()){ autoSubmit(dr,j).then(ok=>{ if(ok){toast("已送到後台，自動排路線中；請保存查看網址",3000); openDraft(dr,{mod:"new",push:wasNew}).then(()=>sentDlg(dr.backend.view_code,dr.backend.job_id));} }); return;}
   download(`new_trip_request_${dr.id}.json`,JSON.stringify(j,null,2),"application/json"); copyText(txt,"已匯出需求 JSON，並複製文字：請貼到總經理聊天室");}
  else toast("已儲存草稿");
  openDraft(dr,{mod:"new",push:wasNew});});
@@ -1515,7 +1527,10 @@ document.addEventListener("click",e=>{
  const dc=e.target.closest("[data-drcopy]"); if(dc){copyText(dc.dataset.drcopy,"已複製查看連結"); return;}
  if(e.target.id==="sdCopy"){copyText($("#sdUrl").value,"已複製查看連結"); return;}
  if(e.target.id==="sdClose"||e.target.id==="sentDlg"){$("#sentDlg").remove(); return;}
- if(e.target.id==="sendRetry"){const b=document.querySelector('#newForm [data-act="send"]'); if(b){$("#newErr").textContent=""; b.click();} return;}
+ if(e.target.id==="sendRetry"){const b=$("#bkSend"); if(b){$("#newErr").textContent=""; bkGate(); if(b.disabled) $("#newErr").textContent="請重新完成驗證碼後再按「🚀 送到後台排路線」"; else b.click();} return;}
+ if(e.target.id==="notifyOn"){notifyAsk(); return;}
+ if(e.target.id==="doneClose"){const d=$("#doneDlg"); if(d) d.remove(); return;}
+ if(e.target.id==="doneGo"){const d=$("#doneDlg"), vc=d&&d.dataset.vc; if(d) d.remove(); const x=drLoad().find(y=>y.backend&&y.backend.view_code===vc); if(x&&!(DRAFT&&DRAFT.id===x.id)) openDraft(x,{mod:"new",push:true}); else {const a=$("#autoPub"); if(a) a.scrollIntoView({block:"start"});} return;}
  if(e.target.id==="autoCopy"){copyText($("#autoUrl").value,"已複製查看網址"); return;}
  if(e.target.id==="autoRefresh"){autoPoll(AUTO.vc); return;}
  if(e.target.id==="autoDl"&&AUTO.result){download("route_set_"+(AUTO.result.request_id||"auto")+".json",JSON.stringify(AUTO.result,null,2),"application/json"); return;}
@@ -1548,7 +1563,8 @@ document.addEventListener("click",e=>{
 
 $("#cuadd").addEventListener("click",()=>cuForm(null));
 $("#cucopy").addEventListener("click",()=>{const t=cuText(); if(!t){toast("還沒有自訂景點");return;} window.__lastCuText=t; copyText(t,"已複製自訂景點清單，可貼給景點部補查");});
-window.__app={bkLoad,bkSave,bkRow,bkDateCell,buildXlsx,bkXlsxDownload,XLSX_COLS,lgOpen,flSplit,flJoin,flText,backendCfg,hashView,get AUTO(){return AUTO;},drLoad,drVisible,reqExport,reqText,readNewForm,selLoad,selectedRoutes,get DRAFT(){return DRAFT;},get INTAKE(){return INTAKE;},DL,BUF,decLoad,decSave,decExport,showMod,pickupDefault,dropoffDefault,get curMod(){return curMod;},bestDay,localNearby,SCATS,photonSearch,queryVariants,qTokens,localSearch,photonMulti,parseLocationInput,cpLoad,cpSave,cpId,sha1hex,searchPlaces,searchCenter,SEARCH_ENDPOINTS,openSearch,get SRVCP(){return SRVCP;},parseLoc,cuLoad,cuText,cuMerge,stopsOf,mergeByMeal,get SAME(){return SAME;},setRoute,openTrip,showTab,addTo,itin,suggested,store,exportJson,buildKml,buildCsv,buildFinal,importText,parseImport,
+setTimeout(listPoll,1200);
+window.__app={doneAlert,bkGate,listPoll,bkLoad,bkSave,bkRow,bkDateCell,buildXlsx,bkXlsxDownload,XLSX_COLS,lgOpen,flSplit,flJoin,flText,backendCfg,hashView,get AUTO(){return AUTO;},drLoad,drVisible,reqExport,reqText,readNewForm,selLoad,selectedRoutes,get DRAFT(){return DRAFT;},get INTAKE(){return INTAKE;},DL,BUF,decLoad,decSave,decExport,showMod,pickupDefault,dropoffDefault,get curMod(){return curMod;},bestDay,localNearby,SCATS,photonSearch,queryVariants,qTokens,localSearch,photonMulti,parseLocationInput,cpLoad,cpSave,cpId,sha1hex,searchPlaces,searchCenter,SEARCH_ENDPOINTS,openSearch,get SRVCP(){return SRVCP;},parseLoc,cuLoad,cuText,cuMerge,stopsOf,mergeByMeal,get SAME(){return SAME;},setRoute,openTrip,showTab,addTo,itin,suggested,store,exportJson,buildKml,buildCsv,buildFinal,importText,parseImport,
  get trip(){return TID;},get route(){return route;},get day(){return curDay;},get RS(){return RS;},get SP(){return SP;},get D(){return D;},get RESTS(){return RESTS;},K};
 })();
 </script>
