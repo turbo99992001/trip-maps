@@ -128,6 +128,7 @@ pre.json{background:#f4f6f8;border-radius:8px;padding:8px;font-size:11px;max-hei
  .leaflet-popup-content{max-width:240px}
 }
 .leaflet-popup-content{font-size:13px}.leaflet-popup-content .btn{margin-top:4px}
+#sentDlg{position:fixed;inset:0;background:rgba(0,0,0,.45);z-index:9999;display:flex;align-items:center;justify-content:center;padding:16px}#sentDlg .sdBox{background:#fff;border-radius:12px;padding:16px;max-width:460px;width:100%;box-shadow:0 8px 30px rgba(0,0,0,.3);border-top:6px solid #2e7d32}#sentDlg .wide,#autoUrl{width:100%;box-sizing:border-box}.bkSteps .bad{background:#c62828;color:#fff}
 </style>
 </head>
 <body>
@@ -215,7 +216,7 @@ pre.json{background:#f4f6f8;border-radius:8px;padding:8px;font-size:11px;max-hei
 <script>
 (function(){
 "use strict";
-const APPV="plan-multi-1.9.1";
+const APPV="plan-multi-1.9.2";
 /* 1.8 後台自動排路線（Cloudflare Worker）：網址部署後填入。空字串＝後台未啟用，網頁維持 1.7 行為（匯出 JSON＋複製文字）。site key 是公開值。 */
 const BACKEND_CFG={url:"https://trip-intake.turbo99992001.workers.dev",turnstile_site_key:"0x4AAAAAAFs8wmzPidNkiUBU"};
 const CAT={popular:"熱門",natural:"自然絕景",shrine:"神社寺院",historic:"歷史",onsen:"溫泉",hidden:"私房",food:"美食",experience:"親子／體驗",anime:"動漫",anime_game:"🎮 動漫・遊戲周邊",festival:"活動／花季",custom:"👤 自訂地點"};
@@ -932,7 +933,7 @@ function showTripList(push){
  TID=null; D=null; DRAFT=null; curMod="spots"; $("#app").hidden=true; $("#bnav").hidden=true; $("#mods").hidden=true; $("#modpanel").hidden=true; $("#loading").hidden=true; fillTripSel();
  $("#ttl").textContent="互動行程"; document.title="安宏旅行社｜互動行程（景點＋餐廳）"; $("#rsw").innerHTML=""; $("#routeSel").innerHTML=""; $("#rname").textContent="";
  const st={flights:"收集中",review:"品管中",final:"已定案"};
- const dsl=drVisible(); $("#tripList").innerHTML=`<h2 style="font-size:18px">選擇行程</h2><div class="btns"><a class="btn pri" id="tlNew" href="?mod=new">➕ 新增旅遊規劃（例：九州）</a></div>`+(dsl.length?`<div class="card"><h3>本機草稿（等待企畫部發布）</h3>${dsl.map(d=>`<div><a href="?trip=${encodeURIComponent(d.id)}&mod=new" data-draft="${esc(d.id)}">📝 草稿：${esc(drTitle(d.request||{}))}</a></div>`).join("")}</div>`:"")+TRIPS.trips.map(t=>`<div class="card"><h3 data-trip="${esc(t.id)}">${esc(t.title)}</h3>
+ const dsl=drVisible(); setTimeout(listPoll,0); $("#tripList").innerHTML=`<h2 style="font-size:18px">選擇行程</h2><div class="btns"><a class="btn pri" id="tlNew" href="?mod=new">➕ 新增旅遊規劃（例：九州）</a></div>`+(dsl.length?`<div class="card"><h3>本機草稿</h3>${dsl.map(d=>`<div class="drow"><a href="?trip=${encodeURIComponent(d.id)}&mod=new" data-draft="${esc(d.id)}">📝 草稿：${esc(drTitle(d.request||{}))}</a>${d.backend&&d.backend.view_code?`<div class="cnt">代號 ${esc(d.backend.job_id||"")}・<span data-drst="${esc(d.backend.view_code)}">${esc(ST_TXT[d.backend.status]||"⏳ 已送出")}</span><br><a href="${esc(viewUrl(d.backend.view_code).replace(/^.*\?/,"?"))}" data-drlink>查看連結</a> <button class="btn" type="button" data-drcopy="${esc(viewUrl(d.backend.view_code))}">📋 複製</button></div>`:""}</div>`).join("")}</div>`:"")+TRIPS.trips.map(t=>`<div class="card"><h3 data-trip="${esc(t.id)}">${esc(t.title)}</h3>
   <div class="tags"><span class="tag">${esc(t.start_date)}～${esc(t.end_date)}</span>${t.travelers?`<span class="tag">大人 ${esc(t.travelers.adults||0)}${t.travelers.children?"、小孩 "+esc(t.travelers.children):""}</span>`:""}<span class="tag">景點 ${t.counts.spots}・餐廳 ${t.counts.restaurants}</span>${t.status_stage?`<span class="tag">${esc(st[t.status_stage]||t.status_stage)}</span>`:""}</div>
   <div class="desc">${esc(t.region||"")}</div>
   <div class="btns">${t.routes.map(r=>`<a class="btn ${r.key===t.default_route?"pri":""}" href="?trip=${encodeURIComponent(t.id)}&route=${encodeURIComponent(r.key)}" data-trip="${esc(t.id)}" data-route="${esc(r.key)}">路線 ${esc(r.key)}${r.key===t.default_route?"（推薦）":""}</a>`).join("")}</div>
@@ -1300,6 +1301,16 @@ function bkFetch(path,opt){const b=backendCfg(); if(!b) return Promise.reject(ne
 const BK_ERR={400:"資料格式有誤",403:"驗證碼或邀請碼不正確",413:"資料太大",429:"今天的送件次數已用完，明天再試",503:"目前排隊已滿，請稍後再試"};
 const ST_TXT={queued:"⏳ 排隊中",running:"⚙️ 後台排路線中",validating:"🔎 檢查中",published:"✅ 路線已產生",failed:"❌ 自動排路線失敗",rejected:"⛔ 需求被退回"};
 let POLL_T=null, AUTO={vc:null,status:null,result:null};
+/* 1.9.2 進度：已收到→排程中→完成／失敗；狀態寫回草稿（localStorage），重新整理後接續輪詢 */
+const ST_DONE={published:1,failed:1,rejected:1};
+function stPhase(st){return st==="published"?3:(st==="failed"||st==="rejected")?-1:(st==="running"||st==="validating")?2:1;}
+function stepHtml(st){const p=stPhase(st), L=["已收到","排程中",p<0?"失敗":"完成"]; return `<div class="steps bkSteps" data-phase="${p}">`+L.map((t,i)=>`<span class="${p<0?(i<2?"on":"bad"):(i<p?"on":"")}">${i+1}. ${t}</span>`).join("")+`</div>`;}
+function drSetStatus(vc,st){ if(!vc||!st) return; const a=drLoad(); let ch=false; a.forEach(d=>{ if(d.backend&&d.backend.view_code===vc&&d.backend.status!==st){d.backend.status=st; d.backend.status_at=nowISO(); ch=true;}}); if(ch) drSaveAll(a); if(DRAFT&&DRAFT.backend&&DRAFT.backend.view_code===vc) DRAFT.backend.status=st;}
+function listPoll(){ if(!backendCfg()) return; drLoad().filter(d=>d.backend&&d.backend.view_code&&!ST_DONE[d.backend.status]).forEach(d=>{const vc=d.backend.view_code;
+ bkFetch("/api/status",{headers:{Authorization:"View "+vc}}).then(r=>{ if(r.ok&&r.j&&r.j.status){drSetStatus(vc,r.j.status); const el=document.querySelector(`[data-drst="${vc}"]`); if(el) el.textContent=ST_TXT[r.j.status]||r.j.status; if(!ST_DONE[r.j.status]&&document.querySelector(`[data-drst="${vc}"]`)) setTimeout(listPoll,15000);}}).catch(()=>{});});}
+function sentDlg(vc,jid){let d=$("#sentDlg"); if(d) d.remove(); d=document.createElement("div"); d.id="sentDlg"; d.setAttribute("role","dialog"); d.setAttribute("aria-modal","true");
+ d.innerHTML=`<div class="sdBox"><h3>✅ 需求已送出</h3><div class="desc">後台已收到，會自動排程（約數分鐘），完成後「② 路線建議」會自動顯示。</div><div class="cnt">查詢代號：<b id="sdCode">${esc(jid||vc)}</b></div><div class="cnt">查看連結（請存到 LINE 記事本）：<input class="wide" id="sdUrl" readonly value="${esc(viewUrl(vc))}"></div><div class="btns"><button class="btn pri" type="button" id="sdCopy">📋 複製連結</button><button class="btn" type="button" id="sdClose">知道了</button></div></div>`;
+ document.body.appendChild(d);}
 function autoSelKey(rid){return "itin:"+rid+":selected_routes:v1";}
 function autoCardHtml(vc){return `<div class="card" id="autoPub"><h3>② 路線建議（後台自動排）</h3><div class="desc" id="autoSt">讀取狀態中…</div>
  <div class="cnt">查看網址（請存到 LINE 記事本；遺失無法找回）：<br><input class="wide" id="autoUrl" readonly value="${esc(viewUrl(vc))}"></div><div class="btns"><button class="btn" type="button" id="autoCopy">📋 複製查看網址</button><button class="btn" type="button" id="autoRefresh">🔄 重新整理</button></div><div id="autoRes"></div></div>`;}
@@ -1313,7 +1324,7 @@ function autoPoll(vc,now){clearTimeout(POLL_T); if(AUTO.vc!==vc){AUTO.status=nul
   if(s.status==="published") return bkFetch("/api/result",{headers:{Authorization:"View "+vc}}).then(x=>{ if(x.ok&&x.j){AUTO.result=x.j; renderAutoRes(x.j);} });
   if(s.status==="failed"||s.status==="rejected") return;
   POLL_T=setTimeout(()=>autoPoll(vc),15000);}).catch(()=>{const el=$("#autoSt"); if(el) el.textContent="後台暫時連不上，稍後自動重試"; POLL_T=setTimeout(()=>autoPoll(vc),30000);});}
-function autoShow(s){const el=$("#autoSt"); if(!el) return; el.innerHTML=esc(ST_TXT[s.status]||s.status)+(s.status==="queued"&&s.position?"（前面還有 "+esc(s.position)+" 件）":"")+(s.error?"<br>"+esc(s.error):"")+`<br><span class="cnt">需求 ${esc(s.request_id||"")}・更新 ${esc((s.updated_at||"").slice(0,16).replace("T"," "))}</span>`;}
+function autoShow(s){drSetStatus(AUTO.vc,s.status); const el=$("#autoSt"); if(!el) return; el.innerHTML=stepHtml(s.status)+esc(ST_TXT[s.status]||s.status)+(s.status==="queued"&&s.position?"（前面還有 "+esc(s.position)+" 件）":"")+(s.error?"<br>"+esc(s.error):"")+`<br><span class="cnt">需求 ${esc(s.request_id||"")}・更新 ${esc((s.updated_at||"").slice(0,16).replace("T"," "))}</span>`;}
 window.addEventListener("hashchange",()=>{ if(curMod==="new"&&(hashView()||hashLodging())) renderMod();});
 function renderAutoRes(rs){const box=$("#autoRes"); if(!box) return; const rid=rs.request_id||"auto"; let sel=[]; try{sel=(JSON.parse(ls.get(autoSelKey(rid))||"null")||{}).routes||[];}catch(e){}
  box.innerHTML=`<div class="cnt">⚠️ 自動產生、${esc(rs.qa||"未核對")}；地點座標與 MapCode 以各部門核對後為準。</div>`+(rs.routes||[]).map(r=>`<details class="rpick"><summary><label><input type="checkbox" name="asel" value="${esc(r.route_id)}" ${sel.indexOf(r.route_id)>=0?"checked":""}><b>${esc(r.route_id)}｜${esc(r.title)}</b></label></summary>
@@ -1326,9 +1337,10 @@ function autoSubmit(dr,j){const b=backendCfg(); if(!b) return Promise.resolve(fa
  if(!inv){$("#newErr").textContent="請填邀請碼（或清空後改用匯出 JSON）"; return Promise.resolve(null);}
  if(!tk){$("#newErr").textContent="請先完成驗證碼"; return Promise.resolve(null);}
  return bkFetch("/api/requests",{method:"POST",body:{invite_code:inv,turnstile_token:tk,request:j}}).then(r=>{
-  if(r.ok&&r.j&&r.j.view_code){const a=drLoad(), x=a.find(y=>y.id===dr.id); const bk={job_id:r.j.job_id,view_code:r.j.view_code,sent_at:nowISO()}; if(x){x.backend=bk; drSaveAll(a);} dr.backend=bk; return true;}
-  $("#newErr").textContent="送出失敗："+((r.j&&r.j.error)||BK_ERR[r.status]||("HTTP "+r.status))+"；草稿已保留。"; tsReset(tsb); return null;})
- .catch(e=>{$("#newErr").textContent="後台連不上（"+e.message+"）；草稿已保留，可改用匯出 JSON。"; return null;});}
+  if(r.ok&&r.j&&r.j.view_code){const a=drLoad(), x=a.find(y=>y.id===dr.id); const bk={job_id:r.j.job_id,view_code:r.j.view_code,sent_at:nowISO(),status:"queued"}; if(x){x.backend=bk; drSaveAll(a);} dr.backend=bk; return true;}
+  sendErr("送出失敗："+((r.j&&r.j.error)||BK_ERR[r.status]||("HTTP "+r.status))+"；草稿已保留。"); tsReset(tsb); return null;})
+ .catch(e=>{sendErr("後台連不上（"+e.message+"）；草稿已保留，可重試或改用匯出 JSON。"); tsReset(tsb); return null;});}
+function sendErr(m){const el=$("#newErr"); if(!el) return; el.innerHTML=esc(m)+' <button type="button" class="btn" id="sendRetry">🔄 重試送出</button>'; el.scrollIntoView({block:"center"});}
 /* 表單 → 需求 */
 function readNewForm(fm){const g=n=>{const e=fm.querySelector(`[name="${n}"]`); return e?String(e.value||"").trim():"";}, all=n=>[...fm.querySelectorAll(`[name="${n}"]:checked`)].map(e=>e.value);
  const num=v=>v===""?null:Math.max(0,parseInt(v,10)||0);
@@ -1475,14 +1487,14 @@ function renderNew(){const P=$("#modpanel"); let h=`<h2 class="nh">➕ 新增旅
    <div class="cnt" id="selCnt">已選 ${sel.length} 條（存在本機，會一起寫進 decisions 匯出）</div><div class="btns"><button class="btn pri" type="button" id="toFlights">下一步：✈️ 機票 →</button><button class="btn expDec" type="button">⬇ 匯出決定（decisions JSON）</button></div></div>`;
  } else {
   h+=`<div class="card"><h3>① 需求${DRAFT?"（草稿 "+esc(DRAFT.id)+"）":""}</h3>${newForm(DRAFT&&DRAFT.request)}</div>
-  ${DRAFT&&DRAFT.backend&&backendCfg()?autoCardHtml(DRAFT.backend.view_code):`<div class="card wait" id="waitPub"><h3>② 路線建議・③ 挑選路線</h3><div class="desc">⏳ 等待企畫部發布。<br>網頁不會自己產生路線：請按「送出需求」把 JSON 檔或複製的文字貼到總經理聊天室，企畫部做好 2～4 條路線後會發布到網頁，到時這裡就能複選。${backendCfg()?"<br>填邀請碼並完成驗證碼後送出，後台會自動排 2～4 條路線。":""}</div></div>`}`;
+  ${DRAFT&&DRAFT.backend&&backendCfg()?autoCardHtml(DRAFT.backend.view_code):`<div class="card wait" id="waitPub"><h3>② 路線建議・③ 挑選路線</h3><div class="desc">${backendCfg()?"🤖 送出後由後台自動排程（約數分鐘），完成後會自動顯示在這裡。<br>填邀請碼並完成驗證碼後按「送出需求」，後台會排 2～4 條路線。":"⏳ 等待企畫部發布。<br>後台尚未啟用：請按「送出需求」匯出 JSON。"}</div></div>`}`;
  }
  const ds=drVisible(); if(ds.length) h+=`<div class="card"><h3>本機草稿（${ds.length}）</h3>${ds.map(d=>`<div><a href="?trip=${encodeURIComponent(d.id)}&mod=new" data-draft="${esc(d.id)}">📝 ${esc(drTitle(d.request||{}))}</a> <span class="cnt">${esc((d.updated_at||"").slice(0,16).replace("T"," "))}${d.submitted_at?"・已送出":""}</span></div>`).join("")}</div>`;
  P.querySelectorAll(".tsBox").forEach(tsRemove); P.innerHTML=h; tsMount(P); const lv=hashLodging(); if(lv&&LG.vc!==lv&&backendCfg()) setTimeout(()=>lgOpen(lv),0); const ap=$("#autoPub"); if(ap){const v=hashView()&&!(DRAFT&&DRAFT.backend&&DRAFT.backend.view_code===hashView())?hashView():DRAFT.backend.view_code; autoPoll(v);} else clearTimeout(POLL_T);}
 function waitHtml(){return `<div class="card wait"><h3>⏳ 等待企畫部發布</h3><div class="desc">「${esc(DRAFT?drTitle(DRAFT.request):"")}」還是本機草稿，沒有路線資料；企畫部發布後機票・租車・住宿等模組才會出現內容。</div><div class="btns"><button class="btn pri" type="button" data-m2="new">回「新增旅遊規劃」</button></div></div>`;}
 function openDraft(dr,opt){opt=opt||{}; ++loadSeq; return loadIntake().then(()=>{
  TID=dr.id; DRAFT=dr; D=null; route=null; TE={id:dr.id,title:drTitle(dr.request||{})+"（草稿）"};
- $("#ttl").textContent=TE.title; document.title=TE.title+"｜互動行程"; $("#rsw").innerHTML=""; $("#routeSel").innerHTML=""; $("#rname").textContent="本機草稿・等待企畫部發布";
+ $("#ttl").textContent=TE.title; document.title=TE.title+"｜互動行程"; $("#rsw").innerHTML=""; $("#routeSel").innerHTML=""; $("#rname").textContent=dr.backend&&dr.backend.view_code?"本機草稿・已送後台自動排程":"本機草稿・等待企畫部發布";
  fillTripSel(); $("#loading").hidden=true; $("#tripList").hidden=true; $("#mods").hidden=false;
  showMod(MODS.indexOf(opt.mod)>=0?opt.mod:"new",true); syncUrl(!!opt.push); setHH(); window.__ready=true;});}
 function openNewBlank(push){++loadSeq; return loadIntake().then(()=>{TID=null; D=null; DRAFT=null; route=null; TE=null;
@@ -1495,11 +1507,15 @@ document.addEventListener("submit",e=>{const fm=e.target; if(fm.id!=="newForm") 
  const act=(e.submitter&&e.submitter.dataset.act)||"save", wasNew=!DRAFT||DRAFT.id!==TID; const dr=saveDraftFrom(fm); if(!dr) return;
  if(act==="send"){dr.submitted_at=nowISO(); const a=drLoad(); const x=a.find(y=>y.id===dr.id); if(x) x.submitted_at=dr.submitted_at; drSaveAll(a);
   const j=reqExport(dr), txt=reqText(dr); window.__lastReq=j; window.__lastReqText=txt;
-  const inv=fm.querySelector("[name=invite]"); if(backendCfg()&&inv&&inv.value.trim()){ autoSubmit(dr,j).then(ok=>{ if(ok){toast("已送到後台，自動排路線中；請保存查看網址",3000); openDraft(dr,{mod:"new",push:wasNew});} }); return;}
+  const inv=fm.querySelector("[name=invite]"); if(backendCfg()&&inv&&inv.value.trim()){ autoSubmit(dr,j).then(ok=>{ if(ok){toast("已送到後台，自動排路線中；請保存查看網址",3000); openDraft(dr,{mod:"new",push:wasNew}).then(()=>sentDlg(dr.backend.view_code,dr.backend.job_id));} }); return;}
   download(`new_trip_request_${dr.id}.json`,JSON.stringify(j,null,2),"application/json"); copyText(txt,"已匯出需求 JSON，並複製文字：請貼到總經理聊天室");}
  else toast("已儲存草稿");
  openDraft(dr,{mod:"new",push:wasNew});});
 document.addEventListener("click",e=>{
+ const dc=e.target.closest("[data-drcopy]"); if(dc){copyText(dc.dataset.drcopy,"已複製查看連結"); return;}
+ if(e.target.id==="sdCopy"){copyText($("#sdUrl").value,"已複製查看連結"); return;}
+ if(e.target.id==="sdClose"||e.target.id==="sentDlg"){$("#sentDlg").remove(); return;}
+ if(e.target.id==="sendRetry"){const b=document.querySelector('#newForm [data-act="send"]'); if(b){$("#newErr").textContent=""; b.click();} return;}
  if(e.target.id==="autoCopy"){copyText($("#autoUrl").value,"已複製查看網址"); return;}
  if(e.target.id==="autoRefresh"){autoPoll(AUTO.vc); return;}
  if(e.target.id==="autoDl"&&AUTO.result){download("route_set_"+(AUTO.result.request_id||"auto")+".json",JSON.stringify(AUTO.result,null,2),"application/json"); return;}
