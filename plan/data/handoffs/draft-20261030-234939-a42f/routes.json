@@ -1,0 +1,2970 @@
+{
+  "schema": "agency.route_set.v1",
+  "request_id": "draft-20261030-234939-a42f",
+  "generated_at": "2026-11-11T02:39:05+08:00",
+  "source": "auto_codex",
+  "qa": "未核對",
+  "routes": [
+    {
+      "route_id": "r_a",
+      "title": "Heritage towns and onsen (standard loop)",
+      "title_zh": "歷史街道與溫泉（標準順）",
+      "summary": "依既定住宿順序，採環狀、不走回頭路：福岡→萩城下與世界遺產相關史跡→秋吉台→下關／門司港→別府鐵輪地獄與由布院（只採座標可信點）→日向馬ヶ背→高千穗峽與天岩戶→順路通潤橋→上天草（由樂島位置未確認，暫定）→嬉野／祐德稻荷→福岡。移動日預留 16:30 前入住。美食偏好在下關、門司、大川、福岡以資料庫餐廳安排；萩／別府／日向／高千穗／由樂島餐點留空待補。",
+      "fit_reasons": [
+        "完全遵守 bases_nights 住宿順序與晚數，不改動",
+        "符合溫泉、神社寺廟／歷史、自然絕景、美食（有庫才排）",
+        "環狀：福岡進出向北萩、再沿周防灘／東九州南下、經高千穗西出上天草、北上嬉野回福岡，不走回頭路",
+        "移動日以 16:30 前入住為目標，避開夜間山路"
+      ],
+      "bases": [
+        {
+          "area": "萩溫泉鄉萩小町旅館",
+          "nights": 2,
+          "area_zh": "萩溫泉鄉・萩小町旅館"
+        },
+        {
+          "area": "下關溫泉風之海飯店",
+          "nights": 1,
+          "area_zh": "下關溫泉・風之海飯店"
+        },
+        {
+          "area": "別府溫泉心庵旅館",
+          "nights": 3,
+          "area_zh": "別府溫泉・心庵旅館"
+        },
+        {
+          "area": "Pleasant Hyuga (Pleasant 日向)",
+          "nights": 1,
+          "area_zh": "Pleasant 日向"
+        },
+        {
+          "area": "Solest高千穗酒店 (Solest Takachiho Hotel)",
+          "nights": 2,
+          "area_zh": "Solest 高千穗酒店"
+        },
+        {
+          "area": "Yurakutei (由樂島)",
+          "nights": 2,
+          "area_zh": "由樂島（位置未確認，暫定上天草市）"
+        },
+        {
+          "area": "嬉野溫泉華翠苑飯店",
+          "nights": 2,
+          "area_zh": "嬉野溫泉・華翠苑飯店"
+        },
+        {
+          "area": "福岡蒙特利飯店",
+          "nights": 2,
+          "area_zh": "福岡蒙特利飯店"
+        }
+      ],
+      "days": [
+        {
+          "day": 1,
+          "date": "2026-11-21",
+          "drive_min": 156,
+          "stops": []
+        },
+        {
+          "day": 2,
+          "date": "2026-11-22",
+          "drive_min": 51,
+          "stops": [
+            {
+              "ref": "rf_hagi_shiosai",
+              "name": "珈琲館 しおさい／咖啡館",
+              "lat": 34.41723815,
+              "lng": 131.39405139,
+              "google_maps": "https://www.google.com/maps/dir/?api=1&destination=34.41723815,131.39405139&travelmode=driving",
+              "mapcode": "243 887 617*02",
+              "note": "早餐：珈琲館 しおさい／咖啡館（source:web，ref=rf_hagi_shiosai）。11/22 週日營業。開店時間有 07:00（Tabelog）與 08:00（萩市觀光協會）兩說，以 08:00 計較保險；營業至 16:00。公休：Tabelog 週四／觀光協會週三、週四，本日均非公休。原排むらやカフェ因 Tabelog 寫 09:00 開店、早餐偏晚而替換。第二順位：萩小町 館內早餐（需訂含早方案；時段官網未載）。若已訂含早則此餐可略過。MapCode 243 887 617*02（餐廳部 saibara 反查，誤差 1 m）。",
+              "source_url": "https://www.hagishi.com/search/list.php?c0=2&c1=6",
+              "leg_min": 5
+            },
+            {
+              "ref": "db:db_s_0cc3e686a5",
+              "name": "萩城",
+              "lat": 34.4175201,
+              "lng": 131.3837761,
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=34.4175201%2C131.3837761",
+              "mapcode": null,
+              "note": "萩城（指月城跡）與城下町，停留約 90 分。（無 MapCode，用 google_maps）",
+              "source_url": "https://www.openstreetmap.org/node/11630385962",
+              "leg_min": 5
+            },
+            {
+              "ref": "db:db_s_a07c985095",
+              "name": "松下村塾",
+              "lat": 34.4121503,
+              "lng": 131.41733534999997,
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=34.4121503%2C131.41733534999997",
+              "mapcode": null,
+              "note": "松下村塾，停留約 60 分。資料庫無營業時間，現場確認。（無 MapCode，用 google_maps）",
+              "source_url": "https://www.openstreetmap.org/way/555592247",
+              "leg_min": 8
+            },
+            {
+              "ref": "db:db_s_95d6b77d92",
+              "name": "萩史料館",
+              "lat": 34.415627,
+              "lng": 131.381759,
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=34.415627%2C131.381759",
+              "mapcode": null,
+              "note": "萩史料館，停留約 50 分。（無 MapCode，用 google_maps）",
+              "source_url": "https://www.openstreetmap.org/node/1423660799",
+              "leg_min": 9
+            },
+            {
+              "ref": "db:db_s_31414eedae",
+              "name": "山口県立萩美術館・浦上記念館",
+              "lat": 34.4094708,
+              "lng": 131.39420235,
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=34.4094708%2C131.39420235",
+              "mapcode": null,
+              "note": "山口縣立萩美術館・浦上記念館，停留約 60 分。（無 MapCode，用 google_maps）",
+              "source_url": "https://www.openstreetmap.org/way/561533123",
+              "leg_min": 5
+            },
+            {
+              "ref": "db:db_s_4190cb3233",
+              "name": "恵美須ヶ鼻造船所跡",
+              "lat": 34.430493,
+              "lng": 131.4121753,
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=34.430493%2C131.4121753",
+              "mapcode": null,
+              "note": "惠美須ヶ鼻造船所跡（世界遺產相關），停留約 40 分。（無 MapCode，用 google_maps）",
+              "source_url": "https://www.openstreetmap.org/node/6367461617",
+              "leg_min": 7
+            },
+            {
+              "ref": "db:db_s_e6d6e19c3a",
+              "name": "萩反射炉",
+              "lat": 34.428202,
+              "lng": 131.4182608,
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=34.428202%2C131.4182608",
+              "mapcode": null,
+              "note": "萩反射爐，停留約 30 分。之後回萩小町。（無 MapCode，用 google_maps） 本日在萩的餐點：資料庫缺，待補。",
+              "source_url": "https://www.openstreetmap.org/node/4333121000",
+              "leg_min": 5
+            }
+          ]
+        },
+        {
+          "day": 3,
+          "date": "2026-11-23",
+          "drive_min": 117,
+          "stops": [
+            {
+              "ref": "rf_hagi_shiosai",
+              "name": "珈琲館 しおさい／咖啡館",
+              "lat": 34.41723815,
+              "lng": 131.39405139,
+              "google_maps": "https://www.google.com/maps/dir/?api=1&destination=34.41723815,131.39405139&travelmode=driving",
+              "mapcode": "243 887 617*02",
+              "note": "早餐：珈琲館 しおさい／咖啡館（source:web，ref=rf_hagi_shiosai）。11/23 週一營業。開店時間有 07:00（Tabelog）與 08:00（萩市觀光協會）兩說，以 08:00 計較保險；營業至 16:00。公休：Tabelog 週四／觀光協會週三、週四，本日均非公休。本日為勤勞感謝之日（國定假日），店家未列當日休。原排むらやカフェ因 Tabelog 寫 09:00 開店、早餐偏晚而替換。第二順位：萩小町 館內早餐（需訂含早方案；時段官網未載）。若已訂含早則此餐可略過。MapCode 243 887 617*02（餐廳部 saibara 反查，誤差 1 m）。",
+              "source_url": "https://www.hagishi.com/search/list.php?c0=2&c1=6",
+              "leg_min": 5
+            },
+            {
+              "ref": "db:db_s_c43f7638ba",
+              "name": "秋吉台科学博物館",
+              "lat": 34.2350117,
+              "lng": 131.3072713,
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=34.2350117%2C131.3072713",
+              "mapcode": null,
+              "note": "途中訪秋吉台科學博物館（秋吉台入口），停留約 70 分。資料庫無公休資料。（無 MapCode，用 google_maps）",
+              "source_url": "https://www.openstreetmap.org/node/1423660452",
+              "leg_min": 36
+            },
+            {
+              "ref": "db:db_s_cdf9fdca35",
+              "name": "赤間神宮宝物殿",
+              "lat": 33.959563599999996,
+              "lng": 130.94849025000002,
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=33.959563599999996%2C130.94849025000002",
+              "mapcode": null,
+              "note": "赤間神宮寶物殿，停留約 40 分。（無 MapCode，用 google_maps）",
+              "source_url": "https://www.openstreetmap.org/way/320351803",
+              "leg_min": 56
+            },
+            {
+              "ref": "db:db_s_81e984d61a",
+              "name": "日清議和紀念館",
+              "lat": 33.95904075,
+              "lng": 130.948352,
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=33.95904075%2C130.948352",
+              "mapcode": null,
+              "note": "日清議和紀念館，停留約 40 分。（無 MapCode，用 google_maps）",
+              "source_url": "https://www.openstreetmap.org/way/552006984",
+              "leg_min": 5
+            },
+            {
+              "ref": "db:db_s_5a59588791",
+              "name": "旧下関英国領事館",
+              "lat": 33.9569379,
+              "lng": 130.9431845,
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=33.9569379%2C130.9431845",
+              "mapcode": null,
+              "note": "舊下關英國領事館，停留約 40 分。（無 MapCode，用 google_maps）",
+              "source_url": "https://www.openstreetmap.org/node/5514642022",
+              "leg_min": 5
+            },
+            {
+              "ref": "db:db_s_1e3d6e1f51",
+              "name": "海峡ゆめタワー",
+              "lat": 33.9497968,
+              "lng": 130.929736,
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=33.9497968%2C130.929736",
+              "mapcode": null,
+              "note": "海峽夢塔眺望關門海峽，停留約 40 分後入住風之海。午餐可就近在下關／門司港（見候選餐廳，本日為週一，門司電氣通信レトロ館公休，改明天上午再訪門司港）。（無 MapCode，用 google_maps） 移動日目標 16:30 前抵達，以趕上溫泉旅館約 18:00 晚餐；日落約 17:10–17:20。",
+              "source_url": "https://www.openstreetmap.org/node/2749353920",
+              "leg_min": 5
+            }
+          ]
+        },
+        {
+          "day": 4,
+          "date": "2026-11-24",
+          "drive_min": 131,
+          "stops": [
+            {
+              "ref": "db:db_s_9b2edb121e",
+              "name": "関門海峡ミュージアム",
+              "lat": 33.943799600000006,
+              "lng": 130.95678264999998,
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=33.943799600000006%2C130.95678264999998",
+              "mapcode": null,
+              "note": "關門海峽博物館。09:00–17:00（入館至 16:30）；2026 年休館日 3/10、6/9、9/8、11/10，11/24（二）非休館日，可參觀。大人 ¥500。本日不排門司電気通信レトロ館（11/23 勤勞感謝日之翌平日休館）。停留約 40–60 分。中午前結束以免晚抵別府。（無 MapCode，用 google_maps）",
+              "source_url": "https://www.openstreetmap.org/way/969230646",
+              "leg_min": 7
+            },
+            {
+              "ref": "db:db_s_1cecc994ad",
+              "name": "旧門司税関",
+              "lat": 33.94773305,
+              "lng": 130.9635844,
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=33.94773305%2C130.9635844",
+              "mapcode": null,
+              "note": "舊門司稅關，停留約 30 分。（無 MapCode，用 google_maps）",
+              "source_url": "https://www.openstreetmap.org/way/976479446",
+              "leg_min": 5
+            },
+            {
+              "ref": "db:db_s_a23c488779",
+              "name": "九州鉄道記念館",
+              "lat": 33.9432942,
+              "lng": 130.9619156,
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=33.9432942%2C130.9619156",
+              "mapcode": null,
+              "note": "九州鐵道紀念館，停留約 40 分。（無 MapCode，用 google_maps）",
+              "source_url": "https://www.openstreetmap.org/way/32387865",
+              "leg_min": 5
+            },
+            {
+              "ref": "db:db_r_cd2d93e583",
+              "name": "海鮮燒咖哩 伽哩本舗",
+              "lat": 33.9459244,
+              "lng": 130.9615312,
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=33.9459244%2C130.9615312",
+              "mapcode": null,
+              "note": "午餐：海鮮燒咖哩 伽哩本舗（門司港，資料庫無營業時間，現場確認）。約 12 點前用完午餐再上路。（無 MapCode，用 google_maps）",
+              "source_url": "https://www.openstreetmap.org/node/5563248322",
+              "leg_min": 5
+            }
+          ]
+        },
+        {
+          "day": 5,
+          "date": "2026-11-25",
+          "drive_min": 28,
+          "stops": [
+            {
+              "ref": "db:db_s_87c2e33a85",
+              "name": "別府鐵輪溫泉住宿區",
+              "lat": 33.313933,
+              "lng": 131.4753366,
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=33.313933%2C131.4753366",
+              "mapcode": null,
+              "note": "別府鐵輪溫泉住宿區（座標與鐵輪地區相符的候選），先做動線起點。（無 MapCode，用 google_maps）",
+              "source_url": "https://www.visit-oita.jp/files/Book/0/Book_24_file.pdf",
+              "leg_min": 9
+            },
+            {
+              "ref": "db:db_s_db077bef4c",
+              "name": "海地獄",
+              "lat": 33.3158884,
+              "lng": 131.4696829,
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=33.3158884%2C131.4696829",
+              "mapcode": null,
+              "note": "海地獄，停留約 50 分。採座標獨立的 c67，不採用與他點重疊的 c68。（無 MapCode，用 google_maps）原「金龍地獄」已於 2009 年停業，已從本日路線刪除。原址改為「地獄温泉ミュージアム」（大人 ¥1,500／小孩 ¥1,000，09:00–18:00、最終入場 17:30，不定休年約 4 天），可作備案，未另列入站點（資料庫候選名稱仍為金龍地獄，未自編新站）。鶴見地獄為私有地／寺院境內、不對外開放，已刪除。",
+              "source_url": "https://www.visit-oita.jp/spots/detail/4589",
+              "leg_min": 5
+            },
+            {
+              "ref": "db:db_o_bc55f8b8c1",
+              "name": "竹瓦温泉",
+              "lat": 33.2774716,
+              "lng": 131.50597894999999,
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=33.2774716%2C131.50597894999999",
+              "mapcode": null,
+              "note": "竹瓦溫泉（hours：每日 06:30-22:30），停留約 50 分後回心庵。（無 MapCode，用 google_maps） 本日在別府的餐點：資料庫缺，待補。",
+              "source_url": "https://www.openstreetmap.org/way/338231731",
+              "leg_min": 9
+            }
+          ]
+        },
+        {
+          "day": 6,
+          "date": "2026-11-26",
+          "drive_min": 50,
+          "stops": [
+            {
+              "ref": "db:db_s_4d06df956d",
+              "name": "由布院溫泉住宿區",
+              "lat": 33.2605858,
+              "lng": 131.3598988,
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=33.2605858%2C131.3598988",
+              "mapcode": null,
+              "note": "由布院溫泉住宿區（採用獨立座標的 c72），停留散步約 40 分。（無 MapCode，用 google_maps）",
+              "source_url": "https://booking.yufuin.gr.jp/static/",
+              "leg_min": 21
+            },
+            {
+              "ref": "db:db_s_269ba95595",
+              "name": "湯之坪街道",
+              "lat": 33.2660923,
+              "lng": 131.3632115,
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=33.2660923%2C131.3632115",
+              "mapcode": null,
+              "note": "湯之坪街道，停留約 70 分。（無 MapCode，用 google_maps）",
+              "source_url": "https://www.visit-oita.jp/myplan/detail/149",
+              "leg_min": 5
+            },
+            {
+              "ref": "db:db_s_2309db8488",
+              "name": "金鱗湖",
+              "lat": 33.2667196,
+              "lng": 131.3690386,
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=33.2667196%2C131.3690386",
+              "mapcode": null,
+              "note": "金鱗湖（採用獨立座標的 c76，不採用重疊的 c77），停留約 50 分後返回別府。建議 16:00 前離開由布院。（無 MapCode，用 google_maps） 本日在別府的餐點：資料庫缺，待補。",
+              "source_url": "https://www.visit-oita.jp/special1/detail/5",
+              "leg_min": 5
+            }
+          ]
+        },
+        {
+          "day": 7,
+          "date": "2026-11-27",
+          "drive_min": 151,
+          "stops": [
+            {
+              "ref": "db:db_s_b92dba1f0d",
+              "name": "大御神社",
+              "lat": 32.4116829,
+              "lng": 131.6498851,
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=32.4116829%2C131.6498851",
+              "mapcode": null,
+              "note": "抵達後先訪大御神社，停留約 30 分。途中午餐：資料庫缺，待補。（無 MapCode，用 google_maps）",
+              "source_url": "https://oomijinja.or.jp/",
+              "leg_min": 121
+            },
+            {
+              "ref": "db:db_s_14f1c6a3af",
+              "name": "馬ヶ背 Umagase",
+              "lat": 32.4242057,
+              "lng": 131.6870368,
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=32.4242057%2C131.6870368",
+              "mapcode": null,
+              "note": "馬ヶ背（同一斷崖另有 c88／c100，只排此一筆避免重複），停留約 40 分，須在日落（約 17:15）前離開崖邊。（無 MapCode，用 google_maps）",
+              "source_url": "https://www.openstreetmap.org/node/951252220",
+              "leg_min": 7
+            },
+            {
+              "ref": "db:db_s_e5ffd38b58",
+              "name": "クルスの海",
+              "lat": 32.4176747,
+              "lng": 131.6775718,
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=32.4176747%2C131.6775718",
+              "mapcode": null,
+              "note": "クルスの海，停留約 30 分後入住 Pleasant 日向。日向晚餐已改いけすの大漁や（見當日最後一站；若住宿含晚餐可刪）。日向溫泉：資料庫缺，待補。（無 MapCode，用 google_maps） 移動日目標 16:30 前抵達，以趕上溫泉旅館約 18:00 晚餐；日落約 17:10–17:20。",
+              "source_url": "https://www.openstreetmap.org/node/4275394000",
+              "leg_min": 5
+            },
+            {
+              "ref": "rf_hyu_tairyoya",
+              "name": "いけすの大漁や／活魚大漁屋",
+              "lat": 32.42526304,
+              "lng": 131.62397571,
+              "google_maps": "https://www.google.com/maps/dir/?api=1&destination=32.42526304,131.62397571&travelmode=driving",
+              "mapcode": "136 315 544*14",
+              "note": "晚餐：いけすの大漁や／活魚大漁屋（ホテルベルフォート日向1F，距 Pleasant 日向約 300 m，source:web，ref=rf_hyu_tairyoya）。11/27 週五 17:00–21:00（另 11:00–14:00；12/31–1/1 休）。原排望洋館因 Tabelog 只列 11:30–15:00、無晚間營業而替換。若住宿含晚餐可刪。trip.json 無此行程檔；handoff.json 未載 Pleasant 日向含餐方案，無法確認（餐廳部記入官網「絕對附餐」、2 食方案，但不在 handoff）。第二順位：金ヶ浜食堂／金濱食堂（18:00–20:00，週五非公休；晚餐限住宿客與事先預約，本部未聯絡、未訂位）。MapCode 136 315 544*14（餐廳部 saibara 反查，誤差 1 m）。",
+              "source_url": "https://www.hotpepper.jp/strJ000902244/",
+              "leg_min": 13
+            }
+          ]
+        },
+        {
+          "day": 8,
+          "date": "2026-11-28",
+          "drive_min": 134,
+          "stops": [
+            {
+              "ref": "db:db_s_4bf4144f89",
+              "name": "日向岬グリーンパーク",
+              "lat": 32.4146565,
+              "lng": 131.6596708,
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=32.4146565%2C131.6596708",
+              "mapcode": null,
+              "note": "日向岬グリーンパーク眺望，停留約 30 分。建議 11:00 前離開日向，改走山路往高千穗。途中午餐：資料庫缺，待補。（無 MapCode，用 google_maps）",
+              "source_url": "https://www.openstreetmap.org/node/4275391704",
+              "leg_min": 6
+            },
+            {
+              "ref": "db:db_s_d265e2d834",
+              "name": "高千穗峽",
+              "lat": 32.7017851,
+              "lng": 131.300939,
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=32.7017851%2C131.300939",
+              "mapcode": null,
+              "note": "高千穗峽，停留約 70 分（租船／步道現場確認；資料庫無營業時間，宜午後較早到）。須白天走完山路。（無 MapCode，用 google_maps）高千穂峡划船需上網預約，由安宏自行預訂。",
+              "source_url": "https://takachiho-kanko.info/faq/",
+              "leg_min": 113
+            },
+            {
+              "ref": "db:db_s_6b8f8cdbbb",
+              "name": "高千穗神社",
+              "lat": 32.7066706,
+              "lng": 131.3018922,
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=32.7066706%2C131.3018922",
+              "mapcode": null,
+              "note": "高千穗神社，停留約 40 分後入住 Solest。（無 MapCode，用 google_maps） 本日途中午餐：資料庫缺，待補。晚餐見大衆焼き肉 SAKUYA 本丸。 移動日目標 16:30 前抵達，以趕上溫泉旅館約 18:00 晚餐；日落約 17:10–17:20。",
+              "source_url": "https://takachiho-kanko.info/faq/",
+              "leg_min": 5
+            },
+            {
+              "ref": "rf_tak_sakuya",
+              "name": "大衆焼き肉 SAKUYA 本丸",
+              "lat": 32.710256076,
+              "lng": 131.308109523,
+              "google_maps": "https://www.google.com/maps/dir/?api=1&destination=32.710256076,131.308109523&travelmode=driving",
+              "mapcode": "330 742 727*45",
+              "note": "晚餐：大衆焼き肉 SAKUYA 本丸（同址同電話，店名由「咲耶 SAKUYA」更改；source:web，ref=rf_tak_sakuya）。11/28 週六 12:00–16:00、17:00–20:30。公休日待查（來源或寫週一、週二或週二、週三），均不含週六，判定營業。只收電話預約（Tabelog）；本部未訂位、未聯絡。Solest 若訂含晚方案（18:00–21:00）則此餐可略過。此筆為店名／業態更正，無第二順位。MapCode 330 742 727*45（餐廳部 saibara 反查，誤差 2 m）。",
+              "source_url": "https://takachiho-kanko.info/gourmet/48/",
+              "leg_min": 5
+            }
+          ]
+        },
+        {
+          "day": 9,
+          "date": "2026-11-29",
+          "drive_min": 53,
+          "stops": [
+            {
+              "ref": "db:db_s_3e09b24b3f",
+              "name": "天岩戶神社",
+              "lat": 32.7368079722222,
+              "lng": 131.3503695,
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=32.7368079722222%2C131.3503695",
+              "mapcode": null,
+              "note": "天岩戶神社，停留約 50 分。（無 MapCode，用 google_maps）",
+              "source_url": "https://takachiho-kanko.info/datas/files/2023/02/23/c8799c02bb5290073cf93683d1a7d53a30c6d009.pdf",
+              "leg_min": 8
+            },
+            {
+              "ref": null,
+              "name": "アマテラスの隠れcafe",
+              "lat": 32.7355756579069,
+              "lng": 131.35120122052942,
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=32.7355756579069,131.35120122052942",
+              "mapcode": "330 837 762*44",
+              "note": "午餐：アマテラスの隠れcafe（天岩戶神社附近約 155 m，source:web）。11/29 週日，10:00–17:00（不定休，當天需確認）。原排神茶家因西臼杵觀光網站標題寫【閉店】、營業狀況不明而替換。第二順位：仲屋食堂（11:30–14:00，距神社約 520 m，可電話預約；本部未聯絡）。MapCode 330 837 762*44（餐廳部 saibara 換算並反查，誤差 1.1 m）。",
+              "source_url": "https://tabelog.com/tw/miyazaki/A4505/A450502/45007779/",
+              "leg_min": 5
+            },
+            {
+              "ref": "db:db_s_ddabb91cd6",
+              "name": "天安河原",
+              "lat": 32.7378698,
+              "lng": 131.3532338,
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=32.7378698%2C131.3532338",
+              "mapcode": null,
+              "note": "天安河原，停留約 40 分。（無 MapCode，用 google_maps）",
+              "source_url": "https://takachiho-kanko.info/datas/files/2023/02/23/c8799c02bb5290073cf93683d1a7d53a30c6d009.pdf",
+              "leg_min": 5
+            },
+            {
+              "ref": "db:db_s_734b38d284",
+              "name": "天岩戸神社徴古館",
+              "lat": 32.732893,
+              "lng": 131.350581,
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=32.732893%2C131.350581",
+              "mapcode": null,
+              "note": "天岩戶神社徵古館，停留約 30 分。（無 MapCode，用 google_maps）",
+              "source_url": "https://www.openstreetmap.org/node/1423866229",
+              "leg_min": 5
+            },
+            {
+              "ref": "db:db_s_e65d52e62d",
+              "name": "國見之丘",
+              "lat": 32.7191167,
+              "lng": 131.2811037,
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=32.7191167%2C131.2811037",
+              "mapcode": null,
+              "note": "國見之丘，停留約 40 分（遠眺，請在 16:30 前離開）。（無 MapCode，用 google_maps）",
+              "source_url": "https://takachiho-kanko.info/datas/files/2023/02/23/c8799c02bb5290073cf93683d1a7d53a30c6d009.pdf",
+              "leg_min": 11
+            },
+            {
+              "ref": "db:db_s_34dad51e7e",
+              "name": "荒立神社",
+              "lat": 32.7116233,
+              "lng": 131.3169702,
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=32.7116233%2C131.3169702",
+              "mapcode": null,
+              "note": "荒立神社，停留約 25 分後回飯店。（無 MapCode，用 google_maps） 本日在高千穗的餐點：資料庫缺，待補。",
+              "source_url": "https://www.openstreetmap.org/node/5089460864",
+              "leg_min": 9
+            },
+            {
+              "ref": "rf_tak_nagomi",
+              "name": "高千穂牛レストラン 和（なごみ）／高千穗牛餐廳和",
+              "lat": 32.70762535791,
+              "lng": 131.30598019028,
+              "google_maps": "https://www.google.com/maps/dir/?api=1&destination=32.70762535791,131.30598019028&travelmode=driving",
+              "mapcode": "330 742 450*52",
+              "note": "晚餐：高千穂牛レストラン 和（なごみ）（source:web，ref=rf_tak_nagomi）。11/29 週日 11:00–14:30、17:00–21:00（L.O. 20:30），週三公休、本日營業。原排居酒屋 無我夢中因 Tabelog 寫週日公休（11/29 為週日）而替換。Solest 若訂含晚方案（18:00–21:00）則此餐可略過。第二順位：大衆焼き肉 SAKUYA 本丸（原「咲耶 SAKUYA」，17:00–20:30；公休日待查，各來源週日均非公休，判定營業）。未採用資料庫 c126「高千穗牛餐廳 和」（座標與飯店中心重合，不可靠），改用餐廳部 Tabelog 座標。MapCode 330 742 450*52（餐廳部 saibara 反查，誤差 1 m）。",
+              "source_url": "https://takachiho-kanko.info/gourmet/31/",
+              "leg_min": 5
+            }
+          ]
+        },
+        {
+          "day": 10,
+          "date": "2026-11-30",
+          "drive_min": 140,
+          "stops": [
+            {
+              "ref": "db:db_s_e403dedc79",
+              "name": "通潤橋",
+              "lat": 32.6814972,
+              "lng": 130.9938935,
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=32.6814972%2C130.9938935",
+              "mapcode": null,
+              "note": "清晨出發，順路通潤橋（座標與已知位置相符），停留約 40 分。途中午餐：資料庫缺，待補。（無 MapCode，用 google_maps）當天無放水，只看橋。",
+              "source_url": "https://www.openstreetmap.org/node/6228628173",
+              "leg_min": 72
+            },
+            {
+              "ref": "db:db_s_b312097f35",
+              "name": "天門橋",
+              "lat": 32.6112221,
+              "lng": 130.4584886,
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=32.6112221%2C130.4584886",
+              "mapcode": null,
+              "note": "天門橋（上天草）。由樂島位置未確認，暫定上天草市，本點為上天草的代表地標。停留約 40 分後往住宿。請先確認 Yurakutei 實際地址再導航。（無 MapCode，用 google_maps） 本日在由樂島（暫定上天草）的餐點：資料庫缺，待補。 移動日目標 16:30 前抵達，以趕上溫泉旅館約 18:00 晚餐；日落約 17:10–17:20。",
+              "source_url": "https://www.openstreetmap.org/node/5603040088",
+              "leg_min": 63
+            }
+          ]
+        },
+        {
+          "day": 11,
+          "date": "2026-12-01",
+          "drive_min": 109,
+          "stops": [
+            {
+              "ref": "rf_kam_sunpearl",
+              "name": "道の駅 上天草さんぱーる",
+              "lat": 32.5768726,
+              "lng": 130.4201925,
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=32.5768726,130.4201925",
+              "mapcode": "372 845 740*14",
+              "note": "早餐：保留道の駅 上天草さんぱーる（source:web，ref=rf_kam_sunpearl）。國交省道之驛頁面寫餐廳早餐 09:00–11:00（L.O. 10:30），12 月無休館日（https://www.qsr.mlit.go.jp/n-michi/michi_no_eki/kobetu/kamiamakusa/kamiamakusa.html）；Tabelog 只列 11:00–15:00，故餐廳部曾建議改店。本日為上天草遊覽日、無須 9 點前出發，09:00 開店趕得上，故不改店。備案（原第一順位替代）：AZcafe Shidaka（HOTEL AZ 熊本上天草店早餐自助，06:00–10:00、最後入場 09:30，非住客可用，¥880）。再備案：ジョイフル 大矢野店（08:00–翌 01:00，無休）。湯樂亭若訂 1 泊朝食／2 食則此餐可略過。MapCode 372 845 740*14（餐廳部填入）。",
+              "source_url": "https://www.qsr.mlit.go.jp/n-michi/michi_no_eki/kobetu/kamiamakusa/kamiamakusa.html",
+              "leg_min": 5
+            },
+            {
+              "ref": "db:db_s_d980d846c7",
+              "name": "高舞登山展望區",
+              "lat": 32.522572,
+              "lng": 130.4416406,
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=32.522572%2C130.4416406",
+              "mapcode": null,
+              "note": "高舞登山展望區，停留約 50 分。（無 MapCode，用 google_maps）",
+              "source_url": "https://kami-amakusa.jp/archives/view/1563",
+              "leg_min": 13
+            },
+            {
+              "ref": "db:db_s_540d53f815",
+              "name": "道の駅 宇土ﾏﾘｰﾅ",
+              "lat": 32.662287,
+              "lng": 130.522806,
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=32.662287%2C130.522806",
+              "mapcode": null,
+              "note": "道の駅 宇土マリーナ，停留約 40 分。（無 MapCode，用 google_maps）",
+              "source_url": "https://www.openstreetmap.org/node/5603043152",
+              "leg_min": 29
+            },
+            {
+              "ref": "db:db_s_c06b11e288",
+              "name": "八代城",
+              "lat": 32.50762185,
+              "lng": 130.59978640000003,
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=32.50762185%2C130.59978640000003",
+              "mapcode": null,
+              "note": "八代城，停留約 40 分。（無 MapCode，用 google_maps）旁的八代市立博物館未来の森ミュージアム因 2026/7/28 地震臨時休館（重開日未定），本日不排。八代一帶無其他已核對營業時間、且不繞遠的資料庫補位，故只刪不另補（八代城本身自由參觀、無休）。",
+              "source_url": "https://www.openstreetmap.org/way/158829859",
+              "leg_min": 32
+            }
+          ]
+        },
+        {
+          "day": 12,
+          "date": "2026-12-02",
+          "drive_min": 100,
+          "stops": [
+            {
+              "ref": "rf_kam_sunpearl",
+              "name": "道の駅 上天草さんぱーる",
+              "lat": 32.5768726,
+              "lng": 130.4201925,
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=32.5768726,130.4201925",
+              "mapcode": "372 845 740*14",
+              "note": "早餐：保留道の駅 上天草さんぱーる（source:web，ref=rf_kam_sunpearl）。國交省頁面寫早餐 09:00–11:00（L.O. 10:30），12 月無休館日。湯樂亭 checkout 10:00，店距旅館約數公里，可 9:00 前後退房後再用餐、約 10:00–10:30 出發；往嬉野車程估算約 1.5–3 小時，仍可在 16:30 前入住，故不改店。若需 9 點前出發，改備案 AZcafe Shidaka（06:00–10:00，最後入場 09:30）。再備案：ジョイフル 大矢野店（08:00 起）。湯樂亭週三定休（D12 為退房日），請向旅館確認週二入住的週三早餐是否照常；若已訂含早則此餐可略過。MapCode 372 845 740*14（餐廳部填入）。",
+              "source_url": "https://www.qsr.mlit.go.jp/n-michi/michi_no_eki/kobetu/kamiamakusa/kamiamakusa.html",
+              "leg_min": 5
+            },
+            {
+              "ref": "db:db_s_752215c5cb",
+              "name": "嬉野溫泉街",
+              "lat": 33.1066719,
+              "lng": 129.9989438,
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=33.1066719%2C129.9989438",
+              "mapcode": null,
+              "note": "駛往嬉野，途中午餐：資料庫缺，待補。抵達後走嬉野溫泉街，停留約 40 分後入住華翠苑。本日週三，シーボルトの湯資料庫 hours 為 Th-Tu，不排。庫內餐廳多在大川／柳川約 30 km 外，今晚以旅館用餐為主。（無 MapCode，用 google_maps） 移動日目標 16:30 前抵達，以趕上溫泉旅館約 18:00 晚餐；日落約 17:10–17:20。",
+              "source_url": "https://spa-u.net/",
+              "leg_min": 87
+            }
+          ]
+        },
+        {
+          "day": 13,
+          "date": "2026-12-03",
+          "drive_min": 76,
+          "stops": [
+            {
+              "ref": "db:db_s_3a89f2d7ae",
+              "name": "祐德稻荷神社",
+              "lat": 33.0743975,
+              "lng": 130.1080648,
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=33.0743975%2C130.1080648",
+              "mapcode": null,
+              "note": "祐德稻荷神社，停留約 70 分。（無 MapCode，用 google_maps）",
+              "source_url": "https://www.yutokusan.jp/about/access/",
+              "leg_min": 13
+            },
+            {
+              "ref": "db:db_s_5a64935d15",
+              "name": "祐徳博物館",
+              "lat": 33.073937150000006,
+              "lng": 130.1097882,
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=33.073937150000006%2C130.1097882",
+              "mapcode": null,
+              "note": "祐德博物館，停留約 40 分。（無 MapCode，用 google_maps）",
+              "source_url": "https://www.openstreetmap.org/way/753618055",
+              "leg_min": 5
+            },
+            {
+              "ref": "db:db_s_bc0ed60e18",
+              "name": "鹿島城跡",
+              "lat": 33.1034228,
+              "lng": 130.0929556,
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=33.1034228%2C130.0929556",
+              "mapcode": null,
+              "note": "鹿島城跡，停留約 25 分。（無 MapCode，用 google_maps）",
+              "source_url": "https://www.openstreetmap.org/node/14025330002",
+              "leg_min": 9
+            },
+            {
+              "ref": "db:db_s_aee66ab3c7",
+              "name": "御船山樂園",
+              "lat": 33.1819093,
+              "lng": 130.0182516,
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=33.1819093%2C130.0182516",
+              "mapcode": null,
+              "note": "御船山樂園（武雄，資料庫無營業／季節資料，現場確認），停留約 70 分。（無 MapCode，用 google_maps）",
+              "source_url": "https://mifuneyamarakuen.jp/autumn/",
+              "leg_min": 19
+            },
+            {
+              "ref": "db:db_o_4186870dff",
+              "name": "シーボルトの湯",
+              "lat": 33.09656645,
+              "lng": 129.9855805,
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=33.09656645%2C129.9855805",
+              "mapcode": null,
+              "note": "西博爾德之湯（hours：Th-Tu 06:00-22:00，週四開），停留約 50 分後回華翠苑。（無 MapCode，用 google_maps）",
+              "source_url": "https://www.openstreetmap.org/way/568000739",
+              "leg_min": 17
+            }
+          ]
+        },
+        {
+          "day": 14,
+          "date": "2026-12-04",
+          "drive_min": 161,
+          "stops": [
+            {
+              "ref": "db:db_s_d36589ad92",
+              "name": "嬉野の大チャノキ",
+              "lat": 33.0985563,
+              "lng": 129.9337357,
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=33.0985563%2C129.9337357",
+              "mapcode": null,
+              "note": "先看嬉野の大チャノキ，停留約 20 分。（無 MapCode，用 google_maps）",
+              "source_url": "https://www.openstreetmap.org/node/9056269735",
+              "leg_min": 21
+            },
+            {
+              "ref": "db:db_r_0e2f205e88",
+              "name": "船頭寿司",
+              "lat": 33.2139566,
+              "lng": 130.3721398,
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=33.2139566%2C130.3721398",
+              "mapcode": null,
+              "note": "往福岡途中在大川／柳川一帶午餐：船頭壽司（資料庫無營業時間，現場確認）。庫內嬉野所屬餐廳多在此一帶。（無 MapCode，用 google_maps）",
+              "source_url": "https://www.openstreetmap.org/way/592355616",
+              "leg_min": 72
+            },
+            {
+              "ref": "db:db_s_ecc2367753",
+              "name": "博多千年門",
+              "lat": 33.59441265,
+              "lng": 130.41712185,
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=33.59441265%2C130.41712185",
+              "mapcode": null,
+              "note": "抵福岡後步行或短程至博多千年門，停留約 20 分。（無 MapCode，用 google_maps）",
+              "source_url": "https://www.openstreetmap.org/way/611032667",
+              "leg_min": 53
+            },
+            {
+              "ref": "db:db_s_9148bc3a8e",
+              "name": "博多町家鄉土館",
+              "lat": 33.5936544,
+              "lng": 130.4115066,
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=33.5936544%2C130.4115066",
+              "mapcode": null,
+              "note": "博多町家鄉土館（hours：每日 10:00-18:00），停留約 40 分。（無 MapCode，用 google_maps）",
+              "source_url": "https://www.openstreetmap.org/node/4293172389",
+              "leg_min": 5
+            },
+            {
+              "ref": "db:db_r_dfe514d8e4",
+              "name": "博多華味鳥",
+              "lat": 33.5921503,
+              "lng": 130.4142553,
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=33.5921503%2C130.4142553",
+              "mapcode": null,
+              "note": "晚餐：統一為博多華味鳥 祇園店（db:db_r_dfe514d8e4，資料庫名稱「博多華味鳥」，座標即祇園店）。12/4 週五 17:00–23:00（L.O. 22:00）。建議電話預約（不接受自動代訂）；本部未訂位、未聯絡。第二順位：博多華味鳥 博多站前店（db:db_r_2c94b7cb7a；資料庫座標與祇園店相同，實際約在 486 m 外，以 Tabelog 座標為準；週五晚餐營業）。名稱／座標／mapcode 維持資料庫候選（mapcode=null）。之後入住蒙特利。",
+              "source_url": "https://www.openstreetmap.org/node/5074995822",
+              "leg_min": 5
+            }
+          ]
+        },
+        {
+          "day": 15,
+          "date": "2026-12-05",
+          "drive_min": 71,
+          "stops": [
+            {
+              "ref": "db:db_s_ef6925b5b0",
+              "name": "九州國立博物館",
+              "lat": 33.5182194,
+              "lng": 130.5384631,
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=33.5182194%2C130.5384631",
+              "mapcode": null,
+              "note": "九州國立博物館（座標位於太宰府，較為可信）。太宰府天滿宮兩筆候選座標不可靠，不排入，可在博物館附近步行探路但請自行用官方導航核對神社位置。停留約 120 分。（無 MapCode，用 google_maps）",
+              "source_url": "https://www.crossroadfukuoka.jp/course/20005",
+              "leg_min": 24
+            },
+            {
+              "ref": "db:db_s_78b9489288",
+              "name": "大濠公園",
+              "lat": 33.5861214,
+              "lng": 130.3763612,
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=33.5861214%2C130.3763612",
+              "mapcode": null,
+              "note": "大濠公園散步，停留約 50 分。（無 MapCode，用 google_maps）",
+              "source_url": "https://www.ohorikouen.jp/about/",
+              "leg_min": 28
+            },
+            {
+              "ref": "db:db_o_468b8dbbf4",
+              "name": "みなと温泉 波葉の湯",
+              "lat": 33.603742999999994,
+              "lng": 130.39811165,
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=33.603742999999994%2C130.39811165",
+              "mapcode": null,
+              "note": "みなと溫泉 波葉の湯（hours：10:00-23:00），停留約 70 分。（無 MapCode，用 google_maps）",
+              "source_url": "https://www.openstreetmap.org/way/1411284390",
+              "leg_min": 7
+            },
+            {
+              "ref": "db:db_r_2c1d787fec",
+              "name": "元祖 長浜屋拉麵",
+              "lat": 33.592439,
+              "lng": 130.3866146,
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=33.592439%2C130.3866146",
+              "mapcode": null,
+              "note": "晚餐：元祖 長浜屋拉麵（資料庫無營業時間）。（無 MapCode，用 google_maps）",
+              "source_url": "https://www.openstreetmap.org/node/5424645313",
+              "leg_min": 5
+            }
+          ]
+        },
+        {
+          "day": 16,
+          "date": "2026-12-06",
+          "drive_min": 14,
+          "stops": [
+            {
+              "ref": "db:db_r_c51b971faa",
+              "name": "FUK COFFEE",
+              "lat": 33.5908233,
+              "lng": 130.4127936,
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=33.5908233%2C130.4127936",
+              "mapcode": null,
+              "note": "FUK COFFEE 早餐或咖啡（資料庫無營業時間）。之後依 BR101 時刻還車前往福岡機場。航班時刻待補，請預留足夠時間。（無 MapCode，用 google_maps）",
+              "source_url": "https://www.openstreetmap.org/node/12364549376",
+              "leg_min": 5
+            }
+          ]
+        }
+      ],
+      "day_summaries": [
+        {
+          "day": 1,
+          "date": "2026-11-21",
+          "base_zh": "萩溫泉鄉・萩小町旅館",
+          "highlights": [
+            "福岡機場取車",
+            "北上萩入住"
+          ],
+          "drive_min": 156,
+          "text": "第 1 天（六）：福岡機場取車後經中國／九州方向北上萩溫泉鄉入住萩小町。航班時刻未提供，若午到達，車程估算約 3 小時，可能日落後抵萩，改走高速公路、不繞景點。本日在萩的餐點：資料庫缺，待補。移動日目標 16:30 前抵達，以趕上溫泉旅館約 18:00 晚餐；日落約 17:10–17:20。"
+        },
+        {
+          "day": 2,
+          "date": "2026-11-22",
+          "base_zh": "萩溫泉鄉・萩小町旅館",
+          "highlights": [
+            "萩城",
+            "松下村塾",
+            "造船所跡",
+            "反射爐",
+            "早餐しおさい"
+          ],
+          "drive_min": 51,
+          "text": "第 2 天（日）：終日萩城下町與世界遺產相關史跡（城、松下村塾、史料館、造船所跡、反射爐）。不排 22 km 外的湯田／俵山公共浴場，以免拉長車程。本日在萩的餐點：資料庫缺，待補。早餐改珈琲館しおさい（むらやカフェ偏晚）；備案萩小町含早方案。"
+        },
+        {
+          "day": 3,
+          "date": "2026-11-23",
+          "base_zh": "下關溫泉・風之海飯店",
+          "highlights": [
+            "秋吉台科學博物館",
+            "赤間神宮",
+            "海峽夢塔",
+            "入住下關",
+            "早餐しおさい"
+          ],
+          "drive_min": 117,
+          "text": "第 3 天（一）：退房經秋吉台科學博物館往下關，下午赤間神宮、議和紀念館、英國領事館、夢塔後入住。週一不排門司電氣通信レトロ館（資料庫 hours：Tu-Su，週一休）。退房前先至しおさい早餐（約 08:00 起）；備案館內含早。本日勤勞感謝之日。"
+        },
+        {
+          "day": 4,
+          "date": "2026-11-24",
+          "base_zh": "別府溫泉・心庵旅館",
+          "highlights": [
+            "門司港",
+            "午餐伽哩本舗",
+            "午後駛往別府入住"
+          ],
+          "drive_min": 131,
+          "text": "第 4 天（二）：上午門司港歷史建築與午餐後，走高速公路往別府，目標 16:30 前入住心庵。別府晚餐：資料庫缺，待補（旅館 1 泊 2 食則從旅館）。移動日目標 16:30 前抵達，以趕上溫泉旅館約 18:00 晚餐；日落約 17:10–17:20。不排門司電気通信レトロ館（11/24 為勤勞感謝日之翌平日，休館）。"
+        },
+        {
+          "day": 5,
+          "date": "2026-11-25",
+          "base_zh": "別府溫泉・心庵旅館",
+          "highlights": [
+            "鐵輪",
+            "海地獄",
+            "金龍地獄",
+            "竹瓦溫泉"
+          ],
+          "drive_min": 28,
+          "text": "第 5 天（三）：鐵輪海地獄與竹瓦溫泉。不排金龍地獄（已停業；原址地獄温泉ミュージアム可作備案）、鶴見地獄（不對外開放）。不排座標重疊錯誤的九重夢大吊橋等點。本日在別府的餐點：資料庫缺，待補。"
+        },
+        {
+          "day": 6,
+          "date": "2026-11-26",
+          "base_zh": "別府溫泉・心庵旅館",
+          "highlights": [
+            "由布院",
+            "湯之坪街道",
+            "金鱗湖"
+          ],
+          "drive_min": 50,
+          "text": "第 6 天（四）：由布院（湯之坪、金鱗湖），午後返回別府溫泉。不排座標不可靠的狹霧台／九重夢大吊橋。本日在別府的餐點：資料庫缺，待補。"
+        },
+        {
+          "day": 7,
+          "date": "2026-11-27",
+          "base_zh": "Pleasant 日向",
+          "highlights": [
+            "駛往日向",
+            "大御神社",
+            "馬ヶ背",
+            "クルスの海",
+            "晚餐大漁や"
+          ],
+          "drive_min": 151,
+          "text": "第 7 天（五）：別府退房沿東九州道往日向，下午大御神社、馬ヶ背、クルスの海後入住。日向無資料庫溫泉與餐廳。移動日目標 16:30 前抵達，以趕上溫泉旅館約 18:00 晚餐；日落約 17:10–17:20。晚餐改大漁や（望洋館無晚市）。若住宿含晚餐可刪。備案金ヶ浜食堂（須預約）。"
+        },
+        {
+          "day": 8,
+          "date": "2026-11-28",
+          "base_zh": "Solest 高千穗酒店",
+          "highlights": [
+            "日向岬",
+            "山路往高千穗",
+            "高千穗峽",
+            "高千穗神社",
+            "晚餐 SAKUYA 本丸"
+          ],
+          "drive_min": 134,
+          "text": "第 8 天（六）：上午日向岬後改走山路往高千穗，目標 16:00 前抵峽與神社並入住，避免夜間山路。本日在高千穗的餐點：資料庫缺，待補。晚餐為大衆焼き肉 SAKUYA 本丸（原咲耶更名）。"
+        },
+        {
+          "day": 9,
+          "date": "2026-11-29",
+          "base_zh": "Solest 高千穗酒店",
+          "highlights": [
+            "天岩戶神社",
+            "天安河原",
+            "國見之丘",
+            "午餐隠れcafe",
+            "晚餐和（なごみ）"
+          ],
+          "drive_min": 53,
+          "text": "第 9 天（日）：天岩戶神社、天安河原、國見之丘、荒立神社。不排椎葉（山路往返約 31 km，恐趕不上日落前返回）。本日在高千穗的餐點：資料庫缺，待補。午餐改為天岩戶附近アマテラスの隠れcafe（神茶家營業不明）；備案仲屋食堂。晚餐改高千穗牛和（無我夢中週日公休）；備案 SAKUYA 本丸。"
+        },
+        {
+          "day": 10,
+          "date": "2026-11-30",
+          "base_zh": "由樂島（位置未確認，暫定上天草市）",
+          "highlights": [
+            "早發",
+            "通潤橋",
+            "天門橋",
+            "入住由樂島（暫定上天草）"
+          ],
+          "drive_min": 140,
+          "text": "第 10 天（一）：早發，順路通潤橋後往上天草，目標 16:30 前入住。由樂島位置未確認，暫定上天草市。不繞雲仙／島原（隔灣）。本日在由樂島（暫定上天草）的餐點：資料庫缺，待補。通潤橋當天無放水，只看橋。"
+        },
+        {
+          "day": 11,
+          "date": "2026-12-01",
+          "base_zh": "由樂島（位置未確認，暫定上天草市）",
+          "highlights": [
+            "高舞登山展望區",
+            "宇土marina",
+            "八代城",
+            "早餐さんぱーる"
+          ],
+          "drive_min": 109,
+          "text": "第 11 天（二）：上天草／宇土／八代（高舞登、宇土道之驛、八代城）。餐點：資料庫缺，待補。本日在由樂島（暫定上天草）的餐點：資料庫缺，待補。早餐保留さんぱーる（國交省 09:00–11:00，本日趕得上）；備案 AZcafe。不排八代市立博物館（地震臨時休館）；八代城仍保留。"
+        },
+        {
+          "day": 12,
+          "date": "2026-12-02",
+          "base_zh": "嬉野溫泉・華翠苑飯店",
+          "highlights": [
+            "駛往嬉野",
+            "嬉野溫泉街入住",
+            "早餐さんぱーる"
+          ],
+          "drive_min": 100,
+          "text": "第 12 天（三）：上天草出發往嬉野，午後溫泉街入住。週三不排西博爾德之湯。途中午餐資料庫缺，待補。退房後至さんぱーる早餐再出發；若需 9 點前上路改 AZcafe。"
+        },
+        {
+          "day": 13,
+          "date": "2026-12-03",
+          "base_zh": "嬉野溫泉・華翠苑飯店",
+          "highlights": [
+            "祐德稻荷神社",
+            "御船山樂園",
+            "西博爾德之湯"
+          ],
+          "drive_min": 76,
+          "text": "第 13 天（四）：祐德稻荷、鹿島城跡、御船山樂園，晚上西博爾德之湯（週四開）。近距餐廳仍少，正餐以旅館或自行決定，不編造店家。"
+        },
+        {
+          "day": 14,
+          "date": "2026-12-04",
+          "base_zh": "福岡蒙特利飯店",
+          "highlights": [
+            "嬉野大茶樹",
+            "大川午餐",
+            "博多千年門",
+            "華味鳥",
+            "晚餐華味鳥祇園店"
+          ],
+          "drive_min": 161,
+          "text": "第 14 天（五）：退房經大川／柳川午餐後往福岡，下午千年門、町家鄉土館，晚餐華味鳥，入住蒙特利。晚餐統一華味鳥祇園店（非站前店）；備案站前店。"
+        },
+        {
+          "day": 15,
+          "date": "2026-12-05",
+          "base_zh": "福岡蒙特利飯店",
+          "highlights": [
+            "九州國立博物館",
+            "大濠公園",
+            "波葉之湯",
+            "長浜屋"
+          ],
+          "drive_min": 71,
+          "text": "第 15 天（六）：以九州國立博物館為太宰府段主景（不用錯誤座標的天滿宮候選），午後大濠公園與波葉之湯，晚餐長浜屋。"
+        },
+        {
+          "day": 16,
+          "date": "2026-12-06",
+          "base_zh": "福岡機場（離境）",
+          "highlights": [
+            "咖啡",
+            "還車",
+            "BR101 離境"
+          ],
+          "drive_min": 14,
+          "text": "第 16 天（日）：市區短暫停留後還車、搭 BR101 離境。出發時刻待機票確認後鎖定。"
+        }
+      ],
+      "warnings": [
+        "車程均為兩點座標估算（直線距離×路網係數÷假設時速），非正式路徑或 OSRM，出發前請用 Google Maps／NAVITIME 複核。",
+        "十一月下旬九州日落約 17:10–17:20，移動日以 16:30 前抵達住宿為目標，避開夜間山路；溫泉旅館晚餐多為 18:00 前後，從晚餐倒推最晚抵達。",
+        "BR106／BR101 時刻未在交接檔，第 1、16 天時間暫未鎖定，待機票確認。",
+        "由樂島（Yurakutei）位置未確認，暫定上天草市，路線中已註明。",
+        "資料庫候選 224 筆 mapcode 仍全部為 null，資料庫站點未編造 MapCode；本次 web 餐廳採用餐廳部已 saibara 反查的值。",
+        "未排入座標明顯錯誤的候選（別府重疊座標、乙丸溫泉館、福岡佔位座標的原鶴／櫻井二見浦／太宰府天滿宮 c198・c199 等），見 unresolved。",
+        "雲仙地獄／島原城雖在由樂島 35 km 半徑統計內，但位於島原半島、隔灣，需渡輪或大繞路，本路線不排入，避免當日無法在日落前返回。",
+        "A 線特色：歷史與城下町較多（萩城下、門司港、鐵輪、天岩戶、祐德稻荷）；第 4 天門司港停留偏長，務必中午前結束以免晚抵別府。",
+        "餐點留空清單見 user_notes（萩／別府／日向／高千穗／由樂島，以及若干移動日途中午餐），標示「資料庫缺，待補」。",
+        "日向住宿晚溫泉：資料庫缺，待補。",
+        "2026-11-11 已依餐廳部 restaurant_swaps.json（12 筆）更新餐點：只用資料庫或 swaps 內的店，未編造店家；web 店 MapCode 僅採用餐廳部已 saibara 反查的值，資料庫候選仍為 null。",
+        "D7 日向晚餐已改いけすの大漁や。若住宿含晚餐可刪。trip/handoff 未載 Pleasant 日向含餐，無法確認。",
+        "D11、D12 早餐保留道の駅 上天草さんぱーる（國交省 09:00–11:00、L.O. 10:30，12 月無休館日）；與當日出發時間搭得上。若需 9 點前出發改 AZcafe Shidaka（06:00–10:00）。",
+        "D2／D3 朝食しおさい開店有 07:00／08:00 兩說，規劃以 08:00 為準。D3 為勤勞感謝之日。",
+        "多家標不定休或公休日待查（隠れcafe、草千里食堂、SAKUYA 本丸等），出發前請再確認；未訂位、未聯絡店家。",
+        "湯樂亭週三定休（D12 退房日），請向旅館確認週三早餐是否提供；含早／2 食方案則外食早餐可略過。",
+        "2026-11-11 已依景點部 places_spots.json 調整：11/24 門司電気通信レトロ館休館（A 線刪、B／C 改関門海峡ミュージアム）；八代市立博物館臨時休館（A11 刪，不另補）；金龍地獄已停業、鶴見地獄不開放（已刪；備案地獄温泉ミュージアム，大人 ¥1,500）；通潤橋 11/30 無放水、只看橋。補位只用 handoff 資料庫候選，未上網找新景點。",
+        "高千穂峡划船需上網預約，由安宏自行預訂（本部不代訂）。細島灯台只能看外觀。"
+      ]
+    },
+    {
+      "route_id": "r_b",
+      "title": "Coasts, caldera and viewpoints (nature first)",
+      "title_zh": "海岸、阿蘇與展望（自然優先）",
+      "summary": "同一住宿順序，取捨改為海岸與地形：萩側造船所／反射爐／赤崎、平尾台、由布院金鱗湖改到別府的第一個整天、日向海岸燈塔、高千穗國見之丘，移動日嘗試白川水源與阿蘇草千里（須早發，趕不上則取消）。嬉野段改宇宙科學館與茶樹，福岡可選志賀島。風險較 A 線高，以日落為硬限制。",
+      "fit_reasons": [
+        "住宿順序與晚數與 A／C 相同",
+        "強化自然景觀與絕景，歷史點較少但仍含秋吉台、門司短訪、天岩戶",
+        "與 A 線對調別府兩日順序（先由布院後鐵輪），日向改燈塔與海水浴場展望",
+        "第 10 天為本路線最緊的一天（阿蘇繞路），無法準時則改直達上天草"
+      ],
+      "bases": [
+        {
+          "area": "萩溫泉鄉萩小町旅館",
+          "nights": 2,
+          "area_zh": "萩溫泉鄉・萩小町旅館"
+        },
+        {
+          "area": "下關溫泉風之海飯店",
+          "nights": 1,
+          "area_zh": "下關溫泉・風之海飯店"
+        },
+        {
+          "area": "別府溫泉心庵旅館",
+          "nights": 3,
+          "area_zh": "別府溫泉・心庵旅館"
+        },
+        {
+          "area": "Pleasant Hyuga (Pleasant 日向)",
+          "nights": 1,
+          "area_zh": "Pleasant 日向"
+        },
+        {
+          "area": "Solest高千穗酒店 (Solest Takachiho Hotel)",
+          "nights": 2,
+          "area_zh": "Solest 高千穗酒店"
+        },
+        {
+          "area": "Yurakutei (由樂島)",
+          "nights": 2,
+          "area_zh": "由樂島（位置未確認，暫定上天草市）"
+        },
+        {
+          "area": "嬉野溫泉華翠苑飯店",
+          "nights": 2,
+          "area_zh": "嬉野溫泉・華翠苑飯店"
+        },
+        {
+          "area": "福岡蒙特利飯店",
+          "nights": 2,
+          "area_zh": "福岡蒙特利飯店"
+        }
+      ],
+      "days": [
+        {
+          "day": 1,
+          "date": "2026-11-21",
+          "drive_min": 156,
+          "stops": []
+        },
+        {
+          "day": 2,
+          "date": "2026-11-22",
+          "drive_min": 98,
+          "stops": [
+            {
+              "ref": "rf_hagi_shiosai",
+              "name": "珈琲館 しおさい／咖啡館",
+              "lat": 34.41723815,
+              "lng": 131.39405139,
+              "google_maps": "https://www.google.com/maps/dir/?api=1&destination=34.41723815,131.39405139&travelmode=driving",
+              "mapcode": "243 887 617*02",
+              "note": "早餐：珈琲館 しおさい／咖啡館（source:web，ref=rf_hagi_shiosai）。11/22 週日營業。開店時間有 07:00（Tabelog）與 08:00（萩市觀光協會）兩說，以 08:00 計較保險；營業至 16:00。公休：Tabelog 週四／觀光協會週三、週四，本日均非公休。原排むらやカフェ因 Tabelog 寫 09:00 開店、早餐偏晚而替換。第二順位：萩小町 館內早餐（需訂含早方案；時段官網未載）。若已訂含早則此餐可略過。MapCode 243 887 617*02（餐廳部 saibara 反查，誤差 1 m）。",
+              "source_url": "https://www.hagishi.com/search/list.php?c0=2&c1=6",
+              "leg_min": 5
+            },
+            {
+              "ref": "db:db_s_4190cb3233",
+              "name": "恵美須ヶ鼻造船所跡",
+              "lat": 34.430493,
+              "lng": 131.4121753,
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=34.430493%2C131.4121753",
+              "mapcode": null,
+              "note": "惠美須ヶ鼻造船所跡，停留約 40 分。（無 MapCode，用 google_maps）",
+              "source_url": "https://www.openstreetmap.org/node/6367461617",
+              "leg_min": 7
+            },
+            {
+              "ref": "db:db_s_e6d6e19c3a",
+              "name": "萩反射炉",
+              "lat": 34.428202,
+              "lng": 131.4182608,
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=34.428202%2C131.4182608",
+              "mapcode": null,
+              "note": "萩反射爐，停留約 30 分。（無 MapCode，用 google_maps）",
+              "source_url": "https://www.openstreetmap.org/node/4333121000",
+              "leg_min": 5
+            },
+            {
+              "ref": "db:db_s_0cc3e686a5",
+              "name": "萩城",
+              "lat": 34.4175201,
+              "lng": 131.3837761,
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=34.4175201%2C131.3837761",
+              "mapcode": null,
+              "note": "萩城，停留約 70 分。（無 MapCode，用 google_maps）",
+              "source_url": "https://www.openstreetmap.org/node/11630385962",
+              "leg_min": 9
+            },
+            {
+              "ref": "db:db_s_4b13bcbe9c",
+              "name": "香月泰男美術館",
+              "lat": 34.35875285,
+              "lng": 131.26266185,
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=34.35875285%2C131.26266185",
+              "mapcode": null,
+              "note": "香月泰男美術館（約 14 km），停留約 60 分。（無 MapCode，用 google_maps）",
+              "source_url": "https://www.openstreetmap.org/way/668050785",
+              "leg_min": 22
+            },
+            {
+              "ref": "db:db_s_7871952db9",
+              "name": "赤崎神社楽桟敷",
+              "lat": 34.3650248,
+              "lng": 131.1829983,
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=34.3650248%2C131.1829983",
+              "mapcode": null,
+              "note": "赤崎神社樂棧敷（沿海，約 20 km），停留約 40 分，16:30 前返回萩。（無 MapCode，用 google_maps） 本日在萩的餐點：資料庫缺，待補。",
+              "source_url": "https://www.openstreetmap.org/node/6255268858",
+              "leg_min": 13
+            }
+          ]
+        },
+        {
+          "day": 3,
+          "date": "2026-11-23",
+          "drive_min": 171,
+          "stops": [
+            {
+              "ref": "rf_hagi_shiosai",
+              "name": "珈琲館 しおさい／咖啡館",
+              "lat": 34.41723815,
+              "lng": 131.39405139,
+              "google_maps": "https://www.google.com/maps/dir/?api=1&destination=34.41723815,131.39405139&travelmode=driving",
+              "mapcode": "243 887 617*02",
+              "note": "早餐：珈琲館 しおさい／咖啡館（source:web，ref=rf_hagi_shiosai）。11/23 週一營業。開店時間有 07:00（Tabelog）與 08:00（萩市觀光協會）兩說，以 08:00 計較保險；營業至 16:00。公休：Tabelog 週四／觀光協會週三、週四，本日均非公休。本日為勤勞感謝之日（國定假日），店家未列當日休。原排むらやカフェ因 Tabelog 寫 09:00 開店、早餐偏晚而替換。第二順位：萩小町 館內早餐（需訂含早方案；時段官網未載）。若已訂含早則此餐可略過。MapCode 243 887 617*02（餐廳部 saibara 反查，誤差 1 m）。",
+              "source_url": "https://www.hagishi.com/search/list.php?c0=2&c1=6",
+              "leg_min": 5
+            },
+            {
+              "ref": "db:db_s_f49a6151ff",
+              "name": "大板山たたら製鉄遺跡",
+              "lat": 34.5059979,
+              "lng": 131.5384366,
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=34.5059979%2C131.5384366",
+              "mapcode": null,
+              "note": "大板山たたら製鐵遺跡，停留約 40 分（資料庫無停車場資料）。（無 MapCode，用 google_maps）",
+              "source_url": "https://www.openstreetmap.org/node/6367467243",
+              "leg_min": 41
+            },
+            {
+              "ref": "db:db_s_c43f7638ba",
+              "name": "秋吉台科学博物館",
+              "lat": 34.2350117,
+              "lng": 131.3072713,
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=34.2350117%2C131.3072713",
+              "mapcode": null,
+              "note": "秋吉台科學博物館，停留約 60 分。（無 MapCode，用 google_maps）",
+              "source_url": "https://www.openstreetmap.org/node/1423660452",
+              "leg_min": 62
+            },
+            {
+              "ref": "db:db_s_1e3d6e1f51",
+              "name": "海峡ゆめタワー",
+              "lat": 33.9497968,
+              "lng": 130.929736,
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=33.9497968%2C130.929736",
+              "mapcode": null,
+              "note": "海峽夢塔，停留約 30 分後入住。平尾台（c28，約 23 km）僅在 15:00 前已入住時才另訪，須 16:30 前離開台地；預設不排入以免移動日超過 3 小時。（無 MapCode，用 google_maps） 移動日目標 16:30 前抵達，以趕上溫泉旅館約 18:00 晚餐；日落約 17:10–17:20。",
+              "source_url": "https://www.openstreetmap.org/node/2749353920",
+              "leg_min": 58
+            }
+          ]
+        },
+        {
+          "day": 4,
+          "date": "2026-11-24",
+          "drive_min": 133,
+          "stops": [
+            {
+              "ref": "db:db_s_9b2edb121e",
+              "name": "関門海峡ミュージアム",
+              "lat": 33.943799600000006,
+              "lng": 130.95678264999998,
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=33.943799600000006%2C130.95678264999998",
+              "mapcode": null,
+              "note": "關門海峽博物館（替補原排門司電気通信レトロ館）。11/23 勤勞感謝之日，レトロ館依「週一休、逢假日改翌平日」於 11/24（二）休館，故改排本館。本館 09:00–17:00（入館至 16:30）；2026 年休館日 3/10、6/9、9/8、11/10，11/24 非休館日。大人 ¥500／中小學生 ¥200，停留約 60 分。建議 09:00 開門後參觀，中午前結束以免晚抵別府。（無 MapCode，用 google_maps）",
+              "source_url": "https://www.openstreetmap.org/way/969230646",
+              "leg_min": 7
+            },
+            {
+              "ref": "db:db_s_1e3d6e1f51",
+              "name": "海峡ゆめタワー",
+              "lat": 33.9497968,
+              "lng": 130.929736,
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=33.9497968%2C130.929736",
+              "mapcode": null,
+              "note": "若需補昨未完成的海峽景色，可再上夢塔或改看關門一帶，停留從簡。實際可依進度省略。（無 MapCode，用 google_maps）",
+              "source_url": "https://www.openstreetmap.org/node/2749353920",
+              "leg_min": 9
+            },
+            {
+              "ref": "db:db_r_3d710ec62a",
+              "name": "門司港茶寮 別館",
+              "lat": 33.9490744,
+              "lng": 130.9642571,
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=33.9490744%2C130.9642571",
+              "mapcode": null,
+              "note": "午餐：門司港茶寮 別館（無營業時間資料，現場確認），12 點前結束以便午後長途。（無 MapCode，用 google_maps）",
+              "source_url": "https://www.openstreetmap.org/node/14335310459",
+              "leg_min": 8
+            }
+          ]
+        },
+        {
+          "day": 5,
+          "date": "2026-11-25",
+          "drive_min": 50,
+          "stops": [
+            {
+              "ref": "db:db_s_2309db8488",
+              "name": "金鱗湖",
+              "lat": 33.2667196,
+              "lng": 131.3690386,
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=33.2667196%2C131.3690386",
+              "mapcode": null,
+              "note": "金鱗湖（可信座標），晨間較清靜，停留約 60 分。（無 MapCode，用 google_maps）",
+              "source_url": "https://www.visit-oita.jp/special1/detail/5",
+              "leg_min": 19
+            },
+            {
+              "ref": "db:db_s_269ba95595",
+              "name": "湯之坪街道",
+              "lat": 33.2660923,
+              "lng": 131.3632115,
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=33.2660923%2C131.3632115",
+              "mapcode": null,
+              "note": "湯之坪街道，停留約 50 分。（無 MapCode，用 google_maps）",
+              "source_url": "https://www.visit-oita.jp/myplan/detail/149",
+              "leg_min": 5
+            },
+            {
+              "ref": "db:db_s_4d06df956d",
+              "name": "由布院溫泉住宿區",
+              "lat": 33.2605858,
+              "lng": 131.3598988,
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=33.2605858%2C131.3598988",
+              "mapcode": null,
+              "note": "由布院溫泉區散步後，15:30 前返回別府泡湯。（無 MapCode，用 google_maps） 本日在別府的餐點：資料庫缺，待補。",
+              "source_url": "https://booking.yufuin.gr.jp/static/",
+              "leg_min": 5
+            }
+          ]
+        },
+        {
+          "day": 6,
+          "date": "2026-11-26",
+          "drive_min": 23,
+          "stops": [
+            {
+              "ref": "db:db_s_db077bef4c",
+              "name": "海地獄",
+              "lat": 33.3158884,
+              "lng": 131.4696829,
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=33.3158884%2C131.4696829",
+              "mapcode": null,
+              "note": "海地獄，停留約 50 分。（無 MapCode，用 google_maps）原「金龍地獄」已於 2009 年停業，已從本日路線刪除。原址改為「地獄温泉ミュージアム」（大人 ¥1,500／小孩 ¥1,000，09:00–18:00、最終入場 17:30，不定休年約 4 天），可作備案，未另列入站點（資料庫候選名稱仍為金龍地獄，未自編新站）。鶴見地獄為私有地／寺院境內、不對外開放，已刪除。",
+              "source_url": "https://www.visit-oita.jp/spots/detail/4589",
+              "leg_min": 10
+            },
+            {
+              "ref": "db:db_o_aeee4e5898",
+              "name": "梅園温泉",
+              "lat": 33.277545849999996,
+              "lng": 131.50432865,
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=33.277545849999996%2C131.50432865",
+              "mapcode": null,
+              "note": "梅園溫泉（hours：11:00-23:00），停留約 50 分。不排不老泉亦可（本日週四，不老泉開館，如要去可改）。（無 MapCode，用 google_maps） 本日在別府的餐點：資料庫缺，待補。",
+              "source_url": "https://www.openstreetmap.org/way/421604392",
+              "leg_min": 8
+            }
+          ]
+        },
+        {
+          "day": 7,
+          "date": "2026-11-27",
+          "drive_min": 152,
+          "stops": [
+            {
+              "ref": "db:db_s_d063343da0",
+              "name": "伊勢ケ浜海水浴場",
+              "lat": 32.413065,
+              "lng": 131.6514082,
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=32.413065%2C131.6514082",
+              "mapcode": null,
+              "note": "伊勢ケ浜海水浴場（冬季為海岸展望，不下水），停留約 25 分。途中午餐：資料庫缺，待補。（無 MapCode，用 google_maps）",
+              "source_url": "https://www.openstreetmap.org/node/4275379791",
+              "leg_min": 121
+            },
+            {
+              "ref": "db:db_s_14f1c6a3af",
+              "name": "馬ヶ背 Umagase",
+              "lat": 32.4242057,
+              "lng": 131.6870368,
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=32.4242057%2C131.6870368",
+              "mapcode": null,
+              "note": "馬ヶ背，停留約 40 分，日落前離開。（無 MapCode，用 google_maps）",
+              "source_url": "https://www.openstreetmap.org/node/951252220",
+              "leg_min": 6
+            },
+            {
+              "ref": "db:db_s_1ac90c7f2c",
+              "name": "Hososhima Light House",
+              "lat": 32.4233587,
+              "lng": 131.6852936,
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=32.4233587%2C131.6852936",
+              "mapcode": null,
+              "note": "細島燈塔（Hososhima Light House），停留約 25 分後入住。日向晚餐已改いけすの大漁や（見當日最後一站；若住宿含晚餐可刪）。日向溫泉：資料庫缺，待補。（無 MapCode，用 google_maps） 移動日目標 16:30 前抵達，以趕上溫泉旅館約 18:00 晚餐；日落約 17:10–17:20。細島灯台只能看外觀（內部僅特定日開放，2026 年為 11/1，本日 11/27 只看外觀）。",
+              "source_url": "https://www.openstreetmap.org/node/6697136987",
+              "leg_min": 5
+            },
+            {
+              "ref": "rf_hyu_tairyoya",
+              "name": "いけすの大漁や／活魚大漁屋",
+              "lat": 32.42526304,
+              "lng": 131.62397571,
+              "google_maps": "https://www.google.com/maps/dir/?api=1&destination=32.42526304,131.62397571&travelmode=driving",
+              "mapcode": "136 315 544*14",
+              "note": "晚餐：いけすの大漁や／活魚大漁屋（ホテルベルフォート日向1F，距 Pleasant 日向約 300 m，source:web，ref=rf_hyu_tairyoya）。11/27 週五 17:00–21:00（另 11:00–14:00；12/31–1/1 休）。原排望洋館因 Tabelog 只列 11:30–15:00、無晚間營業而替換。若住宿含晚餐可刪。trip.json 無此行程檔；handoff.json 未載 Pleasant 日向含餐方案，無法確認（餐廳部記入官網「絕對附餐」、2 食方案，但不在 handoff）。第二順位：金ヶ浜食堂／金濱食堂（18:00–20:00，週五非公休；晚餐限住宿客與事先預約，本部未聯絡、未訂位）。MapCode 136 315 544*14（餐廳部 saibara 反查，誤差 1 m）。",
+              "source_url": "https://www.hotpepper.jp/strJ000902244/",
+              "leg_min": 15
+            }
+          ]
+        },
+        {
+          "day": 8,
+          "date": "2026-11-28",
+          "drive_min": 147,
+          "stops": [
+            {
+              "ref": "db:db_s_9bea30f744",
+              "name": "御鉾ケ浦海水浴場",
+              "lat": 32.4212439,
+              "lng": 131.6765326,
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=32.4212439%2C131.6765326",
+              "mapcode": null,
+              "note": "御鉾ケ浦海水浴場展望，停留約 25 分，10:30 前離開日向。途中午餐：資料庫缺，待補。（無 MapCode，用 google_maps）",
+              "source_url": "https://www.openstreetmap.org/node/4275379793",
+              "leg_min": 9
+            },
+            {
+              "ref": "db:db_s_e65d52e62d",
+              "name": "國見之丘",
+              "lat": 32.7191167,
+              "lng": 131.2811037,
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=32.7191167%2C131.2811037",
+              "mapcode": null,
+              "note": "先抵國見之丘（若天氣清楚），停留約 30 分，須午後早到。（無 MapCode，用 google_maps）",
+              "source_url": "https://takachiho-kanko.info/datas/files/2023/02/23/c8799c02bb5290073cf93683d1a7d53a30c6d009.pdf",
+              "leg_min": 121
+            },
+            {
+              "ref": "db:db_s_d265e2d834",
+              "name": "高千穗峽",
+              "lat": 32.7017851,
+              "lng": 131.300939,
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=32.7017851%2C131.300939",
+              "mapcode": null,
+              "note": "高千穗峽，停留約 60 分後入住。（無 MapCode，用 google_maps） 本日途中午餐：資料庫缺，待補。晚餐見大衆焼き肉 SAKUYA 本丸。 移動日目標 16:30 前抵達，以趕上溫泉旅館約 18:00 晚餐；日落約 17:10–17:20。高千穂峡划船需上網預約，由安宏自行預訂。",
+              "source_url": "https://takachiho-kanko.info/faq/",
+              "leg_min": 7
+            },
+            {
+              "ref": "rf_tak_sakuya",
+              "name": "大衆焼き肉 SAKUYA 本丸",
+              "lat": 32.710256076,
+              "lng": 131.308109523,
+              "google_maps": "https://www.google.com/maps/dir/?api=1&destination=32.710256076,131.308109523&travelmode=driving",
+              "mapcode": "330 742 727*45",
+              "note": "晚餐：大衆焼き肉 SAKUYA 本丸（同址同電話，店名由「咲耶 SAKUYA」更改；source:web，ref=rf_tak_sakuya）。11/28 週六 12:00–16:00、17:00–20:30。公休日待查（來源或寫週一、週二或週二、週三），均不含週六，判定營業。只收電話預約（Tabelog）；本部未訂位、未聯絡。Solest 若訂含晚方案（18:00–21:00）則此餐可略過。此筆為店名／業態更正，無第二順位。MapCode 330 742 727*45（餐廳部 saibara 反查，誤差 2 m）。",
+              "source_url": "https://takachiho-kanko.info/gourmet/48/",
+              "leg_min": 5
+            }
+          ]
+        },
+        {
+          "day": 9,
+          "date": "2026-11-29",
+          "drive_min": 47,
+          "stops": [
+            {
+              "ref": "db:db_s_6b8f8cdbbb",
+              "name": "高千穗神社",
+              "lat": 32.7066706,
+              "lng": 131.3018922,
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=32.7066706%2C131.3018922",
+              "mapcode": null,
+              "note": "高千穗神社，停留約 40 分。（無 MapCode，用 google_maps）",
+              "source_url": "https://takachiho-kanko.info/faq/",
+              "leg_min": 5
+            },
+            {
+              "ref": "db:db_s_3e09b24b3f",
+              "name": "天岩戶神社",
+              "lat": 32.7368079722222,
+              "lng": 131.3503695,
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=32.7368079722222%2C131.3503695",
+              "mapcode": null,
+              "note": "天岩戶神社，停留約 50 分。（無 MapCode，用 google_maps）",
+              "source_url": "https://takachiho-kanko.info/datas/files/2023/02/23/c8799c02bb5290073cf93683d1a7d53a30c6d009.pdf",
+              "leg_min": 10
+            },
+            {
+              "ref": null,
+              "name": "アマテラスの隠れcafe",
+              "lat": 32.7355756579069,
+              "lng": 131.35120122052942,
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=32.7355756579069,131.35120122052942",
+              "mapcode": "330 837 762*44",
+              "note": "午餐：アマテラスの隠れcafe（天岩戶神社附近約 155 m，source:web）。11/29 週日，10:00–17:00（不定休，當天需確認）。原排神茶家因西臼杵觀光網站標題寫【閉店】、營業狀況不明而替換。第二順位：仲屋食堂（11:30–14:00，距神社約 520 m，可電話預約；本部未聯絡）。MapCode 330 837 762*44（餐廳部 saibara 換算並反查，誤差 1.1 m）。",
+              "source_url": "https://tabelog.com/tw/miyazaki/A4505/A450502/45007779/",
+              "leg_min": 5
+            },
+            {
+              "ref": "db:db_s_ddabb91cd6",
+              "name": "天安河原",
+              "lat": 32.7378698,
+              "lng": 131.3532338,
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=32.7378698%2C131.3532338",
+              "mapcode": null,
+              "note": "天安河原，停留約 40 分。（無 MapCode，用 google_maps）",
+              "source_url": "https://takachiho-kanko.info/datas/files/2023/02/23/c8799c02bb5290073cf93683d1a7d53a30c6d009.pdf",
+              "leg_min": 5
+            },
+            {
+              "ref": "db:db_s_298f866b10",
+              "name": "高千穂橋梁",
+              "lat": 32.707362,
+              "lng": 131.32889275,
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=32.707362%2C131.32889275",
+              "mapcode": null,
+              "note": "高千穗橋梁，停留約 20 分後返回。（無 MapCode，用 google_maps） 本日在高千穗的餐點：資料庫缺，待補。",
+              "source_url": "https://www.openstreetmap.org/way/639991508",
+              "leg_min": 11
+            },
+            {
+              "ref": "rf_tak_nagomi",
+              "name": "高千穂牛レストラン 和（なごみ）／高千穗牛餐廳和",
+              "lat": 32.70762535791,
+              "lng": 131.30598019028,
+              "google_maps": "https://www.google.com/maps/dir/?api=1&destination=32.70762535791,131.30598019028&travelmode=driving",
+              "mapcode": "330 742 450*52",
+              "note": "晚餐：高千穂牛レストラン 和（なごみ）（source:web，ref=rf_tak_nagomi）。11/29 週日 11:00–14:30、17:00–21:00（L.O. 20:30），週三公休、本日營業。原排居酒屋 無我夢中因 Tabelog 寫週日公休（11/29 為週日）而替換。Solest 若訂含晚方案（18:00–21:00）則此餐可略過。第二順位：大衆焼き肉 SAKUYA 本丸（原「咲耶 SAKUYA」，17:00–20:30；公休日待查，各來源週日均非公休，判定營業）。未採用資料庫 c126「高千穗牛餐廳 和」（座標與飯店中心重合，不可靠），改用餐廳部 Tabelog 座標。MapCode 330 742 450*52（餐廳部 saibara 反查，誤差 1 m）。",
+              "source_url": "https://takachiho-kanko.info/gourmet/31/",
+              "leg_min": 6
+            }
+          ]
+        },
+        {
+          "day": 10,
+          "date": "2026-11-30",
+          "drive_min": 163,
+          "stops": [
+            {
+              "ref": "db:db_s_32593cda3c",
+              "name": "白川水源",
+              "lat": 32.8244726,
+              "lng": 131.0945314,
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=32.8244726%2C131.0945314",
+              "mapcode": null,
+              "note": "清晨出發，順路略北引至白川水源（南阿蘇方向，稍繞路），停留約 35 分。若出發晚於 08:00 或天候不佳，改直駛通潤橋、取消本點。（無 MapCode，用 google_maps）",
+              "source_url": "https://www.openstreetmap.org/node/4486759494",
+              "leg_min": 57
+            },
+            {
+              "ref": "db:db_s_4d0e8a1cd0",
+              "name": "草千里濱",
+              "lat": 32.8814658,
+              "lng": 131.0535468,
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=32.8814658%2C131.0535468",
+              "mapcode": null,
+              "note": "草千里濱（阿蘇，座標相符）。停留約 30 分。十一月山區可能有霧或低溫，須預留時間，16:30 前務必抵達上天草；延誤則取消本點直下。午餐見下一站草千里食堂。（無 MapCode，用 google_maps）",
+              "source_url": "https://www.crossroadfukuoka.jp/course/20005",
+              "leg_min": 18
+            },
+            {
+              "ref": null,
+              "name": "草千里食堂",
+              "lat": 32.88613331771669,
+              "lng": 131.05421910225837,
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=32.88613331771669,131.05421910225837",
+              "mapcode": "256 456 863*75",
+              "note": "午餐：草千里食堂（草千里ヶ浜旁約 520 m，source:web）。11/30 週一 11:00–16:00（L.O. 15:00），基本上全年無休（不定休）。原排和食処 しらかわ因 Tabelog「掲載保留」、營業狀況無法確認而替換。就在本日草千里濱站點旁，不另繞路。若因時間取消草千里，此午餐一併取消，勿夜間趕路改去他店（不可編造）。第二順位：いまきん食堂（阿蘇市內牧，約再北行 10 km，10:00–16:00，名店常排隊，較繞路）。MapCode 256 456 863*75（餐廳部 saibara 反查，誤差 1.7 m）。",
+              "source_url": "https://tabelog.com/tw/kumamoto/A4302/A430201/43017385/",
+              "leg_min": 5
+            },
+            {
+              "ref": "db:db_s_b312097f35",
+              "name": "天門橋",
+              "lat": 32.6112221,
+              "lng": 130.4584886,
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=32.6112221%2C130.4584886",
+              "mapcode": null,
+              "note": "天門橋。由樂島位置未確認，暫定上天草市。（無 MapCode，用 google_maps） 本日在由樂島（暫定上天草）的餐點：資料庫缺，待補。 移動日目標 16:30 前抵達，以趕上溫泉旅館約 18:00 晚餐；日落約 17:10–17:20。",
+              "source_url": "https://www.openstreetmap.org/node/5603040088",
+              "leg_min": 78
+            }
+          ]
+        },
+        {
+          "day": 11,
+          "date": "2026-12-01",
+          "drive_min": 119,
+          "stops": [
+            {
+              "ref": "rf_kam_sunpearl",
+              "name": "道の駅 上天草さんぱーる",
+              "lat": 32.5768726,
+              "lng": 130.4201925,
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=32.5768726,130.4201925",
+              "mapcode": "372 845 740*14",
+              "note": "早餐：保留道の駅 上天草さんぱーる（source:web，ref=rf_kam_sunpearl）。國交省道之驛頁面寫餐廳早餐 09:00–11:00（L.O. 10:30），12 月無休館日（https://www.qsr.mlit.go.jp/n-michi/michi_no_eki/kobetu/kamiamakusa/kamiamakusa.html）；Tabelog 只列 11:00–15:00，故餐廳部曾建議改店。本日為上天草遊覽日、無須 9 點前出發，09:00 開店趕得上，故不改店。備案（原第一順位替代）：AZcafe Shidaka（HOTEL AZ 熊本上天草店早餐自助，06:00–10:00、最後入場 09:30，非住客可用，¥880）。再備案：ジョイフル 大矢野店（08:00–翌 01:00，無休）。湯樂亭若訂 1 泊朝食／2 食則此餐可略過。MapCode 372 845 740*14（餐廳部填入）。",
+              "source_url": "https://www.qsr.mlit.go.jp/n-michi/michi_no_eki/kobetu/kamiamakusa/kamiamakusa.html",
+              "leg_min": 5
+            },
+            {
+              "ref": "db:db_s_d980d846c7",
+              "name": "高舞登山展望區",
+              "lat": 32.522572,
+              "lng": 130.4416406,
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=32.522572%2C130.4416406",
+              "mapcode": null,
+              "note": "高舞登山展望區，停留約 50 分。（無 MapCode，用 google_maps）",
+              "source_url": "https://kami-amakusa.jp/archives/view/1563",
+              "leg_min": 13
+            },
+            {
+              "ref": "db:db_s_b312097f35",
+              "name": "天門橋",
+              "lat": 32.6112221,
+              "lng": 130.4584886,
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=32.6112221%2C130.4584886",
+              "mapcode": null,
+              "note": "天門橋（可補拍或散步），停留約 30 分。（無 MapCode，用 google_maps）",
+              "source_url": "https://www.openstreetmap.org/node/5603040088",
+              "leg_min": 18
+            },
+            {
+              "ref": "db:db_s_e2a49dfbe1",
+              "name": "棚底城跡",
+              "lat": 32.4148847,
+              "lng": 130.3338114,
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=32.4148847%2C130.3338114",
+              "mapcode": null,
+              "note": "棚底城跡（天草島內南向，約 21 km），停留約 40 分，15:30 前折返。（無 MapCode，用 google_maps） 本日在由樂島（暫定上天草）的餐點：資料庫缺，待補。",
+              "source_url": "https://www.openstreetmap.org/node/8760507294",
+              "leg_min": 45
+            }
+          ]
+        },
+        {
+          "day": 12,
+          "date": "2026-12-02",
+          "drive_min": 159,
+          "stops": [
+            {
+              "ref": "rf_kam_sunpearl",
+              "name": "道の駅 上天草さんぱーる",
+              "lat": 32.5768726,
+              "lng": 130.4201925,
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=32.5768726,130.4201925",
+              "mapcode": "372 845 740*14",
+              "note": "早餐：保留道の駅 上天草さんぱーる（source:web，ref=rf_kam_sunpearl）。國交省頁面寫早餐 09:00–11:00（L.O. 10:30），12 月無休館日。湯樂亭 checkout 10:00，店距旅館約數公里，可 9:00 前後退房後再用餐、約 10:00–10:30 出發；往嬉野車程估算約 1.5–3 小時，仍可在 16:30 前入住，故不改店。若需 9 點前出發，改備案 AZcafe Shidaka（06:00–10:00，最後入場 09:30）。再備案：ジョイフル 大矢野店（08:00 起）。湯樂亭週三定休（D12 為退房日），請向旅館確認週二入住的週三早餐是否照常；若已訂含早則此餐可略過。MapCode 372 845 740*14（餐廳部填入）。",
+              "source_url": "https://www.qsr.mlit.go.jp/n-michi/michi_no_eki/kobetu/kamiamakusa/kamiamakusa.html",
+              "leg_min": 5
+            },
+            {
+              "ref": "db:db_s_4c27010caf",
+              "name": "有田ポーセリンパーク",
+              "lat": 33.164637,
+              "lng": 129.908242,
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=33.164637%2C129.908242",
+              "mapcode": null,
+              "note": "往嬉野可西彎有田瓷公園（約繞路），停留約 50 分；若出發晚則直駛嬉野、取消本點。途中午餐：資料庫缺，待補。週三不排西博爾德之湯。（無 MapCode，用 google_maps） 移動日目標 16:30 前抵達，以趕上溫泉旅館約 18:00 晚餐；日落約 17:10–17:20。",
+              "source_url": "https://www.openstreetmap.org/node/1423805631",
+              "leg_min": 136
+            }
+          ]
+        },
+        {
+          "day": 13,
+          "date": "2026-12-03",
+          "drive_min": 60,
+          "stops": [
+            {
+              "ref": "db:db_s_ff21da9c25",
+              "name": "佐賀県立宇宙科学館",
+              "lat": 33.1791038,
+              "lng": 130.0353699,
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=33.1791038%2C130.0353699",
+              "mapcode": null,
+              "note": "佐賀縣立宇宙科學館（hours：09:15-17:15），停留約 90 分，16:00 前出門。（無 MapCode，用 google_maps）",
+              "source_url": "https://www.openstreetmap.org/way/476235474",
+              "leg_min": 10
+            },
+            {
+              "ref": "db:db_s_947717e1fa",
+              "name": "おつぼ山神籠石",
+              "lat": 33.1781208,
+              "lng": 130.0564633,
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=33.1781208%2C130.0564633",
+              "mapcode": null,
+              "note": "おつぼ山神籠石，停留約 40 分。（無 MapCode，用 google_maps）",
+              "source_url": "https://www.openstreetmap.org/node/12871663879",
+              "leg_min": 5
+            },
+            {
+              "ref": "db:db_s_d36589ad92",
+              "name": "嬉野の大チャノキ",
+              "lat": 33.0985563,
+              "lng": 129.9337357,
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=33.0985563%2C129.9337357",
+              "mapcode": null,
+              "note": "嬉野の大チャノキ，停留約 20 分。（無 MapCode，用 google_maps）",
+              "source_url": "https://www.openstreetmap.org/node/9056269735",
+              "leg_min": 24
+            },
+            {
+              "ref": "db:db_o_4186870dff",
+              "name": "シーボルトの湯",
+              "lat": 33.09656645,
+              "lng": 129.9855805,
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=33.09656645%2C129.9855805",
+              "mapcode": null,
+              "note": "西博爾德之湯（週四開），停留約 50 分。（無 MapCode，用 google_maps）",
+              "source_url": "https://www.openstreetmap.org/way/568000739",
+              "leg_min": 8
+            }
+          ]
+        },
+        {
+          "day": 14,
+          "date": "2026-12-04",
+          "drive_min": 101,
+          "stops": [
+            {
+              "ref": "db:db_s_752215c5cb",
+              "name": "嬉野溫泉街",
+              "lat": 33.1066719,
+              "lng": 129.9989438,
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=33.1066719%2C129.9989438",
+              "mapcode": null,
+              "note": "嬉野溫泉街短訪後北上福岡（本路線不繞柳川，縮短移動）。（無 MapCode，用 google_maps）",
+              "source_url": "https://spa-u.net/",
+              "leg_min": 10
+            },
+            {
+              "ref": "db:db_s_78b9489288",
+              "name": "大濠公園",
+              "lat": 33.5861214,
+              "lng": 130.3763612,
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=33.5861214%2C130.3763612",
+              "mapcode": null,
+              "note": "先抵大濠公園散步，停留約 40 分。（無 MapCode，用 google_maps）",
+              "source_url": "https://www.ohorikouen.jp/about/",
+              "leg_min": 79
+            },
+            {
+              "ref": "db:db_r_1c577dd3c4",
+              "name": "一蘭拉麵",
+              "lat": 33.5932093,
+              "lng": 130.4045625,
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=33.5932093%2C130.4045625",
+              "mapcode": null,
+              "note": "晚餐：一蘭拉麵（資料庫無營業時間）。入住蒙特利。（無 MapCode，用 google_maps）",
+              "source_url": "https://www.openstreetmap.org/way/1164860428",
+              "leg_min": 7
+            }
+          ]
+        },
+        {
+          "day": 15,
+          "date": "2026-12-05",
+          "drive_min": 116,
+          "stops": [
+            {
+              "ref": "db:db_s_ef6925b5b0",
+              "name": "九州國立博物館",
+              "lat": 33.5182194,
+              "lng": 130.5384631,
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=33.5182194%2C130.5384631",
+              "mapcode": null,
+              "note": "九州國立博物館（太宰府，座標可信）。不使用錯誤座標的天滿宮候選。停留約 120 分。（無 MapCode，用 google_maps）",
+              "source_url": "https://www.crossroadfukuoka.jp/course/20005",
+              "leg_min": 24
+            },
+            {
+              "ref": "db:db_o_e9e5bf3681",
+              "name": "志賀島休暇村 金印の湯",
+              "lat": 33.6828553,
+              "lng": 130.2904699,
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=33.6828553%2C130.2904699",
+              "mapcode": null,
+              "note": "若時間與體力允許，可去志賀島休暇村 金印之湯（約 15 km，hours 無資料）。冬季請 16:00 前離開島上。若過晚則取消，改波葉之湯。（無 MapCode，用 google_maps）",
+              "source_url": "https://www.openstreetmap.org/node/13175374426",
+              "leg_min": 50
+            },
+            {
+              "ref": "db:db_r_10c9266683",
+              "name": "稚加榮",
+              "lat": 33.5877385,
+              "lng": 130.3921257,
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=33.5877385%2C130.3921257",
+              "mapcode": null,
+              "note": "晚餐：稚加榮（資料庫無營業時間，老店宜先確認或備案）。（無 MapCode，用 google_maps）",
+              "source_url": "https://www.openstreetmap.org/node/4748850336",
+              "leg_min": 37
+            }
+          ]
+        },
+        {
+          "day": 16,
+          "date": "2026-12-06",
+          "drive_min": 13,
+          "stops": [
+            {
+              "ref": "db:db_r_7770db46ca",
+              "name": "博多一幸舍",
+              "lat": 33.5882444,
+              "lng": 130.4170779,
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=33.5882444%2C130.4170779",
+              "mapcode": null,
+              "note": "博多一幸舍（近飯店，資料庫無營業時間）後還車，搭 BR101。時刻待補。（無 MapCode，用 google_maps）",
+              "source_url": "https://www.openstreetmap.org/node/5073073021",
+              "leg_min": 5
+            }
+          ]
+        }
+      ],
+      "day_summaries": [
+        {
+          "day": 1,
+          "date": "2026-11-21",
+          "base_zh": "萩溫泉鄉・萩小町旅館",
+          "highlights": [
+            "福岡機場取車",
+            "北上萩入住"
+          ],
+          "drive_min": 156,
+          "text": "第 1 天（六）：福岡機場取車北上萩，不繞路。航班時刻未提供，可能日落後抵達，走高速公路。本日在萩的餐點：資料庫缺，待補。移動日目標 16:30 前抵達，以趕上溫泉旅館約 18:00 晚餐；日落約 17:10–17:20。"
+        },
+        {
+          "day": 2,
+          "date": "2026-11-22",
+          "base_zh": "萩溫泉鄉・萩小町旅館",
+          "highlights": [
+            "造船所跡",
+            "反射爐",
+            "香月泰男美術館",
+            "赤崎神社",
+            "早餐しおさい"
+          ],
+          "drive_min": 98,
+          "text": "第 2 天（日）：偏海岸與近代遺產（造船所、反射爐、萩城），再訪香月泰男美術館與赤崎神社樂棧敷。不趕遠途的金子みすゞ記念館（往長門，回頭路）。本日在萩的餐點：資料庫缺，待補。早餐改珈琲館しおさい（むらやカフェ偏晚）；備案萩小町含早方案。"
+        },
+        {
+          "day": 3,
+          "date": "2026-11-23",
+          "base_zh": "下關溫泉・風之海飯店",
+          "highlights": [
+            "たたら遺跡",
+            "秋吉台",
+            "夢塔",
+            "平尾台僅備選",
+            "早餐しおさい"
+          ],
+          "drive_min": 171,
+          "text": "第 3 天（一）：經大板山たたら與秋吉台往下關，午後夢塔後入住。平尾台改為時間允許的備選，不計入預設車程。週一不排門司レトロ館。退房前先至しおさい早餐（約 08:00 起）；備案館內含早。本日勤勞感謝之日。"
+        },
+        {
+          "day": 4,
+          "date": "2026-11-24",
+          "base_zh": "別府溫泉・心庵旅館",
+          "highlights": [
+            "門司港短訪",
+            "茶寮午餐",
+            "駛往別府"
+          ],
+          "drive_min": 133,
+          "text": "第 4 天（二）：門司港短訪與午餐後直駛別府，16:30 前入住。別府晚餐：資料庫缺，待補。移動日目標 16:30 前抵達，以趕上溫泉旅館約 18:00 晚餐；日落約 17:10–17:20。不排門司電気通信レトロ館（11/24 翌平日休館），改関門海峡ミュージアム（當日開館）。"
+        },
+        {
+          "day": 5,
+          "date": "2026-11-25",
+          "base_zh": "別府溫泉・心庵旅館",
+          "highlights": [
+            "金鱗湖",
+            "湯之坪街道",
+            "由布院"
+          ],
+          "drive_min": 50,
+          "text": "第 5 天（三）：本路線先排由布院自然景（金鱗湖、湯之坪），與 A 線「先鐵輪後由布院」對調。本日在別府的餐點：資料庫缺，待補。"
+        },
+        {
+          "day": 6,
+          "date": "2026-11-26",
+          "base_zh": "別府溫泉・心庵旅館",
+          "highlights": [
+            "海地獄",
+            "金龍地獄",
+            "梅園溫泉"
+          ],
+          "drive_min": 23,
+          "text": "第 6 天（四）：鐵輪地獄與梅園溫泉，就近結束，為明天長途養體力。本日在別府的餐點：資料庫缺，待補。不排金龍地獄（已停業；原址地獄温泉ミュージアム可作備案）、鶴見地獄（不對外開放）。"
+        },
+        {
+          "day": 7,
+          "date": "2026-11-27",
+          "base_zh": "Pleasant 日向",
+          "highlights": [
+            "伊勢浜",
+            "馬ヶ背",
+            "細島燈塔",
+            "晚餐大漁や"
+          ],
+          "drive_min": 152,
+          "text": "第 7 天（五）：別府→日向，走海岸線（伊勢浜、馬ヶ背、細島燈塔），不排延岡城方向。移動日目標 16:30 前抵達，以趕上溫泉旅館約 18:00 晚餐；日落約 17:10–17:20。晚餐改大漁や（望洋館無晚市）。若住宿含晚餐可刪。備案金ヶ浜食堂（須預約）。"
+        },
+        {
+          "day": 8,
+          "date": "2026-11-28",
+          "base_zh": "Solest 高千穗酒店",
+          "highlights": [
+            "御鉾ケ浦",
+            "國見之丘",
+            "高千穗峽",
+            "晚餐 SAKUYA 本丸"
+          ],
+          "drive_min": 147,
+          "text": "第 8 天（六）：上午海岸短訪後山路往高千穗，先國見之丘再高千穗峽，16:30 前入住，避免夜間山路。本日在高千穗的餐點：資料庫缺，待補。晚餐為大衆焼き肉 SAKUYA 本丸（原咲耶更名）。"
+        },
+        {
+          "day": 9,
+          "date": "2026-11-29",
+          "base_zh": "Solest 高千穗酒店",
+          "highlights": [
+            "高千穗神社",
+            "天岩戶神社",
+            "天安河原",
+            "午餐隠れcafe",
+            "晚餐和（なごみ）"
+          ],
+          "drive_min": 47,
+          "text": "第 9 天（日）：神社與天安河原、高千穗橋梁，不排椎葉山區。本日在高千穗的餐點：資料庫缺，待補。午餐改為天岩戶附近アマテラスの隠れcafe（神茶家營業不明）；備案仲屋食堂。晚餐改高千穗牛和（無我夢中週日公休）；備案 SAKUYA 本丸。"
+        },
+        {
+          "day": 10,
+          "date": "2026-11-30",
+          "base_zh": "由樂島（位置未確認，暫定上天草市）",
+          "highlights": [
+            "早發",
+            "白川水源",
+            "草千里（視時間）",
+            "天門橋入住",
+            "午餐草千里食堂"
+          ],
+          "drive_min": 163,
+          "text": "第 10 天（一）：自然向移動日，嘗試白川水源與阿蘇草千里，再下山草往上天草。本段最長、有山路，必須早發；無法趕日落則割愛阿蘇，改直達。本日在由樂島（暫定上天草）的餐點：資料庫缺，待補。午餐改草千里食堂（しらかわ營業無法確認）；備案いまきん食堂（較繞路）。若取消草千里則此餐一併取消。"
+        },
+        {
+          "day": 11,
+          "date": "2026-12-01",
+          "base_zh": "由樂島（位置未確認，暫定上天草市）",
+          "highlights": [
+            "高舞登",
+            "天門橋",
+            "棚底城跡",
+            "早餐さんぱーる"
+          ],
+          "drive_min": 119,
+          "text": "第 11 天（二）：上天草島內（高舞登、天門橋、棚底城跡），不跨灣去島原。本日在由樂島（暫定上天草）的餐點：資料庫缺，待補。早餐保留さんぱーる（國交省 09:00–11:00，本日趕得上）；備案 AZcafe。"
+        },
+        {
+          "day": 12,
+          "date": "2026-12-02",
+          "base_zh": "嬉野溫泉・華翠苑飯店",
+          "highlights": [
+            "駛往嬉野",
+            "有田瓷公園（時間允許）",
+            "早餐さんぱーる"
+          ],
+          "drive_min": 159,
+          "text": "第 12 天（三）：上天草→嬉野，時間允許則順路有田瓷公園，16:30 前入住。途中午餐資料庫缺，待補。退房後至さんぱーる早餐再出發；若需 9 點前上路改 AZcafe。"
+        },
+        {
+          "day": 13,
+          "date": "2026-12-03",
+          "base_zh": "嬉野溫泉・華翠苑飯店",
+          "highlights": [
+            "宇宙科學館",
+            "神籠石",
+            "大茶樹",
+            "西博爾德之湯"
+          ],
+          "drive_min": 60,
+          "text": "第 13 天（四）：宇宙科學館、神籠石、大茶樹，晚間西博爾德之湯。與 A 線（祐德稻荷為主）錯開主題。"
+        },
+        {
+          "day": 14,
+          "date": "2026-12-04",
+          "base_zh": "福岡蒙特利飯店",
+          "highlights": [
+            "嬉野溫泉街",
+            "大濠公園",
+            "一蘭"
+          ],
+          "drive_min": 101,
+          "text": "第 14 天（五）：較直接的嬉野→福岡，下午大濠公園，晚餐一蘭。"
+        },
+        {
+          "day": 15,
+          "date": "2026-12-05",
+          "base_zh": "福岡蒙特利飯店",
+          "highlights": [
+            "九州國立博物館",
+            "志賀島金印之湯（時間允許）"
+          ],
+          "drive_min": 116,
+          "text": "第 15 天（六）：博物館為主，時間允許再去志賀島金印之湯，否則改市區。不排佔位座標的櫻井二見浦／原鶴。"
+        },
+        {
+          "day": 16,
+          "date": "2026-12-06",
+          "base_zh": "福岡機場（離境）",
+          "highlights": [
+            "一幸舍",
+            "還車",
+            "BR101"
+          ],
+          "drive_min": 13,
+          "text": "第 16 天（日）：簡短用餐後還車離境。"
+        }
+      ],
+      "warnings": [
+        "車程均為兩點座標估算（直線距離×路網係數÷假設時速），非正式路徑或 OSRM，出發前請用 Google Maps／NAVITIME 複核。",
+        "十一月下旬九州日落約 17:10–17:20，移動日以 16:30 前抵達住宿為目標，避開夜間山路；溫泉旅館晚餐多為 18:00 前後，從晚餐倒推最晚抵達。",
+        "BR106／BR101 時刻未在交接檔，第 1、16 天時間暫未鎖定，待機票確認。",
+        "由樂島（Yurakutei）位置未確認，暫定上天草市，路線中已註明。",
+        "資料庫候選 224 筆 mapcode 仍全部為 null，資料庫站點未編造 MapCode；本次 web 餐廳採用餐廳部已 saibara 反查的值。",
+        "未排入座標明顯錯誤的候選（別府重疊座標、乙丸溫泉館、福岡佔位座標的原鶴／櫻井二見浦／太宰府天滿宮 c198・c199 等），見 unresolved。",
+        "雲仙地獄／島原城雖在由樂島 35 km 半徑統計內，但位於島原半島、隔灣，需渡輪或大繞路，本路線不排入，避免當日無法在日落前返回。",
+        "B 線第 3 天平尾台、第 10 天白川水源／草千里、第 12 天有田、第 15 天志賀島均為「時間允許才去」，延誤就取消，不以夜間山路硬趕。",
+        "第 10 天若走阿蘇，車程估算偏長且為山路，必須 08:00 前離開高千穗。",
+        "餐點留空清單見 user_notes（萩／別府／日向／高千穗／由樂島，以及若干移動日途中午餐），標示「資料庫缺，待補」。",
+        "日向住宿晚溫泉：資料庫缺，待補。",
+        "2026-11-11 已依餐廳部 restaurant_swaps.json（12 筆）更新餐點：只用資料庫或 swaps 內的店，未編造店家；web 店 MapCode 僅採用餐廳部已 saibara 反查的值，資料庫候選仍為 null。",
+        "D7 日向晚餐已改いけすの大漁や。若住宿含晚餐可刪。trip/handoff 未載 Pleasant 日向含餐，無法確認。",
+        "D11、D12 早餐保留道の駅 上天草さんぱーる（國交省 09:00–11:00、L.O. 10:30，12 月無休館日）；與當日出發時間搭得上。若需 9 點前出發改 AZcafe Shidaka（06:00–10:00）。",
+        "D2／D3 朝食しおさい開店有 07:00／08:00 兩說，規劃以 08:00 為準。D3 為勤勞感謝之日。",
+        "多家標不定休或公休日待查（隠れcafe、草千里食堂、SAKUYA 本丸等），出發前請再確認；未訂位、未聯絡店家。",
+        "湯樂亭週三定休（D12 退房日），請向旅館確認週三早餐是否提供；含早／2 食方案則外食早餐可略過。",
+        "r_b D10 在草千里加午餐後，阿蘇段更緊（食堂 11:00 開始、L.O. 15:00）。須 08:00 前離開高千穗；延誤或天候不佳則取消草千里與該午餐，改直達上天草，避免夜間山路。",
+        "2026-11-11 已依景點部 places_spots.json 調整：11/24 門司電気通信レトロ館休館（A 線刪、B／C 改関門海峡ミュージアム）；八代市立博物館臨時休館（A11 刪，不另補）；金龍地獄已停業、鶴見地獄不開放（已刪；備案地獄温泉ミュージアム，大人 ¥1,500）；通潤橋 11/30 無放水、只看橋。補位只用 handoff 資料庫候選，未上網找新景點。",
+        "高千穂峡划船需上網預約，由安宏自行預訂（本部不代訂）。細島灯台只能看外觀。"
+      ]
+    },
+    {
+      "route_id": "r_c",
+      "title": "Slow pace, early check-in (short transfer days)",
+      "title_zh": "慢節奏、提早入住（移動從簡）",
+      "summary": "同一住宿順序，但移動日最多 1～2 個停點、以 16:00 前入住為目標；整天行程也減少跑點（萩只走市區、別府鐵輪與由布院各半日、日向只看馬ヶ背、高千穗移動日只排峽、上天草不繞阿蘇、福岡留在市區不跑太宰府）。適合不想趕路、優先泡湯與準時晚餐的走法。",
+      "fit_reasons": [
+        "住宿順序與晚數不變",
+        "每天開車以約 2～3 小時為原則，移動日不疊景點",
+        "最嚴格執行日落前抵達與溫泉晚餐倒推",
+        "仍涵蓋各站代表景點（萩城、門司レトロ館、海地獄、金鱗湖、馬ヶ背、高千穗峽、天門橋、祐德稻荷）"
+      ],
+      "bases": [
+        {
+          "area": "萩溫泉鄉萩小町旅館",
+          "nights": 2,
+          "area_zh": "萩溫泉鄉・萩小町旅館"
+        },
+        {
+          "area": "下關溫泉風之海飯店",
+          "nights": 1,
+          "area_zh": "下關溫泉・風之海飯店"
+        },
+        {
+          "area": "別府溫泉心庵旅館",
+          "nights": 3,
+          "area_zh": "別府溫泉・心庵旅館"
+        },
+        {
+          "area": "Pleasant Hyuga (Pleasant 日向)",
+          "nights": 1,
+          "area_zh": "Pleasant 日向"
+        },
+        {
+          "area": "Solest高千穗酒店 (Solest Takachiho Hotel)",
+          "nights": 2,
+          "area_zh": "Solest 高千穗酒店"
+        },
+        {
+          "area": "Yurakutei (由樂島)",
+          "nights": 2,
+          "area_zh": "由樂島（位置未確認，暫定上天草市）"
+        },
+        {
+          "area": "嬉野溫泉華翠苑飯店",
+          "nights": 2,
+          "area_zh": "嬉野溫泉・華翠苑飯店"
+        },
+        {
+          "area": "福岡蒙特利飯店",
+          "nights": 2,
+          "area_zh": "福岡蒙特利飯店"
+        }
+      ],
+      "days": [
+        {
+          "day": 1,
+          "date": "2026-11-21",
+          "drive_min": 156,
+          "stops": []
+        },
+        {
+          "day": 2,
+          "date": "2026-11-22",
+          "drive_min": 44,
+          "stops": [
+            {
+              "ref": "rf_hagi_shiosai",
+              "name": "珈琲館 しおさい／咖啡館",
+              "lat": 34.41723815,
+              "lng": 131.39405139,
+              "google_maps": "https://www.google.com/maps/dir/?api=1&destination=34.41723815,131.39405139&travelmode=driving",
+              "mapcode": "243 887 617*02",
+              "note": "早餐：珈琲館 しおさい／咖啡館（source:web，ref=rf_hagi_shiosai）。11/22 週日營業。開店時間有 07:00（Tabelog）與 08:00（萩市觀光協會）兩說，以 08:00 計較保險；營業至 16:00。公休：Tabelog 週四／觀光協會週三、週四，本日均非公休。原排むらやカフェ因 Tabelog 寫 09:00 開店、早餐偏晚而替換。第二順位：萩小町 館內早餐（需訂含早方案；時段官網未載）。若已訂含早則此餐可略過。MapCode 243 887 617*02（餐廳部 saibara 反查，誤差 1 m）。",
+              "source_url": "https://www.hagishi.com/search/list.php?c0=2&c1=6",
+              "leg_min": 5
+            },
+            {
+              "ref": "db:db_s_0cc3e686a5",
+              "name": "萩城",
+              "lat": 34.4175201,
+              "lng": 131.3837761,
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=34.4175201%2C131.3837761",
+              "mapcode": null,
+              "note": "萩城，停留約 80 分。（無 MapCode，用 google_maps）",
+              "source_url": "https://www.openstreetmap.org/node/11630385962",
+              "leg_min": 5
+            },
+            {
+              "ref": "db:db_s_a07c985095",
+              "name": "松下村塾",
+              "lat": 34.4121503,
+              "lng": 131.41733534999997,
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=34.4121503%2C131.41733534999997",
+              "mapcode": null,
+              "note": "松下村塾，停留約 50 分。（無 MapCode，用 google_maps）",
+              "source_url": "https://www.openstreetmap.org/way/555592247",
+              "leg_min": 8
+            },
+            {
+              "ref": "db:db_s_c44445f58c",
+              "name": "石井茶碗美術館",
+              "lat": 34.410612,
+              "lng": 131.393191,
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=34.410612%2C131.393191",
+              "mapcode": null,
+              "note": "石井茶碗美術館，停留約 40 分。（無 MapCode，用 google_maps）",
+              "source_url": "https://www.openstreetmap.org/node/1423660226",
+              "leg_min": 6
+            },
+            {
+              "ref": "db:db_s_c5ed6ae4d7",
+              "name": "萩陶芸美術館・吉賀大眉記念館",
+              "lat": 34.425111,
+              "lng": 131.415372,
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=34.425111%2C131.415372",
+              "mapcode": null,
+              "note": "萩陶藝美術館・吉賀大眉記念館，停留約 40 分。（無 MapCode，用 google_maps）",
+              "source_url": "https://www.openstreetmap.org/node/1423660860",
+              "leg_min": 7
+            },
+            {
+              "ref": "db:db_s_95d6b77d92",
+              "name": "萩史料館",
+              "lat": 34.415627,
+              "lng": 131.381759,
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=34.415627%2C131.381759",
+              "mapcode": null,
+              "note": "萩史料館，停留約 40 分後早回旅館泡湯。（無 MapCode，用 google_maps） 本日在萩的餐點：資料庫缺，待補。",
+              "source_url": "https://www.openstreetmap.org/node/1423660799",
+              "leg_min": 8
+            }
+          ]
+        },
+        {
+          "day": 3,
+          "date": "2026-11-23",
+          "drive_min": 100,
+          "stops": [
+            {
+              "ref": "rf_hagi_shiosai",
+              "name": "珈琲館 しおさい／咖啡館",
+              "lat": 34.41723815,
+              "lng": 131.39405139,
+              "google_maps": "https://www.google.com/maps/dir/?api=1&destination=34.41723815,131.39405139&travelmode=driving",
+              "mapcode": "243 887 617*02",
+              "note": "早餐：珈琲館 しおさい／咖啡館（source:web，ref=rf_hagi_shiosai）。11/23 週一營業。開店時間有 07:00（Tabelog）與 08:00（萩市觀光協會）兩說，以 08:00 計較保險；營業至 16:00。公休：Tabelog 週四／觀光協會週三、週四，本日均非公休。本日為勤勞感謝之日（國定假日），店家未列當日休。原排むらやカフェ因 Tabelog 寫 09:00 開店、早餐偏晚而替換。第二順位：萩小町 館內早餐（需訂含早方案；時段官網未載）。若已訂含早則此餐可略過。MapCode 243 887 617*02（餐廳部 saibara 反查，誤差 1 m）。",
+              "source_url": "https://www.hagishi.com/search/list.php?c0=2&c1=6",
+              "leg_min": 5
+            },
+            {
+              "ref": "db:db_s_cdf9fdca35",
+              "name": "赤間神宮宝物殿",
+              "lat": 33.959563599999996,
+              "lng": 130.94849025000002,
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=33.959563599999996%2C130.94849025000002",
+              "mapcode": null,
+              "note": "直駛下關（不經秋吉台，縮短移動），赤間神宮寶物殿，停留約 40 分。（無 MapCode，用 google_maps）",
+              "source_url": "https://www.openstreetmap.org/way/320351803",
+              "leg_min": 80
+            },
+            {
+              "ref": "db:db_s_81e984d61a",
+              "name": "日清議和紀念館",
+              "lat": 33.95904075,
+              "lng": 130.948352,
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=33.95904075%2C130.948352",
+              "mapcode": null,
+              "note": "日清議和紀念館，停留約 40 分。（無 MapCode，用 google_maps）",
+              "source_url": "https://www.openstreetmap.org/way/552006984",
+              "leg_min": 5
+            },
+            {
+              "ref": "db:db_s_6457f1dc88",
+              "name": "下関市立近代先人顕彰館（田中絹代ぶんか館）",
+              "lat": 33.9590897,
+              "lng": 130.94119595,
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=33.9590897%2C130.94119595",
+              "mapcode": null,
+              "note": "下關市立近代先人顯彰館（田中絹代文化館，距中心約 0.2 km），停留約 40 分後提早入住。（無 MapCode，用 google_maps） 移動日目標 16:30 前抵達，以趕上溫泉旅館約 18:00 晚餐；日落約 17:10–17:20。",
+              "source_url": "https://www.openstreetmap.org/way/1005110393",
+              "leg_min": 5
+            }
+          ]
+        },
+        {
+          "day": 4,
+          "date": "2026-11-24",
+          "drive_min": 126,
+          "stops": [
+            {
+              "ref": "db:db_s_9b2edb121e",
+              "name": "関門海峡ミュージアム",
+              "lat": 33.943799600000006,
+              "lng": 130.95678264999998,
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=33.943799600000006%2C130.95678264999998",
+              "mapcode": null,
+              "note": "關門海峽博物館（替補原排門司電気通信レトロ館）。11/23 勤勞感謝之日，レトロ館依「週一休、逢假日改翌平日」於 11/24（二）休館，故改排本館。本館 09:00–17:00（入館至 16:30）；2026 年休館日 3/10、6/9、9/8、11/10，11/24 非休館日。大人 ¥500／中小學生 ¥200，停留約 60 分。建議 09:00 開門後參觀，中午前結束以免晚抵別府。（無 MapCode，用 google_maps）",
+              "source_url": "https://www.openstreetmap.org/way/969230646",
+              "leg_min": 7
+            },
+            {
+              "ref": "db:db_s_473ea616df",
+              "name": "旧門司三井倶楽部",
+              "lat": 33.94573054999999,
+              "lng": 130.96257545,
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=33.94573054999999%2C130.96257545",
+              "mapcode": null,
+              "note": "舊門司三井俱樂部，停留約 25 分。（無 MapCode，用 google_maps）",
+              "source_url": "https://www.openstreetmap.org/way/627252021",
+              "leg_min": 5
+            },
+            {
+              "ref": "db:db_r_cd2d93e583",
+              "name": "海鮮燒咖哩 伽哩本舗",
+              "lat": 33.9459244,
+              "lng": 130.9615312,
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=33.9459244%2C130.9615312",
+              "mapcode": null,
+              "note": "午餐：海鮮燒咖哩 伽哩本舗（門司港レトロ店，db:db_r_cd2d93e583）。11/24 週二，營業 11:00–19:30（不定休，當天需現場確認）；11:30–12:00 用餐在營業時間內。原排みかど食堂（Tabelog 標示永久閉店）已替換。距原店約 110 m。第二順位：門司港茶寮 別館（db:db_r_3d710ec62a，10:00–21:00，3–12 月全年無休；路線 B 同日已排此店）。MapCode 依資料庫候選為 null（餐廳部另有 saibara 值，未寫入以免與候選不一致）。請 12 點前用完再上路。",
+              "source_url": "https://www.openstreetmap.org/node/5563248322",
+              "leg_min": 0
+            }
+          ]
+        },
+        {
+          "day": 5,
+          "date": "2026-11-25",
+          "drive_min": 24,
+          "stops": [
+            {
+              "ref": "db:db_s_db077bef4c",
+              "name": "海地獄",
+              "lat": 33.3158884,
+              "lng": 131.4696829,
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=33.3158884%2C131.4696829",
+              "mapcode": null,
+              "note": "海地獄，停留約 45 分。（無 MapCode，用 google_maps）鶴見地獄為私有地／寺院境內、不對外開放，已從本日路線刪除。",
+              "source_url": "https://www.visit-oita.jp/spots/detail/4589",
+              "leg_min": 10
+            },
+            {
+              "ref": "db:db_o_bc55f8b8c1",
+              "name": "竹瓦温泉",
+              "lat": 33.2774716,
+              "lng": 131.50597894999999,
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=33.2774716%2C131.50597894999999",
+              "mapcode": null,
+              "note": "竹瓦溫泉（至 22:30），午後早回心庵休息。（無 MapCode，用 google_maps） 本日在別府的餐點：資料庫缺，待補。",
+              "source_url": "https://www.openstreetmap.org/way/338231731",
+              "leg_min": 9
+            }
+          ]
+        },
+        {
+          "day": 6,
+          "date": "2026-11-26",
+          "drive_min": 44,
+          "stops": [
+            {
+              "ref": "db:db_s_2309db8488",
+              "name": "金鱗湖",
+              "lat": 33.2667196,
+              "lng": 131.3690386,
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=33.2667196%2C131.3690386",
+              "mapcode": null,
+              "note": "金鱗湖，停留約 50 分。（無 MapCode，用 google_maps）",
+              "source_url": "https://www.visit-oita.jp/special1/detail/5",
+              "leg_min": 19
+            },
+            {
+              "ref": "db:db_s_269ba95595",
+              "name": "湯之坪街道",
+              "lat": 33.2660923,
+              "lng": 131.3632115,
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=33.2660923%2C131.3632115",
+              "mapcode": null,
+              "note": "湯之坪街道，停留約 50 分，14:30 左右返回別府，不趕其他點。（無 MapCode，用 google_maps） 本日在別府的餐點：資料庫缺，待補。",
+              "source_url": "https://www.visit-oita.jp/myplan/detail/149",
+              "leg_min": 5
+            }
+          ]
+        },
+        {
+          "day": 7,
+          "date": "2026-11-27",
+          "drive_min": 140,
+          "stops": [
+            {
+              "ref": "db:db_s_14f1c6a3af",
+              "name": "馬ヶ背 Umagase",
+              "lat": 32.4242057,
+              "lng": 131.6870368,
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=32.4242057%2C131.6870368",
+              "mapcode": null,
+              "note": "午後抵日向後只排馬ヶ背一處（日落前），隨即入住。途中午餐與日向溫泉：資料庫缺，待補。日向晚餐已改いけすの大漁や（見當日最後一站；若住宿含晚餐可刪）。（無 MapCode，用 google_maps） 移動日目標 16:30 前抵達，以趕上溫泉旅館約 18:00 晚餐；日落約 17:10–17:20。",
+              "source_url": "https://www.openstreetmap.org/node/951252220",
+              "leg_min": 120
+            },
+            {
+              "ref": "rf_hyu_tairyoya",
+              "name": "いけすの大漁や／活魚大漁屋",
+              "lat": 32.42526304,
+              "lng": 131.62397571,
+              "google_maps": "https://www.google.com/maps/dir/?api=1&destination=32.42526304,131.62397571&travelmode=driving",
+              "mapcode": "136 315 544*14",
+              "note": "晚餐：いけすの大漁や／活魚大漁屋（ホテルベルフォート日向1F，距 Pleasant 日向約 300 m，source:web，ref=rf_hyu_tairyoya）。11/27 週五 17:00–21:00（另 11:00–14:00；12/31–1/1 休）。原排望洋館因 Tabelog 只列 11:30–15:00、無晚間營業而替換。若住宿含晚餐可刪。trip.json 無此行程檔；handoff.json 未載 Pleasant 日向含餐方案，無法確認（餐廳部記入官網「絕對附餐」、2 食方案，但不在 handoff）。第二順位：金ヶ浜食堂／金濱食堂（18:00–20:00，週五非公休；晚餐限住宿客與事先預約，本部未聯絡、未訂位）。MapCode 136 315 544*14（餐廳部 saibara 反查，誤差 1 m）。",
+              "source_url": "https://www.hotpepper.jp/strJ000902244/",
+              "leg_min": 15
+            }
+          ]
+        },
+        {
+          "day": 8,
+          "date": "2026-11-28",
+          "drive_min": 129,
+          "stops": [
+            {
+              "ref": "db:db_s_b92dba1f0d",
+              "name": "大御神社",
+              "lat": 32.4116829,
+              "lng": 131.6498851,
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=32.4116829%2C131.6498851",
+              "mapcode": null,
+              "note": "退房前大御神社，停留約 25 分，10:30 前上路。途中午餐：資料庫缺，待補。（無 MapCode，用 google_maps）",
+              "source_url": "https://oomijinja.or.jp/",
+              "leg_min": 7
+            },
+            {
+              "ref": "db:db_s_d265e2d834",
+              "name": "高千穗峽",
+              "lat": 32.7017851,
+              "lng": 131.300939,
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=32.7017851%2C131.300939",
+              "mapcode": null,
+              "note": "高千穗峽（白天抵達），停留約 60 分後直接入住，不排其他點。（無 MapCode，用 google_maps） 本日途中午餐：資料庫缺，待補。晚餐見大衆焼き肉 SAKUYA 本丸。 移動日目標 16:30 前抵達，以趕上溫泉旅館約 18:00 晚餐；日落約 17:10–17:20。高千穂峡划船需上網預約，由安宏自行預訂。",
+              "source_url": "https://takachiho-kanko.info/faq/",
+              "leg_min": 112
+            },
+            {
+              "ref": "rf_tak_sakuya",
+              "name": "大衆焼き肉 SAKUYA 本丸",
+              "lat": 32.710256076,
+              "lng": 131.308109523,
+              "google_maps": "https://www.google.com/maps/dir/?api=1&destination=32.710256076,131.308109523&travelmode=driving",
+              "mapcode": "330 742 727*45",
+              "note": "晚餐：大衆焼き肉 SAKUYA 本丸（同址同電話，店名由「咲耶 SAKUYA」更改；source:web，ref=rf_tak_sakuya）。11/28 週六 12:00–16:00、17:00–20:30。公休日待查（來源或寫週一、週二或週二、週三），均不含週六，判定營業。只收電話預約（Tabelog）；本部未訂位、未聯絡。Solest 若訂含晚方案（18:00–21:00）則此餐可略過。此筆為店名／業態更正，無第二順位。MapCode 330 742 727*45（餐廳部 saibara 反查，誤差 2 m）。",
+              "source_url": "https://takachiho-kanko.info/gourmet/48/",
+              "leg_min": 5
+            }
+          ]
+        },
+        {
+          "day": 9,
+          "date": "2026-11-29",
+          "drive_min": 44,
+          "stops": [
+            {
+              "ref": "db:db_s_6b8f8cdbbb",
+              "name": "高千穗神社",
+              "lat": 32.7066706,
+              "lng": 131.3018922,
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=32.7066706%2C131.3018922",
+              "mapcode": null,
+              "note": "高千穗神社，停留約 40 分。（無 MapCode，用 google_maps）",
+              "source_url": "https://takachiho-kanko.info/faq/",
+              "leg_min": 5
+            },
+            {
+              "ref": "db:db_s_3e09b24b3f",
+              "name": "天岩戶神社",
+              "lat": 32.7368079722222,
+              "lng": 131.3503695,
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=32.7368079722222%2C131.3503695",
+              "mapcode": null,
+              "note": "天岩戶神社，停留約 50 分。（無 MapCode，用 google_maps）",
+              "source_url": "https://takachiho-kanko.info/datas/files/2023/02/23/c8799c02bb5290073cf93683d1a7d53a30c6d009.pdf",
+              "leg_min": 10
+            },
+            {
+              "ref": null,
+              "name": "アマテラスの隠れcafe",
+              "lat": 32.7355756579069,
+              "lng": 131.35120122052942,
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=32.7355756579069,131.35120122052942",
+              "mapcode": "330 837 762*44",
+              "note": "午餐：アマテラスの隠れcafe（天岩戶神社附近約 155 m，source:web）。11/29 週日，10:00–17:00（不定休，當天需確認）。原排神茶家因西臼杵觀光網站標題寫【閉店】、營業狀況不明而替換。第二順位：仲屋食堂（11:30–14:00，距神社約 520 m，可電話預約；本部未聯絡）。MapCode 330 837 762*44（餐廳部 saibara 換算並反查，誤差 1.1 m）。",
+              "source_url": "https://tabelog.com/tw/miyazaki/A4505/A450502/45007779/",
+              "leg_min": 5
+            },
+            {
+              "ref": "db:db_s_ddabb91cd6",
+              "name": "天安河原",
+              "lat": 32.7378698,
+              "lng": 131.3532338,
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=32.7378698%2C131.3532338",
+              "mapcode": null,
+              "note": "天安河原，停留約 40 分，午後早回。（無 MapCode，用 google_maps） 本日在高千穗的餐點：資料庫缺，待補。",
+              "source_url": "https://takachiho-kanko.info/datas/files/2023/02/23/c8799c02bb5290073cf93683d1a7d53a30c6d009.pdf",
+              "leg_min": 5
+            },
+            {
+              "ref": "rf_tak_nagomi",
+              "name": "高千穂牛レストラン 和（なごみ）／高千穗牛餐廳和",
+              "lat": 32.70762535791,
+              "lng": 131.30598019028,
+              "google_maps": "https://www.google.com/maps/dir/?api=1&destination=32.70762535791,131.30598019028&travelmode=driving",
+              "mapcode": "330 742 450*52",
+              "note": "晚餐：高千穂牛レストラン 和（なごみ）（source:web，ref=rf_tak_nagomi）。11/29 週日 11:00–14:30、17:00–21:00（L.O. 20:30），週三公休、本日營業。原排居酒屋 無我夢中因 Tabelog 寫週日公休（11/29 為週日）而替換。Solest 若訂含晚方案（18:00–21:00）則此餐可略過。第二順位：大衆焼き肉 SAKUYA 本丸（原「咲耶 SAKUYA」，17:00–20:30；公休日待查，各來源週日均非公休，判定營業）。未採用資料庫 c126「高千穗牛餐廳 和」（座標與飯店中心重合，不可靠），改用餐廳部 Tabelog 座標。MapCode 330 742 450*52（餐廳部 saibara 反查，誤差 1 m）。",
+              "source_url": "https://takachiho-kanko.info/gourmet/31/",
+              "leg_min": 14
+            }
+          ]
+        },
+        {
+          "day": 10,
+          "date": "2026-11-30",
+          "drive_min": 104,
+          "stops": [
+            {
+              "ref": "db:db_s_b312097f35",
+              "name": "天門橋",
+              "lat": 32.6112221,
+              "lng": 130.4584886,
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=32.6112221%2C130.4584886",
+              "mapcode": null,
+              "note": "不繞阿蘇、不通潤橋，直駛上天草。途中午餐：資料庫缺，待補。抵天上草後只看天門橋，盡早確認並入住由樂島（位置未確認，暫定上天草市）。（無 MapCode，用 google_maps） 本日在由樂島（暫定上天草）的餐點：資料庫缺，待補。 移動日目標 16:30 前抵達，以趕上溫泉旅館約 18:00 晚餐；日落約 17:10–17:20。",
+              "source_url": "https://www.openstreetmap.org/node/5603040088",
+              "leg_min": 99
+            }
+          ]
+        },
+        {
+          "day": 11,
+          "date": "2026-12-01",
+          "drive_min": 67,
+          "stops": [
+            {
+              "ref": "rf_kam_sunpearl",
+              "name": "道の駅 上天草さんぱーる",
+              "lat": 32.5768726,
+              "lng": 130.4201925,
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=32.5768726,130.4201925",
+              "mapcode": "372 845 740*14",
+              "note": "早餐：保留道の駅 上天草さんぱーる（source:web，ref=rf_kam_sunpearl）。國交省道之驛頁面寫餐廳早餐 09:00–11:00（L.O. 10:30），12 月無休館日（https://www.qsr.mlit.go.jp/n-michi/michi_no_eki/kobetu/kamiamakusa/kamiamakusa.html）；Tabelog 只列 11:00–15:00，故餐廳部曾建議改店。本日為上天草遊覽日、無須 9 點前出發，09:00 開店趕得上，故不改店。備案（原第一順位替代）：AZcafe Shidaka（HOTEL AZ 熊本上天草店早餐自助，06:00–10:00、最後入場 09:30，非住客可用，¥880）。再備案：ジョイフル 大矢野店（08:00–翌 01:00，無休）。湯樂亭若訂 1 泊朝食／2 食則此餐可略過。MapCode 372 845 740*14（餐廳部填入）。",
+              "source_url": "https://www.qsr.mlit.go.jp/n-michi/michi_no_eki/kobetu/kamiamakusa/kamiamakusa.html",
+              "leg_min": 5
+            },
+            {
+              "ref": "db:db_s_d980d846c7",
+              "name": "高舞登山展望區",
+              "lat": 32.522572,
+              "lng": 130.4416406,
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=32.522572%2C130.4416406",
+              "mapcode": null,
+              "note": "高舞登山展望區，停留約 50 分。（無 MapCode，用 google_maps）",
+              "source_url": "https://kami-amakusa.jp/archives/view/1563",
+              "leg_min": 13
+            },
+            {
+              "ref": "db:db_s_540d53f815",
+              "name": "道の駅 宇土ﾏﾘｰﾅ",
+              "lat": 32.662287,
+              "lng": 130.522806,
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=32.662287%2C130.522806",
+              "mapcode": null,
+              "note": "道の駅 宇土マリーナ，停留約 40 分後返回，不延伸到八代。（無 MapCode，用 google_maps） 本日在由樂島（暫定上天草）的餐點：資料庫缺，待補。",
+              "source_url": "https://www.openstreetmap.org/node/5603043152",
+              "leg_min": 29
+            }
+          ]
+        },
+        {
+          "day": 12,
+          "date": "2026-12-02",
+          "drive_min": 100,
+          "stops": [
+            {
+              "ref": "rf_kam_sunpearl",
+              "name": "道の駅 上天草さんぱーる",
+              "lat": 32.5768726,
+              "lng": 130.4201925,
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=32.5768726,130.4201925",
+              "mapcode": "372 845 740*14",
+              "note": "早餐：保留道の駅 上天草さんぱーる（source:web，ref=rf_kam_sunpearl）。國交省頁面寫早餐 09:00–11:00（L.O. 10:30），12 月無休館日。湯樂亭 checkout 10:00，店距旅館約數公里，可 9:00 前後退房後再用餐、約 10:00–10:30 出發；往嬉野車程估算約 1.5–3 小時，仍可在 16:30 前入住，故不改店。若需 9 點前出發，改備案 AZcafe Shidaka（06:00–10:00，最後入場 09:30）。再備案：ジョイフル 大矢野店（08:00 起）。湯樂亭週三定休（D12 為退房日），請向旅館確認週二入住的週三早餐是否照常；若已訂含早則此餐可略過。MapCode 372 845 740*14（餐廳部填入）。",
+              "source_url": "https://www.qsr.mlit.go.jp/n-michi/michi_no_eki/kobetu/kamiamakusa/kamiamakusa.html",
+              "leg_min": 5
+            },
+            {
+              "ref": "db:db_s_752215c5cb",
+              "name": "嬉野溫泉街",
+              "lat": 33.1066719,
+              "lng": 129.9989438,
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=33.1066719%2C129.9989438",
+              "mapcode": null,
+              "note": "直駛嬉野（不繞有田），抵達走溫泉街後入住。週三不排西博爾德之湯。途中午餐：資料庫缺，待補。（無 MapCode，用 google_maps） 移動日目標 16:30 前抵達，以趕上溫泉旅館約 18:00 晚餐；日落約 17:10–17:20。",
+              "source_url": "https://spa-u.net/",
+              "leg_min": 87
+            }
+          ]
+        },
+        {
+          "day": 13,
+          "date": "2026-12-03",
+          "drive_min": 49,
+          "stops": [
+            {
+              "ref": "db:db_s_3a89f2d7ae",
+              "name": "祐德稻荷神社",
+              "lat": 33.0743975,
+              "lng": 130.1080648,
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=33.0743975%2C130.1080648",
+              "mapcode": null,
+              "note": "祐德稻荷神社，停留約 70 分。（無 MapCode，用 google_maps）",
+              "source_url": "https://www.yutokusan.jp/about/access/",
+              "leg_min": 13
+            },
+            {
+              "ref": "db:db_s_752215c5cb",
+              "name": "嬉野溫泉街",
+              "lat": 33.1066719,
+              "lng": 129.9989438,
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=33.1066719%2C129.9989438",
+              "mapcode": null,
+              "note": "嬉野溫泉街，停留約 40 分。（無 MapCode，用 google_maps）",
+              "source_url": "https://spa-u.net/",
+              "leg_min": 18
+            },
+            {
+              "ref": "db:db_o_4186870dff",
+              "name": "シーボルトの湯",
+              "lat": 33.09656645,
+              "lng": 129.9855805,
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=33.09656645%2C129.9855805",
+              "mapcode": null,
+              "note": "西博爾德之湯（週四開），停留約 50 分。（無 MapCode，用 google_maps）",
+              "source_url": "https://www.openstreetmap.org/way/568000739",
+              "leg_min": 5
+            }
+          ]
+        },
+        {
+          "day": 14,
+          "date": "2026-12-04",
+          "drive_min": 120,
+          "stops": [
+            {
+              "ref": "db:db_r_80c7e85d6c",
+              "name": "福喜寿司",
+              "lat": 33.206026,
+              "lng": 130.3744623,
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=33.206026%2C130.3744623",
+              "mapcode": null,
+              "note": "往福岡經大川，午餐福喜壽司（無營業時間資料，現場確認）。（無 MapCode，用 google_maps）",
+              "source_url": "https://www.openstreetmap.org/way/743661419",
+              "leg_min": 52
+            },
+            {
+              "ref": "db:db_s_a37d49450d",
+              "name": "博多歴史館",
+              "lat": 33.59279815,
+              "lng": 130.41091905,
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=33.59279815%2C130.41091905",
+              "mapcode": null,
+              "note": "博多歷史館，停留約 40 分。（無 MapCode，用 google_maps）",
+              "source_url": "https://www.openstreetmap.org/way/379059633",
+              "leg_min": 53
+            },
+            {
+              "ref": "db:db_s_ecc2367753",
+              "name": "博多千年門",
+              "lat": 33.59441265,
+              "lng": 130.41712185,
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=33.59441265%2C130.41712185",
+              "mapcode": null,
+              "note": "博多千年門，停留約 15 分。（無 MapCode，用 google_maps）",
+              "source_url": "https://www.openstreetmap.org/way/611032667",
+              "leg_min": 5
+            },
+            {
+              "ref": "db:db_r_dfe514d8e4",
+              "name": "博多華味鳥",
+              "lat": 33.5921503,
+              "lng": 130.4142553,
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=33.5921503%2C130.4142553",
+              "mapcode": null,
+              "note": "晚餐：統一為博多華味鳥 祇園店（db:db_r_dfe514d8e4），不是博多站前店。12/4 週五 17:00–23:00（L.O. 22:00）。前一站博多千年門約 360 m、博多歷史館約 320 m。建議電話預約（不接受自動代訂）；本部未訂位、未聯絡。第二順位：博多華味鳥 博多站前店（db:db_r_2c94b7cb7a；資料庫座標與祇園店相同，實際約在 486 m 外）。名稱／座標／mapcode 維持資料庫候選（mapcode=null）。入住蒙特利。",
+              "source_url": "https://www.openstreetmap.org/node/5074995822",
+              "leg_min": 5
+            }
+          ]
+        },
+        {
+          "day": 15,
+          "date": "2026-12-05",
+          "drive_min": 31,
+          "stops": [
+            {
+              "ref": "db:db_s_9148bc3a8e",
+              "name": "博多町家鄉土館",
+              "lat": 33.5936544,
+              "lng": 130.4115066,
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=33.5936544%2C130.4115066",
+              "mapcode": null,
+              "note": "博多町家鄉土館（10:00-18:00），停留約 40 分。（無 MapCode，用 google_maps）",
+              "source_url": "https://www.openstreetmap.org/node/4293172389",
+              "leg_min": 5
+            },
+            {
+              "ref": "db:db_s_5127f3c14a",
+              "name": "庭園茶屋 樂水園",
+              "lat": 33.5865548,
+              "lng": 130.4132676,
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=33.5865548%2C130.4132676",
+              "mapcode": null,
+              "note": "庭園茶屋 樂水園，停留約 40 分。（無 MapCode，用 google_maps）",
+              "source_url": "https://www.openstreetmap.org/node/4292822790",
+              "leg_min": 5
+            },
+            {
+              "ref": "db:db_s_78b9489288",
+              "name": "大濠公園",
+              "lat": 33.5861214,
+              "lng": 130.3763612,
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=33.5861214%2C130.3763612",
+              "mapcode": null,
+              "note": "大濠公園，停留約 40 分。（無 MapCode，用 google_maps）",
+              "source_url": "https://www.ohorikouen.jp/about/",
+              "leg_min": 9
+            },
+            {
+              "ref": "db:db_o_468b8dbbf4",
+              "name": "みなと温泉 波葉の湯",
+              "lat": 33.603742999999994,
+              "lng": 130.39811165,
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=33.603742999999994%2C130.39811165",
+              "mapcode": null,
+              "note": "波葉之湯（10:00-23:00）。不排太宰府（天滿宮座標不可靠；若想去博物館見 B／A 線）。（無 MapCode，用 google_maps）",
+              "source_url": "https://www.openstreetmap.org/way/1411284390",
+              "leg_min": 7
+            }
+          ]
+        },
+        {
+          "day": 16,
+          "date": "2026-12-06",
+          "drive_min": 14,
+          "stops": [
+            {
+              "ref": "db:db_r_c51b971faa",
+              "name": "FUK COFFEE",
+              "lat": 33.5908233,
+              "lng": 130.4127936,
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=33.5908233%2C130.4127936",
+              "mapcode": null,
+              "note": "FUK COFFEE 後還車，搭 BR101。時刻待補。（無 MapCode，用 google_maps）",
+              "source_url": "https://www.openstreetmap.org/node/12364549376",
+              "leg_min": 5
+            }
+          ]
+        }
+      ],
+      "day_summaries": [
+        {
+          "day": 1,
+          "date": "2026-11-21",
+          "base_zh": "萩溫泉鄉・萩小町旅館",
+          "highlights": [
+            "取車直上萩入住"
+          ],
+          "drive_min": 156,
+          "text": "第 1 天（六）：只做機場取車與北上萩，中途不排景點，盡早入住休息。餐點：資料庫缺，待補。移動日目標 16:30 前抵達，以趕上溫泉旅館約 18:00 晚餐；日落約 17:10–17:20。"
+        },
+        {
+          "day": 2,
+          "date": "2026-11-22",
+          "base_zh": "萩溫泉鄉・萩小町旅館",
+          "highlights": [
+            "萩城",
+            "松下村塾",
+            "兩座美術館",
+            "早餐しおさい"
+          ],
+          "drive_min": 44,
+          "text": "第 2 天（日）：只走萩市區博物館與城下，不跑 15 km 以外據點，節奏放慢。本日在萩的餐點：資料庫缺，待補。早餐改珈琲館しおさい（むらやカフェ偏晚）；備案萩小町含早方案。"
+        },
+        {
+          "day": 3,
+          "date": "2026-11-23",
+          "base_zh": "下關溫泉・風之海飯店",
+          "highlights": [
+            "直駛下關",
+            "赤間神宮",
+            "議和紀念館",
+            "提早入住",
+            "早餐しおさい"
+          ],
+          "drive_min": 100,
+          "text": "第 3 天（一）：萩→下關不繞路，下午兩三處市區館後入住。週一不排門司レトロ館。退房前先至しおさい早餐（約 08:00 起）；備案館內含早。本日勤勞感謝之日。"
+        },
+        {
+          "day": 4,
+          "date": "2026-11-24",
+          "base_zh": "別府溫泉・心庵旅館",
+          "highlights": [
+            "門司港短訪",
+            "直駛別府提早入住",
+            "午餐伽哩本舗"
+          ],
+          "drive_min": 126,
+          "text": "第 4 天（二）：門司港兩點加午餐，午後一條高速公路到別府，目標 16:00 前入住休息。移動日目標 16:30 前抵達，以趕上溫泉旅館約 18:00 晚餐；日落約 17:10–17:20。 別府晚餐：資料庫缺，待補。午餐改為伽哩本舗（みかど食堂已閉店）；備案門司港茶寮別館。不排門司電気通信レトロ館（11/24 翌平日休館），改関門海峡ミュージアム（當日開館）。"
+        },
+        {
+          "day": 5,
+          "date": "2026-11-25",
+          "base_zh": "別府溫泉・心庵旅館",
+          "highlights": [
+            "海地獄",
+            "鶴見地獄",
+            "竹瓦溫泉"
+          ],
+          "drive_min": 24,
+          "text": "第 5 天（三）：只排鐵輪近距的海地獄與竹瓦，半天行程。不排鶴見地獄（不對外開放）。本日在別府的餐點：資料庫缺，待補。"
+        },
+        {
+          "day": 6,
+          "date": "2026-11-26",
+          "base_zh": "別府溫泉・心庵旅館",
+          "highlights": [
+            "金鱗湖",
+            "湯之坪（半日）"
+          ],
+          "drive_min": 44,
+          "text": "第 6 天（四）：由布院半日（金鱗湖、湯之坪），午後回別府休息，為明天移動留體力。本日在別府的餐點：資料庫缺，待補。"
+        },
+        {
+          "day": 7,
+          "date": "2026-11-27",
+          "base_zh": "Pleasant 日向",
+          "highlights": [
+            "直駛日向",
+            "馬ヶ背",
+            "提早入住",
+            "晚餐大漁や"
+          ],
+          "drive_min": 140,
+          "text": "第 7 天（五）：別府直駛日向，只看馬ヶ背就入住，減少沿海跑點。晚餐改大漁や（望洋館無晚市）。若住宿含晚餐可刪。備案金ヶ浜食堂（須預約）。"
+        },
+        {
+          "day": 8,
+          "date": "2026-11-28",
+          "base_zh": "Solest 高千穗酒店",
+          "highlights": [
+            "大御神社",
+            "高千穗峽",
+            "提早入住",
+            "晚餐 SAKUYA 本丸"
+          ],
+          "drive_min": 129,
+          "text": "第 8 天（六）：神社短訪後走山路，只排高千穗峽並提早入住，最優先避開夜間山路。本日在高千穗的餐點：資料庫缺，待補。晚餐為大衆焼き肉 SAKUYA 本丸（原咲耶更名）。"
+        },
+        {
+          "day": 9,
+          "date": "2026-11-29",
+          "base_zh": "Solest 高千穗酒店",
+          "highlights": [
+            "高千穗神社",
+            "天岩戶神社",
+            "天安河原",
+            "午餐隠れcafe",
+            "晚餐和（なごみ）"
+          ],
+          "drive_min": 44,
+          "text": "第 9 天（日）：只走神社與天安河原三處，不排國見之丘以北或椎葉。本日在高千穗的餐點：資料庫缺，待補。午餐改為天岩戶附近アマテラスの隠れcafe（神茶家營業不明）；備案仲屋食堂。晚餐改高千穗牛和（無我夢中週日公休）；備案 SAKUYA 本丸。"
+        },
+        {
+          "day": 10,
+          "date": "2026-11-30",
+          "base_zh": "由樂島（位置未確認，暫定上天草市）",
+          "highlights": [
+            "直駛上天草",
+            "天門橋",
+            "提早入住"
+          ],
+          "drive_min": 104,
+          "text": "第 10 天（一）：本路線最保守的移動日——直達上天草、只停天門橋，爭取 16:00 前入住，降低山路與日落風險。"
+        },
+        {
+          "day": 11,
+          "date": "2026-12-01",
+          "base_zh": "由樂島（位置未確認，暫定上天草市）",
+          "highlights": [
+            "高舞登",
+            "宇土marina",
+            "早餐さんぱーる"
+          ],
+          "drive_min": 67,
+          "text": "第 11 天（二）：高舞登與宇土道之驛兩點，午後回住。餐點：資料庫缺，待補。早餐保留さんぱーる（國交省 09:00–11:00，本日趕得上）；備案 AZcafe。"
+        },
+        {
+          "day": 12,
+          "date": "2026-12-02",
+          "base_zh": "嬉野溫泉・華翠苑飯店",
+          "highlights": [
+            "直駛嬉野入住",
+            "早餐さんぱーる"
+          ],
+          "drive_min": 100,
+          "text": "第 12 天（三）：上天草直駛嬉野，提早入住華翠苑。退房後至さんぱーる早餐再出發；若需 9 點前上路改 AZcafe。"
+        },
+        {
+          "day": 13,
+          "date": "2026-12-03",
+          "base_zh": "嬉野溫泉・華翠苑飯店",
+          "highlights": [
+            "祐德稻荷",
+            "溫泉街",
+            "西博爾德之湯"
+          ],
+          "drive_min": 49,
+          "text": "第 13 天（四）：只排祐德稻荷、溫泉街與西博爾德之湯，不排宇宙科學館與御船山，減少跑點。"
+        },
+        {
+          "day": 14,
+          "date": "2026-12-04",
+          "base_zh": "福岡蒙特利飯店",
+          "highlights": [
+            "大川午餐",
+            "博多歷史館",
+            "華味鳥",
+            "晚餐華味鳥祇園店"
+          ],
+          "drive_min": 120,
+          "text": "第 14 天（五）：大川午餐後入福岡，歷史館與千年門，晚餐華味鳥，不排遠距景點。晚餐統一華味鳥祇園店（非站前店）；備案站前店。"
+        },
+        {
+          "day": 15,
+          "date": "2026-12-05",
+          "base_zh": "福岡蒙特利飯店",
+          "highlights": [
+            "鄉土館",
+            "樂水園",
+            "大濠公園",
+            "波葉之湯"
+          ],
+          "drive_min": 31,
+          "text": "第 15 天（六）：完全留在福岡市區（鄉土館、樂水園、大濠、波葉之湯），不跑太宰府，節奏最慢。"
+        },
+        {
+          "day": 16,
+          "date": "2026-12-06",
+          "base_zh": "福岡機場（離境）",
+          "highlights": [
+            "咖啡",
+            "還車",
+            "BR101"
+          ],
+          "drive_min": 14,
+          "text": "第 16 天（日）：咖啡後還車離境。"
+        }
+      ],
+      "warnings": [
+        "車程均為兩點座標估算（直線距離×路網係數÷假設時速），非正式路徑或 OSRM，出發前請用 Google Maps／NAVITIME 複核。",
+        "十一月下旬九州日落約 17:10–17:20，移動日以 16:30 前抵達住宿為目標，避開夜間山路；溫泉旅館晚餐多為 18:00 前後，從晚餐倒推最晚抵達。",
+        "BR106／BR101 時刻未在交接檔，第 1、16 天時間暫未鎖定，待機票確認。",
+        "由樂島（Yurakutei）位置未確認，暫定上天草市，路線中已註明。",
+        "資料庫候選 224 筆 mapcode 仍全部為 null，資料庫站點未編造 MapCode；本次 web 餐廳採用餐廳部已 saibara 反查的值。",
+        "未排入座標明顯錯誤的候選（別府重疊座標、乙丸溫泉館、福岡佔位座標的原鶴／櫻井二見浦／太宰府天滿宮 c198・c199 等），見 unresolved。",
+        "雲仙地獄／島原城雖在由樂島 35 km 半徑統計內，但位於島原半島、隔灣，需渡輪或大繞路，本路線不排入，避免當日無法在日落前返回。",
+        "C 線刻意減少景點數量，讓出時間給溫泉與緩衝；若想多看，改採 A 或 B。",
+        "餐點留空清單見 user_notes（萩／別府／日向／高千穗／由樂島，以及若干移動日途中午餐），標示「資料庫缺，待補」。",
+        "日向住宿晚溫泉：資料庫缺，待補。",
+        "2026-11-11 已依餐廳部 restaurant_swaps.json（12 筆）更新餐點：只用資料庫或 swaps 內的店，未編造店家；web 店 MapCode 僅採用餐廳部已 saibara 反查的值，資料庫候選仍為 null。",
+        "D7 日向晚餐已改いけすの大漁や。若住宿含晚餐可刪。trip/handoff 未載 Pleasant 日向含餐，無法確認。",
+        "D11、D12 早餐保留道の駅 上天草さんぱーる（國交省 09:00–11:00、L.O. 10:30，12 月無休館日）；與當日出發時間搭得上。若需 9 點前出發改 AZcafe Shidaka（06:00–10:00）。",
+        "D2／D3 朝食しおさい開店有 07:00／08:00 兩說，規劃以 08:00 為準。D3 為勤勞感謝之日。",
+        "多家標不定休或公休日待查（隠れcafe、草千里食堂、SAKUYA 本丸等），出發前請再確認；未訂位、未聯絡店家。",
+        "湯樂亭週三定休（D12 退房日），請向旅館確認週三早餐是否提供；含早／2 食方案則外食早餐可略過。",
+        "r_c D14 晚餐備註已去掉「博多站前店」，統一為華味鳥祇園店（db_r_dfe514d8e4）。",
+        "2026-11-11 已依景點部 places_spots.json 調整：11/24 門司電気通信レトロ館休館（A 線刪、B／C 改関門海峡ミュージアム）；八代市立博物館臨時休館（A11 刪，不另補）；金龍地獄已停業、鶴見地獄不開放（已刪；備案地獄温泉ミュージアム，大人 ¥1,500）；通潤橋 11/30 無放水、只看橋。補位只用 handoff 資料庫候選，未上網找新景點。",
+        "高千穂峡划船需上網預約，由安宏自行預訂（本部不代訂）。細島灯台只能看外觀。"
+      ]
+    }
+  ],
+  "unresolved": [
+    {
+      "text": "由樂島（Yurakutei）位置未確認，本路線暫以熊本縣上天草市為查詢中心與停留範圍。",
+      "reason": "handoff base_centers 註記：GSI 以「由樂島／由楽島／Yurakutei」查無結果；依住宿順序第 6 站及既有快取暫定上天草市。入住前須向住宿部／安宏確認實際地址。"
+    },
+    {
+      "text": "BR106／BR101 的起飛與抵達時刻未寫在交接檔，第 1 天北上萩與第 16 天還車離境時間無法鎖定。",
+      "reason": "request.flights 只填班號，無時刻。待機票部或安宏提供電子機票後，再倒推取還車與最晚出發。"
+    },
+    {
+      "text": "萩、別府、日向、高千穗、由樂島（暫定上天草）的正餐請餐廳部補點，本路線餐點留空。",
+      "reason": "安宏規則：上述地區資料庫缺餐廳（或僅極少筆且標短缺），餐點留空並標「資料庫缺，待補」，不可編造餐廳。別府庫內有 5 筆、高千穗 1 筆（座標與飯店中心重合，未採用），待餐廳部核對後再排入。"
+    },
+    {
+      "text": "日向住宿晚沒有資料庫內的溫泉候選。",
+      "reason": "base_stats：Pleasant 日向 35 km 內 onsen=0。不可編造。若 Pleasant Hyuga 本身有湯，請住宿部確認後補。"
+    },
+    {
+      "text": "224 筆候選的 mapcode 全部為 null，自駕只能先用 google_maps。",
+      "reason": "安宏規則：MapCode 不可編造，只用資料庫已有值。"
+    },
+    {
+      "text": "部分候選座標明顯錯誤或互相重疊，本路線未排入，請景點部修正後再評估。",
+      "reason": "別府：九重夢大吊橋／由布院溫泉區／金鱗湖（c77）／地獄蒸工房（c81）／由布釜飯（c84）等與海地獄（c68）、鐵輪（c65）、狹霧台、葫蘆溫泉共用 33.23945,131.60973 或 33.23813,131.61264，與已知位置不符。下關：乙丸溫泉館說明寫由布院，座標卻在下關附近。福岡：原鶴溫泉區、櫻井二見浦、太宰府天滿宮（c198／c199）座標不可靠（佔位或落在市區）。"
+    }
+  ],
+  "user_notes": [
+    "住宿順序仍依 bases_nights。2026-11-11 已套用餐廳部 12 筆換店／更正（見各站備註）。",
+    "由樂島（Yurakutei）位置尚未確認，暫定上天草市（餐廳部比對為大洞窟の宿 湯樂亭），入住前請確認實際地址。",
+    "已補餐（swaps）：D2／D3 早餐しおさい；D4 r_c 午餐伽哩本舗；D7 晚餐大漁や（若住宿含晚餐可刪）；D8 晚餐 SAKUYA 本丸；D9 午餐隠れcafe、晚餐和；D10 r_b 午餐草千里食堂；D11／D12 早餐保留さんぱーる（備案 AZcafe）；D14 華味鳥祇園店。",
+    "仍為「資料庫缺，待補」的餐：萩 D1 晚餐、D2 午晚餐；別府 D4 晚餐、D5–D6 三餐、D7 早餐；D7 別府→日向途中午餐；日向 D8 早餐；D8 日向→高千穗途中午餐；高千穗 D9 早餐、D10 早餐；D10 高千穗→由樂島途中午餐（r_a／r_c）；由樂島 D10 晚餐、D11 午晚餐、D12 途中午餐。未一次套用餐廳部全部 fills，僅處理本次 12 筆 swaps。",
+    "「資料庫缺，待補」溫泉：日向住宿晚（D7 晚）。若 Pleasant 日向本身有湯或含餐，請住宿部確認。",
+    "MapCode：資料庫候選仍全部為 null。本次新增的 web 店採用餐廳部已反查的 MapCode，未自行編造。",
+    "車程為座標估算，非正式導航時間。未訂票、訂房、租車、訂位，未聯絡店家。",
+    "景點部 places_spots：11/24 門司レトロ館休館（A4 刪、B4／C4 改関門海峡ミュージアム）；A11 八代市立博物館臨時休館已刪；金龍地獄停業、鶴見地獄不開放已刪（備案地獄温泉ミュージアム）；A10 通潤橋當天無放水，只看橋。補位僅用資料庫候選。"
+  ]
+}
