@@ -1,0 +1,5828 @@
+{
+ "schema": "agency.places.v1",
+ "request_id": "draft-20261030-234939-a42f",
+ "version": "2026-11-11-a1+merged",
+ "generated_at": "2026-11-11T02:25:48+08:00",
+ "department": "旅遊資訊部",
+ "note": "A1：景點類別由 OSM 標籤＋名稱關鍵字規則推出（category_source=osm_rule），判不出標 uncat（待分類）。A3：資料庫餐廳類型取自 trip-db 候選（OSM）。其餘欄位 null＝尚未查（不覆蓋網頁現值），待景點部／餐廳部補。",
+ "category_codes": {
+  "popular": "熱門",
+  "shrine": "神社寺院",
+  "historic": "歷史",
+  "natural": "自然絕景",
+  "onsen": "溫泉",
+  "hidden": "私房",
+  "anime_game": "動漫・遊戲周邊",
+  "festival": "活動／花季",
+  "experience": "親子／體驗",
+  "food": "美食",
+  "uncat": "待分類"
+ },
+ "places": {
+  "db:db_s_0cc3e686a5": {
+   "kind": "spot",
+   "name": "萩城",
+   "name_ja": "萩城",
+   "categories": [
+    "historic"
+   ],
+   "category_source": "osm_rule",
+   "category_basis": "名稱符合「historic」關鍵字",
+   "hours": null,
+   "closed_days": null,
+   "admission": null,
+   "stay_minutes": null,
+   "rain_ok": null,
+   "season_note": null,
+   "season_months": null,
+   "parking": null,
+   "mapcode": null,
+   "mapcode_source": null,
+   "description": null,
+   "sources": [],
+   "field_status": {
+    "hours": "待查",
+    "closed_days": "待查",
+    "admission": "待查",
+    "stay_minutes": "估計",
+    "rain_ok": "待查",
+    "season_note": "待查",
+    "parking": "待查",
+    "mapcode": "待查",
+    "description": "待查",
+    "sources": "待查"
+   },
+   "checked_date": null
+  },
+  "db:db_s_a07c985095": {
+   "kind": "spot",
+   "name": "松下村塾",
+   "name_ja": "松下村塾",
+   "categories": [
+    "historic"
+   ],
+   "category_source": "osm_rule",
+   "category_basis": "名稱符合「historic」關鍵字",
+   "hours": null,
+   "closed_days": null,
+   "admission": null,
+   "stay_minutes": null,
+   "rain_ok": null,
+   "season_note": null,
+   "season_months": null,
+   "parking": null,
+   "mapcode": null,
+   "mapcode_source": null,
+   "description": null,
+   "sources": [],
+   "field_status": {
+    "hours": "待查",
+    "closed_days": "待查",
+    "admission": "待查",
+    "stay_minutes": "估計",
+    "rain_ok": "待查",
+    "season_note": "待查",
+    "parking": "待查",
+    "mapcode": "待查",
+    "description": "待查",
+    "sources": "待查"
+   },
+   "checked_date": null
+  },
+  "db:db_s_95d6b77d92": {
+   "kind": "spot",
+   "name": "萩史料館",
+   "name_ja": "萩史料館",
+   "categories": [
+    "historic"
+   ],
+   "category_source": "osm_rule",
+   "category_basis": "名稱符合「historic」關鍵字",
+   "hours": null,
+   "closed_days": null,
+   "admission": null,
+   "stay_minutes": null,
+   "rain_ok": null,
+   "season_note": null,
+   "season_months": null,
+   "parking": null,
+   "mapcode": null,
+   "mapcode_source": null,
+   "description": null,
+   "sources": [],
+   "field_status": {
+    "hours": "待查",
+    "closed_days": "待查",
+    "admission": "待查",
+    "stay_minutes": "估計",
+    "rain_ok": "待查",
+    "season_note": "待查",
+    "parking": "待查",
+    "mapcode": "待查",
+    "description": "待查",
+    "sources": "待查"
+   },
+   "checked_date": null
+  },
+  "db:db_s_31414eedae": {
+   "kind": "spot",
+   "name": "山口県立萩美術館・浦上記念館",
+   "name_ja": "山口県立萩美術館・浦上記念館",
+   "categories": [
+    "historic"
+   ],
+   "category_source": "osm_rule",
+   "category_basis": "名稱符合「historic」關鍵字",
+   "hours": null,
+   "closed_days": null,
+   "admission": null,
+   "stay_minutes": null,
+   "rain_ok": null,
+   "season_note": null,
+   "season_months": null,
+   "parking": null,
+   "mapcode": null,
+   "mapcode_source": null,
+   "description": null,
+   "sources": [],
+   "field_status": {
+    "hours": "待查",
+    "closed_days": "待查",
+    "admission": "待查",
+    "stay_minutes": "估計",
+    "rain_ok": "待查",
+    "season_note": "待查",
+    "parking": "待查",
+    "mapcode": "待查",
+    "description": "待查",
+    "sources": "待查"
+   },
+   "checked_date": null
+  },
+  "db:db_s_4190cb3233": {
+   "kind": "spot",
+   "name": "恵美須ヶ鼻造船所跡",
+   "name_ja": "恵美須ヶ鼻造船所跡",
+   "categories": [
+    "historic"
+   ],
+   "category_source": "osm_rule",
+   "category_basis": "historic=archaeological_site",
+   "hours": null,
+   "closed_days": null,
+   "admission": null,
+   "stay_minutes": null,
+   "rain_ok": null,
+   "season_note": null,
+   "season_months": null,
+   "parking": null,
+   "mapcode": null,
+   "mapcode_source": null,
+   "description": null,
+   "sources": [],
+   "field_status": {
+    "hours": "待查",
+    "closed_days": "待查",
+    "admission": "待查",
+    "stay_minutes": "估計",
+    "rain_ok": "待查",
+    "season_note": "待查",
+    "parking": "待查",
+    "mapcode": "待查",
+    "description": "待查",
+    "sources": "待查"
+   },
+   "checked_date": null
+  },
+  "db:db_s_e6d6e19c3a": {
+   "kind": "spot",
+   "name": "萩反射炉",
+   "name_ja": "萩反射炉",
+   "categories": [
+    "historic"
+   ],
+   "category_source": "osm_rule",
+   "category_basis": "名稱符合「historic」關鍵字",
+   "hours": null,
+   "closed_days": null,
+   "admission": null,
+   "stay_minutes": null,
+   "rain_ok": null,
+   "season_note": null,
+   "season_months": null,
+   "parking": null,
+   "mapcode": null,
+   "mapcode_source": null,
+   "description": null,
+   "sources": [],
+   "field_status": {
+    "hours": "待查",
+    "closed_days": "待查",
+    "admission": "待查",
+    "stay_minutes": "估計",
+    "rain_ok": "待查",
+    "season_note": "待查",
+    "parking": "待查",
+    "mapcode": "待查",
+    "description": "待查",
+    "sources": "待查"
+   },
+   "checked_date": null
+  },
+  "db:db_s_c43f7638ba": {
+   "kind": "spot",
+   "name": "秋吉台科学博物館",
+   "name_ja": "秋吉台科学博物館",
+   "categories": [
+    "historic",
+    "experience"
+   ],
+   "category_source": "osm_rule",
+   "category_basis": "名稱符合「historic」關鍵字；名稱符合「experience」關鍵字",
+   "hours": null,
+   "closed_days": null,
+   "admission": null,
+   "stay_minutes": null,
+   "rain_ok": null,
+   "season_note": null,
+   "season_months": null,
+   "parking": null,
+   "mapcode": null,
+   "mapcode_source": null,
+   "description": null,
+   "sources": [],
+   "field_status": {
+    "hours": "待查",
+    "closed_days": "待查",
+    "admission": "待查",
+    "stay_minutes": "估計",
+    "rain_ok": "待查",
+    "season_note": "待查",
+    "parking": "待查",
+    "mapcode": "待查",
+    "description": "待查",
+    "sources": "待查"
+   },
+   "checked_date": null
+  },
+  "db:db_s_cdf9fdca35": {
+   "kind": "spot",
+   "name": "赤間神宮宝物殿",
+   "name_ja": "赤間神宮宝物殿",
+   "categories": [
+    "shrine",
+    "historic"
+   ],
+   "category_source": "osm_rule",
+   "category_basis": "名稱符合「shrine」關鍵字；名稱符合「historic」關鍵字",
+   "hours": null,
+   "closed_days": null,
+   "admission": null,
+   "stay_minutes": null,
+   "rain_ok": null,
+   "season_note": null,
+   "season_months": null,
+   "parking": null,
+   "mapcode": null,
+   "mapcode_source": null,
+   "description": null,
+   "sources": [],
+   "field_status": {
+    "hours": "待查",
+    "closed_days": "待查",
+    "admission": "待查",
+    "stay_minutes": "估計",
+    "rain_ok": "待查",
+    "season_note": "待查",
+    "parking": "待查",
+    "mapcode": "待查",
+    "description": "待查",
+    "sources": "待查"
+   },
+   "checked_date": null
+  },
+  "db:db_s_81e984d61a": {
+   "kind": "spot",
+   "name": "日清議和紀念館",
+   "name_ja": "日清講和記念館",
+   "categories": [
+    "historic"
+   ],
+   "category_source": "osm_rule",
+   "category_basis": "名稱符合「historic」關鍵字",
+   "hours": null,
+   "closed_days": null,
+   "admission": null,
+   "stay_minutes": null,
+   "rain_ok": null,
+   "season_note": null,
+   "season_months": null,
+   "parking": null,
+   "mapcode": null,
+   "mapcode_source": null,
+   "description": null,
+   "sources": [],
+   "field_status": {
+    "hours": "待查",
+    "closed_days": "待查",
+    "admission": "待查",
+    "stay_minutes": "估計",
+    "rain_ok": "待查",
+    "season_note": "待查",
+    "parking": "待查",
+    "mapcode": "待查",
+    "description": "待查",
+    "sources": "待查"
+   },
+   "checked_date": null
+  },
+  "db:db_s_5a59588791": {
+   "kind": "spot",
+   "name": "旧下関英国領事館",
+   "name_ja": "旧下関英国領事館",
+   "categories": [
+    "historic"
+   ],
+   "category_source": "osm_rule",
+   "category_basis": "名稱符合「historic」關鍵字",
+   "hours": null,
+   "closed_days": null,
+   "admission": null,
+   "stay_minutes": null,
+   "rain_ok": null,
+   "season_note": null,
+   "season_months": null,
+   "parking": null,
+   "mapcode": null,
+   "mapcode_source": null,
+   "description": null,
+   "sources": [],
+   "field_status": {
+    "hours": "待查",
+    "closed_days": "待查",
+    "admission": "待查",
+    "stay_minutes": "估計",
+    "rain_ok": "待查",
+    "season_note": "待查",
+    "parking": "待查",
+    "mapcode": "待查",
+    "description": "待查",
+    "sources": "待查"
+   },
+   "checked_date": null
+  },
+  "db:db_s_1e3d6e1f51": {
+   "kind": "spot",
+   "name": "海峡ゆめタワー",
+   "name_ja": "海峡ゆめタワー",
+   "categories": [
+    "uncat"
+   ],
+   "category_source": "uncat",
+   "category_basis": "OSM 標籤與名稱都判不出，待景點部人工分類",
+   "hours": null,
+   "closed_days": null,
+   "admission": null,
+   "stay_minutes": null,
+   "rain_ok": null,
+   "season_note": null,
+   "season_months": null,
+   "parking": null,
+   "mapcode": null,
+   "mapcode_source": null,
+   "description": null,
+   "sources": [],
+   "field_status": {
+    "hours": "待查",
+    "closed_days": "待查",
+    "admission": "待查",
+    "stay_minutes": "估計",
+    "rain_ok": "待查",
+    "season_note": "待查",
+    "parking": "待查",
+    "mapcode": "待查",
+    "description": "待查",
+    "sources": "待查",
+    "categories": "待查"
+   },
+   "checked_date": null
+  },
+  "db:db_s_cd3190ad3a": {
+   "kind": "spot",
+   "name": "門司電気通信レトロ館",
+   "name_ja": "門司電気通信レトロ館",
+   "categories": [
+    "historic"
+   ],
+   "category_source": "osm_rule",
+   "category_basis": "tourism=museum（博物館・美術館歸歷史／文化）",
+   "hours": null,
+   "closed_days": null,
+   "admission": null,
+   "stay_minutes": null,
+   "rain_ok": null,
+   "season_note": null,
+   "season_months": null,
+   "parking": null,
+   "mapcode": null,
+   "mapcode_source": null,
+   "description": null,
+   "sources": [],
+   "field_status": {
+    "hours": "待查",
+    "closed_days": "待查",
+    "admission": "待查",
+    "stay_minutes": "估計",
+    "rain_ok": "待查",
+    "season_note": "待查",
+    "parking": "待查",
+    "mapcode": "待查",
+    "description": "待查",
+    "sources": "待查"
+   },
+   "checked_date": null
+  },
+  "db:db_s_9b2edb121e": {
+   "kind": "spot",
+   "name": "関門海峡ミュージアム",
+   "name_ja": "関門海峡ミュージアム",
+   "categories": [
+    "historic"
+   ],
+   "category_source": "osm_rule",
+   "category_basis": "tourism=museum（博物館・美術館歸歷史／文化）",
+   "hours": null,
+   "closed_days": null,
+   "admission": null,
+   "stay_minutes": null,
+   "rain_ok": null,
+   "season_note": null,
+   "season_months": null,
+   "parking": null,
+   "mapcode": null,
+   "mapcode_source": null,
+   "description": null,
+   "sources": [],
+   "field_status": {
+    "hours": "待查",
+    "closed_days": "待查",
+    "admission": "待查",
+    "stay_minutes": "估計",
+    "rain_ok": "待查",
+    "season_note": "待查",
+    "parking": "待查",
+    "mapcode": "待查",
+    "description": "待查",
+    "sources": "待查"
+   },
+   "checked_date": null
+  },
+  "db:db_s_1cecc994ad": {
+   "kind": "spot",
+   "name": "旧門司税関",
+   "name_ja": "旧門司税関",
+   "categories": [
+    "historic"
+   ],
+   "category_source": "osm_rule",
+   "category_basis": "名稱符合「historic」關鍵字",
+   "hours": null,
+   "closed_days": null,
+   "admission": null,
+   "stay_minutes": null,
+   "rain_ok": null,
+   "season_note": null,
+   "season_months": null,
+   "parking": null,
+   "mapcode": null,
+   "mapcode_source": null,
+   "description": null,
+   "sources": [],
+   "field_status": {
+    "hours": "待查",
+    "closed_days": "待查",
+    "admission": "待查",
+    "stay_minutes": "估計",
+    "rain_ok": "待查",
+    "season_note": "待查",
+    "parking": "待查",
+    "mapcode": "待查",
+    "description": "待查",
+    "sources": "待查"
+   },
+   "checked_date": null
+  },
+  "db:db_s_a23c488779": {
+   "kind": "spot",
+   "name": "九州鉄道記念館",
+   "name_ja": "九州鉄道記念館",
+   "categories": [
+    "historic",
+    "experience"
+   ],
+   "category_source": "osm_rule",
+   "category_basis": "名稱符合「historic」關鍵字；名稱符合「experience」關鍵字",
+   "hours": null,
+   "closed_days": null,
+   "admission": null,
+   "stay_minutes": null,
+   "rain_ok": null,
+   "season_note": null,
+   "season_months": null,
+   "parking": null,
+   "mapcode": null,
+   "mapcode_source": null,
+   "description": null,
+   "sources": [],
+   "field_status": {
+    "hours": "待查",
+    "closed_days": "待查",
+    "admission": "待查",
+    "stay_minutes": "估計",
+    "rain_ok": "待查",
+    "season_note": "待查",
+    "parking": "待查",
+    "mapcode": "待查",
+    "description": "待查",
+    "sources": "待查"
+   },
+   "checked_date": null
+  },
+  "db:db_r_cd2d93e583": {
+   "kind": "restaurant",
+   "name": "海鮮燒咖哩 伽哩本舗",
+   "name_ja": "海鮮燒咖哩 伽哩本舗",
+   "cuisine_group": "咖哩",
+   "cuisine": "燒咖哩（門司港レトロ店）",
+   "budget_lunch": "～¥999（Tabelog）",
+   "budget_dinner": "～¥999（Tabelog）",
+   "closed_days": "不定休",
+   "hours": "11:00–19:30",
+   "reservation": {
+    "required": false,
+    "accepts": false,
+    "method": "不收（現場候位）",
+    "note": null
+   },
+   "google_maps_url": "https://www.google.com/maps/search/?api=1&query=33.9459244%2C130.9615312",
+   "ratings": [
+    {
+     "source": "tabelog",
+     "score": 3.55,
+     "scale": 5,
+     "url": "https://tabelog.com/fukuoka/A4004/A400501/40006677/",
+     "checked_at": "2026-11-11"
+    }
+   ],
+   "mapcode": null,
+   "mapcode_source": null,
+   "sources": [
+    {
+     "url": "https://www.openstreetmap.org/node/5563248322",
+     "checked_at": "2026-10-31",
+     "title": "OpenStreetMap（trip-db 候選）"
+    },
+    {
+     "url": "https://tabelog.com/tw/fukuoka/A4004/A400501/40006677/",
+     "checked_at": "2026-11-11",
+     "title": "Tabelog（繁中鏡像頁，與日文頁同店號；日文頁網址取自該頁 hreflang=ja）",
+     "fields": [
+      "ratings.tabelog",
+      "cuisine",
+      "budget_lunch",
+      "budget_dinner",
+      "hours",
+      "closed_days",
+      "reservation"
+     ]
+    },
+    {
+     "url": "https://tanotim.com/place/30511/",
+     "checked_at": "2026-11-11",
+     "title": "Google 評分轉載頁（tanotim，已核對店名／位置；非 Google 店家頁）",
+     "fields": [
+      "note"
+     ]
+    }
+   ],
+   "field_status": {
+    "budget_lunch": "已查",
+    "budget_dinner": "已查",
+    "closed_days": "已查",
+    "hours": "已查",
+    "reservation": "已查",
+    "ratings.tabelog": "已查",
+    "ratings.google": "待查（未在 Google 地圖店家頁人工查看；轉載頁數值見 note）",
+    "mapcode": "待查"
+   },
+   "cuisine_source": "Tabelog 2026-11-11",
+   "checked_date": "2026-11-11",
+   "note": "Tabelog 對應「伽哩本舗 門司港レトロ店」（港町9-1 阿波屋ビル 2F）。 Google 評分參考值 4.3（第三方轉載頁 tanotim，2026-11-11 查看；未在 Google 地圖店家頁人工核對，故未寫入 ratings）。 Google 地址記為 港町9-2 阿波屋ビル1F（Tabelog 為 9-1 阿波屋ビル2F），推定同店 預算為 Tabelog 每人預算區間。"
+  },
+  "db:db_s_87c2e33a85": {
+   "kind": "spot",
+   "name": "別府鐵輪溫泉住宿區",
+   "name_ja": "鉄輪温泉",
+   "categories": [
+    "onsen"
+   ],
+   "category_source": "osm_rule",
+   "category_basis": "名稱符合「onsen」關鍵字",
+   "hours": null,
+   "closed_days": null,
+   "admission": null,
+   "stay_minutes": null,
+   "rain_ok": null,
+   "season_note": null,
+   "season_months": null,
+   "parking": null,
+   "mapcode": null,
+   "mapcode_source": null,
+   "description": null,
+   "sources": [],
+   "field_status": {
+    "hours": "待查",
+    "closed_days": "待查",
+    "admission": "待查",
+    "stay_minutes": "待查",
+    "rain_ok": "待查",
+    "season_note": "待查",
+    "parking": "待查",
+    "mapcode": "待查",
+    "description": "待查",
+    "sources": "待查"
+   },
+   "checked_date": null
+  },
+  "db:db_s_db077bef4c": {
+   "kind": "spot",
+   "name": "海地獄",
+   "name_ja": "海地獄",
+   "categories": [
+    "onsen"
+   ],
+   "category_source": "osm_rule",
+   "category_basis": "名稱符合「onsen」關鍵字",
+   "hours": null,
+   "closed_days": null,
+   "admission": null,
+   "stay_minutes": null,
+   "rain_ok": null,
+   "season_note": null,
+   "season_months": null,
+   "parking": null,
+   "mapcode": null,
+   "mapcode_source": null,
+   "description": null,
+   "sources": [],
+   "field_status": {
+    "hours": "待查",
+    "closed_days": "待查",
+    "admission": "待查",
+    "stay_minutes": "估計",
+    "rain_ok": "待查",
+    "season_note": "待查",
+    "parking": "待查",
+    "mapcode": "待查",
+    "description": "待查",
+    "sources": "待查"
+   },
+   "checked_date": null
+  },
+  "db:db_o_9cd6c1cde3": {
+   "kind": "spot",
+   "name": "金龍地獄",
+   "name_ja": "金龍地獄",
+   "categories": [
+    "onsen"
+   ],
+   "category_source": "osm_rule",
+   "category_basis": "資料庫溫泉類／tourism=attraction",
+   "hours": null,
+   "closed_days": null,
+   "admission": null,
+   "stay_minutes": null,
+   "rain_ok": null,
+   "season_note": null,
+   "season_months": null,
+   "parking": null,
+   "mapcode": null,
+   "mapcode_source": null,
+   "description": null,
+   "sources": [],
+   "field_status": {
+    "hours": "待查",
+    "closed_days": "待查",
+    "admission": "待查",
+    "stay_minutes": "估計",
+    "rain_ok": "待查",
+    "season_note": "待查",
+    "parking": "待查",
+    "mapcode": "待查",
+    "description": "待查",
+    "sources": "待查"
+   },
+   "checked_date": null
+  },
+  "db:db_o_cafce80ae9": {
+   "kind": "spot",
+   "name": "鶴見地獄",
+   "name_ja": "鶴見地獄",
+   "categories": [
+    "onsen"
+   ],
+   "category_source": "osm_rule",
+   "category_basis": "資料庫溫泉類／tourism=attraction",
+   "hours": null,
+   "closed_days": null,
+   "admission": null,
+   "stay_minutes": null,
+   "rain_ok": null,
+   "season_note": null,
+   "season_months": null,
+   "parking": null,
+   "mapcode": null,
+   "mapcode_source": null,
+   "description": null,
+   "sources": [],
+   "field_status": {
+    "hours": "待查",
+    "closed_days": "待查",
+    "admission": "待查",
+    "stay_minutes": "估計",
+    "rain_ok": "待查",
+    "season_note": "待查",
+    "parking": "待查",
+    "mapcode": "待查",
+    "description": "待查",
+    "sources": "待查"
+   },
+   "checked_date": null
+  },
+  "db:db_o_bc55f8b8c1": {
+   "kind": "spot",
+   "name": "竹瓦温泉",
+   "name_ja": "竹瓦温泉",
+   "categories": [
+    "onsen"
+   ],
+   "category_source": "osm_rule",
+   "category_basis": "資料庫溫泉類／amenity=public_bath",
+   "hours": null,
+   "closed_days": null,
+   "admission": null,
+   "stay_minutes": null,
+   "rain_ok": null,
+   "season_note": null,
+   "season_months": null,
+   "parking": null,
+   "mapcode": null,
+   "mapcode_source": null,
+   "description": null,
+   "sources": [],
+   "field_status": {
+    "hours": "待查",
+    "closed_days": "待查",
+    "admission": "待查",
+    "stay_minutes": "估計",
+    "rain_ok": "待查",
+    "season_note": "待查",
+    "parking": "待查",
+    "mapcode": "待查",
+    "description": "待查",
+    "sources": "待查"
+   },
+   "checked_date": null
+  },
+  "db:db_s_4d06df956d": {
+   "kind": "spot",
+   "name": "由布院溫泉住宿區",
+   "name_ja": "由布院温泉",
+   "categories": [
+    "onsen"
+   ],
+   "category_source": "osm_rule",
+   "category_basis": "名稱符合「onsen」關鍵字",
+   "hours": null,
+   "closed_days": null,
+   "admission": null,
+   "stay_minutes": null,
+   "rain_ok": null,
+   "season_note": null,
+   "season_months": null,
+   "parking": null,
+   "mapcode": null,
+   "mapcode_source": null,
+   "description": null,
+   "sources": [],
+   "field_status": {
+    "hours": "待查",
+    "closed_days": "待查",
+    "admission": "待查",
+    "stay_minutes": "待查",
+    "rain_ok": "待查",
+    "season_note": "待查",
+    "parking": "待查",
+    "mapcode": "待查",
+    "description": "待查",
+    "sources": "待查"
+   },
+   "checked_date": null
+  },
+  "db:db_s_269ba95595": {
+   "kind": "spot",
+   "name": "湯之坪街道",
+   "name_ja": "湯の坪街道",
+   "categories": [
+    "onsen"
+   ],
+   "category_source": "osm_rule",
+   "category_basis": "名稱符合「onsen」關鍵字",
+   "hours": null,
+   "closed_days": null,
+   "admission": null,
+   "stay_minutes": null,
+   "rain_ok": null,
+   "season_note": null,
+   "season_months": null,
+   "parking": null,
+   "mapcode": null,
+   "mapcode_source": null,
+   "description": null,
+   "sources": [],
+   "field_status": {
+    "hours": "待查",
+    "closed_days": "待查",
+    "admission": "待查",
+    "stay_minutes": "估計",
+    "rain_ok": "待查",
+    "season_note": "待查",
+    "parking": "待查",
+    "mapcode": "待查",
+    "description": "待查",
+    "sources": "待查"
+   },
+   "checked_date": null
+  },
+  "db:db_s_2309db8488": {
+   "kind": "spot",
+   "name": "金鱗湖",
+   "name_ja": "金鱗湖",
+   "categories": [
+    "natural"
+   ],
+   "category_source": "osm_rule",
+   "category_basis": "名稱符合「natural」關鍵字",
+   "hours": null,
+   "closed_days": null,
+   "admission": null,
+   "stay_minutes": null,
+   "rain_ok": null,
+   "season_note": null,
+   "season_months": null,
+   "parking": null,
+   "mapcode": null,
+   "mapcode_source": null,
+   "description": null,
+   "sources": [],
+   "field_status": {
+    "hours": "待查",
+    "closed_days": "待查",
+    "admission": "待查",
+    "stay_minutes": "估計",
+    "rain_ok": "待查",
+    "season_note": "待查",
+    "parking": "待查",
+    "mapcode": "待查",
+    "description": "待查",
+    "sources": "待查"
+   },
+   "checked_date": null
+  },
+  "db:db_s_b92dba1f0d": {
+   "kind": "spot",
+   "name": "大御神社",
+   "name_ja": "大御神社",
+   "categories": [
+    "shrine"
+   ],
+   "category_source": "osm_rule",
+   "category_basis": "名稱符合「shrine」關鍵字",
+   "hours": null,
+   "closed_days": null,
+   "admission": null,
+   "stay_minutes": null,
+   "rain_ok": null,
+   "season_note": null,
+   "season_months": null,
+   "parking": null,
+   "mapcode": null,
+   "mapcode_source": null,
+   "description": null,
+   "sources": [],
+   "field_status": {
+    "hours": "待查",
+    "closed_days": "待查",
+    "admission": "待查",
+    "stay_minutes": "估計",
+    "rain_ok": "待查",
+    "season_note": "待查",
+    "parking": "待查",
+    "mapcode": "待查",
+    "description": "待查",
+    "sources": "待查"
+   },
+   "checked_date": null
+  },
+  "db:db_s_14f1c6a3af": {
+   "kind": "spot",
+   "name": "馬ヶ背 Umagase",
+   "name_ja": "馬ヶ背 Umagase",
+   "categories": [
+    "natural"
+   ],
+   "category_source": "osm_rule",
+   "category_basis": "名稱符合「natural」關鍵字",
+   "hours": null,
+   "closed_days": null,
+   "admission": null,
+   "stay_minutes": null,
+   "rain_ok": null,
+   "season_note": null,
+   "season_months": null,
+   "parking": null,
+   "mapcode": null,
+   "mapcode_source": null,
+   "description": null,
+   "sources": [],
+   "field_status": {
+    "hours": "待查",
+    "closed_days": "待查",
+    "admission": "待查",
+    "stay_minutes": "估計",
+    "rain_ok": "待查",
+    "season_note": "待查",
+    "parking": "待查",
+    "mapcode": "待查",
+    "description": "待查",
+    "sources": "待查"
+   },
+   "checked_date": null
+  },
+  "db:db_s_e5ffd38b58": {
+   "kind": "spot",
+   "name": "クルスの海",
+   "name_ja": "クルスの海",
+   "categories": [
+    "natural"
+   ],
+   "category_source": "osm_rule",
+   "category_basis": "名稱符合「natural」關鍵字",
+   "hours": null,
+   "closed_days": null,
+   "admission": null,
+   "stay_minutes": null,
+   "rain_ok": null,
+   "season_note": null,
+   "season_months": null,
+   "parking": null,
+   "mapcode": null,
+   "mapcode_source": null,
+   "description": null,
+   "sources": [],
+   "field_status": {
+    "hours": "待查",
+    "closed_days": "待查",
+    "admission": "待查",
+    "stay_minutes": "估計",
+    "rain_ok": "待查",
+    "season_note": "待查",
+    "parking": "待查",
+    "mapcode": "待查",
+    "description": "待查",
+    "sources": "待查"
+   },
+   "checked_date": null
+  },
+  "db:db_s_4bf4144f89": {
+   "kind": "spot",
+   "name": "日向岬グリーンパーク",
+   "name_ja": "日向岬グリーンパーク",
+   "categories": [
+    "natural"
+   ],
+   "category_source": "osm_rule",
+   "category_basis": "名稱符合「natural」關鍵字",
+   "hours": null,
+   "closed_days": null,
+   "admission": null,
+   "stay_minutes": null,
+   "rain_ok": null,
+   "season_note": null,
+   "season_months": null,
+   "parking": null,
+   "mapcode": null,
+   "mapcode_source": null,
+   "description": null,
+   "sources": [],
+   "field_status": {
+    "hours": "待查",
+    "closed_days": "待查",
+    "admission": "待查",
+    "stay_minutes": "估計",
+    "rain_ok": "待查",
+    "season_note": "待查",
+    "parking": "待查",
+    "mapcode": "待查",
+    "description": "待查",
+    "sources": "待查"
+   },
+   "checked_date": null
+  },
+  "db:db_s_d265e2d834": {
+   "kind": "spot",
+   "name": "高千穗峽",
+   "name_ja": "高千穂峡",
+   "categories": [
+    "natural"
+   ],
+   "category_source": "osm_rule",
+   "category_basis": "名稱符合「natural」關鍵字",
+   "hours": null,
+   "closed_days": null,
+   "admission": null,
+   "stay_minutes": null,
+   "rain_ok": null,
+   "season_note": null,
+   "season_months": null,
+   "parking": null,
+   "mapcode": null,
+   "mapcode_source": null,
+   "description": null,
+   "sources": [],
+   "field_status": {
+    "hours": "待查",
+    "closed_days": "待查",
+    "admission": "待查",
+    "stay_minutes": "估計",
+    "rain_ok": "待查",
+    "season_note": "待查",
+    "parking": "待查",
+    "mapcode": "待查",
+    "description": "待查",
+    "sources": "待查"
+   },
+   "checked_date": null
+  },
+  "db:db_s_6b8f8cdbbb": {
+   "kind": "spot",
+   "name": "高千穗神社",
+   "name_ja": "高千穂神社",
+   "categories": [
+    "shrine"
+   ],
+   "category_source": "osm_rule",
+   "category_basis": "名稱符合「shrine」關鍵字",
+   "hours": null,
+   "closed_days": null,
+   "admission": null,
+   "stay_minutes": null,
+   "rain_ok": null,
+   "season_note": null,
+   "season_months": null,
+   "parking": null,
+   "mapcode": null,
+   "mapcode_source": null,
+   "description": null,
+   "sources": [],
+   "field_status": {
+    "hours": "待查",
+    "closed_days": "待查",
+    "admission": "待查",
+    "stay_minutes": "估計",
+    "rain_ok": "待查",
+    "season_note": "待查",
+    "parking": "待查",
+    "mapcode": "待查",
+    "description": "待查",
+    "sources": "待查"
+   },
+   "checked_date": null
+  },
+  "db:db_s_3e09b24b3f": {
+   "kind": "spot",
+   "name": "天岩戶神社",
+   "name_ja": "天岩戸神社",
+   "categories": [
+    "shrine"
+   ],
+   "category_source": "osm_rule",
+   "category_basis": "名稱符合「shrine」關鍵字",
+   "hours": null,
+   "closed_days": null,
+   "admission": null,
+   "stay_minutes": null,
+   "rain_ok": null,
+   "season_note": null,
+   "season_months": null,
+   "parking": null,
+   "mapcode": null,
+   "mapcode_source": null,
+   "description": null,
+   "sources": [],
+   "field_status": {
+    "hours": "待查",
+    "closed_days": "待查",
+    "admission": "待查",
+    "stay_minutes": "估計",
+    "rain_ok": "待查",
+    "season_note": "待查",
+    "parking": "待查",
+    "mapcode": "待查",
+    "description": "待查",
+    "sources": "待查"
+   },
+   "checked_date": null
+  },
+  "db:db_s_ddabb91cd6": {
+   "kind": "spot",
+   "name": "天安河原",
+   "name_ja": "天安河原",
+   "categories": [
+    "natural"
+   ],
+   "category_source": "osm_rule",
+   "category_basis": "名稱符合「natural」關鍵字",
+   "hours": null,
+   "closed_days": null,
+   "admission": null,
+   "stay_minutes": null,
+   "rain_ok": null,
+   "season_note": null,
+   "season_months": null,
+   "parking": null,
+   "mapcode": null,
+   "mapcode_source": null,
+   "description": null,
+   "sources": [],
+   "field_status": {
+    "hours": "待查",
+    "closed_days": "待查",
+    "admission": "待查",
+    "stay_minutes": "估計",
+    "rain_ok": "待查",
+    "season_note": "待查",
+    "parking": "待查",
+    "mapcode": "待查",
+    "description": "待查",
+    "sources": "待查"
+   },
+   "checked_date": null
+  },
+  "db:db_s_734b38d284": {
+   "kind": "spot",
+   "name": "天岩戸神社徴古館",
+   "name_ja": "天岩戸神社徴古館",
+   "categories": [
+    "shrine",
+    "historic"
+   ],
+   "category_source": "osm_rule",
+   "category_basis": "名稱符合「shrine」關鍵字；名稱符合「historic」關鍵字",
+   "hours": null,
+   "closed_days": null,
+   "admission": null,
+   "stay_minutes": null,
+   "rain_ok": null,
+   "season_note": null,
+   "season_months": null,
+   "parking": null,
+   "mapcode": null,
+   "mapcode_source": null,
+   "description": null,
+   "sources": [],
+   "field_status": {
+    "hours": "待查",
+    "closed_days": "待查",
+    "admission": "待查",
+    "stay_minutes": "估計",
+    "rain_ok": "待查",
+    "season_note": "待查",
+    "parking": "待查",
+    "mapcode": "待查",
+    "description": "待查",
+    "sources": "待查"
+   },
+   "checked_date": null
+  },
+  "db:db_s_e65d52e62d": {
+   "kind": "spot",
+   "name": "國見之丘",
+   "name_ja": "国見ヶ丘",
+   "categories": [
+    "natural"
+   ],
+   "category_source": "osm_rule",
+   "category_basis": "名稱符合「natural」關鍵字",
+   "hours": null,
+   "closed_days": null,
+   "admission": null,
+   "stay_minutes": null,
+   "rain_ok": null,
+   "season_note": null,
+   "season_months": null,
+   "parking": null,
+   "mapcode": null,
+   "mapcode_source": null,
+   "description": null,
+   "sources": [],
+   "field_status": {
+    "hours": "待查",
+    "closed_days": "待查",
+    "admission": "待查",
+    "stay_minutes": "估計",
+    "rain_ok": "待查",
+    "season_note": "待查",
+    "parking": "待查",
+    "mapcode": "待查",
+    "description": "待查",
+    "sources": "待查"
+   },
+   "checked_date": null
+  },
+  "db:db_s_34dad51e7e": {
+   "kind": "spot",
+   "name": "荒立神社",
+   "name_ja": "荒立神社",
+   "categories": [
+    "shrine"
+   ],
+   "category_source": "osm_rule",
+   "category_basis": "amenity=place_of_worship",
+   "hours": null,
+   "closed_days": null,
+   "admission": null,
+   "stay_minutes": null,
+   "rain_ok": null,
+   "season_note": null,
+   "season_months": null,
+   "parking": null,
+   "mapcode": null,
+   "mapcode_source": null,
+   "description": null,
+   "sources": [],
+   "field_status": {
+    "hours": "待查",
+    "closed_days": "待查",
+    "admission": "待查",
+    "stay_minutes": "估計",
+    "rain_ok": "待查",
+    "season_note": "待查",
+    "parking": "待查",
+    "mapcode": "待查",
+    "description": "待查",
+    "sources": "待查"
+   },
+   "checked_date": null
+  },
+  "db:db_s_e403dedc79": {
+   "kind": "spot",
+   "name": "通潤橋",
+   "name_ja": "通潤橋",
+   "categories": [
+    "uncat"
+   ],
+   "category_source": "uncat",
+   "category_basis": "OSM 標籤與名稱都判不出，待景點部人工分類",
+   "hours": null,
+   "closed_days": null,
+   "admission": null,
+   "stay_minutes": null,
+   "rain_ok": null,
+   "season_note": null,
+   "season_months": null,
+   "parking": null,
+   "mapcode": null,
+   "mapcode_source": null,
+   "description": null,
+   "sources": [],
+   "field_status": {
+    "hours": "待查",
+    "closed_days": "待查",
+    "admission": "待查",
+    "stay_minutes": "估計",
+    "rain_ok": "待查",
+    "season_note": "待查",
+    "parking": "待查",
+    "mapcode": "待查",
+    "description": "待查",
+    "sources": "待查",
+    "categories": "待查"
+   },
+   "checked_date": null
+  },
+  "db:db_s_b312097f35": {
+   "kind": "spot",
+   "name": "天門橋",
+   "name_ja": "天門橋",
+   "categories": [
+    "uncat"
+   ],
+   "category_source": "uncat",
+   "category_basis": "OSM 標籤與名稱都判不出，待景點部人工分類",
+   "hours": null,
+   "closed_days": null,
+   "admission": null,
+   "stay_minutes": null,
+   "rain_ok": null,
+   "season_note": null,
+   "season_months": null,
+   "parking": null,
+   "mapcode": null,
+   "mapcode_source": null,
+   "description": null,
+   "sources": [],
+   "field_status": {
+    "hours": "待查",
+    "closed_days": "待查",
+    "admission": "待查",
+    "stay_minutes": "估計",
+    "rain_ok": "待查",
+    "season_note": "待查",
+    "parking": "待查",
+    "mapcode": "待查",
+    "description": "待查",
+    "sources": "待查",
+    "categories": "待查"
+   },
+   "checked_date": null
+  },
+  "db:db_s_d980d846c7": {
+   "kind": "spot",
+   "name": "高舞登山展望區",
+   "name_ja": "高舞登山",
+   "categories": [
+    "natural"
+   ],
+   "category_source": "osm_rule",
+   "category_basis": "名稱符合「natural」關鍵字",
+   "hours": null,
+   "closed_days": null,
+   "admission": null,
+   "stay_minutes": null,
+   "rain_ok": null,
+   "season_note": null,
+   "season_months": null,
+   "parking": null,
+   "mapcode": null,
+   "mapcode_source": null,
+   "description": null,
+   "sources": [],
+   "field_status": {
+    "hours": "待查",
+    "closed_days": "待查",
+    "admission": "待查",
+    "stay_minutes": "估計",
+    "rain_ok": "待查",
+    "season_note": "待查",
+    "parking": "待查",
+    "mapcode": "待查",
+    "description": "待查",
+    "sources": "待查"
+   },
+   "checked_date": null
+  },
+  "db:db_s_540d53f815": {
+   "kind": "spot",
+   "name": "道の駅 宇土ﾏﾘｰﾅ",
+   "name_ja": "道の駅 宇土ﾏﾘｰﾅ",
+   "categories": [
+    "uncat"
+   ],
+   "category_source": "uncat",
+   "category_basis": "OSM 標籤與名稱都判不出，待景點部人工分類",
+   "hours": null,
+   "closed_days": null,
+   "admission": null,
+   "stay_minutes": null,
+   "rain_ok": null,
+   "season_note": null,
+   "season_months": null,
+   "parking": null,
+   "mapcode": null,
+   "mapcode_source": null,
+   "description": null,
+   "sources": [],
+   "field_status": {
+    "hours": "待查",
+    "closed_days": "待查",
+    "admission": "待查",
+    "stay_minutes": "估計",
+    "rain_ok": "待查",
+    "season_note": "待查",
+    "parking": "待查",
+    "mapcode": "待查",
+    "description": "待查",
+    "sources": "待查",
+    "categories": "待查"
+   },
+   "checked_date": null
+  },
+  "db:db_s_c06b11e288": {
+   "kind": "spot",
+   "name": "八代城",
+   "name_ja": "八代城",
+   "categories": [
+    "historic"
+   ],
+   "category_source": "osm_rule",
+   "category_basis": "historic=castle",
+   "hours": null,
+   "closed_days": null,
+   "admission": null,
+   "stay_minutes": null,
+   "rain_ok": null,
+   "season_note": null,
+   "season_months": null,
+   "parking": null,
+   "mapcode": null,
+   "mapcode_source": null,
+   "description": null,
+   "sources": [],
+   "field_status": {
+    "hours": "待查",
+    "closed_days": "待查",
+    "admission": "待查",
+    "stay_minutes": "估計",
+    "rain_ok": "待查",
+    "season_note": "待查",
+    "parking": "待查",
+    "mapcode": "待查",
+    "description": "待查",
+    "sources": "待查"
+   },
+   "checked_date": null
+  },
+  "db:db_s_f9c2501904": {
+   "kind": "spot",
+   "name": "八代市立博物館未来の森ミュージアム",
+   "name_ja": "八代市立博物館未来の森ミュージアム",
+   "categories": [
+    "historic"
+   ],
+   "category_source": "osm_rule",
+   "category_basis": "名稱符合「historic」關鍵字",
+   "hours": null,
+   "closed_days": null,
+   "admission": null,
+   "stay_minutes": null,
+   "rain_ok": null,
+   "season_note": null,
+   "season_months": null,
+   "parking": null,
+   "mapcode": null,
+   "mapcode_source": null,
+   "description": null,
+   "sources": [],
+   "field_status": {
+    "hours": "待查",
+    "closed_days": "待查",
+    "admission": "待查",
+    "stay_minutes": "估計",
+    "rain_ok": "待查",
+    "season_note": "待查",
+    "parking": "待查",
+    "mapcode": "待查",
+    "description": "待查",
+    "sources": "待查"
+   },
+   "checked_date": null
+  },
+  "db:db_s_752215c5cb": {
+   "kind": "spot",
+   "name": "嬉野溫泉街",
+   "name_ja": "嬉野温泉",
+   "categories": [
+    "onsen"
+   ],
+   "category_source": "osm_rule",
+   "category_basis": "名稱符合「onsen」關鍵字",
+   "hours": null,
+   "closed_days": null,
+   "admission": null,
+   "stay_minutes": null,
+   "rain_ok": null,
+   "season_note": null,
+   "season_months": null,
+   "parking": null,
+   "mapcode": null,
+   "mapcode_source": null,
+   "description": null,
+   "sources": [],
+   "field_status": {
+    "hours": "待查",
+    "closed_days": "待查",
+    "admission": "待查",
+    "stay_minutes": "估計",
+    "rain_ok": "待查",
+    "season_note": "待查",
+    "parking": "待查",
+    "mapcode": "待查",
+    "description": "待查",
+    "sources": "待查"
+   },
+   "checked_date": null
+  },
+  "db:db_s_3a89f2d7ae": {
+   "kind": "spot",
+   "name": "祐德稻荷神社",
+   "name_ja": "祐徳稲荷神社",
+   "categories": [
+    "shrine"
+   ],
+   "category_source": "osm_rule",
+   "category_basis": "名稱符合「shrine」關鍵字",
+   "hours": null,
+   "closed_days": null,
+   "admission": null,
+   "stay_minutes": null,
+   "rain_ok": null,
+   "season_note": null,
+   "season_months": null,
+   "parking": null,
+   "mapcode": null,
+   "mapcode_source": null,
+   "description": null,
+   "sources": [],
+   "field_status": {
+    "hours": "待查",
+    "closed_days": "待查",
+    "admission": "待查",
+    "stay_minutes": "估計",
+    "rain_ok": "待查",
+    "season_note": "待查",
+    "parking": "待查",
+    "mapcode": "待查",
+    "description": "待查",
+    "sources": "待查"
+   },
+   "checked_date": null
+  },
+  "db:db_s_5a64935d15": {
+   "kind": "spot",
+   "name": "祐徳博物館",
+   "name_ja": "祐徳博物館",
+   "categories": [
+    "historic"
+   ],
+   "category_source": "osm_rule",
+   "category_basis": "名稱符合「historic」關鍵字",
+   "hours": null,
+   "closed_days": null,
+   "admission": null,
+   "stay_minutes": null,
+   "rain_ok": null,
+   "season_note": null,
+   "season_months": null,
+   "parking": null,
+   "mapcode": null,
+   "mapcode_source": null,
+   "description": null,
+   "sources": [],
+   "field_status": {
+    "hours": "待查",
+    "closed_days": "待查",
+    "admission": "待查",
+    "stay_minutes": "估計",
+    "rain_ok": "待查",
+    "season_note": "待查",
+    "parking": "待查",
+    "mapcode": "待查",
+    "description": "待查",
+    "sources": "待查"
+   },
+   "checked_date": null
+  },
+  "db:db_s_bc0ed60e18": {
+   "kind": "spot",
+   "name": "鹿島城跡",
+   "name_ja": "鹿島城跡",
+   "categories": [
+    "historic"
+   ],
+   "category_source": "osm_rule",
+   "category_basis": "historic=castle",
+   "hours": null,
+   "closed_days": null,
+   "admission": null,
+   "stay_minutes": null,
+   "rain_ok": null,
+   "season_note": null,
+   "season_months": null,
+   "parking": null,
+   "mapcode": null,
+   "mapcode_source": null,
+   "description": null,
+   "sources": [],
+   "field_status": {
+    "hours": "待查",
+    "closed_days": "待查",
+    "admission": "待查",
+    "stay_minutes": "估計",
+    "rain_ok": "待查",
+    "season_note": "待查",
+    "parking": "待查",
+    "mapcode": "待查",
+    "description": "待查",
+    "sources": "待查"
+   },
+   "checked_date": null
+  },
+  "db:db_s_aee66ab3c7": {
+   "kind": "spot",
+   "name": "御船山樂園",
+   "name_ja": "御船山楽園",
+   "categories": [
+    "natural"
+   ],
+   "category_source": "osm_rule",
+   "category_basis": "名稱符合「natural」關鍵字",
+   "hours": null,
+   "closed_days": null,
+   "admission": null,
+   "stay_minutes": null,
+   "rain_ok": null,
+   "season_note": null,
+   "season_months": null,
+   "parking": null,
+   "mapcode": null,
+   "mapcode_source": null,
+   "description": null,
+   "sources": [],
+   "field_status": {
+    "hours": "待查",
+    "closed_days": "待查",
+    "admission": "待查",
+    "stay_minutes": "估計",
+    "rain_ok": "待查",
+    "season_note": "待查",
+    "parking": "待查",
+    "mapcode": "待查",
+    "description": "待查",
+    "sources": "待查"
+   },
+   "checked_date": null
+  },
+  "db:db_o_4186870dff": {
+   "kind": "spot",
+   "name": "シーボルトの湯",
+   "name_ja": "シーボルトの湯",
+   "categories": [
+    "onsen"
+   ],
+   "category_source": "osm_rule",
+   "category_basis": "資料庫溫泉類／amenity=public_bath",
+   "hours": null,
+   "closed_days": null,
+   "admission": null,
+   "stay_minutes": null,
+   "rain_ok": null,
+   "season_note": null,
+   "season_months": null,
+   "parking": null,
+   "mapcode": null,
+   "mapcode_source": null,
+   "description": null,
+   "sources": [],
+   "field_status": {
+    "hours": "待查",
+    "closed_days": "待查",
+    "admission": "待查",
+    "stay_minutes": "估計",
+    "rain_ok": "待查",
+    "season_note": "待查",
+    "parking": "待查",
+    "mapcode": "待查",
+    "description": "待查",
+    "sources": "待查"
+   },
+   "checked_date": null
+  },
+  "db:db_s_d36589ad92": {
+   "kind": "spot",
+   "name": "嬉野の大チャノキ",
+   "name_ja": "嬉野の大チャノキ",
+   "categories": [
+    "uncat"
+   ],
+   "category_source": "uncat",
+   "category_basis": "OSM 標籤與名稱都判不出，待景點部人工分類",
+   "hours": null,
+   "closed_days": null,
+   "admission": null,
+   "stay_minutes": null,
+   "rain_ok": null,
+   "season_note": null,
+   "season_months": null,
+   "parking": null,
+   "mapcode": null,
+   "mapcode_source": null,
+   "description": null,
+   "sources": [],
+   "field_status": {
+    "hours": "待查",
+    "closed_days": "待查",
+    "admission": "待查",
+    "stay_minutes": "估計",
+    "rain_ok": "待查",
+    "season_note": "待查",
+    "parking": "待查",
+    "mapcode": "待查",
+    "description": "待查",
+    "sources": "待查",
+    "categories": "待查"
+   },
+   "checked_date": null
+  },
+  "db:db_r_0e2f205e88": {
+   "kind": "restaurant",
+   "name": "船頭寿司",
+   "name_ja": "船頭寿司",
+   "cuisine_group": "壽司",
+   "cuisine": "壽司・和食",
+   "budget_lunch": "¥1,000–¥1,999（Tabelog）",
+   "budget_dinner": null,
+   "closed_days": "週一",
+   "hours": "11:30–14:30、17:00–22:00",
+   "reservation": {
+    "required": null,
+    "accepts": true,
+    "method": "電話預約",
+    "note": null
+   },
+   "google_maps_url": "https://www.google.com/maps/search/?api=1&query=33.2139566%2C130.3721398",
+   "ratings": [
+    {
+     "source": "tabelog",
+     "score": 3.08,
+     "scale": 5,
+     "url": "https://tabelog.com/fukuoka/A4008/A400806/40026850/",
+     "checked_at": "2026-11-11"
+    }
+   ],
+   "mapcode": null,
+   "mapcode_source": null,
+   "sources": [
+    {
+     "url": "https://www.openstreetmap.org/way/592355616",
+     "checked_at": "2026-10-31",
+     "title": "OpenStreetMap（trip-db 候選）"
+    },
+    {
+     "url": "https://tabelog.com/tw/fukuoka/A4008/A400806/40026850/",
+     "checked_at": "2026-11-11",
+     "title": "Tabelog（繁中鏡像頁，與日文頁同店號；日文頁網址取自該頁 hreflang=ja）",
+     "fields": [
+      "ratings.tabelog",
+      "cuisine",
+      "budget_lunch",
+      "budget_dinner",
+      "hours",
+      "closed_days",
+      "reservation"
+     ]
+    }
+   ],
+   "field_status": {
+    "budget_lunch": "已查",
+    "budget_dinner": "待查",
+    "closed_days": "已查",
+    "hours": "已查",
+    "reservation": "已查",
+    "ratings.tabelog": "已查",
+    "ratings.google": "待查",
+    "mapcode": "待查"
+   },
+   "cuisine_source": "Tabelog 2026-11-11",
+   "checked_date": "2026-11-11",
+   "note": "預算為 Tabelog 每人預算區間。"
+  },
+  "db:db_s_ecc2367753": {
+   "kind": "spot",
+   "name": "博多千年門",
+   "name_ja": "博多千年門",
+   "categories": [
+    "uncat"
+   ],
+   "category_source": "uncat",
+   "category_basis": "OSM 標籤與名稱都判不出，待景點部人工分類",
+   "hours": null,
+   "closed_days": null,
+   "admission": null,
+   "stay_minutes": null,
+   "rain_ok": null,
+   "season_note": null,
+   "season_months": null,
+   "parking": null,
+   "mapcode": null,
+   "mapcode_source": null,
+   "description": null,
+   "sources": [],
+   "field_status": {
+    "hours": "待查",
+    "closed_days": "待查",
+    "admission": "待查",
+    "stay_minutes": "估計",
+    "rain_ok": "待查",
+    "season_note": "待查",
+    "parking": "待查",
+    "mapcode": "待查",
+    "description": "待查",
+    "sources": "待查",
+    "categories": "待查"
+   },
+   "checked_date": null
+  },
+  "db:db_s_9148bc3a8e": {
+   "kind": "spot",
+   "name": "博多町家鄉土館",
+   "name_ja": "博多町家鄉土館",
+   "categories": [
+    "historic"
+   ],
+   "category_source": "osm_rule",
+   "category_basis": "名稱符合「historic」關鍵字",
+   "hours": null,
+   "closed_days": null,
+   "admission": null,
+   "stay_minutes": null,
+   "rain_ok": null,
+   "season_note": null,
+   "season_months": null,
+   "parking": null,
+   "mapcode": null,
+   "mapcode_source": null,
+   "description": null,
+   "sources": [],
+   "field_status": {
+    "hours": "待查",
+    "closed_days": "待查",
+    "admission": "待查",
+    "stay_minutes": "估計",
+    "rain_ok": "待查",
+    "season_note": "待查",
+    "parking": "待查",
+    "mapcode": "待查",
+    "description": "待查",
+    "sources": "待查"
+   },
+   "checked_date": null
+  },
+  "db:db_r_dfe514d8e4": {
+   "kind": "restaurant",
+   "name": "博多華味鳥",
+   "name_ja": "博多華味鳥",
+   "cuisine_group": "雞肉料理",
+   "cuisine": "博多水炊き（祇園店）",
+   "budget_lunch": "不適用",
+   "budget_dinner": "¥4,000–¥4,999（Tabelog）",
+   "closed_days": "無固定公休（Tabelog 未列）",
+   "hours": "週一–週六 17:00–23:00；週日、假日 17:00–22:00",
+   "reservation": {
+    "required": null,
+    "accepts": true,
+    "method": "電話預約",
+    "note": "不接受自動預約系統（AutoReserve 等）代訂；逾時 15 分鐘未到會取消"
+   },
+   "google_maps_url": "https://www.google.com/maps/place/?q=place_id:ChIJi08CmsCRQTURyfXjNXC-BOs",
+   "ratings": [
+    {
+     "source": "tabelog",
+     "score": 3.54,
+     "scale": 5,
+     "url": "https://tabelog.com/fukuoka/A4001/A400101/40002057/",
+     "checked_at": "2026-11-11"
+    }
+   ],
+   "mapcode": null,
+   "mapcode_source": null,
+   "sources": [
+    {
+     "url": "https://www.openstreetmap.org/node/5074995822",
+     "checked_at": "2026-10-31",
+     "title": "OpenStreetMap（trip-db 候選）"
+    },
+    {
+     "url": "https://tabelog.com/tw/fukuoka/A4001/A400101/40002057/",
+     "checked_at": "2026-11-11",
+     "title": "Tabelog（繁中鏡像頁，與日文頁同店號；日文頁網址取自該頁 hreflang=ja）",
+     "fields": [
+      "ratings.tabelog",
+      "cuisine",
+      "budget_lunch",
+      "budget_dinner",
+      "hours",
+      "closed_days",
+      "reservation"
+     ]
+    },
+    {
+     "url": "https://www.taveri.jp/store/ChIJi08CmsCRQTURyfXjNXC-BOs",
+     "checked_at": "2026-11-11",
+     "title": "Google 評分轉載頁（taveri，已核對店名／位置；非 Google 店家頁）",
+     "fields": [
+      "note"
+     ]
+    }
+   ],
+   "field_status": {
+    "budget_lunch": "不適用",
+    "budget_dinner": "已查",
+    "closed_days": "已查",
+    "hours": "已查",
+    "reservation": "已查",
+    "ratings.tabelog": "已查",
+    "ratings.google": "待查（未在 Google 地圖店家頁人工查看；轉載頁數值見 note）",
+    "mapcode": "待查"
+   },
+   "cuisine_source": "Tabelog 2026-11-11",
+   "checked_date": "2026-11-11",
+   "note": "資料庫座標對應「博多華味鳥 祇園店」；路線 C 的備註寫博多站前店，分店需統一。Tabelog 只列晚間營業。 Google 評分參考值 4.3（第三方轉載頁 taveri，2026-11-11 查看；未在 Google 地圖店家頁人工核對，故未寫入 ratings）。 祇園店（DB 座標對應祇園店） 預算為 Tabelog 每人預算區間。"
+  },
+  "db:db_s_ef6925b5b0": {
+   "kind": "spot",
+   "name": "九州國立博物館",
+   "name_ja": "九州国立博物館",
+   "categories": [
+    "historic"
+   ],
+   "category_source": "osm_rule",
+   "category_basis": "名稱符合「historic」關鍵字",
+   "hours": null,
+   "closed_days": null,
+   "admission": null,
+   "stay_minutes": null,
+   "rain_ok": null,
+   "season_note": null,
+   "season_months": null,
+   "parking": null,
+   "mapcode": null,
+   "mapcode_source": null,
+   "description": null,
+   "sources": [],
+   "field_status": {
+    "hours": "待查",
+    "closed_days": "待查",
+    "admission": "待查",
+    "stay_minutes": "估計",
+    "rain_ok": "待查",
+    "season_note": "待查",
+    "parking": "待查",
+    "mapcode": "待查",
+    "description": "待查",
+    "sources": "待查"
+   },
+   "checked_date": null
+  },
+  "db:db_s_78b9489288": {
+   "kind": "spot",
+   "name": "大濠公園",
+   "name_ja": "大濠公園",
+   "categories": [
+    "natural"
+   ],
+   "category_source": "osm_rule",
+   "category_basis": "名稱符合「natural」關鍵字",
+   "hours": null,
+   "closed_days": null,
+   "admission": null,
+   "stay_minutes": null,
+   "rain_ok": null,
+   "season_note": null,
+   "season_months": null,
+   "parking": null,
+   "mapcode": null,
+   "mapcode_source": null,
+   "description": null,
+   "sources": [],
+   "field_status": {
+    "hours": "待查",
+    "closed_days": "待查",
+    "admission": "待查",
+    "stay_minutes": "估計",
+    "rain_ok": "待查",
+    "season_note": "待查",
+    "parking": "待查",
+    "mapcode": "待查",
+    "description": "待查",
+    "sources": "待查"
+   },
+   "checked_date": null
+  },
+  "db:db_o_468b8dbbf4": {
+   "kind": "spot",
+   "name": "みなと温泉 波葉の湯",
+   "name_ja": "みなと温泉 波葉の湯",
+   "categories": [
+    "onsen"
+   ],
+   "category_source": "osm_rule",
+   "category_basis": "資料庫溫泉類／amenity=public_bath",
+   "hours": null,
+   "closed_days": null,
+   "admission": null,
+   "stay_minutes": null,
+   "rain_ok": null,
+   "season_note": null,
+   "season_months": null,
+   "parking": null,
+   "mapcode": null,
+   "mapcode_source": null,
+   "description": null,
+   "sources": [],
+   "field_status": {
+    "hours": "待查",
+    "closed_days": "待查",
+    "admission": "待查",
+    "stay_minutes": "估計",
+    "rain_ok": "待查",
+    "season_note": "待查",
+    "parking": "待查",
+    "mapcode": "待查",
+    "description": "待查",
+    "sources": "待查"
+   },
+   "checked_date": null
+  },
+  "db:db_r_2c1d787fec": {
+   "kind": "restaurant",
+   "name": "元祖 長浜屋拉麵",
+   "name_ja": "元祖長浜屋",
+   "cuisine_group": "拉麵",
+   "cuisine": "長濱豚骨拉麵",
+   "budget_lunch": "～¥999（Tabelog）",
+   "budget_dinner": "～¥999（Tabelog）",
+   "closed_days": "12/31–1/5",
+   "hours": "06:00–翌 01:45",
+   "reservation": {
+    "required": false,
+    "accepts": false,
+    "method": "不收（現場候位）",
+    "note": null
+   },
+   "google_maps_url": "https://www.google.com/maps/place/?q=place_id:ChIJffWFyyiSQTURzxSQ1YDL91I",
+   "ratings": [
+    {
+     "source": "tabelog",
+     "score": 3.64,
+     "scale": 5,
+     "url": "https://tabelog.com/fukuoka/A4001/A400104/40006844/",
+     "checked_at": "2026-11-11"
+    }
+   ],
+   "mapcode": null,
+   "mapcode_source": null,
+   "sources": [
+    {
+     "url": "https://www.openstreetmap.org/node/5424645313",
+     "checked_at": "2026-10-31",
+     "title": "OpenStreetMap（trip-db 候選）"
+    },
+    {
+     "url": "https://tabelog.com/tw/fukuoka/A4001/A400104/40006844/",
+     "checked_at": "2026-11-11",
+     "title": "Tabelog（繁中鏡像頁，與日文頁同店號；日文頁網址取自該頁 hreflang=ja）",
+     "fields": [
+      "ratings.tabelog",
+      "cuisine",
+      "budget_lunch",
+      "budget_dinner",
+      "hours",
+      "closed_days",
+      "reservation"
+     ]
+    },
+    {
+     "url": "https://www.taveri.jp/store/ChIJffWFyyiSQTURzxSQ1YDL91I",
+     "checked_at": "2026-11-11",
+     "title": "Google 評分轉載頁（taveri，已核對店名／位置；非 Google 店家頁）",
+     "fields": [
+      "note"
+     ]
+    }
+   ],
+   "field_status": {
+    "budget_lunch": "已查",
+    "budget_dinner": "已查",
+    "closed_days": "已查",
+    "hours": "已查",
+    "reservation": "已查",
+    "ratings.tabelog": "已查",
+    "ratings.google": "待查（未在 Google 地圖店家頁人工查看；轉載頁數值見 note）",
+    "mapcode": "待查"
+   },
+   "cuisine_source": "Tabelog 2026-11-11",
+   "checked_date": "2026-11-11",
+   "note": "Google 評分參考值 3.8（第三方轉載頁 taveri，2026-11-11 查看；未在 Google 地圖店家頁人工核對，故未寫入 ratings）。 預算為 Tabelog 每人預算區間。"
+  },
+  "db:db_r_c51b971faa": {
+   "kind": "restaurant",
+   "name": "FUK COFFEE",
+   "name_ja": "FUK COFFEE",
+   "cuisine_group": "咖啡廳",
+   "cuisine": "咖啡館",
+   "budget_lunch": "¥1,000–¥1,999（Tabelog）",
+   "budget_dinner": "¥1,000–¥1,999（Tabelog）",
+   "closed_days": "Tabelog 未列公休",
+   "hours": "08:00–20:00",
+   "reservation": {
+    "required": false,
+    "accepts": false,
+    "method": "不收（現場候位）",
+    "note": null
+   },
+   "google_maps_url": "https://www.google.com/maps/search/?api=1&query=33.5908233%2C130.4127936",
+   "ratings": [
+    {
+     "source": "tabelog",
+     "score": 3.54,
+     "scale": 5,
+     "url": "https://tabelog.com/fukuoka/A4001/A400101/40060713/",
+     "checked_at": "2026-11-11"
+    }
+   ],
+   "mapcode": null,
+   "mapcode_source": null,
+   "sources": [
+    {
+     "url": "https://www.openstreetmap.org/node/12364549376",
+     "checked_at": "2026-10-31",
+     "title": "OpenStreetMap（trip-db 候選）"
+    },
+    {
+     "url": "https://tabelog.com/tw/fukuoka/A4001/A400101/40060713/",
+     "checked_at": "2026-11-11",
+     "title": "Tabelog（繁中鏡像頁，與日文頁同店號；日文頁網址取自該頁 hreflang=ja）",
+     "fields": [
+      "ratings.tabelog",
+      "cuisine",
+      "budget_lunch",
+      "budget_dinner",
+      "hours",
+      "closed_days",
+      "reservation"
+     ]
+    },
+    {
+     "url": "https://restaurantguru.jp/Fuk-Coffee-Fukuoka",
+     "checked_at": "2026-11-11",
+     "title": "Google 評分轉載頁（restaurantguru，已核對店名／位置；非 Google 店家頁）",
+     "fields": [
+      "note"
+     ]
+    }
+   ],
+   "field_status": {
+    "budget_lunch": "已查",
+    "budget_dinner": "已查",
+    "closed_days": "已查",
+    "hours": "已查",
+    "reservation": "已查",
+    "ratings.tabelog": "已查",
+    "ratings.google": "待查（未在 Google 地圖店家頁人工查看；轉載頁數值見 note）",
+    "mapcode": "待查"
+   },
+   "cuisine_source": "Tabelog 2026-11-11",
+   "checked_date": "2026-11-11",
+   "note": "Google 評分參考值 3.6（第三方轉載頁 restaurantguru，2026-11-11 查看；未在 Google 地圖店家頁人工核對，故未寫入 ratings）。 預算為 Tabelog 每人預算區間。"
+  },
+  "db:db_s_4b13bcbe9c": {
+   "kind": "spot",
+   "name": "香月泰男美術館",
+   "name_ja": "香月泰男美術館",
+   "categories": [
+    "historic"
+   ],
+   "category_source": "osm_rule",
+   "category_basis": "tourism=museum（博物館・美術館歸歷史／文化）",
+   "hours": null,
+   "closed_days": null,
+   "admission": null,
+   "stay_minutes": null,
+   "rain_ok": null,
+   "season_note": null,
+   "season_months": null,
+   "parking": null,
+   "mapcode": null,
+   "mapcode_source": null,
+   "description": null,
+   "sources": [],
+   "field_status": {
+    "hours": "待查",
+    "closed_days": "待查",
+    "admission": "待查",
+    "stay_minutes": "估計",
+    "rain_ok": "待查",
+    "season_note": "待查",
+    "parking": "待查",
+    "mapcode": "待查",
+    "description": "待查",
+    "sources": "待查"
+   },
+   "checked_date": null
+  },
+  "db:db_s_7871952db9": {
+   "kind": "spot",
+   "name": "赤崎神社楽桟敷",
+   "name_ja": "赤崎神社楽桟敷",
+   "categories": [
+    "shrine",
+    "historic"
+   ],
+   "category_source": "osm_rule",
+   "category_basis": "historic=archaeological_site；名稱符合「shrine」關鍵字",
+   "hours": null,
+   "closed_days": null,
+   "admission": null,
+   "stay_minutes": null,
+   "rain_ok": null,
+   "season_note": null,
+   "season_months": null,
+   "parking": null,
+   "mapcode": null,
+   "mapcode_source": null,
+   "description": null,
+   "sources": [],
+   "field_status": {
+    "hours": "待查",
+    "closed_days": "待查",
+    "admission": "待查",
+    "stay_minutes": "估計",
+    "rain_ok": "待查",
+    "season_note": "待查",
+    "parking": "待查",
+    "mapcode": "待查",
+    "description": "待查",
+    "sources": "待查"
+   },
+   "checked_date": null
+  },
+  "db:db_s_f49a6151ff": {
+   "kind": "spot",
+   "name": "大板山たたら製鉄遺跡",
+   "name_ja": "大板山たたら製鉄遺跡",
+   "categories": [
+    "historic"
+   ],
+   "category_source": "osm_rule",
+   "category_basis": "historic=archaeological_site",
+   "hours": null,
+   "closed_days": null,
+   "admission": null,
+   "stay_minutes": null,
+   "rain_ok": null,
+   "season_note": null,
+   "season_months": null,
+   "parking": null,
+   "mapcode": null,
+   "mapcode_source": null,
+   "description": null,
+   "sources": [],
+   "field_status": {
+    "hours": "待查",
+    "closed_days": "待查",
+    "admission": "待查",
+    "stay_minutes": "估計",
+    "rain_ok": "待查",
+    "season_note": "待查",
+    "parking": "待查",
+    "mapcode": "待查",
+    "description": "待查",
+    "sources": "待查"
+   },
+   "checked_date": null
+  },
+  "db:db_r_3d710ec62a": {
+   "kind": "restaurant",
+   "name": "門司港茶寮 別館",
+   "name_ja": "門司港茶寮 別館",
+   "cuisine_group": "咖哩",
+   "cuisine": "燒咖哩・洋食",
+   "budget_lunch": "¥1,000–¥1,999（Tabelog）",
+   "budget_dinner": "¥1,000–¥1,999（Tabelog）",
+   "closed_days": "全年無休（1–2 月平日可能休業維護）",
+   "hours": "3–12 月 10:00–21:00；1–2 月 10:00–20:00",
+   "reservation": {
+    "required": false,
+    "accepts": false,
+    "method": "不收（現場候位）",
+    "note": null
+   },
+   "google_maps_url": "https://www.google.com/maps/search/?api=1&query=33.9490744%2C130.9642571",
+   "ratings": [
+    {
+     "source": "tabelog",
+     "score": 3.23,
+     "scale": 5,
+     "url": "https://tabelog.com/fukuoka/A4004/A400501/40033336/",
+     "checked_at": "2026-11-11"
+    }
+   ],
+   "mapcode": null,
+   "mapcode_source": null,
+   "sources": [
+    {
+     "url": "https://www.openstreetmap.org/node/14335310459",
+     "checked_at": "2026-10-31",
+     "title": "OpenStreetMap（trip-db 候選）"
+    },
+    {
+     "url": "https://tabelog.com/tw/fukuoka/A4004/A400501/40033336/",
+     "checked_at": "2026-11-11",
+     "title": "Tabelog（繁中鏡像頁，與日文頁同店號；日文頁網址取自該頁 hreflang=ja）",
+     "fields": [
+      "ratings.tabelog",
+      "cuisine",
+      "budget_lunch",
+      "budget_dinner",
+      "hours",
+      "closed_days",
+      "reservation"
+     ]
+    },
+    {
+     "url": "https://restaurantguru.jp/Mojiko-Saryo-Kitakyushu-2",
+     "checked_at": "2026-11-11",
+     "title": "Google 評分轉載頁（restaurantguru，已核對店名／位置；非 Google 店家頁）",
+     "fields": [
+      "note"
+     ]
+    }
+   ],
+   "field_status": {
+    "budget_lunch": "已查",
+    "budget_dinner": "已查",
+    "closed_days": "已查",
+    "hours": "已查",
+    "reservation": "已查",
+    "ratings.tabelog": "已查",
+    "ratings.google": "待查（未在 Google 地圖店家頁人工查看；轉載頁數值見 note）",
+    "mapcode": "待查"
+   },
+   "cuisine_source": "Tabelog 2026-11-11",
+   "checked_date": "2026-11-11",
+   "note": "Google 評分參考值 3.9（第三方轉載頁 restaurantguru，2026-11-11 查看；未在 Google 地圖店家頁人工核對，故未寫入 ratings）。 預算為 Tabelog 每人預算區間。"
+  },
+  "db:db_o_aeee4e5898": {
+   "kind": "spot",
+   "name": "梅園温泉",
+   "name_ja": "梅園温泉",
+   "categories": [
+    "onsen"
+   ],
+   "category_source": "osm_rule",
+   "category_basis": "資料庫溫泉類／amenity=public_bath",
+   "hours": null,
+   "closed_days": null,
+   "admission": null,
+   "stay_minutes": null,
+   "rain_ok": null,
+   "season_note": null,
+   "season_months": null,
+   "parking": null,
+   "mapcode": null,
+   "mapcode_source": null,
+   "description": null,
+   "sources": [],
+   "field_status": {
+    "hours": "待查",
+    "closed_days": "待查",
+    "admission": "待查",
+    "stay_minutes": "估計",
+    "rain_ok": "待查",
+    "season_note": "待查",
+    "parking": "待查",
+    "mapcode": "待查",
+    "description": "待查",
+    "sources": "待查"
+   },
+   "checked_date": null
+  },
+  "db:db_s_d063343da0": {
+   "kind": "spot",
+   "name": "伊勢ケ浜海水浴場",
+   "name_ja": "伊勢ケ浜海水浴場",
+   "categories": [
+    "natural"
+   ],
+   "category_source": "osm_rule",
+   "category_basis": "名稱符合「natural」關鍵字",
+   "hours": null,
+   "closed_days": null,
+   "admission": null,
+   "stay_minutes": null,
+   "rain_ok": null,
+   "season_note": null,
+   "season_months": null,
+   "parking": null,
+   "mapcode": null,
+   "mapcode_source": null,
+   "description": null,
+   "sources": [],
+   "field_status": {
+    "hours": "待查",
+    "closed_days": "待查",
+    "admission": "待查",
+    "stay_minutes": "估計",
+    "rain_ok": "待查",
+    "season_note": "待查",
+    "parking": "待查",
+    "mapcode": "待查",
+    "description": "待查",
+    "sources": "待查"
+   },
+   "checked_date": null
+  },
+  "db:db_s_1ac90c7f2c": {
+   "kind": "spot",
+   "name": "Hososhima Light House",
+   "name_ja": "Hososhima Light House",
+   "categories": [
+    "uncat"
+   ],
+   "category_source": "uncat",
+   "category_basis": "OSM 標籤與名稱都判不出，待景點部人工分類",
+   "hours": null,
+   "closed_days": null,
+   "admission": null,
+   "stay_minutes": null,
+   "rain_ok": null,
+   "season_note": null,
+   "season_months": null,
+   "parking": null,
+   "mapcode": null,
+   "mapcode_source": null,
+   "description": null,
+   "sources": [],
+   "field_status": {
+    "hours": "待查",
+    "closed_days": "待查",
+    "admission": "待查",
+    "stay_minutes": "估計",
+    "rain_ok": "待查",
+    "season_note": "待查",
+    "parking": "待查",
+    "mapcode": "待查",
+    "description": "待查",
+    "sources": "待查",
+    "categories": "待查"
+   },
+   "checked_date": null
+  },
+  "db:db_s_9bea30f744": {
+   "kind": "spot",
+   "name": "御鉾ケ浦海水浴場",
+   "name_ja": "御鉾ケ浦海水浴場",
+   "categories": [
+    "natural"
+   ],
+   "category_source": "osm_rule",
+   "category_basis": "名稱符合「natural」關鍵字",
+   "hours": null,
+   "closed_days": null,
+   "admission": null,
+   "stay_minutes": null,
+   "rain_ok": null,
+   "season_note": null,
+   "season_months": null,
+   "parking": null,
+   "mapcode": null,
+   "mapcode_source": null,
+   "description": null,
+   "sources": [],
+   "field_status": {
+    "hours": "待查",
+    "closed_days": "待查",
+    "admission": "待查",
+    "stay_minutes": "估計",
+    "rain_ok": "待查",
+    "season_note": "待查",
+    "parking": "待查",
+    "mapcode": "待查",
+    "description": "待查",
+    "sources": "待查"
+   },
+   "checked_date": null
+  },
+  "db:db_s_298f866b10": {
+   "kind": "spot",
+   "name": "高千穂橋梁",
+   "name_ja": "高千穂橋梁",
+   "categories": [
+    "uncat"
+   ],
+   "category_source": "uncat",
+   "category_basis": "OSM 標籤與名稱都判不出，待景點部人工分類",
+   "hours": null,
+   "closed_days": null,
+   "admission": null,
+   "stay_minutes": null,
+   "rain_ok": null,
+   "season_note": null,
+   "season_months": null,
+   "parking": null,
+   "mapcode": null,
+   "mapcode_source": null,
+   "description": null,
+   "sources": [],
+   "field_status": {
+    "hours": "待查",
+    "closed_days": "待查",
+    "admission": "待查",
+    "stay_minutes": "估計",
+    "rain_ok": "待查",
+    "season_note": "待查",
+    "parking": "待查",
+    "mapcode": "待查",
+    "description": "待查",
+    "sources": "待查",
+    "categories": "待查"
+   },
+   "checked_date": null
+  },
+  "db:db_s_32593cda3c": {
+   "kind": "spot",
+   "name": "白川水源",
+   "name_ja": "白川水源",
+   "categories": [
+    "natural"
+   ],
+   "category_source": "osm_rule",
+   "category_basis": "名稱符合「natural」關鍵字",
+   "hours": null,
+   "closed_days": null,
+   "admission": null,
+   "stay_minutes": null,
+   "rain_ok": null,
+   "season_note": null,
+   "season_months": null,
+   "parking": null,
+   "mapcode": null,
+   "mapcode_source": null,
+   "description": null,
+   "sources": [],
+   "field_status": {
+    "hours": "待查",
+    "closed_days": "待查",
+    "admission": "待查",
+    "stay_minutes": "估計",
+    "rain_ok": "待查",
+    "season_note": "待查",
+    "parking": "待查",
+    "mapcode": "待查",
+    "description": "待查",
+    "sources": "待查"
+   },
+   "checked_date": null
+  },
+  "db:db_s_4d0e8a1cd0": {
+   "kind": "spot",
+   "name": "草千里濱",
+   "name_ja": "草千里ケ浜",
+   "categories": [
+    "natural"
+   ],
+   "category_source": "osm_rule",
+   "category_basis": "名稱符合「natural」關鍵字",
+   "hours": null,
+   "closed_days": null,
+   "admission": null,
+   "stay_minutes": null,
+   "rain_ok": null,
+   "season_note": null,
+   "season_months": null,
+   "parking": null,
+   "mapcode": null,
+   "mapcode_source": null,
+   "description": null,
+   "sources": [],
+   "field_status": {
+    "hours": "待查",
+    "closed_days": "待查",
+    "admission": "待查",
+    "stay_minutes": "估計",
+    "rain_ok": "待查",
+    "season_note": "待查",
+    "parking": "待查",
+    "mapcode": "待查",
+    "description": "待查",
+    "sources": "待查"
+   },
+   "checked_date": null
+  },
+  "db:db_s_e2a49dfbe1": {
+   "kind": "spot",
+   "name": "棚底城跡",
+   "name_ja": "棚底城跡",
+   "categories": [
+    "historic"
+   ],
+   "category_source": "osm_rule",
+   "category_basis": "historic=castle",
+   "hours": null,
+   "closed_days": null,
+   "admission": null,
+   "stay_minutes": null,
+   "rain_ok": null,
+   "season_note": null,
+   "season_months": null,
+   "parking": null,
+   "mapcode": null,
+   "mapcode_source": null,
+   "description": null,
+   "sources": [],
+   "field_status": {
+    "hours": "待查",
+    "closed_days": "待查",
+    "admission": "待查",
+    "stay_minutes": "估計",
+    "rain_ok": "待查",
+    "season_note": "待查",
+    "parking": "待查",
+    "mapcode": "待查",
+    "description": "待查",
+    "sources": "待查"
+   },
+   "checked_date": null
+  },
+  "db:db_s_4c27010caf": {
+   "kind": "spot",
+   "name": "有田ポーセリンパーク",
+   "name_ja": "有田ポーセリンパーク",
+   "categories": [
+    "experience"
+   ],
+   "category_source": "osm_rule",
+   "category_basis": "名稱符合「experience」關鍵字",
+   "hours": null,
+   "closed_days": null,
+   "admission": null,
+   "stay_minutes": null,
+   "rain_ok": null,
+   "season_note": null,
+   "season_months": null,
+   "parking": null,
+   "mapcode": null,
+   "mapcode_source": null,
+   "description": null,
+   "sources": [],
+   "field_status": {
+    "hours": "待查",
+    "closed_days": "待查",
+    "admission": "待查",
+    "stay_minutes": "估計",
+    "rain_ok": "待查",
+    "season_note": "待查",
+    "parking": "待查",
+    "mapcode": "待查",
+    "description": "待查",
+    "sources": "待查"
+   },
+   "checked_date": null
+  },
+  "db:db_s_ff21da9c25": {
+   "kind": "spot",
+   "name": "佐賀県立宇宙科学館",
+   "name_ja": "佐賀県立宇宙科学館",
+   "categories": [
+    "experience"
+   ],
+   "category_source": "osm_rule",
+   "category_basis": "名稱符合「experience」關鍵字",
+   "hours": null,
+   "closed_days": null,
+   "admission": null,
+   "stay_minutes": null,
+   "rain_ok": null,
+   "season_note": null,
+   "season_months": null,
+   "parking": null,
+   "mapcode": null,
+   "mapcode_source": null,
+   "description": null,
+   "sources": [],
+   "field_status": {
+    "hours": "待查",
+    "closed_days": "待查",
+    "admission": "待查",
+    "stay_minutes": "估計",
+    "rain_ok": "待查",
+    "season_note": "待查",
+    "parking": "待查",
+    "mapcode": "待查",
+    "description": "待查",
+    "sources": "待查"
+   },
+   "checked_date": null
+  },
+  "db:db_s_947717e1fa": {
+   "kind": "spot",
+   "name": "おつぼ山神籠石",
+   "name_ja": "おつぼ山神籠石",
+   "categories": [
+    "historic"
+   ],
+   "category_source": "osm_rule",
+   "category_basis": "historic=archaeological_site",
+   "hours": null,
+   "closed_days": null,
+   "admission": null,
+   "stay_minutes": null,
+   "rain_ok": null,
+   "season_note": null,
+   "season_months": null,
+   "parking": null,
+   "mapcode": null,
+   "mapcode_source": null,
+   "description": null,
+   "sources": [],
+   "field_status": {
+    "hours": "待查",
+    "closed_days": "待查",
+    "admission": "待查",
+    "stay_minutes": "估計",
+    "rain_ok": "待查",
+    "season_note": "待查",
+    "parking": "待查",
+    "mapcode": "待查",
+    "description": "待查",
+    "sources": "待查"
+   },
+   "checked_date": null
+  },
+  "db:db_r_1c577dd3c4": {
+   "kind": "restaurant",
+   "name": "一蘭拉麵",
+   "name_ja": "一蘭",
+   "cuisine_group": "拉麵",
+   "cuisine": "博多豚骨拉麵（本社總本店）",
+   "budget_lunch": "¥1,000–¥1,999（Tabelog）",
+   "budget_dinner": "¥1,000–¥1,999（Tabelog）",
+   "closed_days": "全年無休",
+   "hours": "24 小時",
+   "reservation": {
+    "required": false,
+    "accepts": false,
+    "method": "不收（現場候位）",
+    "note": null
+   },
+   "google_maps_url": "https://www.google.com/maps/search/?api=1&query=33.5932093%2C130.4045625",
+   "ratings": [
+    {
+     "source": "tabelog",
+     "score": 3.45,
+     "scale": 5,
+     "url": "https://tabelog.com/fukuoka/A4001/A400102/40000130/",
+     "checked_at": "2026-11-11"
+    }
+   ],
+   "mapcode": null,
+   "mapcode_source": null,
+   "sources": [
+    {
+     "url": "https://www.openstreetmap.org/way/1164860428",
+     "checked_at": "2026-10-31",
+     "title": "OpenStreetMap（trip-db 候選）"
+    },
+    {
+     "url": "https://tabelog.com/tw/fukuoka/A4001/A400102/40000130/",
+     "checked_at": "2026-11-11",
+     "title": "Tabelog（繁中鏡像頁，與日文頁同店號；日文頁網址取自該頁 hreflang=ja）",
+     "fields": [
+      "ratings.tabelog",
+      "cuisine",
+      "budget_lunch",
+      "budget_dinner",
+      "hours",
+      "closed_days",
+      "reservation"
+     ]
+    },
+    {
+     "url": "https://restaurantguru.jp/ICHIRAN-Original-Shop-and-Home-Office-Fukuoka",
+     "checked_at": "2026-11-11",
+     "title": "Google 評分轉載頁（restaurantguru，已核對店名／位置；非 Google 店家頁）",
+     "fields": [
+      "note"
+     ]
+    }
+   ],
+   "field_status": {
+    "budget_lunch": "已查",
+    "budget_dinner": "已查",
+    "closed_days": "已查",
+    "hours": "已查",
+    "reservation": "已查",
+    "ratings.tabelog": "已查",
+    "ratings.google": "待查（未在 Google 地圖店家頁人工查看；轉載頁數值見 note）",
+    "mapcode": "待查"
+   },
+   "cuisine_source": "Tabelog 2026-11-11",
+   "checked_date": "2026-11-11",
+   "note": "Tabelog 對應「一蘭 本社総本店」（中洲）。 Google 評分參考值 4.2（第三方轉載頁 restaurantguru，2026-11-11 查看；未在 Google 地圖店家頁人工核對，故未寫入 ratings）。 預算為 Tabelog 每人預算區間。"
+  },
+  "db:db_o_e9e5bf3681": {
+   "kind": "spot",
+   "name": "志賀島休暇村 金印の湯",
+   "name_ja": "志賀島休暇村 金印の湯",
+   "categories": [
+    "onsen"
+   ],
+   "category_source": "osm_rule",
+   "category_basis": "資料庫溫泉類／amenity=public_bath",
+   "hours": null,
+   "closed_days": null,
+   "admission": null,
+   "stay_minutes": null,
+   "rain_ok": null,
+   "season_note": null,
+   "season_months": null,
+   "parking": null,
+   "mapcode": null,
+   "mapcode_source": null,
+   "description": null,
+   "sources": [],
+   "field_status": {
+    "hours": "待查",
+    "closed_days": "待查",
+    "admission": "待查",
+    "stay_minutes": "待查",
+    "rain_ok": "待查",
+    "season_note": "待查",
+    "parking": "待查",
+    "mapcode": "待查",
+    "description": "待查",
+    "sources": "待查"
+   },
+   "checked_date": null
+  },
+  "db:db_r_10c9266683": {
+   "kind": "restaurant",
+   "name": "稚加榮",
+   "name_ja": "稚加榮",
+   "cuisine_group": "和食",
+   "cuisine": "日本料理・海鮮・活魚料亭",
+   "budget_lunch": "¥2,000–¥2,999（Tabelog）",
+   "budget_dinner": "¥10,000–¥14,999（Tabelog）",
+   "closed_days": "依官網店休日（含部分週一）、12/30–1/4",
+   "hours": "平日 17:00–22:00；週六 11:30–15:00、17:00–22:00；週日 11:30–15:00、17:00–21:00",
+   "reservation": {
+    "required": null,
+    "accepts": true,
+    "method": "官網／TableCheck 網路預約、電話預約",
+    "note": "午餐從官網預約；吧台晚餐可電話或網路預約；包廂請電話預約（官網 FAQ）"
+   },
+   "google_maps_url": "https://www.google.com/maps/place/?q=place_id:ChIJx7zaE4eRQTURntscDlwa6cE",
+   "ratings": [
+    {
+     "source": "tabelog",
+     "score": 3.69,
+     "scale": 5,
+     "url": "https://tabelog.com/fukuoka/A4001/A400104/40000023/",
+     "checked_at": "2026-11-11"
+    }
+   ],
+   "mapcode": null,
+   "mapcode_source": null,
+   "sources": [
+    {
+     "url": "https://www.openstreetmap.org/node/4748850336",
+     "checked_at": "2026-10-31",
+     "title": "OpenStreetMap（trip-db 候選）"
+    },
+    {
+     "url": "https://tabelog.com/tw/fukuoka/A4001/A400104/40000023/",
+     "checked_at": "2026-11-11",
+     "title": "Tabelog（繁中鏡像頁，與日文頁同店號；日文頁網址取自該頁 hreflang=ja）",
+     "fields": [
+      "ratings.tabelog",
+      "cuisine",
+      "budget_lunch",
+      "budget_dinner",
+      "hours",
+      "closed_days",
+      "reservation"
+     ]
+    },
+    {
+     "url": "https://restaurantguru.jp/CHIKAE-Fukuoka-Seafood-Restaurant-Fukuoka",
+     "checked_at": "2026-11-11",
+     "title": "Google 評分轉載頁（restaurantguru，已核對店名／位置；非 Google 店家頁）",
+     "fields": [
+      "note"
+     ]
+    }
+   ],
+   "field_status": {
+    "budget_lunch": "已查",
+    "budget_dinner": "已查",
+    "closed_days": "已查",
+    "hours": "已查",
+    "reservation": "已查",
+    "ratings.tabelog": "已查",
+    "ratings.google": "待查（未在 Google 地圖店家頁人工查看；轉載頁數值見 note）",
+    "mapcode": "待查"
+   },
+   "cuisine_source": "Tabelog 2026-11-11",
+   "checked_date": "2026-11-11",
+   "note": "Google 評分參考值 4.3（第三方轉載頁 restaurantguru，2026-11-11 查看；未在 Google 地圖店家頁人工核對，故未寫入 ratings）。 預算為 Tabelog 每人預算區間。"
+  },
+  "db:db_r_7770db46ca": {
+   "kind": "restaurant",
+   "name": "博多一幸舍",
+   "name_ja": "博多一幸舎 総本店",
+   "cuisine_group": "拉麵",
+   "cuisine": "博多豚骨拉麵（總本店）",
+   "budget_lunch": "～¥999（Tabelog）",
+   "budget_dinner": "～¥999（Tabelog）",
+   "closed_days": "全年無休（年末年始除外）",
+   "hours": "週一–週六 11:00–22:30；週日 11:00–21:00",
+   "reservation": {
+    "required": false,
+    "accepts": false,
+    "method": "不收（現場候位）",
+    "note": null
+   },
+   "google_maps_url": "https://www.google.com/maps/search/?api=1&query=33.5882444%2C130.4170779",
+   "ratings": [
+    {
+     "source": "tabelog",
+     "score": 3.48,
+     "scale": 5,
+     "url": "https://tabelog.com/fukuoka/A4001/A400101/40006062/",
+     "checked_at": "2026-11-11"
+    }
+   ],
+   "mapcode": null,
+   "mapcode_source": null,
+   "sources": [
+    {
+     "url": "https://www.openstreetmap.org/node/5073073021",
+     "checked_at": "2026-10-31",
+     "title": "OpenStreetMap（trip-db 候選）"
+    },
+    {
+     "url": "https://tabelog.com/tw/fukuoka/A4001/A400101/40006062/",
+     "checked_at": "2026-11-11",
+     "title": "Tabelog（繁中鏡像頁，與日文頁同店號；日文頁網址取自該頁 hreflang=ja）",
+     "fields": [
+      "ratings.tabelog",
+      "cuisine",
+      "budget_lunch",
+      "budget_dinner",
+      "hours",
+      "closed_days",
+      "reservation"
+     ]
+    }
+   ],
+   "field_status": {
+    "budget_lunch": "已查",
+    "budget_dinner": "已查",
+    "closed_days": "已查",
+    "hours": "已查",
+    "reservation": "已查",
+    "ratings.tabelog": "已查",
+    "ratings.google": "待查",
+    "mapcode": "待查"
+   },
+   "cuisine_source": "Tabelog 2026-11-11",
+   "checked_date": "2026-11-11",
+   "note": "Google 評分只在搜尋摘要看到約 4.1，未核實，沒有寫進 ratings。 預算為 Tabelog 每人預算區間。"
+  },
+  "db:db_s_c44445f58c": {
+   "kind": "spot",
+   "name": "石井茶碗美術館",
+   "name_ja": "石井茶碗美術館",
+   "categories": [
+    "historic"
+   ],
+   "category_source": "osm_rule",
+   "category_basis": "tourism=museum（博物館・美術館歸歷史／文化）",
+   "hours": null,
+   "closed_days": null,
+   "admission": null,
+   "stay_minutes": null,
+   "rain_ok": null,
+   "season_note": null,
+   "season_months": null,
+   "parking": null,
+   "mapcode": null,
+   "mapcode_source": null,
+   "description": null,
+   "sources": [],
+   "field_status": {
+    "hours": "待查",
+    "closed_days": "待查",
+    "admission": "待查",
+    "stay_minutes": "估計",
+    "rain_ok": "待查",
+    "season_note": "待查",
+    "parking": "待查",
+    "mapcode": "待查",
+    "description": "待查",
+    "sources": "待查"
+   },
+   "checked_date": null
+  },
+  "db:db_s_c5ed6ae4d7": {
+   "kind": "spot",
+   "name": "萩陶芸美術館・吉賀大眉記念館",
+   "name_ja": "萩陶芸美術館・吉賀大眉記念館",
+   "categories": [
+    "historic"
+   ],
+   "category_source": "osm_rule",
+   "category_basis": "名稱符合「historic」關鍵字",
+   "hours": null,
+   "closed_days": null,
+   "admission": null,
+   "stay_minutes": null,
+   "rain_ok": null,
+   "season_note": null,
+   "season_months": null,
+   "parking": null,
+   "mapcode": null,
+   "mapcode_source": null,
+   "description": null,
+   "sources": [],
+   "field_status": {
+    "hours": "待查",
+    "closed_days": "待查",
+    "admission": "待查",
+    "stay_minutes": "估計",
+    "rain_ok": "待查",
+    "season_note": "待查",
+    "parking": "待查",
+    "mapcode": "待查",
+    "description": "待查",
+    "sources": "待查"
+   },
+   "checked_date": null
+  },
+  "db:db_s_6457f1dc88": {
+   "kind": "spot",
+   "name": "下関市立近代先人顕彰館（田中絹代ぶんか館）",
+   "name_ja": "下関市立近代先人顕彰館",
+   "categories": [
+    "historic"
+   ],
+   "category_source": "osm_rule",
+   "category_basis": "tourism=museum（博物館・美術館歸歷史／文化）",
+   "hours": null,
+   "closed_days": null,
+   "admission": null,
+   "stay_minutes": null,
+   "rain_ok": null,
+   "season_note": null,
+   "season_months": null,
+   "parking": null,
+   "mapcode": null,
+   "mapcode_source": null,
+   "description": null,
+   "sources": [],
+   "field_status": {
+    "hours": "待查",
+    "closed_days": "待查",
+    "admission": "待查",
+    "stay_minutes": "估計",
+    "rain_ok": "待查",
+    "season_note": "待查",
+    "parking": "待查",
+    "mapcode": "待查",
+    "description": "待查",
+    "sources": "待查"
+   },
+   "checked_date": null
+  },
+  "db:db_s_473ea616df": {
+   "kind": "spot",
+   "name": "旧門司三井倶楽部",
+   "name_ja": "旧門司三井倶楽部",
+   "categories": [
+    "historic"
+   ],
+   "category_source": "osm_rule",
+   "category_basis": "名稱符合「historic」關鍵字",
+   "hours": null,
+   "closed_days": null,
+   "admission": null,
+   "stay_minutes": null,
+   "rain_ok": null,
+   "season_note": null,
+   "season_months": null,
+   "parking": null,
+   "mapcode": null,
+   "mapcode_source": null,
+   "description": null,
+   "sources": [],
+   "field_status": {
+    "hours": "待查",
+    "closed_days": "待查",
+    "admission": "待查",
+    "stay_minutes": "估計",
+    "rain_ok": "待查",
+    "season_note": "待查",
+    "parking": "待查",
+    "mapcode": "待查",
+    "description": "待查",
+    "sources": "待查"
+   },
+   "checked_date": null
+  },
+  "db:db_r_ea69591dbe": {
+   "kind": "restaurant",
+   "name": "みかど食堂",
+   "name_ja": "みかど食堂",
+   "cuisine_group": "西餐",
+   "cuisine": "西餐・咖哩（Mikado食堂 by NARISAWA）",
+   "budget_lunch": null,
+   "budget_dinner": null,
+   "closed_days": null,
+   "hours": null,
+   "reservation": null,
+   "google_maps_url": "https://www.google.com/maps/search/?api=1&query=33.9449538%2C130.9615713",
+   "ratings": [],
+   "mapcode": null,
+   "mapcode_source": null,
+   "sources": [
+    {
+     "url": "https://www.openstreetmap.org/node/9895414855",
+     "checked_at": "2026-10-31",
+     "title": "OpenStreetMap（trip-db 候選）"
+    },
+    {
+     "url": "https://tabelog.com/tw/fukuoka/A4004/A400501/40051029/",
+     "checked_at": "2026-11-11",
+     "title": "Tabelog（繁中鏡像頁，與日文頁同店號；日文頁網址取自該頁 hreflang=ja）",
+     "fields": [
+      "ratings.tabelog",
+      "cuisine",
+      "budget_lunch",
+      "budget_dinner",
+      "hours",
+      "closed_days",
+      "reservation"
+     ]
+    }
+   ],
+   "field_status": {
+    "budget_lunch": "查無（已歇業）",
+    "budget_dinner": "查無（已歇業）",
+    "closed_days": "查無（已歇業）",
+    "hours": "查無（已歇業）",
+    "reservation": "查無（已歇業）",
+    "ratings.tabelog": "查無（Tabelog 標示閉店）",
+    "ratings.google": "查無（已歇業）",
+    "mapcode": "待查"
+   },
+   "cuisine_source": "Tabelog 2026-11-11",
+   "checked_date": "2026-11-11",
+   "note": "⚠️ Tabelog 標示「閉店」（永久關閉），C-D4 午餐需要換店。 預算為 Tabelog 每人預算區間。"
+  },
+  "db:db_r_80c7e85d6c": {
+   "kind": "restaurant",
+   "name": "福喜寿司",
+   "name_ja": "福喜寿司",
+   "cuisine_group": "和食",
+   "cuisine": "海鮮・壽司・居酒屋（福喜 本店）",
+   "budget_lunch": "～¥999（Tabelog）",
+   "budget_dinner": "¥3,000–¥3,999（Tabelog）",
+   "closed_days": null,
+   "hours": "11:30–23:00",
+   "reservation": {
+    "required": null,
+    "accepts": true,
+    "method": "電話預約",
+    "note": null
+   },
+   "google_maps_url": "https://www.google.com/maps/search/?api=1&query=33.206026%2C130.3744623",
+   "ratings": [
+    {
+     "source": "tabelog",
+     "score": 3.07,
+     "scale": 5,
+     "url": "https://tabelog.com/fukuoka/A4008/A400806/40029823/",
+     "checked_at": "2026-11-11"
+    }
+   ],
+   "mapcode": null,
+   "mapcode_source": null,
+   "sources": [
+    {
+     "url": "https://www.openstreetmap.org/way/743661419",
+     "checked_at": "2026-10-31",
+     "title": "OpenStreetMap（trip-db 候選）"
+    },
+    {
+     "url": "https://tabelog.com/tw/fukuoka/A4008/A400806/40029823/",
+     "checked_at": "2026-11-11",
+     "title": "Tabelog（繁中鏡像頁，與日文頁同店號；日文頁網址取自該頁 hreflang=ja）",
+     "fields": [
+      "ratings.tabelog",
+      "cuisine",
+      "budget_lunch",
+      "budget_dinner",
+      "hours",
+      "closed_days",
+      "reservation"
+     ]
+    }
+   ],
+   "field_status": {
+    "budget_lunch": "已查",
+    "budget_dinner": "已查",
+    "closed_days": "待查",
+    "hours": "已查",
+    "reservation": "已查",
+    "ratings.tabelog": "已查",
+    "ratings.google": "待查",
+    "mapcode": "待查"
+   },
+   "cuisine_source": "Tabelog 2026-11-11",
+   "checked_date": "2026-11-11",
+   "note": "Tabelog 對應「福喜 本店」（大川市榎津）。 預算為 Tabelog 每人預算區間。"
+  },
+  "db:db_s_a37d49450d": {
+   "kind": "spot",
+   "name": "博多歴史館",
+   "name_ja": "博多歴史館",
+   "categories": [
+    "historic"
+   ],
+   "category_source": "osm_rule",
+   "category_basis": "名稱符合「historic」關鍵字",
+   "hours": null,
+   "closed_days": null,
+   "admission": null,
+   "stay_minutes": null,
+   "rain_ok": null,
+   "season_note": null,
+   "season_months": null,
+   "parking": null,
+   "mapcode": null,
+   "mapcode_source": null,
+   "description": null,
+   "sources": [],
+   "field_status": {
+    "hours": "待查",
+    "closed_days": "待查",
+    "admission": "待查",
+    "stay_minutes": "估計",
+    "rain_ok": "待查",
+    "season_note": "待查",
+    "parking": "待查",
+    "mapcode": "待查",
+    "description": "待查",
+    "sources": "待查"
+   },
+   "checked_date": null
+  },
+  "db:db_s_5127f3c14a": {
+   "kind": "spot",
+   "name": "庭園茶屋 樂水園",
+   "name_ja": "樂水園",
+   "categories": [
+    "uncat"
+   ],
+   "category_source": "uncat",
+   "category_basis": "OSM 標籤與名稱都判不出，待景點部人工分類",
+   "hours": null,
+   "closed_days": null,
+   "admission": null,
+   "stay_minutes": null,
+   "rain_ok": null,
+   "season_note": null,
+   "season_months": null,
+   "parking": null,
+   "mapcode": null,
+   "mapcode_source": null,
+   "description": null,
+   "sources": [],
+   "field_status": {
+    "hours": "待查",
+    "closed_days": "待查",
+    "admission": "待查",
+    "stay_minutes": "估計",
+    "rain_ok": "待查",
+    "season_note": "待查",
+    "parking": "待查",
+    "mapcode": "待查",
+    "description": "待查",
+    "sources": "待查",
+    "categories": "待查"
+   },
+   "checked_date": null
+  },
+  "rf_hagi_chiyo": {
+   "kind": "restaurant",
+   "name": "割烹 千代（かっぽう ちよ）／萩市老字號割烹料亭",
+   "cuisine_group": "和食",
+   "cuisine": "割烹・日本料理・海鮮",
+   "budget_lunch": "¥3,000–¥3,999（Tabelog）",
+   "budget_dinner": "¥6,000–¥7,999（Tabelog）",
+   "closed_days": "週一、週二、週日晚間（週一逢國定假日時營業，改休當週二；細節以店家為準）",
+   "hours": "週三–週六 11:30–14:00、17:00–22:00；週日 11:30–14:00",
+   "reservation": {
+    "required": null,
+    "accepts": true,
+    "method": "電話預約",
+    "note": null
+   },
+   "google_maps_url": "https://www.google.com/maps/search/?api=1&query=%E5%89%B2%E7%83%B9%20%E5%8D%83%E4%BB%A3%EF%BC%88%E3%81%8B%E3%81%A3%E3%81%BD%E3%81%86%20%E3%81%A1%E3%82%88%EF%BC%89%20%E5%B1%B1%E5%8F%A3%E7%9C%8C%E8%90%A9%E5%B8%82%E4%BB%8A%E5%8F%A4%E8%90%A9%E7%94%BA20-4",
+   "ratings": [
+    {
+     "source": "tabelog",
+     "score": 3.63,
+     "scale": 5,
+     "url": "https://tabelog.com/yamaguchi/A3503/A350301/35001135/",
+     "checked_at": "2026-11-11"
+    }
+   ],
+   "mapcode": null,
+   "mapcode_source": null,
+   "sources": [
+    {
+     "url": "https://tabelog.com/tw/yamaguchi/A3503/A350301/35001135/",
+     "checked_at": "2026-11-11",
+     "title": "Tabelog（繁中鏡像頁，與日文頁同店號；日文頁網址取自該頁 hreflang=ja）",
+     "fields": [
+      "ratings.tabelog",
+      "cuisine",
+      "budget_lunch",
+      "budget_dinner",
+      "hours",
+      "closed_days",
+      "reservation"
+     ]
+    },
+    {
+     "url": "https://restaurantguru.jp/Chiyo-Hagi",
+     "checked_at": "2026-11-11",
+     "title": "Google 評分轉載頁（restaurantguru，已核對店名／位置；非 Google 店家頁）",
+     "fields": [
+      "note"
+     ]
+    }
+   ],
+   "field_status": {
+    "ratings.google": "待查（未在 Google 地圖店家頁人工查看；轉載頁數值見 note）",
+    "ratings.tabelog": "已查",
+    "budget_lunch": "已查",
+    "budget_dinner": "已查",
+    "hours": "已查",
+    "closed_days": "已查",
+    "reservation": "已查"
+   },
+   "checked_date": "2026-11-11",
+   "note": "Google 評分參考值 4.3（第三方轉載頁 restaurantguru，2026-11-11 查看；未在 Google 地圖店家頁人工核對，故未寫入 ratings）。 預算為 Tabelog 每人預算區間。",
+   "cuisine_source": "Tabelog 2026-11-11"
+  },
+  "rf_hagi_shinkai": {
+   "kind": "restaurant",
+   "name": "活魚料理 萩心海（はぎ しんかい）／活魚料理",
+   "cuisine_group": "海鮮",
+   "cuisine": "活魚料理・海鮮",
+   "budget_lunch": "¥5,000–¥5,999（Tabelog）",
+   "budget_dinner": "¥6,000–¥7,999（Tabelog）",
+   "closed_days": "週三",
+   "hours": "11:00–14:00、17:00–21:00",
+   "reservation": {
+    "required": null,
+    "accepts": true,
+    "method": "電話預約",
+    "note": null
+   },
+   "google_maps_url": "https://www.google.com/maps/search/?api=1&query=%E6%B4%BB%E9%AD%9A%E6%96%99%E7%90%86%20%E8%90%A9%E5%BF%83%E6%B5%B7%EF%BC%88%E3%81%AF%E3%81%8E%20%E3%81%97%E3%82%93%E3%81%8B%E3%81%84%EF%BC%89%20%E5%B1%B1%E5%8F%A3%E7%9C%8C%E8%90%A9%E5%B8%82%E5%A4%A7%E5%AD%97%E5%9C%9F%E5%8E%9F370-71",
+   "ratings": [
+    {
+     "source": "tabelog",
+     "score": 3.57,
+     "scale": 5,
+     "url": "https://tabelog.com/yamaguchi/A3503/A350301/35008652/",
+     "checked_at": "2026-11-11"
+    }
+   ],
+   "mapcode": null,
+   "mapcode_source": null,
+   "sources": [
+    {
+     "url": "https://tabelog.com/tw/yamaguchi/A3503/A350301/35008652/",
+     "checked_at": "2026-11-11",
+     "title": "Tabelog（繁中鏡像頁，與日文頁同店號；日文頁網址取自該頁 hreflang=ja）",
+     "fields": [
+      "ratings.tabelog",
+      "cuisine",
+      "budget_lunch",
+      "budget_dinner",
+      "hours",
+      "closed_days",
+      "reservation"
+     ]
+    }
+   ],
+   "field_status": {
+    "ratings.google": "待查",
+    "ratings.tabelog": "已查",
+    "budget_lunch": "已查",
+    "budget_dinner": "已查",
+    "hours": "已查",
+    "closed_days": "已查",
+    "reservation": "已查"
+   },
+   "checked_date": "2026-11-11",
+   "note": "預算為 Tabelog 每人預算區間。",
+   "cuisine_source": "Tabelog 2026-11-11"
+  },
+  "rf_hagi_kenran": {
+   "kind": "restaurant",
+   "name": "見蘭（けんらん）／萩牛燒肉・和食",
+   "cuisine_group": "燒肉",
+   "cuisine": "燒肉・牛排（見蘭牛）",
+   "budget_lunch": "不適用",
+   "budget_dinner": "¥4,000–¥4,999（Tabelog）",
+   "closed_days": "週一（逢假日順延翌日）",
+   "hours": "17:00–22:00",
+   "reservation": {
+    "required": null,
+    "accepts": true,
+    "method": "Tabelog 網路預約／電話預約",
+    "note": "吃到飽方案只收電話預約（當天中午前）"
+   },
+   "google_maps_url": "https://www.google.com/maps/search/?api=1&query=%E8%A6%8B%E8%98%AD%EF%BC%88%E3%81%91%E3%82%93%E3%82%89%E3%82%93%EF%BC%89%20%E5%B1%B1%E5%8F%A3%E7%9C%8C%E8%90%A9%E5%B8%82%E5%A0%80%E5%86%8589%20%E3%83%9F%E3%83%89%E3%83%AA%E3%83%A4%E3%83%95%E3%82%A1%E3%83%BC%E3%83%A0%E5%86%85",
+   "ratings": [
+    {
+     "source": "tabelog",
+     "score": 3.57,
+     "scale": 5,
+     "url": "https://tabelog.com/yamaguchi/A3503/A350301/35000066/",
+     "checked_at": "2026-11-11"
+    }
+   ],
+   "mapcode": null,
+   "mapcode_source": null,
+   "sources": [
+    {
+     "url": "https://tabelog.com/tw/yamaguchi/A3503/A350301/35000066/",
+     "checked_at": "2026-11-11",
+     "title": "Tabelog（繁中鏡像頁，與日文頁同店號；日文頁網址取自該頁 hreflang=ja）",
+     "fields": [
+      "ratings.tabelog",
+      "cuisine",
+      "budget_lunch",
+      "budget_dinner",
+      "hours",
+      "closed_days",
+      "reservation"
+     ]
+    },
+    {
+     "url": "https://restaurantguru.jp/Grill-Restaurant-Kenran-Hagi",
+     "checked_at": "2026-11-11",
+     "title": "Google 評分轉載頁（restaurantguru，已核對店名／位置；非 Google 店家頁）",
+     "fields": [
+      "note"
+     ]
+    }
+   ],
+   "field_status": {
+    "ratings.google": "待查（未在 Google 地圖店家頁人工查看；轉載頁數值見 note）",
+    "ratings.tabelog": "已查",
+    "budget_lunch": "不適用",
+    "budget_dinner": "已查",
+    "hours": "已查",
+    "closed_days": "已查",
+    "reservation": "已查"
+   },
+   "checked_date": "2026-11-11",
+   "note": "Google 評分參考值 4.1（第三方轉載頁 restaurantguru，2026-11-11 查看；未在 Google 地圖店家頁人工核對，故未寫入 ratings）。 預算為 Tabelog 每人預算區間。",
+   "cuisine_source": "Tabelog 2026-11-11"
+  },
+  "rf_hagi_shiosai": {
+   "kind": "restaurant",
+   "name": "珈琲館 しおさい／咖啡館",
+   "cuisine_group": "咖啡廳",
+   "cuisine": "喫茶・咖啡館",
+   "budget_lunch": "～¥999（Tabelog）",
+   "budget_dinner": "不適用",
+   "closed_days": "週四",
+   "hours": "07:00–16:00",
+   "reservation": {
+    "required": false,
+    "accepts": false,
+    "method": "不收（現場候位）",
+    "note": null
+   },
+   "google_maps_url": "https://www.google.com/maps/search/?api=1&query=%E7%8F%88%E7%90%B2%E9%A4%A8%20%E3%81%97%E3%81%8A%E3%81%95%E3%81%84%20%E5%B1%B1%E5%8F%A3%E7%9C%8C%E8%90%A9%E5%B8%82%E4%BB%8A%E9%AD%9A%E5%BA%97%E7%94%BA24-3",
+   "ratings": [
+    {
+     "source": "tabelog",
+     "score": 3.06,
+     "scale": 5,
+     "url": "https://tabelog.com/yamaguchi/A3503/A350301/35004560/",
+     "checked_at": "2026-11-11"
+    }
+   ],
+   "mapcode": null,
+   "mapcode_source": null,
+   "sources": [
+    {
+     "url": "https://tabelog.com/tw/yamaguchi/A3503/A350301/35004560/",
+     "checked_at": "2026-11-11",
+     "title": "Tabelog（繁中鏡像頁，與日文頁同店號；日文頁網址取自該頁 hreflang=ja）",
+     "fields": [
+      "ratings.tabelog",
+      "cuisine",
+      "budget_lunch",
+      "budget_dinner",
+      "hours",
+      "closed_days",
+      "reservation"
+     ]
+    },
+    {
+     "url": "https://exa.ai/library/place/jlfmy1bpdg9",
+     "checked_at": "2026-11-11",
+     "title": "Google 評分轉載頁（exa_places，已核對店名／位置；非 Google 店家頁）",
+     "fields": [
+      "note"
+     ]
+    }
+   ],
+   "field_status": {
+    "ratings.google": "待查（未在 Google 地圖店家頁人工查看；轉載頁數值見 note）",
+    "ratings.tabelog": "已查",
+    "budget_lunch": "已查",
+    "budget_dinner": "不適用",
+    "hours": "已查",
+    "closed_days": "已查",
+    "reservation": "已查"
+   },
+   "checked_date": "2026-11-11",
+   "note": "Tabelog 營業 07:00–16:00，先前資料為 07:00–18:00。 Google 評分參考值 4.0（第三方轉載頁 exa_places，2026-11-11 查看；未在 Google 地圖店家頁人工核對，故未寫入 ratings）。 預算為 Tabelog 每人預算區間。",
+   "cuisine_source": "Tabelog 2026-11-11"
+  },
+  "rf_hagi_muraya": {
+   "kind": "restaurant",
+   "name": "むらやカフェ／村屋咖啡（濱崎町家咖啡）",
+   "cuisine_group": "咖啡廳",
+   "cuisine": "咖啡館（町家）",
+   "budget_lunch": "¥1,000–¥1,999（Tabelog）",
+   "budget_dinner": "不適用",
+   "closed_days": "週四",
+   "hours": "09:00–16:00（Tabelog）",
+   "reservation": null,
+   "google_maps_url": "https://www.google.com/maps/search/?api=1&query=%E3%82%80%E3%82%89%E3%82%84%E3%82%AB%E3%83%95%E3%82%A7%20%E5%B1%B1%E5%8F%A3%E7%9C%8C%E8%90%A9%E5%B8%82%E6%B5%9C%E5%B4%8E%E7%94%BA205",
+   "ratings": [
+    {
+     "source": "tabelog",
+     "score": 3.07,
+     "scale": 5,
+     "url": "https://tabelog.com/yamaguchi/A3503/A350301/35012243/",
+     "checked_at": "2026-11-11"
+    }
+   ],
+   "mapcode": null,
+   "mapcode_source": null,
+   "sources": [
+    {
+     "url": "https://tabelog.com/tw/yamaguchi/A3503/A350301/35012243/",
+     "checked_at": "2026-11-11",
+     "title": "Tabelog（繁中鏡像頁，與日文頁同店號；日文頁網址取自該頁 hreflang=ja）",
+     "fields": [
+      "ratings.tabelog",
+      "cuisine",
+      "budget_lunch",
+      "budget_dinner",
+      "hours",
+      "closed_days",
+      "reservation"
+     ]
+    }
+   ],
+   "field_status": {
+    "ratings.google": "待查",
+    "ratings.tabelog": "已查",
+    "budget_lunch": "已查",
+    "budget_dinner": "不適用",
+    "hours": "已查",
+    "closed_days": "已查",
+    "reservation": "待查"
+   },
+   "checked_date": "2026-11-11",
+   "note": "Tabelog 寫 09:00 開店，先前資料為 08:00–16:00，另有網站寫週一 11:00 起；D2/D3 早餐使用前請再確認開店時間。 Google 評分只在搜尋摘要看到約 5.0，未核實，沒有寫進 ratings。 預算為 Tabelog 每人預算區間。",
+   "cuisine_source": "Tabelog 2026-11-11"
+  },
+  "rf_hagi_gangan": {
+   "kind": "restaurant",
+   "name": "浜料理 がんがん（道の駅 萩しーまーと内）／濱料理",
+   "cuisine_group": "海鮮",
+   "cuisine": "海鮮丼・濱料理（道之驛 萩しーまーと內）",
+   "budget_lunch": "¥2,000–¥2,999（Tabelog）",
+   "budget_dinner": "¥1,000–¥1,999（Tabelog）",
+   "closed_days": "依道之驛 萩しーまーと 休館日",
+   "hours": "09:30–18:00",
+   "reservation": {
+    "required": null,
+    "accepts": true,
+    "method": "電話預約",
+    "note": null
+   },
+   "google_maps_url": "https://www.google.com/maps/search/?api=1&query=%E6%B5%9C%E6%96%99%E7%90%86%20%E3%81%8C%E3%82%93%E3%81%8C%E3%82%93%EF%BC%88%E9%81%93%E3%81%AE%E9%A7%85%20%E8%90%A9%E3%81%97%E3%83%BC%E3%81%BE%E3%83%BC%E3%81%A8%E5%86%85%EF%BC%89%20%E5%B1%B1%E5%8F%A3%E7%9C%8C%E8%90%A9%E5%B8%82%E6%A4%BF%E6%9D%B1%E5%8C%97%E5%89%8D%E5%B0%8F%E7%95%914160-61%20%E9%81%93%E3%81%AE%E9%A7%85%E8%90%A9%E3%81%97%E3%83%BC%E3%81%BE%E3%83%BC%E3%81%A8%E5%86%85",
+   "ratings": [
+    {
+     "source": "tabelog",
+     "score": 3.49,
+     "scale": 5,
+     "url": "https://tabelog.com/yamaguchi/A3503/A350301/35001238/",
+     "checked_at": "2026-11-11"
+    }
+   ],
+   "mapcode": null,
+   "mapcode_source": null,
+   "sources": [
+    {
+     "url": "https://tabelog.com/tw/yamaguchi/A3503/A350301/35001238/",
+     "checked_at": "2026-11-11",
+     "title": "Tabelog（繁中鏡像頁，與日文頁同店號；日文頁網址取自該頁 hreflang=ja）",
+     "fields": [
+      "ratings.tabelog",
+      "cuisine",
+      "budget_lunch",
+      "budget_dinner",
+      "hours",
+      "closed_days",
+      "reservation"
+     ]
+    }
+   ],
+   "field_status": {
+    "ratings.google": "待查",
+    "ratings.tabelog": "已查",
+    "budget_lunch": "已查",
+    "budget_dinner": "已查",
+    "hours": "已查",
+    "closed_days": "已查",
+    "reservation": "已查"
+   },
+   "checked_date": "2026-11-11",
+   "note": "預算為 Tabelog 每人預算區間。",
+   "cuisine_source": "Tabelog 2026-11-11"
+  },
+  "rf_hagi_yanagiya": {
+   "kind": "restaurant",
+   "name": "瓦そば 柳屋 萩城下町店／瓦蕎麥",
+   "cuisine_group": "鄉土料理",
+   "cuisine": "瓦蕎麥（山口鄉土料理）",
+   "budget_lunch": "¥1,000–¥1,999（Tabelog）",
+   "budget_dinner": "不適用",
+   "closed_days": "週四、每月第 2 個週三",
+   "hours": "11:00–16:00",
+   "reservation": {
+    "required": false,
+    "accepts": false,
+    "method": "不收（現場候位）",
+    "note": null
+   },
+   "google_maps_url": "https://www.google.com/maps/search/?api=1&query=%E7%93%A6%E3%81%9D%E3%81%B0%20%E6%9F%B3%E5%B1%8B%20%E8%90%A9%E5%9F%8E%E4%B8%8B%E7%94%BA%E5%BA%97%20%E5%B1%B1%E5%8F%A3%E7%9C%8C%E8%90%A9%E5%B8%82%E5%8D%97%E5%8F%A4%E8%90%A9%E7%94%BA21-7",
+   "ratings": [
+    {
+     "source": "tabelog",
+     "score": 3.58,
+     "scale": 5,
+     "url": "https://tabelog.com/yamaguchi/A3503/A350301/35014438/",
+     "checked_at": "2026-11-11"
+    }
+   ],
+   "mapcode": null,
+   "mapcode_source": null,
+   "sources": [
+    {
+     "url": "https://tabelog.com/tw/yamaguchi/A3503/A350301/35014438/",
+     "checked_at": "2026-11-11",
+     "title": "Tabelog（繁中鏡像頁，與日文頁同店號；日文頁網址取自該頁 hreflang=ja）",
+     "fields": [
+      "ratings.tabelog",
+      "cuisine",
+      "budget_lunch",
+      "budget_dinner",
+      "hours",
+      "closed_days",
+      "reservation"
+     ]
+    },
+    {
+     "url": "https://restaurantguru.jp/%E7%93%A6%E3%81%9D%E3%81%B0%E6%9F%B3%E5%B1%8B-%E8%90%A9%E5%9F%8E%E4%B8%8B%E7%94%BA%E5%BA%97-Hagi",
+     "checked_at": "2026-11-11",
+     "title": "Google 評分轉載頁（restaurantguru，已核對店名／位置；非 Google 店家頁）",
+     "fields": [
+      "note"
+     ]
+    }
+   ],
+   "field_status": {
+    "ratings.google": "待查（未在 Google 地圖店家頁人工查看；轉載頁數值見 note）",
+    "ratings.tabelog": "已查",
+    "budget_lunch": "已查",
+    "budget_dinner": "不適用",
+    "hours": "已查",
+    "closed_days": "已查",
+    "reservation": "已查"
+   },
+   "checked_date": "2026-11-11",
+   "note": "Google 評分參考值 4.7（第三方轉載頁 restaurantguru，2026-11-11 查看；未在 Google 地圖店家頁人工核對，故未寫入 ratings）。 預算為 Tabelog 每人預算區間。",
+   "cuisine_source": "Tabelog 2026-11-11"
+  },
+  "rf_bep_toyoken": {
+   "kind": "restaurant",
+   "name": "レストラン東洋軒／東洋軒（雞肉天婦羅發源店）",
+   "cuisine_group": "中華",
+   "cuisine": "中華料理・雞肉天婦羅（とり天）",
+   "budget_lunch": "¥1,000–¥1,999（Tabelog）",
+   "budget_dinner": "¥2,000–¥2,999（Tabelog）",
+   "closed_days": "每月第 2 個週二",
+   "hours": "11:00–15:30、17:00–22:00",
+   "reservation": {
+    "required": null,
+    "accepts": true,
+    "method": "電話預約",
+    "note": "只收 4 位成人以上的晚餐套餐預約；午餐及單純訂位不收"
+   },
+   "google_maps_url": "https://www.google.com/maps/place/?q=place_id:ChIJO8aoTRanRjURbp5kDh8Xaq0",
+   "ratings": [
+    {
+     "source": "tabelog",
+     "score": 3.49,
+     "scale": 5,
+     "url": "https://tabelog.com/oita/A4402/A440202/44000534/",
+     "checked_at": "2026-11-11"
+    }
+   ],
+   "mapcode": null,
+   "mapcode_source": null,
+   "sources": [
+    {
+     "url": "https://tabelog.com/tw/oita/A4402/A440202/44000534/",
+     "checked_at": "2026-11-11",
+     "title": "Tabelog（繁中鏡像頁，與日文頁同店號；日文頁網址取自該頁 hreflang=ja）",
+     "fields": [
+      "ratings.tabelog",
+      "cuisine",
+      "budget_lunch",
+      "budget_dinner",
+      "hours",
+      "closed_days",
+      "reservation"
+     ]
+    },
+    {
+     "url": "https://www.taveri.jp/store/ChIJO8aoTRanRjURbp5kDh8Xaq0",
+     "checked_at": "2026-11-11",
+     "title": "Google 評分轉載頁（taveri，已核對店名／位置；非 Google 店家頁）",
+     "fields": [
+      "note"
+     ]
+    }
+   ],
+   "field_status": {
+    "ratings.google": "待查（未在 Google 地圖店家頁人工查看；轉載頁數值見 note）",
+    "ratings.tabelog": "已查",
+    "budget_lunch": "已查",
+    "budget_dinner": "已查",
+    "hours": "已查",
+    "closed_days": "已查",
+    "reservation": "已查"
+   },
+   "checked_date": "2026-11-11",
+   "note": "Google 評分參考值 4.3（第三方轉載頁 taveri，2026-11-11 查看；未在 Google 地圖店家頁人工核對，故未寫入 ratings）。 預算為 Tabelog 每人預算區間。",
+   "cuisine_source": "Tabelog 2026-11-11"
+  },
+  "rf_bep_robatajin": {
+   "kind": "restaurant",
+   "name": "ろばた 仁 本店／爐端燒 仁",
+   "cuisine_group": "居酒屋",
+   "cuisine": "爐端燒・居酒屋・海鮮",
+   "budget_lunch": "不適用",
+   "budget_dinner": "¥3,000–¥3,999（Tabelog）",
+   "closed_days": "無休（年末年始、臨時休業除外）",
+   "hours": "17:00–23:00",
+   "reservation": {
+    "required": null,
+    "accepts": true,
+    "method": "電話預約",
+    "note": "晚餐建議先訂"
+   },
+   "google_maps_url": "https://www.google.com/maps/place/?q=place_id:ChIJGYBihtymRjURkCSTd3qHDGY",
+   "ratings": [
+    {
+     "source": "tabelog",
+     "score": 3.49,
+     "scale": 5,
+     "url": "https://tabelog.com/oita/A4402/A440202/44000332/",
+     "checked_at": "2026-11-11"
+    }
+   ],
+   "mapcode": null,
+   "mapcode_source": null,
+   "sources": [
+    {
+     "url": "https://tabelog.com/tw/oita/A4402/A440202/44000332/",
+     "checked_at": "2026-11-11",
+     "title": "Tabelog（繁中鏡像頁，與日文頁同店號；日文頁網址取自該頁 hreflang=ja）",
+     "fields": [
+      "ratings.tabelog",
+      "cuisine",
+      "budget_lunch",
+      "budget_dinner",
+      "hours",
+      "closed_days",
+      "reservation"
+     ]
+    },
+    {
+     "url": "https://www.taveri.jp/store/ChIJGYBihtymRjURkCSTd3qHDGY",
+     "checked_at": "2026-11-11",
+     "title": "Google 評分轉載頁（taveri，已核對店名／位置；非 Google 店家頁）",
+     "fields": [
+      "note"
+     ]
+    }
+   ],
+   "field_status": {
+    "ratings.google": "待查（未在 Google 地圖店家頁人工查看；轉載頁數值見 note）",
+    "ratings.tabelog": "已查",
+    "budget_lunch": "不適用",
+    "budget_dinner": "已查",
+    "hours": "已查",
+    "closed_days": "已查",
+    "reservation": "已查"
+   },
+   "checked_date": "2026-11-11",
+   "note": "Google 評分參考值 4.2（第三方轉載頁 taveri，2026-11-11 查看；未在 Google 地圖店家頁人工核對，故未寫入 ratings）。 預算為 Tabelog 每人預算區間。",
+   "cuisine_source": "Tabelog 2026-11-11"
+  },
+  "rf_bep_izutsu": {
+   "kind": "restaurant",
+   "name": "海鮮いづつ／海鮮井筒",
+   "cuisine_group": "海鮮",
+   "cuisine": "海鮮・河豚・居酒屋",
+   "budget_lunch": "¥1,000–¥1,999（Tabelog）",
+   "budget_dinner": "¥1,000–¥1,999（Tabelog）",
+   "closed_days": "週一",
+   "hours": "11:00–15:00、18:00–21:30",
+   "reservation": {
+    "required": null,
+    "accepts": true,
+    "method": "電話預約",
+    "note": "只收晚餐預約"
+   },
+   "google_maps_url": "https://www.google.com/maps/search/?api=1&query=%E6%B5%B7%E9%AE%AE%E3%81%84%E3%81%A5%E3%81%A4%20%E5%A4%A7%E5%88%86%E7%9C%8C%E5%88%A5%E5%BA%9C%E5%B8%82%E6%A5%A0%E7%94%BA5-5",
+   "ratings": [
+    {
+     "source": "tabelog",
+     "score": 3.56,
+     "scale": 5,
+     "url": "https://tabelog.com/oita/A4402/A440202/44004374/",
+     "checked_at": "2026-11-11"
+    }
+   ],
+   "mapcode": null,
+   "mapcode_source": null,
+   "sources": [
+    {
+     "url": "https://tabelog.com/tw/oita/A4402/A440202/44004374/",
+     "checked_at": "2026-11-11",
+     "title": "Tabelog（繁中鏡像頁，與日文頁同店號；日文頁網址取自該頁 hreflang=ja）",
+     "fields": [
+      "ratings.tabelog",
+      "cuisine",
+      "budget_lunch",
+      "budget_dinner",
+      "hours",
+      "closed_days",
+      "reservation"
+     ]
+    },
+    {
+     "url": "https://restaurantguru.com/Seafood-Izutsu-Beppu",
+     "checked_at": "2026-11-11",
+     "title": "Google 評分轉載頁（restaurantguru，已核對店名／位置；非 Google 店家頁）",
+     "fields": [
+      "note"
+     ]
+    }
+   ],
+   "field_status": {
+    "ratings.google": "待查（未在 Google 地圖店家頁人工查看；轉載頁數值見 note）",
+    "ratings.tabelog": "已查",
+    "budget_lunch": "已查",
+    "budget_dinner": "已查",
+    "hours": "已查",
+    "closed_days": "已查",
+    "reservation": "已查"
+   },
+   "checked_date": "2026-11-11",
+   "note": "Google 評分參考值 3.8（第三方轉載頁 restaurantguru，2026-11-11 查看；未在 Google 地圖店家頁人工核對，故未寫入 ratings）。 預算為 Tabelog 每人預算區間。",
+   "cuisine_source": "Tabelog 2026-11-11"
+  },
+  "rf_bep_sukesan": {
+   "kind": "restaurant",
+   "name": "資さんうどん 別府店／資さん烏龍麵",
+   "cuisine_group": "烏龍麵",
+   "cuisine": "烏龍麵・丼飯（連鎖）",
+   "budget_lunch": "～¥999（Tabelog）",
+   "budget_dinner": "¥1,000–¥1,999（Tabelog）",
+   "closed_days": "無休",
+   "hours": "24 小時",
+   "reservation": {
+    "required": false,
+    "accepts": false,
+    "method": "不收（現場候位）",
+    "note": null
+   },
+   "google_maps_url": "https://www.google.com/maps/search/?api=1&query=%E8%B3%87%E3%81%95%E3%82%93%E3%81%86%E3%81%A9%E3%82%93%20%E5%88%A5%E5%BA%9C%E5%BA%97%20%E5%A4%A7%E5%88%86%E7%9C%8C%E5%88%A5%E5%BA%9C%E5%B8%82%E6%B1%90%E8%A6%8B%E7%94%BA10-12",
+   "ratings": [
+    {
+     "source": "tabelog",
+     "score": 3.21,
+     "scale": 5,
+     "url": "https://tabelog.com/oita/A4402/A440202/44013074/",
+     "checked_at": "2026-11-11"
+    }
+   ],
+   "mapcode": null,
+   "mapcode_source": null,
+   "sources": [
+    {
+     "url": "https://tabelog.com/tw/oita/A4402/A440202/44013074/",
+     "checked_at": "2026-11-11",
+     "title": "Tabelog（繁中鏡像頁，與日文頁同店號；日文頁網址取自該頁 hreflang=ja）",
+     "fields": [
+      "ratings.tabelog",
+      "cuisine",
+      "budget_lunch",
+      "budget_dinner",
+      "hours",
+      "closed_days",
+      "reservation"
+     ]
+    },
+    {
+     "url": "https://restaurantguru.jp/%E8%B3%87%E3%81%95%E3%82%93%E3%81%86%E3%81%A9%E3%82%93-%E5%88%A5%E5%BA%9C%E5%BA%97-Beppu",
+     "checked_at": "2026-11-11",
+     "title": "Google 評分轉載頁（restaurantguru，已核對店名／位置；非 Google 店家頁）",
+     "fields": [
+      "note"
+     ]
+    }
+   ],
+   "field_status": {
+    "ratings.google": "待查（未在 Google 地圖店家頁人工查看；轉載頁數值見 note）",
+    "ratings.tabelog": "已查",
+    "budget_lunch": "已查",
+    "budget_dinner": "已查",
+    "hours": "已查",
+    "closed_days": "已查",
+    "reservation": "已查"
+   },
+   "checked_date": "2026-11-11",
+   "note": "Google 評分參考值 3.9（第三方轉載頁 restaurantguru，2026-11-11 查看；未在 Google 地圖店家頁人工核對，故未寫入 ratings）。 預算為 Tabelog 每人預算區間。",
+   "cuisine_source": "Tabelog 2026-11-11"
+  },
+  "rf_bep_cocolate": {
+   "kind": "restaurant",
+   "name": "ココラート（cocolate bake shop）／麵包咖啡",
+   "cuisine_group": "麵包・咖啡",
+   "cuisine": "烘焙坊・咖啡館",
+   "budget_lunch": "～¥999（Tabelog）",
+   "budget_dinner": "不適用",
+   "closed_days": "不定休",
+   "hours": "平日 08:00–18:00、週末 09:00–17:00（先前資料）",
+   "reservation": null,
+   "google_maps_url": "https://www.google.com/maps/place/?q=place_id:ChIJz-Xdr-amRjURKoZnndUxI1k",
+   "ratings": [
+    {
+     "source": "tabelog",
+     "score": 3.16,
+     "scale": 5,
+     "url": "https://tabelog.com/oita/A4402/A440202/44005841/",
+     "checked_at": "2026-11-11"
+    }
+   ],
+   "mapcode": null,
+   "mapcode_source": null,
+   "sources": [
+    {
+     "url": "https://tabelog.com/tw/oita/A4402/A440202/44005841/",
+     "checked_at": "2026-11-11",
+     "title": "Tabelog（繁中鏡像頁，與日文頁同店號；日文頁網址取自該頁 hreflang=ja）",
+     "fields": [
+      "ratings.tabelog",
+      "cuisine",
+      "budget_lunch",
+      "budget_dinner",
+      "hours",
+      "closed_days",
+      "reservation"
+     ]
+    },
+    {
+     "url": "https://www.taveri.jp/store/ChIJz-Xdr-amRjURKoZnndUxI1k",
+     "checked_at": "2026-11-11",
+     "title": "Google 評分轉載頁（taveri，已核對店名／位置；非 Google 店家頁）",
+     "fields": [
+      "note"
+     ]
+    }
+   ],
+   "field_status": {
+    "ratings.google": "待查（未在 Google 地圖店家頁人工查看；轉載頁數值見 note）",
+    "ratings.tabelog": "已查",
+    "budget_lunch": "已查",
+    "budget_dinner": "不適用",
+    "hours": "已查",
+    "closed_days": "已查",
+    "reservation": "待查"
+   },
+   "checked_date": "2026-11-11",
+   "note": "Google 評分參考值 4.3（第三方轉載頁 taveri，2026-11-11 查看；未在 Google 地圖店家頁人工核對，故未寫入 ratings）。 預算為 Tabelog 每人預算區間。",
+   "cuisine_source": "Tabelog 2026-11-11"
+  },
+  "rf_bep_jigokumushi": {
+   "kind": "restaurant",
+   "name": "地獄蒸し工房 鉄輪／地獄蒸工房鐵輪",
+   "cuisine_group": "鄉土料理",
+   "cuisine": "地獄蒸料理",
+   "budget_lunch": "¥1,000–¥1,999（Tabelog）",
+   "budget_dinner": "¥1,000–¥1,999（Tabelog）",
+   "closed_days": "每月第 3 個週三",
+   "hours": "10:00–19:00",
+   "reservation": {
+    "required": false,
+    "accepts": false,
+    "method": "不收（現場候位）",
+    "note": null
+   },
+   "google_maps_url": "https://www.google.com/maps/place/?q=place_id:ChIJD-MRi6GnRjURhoBsDb8vCX0",
+   "ratings": [
+    {
+     "source": "tabelog",
+     "score": 3.49,
+     "scale": 5,
+     "url": "https://tabelog.com/oita/A4402/A440202/44004949/",
+     "checked_at": "2026-11-11"
+    }
+   ],
+   "mapcode": null,
+   "mapcode_source": null,
+   "sources": [
+    {
+     "url": "https://tabelog.com/tw/oita/A4402/A440202/44004949/",
+     "checked_at": "2026-11-11",
+     "title": "Tabelog（繁中鏡像頁，與日文頁同店號；日文頁網址取自該頁 hreflang=ja）",
+     "fields": [
+      "ratings.tabelog",
+      "cuisine",
+      "budget_lunch",
+      "budget_dinner",
+      "hours",
+      "closed_days",
+      "reservation"
+     ]
+    },
+    {
+     "url": "https://restaurantguru.com/%E5%9C%B0%E7%8D%84%E8%92%B8%E3%81%97%E5%B7%A5%E6%88%BF-%E9%89%84%E8%BC%AA-Beppu-2",
+     "checked_at": "2026-11-11",
+     "title": "Google 評分轉載頁（restaurantguru，已核對店名／位置；非 Google 店家頁）",
+     "fields": [
+      "note"
+     ]
+    }
+   ],
+   "field_status": {
+    "ratings.google": "待查（未在 Google 地圖店家頁人工查看；轉載頁數值見 note）",
+    "ratings.tabelog": "已查",
+    "budget_lunch": "已查",
+    "budget_dinner": "已查",
+    "hours": "已查",
+    "closed_days": "已查",
+    "reservation": "已查"
+   },
+   "checked_date": "2026-11-11",
+   "note": "Google 評分參考值 3.9（第三方轉載頁 restaurantguru，2026-11-11 查看；未在 Google 地圖店家頁人工核對，故未寫入 ratings）。 預算為 Tabelog 每人預算區間。",
+   "cuisine_source": "Tabelog 2026-11-11"
+  },
+  "rf_bep_amamichaya": {
+   "kind": "restaurant",
+   "name": "甘味茶屋／甘味茶屋（だんご汁）",
+   "cuisine_group": "鄉土料理",
+   "cuisine": "鄉土料理（糰子汁）・甘味",
+   "budget_lunch": "¥1,000–¥1,999（Tabelog）",
+   "budget_dinner": null,
+   "closed_days": "不定休",
+   "hours": "10:00–21:00",
+   "reservation": {
+    "required": null,
+    "accepts": true,
+    "method": "電話預約",
+    "note": "年末年始等繁忙期不收"
+   },
+   "google_maps_url": "https://www.google.com/maps/place/?q=place_id:ChIJIyWSfQynRjURAZYEV-jRWeA",
+   "ratings": [
+    {
+     "source": "tabelog",
+     "score": 3.58,
+     "scale": 5,
+     "url": "https://tabelog.com/oita/A4402/A440202/44000026/",
+     "checked_at": "2026-11-11"
+    }
+   ],
+   "mapcode": null,
+   "mapcode_source": null,
+   "sources": [
+    {
+     "url": "https://tabelog.com/tw/oita/A4402/A440202/44000026/",
+     "checked_at": "2026-11-11",
+     "title": "Tabelog（繁中鏡像頁，與日文頁同店號；日文頁網址取自該頁 hreflang=ja）",
+     "fields": [
+      "ratings.tabelog",
+      "cuisine",
+      "budget_lunch",
+      "budget_dinner",
+      "hours",
+      "closed_days",
+      "reservation"
+     ]
+    },
+    {
+     "url": "https://www.taveri.jp/store/ChIJIyWSfQynRjURAZYEV-jRWeA",
+     "checked_at": "2026-11-11",
+     "title": "Google 評分轉載頁（taveri，已核對店名／位置；非 Google 店家頁）",
+     "fields": [
+      "note"
+     ]
+    }
+   ],
+   "field_status": {
+    "ratings.google": "待查（未在 Google 地圖店家頁人工查看；轉載頁數值見 note）",
+    "ratings.tabelog": "已查",
+    "budget_lunch": "已查",
+    "budget_dinner": "待查",
+    "hours": "已查",
+    "closed_days": "已查",
+    "reservation": "已查"
+   },
+   "checked_date": "2026-11-11",
+   "note": "Google 評分參考值 4.3（第三方轉載頁 taveri，2026-11-11 查看；未在 Google 地圖店家頁人工核對，故未寫入 ratings）。 Google 地址顯示 実相寺町27-3 預算為 Tabelog 每人預算區間。",
+   "cuisine_source": "Tabelog 2026-11-11"
+  },
+  "rf_yuf_shin": {
+   "kind": "restaurant",
+   "name": "由布まぶし 心 金鱗湖本店／由布鰻魚飯三吃",
+   "cuisine_group": "鄉土料理",
+   "cuisine": "由布まぶし（土鍋飯）",
+   "budget_lunch": "¥2,000–¥2,999（Tabelog）",
+   "budget_dinner": "¥2,000–¥2,999（Tabelog）",
+   "closed_days": "不定休",
+   "hours": "10:30–17:30（Tabelog）",
+   "reservation": {
+    "required": null,
+    "accepts": true,
+    "method": "電話預約",
+    "note": "平日午餐不收預約"
+   },
+   "google_maps_url": "https://www.google.com/maps/place/?q=place_id:ChIJrbhbkX2uRjURrbqyrKlQijQ",
+   "ratings": [
+    {
+     "source": "tabelog",
+     "score": 3.49,
+     "scale": 5,
+     "url": "https://tabelog.com/oita/A4402/A440201/44008761/",
+     "checked_at": "2026-11-11"
+    }
+   ],
+   "mapcode": null,
+   "mapcode_source": null,
+   "sources": [
+    {
+     "url": "https://tabelog.com/tw/oita/A4402/A440201/44008761/",
+     "checked_at": "2026-11-11",
+     "title": "Tabelog（繁中鏡像頁，與日文頁同店號；日文頁網址取自該頁 hreflang=ja）",
+     "fields": [
+      "ratings.tabelog",
+      "cuisine",
+      "budget_lunch",
+      "budget_dinner",
+      "hours",
+      "closed_days",
+      "reservation"
+     ]
+    },
+    {
+     "url": "https://restaurantguru.jp/Yufumabushi-Shin-Yufu-2",
+     "checked_at": "2026-11-11",
+     "title": "Google 評分轉載頁（restaurantguru，已核對店名／位置；非 Google 店家頁）",
+     "fields": [
+      "note"
+     ]
+    }
+   ],
+   "field_status": {
+    "ratings.google": "待查（未在 Google 地圖店家頁人工查看；轉載頁數值見 note）",
+    "ratings.tabelog": "已查",
+    "budget_lunch": "已查",
+    "budget_dinner": "已查",
+    "hours": "已查",
+    "closed_days": "已查",
+    "reservation": "已查"
+   },
+   "checked_date": "2026-11-11",
+   "note": "Tabelog 營業至 17:30，先前資料為 18:30。 Google 評分參考值 4.1（第三方轉載頁 restaurantguru，2026-11-11 查看；未在 Google 地圖店家頁人工核對，故未寫入 ratings）。 預算為 Tabelog 每人預算區間。",
+   "cuisine_source": "Tabelog 2026-11-11"
+  },
+  "rf_yuf_yunotakean": {
+   "kind": "restaurant",
+   "name": "湯の岳庵（ゆのたけあん）／龜之井別莊餐廳",
+   "cuisine_group": "和食",
+   "cuisine": "日本料理・鄉土料理（龜之井別莊）",
+   "budget_lunch": "¥4,000–¥4,999（Tabelog）",
+   "budget_dinner": "¥10,000–¥14,999（Tabelog）",
+   "closed_days": "無休（Tabelog；先前資料：年約 2 次休館）",
+   "hours": "11:00–22:00（午餐 11:00–15:00）",
+   "reservation": {
+    "required": null,
+    "accepts": true,
+    "method": "電話預約",
+    "note": null
+   },
+   "google_maps_url": "https://www.google.com/maps/place/?q=place_id:ChIJwdevqH2uRjURB1XIos4hA0w",
+   "ratings": [
+    {
+     "source": "tabelog",
+     "score": 3.74,
+     "scale": 5,
+     "url": "https://tabelog.com/oita/A4402/A440201/44000042/",
+     "checked_at": "2026-11-11"
+    }
+   ],
+   "mapcode": null,
+   "mapcode_source": null,
+   "sources": [
+    {
+     "url": "https://tabelog.com/tw/oita/A4402/A440201/44000042/",
+     "checked_at": "2026-11-11",
+     "title": "Tabelog（繁中鏡像頁，與日文頁同店號；日文頁網址取自該頁 hreflang=ja）",
+     "fields": [
+      "ratings.tabelog",
+      "cuisine",
+      "budget_lunch",
+      "budget_dinner",
+      "hours",
+      "closed_days",
+      "reservation"
+     ]
+    },
+    {
+     "url": "https://www.taveri.jp/store/ChIJwdevqH2uRjURB1XIos4hA0w",
+     "checked_at": "2026-11-11",
+     "title": "Google 評分轉載頁（taveri，已核對店名／位置；非 Google 店家頁）",
+     "fields": [
+      "note"
+     ]
+    }
+   ],
+   "field_status": {
+    "ratings.google": "待查（未在 Google 地圖店家頁人工查看；轉載頁數值見 note）",
+    "ratings.tabelog": "已查",
+    "budget_lunch": "已查",
+    "budget_dinner": "已查",
+    "hours": "已查",
+    "closed_days": "已查",
+    "reservation": "已查"
+   },
+   "checked_date": "2026-11-11",
+   "note": "Google 評分參考值 4.4（第三方轉載頁 taveri，2026-11-11 查看；未在 Google 地圖店家頁人工核對，故未寫入 ratings）。 預算為 Tabelog 每人預算區間。",
+   "cuisine_source": "Tabelog 2026-11-11"
+  },
+  "rf_bep_kumonomine": {
+   "kind": "restaurant",
+   "name": "cafe 雲の峰／雲之峰咖啡",
+   "cuisine_group": "咖啡廳",
+   "cuisine": "咖啡館・早餐",
+   "budget_lunch": "¥1,000–¥1,999（Tabelog）",
+   "budget_dinner": "不適用",
+   "closed_days": "週二、週三（偶有臨時休業）",
+   "hours": "07:00–15:00",
+   "reservation": {
+    "required": false,
+    "accepts": false,
+    "method": "不收（現場候位）",
+    "note": null
+   },
+   "google_maps_url": "https://www.google.com/maps/place/?q=place_id:ChIJm340_aGnRjURfjftKDKh3M4",
+   "ratings": [
+    {
+     "source": "tabelog",
+     "score": 3.08,
+     "scale": 5,
+     "url": "https://tabelog.com/oita/A4402/A440202/44013616/",
+     "checked_at": "2026-11-11"
+    }
+   ],
+   "mapcode": null,
+   "mapcode_source": null,
+   "sources": [
+    {
+     "url": "https://tabelog.com/tw/oita/A4402/A440202/44013616/",
+     "checked_at": "2026-11-11",
+     "title": "Tabelog（繁中鏡像頁，與日文頁同店號；日文頁網址取自該頁 hreflang=ja）",
+     "fields": [
+      "ratings.tabelog",
+      "cuisine",
+      "budget_lunch",
+      "budget_dinner",
+      "hours",
+      "closed_days",
+      "reservation"
+     ]
+    },
+    {
+     "url": "https://www.taveri.jp/store/ChIJm340_aGnRjURfjftKDKh3M4",
+     "checked_at": "2026-11-11",
+     "title": "Google 評分轉載頁（taveri，已核對店名／位置；非 Google 店家頁）",
+     "fields": [
+      "note"
+     ]
+    }
+   ],
+   "field_status": {
+    "ratings.google": "待查（未在 Google 地圖店家頁人工查看；轉載頁數值見 note）",
+    "ratings.tabelog": "已查",
+    "budget_lunch": "已查",
+    "budget_dinner": "不適用",
+    "hours": "已查",
+    "closed_days": "已查",
+    "reservation": "已查"
+   },
+   "checked_date": "2026-11-11",
+   "note": "Google 評分參考值 4.6（第三方轉載頁 taveri，2026-11-11 查看；未在 Google 地圖店家頁人工核對，故未寫入 ratings）。 預算為 Tabelog 每人預算區間。",
+   "cuisine_source": "Tabelog 2026-11-11"
+  },
+  "rf_bep_toyotsune": {
+   "kind": "restaurant",
+   "name": "とよ常 本店／豐常（特上天丼）",
+   "cuisine_group": "和食",
+   "cuisine": "天丼・海鮮・日本料理",
+   "budget_lunch": "¥1,000–¥1,999（Tabelog）",
+   "budget_dinner": "¥1,000–¥1,999（Tabelog）",
+   "closed_days": "週二、週三、年末年始",
+   "hours": "11:00–21:00",
+   "reservation": {
+    "required": false,
+    "accepts": false,
+    "method": "不收（現場候位）",
+    "note": null
+   },
+   "google_maps_url": "https://www.google.com/maps/search/?api=1&query=%E3%81%A8%E3%82%88%E5%B8%B8%20%E6%9C%AC%E5%BA%97%20%E5%A4%A7%E5%88%86%E7%9C%8C%E5%88%A5%E5%BA%9C%E5%B8%82%E5%8C%97%E6%B5%9C2-12-24",
+   "ratings": [
+    {
+     "source": "tabelog",
+     "score": 3.49,
+     "scale": 5,
+     "url": "https://tabelog.com/oita/A4402/A440202/44000199/",
+     "checked_at": "2026-11-11"
+    }
+   ],
+   "mapcode": null,
+   "mapcode_source": null,
+   "sources": [
+    {
+     "url": "https://tabelog.com/tw/oita/A4402/A440202/44000199/",
+     "checked_at": "2026-11-11",
+     "title": "Tabelog（繁中鏡像頁，與日文頁同店號；日文頁網址取自該頁 hreflang=ja）",
+     "fields": [
+      "ratings.tabelog",
+      "cuisine",
+      "budget_lunch",
+      "budget_dinner",
+      "hours",
+      "closed_days",
+      "reservation"
+     ]
+    },
+    {
+     "url": "https://restaurantguru.jp/Toyotsune-Honten-Beppu",
+     "checked_at": "2026-11-11",
+     "title": "Google 評分轉載頁（restaurantguru，已核對店名／位置；非 Google 店家頁）",
+     "fields": [
+      "note"
+     ]
+    }
+   ],
+   "field_status": {
+    "ratings.google": "待查（未在 Google 地圖店家頁人工查看；轉載頁數值見 note）",
+    "ratings.tabelog": "已查",
+    "budget_lunch": "已查",
+    "budget_dinner": "已查",
+    "hours": "已查",
+    "closed_days": "已查",
+    "reservation": "已查"
+   },
+   "checked_date": "2026-11-11",
+   "note": "Google 評分參考值 4.2（第三方轉載頁 restaurantguru，2026-11-11 查看；未在 Google 地圖店家頁人工核對，故未寫入 ratings）。 預算為 Tabelog 每人預算區間。",
+   "cuisine_source": "Tabelog 2026-11-11"
+  },
+  "rf_nob_hayuma": {
+   "kind": "restaurant",
+   "name": "道の駅 北川はゆま レストラン／北川早馬道之驛餐廳",
+   "cuisine_group": "道之驛食堂",
+   "cuisine": "道之驛餐廳",
+   "budget_lunch": "～¥999（Tabelog）",
+   "budget_dinner": "不適用",
+   "closed_days": "原則無休",
+   "hours": "餐廳 11:00–17:00",
+   "reservation": {
+    "required": false,
+    "accepts": false,
+    "method": "不收（現場候位）",
+    "note": null
+   },
+   "google_maps_url": "https://www.google.com/maps/search/?api=1&query=%E9%81%93%E3%81%AE%E9%A7%85%20%E5%8C%97%E5%B7%9D%E3%81%AF%E3%82%86%E3%81%BE%20%E3%83%AC%E3%82%B9%E3%83%88%E3%83%A9%E3%83%B3%20%E5%AE%AE%E5%B4%8E%E7%9C%8C%E5%BB%B6%E5%B2%A1%E5%B8%82%E5%8C%97%E5%B7%9D%E7%94%BA%E9%95%B7%E4%BA%955751-1",
+   "ratings": [
+    {
+     "source": "tabelog",
+     "score": 3.25,
+     "scale": 5,
+     "url": "https://tabelog.com/miyazaki/A4505/A450501/45004778/",
+     "checked_at": "2026-11-11"
+    }
+   ],
+   "mapcode": null,
+   "mapcode_source": null,
+   "sources": [
+    {
+     "url": "https://tabelog.com/tw/miyazaki/A4505/A450501/45004778/",
+     "checked_at": "2026-11-11",
+     "title": "Tabelog（繁中鏡像頁，與日文頁同店號；日文頁網址取自該頁 hreflang=ja）",
+     "fields": [
+      "ratings.tabelog",
+      "cuisine",
+      "budget_lunch",
+      "budget_dinner",
+      "hours",
+      "closed_days",
+      "reservation"
+     ]
+    }
+   ],
+   "field_status": {
+    "ratings.google": "待查",
+    "ratings.tabelog": "已查",
+    "budget_lunch": "已查",
+    "budget_dinner": "不適用",
+    "hours": "已查",
+    "closed_days": "已查",
+    "reservation": "已查"
+   },
+   "checked_date": "2026-11-11",
+   "note": "預算為 Tabelog 每人預算區間。",
+   "cuisine_source": "Tabelog 2026-11-11"
+  },
+  "rf_nob_naochan": {
+   "kind": "restaurant",
+   "name": "元祖チキン南蛮 直ちゃん／雞肉南蠻元祖直ちゃん",
+   "cuisine_group": "洋食",
+   "cuisine": "雞肉南蠻・食堂",
+   "budget_lunch": "～¥999（Tabelog）",
+   "budget_dinner": "～¥999（Tabelog）",
+   "closed_days": "週二、週一晚間",
+   "hours": "11:00–13:45、17:00–19:45（週一僅午餐）",
+   "reservation": {
+    "required": false,
+    "accepts": false,
+    "method": "不收（現場候位）",
+    "note": null
+   },
+   "google_maps_url": "https://www.google.com/maps/search/?api=1&query=%E5%85%83%E7%A5%96%E3%83%81%E3%82%AD%E3%83%B3%E5%8D%97%E8%9B%AE%20%E7%9B%B4%E3%81%A1%E3%82%83%E3%82%93%20%E5%AE%AE%E5%B4%8E%E7%9C%8C%E5%BB%B6%E5%B2%A1%E5%B8%82%E6%A0%84%E7%94%BA9-3",
+   "ratings": [
+    {
+     "source": "tabelog",
+     "score": 3.72,
+     "scale": 5,
+     "url": "https://tabelog.com/miyazaki/A4505/A450501/45000063/",
+     "checked_at": "2026-11-11"
+    }
+   ],
+   "mapcode": null,
+   "mapcode_source": null,
+   "sources": [
+    {
+     "url": "https://tabelog.com/tw/miyazaki/A4505/A450501/45000063/",
+     "checked_at": "2026-11-11",
+     "title": "Tabelog（繁中鏡像頁，與日文頁同店號；日文頁網址取自該頁 hreflang=ja）",
+     "fields": [
+      "ratings.tabelog",
+      "cuisine",
+      "budget_lunch",
+      "budget_dinner",
+      "hours",
+      "closed_days",
+      "reservation"
+     ]
+    }
+   ],
+   "field_status": {
+    "ratings.google": "待查",
+    "ratings.tabelog": "已查",
+    "budget_lunch": "已查",
+    "budget_dinner": "已查",
+    "hours": "已查",
+    "closed_days": "已查",
+    "reservation": "已查"
+   },
+   "checked_date": "2026-11-11",
+   "note": "Google 評分只在搜尋摘要看到約 4.4，未核實，沒有寫進 ratings。 預算為 Tabelog 每人預算區間。",
+   "cuisine_source": "Tabelog 2026-11-11"
+  },
+  "rf_hyu_boyokan": {
+   "kind": "restaurant",
+   "name": "望洋館／望洋館（日向細島海鮮）",
+   "cuisine_group": "海鮮",
+   "cuisine": "海鮮料理（料理旅館）",
+   "budget_lunch": null,
+   "budget_dinner": null,
+   "closed_days": "週二",
+   "hours": "11:30–15:00（Tabelog 只列午間）",
+   "reservation": {
+    "required": null,
+    "accepts": true,
+    "method": "電話預約",
+    "note": null
+   },
+   "google_maps_url": "https://www.google.com/maps/search/?api=1&query=%E6%9C%9B%E6%B4%8B%E9%A4%A8%20%E5%AE%AE%E5%B4%8E%E7%9C%8C%E6%97%A5%E5%90%91%E5%B8%82%E5%A4%A7%E5%AD%97%E5%B9%B3%E5%B2%A9191-2",
+   "ratings": [
+    {
+     "source": "tabelog",
+     "score": 3.15,
+     "scale": 5,
+     "url": "https://tabelog.com/miyazaki/A4504/A450403/45005009/",
+     "checked_at": "2026-11-11"
+    }
+   ],
+   "mapcode": null,
+   "mapcode_source": null,
+   "sources": [
+    {
+     "url": "https://tabelog.com/tw/miyazaki/A4504/A450403/45005009/",
+     "checked_at": "2026-11-11",
+     "title": "Tabelog（繁中鏡像頁，與日文頁同店號；日文頁網址取自該頁 hreflang=ja）",
+     "fields": [
+      "ratings.tabelog",
+      "cuisine",
+      "budget_lunch",
+      "budget_dinner",
+      "hours",
+      "closed_days",
+      "reservation"
+     ]
+    },
+    {
+     "url": "https://tagyado.com/inns/miyazaki-19d1dbd9/",
+     "checked_at": "2026-11-11",
+     "title": "Google 評分轉載頁（tagyado，已核對店名／位置；非 Google 店家頁）",
+     "fields": [
+      "note"
+     ]
+    }
+   ],
+   "field_status": {
+    "ratings.google": "待查（未在 Google 地圖店家頁人工查看；轉載頁數值見 note）",
+    "ratings.tabelog": "已查",
+    "budget_lunch": "待查",
+    "budget_dinner": "待查",
+    "hours": "已查",
+    "closed_days": "已查",
+    "reservation": "已查"
+   },
+   "checked_date": "2026-11-11",
+   "note": "Tabelog 只列 11:30–15:00，沒有晚間營業；先前資料有 17:00–21:00，D7 晚餐使用前請確認。 Google 評分參考值 4.5（第三方轉載頁 tagyado，2026-11-11 查看；未在 Google 地圖店家頁人工核對，故未寫入 ratings）。 tagyado 記 Google 4.5（102件）2026-10-05 時點；為旅館條目 Google 參考值取自 tagyado 轉載頁（該頁資料日 2026-10-05）。 預算為 Tabelog 每人預算區間。",
+   "cuisine_source": "Tabelog 2026-11-11"
+  },
+  "rf_hyu_kanegahama": {
+   "kind": "restaurant",
+   "name": "金ヶ浜食堂／金濱食堂",
+   "cuisine_group": "海鮮",
+   "cuisine": "海鮮定食・食堂（民宿金ヶ浜）",
+   "budget_lunch": "¥1,000–¥1,999（Tabelog）",
+   "budget_dinner": null,
+   "closed_days": "週四（另有不定休，見店家 IG）",
+   "hours": "11:30–14:00、18:00–20:00（晚餐限預約）",
+   "reservation": {
+    "required": null,
+    "accepts": true,
+    "method": "電話預約",
+    "note": "晚餐限預約；午餐不收預約"
+   },
+   "google_maps_url": "https://www.google.com/maps/search/?api=1&query=%E9%87%91%E3%83%B6%E6%B5%9C%E9%A3%9F%E5%A0%82%20%E5%AE%AE%E5%B4%8E%E7%9C%8C%E6%97%A5%E5%90%91%E5%B8%82%E5%B9%B3%E5%B2%A92221-1%20%E6%B0%91%E5%AE%BF%E9%87%91%E3%83%B6%E6%B5%9C",
+   "ratings": [
+    {
+     "source": "tabelog",
+     "score": 3.5,
+     "scale": 5,
+     "url": "https://tabelog.com/miyazaki/A4504/A450403/45005751/",
+     "checked_at": "2026-11-11"
+    }
+   ],
+   "mapcode": null,
+   "mapcode_source": null,
+   "sources": [
+    {
+     "url": "https://tabelog.com/tw/miyazaki/A4504/A450403/45005751/",
+     "checked_at": "2026-11-11",
+     "title": "Tabelog（繁中鏡像頁，與日文頁同店號；日文頁網址取自該頁 hreflang=ja）",
+     "fields": [
+      "ratings.tabelog",
+      "cuisine",
+      "budget_lunch",
+      "budget_dinner",
+      "hours",
+      "closed_days",
+      "reservation"
+     ]
+    }
+   ],
+   "field_status": {
+    "ratings.google": "待查",
+    "ratings.tabelog": "已查",
+    "budget_lunch": "已查",
+    "budget_dinner": "待查",
+    "hours": "已查",
+    "closed_days": "已查",
+    "reservation": "已查"
+   },
+   "checked_date": "2026-11-11",
+   "note": "Google 評分只在搜尋摘要看到約 4.6，未核實，沒有寫進 ratings。 預算為 Tabelog 每人預算區間。",
+   "cuisine_source": "Tabelog 2026-11-11"
+  },
+  "rf_hyu_tairyoya": {
+   "kind": "restaurant",
+   "name": "いけすの大漁や／活魚大漁屋",
+   "cuisine_group": "海鮮",
+   "cuisine": "活魚料理・壽司・居酒屋",
+   "budget_lunch": "¥1,000–¥1,999（Tabelog）",
+   "budget_dinner": null,
+   "closed_days": "12/31–1/1（先前資料）",
+   "hours": "11:00–14:00、17:00–21:00（Tabelog）",
+   "reservation": {
+    "required": null,
+    "accepts": true,
+    "method": "電話預約",
+    "note": null
+   },
+   "google_maps_url": "https://www.google.com/maps/search/?api=1&query=%E3%81%84%E3%81%91%E3%81%99%E3%81%AE%E5%A4%A7%E6%BC%81%E3%82%84%20%E5%AE%AE%E5%B4%8E%E7%9C%8C%E6%97%A5%E5%90%91%E5%B8%82%E4%B8%8A%E7%94%BA7-3",
+   "ratings": [
+    {
+     "source": "tabelog",
+     "score": 3.26,
+     "scale": 5,
+     "url": "https://tabelog.com/miyazaki/A4504/A450403/45003717/",
+     "checked_at": "2026-11-11"
+    }
+   ],
+   "mapcode": null,
+   "mapcode_source": null,
+   "sources": [
+    {
+     "url": "https://tabelog.com/tw/miyazaki/A4504/A450403/45003717/",
+     "checked_at": "2026-11-11",
+     "title": "Tabelog（繁中鏡像頁，與日文頁同店號；日文頁網址取自該頁 hreflang=ja）",
+     "fields": [
+      "ratings.tabelog",
+      "cuisine",
+      "budget_lunch",
+      "budget_dinner",
+      "hours",
+      "closed_days",
+      "reservation"
+     ]
+    }
+   ],
+   "field_status": {
+    "ratings.google": "待查",
+    "ratings.tabelog": "已查",
+    "budget_lunch": "已查",
+    "budget_dinner": "待查",
+    "hours": "已查",
+    "closed_days": "已查",
+    "reservation": "已查"
+   },
+   "checked_date": "2026-11-11",
+   "note": "Tabelog 晚間營業至 21:00，先前資料為 22:30。 Google 評分只在搜尋摘要看到約 4.0，未核實，沒有寫進 ratings。 預算為 Tabelog 每人預算區間。",
+   "cuisine_source": "Tabelog 2026-11-11"
+  },
+  "rf_hyu_komeda": {
+   "kind": "restaurant",
+   "name": "コメダ珈琲店 宮崎日向店／Komeda 咖啡",
+   "cuisine_group": "咖啡廳",
+   "cuisine": "喫茶・咖啡（連鎖，早餐）",
+   "budget_lunch": null,
+   "budget_dinner": null,
+   "closed_days": "無休",
+   "hours": "07:00–23:00（官網／先前資料；Tabelog 寫 09:00–17:00，資料不一致）",
+   "reservation": {
+    "required": false,
+    "accepts": false,
+    "method": "不收（現場候位）",
+    "note": null
+   },
+   "google_maps_url": "https://www.google.com/maps/search/?api=1&query=%E3%82%B3%E3%83%A1%E3%83%80%E7%8F%88%E7%90%B2%E5%BA%97%20%E5%AE%AE%E5%B4%8E%E6%97%A5%E5%90%91%E5%BA%97%20%E5%AE%AE%E5%B4%8E%E7%9C%8C%E6%97%A5%E5%90%91%E5%B8%82%E5%A4%A7%E5%AD%97%E8%B2%A1%E5%85%89%E5%AF%BA%E5%AD%97%E6%A1%83%E3%83%8E%E6%9C%A8493-1",
+   "ratings": [
+    {
+     "source": "tabelog",
+     "score": 3.01,
+     "scale": 5,
+     "url": "https://tabelog.com/miyazaki/A4504/A450403/45009655/",
+     "checked_at": "2026-11-11"
+    }
+   ],
+   "mapcode": null,
+   "mapcode_source": null,
+   "sources": [
+    {
+     "url": "https://tabelog.com/tw/miyazaki/A4504/A450403/45009655/",
+     "checked_at": "2026-11-11",
+     "title": "Tabelog（繁中鏡像頁，與日文頁同店號；日文頁網址取自該頁 hreflang=ja）",
+     "fields": [
+      "ratings.tabelog",
+      "cuisine",
+      "budget_lunch",
+      "budget_dinner",
+      "hours",
+      "closed_days",
+      "reservation"
+     ]
+    }
+   ],
+   "field_status": {
+    "ratings.google": "待查",
+    "ratings.tabelog": "已查",
+    "budget_lunch": "待查",
+    "budget_dinner": "待查",
+    "hours": "已查",
+    "closed_days": "已查",
+    "reservation": "已查"
+   },
+   "checked_date": "2026-11-11",
+   "note": "Tabelog 營業 09:00–17:00，與官網 07:00–23:00 不一致；D8 早餐使用前請以官網為準。 預算為 Tabelog 每人預算區間。",
+   "cuisine_source": "Tabelog 2026-11-11"
+  },
+  "rf_tak_chihonoie": {
+   "kind": "restaurant",
+   "name": "千穂の家 元祖流しそうめん／千穗之家流水麵",
+   "cuisine_group": "鄉土料理",
+   "cuisine": "流水麵・鄉土料理",
+   "budget_lunch": "¥1,000–¥1,999（Tabelog）",
+   "budget_dinner": "不適用",
+   "closed_days": "無休（天候不佳可能休業）",
+   "hours": "10:00–16:00",
+   "reservation": {
+    "required": false,
+    "accepts": false,
+    "method": "不收（現場候位）",
+    "note": null
+   },
+   "google_maps_url": "https://www.google.com/maps/search/?api=1&query=%E5%8D%83%E7%A9%82%E3%81%AE%E5%AE%B6%20%E5%85%83%E7%A5%96%E6%B5%81%E3%81%97%E3%81%9D%E3%81%86%E3%82%81%E3%82%93%20%E5%AE%AE%E5%B4%8E%E7%9C%8C%E8%A5%BF%E8%87%BC%E6%9D%B5%E9%83%A1%E9%AB%98%E5%8D%83%E7%A9%82%E7%94%BA%E5%90%91%E5%B1%B162-1",
+   "ratings": [
+    {
+     "source": "tabelog",
+     "score": 3.48,
+     "scale": 5,
+     "url": "https://tabelog.com/miyazaki/A4505/A450502/45000892/",
+     "checked_at": "2026-11-11"
+    }
+   ],
+   "mapcode": null,
+   "mapcode_source": null,
+   "sources": [
+    {
+     "url": "https://tabelog.com/tw/miyazaki/A4505/A450502/45000892/",
+     "checked_at": "2026-11-11",
+     "title": "Tabelog（繁中鏡像頁，與日文頁同店號；日文頁網址取自該頁 hreflang=ja）",
+     "fields": [
+      "ratings.tabelog",
+      "cuisine",
+      "budget_lunch",
+      "budget_dinner",
+      "hours",
+      "closed_days",
+      "reservation"
+     ]
+    }
+   ],
+   "field_status": {
+    "ratings.google": "待查",
+    "ratings.tabelog": "已查",
+    "budget_lunch": "已查",
+    "budget_dinner": "不適用",
+    "hours": "已查",
+    "closed_days": "已查",
+    "reservation": "已查"
+   },
+   "checked_date": "2026-11-11",
+   "note": "Google 評分只在搜尋摘要看到約 3.8，未核實，沒有寫進 ratings。 預算為 Tabelog 每人預算區間。",
+   "cuisine_source": "Tabelog 2026-11-11"
+  },
+  "rf_hin_seiunbashi": {
+   "kind": "restaurant",
+   "name": "道の駅 青雲橋 ひのおかげ／青雲橋道之驛",
+   "cuisine_group": "道之驛食堂",
+   "cuisine": "蕎麥麵・鄉土料理（道之驛餐廳）",
+   "budget_lunch": "～¥999（Tabelog）",
+   "budget_dinner": "不適用",
+   "closed_days": "1/1 等（先前資料）",
+   "hours": "餐廳 10:00–16:00",
+   "reservation": {
+    "required": false,
+    "accepts": false,
+    "method": "不收（現場候位）",
+    "note": null
+   },
+   "google_maps_url": "https://www.google.com/maps/search/?api=1&query=%E9%81%93%E3%81%AE%E9%A7%85%20%E9%9D%92%E9%9B%B2%E6%A9%8B%20%E3%81%B2%E3%81%AE%E3%81%8A%E3%81%8B%E3%81%92%20%E5%AE%AE%E5%B4%8E%E7%9C%8C%E8%A5%BF%E8%87%BC%E6%9D%B5%E9%83%A1%E6%97%A5%E4%B9%8B%E5%BD%B1%E7%94%BA%E5%A4%A7%E5%AD%97%E4%B8%83%E6%8A%988705-12",
+   "ratings": [
+    {
+     "source": "tabelog",
+     "score": 3.33,
+     "scale": 5,
+     "url": "https://tabelog.com/miyazaki/A4505/A450502/45006993/",
+     "checked_at": "2026-11-11"
+    }
+   ],
+   "mapcode": null,
+   "mapcode_source": null,
+   "sources": [
+    {
+     "url": "https://tabelog.com/tw/miyazaki/A4505/A450502/45006993/",
+     "checked_at": "2026-11-11",
+     "title": "Tabelog（繁中鏡像頁，與日文頁同店號；日文頁網址取自該頁 hreflang=ja）",
+     "fields": [
+      "ratings.tabelog",
+      "cuisine",
+      "budget_lunch",
+      "budget_dinner",
+      "hours",
+      "closed_days",
+      "reservation"
+     ]
+    }
+   ],
+   "field_status": {
+    "ratings.google": "待查",
+    "ratings.tabelog": "已查",
+    "budget_lunch": "已查",
+    "budget_dinner": "不適用",
+    "hours": "已查",
+    "closed_days": "已查",
+    "reservation": "已查"
+   },
+   "checked_date": "2026-11-11",
+   "note": "Google 評分只在搜尋摘要看到約 3.7，未核實，沒有寫進 ratings。 預算為 Tabelog 每人預算區間。",
+   "cuisine_source": "Tabelog 2026-11-11"
+  },
+  "rf_tak_nagomi": {
+   "kind": "restaurant",
+   "name": "高千穂牛レストラン 和（なごみ）／高千穗牛餐廳和",
+   "cuisine_group": "燒肉",
+   "cuisine": "高千穗牛 牛排・燒肉・漢堡排",
+   "budget_lunch": "¥3,000–¥3,999（Tabelog）",
+   "budget_dinner": "¥6,000–¥7,999（Tabelog）",
+   "closed_days": "週三",
+   "hours": "11:00–14:30、17:00–21:00",
+   "reservation": {
+    "required": null,
+    "accepts": true,
+    "method": "電話預約",
+    "note": "先前資料：只有燒肉可預約"
+   },
+   "google_maps_url": "https://www.google.com/maps/place/?q=place_id:ChIJ08WFNuksRzUR6LHx-22nnig",
+   "ratings": [
+    {
+     "source": "tabelog",
+     "score": 3.6,
+     "scale": 5,
+     "url": "https://tabelog.com/miyazaki/A4505/A450502/45004655/",
+     "checked_at": "2026-11-11"
+    }
+   ],
+   "mapcode": null,
+   "mapcode_source": null,
+   "sources": [
+    {
+     "url": "https://tabelog.com/tw/miyazaki/A4505/A450502/45004655/",
+     "checked_at": "2026-11-11",
+     "title": "Tabelog（繁中鏡像頁，與日文頁同店號；日文頁網址取自該頁 hreflang=ja）",
+     "fields": [
+      "ratings.tabelog",
+      "cuisine",
+      "budget_lunch",
+      "budget_dinner",
+      "hours",
+      "closed_days",
+      "reservation"
+     ]
+    },
+    {
+     "url": "https://www.taveri.jp/store/ChIJ08WFNuksRzUR6LHx-22nnig",
+     "checked_at": "2026-11-11",
+     "title": "Google 評分轉載頁（taveri，已核對店名／位置；非 Google 店家頁）",
+     "fields": [
+      "note"
+     ]
+    }
+   ],
+   "field_status": {
+    "ratings.google": "待查（未在 Google 地圖店家頁人工查看；轉載頁數值見 note）",
+    "ratings.tabelog": "已查",
+    "budget_lunch": "已查",
+    "budget_dinner": "已查",
+    "hours": "已查",
+    "closed_days": "已查",
+    "reservation": "已查"
+   },
+   "checked_date": "2026-11-11",
+   "note": "Google 評分參考值 4.4（第三方轉載頁 taveri，2026-11-11 查看；未在 Google 地圖店家頁人工核對，故未寫入 ratings）。 預算為 Tabelog 每人預算區間。",
+   "cuisine_source": "Tabelog 2026-11-11"
+  },
+  "rf_tak_sakuya": {
+   "kind": "restaurant",
+   "name": "咲耶 SAKUYA／咲耶",
+   "cuisine_group": "燒肉",
+   "cuisine": "燒肉・鄉土料理（現名「大衆焼き肉 SAKUYA 本丸」）",
+   "budget_lunch": null,
+   "budget_dinner": null,
+   "closed_days": "週一、週二（Tabelog、Google；另有網站寫週二、週三）",
+   "hours": "12:00–16:00、17:00–20:30",
+   "reservation": {
+    "required": null,
+    "accepts": true,
+    "method": "電話預約",
+    "note": "Tabelog 寫只收電話預約"
+   },
+   "google_maps_url": "https://www.google.com/maps/place/?q=place_id:ChIJoSoqfXwtRzURWnNAKyh7hT0",
+   "ratings": [
+    {
+     "source": "tabelog",
+     "score": 3.17,
+     "scale": 5,
+     "url": "https://tabelog.com/miyazaki/A4505/A450502/45013120/",
+     "checked_at": "2026-11-11"
+    }
+   ],
+   "mapcode": null,
+   "mapcode_source": null,
+   "sources": [
+    {
+     "url": "https://tabelog.com/tw/miyazaki/A4505/A450502/45013120/",
+     "checked_at": "2026-11-11",
+     "title": "Tabelog（繁中鏡像頁，與日文頁同店號；日文頁網址取自該頁 hreflang=ja）",
+     "fields": [
+      "ratings.tabelog",
+      "cuisine",
+      "budget_lunch",
+      "budget_dinner",
+      "hours",
+      "closed_days",
+      "reservation"
+     ]
+    },
+    {
+     "url": "https://www.taveri.jp/store/ChIJoSoqfXwtRzURWnNAKyh7hT0",
+     "checked_at": "2026-11-11",
+     "title": "Google 評分轉載頁（taveri，已核對店名／位置；非 Google 店家頁）",
+     "fields": [
+      "note"
+     ]
+    }
+   ],
+   "field_status": {
+    "ratings.google": "待查（未在 Google 地圖店家頁人工查看；轉載頁數值見 note）",
+    "ratings.tabelog": "已查",
+    "budget_lunch": "待查",
+    "budget_dinner": "待查",
+    "hours": "已查",
+    "closed_days": "已查",
+    "reservation": "已查"
+   },
+   "checked_date": "2026-11-11",
+   "note": "店名已改為「大衆焼き肉 SAKUYA 本丸」（同址同電話），業態轉為燒肉；晚間營業至 20:30（先前資料為 21:00）；公休日來源不一致。 Google 評分參考值 4.3（第三方轉載頁 taveri，2026-11-11 查看；未在 Google 地圖店家頁人工核對，故未寫入 ratings）。 Google 店名為「大衆焼き肉 SAKUYA 本丸」 預算為 Tabelog 每人預算區間。",
+   "cuisine_source": "Tabelog 2026-11-11"
+  },
+  "rf_tak_mugamuchu": {
+   "kind": "restaurant",
+   "name": "居酒屋 無我夢中／無我夢中居酒屋",
+   "cuisine_group": "居酒屋",
+   "cuisine": "串炸・居酒屋",
+   "budget_lunch": "不適用",
+   "budget_dinner": "¥3,000–¥3,999（Tabelog）",
+   "closed_days": "週日（Tabelog）",
+   "hours": "17:00–21:00",
+   "reservation": {
+    "required": null,
+    "accepts": true,
+    "method": "電話預約",
+    "note": null
+   },
+   "google_maps_url": "https://www.google.com/maps/search/?api=1&query=%E5%B1%85%E9%85%92%E5%B1%8B%20%E7%84%A1%E6%88%91%E5%A4%A2%E4%B8%AD%20%E5%AE%AE%E5%B4%8E%E7%9C%8C%E8%A5%BF%E8%87%BC%E6%9D%B5%E9%83%A1%E9%AB%98%E5%8D%83%E7%A9%82%E7%94%BA%E5%A4%A7%E5%AD%97%E4%B8%89%E7%94%B0%E4%BA%954%202F",
+   "ratings": [
+    {
+     "source": "tabelog",
+     "score": 3.23,
+     "scale": 5,
+     "url": "https://tabelog.com/miyazaki/A4505/A450502/45004707/",
+     "checked_at": "2026-11-11"
+    }
+   ],
+   "mapcode": null,
+   "mapcode_source": null,
+   "sources": [
+    {
+     "url": "https://tabelog.com/tw/miyazaki/A4505/A450502/45004707/",
+     "checked_at": "2026-11-11",
+     "title": "Tabelog（繁中鏡像頁，與日文頁同店號；日文頁網址取自該頁 hreflang=ja）",
+     "fields": [
+      "ratings.tabelog",
+      "cuisine",
+      "budget_lunch",
+      "budget_dinner",
+      "hours",
+      "closed_days",
+      "reservation"
+     ]
+    }
+   ],
+   "field_status": {
+    "ratings.google": "待查",
+    "ratings.tabelog": "已查",
+    "budget_lunch": "不適用",
+    "budget_dinner": "已查",
+    "hours": "已查",
+    "closed_days": "已查",
+    "reservation": "已查"
+   },
+   "checked_date": "2026-11-11",
+   "note": "Tabelog 寫週日公休，D9（週日）晚餐不能用。 預算為 Tabelog 每人預算區間。",
+   "cuisine_source": "Tabelog 2026-11-11"
+  },
+  "rf_tak_joyfull": {
+   "kind": "restaurant",
+   "name": "ジョイフル 宮崎高千穂店／Joyfull 家庭餐廳",
+   "cuisine_group": "家庭餐廳",
+   "cuisine": "家庭餐廳（連鎖）",
+   "budget_lunch": "～¥999（Tabelog）",
+   "budget_dinner": "¥1,000–¥1,999（Tabelog）",
+   "closed_days": "無休",
+   "hours": "08:00–翌 01:00",
+   "reservation": {
+    "required": false,
+    "accepts": false,
+    "method": "不收（現場候位）",
+    "note": null
+   },
+   "google_maps_url": "https://www.google.com/maps/search/?api=1&query=%E3%82%B8%E3%83%A7%E3%82%A4%E3%83%95%E3%83%AB%20%E5%AE%AE%E5%B4%8E%E9%AB%98%E5%8D%83%E7%A9%82%E5%BA%97%20%E5%AE%AE%E5%B4%8E%E7%9C%8C%E8%A5%BF%E8%87%BC%E6%9D%B5%E9%83%A1%E9%AB%98%E5%8D%83%E7%A9%82%E7%94%BA%E5%A4%A7%E5%AD%97%E4%B8%89%E7%94%B0%E4%BA%956178-3",
+   "ratings": [
+    {
+     "source": "tabelog",
+     "score": 3.03,
+     "scale": 5,
+     "url": "https://tabelog.com/miyazaki/A4505/A450502/45003768/",
+     "checked_at": "2026-11-11"
+    }
+   ],
+   "mapcode": null,
+   "mapcode_source": null,
+   "sources": [
+    {
+     "url": "https://tabelog.com/tw/miyazaki/A4505/A450502/45003768/",
+     "checked_at": "2026-11-11",
+     "title": "Tabelog（繁中鏡像頁，與日文頁同店號；日文頁網址取自該頁 hreflang=ja）",
+     "fields": [
+      "ratings.tabelog",
+      "cuisine",
+      "budget_lunch",
+      "budget_dinner",
+      "hours",
+      "closed_days",
+      "reservation"
+     ]
+    }
+   ],
+   "field_status": {
+    "ratings.google": "待查",
+    "ratings.tabelog": "已查",
+    "budget_lunch": "已查",
+    "budget_dinner": "已查",
+    "hours": "已查",
+    "closed_days": "已查",
+    "reservation": "已查"
+   },
+   "checked_date": "2026-11-11",
+   "note": "預算為 Tabelog 每人預算區間。",
+   "cuisine_source": "Tabelog 2026-11-11"
+  },
+  "rf_tak_kamichaya": {
+   "kind": "restaurant",
+   "name": "神茶家（かみちゃや）／天岩戶神社前茶屋",
+   "cuisine_group": "食堂",
+   "cuisine": "食堂（天岩戶神社前茶屋）",
+   "budget_lunch": null,
+   "budget_dinner": null,
+   "closed_days": "週二（Tabelog）",
+   "hours": null,
+   "reservation": null,
+   "google_maps_url": "https://www.google.com/maps/search/?api=1&query=%E7%A5%9E%E8%8C%B6%E5%AE%B6%EF%BC%88%E3%81%8B%E3%81%BF%E3%81%A1%E3%82%83%E3%82%84%EF%BC%89%20%E5%AE%AE%E5%B4%8E%E7%9C%8C%E8%A5%BF%E8%87%BC%E6%9D%B5%E9%83%A1%E9%AB%98%E5%8D%83%E7%A9%82%E7%94%BA%E5%B2%A9%E6%88%B8794-6",
+   "ratings": [
+    {
+     "source": "tabelog",
+     "score": 3.16,
+     "scale": 5,
+     "url": "https://tabelog.com/miyazaki/A4505/A450502/45002977/",
+     "checked_at": "2026-11-11"
+    }
+   ],
+   "mapcode": null,
+   "mapcode_source": null,
+   "sources": [
+    {
+     "url": "https://tabelog.com/tw/miyazaki/A4505/A450502/45002977/",
+     "checked_at": "2026-11-11",
+     "title": "Tabelog（繁中鏡像頁，與日文頁同店號；日文頁網址取自該頁 hreflang=ja）",
+     "fields": [
+      "ratings.tabelog",
+      "cuisine",
+      "budget_lunch",
+      "budget_dinner",
+      "hours",
+      "closed_days",
+      "reservation"
+     ]
+    },
+    {
+     "url": "https://nisiusukifans.jp/kamityaya/",
+     "checked_at": "2026-11-11",
+     "title": "西臼杵觀光網站（標題寫【閉店】）",
+     "fields": [
+      "note"
+     ]
+    }
+   ],
+   "field_status": {
+    "ratings.google": "待查",
+    "ratings.tabelog": "已查",
+    "budget_lunch": "待查",
+    "budget_dinner": "待查",
+    "hours": "待查",
+    "closed_days": "已查",
+    "reservation": "待查"
+   },
+   "checked_date": "2026-11-11",
+   "note": "⚠️ 町觀光網站（nisiusukifans.jp）標題寫【閉店】，但店家官網仍在；可能已歇業，D9 午餐建議改用他店，或使用前確認。 預算為 Tabelog 每人預算區間。",
+   "cuisine_source": "Tabelog 2026-11-11"
+  },
+  "rf_yam_arch": {
+   "kind": "restaurant",
+   "name": "ARCH（道の駅 通潤橋内）／通潤橋道之驛餐廳",
+   "cuisine_group": "和食",
+   "cuisine": "日本料理・西式料理（道之驛 通潤橋內）",
+   "budget_lunch": "¥1,000–¥1,999（Tabelog）",
+   "budget_dinner": "不適用",
+   "closed_days": "依道之驛休館日（先前資料：第 1、3 個週一）",
+   "hours": "11:00–18:00（Tabelog）",
+   "reservation": {
+    "required": null,
+    "accepts": true,
+    "method": "電話預約",
+    "note": null
+   },
+   "google_maps_url": "https://www.google.com/maps/search/?api=1&query=ARCH%EF%BC%88%E9%81%93%E3%81%AE%E9%A7%85%20%E9%80%9A%E6%BD%A4%E6%A9%8B%E5%86%85%EF%BC%89%20%E7%86%8A%E6%9C%AC%E7%9C%8C%E4%B8%8A%E7%9B%8A%E5%9F%8E%E9%83%A1%E5%B1%B1%E9%83%BD%E7%94%BA%E5%9F%8E%E5%B9%B3660%20%E9%81%93%E3%81%AE%E9%A7%85%E9%80%9A%E6%BD%A4%E6%A9%8B",
+   "ratings": [
+    {
+     "source": "tabelog",
+     "score": 3.22,
+     "scale": 5,
+     "url": "https://tabelog.com/kumamoto/A4301/A430105/43018004/",
+     "checked_at": "2026-11-11"
+    }
+   ],
+   "mapcode": null,
+   "mapcode_source": null,
+   "sources": [
+    {
+     "url": "https://tabelog.com/tw/kumamoto/A4301/A430105/43018004/",
+     "checked_at": "2026-11-11",
+     "title": "Tabelog（繁中鏡像頁，與日文頁同店號；日文頁網址取自該頁 hreflang=ja）",
+     "fields": [
+      "ratings.tabelog",
+      "cuisine",
+      "budget_lunch",
+      "budget_dinner",
+      "hours",
+      "closed_days",
+      "reservation"
+     ]
+    }
+   ],
+   "field_status": {
+    "ratings.google": "待查",
+    "ratings.tabelog": "已查",
+    "budget_lunch": "已查",
+    "budget_dinner": "不適用",
+    "hours": "已查",
+    "closed_days": "已查",
+    "reservation": "已查"
+   },
+   "checked_date": "2026-11-11",
+   "note": "Tabelog 營業 11:00–18:00、未列公休，先前資料為第 1、3 個週一休。 預算為 Tabelog 每人預算區間。",
+   "cuisine_source": "Tabelog 2026-11-11"
+  },
+  "rf_uto_okoshiki": {
+   "kind": "restaurant",
+   "name": "道の駅 宇土マリーナ おこしき食堂／宇土碼頭道之驛食堂",
+   "cuisine_group": "海鮮",
+   "cuisine": "海鮮食堂（道之驛 宇土マリーナ）",
+   "budget_lunch": "¥1,000–¥1,999（Tabelog）",
+   "budget_dinner": "不適用",
+   "closed_days": "依物產館休館日",
+   "hours": "11:00–15:00",
+   "reservation": {
+    "required": false,
+    "accepts": false,
+    "method": "不收（現場候位）",
+    "note": null
+   },
+   "google_maps_url": "https://www.google.com/maps/search/?api=1&query=%E9%81%93%E3%81%AE%E9%A7%85%20%E5%AE%87%E5%9C%9F%E3%83%9E%E3%83%AA%E3%83%BC%E3%83%8A%20%E3%81%8A%E3%81%93%E3%81%97%E3%81%8D%E9%A3%9F%E5%A0%82%20%E7%86%8A%E6%9C%AC%E7%9C%8C%E5%AE%87%E5%9C%9F%E5%B8%82%E4%B8%8B%E7%B6%B2%E7%94%B03084-1%20%E5%AE%87%E5%9C%9F%E3%83%9E%E3%83%AA%E3%83%BC%E3%83%8A%20%E3%81%8A%E3%81%93%E3%81%97%E3%81%8D%E9%A4%A8",
+   "ratings": [
+    {
+     "source": "tabelog",
+     "score": 3.39,
+     "scale": 5,
+     "url": "https://tabelog.com/kumamoto/A4301/A430102/43007033/",
+     "checked_at": "2026-11-11"
+    }
+   ],
+   "mapcode": null,
+   "mapcode_source": null,
+   "sources": [
+    {
+     "url": "https://tabelog.com/tw/kumamoto/A4301/A430102/43007033/",
+     "checked_at": "2026-11-11",
+     "title": "Tabelog（繁中鏡像頁，與日文頁同店號；日文頁網址取自該頁 hreflang=ja）",
+     "fields": [
+      "ratings.tabelog",
+      "cuisine",
+      "budget_lunch",
+      "budget_dinner",
+      "hours",
+      "closed_days",
+      "reservation"
+     ]
+    }
+   ],
+   "field_status": {
+    "ratings.google": "待查",
+    "ratings.tabelog": "已查",
+    "budget_lunch": "已查",
+    "budget_dinner": "不適用",
+    "hours": "已查",
+    "closed_days": "已查",
+    "reservation": "已查"
+   },
+   "checked_date": "2026-11-11",
+   "note": "預算為 Tabelog 每人預算區間。",
+   "cuisine_source": "Tabelog 2026-11-11"
+  },
+  "rf_aso_shirakawa": {
+   "kind": "restaurant",
+   "name": "和食処 しらかわ／和食處白川",
+   "cuisine_group": "和食",
+   "cuisine": "和食（先前資料）",
+   "budget_lunch": null,
+   "budget_dinner": null,
+   "closed_days": null,
+   "hours": null,
+   "reservation": null,
+   "google_maps_url": "https://www.google.com/maps/search/?api=1&query=%E5%92%8C%E9%A3%9F%E5%87%A6%20%E3%81%97%E3%82%89%E3%81%8B%E3%82%8F%20%E7%86%8A%E6%9C%AC%E7%9C%8C%E9%98%BF%E8%98%87%E9%83%A1%E5%8D%97%E9%98%BF%E8%98%87%E6%9D%91%E7%99%BD%E5%B7%9D455-2",
+   "ratings": [],
+   "mapcode": null,
+   "mapcode_source": null,
+   "sources": [
+    {
+     "url": "https://tabelog.com/tw/kumamoto/A4302/A430202/43004116/",
+     "checked_at": "2026-11-11",
+     "title": "Tabelog（繁中鏡像頁，與日文頁同店號；日文頁網址取自該頁 hreflang=ja）",
+     "fields": [
+      "ratings.tabelog",
+      "cuisine",
+      "budget_lunch",
+      "budget_dinner",
+      "hours",
+      "closed_days",
+      "reservation"
+     ]
+    }
+   ],
+   "field_status": {
+    "ratings.google": "待查",
+    "ratings.tabelog": "查無（Tabelog 掲載保留，無評分）",
+    "budget_lunch": "待查",
+    "budget_dinner": "待查",
+    "hours": "待查",
+    "closed_days": "待查",
+    "reservation": "待查"
+   },
+   "checked_date": "2026-11-11",
+   "note": "⚠️ Tabelog 頁面標「掲載保留」（營業狀況無法確認），沒有評分；D10 午餐使用前請確認是否仍營業。 預算為 Tabelog 每人預算區間。",
+   "cuisine_source": "Tabelog 2026-11-11"
+  },
+  "rf_kam_suiten": {
+   "kind": "restaurant",
+   "name": "水天／水天（天草海鮮）",
+   "cuisine_group": "海鮮",
+   "cuisine": "海鮮丼・海鮮料理",
+   "budget_lunch": "¥2,000–¥2,999（Tabelog）",
+   "budget_dinner": "¥1,000–¥1,999（Tabelog）",
+   "closed_days": "週三、週日晚間",
+   "hours": "週一、週四–週六 11:00–14:30、18:00–21:30；週二 11:00–14:30、18:00–21:00；週日 11:00–14:30",
+   "reservation": {
+    "required": null,
+    "accepts": true,
+    "method": "電話預約",
+    "note": null
+   },
+   "google_maps_url": "https://www.google.com/maps/search/?api=1&query=%E6%B0%B4%E5%A4%A9%20%E7%86%8A%E6%9C%AC%E7%9C%8C%E4%B8%8A%E5%A4%A9%E8%8D%89%E5%B8%82%E5%A4%A7%E7%9F%A2%E9%87%8E%E7%94%BA%E4%B8%AD2524",
+   "ratings": [
+    {
+     "source": "tabelog",
+     "score": 3.46,
+     "scale": 5,
+     "url": "https://tabelog.com/kumamoto/A4305/A430501/43008154/",
+     "checked_at": "2026-11-11"
+    }
+   ],
+   "mapcode": null,
+   "mapcode_source": null,
+   "sources": [
+    {
+     "url": "https://tabelog.com/tw/kumamoto/A4305/A430501/43008154/",
+     "checked_at": "2026-11-11",
+     "title": "Tabelog（繁中鏡像頁，與日文頁同店號；日文頁網址取自該頁 hreflang=ja）",
+     "fields": [
+      "ratings.tabelog",
+      "cuisine",
+      "budget_lunch",
+      "budget_dinner",
+      "hours",
+      "closed_days",
+      "reservation"
+     ]
+    }
+   ],
+   "field_status": {
+    "ratings.google": "待查",
+    "ratings.tabelog": "已查",
+    "budget_lunch": "已查",
+    "budget_dinner": "已查",
+    "hours": "已查",
+    "closed_days": "已查",
+    "reservation": "已查"
+   },
+   "checked_date": "2026-11-11",
+   "note": "Tabelog 寫週日只開午餐。 預算為 Tabelog 每人預算區間。",
+   "cuisine_source": "Tabelog 2026-11-11"
+  },
+  "rf_kam_ren": {
+   "kind": "restaurant",
+   "name": "蓮（れん）／蓮",
+   "cuisine_group": "居酒屋",
+   "cuisine": "居酒屋・海鮮・創作料理",
+   "budget_lunch": "不適用",
+   "budget_dinner": null,
+   "closed_days": "Tabelog 未列公休（先前資料：週二）",
+   "hours": "17:00–23:00",
+   "reservation": {
+    "required": null,
+    "accepts": true,
+    "method": "電話預約",
+    "note": null
+   },
+   "google_maps_url": "https://www.google.com/maps/search/?api=1&query=%E8%93%AE%EF%BC%88%E3%82%8C%E3%82%93%EF%BC%89%20%E7%86%8A%E6%9C%AC%E7%9C%8C%E4%B8%8A%E5%A4%A9%E8%8D%89%E5%B8%82%E5%A4%A7%E7%9F%A2%E9%87%8E%E7%94%BA%E4%B8%AD1317-1",
+   "ratings": [
+    {
+     "source": "tabelog",
+     "score": 3.02,
+     "scale": 5,
+     "url": "https://tabelog.com/kumamoto/A4305/A430501/43012468/",
+     "checked_at": "2026-11-11"
+    }
+   ],
+   "mapcode": null,
+   "mapcode_source": null,
+   "sources": [
+    {
+     "url": "https://tabelog.com/tw/kumamoto/A4305/A430501/43012468/",
+     "checked_at": "2026-11-11",
+     "title": "Tabelog（繁中鏡像頁，與日文頁同店號；日文頁網址取自該頁 hreflang=ja）",
+     "fields": [
+      "ratings.tabelog",
+      "cuisine",
+      "budget_lunch",
+      "budget_dinner",
+      "hours",
+      "closed_days",
+      "reservation"
+     ]
+    }
+   ],
+   "field_status": {
+    "ratings.google": "待查",
+    "ratings.tabelog": "已查",
+    "budget_lunch": "不適用",
+    "budget_dinner": "待查",
+    "hours": "已查",
+    "closed_days": "已查",
+    "reservation": "已查"
+   },
+   "checked_date": "2026-11-11",
+   "note": "公休日與先前資料（週二）不一致。 預算為 Tabelog 每人預算區間。",
+   "cuisine_source": "Tabelog 2026-11-11"
+  },
+  "rf_kam_joyfull": {
+   "kind": "restaurant",
+   "name": "ジョイフル 大矢野店／Joyfull 家庭餐廳",
+   "cuisine_group": "家庭餐廳",
+   "cuisine": "家庭餐廳（連鎖）",
+   "budget_lunch": "～¥999（Tabelog）",
+   "budget_dinner": "¥1,000–¥1,999（Tabelog）",
+   "closed_days": "無休",
+   "hours": "08:00–翌 01:00",
+   "reservation": {
+    "required": false,
+    "accepts": false,
+    "method": "不收（現場候位）",
+    "note": null
+   },
+   "google_maps_url": "https://www.google.com/maps/search/?api=1&query=%E3%82%B8%E3%83%A7%E3%82%A4%E3%83%95%E3%83%AB%20%E5%A4%A7%E7%9F%A2%E9%87%8E%E5%BA%97%20%E7%86%8A%E6%9C%AC%E7%9C%8C%E4%B8%8A%E5%A4%A9%E8%8D%89%E5%B8%82%E5%A4%A7%E7%9F%A2%E9%87%8E%E7%94%BA%E4%B8%8A2300",
+   "ratings": [
+    {
+     "source": "tabelog",
+     "score": 3.01,
+     "scale": 5,
+     "url": "https://tabelog.com/kumamoto/A4301/A430102/43005108/",
+     "checked_at": "2026-11-11"
+    }
+   ],
+   "mapcode": null,
+   "mapcode_source": null,
+   "sources": [
+    {
+     "url": "https://tabelog.com/tw/kumamoto/A4301/A430102/43005108/",
+     "checked_at": "2026-11-11",
+     "title": "Tabelog（繁中鏡像頁，與日文頁同店號；日文頁網址取自該頁 hreflang=ja）",
+     "fields": [
+      "ratings.tabelog",
+      "cuisine",
+      "budget_lunch",
+      "budget_dinner",
+      "hours",
+      "closed_days",
+      "reservation"
+     ]
+    }
+   ],
+   "field_status": {
+    "ratings.google": "待查",
+    "ratings.tabelog": "已查",
+    "budget_lunch": "已查",
+    "budget_dinner": "已查",
+    "hours": "已查",
+    "closed_days": "已查",
+    "reservation": "已查"
+   },
+   "checked_date": "2026-11-11",
+   "note": "預算為 Tabelog 每人預算區間。",
+   "cuisine_source": "Tabelog 2026-11-11"
+  },
+  "rf_kam_sunpearl": {
+   "kind": "restaurant",
+   "name": "道の駅 上天草さんぱーる／上天草珍珠道之驛",
+   "cuisine_group": "海鮮",
+   "cuisine": "海鮮・日本料理（道之驛 上天草さんぱーる）",
+   "budget_lunch": null,
+   "budget_dinner": "不適用",
+   "closed_days": "依道之驛休館日",
+   "hours": "11:00–15:00（Tabelog；先前資料另有早餐 09:00–10:30）",
+   "reservation": {
+    "required": false,
+    "accepts": false,
+    "method": "不收（現場候位）",
+    "note": null
+   },
+   "google_maps_url": "https://www.google.com/maps/search/?api=1&query=%E9%81%93%E3%81%AE%E9%A7%85%20%E4%B8%8A%E5%A4%A9%E8%8D%89%E3%81%95%E3%82%93%E3%81%B1%E3%83%BC%E3%82%8B%20%E7%86%8A%E6%9C%AC%E7%9C%8C%E4%B8%8A%E5%A4%A9%E8%8D%89%E5%B8%82%E5%A4%A7%E7%9F%A2%E9%87%8E%E7%94%BA%E4%B8%AD11582-24%20%E9%81%93%E3%81%AE%E9%A7%85%E4%B8%8A%E5%A4%A9%E8%8D%89%E3%81%95%E3%82%93%E3%81%B1%E3%83%BC%E3%82%8B",
+   "ratings": [
+    {
+     "source": "tabelog",
+     "score": 3.45,
+     "scale": 5,
+     "url": "https://tabelog.com/kumamoto/A4305/A430501/43010163/",
+     "checked_at": "2026-11-11"
+    }
+   ],
+   "mapcode": null,
+   "mapcode_source": null,
+   "sources": [
+    {
+     "url": "https://tabelog.com/tw/kumamoto/A4305/A430501/43010163/",
+     "checked_at": "2026-11-11",
+     "title": "Tabelog（繁中鏡像頁，與日文頁同店號；日文頁網址取自該頁 hreflang=ja）",
+     "fields": [
+      "ratings.tabelog",
+      "cuisine",
+      "budget_lunch",
+      "budget_dinner",
+      "hours",
+      "closed_days",
+      "reservation"
+     ]
+    }
+   ],
+   "field_status": {
+    "ratings.google": "待查",
+    "ratings.tabelog": "已查",
+    "budget_lunch": "待查",
+    "budget_dinner": "不適用",
+    "hours": "已查",
+    "closed_days": "已查",
+    "reservation": "已查"
+   },
+   "checked_date": "2026-11-11",
+   "note": "Tabelog 只列 11:00–15:00，D11/D12 早餐用途請確認早餐時段是否還有。 預算為 Tabelog 每人預算區間。",
+   "cuisine_source": "Tabelog 2026-11-11"
+  },
+  "rf_kam_murata": {
+   "kind": "restaurant",
+   "name": "天蔵のむら田／天藏村田",
+   "cuisine_group": "居酒屋",
+   "cuisine": "居酒屋・鰻魚・海鮮",
+   "budget_lunch": null,
+   "budget_dinner": "¥3,000–¥3,999（Tabelog）",
+   "closed_days": "週一",
+   "hours": "11:30–14:00、17:30–22:00",
+   "reservation": {
+    "required": null,
+    "accepts": true,
+    "method": "電話預約",
+    "note": null
+   },
+   "google_maps_url": "https://www.google.com/maps/search/?api=1&query=%E5%A4%A9%E8%94%B5%E3%81%AE%E3%82%80%E3%82%89%E7%94%B0%20%E7%86%8A%E6%9C%AC%E7%9C%8C%E4%B8%8A%E5%A4%A9%E8%8D%89%E5%B8%82%E5%A4%A7%E7%9F%A2%E9%87%8E%E7%94%BA%E7%99%BB%E7%AB%8B8798-8",
+   "ratings": [
+    {
+     "source": "tabelog",
+     "score": 3.08,
+     "scale": 5,
+     "url": "https://tabelog.com/kumamoto/A4305/A430501/43002139/",
+     "checked_at": "2026-11-11"
+    }
+   ],
+   "mapcode": null,
+   "mapcode_source": null,
+   "sources": [
+    {
+     "url": "https://tabelog.com/tw/kumamoto/A4305/A430501/43002139/",
+     "checked_at": "2026-11-11",
+     "title": "Tabelog（繁中鏡像頁，與日文頁同店號；日文頁網址取自該頁 hreflang=ja）",
+     "fields": [
+      "ratings.tabelog",
+      "cuisine",
+      "budget_lunch",
+      "budget_dinner",
+      "hours",
+      "closed_days",
+      "reservation"
+     ]
+    }
+   ],
+   "field_status": {
+    "ratings.google": "待查",
+    "ratings.tabelog": "已查",
+    "budget_lunch": "待查",
+    "budget_dinner": "已查",
+    "hours": "已查",
+    "closed_days": "已查",
+    "reservation": "已查"
+   },
+   "checked_date": "2026-11-11",
+   "note": "預算為 Tabelog 每人預算區間。",
+   "cuisine_source": "Tabelog 2026-11-11"
+  },
+  "rf_kum_kokutei": {
+   "kind": "restaurant",
+   "name": "黒亭 本店／黑亭拉麵",
+   "cuisine_group": "拉麵",
+   "cuisine": "熊本拉麵",
+   "budget_lunch": "～¥999（Tabelog）",
+   "budget_dinner": "～¥999（Tabelog）",
+   "closed_days": "無固定公休",
+   "hours": "10:30–20:30（週末可能較晚）",
+   "reservation": {
+    "required": false,
+    "accepts": false,
+    "method": "不收（現場候位）",
+    "note": null
+   },
+   "google_maps_url": "https://www.google.com/maps/place/?q=place_id:ChIJq6oOuPX0QDURYu8_pGXuLfI",
+   "ratings": [
+    {
+     "source": "tabelog",
+     "score": 3.69,
+     "scale": 5,
+     "url": "https://tabelog.com/kumamoto/A4301/A430101/43000091/",
+     "checked_at": "2026-11-11"
+    }
+   ],
+   "mapcode": null,
+   "mapcode_source": null,
+   "sources": [
+    {
+     "url": "https://tabelog.com/tw/kumamoto/A4301/A430101/43000091/",
+     "checked_at": "2026-11-11",
+     "title": "Tabelog（繁中鏡像頁，與日文頁同店號；日文頁網址取自該頁 hreflang=ja）",
+     "fields": [
+      "ratings.tabelog",
+      "cuisine",
+      "budget_lunch",
+      "budget_dinner",
+      "hours",
+      "closed_days",
+      "reservation"
+     ]
+    },
+    {
+     "url": "https://www.taveri.jp/store/ChIJq6oOuPX0QDURYu8_pGXuLfI",
+     "checked_at": "2026-11-11",
+     "title": "Google 評分轉載頁（taveri，已核對店名／位置；非 Google 店家頁）",
+     "fields": [
+      "note"
+     ]
+    }
+   ],
+   "field_status": {
+    "ratings.google": "待查（未在 Google 地圖店家頁人工查看；轉載頁數值見 note）",
+    "ratings.tabelog": "已查",
+    "budget_lunch": "已查",
+    "budget_dinner": "已查",
+    "hours": "已查",
+    "closed_days": "已查",
+    "reservation": "已查"
+   },
+   "checked_date": "2026-11-11",
+   "note": "Tabelog 平日營業至 20:30，先前資料為 21:00。 Google 評分參考值 3.9（第三方轉載頁 taveri，2026-11-11 查看；未在 Google 地圖店家頁人工核對，故未寫入 ratings）。 預算為 Tabelog 每人預算區間。",
+   "cuisine_source": "Tabelog 2026-11-11"
+  },
+  "rf_ure_hirakawaya": {
+   "kind": "restaurant",
+   "name": "佐嘉平川屋 嬉野店／平川屋溫泉湯豆腐",
+   "cuisine_group": "豆腐料理",
+   "cuisine": "溫泉湯豆腐",
+   "budget_lunch": "¥2,000–¥2,999（Tabelog）",
+   "budget_dinner": "不適用",
+   "closed_days": "年末年始",
+   "hours": "09:00–18:00",
+   "reservation": {
+    "required": false,
+    "accepts": false,
+    "method": "不收（現場候位）",
+    "note": null
+   },
+   "google_maps_url": "https://www.google.com/maps/search/?api=1&query=%E4%BD%90%E5%98%89%E5%B9%B3%E5%B7%9D%E5%B1%8B%20%E5%AC%89%E9%87%8E%E5%BA%97%20%E4%BD%90%E8%B3%80%E7%9C%8C%E5%AC%89%E9%87%8E%E5%B8%82%E5%AC%89%E9%87%8E%E7%94%BA%E5%A4%A7%E5%AD%97%E4%B8%8B%E5%AE%BF1463",
+   "ratings": [
+    {
+     "source": "tabelog",
+     "score": 3.57,
+     "scale": 5,
+     "url": "https://tabelog.com/saga/A4104/A410401/41003627/",
+     "checked_at": "2026-11-11"
+    }
+   ],
+   "mapcode": null,
+   "mapcode_source": null,
+   "sources": [
+    {
+     "url": "https://tabelog.com/tw/saga/A4104/A410401/41003627/",
+     "checked_at": "2026-11-11",
+     "title": "Tabelog（繁中鏡像頁，與日文頁同店號；日文頁網址取自該頁 hreflang=ja）",
+     "fields": [
+      "ratings.tabelog",
+      "cuisine",
+      "budget_lunch",
+      "budget_dinner",
+      "hours",
+      "closed_days",
+      "reservation"
+     ]
+    },
+    {
+     "url": "https://okashi-map.com/saga/shops/saga-%E4%BD%90%E5%98%89%E5%B9%B3%E5%B7%9D%E5%B1%8B-%E5%AC%89%E9%87%8E%E5%BA%97-pK1tuXps",
+     "checked_at": "2026-11-11",
+     "title": "Google 評分轉載頁（okashi-map，已核對店名／位置；非 Google 店家頁）",
+     "fields": [
+      "note"
+     ]
+    }
+   ],
+   "field_status": {
+    "ratings.google": "待查（未在 Google 地圖店家頁人工查看；轉載頁數值見 note）",
+    "ratings.tabelog": "已查",
+    "budget_lunch": "已查",
+    "budget_dinner": "不適用",
+    "hours": "已查",
+    "closed_days": "已查",
+    "reservation": "已查"
+   },
+   "checked_date": "2026-11-11",
+   "note": "Tabelog 寫不收預約、09:00 開店（先前資料為 10:00）。 Google 評分參考值 4.1（第三方轉載頁 okashi-map，2026-11-11 查看；未在 Google 地圖店家頁人工核對，故未寫入 ratings）。 預算為 Tabelog 每人預算區間。",
+   "cuisine_source": "Tabelog 2026-11-11"
+  },
+  "rf_ari_gallery": {
+   "kind": "restaurant",
+   "name": "ギャラリー有田／有田畫廊餐廳",
+   "cuisine_group": "咖啡廳",
+   "cuisine": "咖啡・和食（有田燒器皿）",
+   "budget_lunch": "¥1,000–¥1,999（Tabelog）",
+   "budget_dinner": "不適用",
+   "closed_days": "不定休",
+   "hours": "11:00–17:00",
+   "reservation": {
+    "required": null,
+    "accepts": true,
+    "method": "電話預約",
+    "note": null
+   },
+   "google_maps_url": "https://www.google.com/maps/search/?api=1&query=%E3%82%AE%E3%83%A3%E3%83%A9%E3%83%AA%E3%83%BC%E6%9C%89%E7%94%B0%20%E4%BD%90%E8%B3%80%E7%9C%8C%E8%A5%BF%E6%9D%BE%E6%B5%A6%E9%83%A1%E6%9C%89%E7%94%B0%E7%94%BA%E6%9C%AC%E7%94%BA%E4%B9%993057",
+   "ratings": [
+    {
+     "source": "tabelog",
+     "score": 3.5,
+     "scale": 5,
+     "url": "https://tabelog.com/saga/A4102/A410202/41000205/",
+     "checked_at": "2026-11-11"
+    }
+   ],
+   "mapcode": null,
+   "mapcode_source": null,
+   "sources": [
+    {
+     "url": "https://tabelog.com/tw/saga/A4102/A410202/41000205/",
+     "checked_at": "2026-11-11",
+     "title": "Tabelog（繁中鏡像頁，與日文頁同店號；日文頁網址取自該頁 hreflang=ja）",
+     "fields": [
+      "ratings.tabelog",
+      "cuisine",
+      "budget_lunch",
+      "budget_dinner",
+      "hours",
+      "closed_days",
+      "reservation"
+     ]
+    },
+    {
+     "url": "https://okashi-map.com/saga/shops/saga-%E3%82%AE%E3%83%A3%E3%83%A9%E3%83%AA%E3%83%BC%E6%9C%89%E7%94%B0-nUX99VjE",
+     "checked_at": "2026-11-11",
+     "title": "Google 評分轉載頁（okashi-map，已核對店名／位置；非 Google 店家頁）",
+     "fields": [
+      "note"
+     ]
+    }
+   ],
+   "field_status": {
+    "ratings.google": "待查（未在 Google 地圖店家頁人工查看；轉載頁數值見 note）",
+    "ratings.tabelog": "已查",
+    "budget_lunch": "已查",
+    "budget_dinner": "不適用",
+    "hours": "已查",
+    "closed_days": "已查",
+    "reservation": "已查"
+   },
+   "checked_date": "2026-11-11",
+   "note": "Google 評分參考值 4.4（第三方轉載頁 okashi-map，2026-11-11 查看；未在 Google 地圖店家頁人工核對，故未寫入 ratings）。 預算為 Tabelog 每人預算區間。",
+   "cuisine_source": "Tabelog 2026-11-11"
+  }
+ }
+}
