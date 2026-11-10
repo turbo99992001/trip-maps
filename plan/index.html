@@ -131,6 +131,21 @@ pre.json{background:#f4f6f8;border-radius:8px;padding:8px;font-size:11px;max-hei
 #sentDlg{position:fixed;inset:0;background:rgba(0,0,0,.45);z-index:9999;display:flex;align-items:center;justify-content:center;padding:16px}#sentDlg .sdBox{background:#fff;border-radius:12px;padding:16px;max-width:460px;width:100%;box-shadow:0 8px 30px rgba(0,0,0,.3);border-top:6px solid #2e7d32}#sentDlg .wide,#autoUrl{width:100%;box-sizing:border-box}.bkSteps .bad{background:#c62828;color:#fff}
 #doneDlg{position:fixed;inset:0;background:rgba(0,0,0,.45);z-index:9999;display:flex;align-items:center;justify-content:center;padding:16px}#doneDlg .sdBox{background:#fff;border-radius:12px;padding:16px;max-width:460px;width:100%;border-top:6px solid #2e7d32}.btn.big{font-size:18px;padding:12px 18px;width:100%;min-height:48px}.btn:disabled{opacity:.45;cursor:not-allowed}.btn.sm{font-size:13px;padding:4px 10px}
 .rcard{margin:8px 0;border:1px solid #ddd}.rcard.picked{border:2px solid #2e7d32}.rcard h4{margin:4px 0}.dsum summary{cursor:pointer;color:#1565c0;margin:4px 0}.bday{border-top:1px dashed #ccc;padding:6px 0}#build3{border-top:6px solid #1565c0}
+
+/* 1.9.8 採用本機行程＋複選比較＋餐廳補點 */
+.rchk{display:inline-flex;align-items:center;gap:4px;margin-left:6px;font-size:14px;cursor:pointer}.rchk input{width:20px;height:20px}
+.rcard.flash{box-shadow:0 0 0 3px #ffb300}
+.cmpBar{border:1px solid #c5cae9;background:#f5f7ff}
+.cmpMap{height:380px;border-radius:8px;border:1px solid var(--line);margin:8px 0}
+.cmpLeg{display:flex;flex-wrap:wrap;gap:6px 14px;margin:6px 0}.cmpLeg label{display:inline-flex;align-items:center;gap:6px;font-size:14px}.cmpLeg input{width:20px;height:20px}
+.cline{display:inline-block;width:26px;border-top:4px solid}
+.cdot{display:inline-block;width:10px;height:10px;border-radius:5px;margin-right:4px;vertical-align:middle}
+.cmpWrap{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:6px 0}
+.cmpT{border-collapse:collapse;min-width:100%;font-size:13px}.cmpT th,.cmpT td{border:1px solid var(--line);padding:6px;vertical-align:top;text-align:left;background:#fff}
+.cmpT thead th{min-width:130px;background:#fafafa}.cmpT th[scope=row]{position:sticky;left:0;background:#f3f6fa;min-width:84px;z-index:1;font-weight:600}
+.slot{border:1px dashed #ef6c00;border-radius:8px;padding:6px;margin:6px 0;background:#fff8f0}.slot select{max-width:100%;min-height:36px;font-size:14px}
+.slotmiss{margin-top:6px}.rfcard{border-left:4px solid #ef6c00}.ltbadge{background:#fff3e0;color:#e65100;border-radius:6px;padding:1px 6px;font-size:12px;margin-left:4px}
+@media (max-width:820px){.cmpMap{height:52vh}.cmpT{font-size:12px}.cmpT thead th{min-width:112px}}
 </style>
 </head>
 <body>
@@ -218,10 +233,10 @@ pre.json{background:#f4f6f8;border-radius:8px;padding:8px;font-size:11px;max-hei
 <script>
 (function(){
 "use strict";
-const APPV="plan-multi-1.9.7";
+const APPV="plan-multi-1.9.8";
 /* 1.8 後台自動排路線（Cloudflare Worker）：網址部署後填入。空字串＝後台未啟用，網頁維持 1.7 行為（匯出 JSON＋複製文字）。site key 是公開值。 */
 const BACKEND_CFG={url:"https://trip-intake.turbo99992001.workers.dev",turnstile_site_key:"0x4AAAAAAFs8wmzPidNkiUBU"};
-const CAT={popular:"熱門",natural:"自然絕景",shrine:"神社寺院",historic:"歷史",onsen:"溫泉",hidden:"私房",food:"美食",experience:"親子／體驗",anime:"動漫",anime_game:"🎮 動漫・遊戲周邊",festival:"活動／花季",custom:"👤 自訂地點"};
+const CAT={popular:"熱門",natural:"自然絕景",shrine:"神社寺院",historic:"歷史",onsen:"溫泉",hidden:"私房",food:"美食",experience:"親子／體驗",anime:"動漫",anime_game:"🎮 動漫・遊戲周邊",festival:"活動／花季",custom:"👤 自訂地點",auto:"🤖 後台路線景點"};
 const MEAL={lunch:"午餐",dinner:"晚餐",breakfast:"早餐",cafe:"甜點咖啡",snack:"甜點咖啡／小吃"};
 const $=s=>document.querySelector(s), esc=s=>String(s==null?"":s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
 const isMob=()=>window.matchMedia("(max-width:820px)").matches;
@@ -672,7 +687,7 @@ function mergeByMeal(arr,items){
 }
 function suggested(r){
  const out={}; const days=D.plan.routes[r].days;
- days.forEach(d=>{out[d.day]=d.items.map(x=>({type:"spot",id:x.id}));});
+ days.forEach(d=>{out[d.day]=d.items.map(x=>x.type==="restaurant"?Object.assign({type:"restaurant",id:x.id},x.meal?{meal:x.meal}:{}):({type:"spot",id:x.id}));});
  if(RPLAN&&Array.isArray(RPLAN[r])) RPLAN[r].forEach(dd=>{ if(out[dd.day]) out[dd.day]=mergeByMeal(out[dd.day],dd.items); });
  return out;
 }
@@ -773,8 +788,8 @@ function filtRests(){
 }
 function fillRcat(){const cur=$("#rcat").value; const cats=[...new Set(RESTS.map(r=>r.category).filter(Boolean))]; $("#rcat").innerHTML='<option value="">全部類型</option>'+cats.map(c=>`<option value="${esc(c)}">${esc(c)}</option>`).join(""); $("#rcat").value=cats.includes(cur)?cur:"";}
 function renderRests(keep){ if(!keep) rShown=LIMIT;
- if(!RESTS.length){$("#rcnt").textContent=""; $("#rlist").innerHTML='<div class="card">這個行程還沒有餐廳資料（data/'+esc(TID)+'/restaurants.json）。</div>'; return;}
- const L=filtRests(); $("#rcnt").textContent=`共 ${L.length} 間（全部 ${RESTS.length} 間）`; $("#rlist").innerHTML=(L.slice(0,rShown).map(r=>restCard(r,"dsel2")).join("")||'<div class="cnt">沒有符合條件的餐廳</div>')+more(L.length,rShown,"r"); renderMarkers();
+ if(!RESTS.length){$("#rcnt").textContent=""; $("#rlist").innerHTML=(TE&&TE.local?rfStatusHtml()+'<div class="card">這套後台路線沒有排入餐廳，餐廳資料尚未提供。</div>':'<div class="card">這個行程還沒有餐廳資料（data/'+esc(TID)+'/restaurants.json）。</div>'); return;}
+ const L=filtRests(); $("#rcnt").textContent=`共 ${L.length} 間（全部 ${RESTS.length} 間）`; $("#rlist").innerHTML=rfStatusHtml()+(L.slice(0,rShown).map(r=>restCard(r,"dsel2")).join("")||'<div class="cnt">沒有符合條件的餐廳</div>')+more(L.length,rShown,"r"); renderMarkers();
 }
 /* ---------- itinerary render ---------- */
 function renderDays(){
@@ -789,13 +804,13 @@ function renderItin(){
  renderDays(); const di=dayInfo(route,curDay); const arr=itin(route)[curDay]||[]; const sug={}; di.items.forEach(x=>sug[x.id]=x);
  const rp=RPLAN&&Array.isArray(RPLAN[route])?RPLAN[route].find(x=>x.day===curDay):null;
  const lg=lodgingOn(route,di.date);
- $("#dayhead").innerHTML=(rp&&(rp.note||rp.dinner_note)?`<div class="cnt">${rp.dinner_included?'<span class="tag rest">🍶 旅館含晚餐</span> ':''}🍴 用餐建議：${esc([rp.note,rp.dinner_note].filter(Boolean).join("｜"))}</div>`:"")+(rp&&Array.isArray(rp.alternatives)&&rp.alternatives.length?`<div class="cnt alts">🔁 替代餐廳：${rp.alternatives.filter(a=>a&&RS[a.id]).map(a=>`<a href="#" data-open="restaurant:${esc(a.id)}">${esc(RS[a.id].name)}</a>`).join("、")}</div>`:"")+`<b>Day ${di.day}｜${di.date}（${esc(di.weekday)}）</b>｜住：${esc(BASEN[di.base]||di.base)}${lg?"（"+esc(lg.name)+"）":""}｜${esc(di.mode)}<br>出發：${esc(di.start&&di.start.name)} → 結束：${esc(di.end&&di.end.name)}${di.total_drive_min!=null?`｜建議行程總車程約 ${di.total_drive_min} 分（含緩衝 ${di.total_drive_min_buffered} 分）`:""}${di.total_train_walk_min!=null?`｜🚃 電車＋步行合計約 ${di.total_train_walk_min} 分`:""}<br>💡 ${esc(di.note||"")}`;
- $("#dayhead").insertAdjacentHTML("beforeend",`<div class="btns" style="margin-top:6px"><button class="btn sm pri" data-search="1" type="button">＋搜尋地點</button></div>`);
+ $("#dayhead").innerHTML=(rp&&(rp.note||rp.dinner_note)?`<div class="cnt">${rp.dinner_included?'<span class="tag rest">🍶 旅館含晚餐</span> ':''}🍴 用餐建議：${esc([rp.note,rp.dinner_note].filter(Boolean).join("｜"))}</div>`:"")+(rp&&Array.isArray(rp.alternatives)&&rp.alternatives.length?`<div class="cnt alts">🔁 替代餐廳：${rp.alternatives.filter(a=>a&&RS[a.id]).map(a=>`<a href="#" data-open="restaurant:${esc(a.id)}">${esc(RS[a.id].name)}</a>`).join("、")}</div>`:"")+`<b>Day ${di.day}｜${di.date}（${esc(di.weekday)}）</b>｜住：${esc(BASEN[di.base]||di.base)}${lg&&lg.name!==(BASEN[di.base]||di.base)?"（"+esc(lg.name)+"）":""}｜${esc(di.mode)}<br>出發：${esc(di.start&&di.start.name)} → 結束：${esc(di.end&&di.end.name)}${di.total_drive_min!=null?`｜建議行程總車程約 ${di.total_drive_min} 分${di.total_drive_min_buffered!=null?`（含緩衝 ${di.total_drive_min_buffered} 分）`:"（座標估算）"}`:""}${di.total_train_walk_min!=null?`｜🚃 電車＋步行合計約 ${di.total_train_walk_min} 分`:""}<br>💡 ${esc(di.note||"")}`;
+ $("#dayhead").insertAdjacentHTML("beforeend",`<div class="btns" style="margin-top:6px"><button class="btn sm pri" data-search="1" type="button">＋搜尋地點</button></div>`+slotMissing(route,curDay,arr));
  $("#daynote").value=dayNote(route,curDay);
  const stops=stopsOf(arr,route,curDay); let h="";
  stops.forEach((st,si)=>{ const it=st.main, i=st.idx, o=get(it);
   if(!o){h+=`<div class="card">（找不到資料：${esc(it.type)} ${esc(it.id)}${it.type==="restaurant"&&!RESTS.length?"，餐廳資料可能尚未載入":""}）<div class="btns"><button class="btn sm warn" data-delstop="${si}">刪除</button></div></div>`;return;}
-  const s=sug[it.id]; let dr=""; if(s&&s.train_from_prev) dr=`<div class="train">🚃 從上一點：${esc(s.train_from_prev.how)}｜約 ${s.train_from_prev.min} 分</div>`; else if(s&&s.drive_min_from_prev!=null) dr=`<div class="drive">🚗 建議順序時，從上一點約 ${s.drive_min_from_prev} 分（${s.drive_km_from_prev} km，含緩衝 ${s.drive_min_buffered} 分）</div>`;
+  const s=sug[it.id]; let dr=""; if(s&&s.train_from_prev) dr=`<div class="train">🚃 從上一點：${esc(s.train_from_prev.how)}｜約 ${s.train_from_prev.min} 分</div>`; else if(s&&s.drive_min_from_prev!=null) dr=`<div class="drive">🚗 建議順序時，從上一點約 ${s.drive_min_from_prev} 分（${s.drive_km_from_prev} km，含緩衝 ${s.drive_min_buffered} 分）</div>`; else if(s&&s.leg_min!=null&&si>0) dr=`<div class="drive">🚗 建議順序時，從上一點約 ${s.leg_min} 分（後台座標估算）</div>`;
   const isR=it.type==="restaurant"; const atts=st.att.map(a=>({a,o:get(a.x)})).filter(z=>z.o);
   const pks=mergedParkings([].concat(o.parkings||[],...atts.map(z=>z.o.parkings||[])));
   const title=`${isR?"🍴 ":""}${esc(o.name)}${mealOf(it)?`（${esc(MEAL[mealOf(it)]||mealOf(it))}）`:""}`;
@@ -806,7 +821,7 @@ function renderItin(){
   const hid=st.hid.map(z=>get(z.x)).filter(Boolean).map(so=>`<div class="cnt">🔗 已合併同店景點「${esc(so.name)}」（${esc(so.id)}），以餐廳版為準</div>`).join("");
   h+=dr+`<div class="card it ${isR?"rest":""} ${atts.length?"merged":""}" data-idx="${i}" data-stop="${si}"><div class="ord">${si+1}</div><div class="body"><h3 data-open="${it.type}:${esc(it.id)}">${title}${atts.length?` <span class="tag rest">＋🍴 ${esc(atts.map(z=>z.o.name.split("（")[0]).join("、"))}</span>`:""}</h3>
    <div class="tags">${o.custom?'<span class="tag cu">👤 自訂</span>':""}${o.category==="anime_game"?'<span class="tag ag">🎮 動漫・遊戲周邊</span>':""}${isR&&o.tabelog_score!=null?`<span class="tag rest">Tabelog ${esc(o.tabelog_score)}</span>`:""}${isR&&o.google_rating!=null?`<span class="tag rest">Google ${esc(o.google_rating)}</span>`:""}${o.stay_minutes?`<span class="tag">停留約 ${o.stay_minutes} 分</span>`:""}${o.rain_ok?'<span class="tag rain">☔ 雨天可</span>':""}${o.hours?`<span class="tag">${esc(String(o.hours).slice(0,40))}</span>`:""}</div>
-   ${planBits(route,curDay,it)}${hid}${tnHtml(i,it)}
+   ${planBits(route,curDay,it)}${slotHtml(i,it)}${hid}${tnHtml(i,it)}
    ${navBlock(Object.assign({},o,{parkings:pks}))}${ah}
    <div class="btns"><button class="btn sm" data-mv="${si}:-1" ${si===0?"disabled":""}>↑ 上移</button><button class="btn sm" data-mv="${si}:1" ${si===stops.length-1?"disabled":""}>↓ 下移</button><button class="btn sm warn" data-delstop="${si}">刪除${atts.length?"（整站）":""}</button><button class="btn sm" data-open="${it.type}:${esc(it.id)}">詳情</button></div></div></div>`;});
  if(di.train_to_end) h+=`<div class="train">🏨 到住宿／機場：${esc(di.train_to_end.how)}｜約 ${di.train_to_end.min} 分</div>`;
@@ -868,7 +883,7 @@ function renderMarkers(){
  if(dayOnly&&pts.length) map.fitBounds(pts,{padding:[30,30],maxZoom:13});
 }
 let needFit=false;
-function fitRoute(){ if(!map) return; if(!$("#map").clientHeight){needFit=true; return;} needFit=false; const ll=(D.lodging||[]).filter(l=>l.route===route&&l.lat!=null).map(l=>[l.lat,l.lng]); if(ll.length) map.fitBounds(ll,{padding:[40,40]}); }
+function fitRoute(){ if(!map) return; if(!$("#map").clientHeight){needFit=true; return;} needFit=false; const ll=(D.lodging||[]).filter(l=>l.route===route&&l.lat!=null).map(l=>[l.lat,l.lng]); if(!ll.length&&D&&D.plan.routes[route]) D.plan.routes[route].days.forEach(d=>(d.items||[]).forEach(x=>{const o=get(x)||x; if(o&&o.lat!=null&&o.lng!=null) ll.push([o.lat,o.lng]);})); if(ll.length) map.fitBounds(ll,{padding:[40,40]}); }
 /* ---------- tabs ---------- */
 function showTab(t,fromMod){
  curTab=t; if(!fromMod&&t!=="map"){curMod={spots:"spots",rests:"rests",itin:"daily"}[t]||curMod; document.querySelectorAll("#mods button").forEach(b=>b.classList.toggle("on",b.dataset.m===curMod)); if(typeof syncUrl==="function"&&TID) setTimeout(()=>syncUrl(false),0);}
@@ -881,7 +896,7 @@ function showTab(t,fromMod){
 /* ---------- URL ---------- */
 function syncUrl(push){
  const u=new URL(location.href); const p=u.searchParams;
- if(TID&&DRAFT){p.set("trip",TID); p.delete("route"); p.delete("day"); if(curMod!=="new") p.set("mod",curMod); else p.set("mod","new");} else if(TID){p.set("trip",TID); p.set("route",route); if(curDay>1) p.set("day",curDay); else p.delete("day"); if(curMod!=="spots") p.set("mod",curMod); else p.delete("mod");} else {p.delete("trip");p.delete("route");p.delete("day"); if(curMod==="new"&&!$("#mods").hidden) p.set("mod","new"); else p.delete("mod");}
+ if(TID&&DRAFT){p.set("trip",TID); if(ltGet(TID)) p.set("draft","1"); else p.delete("draft"); p.delete("route"); p.delete("day"); if(curMod!=="new") p.set("mod",curMod); else p.set("mod","new");} else if(TID){p.set("trip",TID); p.delete("draft"); p.set("route",route); if(curDay>1) p.set("day",curDay); else p.delete("day"); if(curMod!=="spots") p.set("mod",curMod); else p.delete("mod");} else {p.delete("trip");p.delete("route");p.delete("day"); if(curMod==="new"&&!$("#mods").hidden) p.set("mod","new"); else p.delete("mod");}
  const s=u.pathname+(p.toString()?"?"+p.toString():"")+u.hash;
  if(s!==location.pathname+location.search+location.hash){ if(push) history.pushState(null,"",s); else history.replaceState(null,"",s); }
 }
@@ -891,7 +906,7 @@ function setRoute(r,opt){opt=opt||{};
  route=r; ls.set(K.route,r); const R=D.plan.routes[r];
  $("#rsw").innerHTML=Object.keys(D.plan.routes).map(k=>`<button data-r="${k}" class="${k===r?"on":""}">路線 ${k}</button>`).join("");
  $("#routeSel").innerHTML=Object.keys(D.plan.routes).map(k=>`<option value="${k}" ${k===r?"selected":""}>路線 ${k}</option>`).join("");
- $("#rname").textContent=(R.name||"")+"｜"+(TE.start_date||"")+"～"+(TE.end_date||"");
+ $("#rname").textContent=(TE.local?"🧳 本機行程・尚未上架｜":"")+(R.name||"")+"｜"+(TE.start_date||"")+"～"+(TE.end_date||"");
  if(opt.day) curDay=opt.day; if(!dayInfo(r,curDay)) curDay=1;
  fillSelects(); renderSpots(); renderRests(); renderItin(); fitRoute(); setHH();
  if(curMod==="lodging"&&!$("#modpanel").hidden) renderMod();
@@ -899,6 +914,8 @@ function setRoute(r,opt){opt=opt||{};
 }
 function fetchJson(path,optional){return fetch(path,{cache:"no-cache"}).then(r=>{if(!r.ok) throw new Error(path+" HTTP "+r.status); return r.json();}).catch(e=>{if(optional) return null; throw e;});}
 function loadTripData(e){
+ if(e.local){const pkg=ltGet(e.id); if(!pkg) return Promise.reject(new Error("本機行程資料不見了"));
+  return (pkg.rest_fill?Promise.resolve(null):rfFetch(e.id)).then(rf=>{ if(rf) rfStore(pkg,rf,"網站資料檔（data/handoffs/"+e.id+"/restaurants.json）"); const p2=ltGet(e.id)||pkg; return rfApply(ltBuild(p2),p2);});}
  if(CACHE[e.id]) return Promise.resolve(CACHE[e.id]);
  const b="data/"+encodeURIComponent(e.id)+"/", v="?v="+encodeURIComponent(e.data_version||"");
  return Promise.all([fetchJson(b+"meta.json"+v),fetchJson(b+"spots.json"+v),fetchJson(b+"spot_plan.json"+v),fetchJson(b+"restaurants.json"+v,true),fetchJson(b+"restaurant_plan.json"+v,true),fetchJson(b+"custom_places.json"+v,true)])
@@ -907,14 +924,16 @@ function loadTripData(e){
   CACHE[e.id]=d; return d;});
 }
 function fillTripSel(){
- const ds=drVisible();
+ const lts=ltVisible(), lid=new Set(lts.map(t=>t.id)), ds=drVisible().filter(d=>!lid.has(d.id));
  $("#tripSel").innerHTML=`<option value="">📋 全部行程清單</option>`+TRIPS.trips.map(t=>`<option value="${esc(t.id)}">${esc(t.title)}（${esc(t.start_date||"")}）</option>`).join("")
+  +(lts.length?`<optgroup label="本機行程（尚未上架）">${lts.map(t=>`<option value="${esc(t.id)}">🧳 本機：${esc(t.title||t.id)}</option>`).join("")}</optgroup>`:"")
   +(ds.length?`<optgroup label="本機草稿">${ds.map(d=>`<option value="${esc(d.id)}">📝 草稿：${esc(drTitle(d.request||{}))}</option>`).join("")}</optgroup>`:"")+`<option value="__new">➕ 新增旅遊規劃…</option>`;
  $("#tripSel").value=TID||(curMod==="new"&&!$("#mods").hidden?"__new":"");
 }
 let loadSeq=0;
 function openTrip(id,opt){opt=opt||{};
- const e=TRIPS.trips.find(t=>t.id===id);
+ let e=TRIPS.trips.find(t=>t.id===id);
+ if(!e&&!opt.draft){const lp=ltGet(id); if(lp) e=ltEntry(lp);}
  if(!e){ const dr=id&&drLoad().find(x=>x.id===id); if(dr) return openDraft(dr,opt); if(id) toast("找不到行程「"+id+"」，請從清單選擇",3000); showTripList(!!opt.push); return Promise.resolve(); }
  const seq=++loadSeq; $("#loading").hidden=false; $("#loading").textContent="載入「"+e.title+"」資料中…";
  return loadTripData(e).then(d=>{ if(seq!==loadSeq) return;
@@ -935,7 +954,7 @@ function showTripList(push){
  TID=null; D=null; DRAFT=null; curMod="spots"; $("#app").hidden=true; $("#bnav").hidden=true; $("#mods").hidden=true; $("#modpanel").hidden=true; $("#loading").hidden=true; fillTripSel();
  $("#ttl").textContent="互動行程"; document.title="安宏旅行社｜互動行程（景點＋餐廳）"; $("#rsw").innerHTML=""; $("#routeSel").innerHTML=""; $("#rname").textContent="";
  const st={flights:"收集中",review:"品管中",final:"已定案"};
- const dsl=drVisible(); setTimeout(listPoll,0); $("#tripList").innerHTML=`<h2 style="font-size:18px">選擇行程</h2><div class="btns"><a class="btn pri" id="tlNew" href="?mod=new">➕ 新增旅遊規劃（例：九州）</a></div>`+(dsl.length?`<div class="card"><h3>本機草稿</h3>${dsl.map(d=>`<div class="drow"><a href="?trip=${encodeURIComponent(d.id)}&mod=new" data-draft="${esc(d.id)}">📝 草稿：${esc(drTitle(d.request||{}))}</a>${d.backend&&d.backend.view_code?`<div class="cnt">代號 ${esc(d.backend.job_id||"")}・<span data-drst="${esc(d.backend.view_code)}">${esc(ST_TXT[d.backend.status]||"⏳ 已送出")}</span><br><a href="${esc(viewUrl(d.backend.view_code).replace(/^.*\?/,"?"))}" data-drlink>查看連結</a> <button class="btn" type="button" data-drcopy="${esc(viewUrl(d.backend.view_code))}">📋 複製</button></div>`:""}</div>`).join("")}</div>`:"")+TRIPS.trips.map(t=>`<div class="card"><h3 data-trip="${esc(t.id)}">${esc(t.title)}</h3>
+ const dsl=drVisible(), lts=ltVisible(); setTimeout(listPoll,0); $("#tripList").innerHTML=`<h2 style="font-size:18px">選擇行程</h2><div class="btns"><a class="btn pri" id="tlNew" href="?mod=new">➕ 新增旅遊規劃（例：九州）</a></div>`+(lts.length?`<div class="card"><h3>🧳 本機行程（尚未上架）</h3>${lts.map(t=>`<div class="drow"><a href="?trip=${encodeURIComponent(t.id)}" data-trip="${esc(t.id)}">🧳 ${esc(t.title||t.id)}</a> <span class="cnt">${esc(t.start_date||"")}～${esc(t.end_date||"")}・採用 ${esc(t.adopted_route||"")}</span></div>`).join("")}</div>`:"")+(dsl.length?`<div class="card"><h3>本機草稿</h3>${dsl.map(d=>`<div class="drow"><a href="?trip=${encodeURIComponent(d.id)}&mod=new" data-draft="${esc(d.id)}">📝 草稿：${esc(drTitle(d.request||{}))}</a>${d.backend&&d.backend.view_code?`<div class="cnt">代號 ${esc(d.backend.job_id||"")}・<span data-drst="${esc(d.backend.view_code)}">${esc(ST_TXT[d.backend.status]||"⏳ 已送出")}</span><br><a href="${esc(viewUrl(d.backend.view_code).replace(/^.*\?/,"?"))}" data-drlink>查看連結</a> <button class="btn" type="button" data-drcopy="${esc(viewUrl(d.backend.view_code))}">📋 複製</button></div>`:""}</div>`).join("")}</div>`:"")+TRIPS.trips.map(t=>`<div class="card"><h3 data-trip="${esc(t.id)}">${esc(t.title)}</h3>
   <div class="tags"><span class="tag">${esc(t.start_date)}～${esc(t.end_date)}</span>${t.travelers?`<span class="tag">大人 ${esc(t.travelers.adults||0)}${t.travelers.children?"、小孩 "+esc(t.travelers.children):""}</span>`:""}<span class="tag">景點 ${t.counts.spots}・餐廳 ${t.counts.restaurants}</span>${t.status_stage?`<span class="tag">${esc(st[t.status_stage]||t.status_stage)}</span>`:""}</div>
   <div class="desc">${esc(t.region||"")}</div>
   <div class="btns">${t.routes.map(r=>`<a class="btn ${r.key===t.default_route?"pri":""}" href="?trip=${encodeURIComponent(t.id)}&route=${encodeURIComponent(r.key)}" data-trip="${esc(t.id)}" data-route="${esc(r.key)}">路線 ${esc(r.key)}${r.key===t.default_route?"（推薦）":""}</a>`).join("")}</div>
@@ -945,9 +964,10 @@ function showTripList(push){
 function applyUrl(push){
  const p=new URLSearchParams(location.search); const t=p.get("trip"), r=p.get("route"), d=parseInt(p.get("day")||"",10)||null, m=p.get("mod");
  if(!t){ if(m==="new") return openNewBlank(false); showTripList(false); return Promise.resolve();}
- if(t===TID&&DRAFT){ const mm=MODS.indexOf(m)>=0?m:"new"; if(mm!==curMod) showMod(mm,true); return Promise.resolve(); }
- if(t===TID&&D){ if(r&&r!==route&&D.plan.routes[r]) setRoute(r,{day:d}); else if(d&&d!==curDay&&dayInfo(route,d)){curDay=d; fillSelects(); renderItin();} const mm=MODS.indexOf(m)>=0?m:"spots"; if(mm!==curMod) showMod(mm,true); else if(curMod==="lodging") renderMod(); return Promise.resolve(); }
- return openTrip(t,{route:r,day:d,push,mod:m});
+ const dv=p.get("draft")==="1";
+ if(t===TID&&DRAFT&&(dv||!ltGet(t))){ const mm=MODS.indexOf(m)>=0?m:"new"; if(mm!==curMod) showMod(mm,true); return Promise.resolve(); }
+if(t===TID&&D&&!dv){ if(r&&r!==route&&D.plan.routes[r]) setRoute(r,{day:d}); else if(d&&d!==curDay&&dayInfo(route,d)){curDay=d; fillSelects(); renderItin();} const mm=MODS.indexOf(m)>=0?m:"spots"; if(mm!==curMod) showMod(mm,true); else if(curMod==="lodging") renderMod(); return Promise.resolve(); }
+ return openTrip(t,{route:r,day:d,push,mod:m,draft:dv});
 }
 /* ---------- export（以「站」為單位：同一站的餐廳併在景點底下，不另算一站） ---------- */
 function routeDaysExport(){
@@ -1072,7 +1092,7 @@ function importText(txt){
  let j; try{j=JSON.parse(txt);}catch(err){toast("檔案不是有效 JSON");return Promise.resolve(null);}
  const p=parseImport(j); if(!p){toast("看不懂這個檔案格式（只收本網頁匯出的 JSON／final.json）",3500);return Promise.resolve(null);}
  if(p.trip&&p.trip!==TID){
-  const e=TRIPS.trips.find(t=>t.id===p.trip);
+  const e=TRIPS.trips.find(t=>t.id===p.trip)||(ltGet(p.trip)?ltEntry(ltGet(p.trip)):null);
   if(!e){toast("檔案屬於行程「"+p.trip+"」，網站上沒有這個行程",4000);return Promise.resolve(null);}
   if(!confirm("這份檔案屬於行程「"+e.title+"」，要切換過去並匯入嗎？")) return Promise.resolve(null);
   return openTrip(e.id,{push:true,route:Object.keys(p.routes)[0]}).then(()=>doImport(p));
@@ -1223,18 +1243,20 @@ function renderMod(){ if(curMod==="new") return renderNew(); if(DRAFT||!D){$("#m
  const P=$("#modpanel"), f=FL(), ad=(TE.travelers&&TE.travelers.adults)||1; let h="";
  const note=`<div class="cnt">預約、付款請安宏親自確認；這裡只記錄「已訂好」的內容，存在本機瀏覽器。</div>`;
  if(curMod==="flights"){
-  if(f&&f.outbound) h+=`<div class="card"><h3>目前航班（機票部）</h3><div class="desc">${esc(f.airline||"")}<br>去程 ${esc(f.outbound.flight)} ${esc(f.outbound.date)} ${esc(f.outbound.from)} ${esc(f.outbound.dep)} → ${esc(f.outbound.to)} ${esc(f.outbound.arr)}${f.inbound?`<br>回程 ${esc(f.inbound.flight)} ${esc(f.inbound.date)} ${esc(f.inbound.from)} ${esc(f.inbound.dep)} → ${esc(f.inbound.to)} ${esc(f.inbound.arr)}`:""}</div></div>`;
+  if(D.meta.local) h+=`<div class="card"><h3>需求表單填的航班</h3><div class="desc">${f&&f.outbound?`去程 ${esc(f.outbound.flight)}（${esc(f.outbound.date)}）`:"去程：尚未提供"}<br>${f&&f.inbound?`回程 ${esc(f.inbound.flight)}（${esc(f.inbound.date)}）`:"回程：尚未提供"}${D.meta.flights_status?"<br>"+esc(D.meta.flights_status):""}</div><div class="todo">起飛／抵達時刻尚未提供：請到下方「已訂好 → 手動輸入」補上，或由機票部補。</div></div>`;
+  else if(f&&f.outbound) h+=`<div class="card"><h3>目前航班（機票部）</h3><div class="desc">${esc(f.airline||"")}<br>去程 ${esc(f.outbound.flight)} ${esc(f.outbound.date)} ${esc(f.outbound.from)} ${esc(f.outbound.dep)} → ${esc(f.outbound.to)} ${esc(f.outbound.arr)}${f.inbound?`<br>回程 ${esc(f.inbound.flight)} ${esc(f.inbound.date)} ${esc(f.inbound.from)} ${esc(f.inbound.dep)} → ${esc(f.inbound.to)} ${esc(f.inbound.arr)}`:""}</div></div>`;
   const o=(f&&f.outbound)||{}, i=(f&&f.inbound)||{};
   h+=`<div class="card"><h3>搜尋機票（Google Flights）</h3><form id="flForm" class="bkf"><label>出發<input name="from" value="${esc(o.from||TE.origin_airport||"TPE")}"></label><label>抵達<input name="to" value="${esc(o.to||"")}"></label><label>去程<input name="date" type="date" value="${esc(o.date||TE.start_date||"")}"></label><label>回程<input name="ret" type="date" value="${esc(i.date||TE.end_date||"")}"></label><label>人數<input name="adults" type="number" min="1" value="${ad}"></label><label>彈性日期<select name="flex">${[0,1,2,3].map(n=>`<option value="${n}">±${n} 天</option>`).join("")}</select></label><button class="btn pri" type="submit">產生連結</button></form><div id="flLinks"></div></div>`;
   h+=`<div class="card"><h3>已訂好 → 手動輸入</h3>${bookForm("flights",{airline:f&&f.airline,out_flight:o.flight,out_date:o.date,out_dep:o.dep,out_arr:o.arr,in_flight:i.flight,in_date:i.date,in_dep:i.dep,in_arr:i.arr})}</div>`;
  } else if(curMod==="car"){
   const pu=pickupDefault(), dr=dropoffDefault(), apt=(f&&f.outbound&&f.outbound.to)||"";
-  h+=`<div class="card"><h3>租車建議時間</h3><div class="desc" id="carBuf">取車：${esc(pu.replace("T"," ")||"（沒有航班資料）")}（入境後 ${BUF.pickup_after_arrival_min} 分）<br>還車：${esc(dr.replace("T"," ")||"（沒有航班資料）")}（起飛前 ${BUF.return_before_departure_min} 分）</div><div class="btns">${lk(carLinks({airport:apt}))}</div></div>`;
+  h+=`<div class="card"><h3>租車建議時間</h3><div class="desc" id="carBuf">取車：${esc(pu.replace("T"," ")||"（沒有航班資料）")}（入境後 ${BUF.pickup_after_arrival_min} 分）<br>還車：${esc(dr.replace("T"," ")||"（沒有航班資料）")}（起飛前 ${BUF.return_before_departure_min} 分）</div>${D.meta.local?`<div class="cnt">需求：${esc(D.meta.car_request||"尚未提供")}${pu?"":"；沒有航班時刻，取還車時間尚未提供"}</div>`:""}<div class="btns">${lk(carLinks({airport:apt}))}</div></div>`;
   h+=`<div class="card"><h3>已訂好 → 手動輸入</h3>${bookForm("car",{pickup_at:pu,dropoff_at:dr,pickup_place:AP[apt]||apt,dropoff_place:AP[(f&&f.inbound&&f.inbound.from)||""]||""})}</div>`;
  } else if(curMod==="lodging"){
   const L=(D.lodging||[]).filter(l=>l.route===route);
+  if(D.meta.local&&D.meta.rest_fill&&(D.meta.rest_fill.lodging_meal_status||[]).length) h+=`<div class="card"><h3>住宿含餐（餐廳部整理）</h3>${D.meta.rest_fill.lodging_meal_status.map(s=>`<div class="cnt">🏨 ${esc(s.base)}：${esc(s.meal_plan||"")}${(s.affected||[]).length?"（影響："+esc(s.affected.join("、"))+"）":""}</div>`).join("")}<div class="cnt">住宿含餐的那幾餐，請到「每日」把餐廳刪掉。</div></div>`;
   h+=`<div class="cnt">路線 ${esc(route)}：${L.length} 個住宿據點。評分請點「樂天トラベル（評分）」或「在 Google 地圖看評分」。</div>`;
-  h+=L.map(l=>`<div class="card lod" data-base="${esc(l.base)}"><h3>${esc(l.area)}</h3><div class="desc">建議：${esc(l.name)}<br>${esc(l.check_in)}～${esc(l.check_out)}（${esc(l.nights)} 晚）</div><div class="btns">${lk(hotelLinks({name:l.name,area:l.area,checkin:l.check_in,checkout:l.check_out,adults:ad}))}</div><details${decGet("lodging:"+l.base)?" open":""}><summary>已訂好 → 手動輸入</summary>${bookForm("lodging:"+l.base,{hotel:l.name,check_in:l.check_in,check_out:l.check_out})}</details></div>`).join("")||`<div class="cnt">此路線沒有住宿資料</div>`;
+  h+=L.map(l=>`<div class="card lod" data-base="${esc(l.base)}"><h3>${esc(l.area)}</h3><div class="desc">${l.booking?`✅ 已匯入訂房：${esc(l.booking.hotel_name||l.name)}${l.booking.booking_code?"・代號 "+esc(l.booking.booking_code):""}${l.booking.price_jpy!=null?"・¥"+esc(l.booking.price_jpy):""}${l.booking.price_twd!=null?"・NT$"+esc(l.booking.price_twd):""}${l.booking.payment_status?"・"+esc(l.booking.payment_status):""}（請安宏確認）`:l.status==="suggested"?`後台路線住宿點：${esc(l.name)}<br><span class="todo">飯店訂房資料尚未提供（可到「已訂好 → 手動輸入」，或由住宿部補）</span>`:`建議：${esc(l.name)}`}<br>${esc(l.check_in)}～${esc(l.check_out)}（${esc(l.nights)} 晚）</div><div class="btns">${lk(hotelLinks({name:l.name,area:l.area,checkin:l.check_in,checkout:l.check_out,adults:ad}))}</div><details${decGet("lodging:"+l.base)?" open":""}><summary>已訂好 → 手動輸入</summary>${bookForm("lodging:"+l.base,{hotel:l.name,check_in:l.check_in,check_out:l.check_out})}</details></div>`).join("")||`<div class="cnt">此路線沒有住宿資料</div>`;
  }
  P.innerHTML=h+note+`<div class="tools"><button class="btn expDec" type="button">⬇ 匯出決定（decisions JSON）</button></div>`;
 }
@@ -1324,7 +1346,7 @@ function drSetStatus(vc,st){ if(!vc||!st) return; const a=drLoad(); let ch=false
 /* 1.9.3 完成提示：對話框＋（允許時）Notification＋vibrate；不支援就安靜略過 */
 function notifyAsk(){try{ if(!("Notification" in window)){toast("這個瀏覽器不支援通知，完成時會在 App 內跳提示"); return;} const p=Notification.requestPermission(); const f=r=>{toast(r==="granted"?"已開啟完成通知":"未開啟通知，完成時會在 App 內跳提示"); const b=$("#notifyOn"); if(b&&r==="granted") b.remove();}; if(p&&p.then) p.then(f).catch(()=>{}); }catch(e){}}
 function doneAlert(d){const vc=d.backend.view_code, t=drTitle(d.request||{}); let x=$("#doneDlg"); if(x) x.remove(); x=document.createElement("div"); x.id="doneDlg"; x.dataset.vc=vc; x.setAttribute("role","alertdialog");
- x.innerHTML=`<div class="sdBox"><h3>✅ 建議路線已完成</h3><div class="desc">「${esc(t)}」的建議路線已排好，可在「② 路線建議」直接勾選（③ 挑選）。</div><div class="btns"><button class="btn pri" type="button" id="doneGo">查看路線</button><button class="btn" type="button" id="doneClose">稍後</button></div></div>`; document.body.appendChild(x);
+ x.innerHTML=`<div class="sdBox"><h3>✅ 建議路線已完成</h3><div class="desc">「${esc(t)}」的建議路線已排好，可在「② 路線建議」直接勾選（③ 挑選），挑好後按「✅ 採用這套路線，建立本機行程」，機票・住宿・景點等模組就會有內容。</div><div class="btns"><button class="btn pri" type="button" id="doneGo">查看路線</button><button class="btn" type="button" id="doneClose">稍後</button></div></div>`; document.body.appendChild(x);
  try{ if(navigator.vibrate) navigator.vibrate([200,100,200]); }catch(e){}
  try{ if("Notification" in window&&Notification.permission==="granted"){ new Notification("✅ 建議路線已完成",{body:t,tag:"route-"+vc}); } }catch(e){}}
 let LP_T=null;
@@ -1365,23 +1387,25 @@ function dmTxt(m){return typeof m==="number"&&m>0?"車程約 "+Math.round(m)+" �
 const FOOD_RE=/餐|料理|食堂|麵|拉麵|烏龍|鍋|壽司|燒肉|午餐|晚餐|咖啡|cafe|café|賣店|屋台|甜點|布丁/i;
 function pickKey(rid){return "itin:"+rid+":picked_route:v1";}
 function pickLoad(rid){try{return JSON.parse(ls.get(pickKey(rid))||"null");}catch(e){return null;}}
-function renderAutoRes(rs){const box=$("#autoRes"); if(!box) return; const rid=rs.request_id||"auto", pk=pickLoad(rid), notes=userNotes(rs);
+function renderAutoRes(rs){const box=$("#autoRes"); if(!box) return; const rid=rs.request_id||"auto", pk=pickLoad(rid), notes=userNotes(rs), asel=aselLoad().filter(k=>(rs.routes||[]).some(r=>r.route_id===k));
  box.innerHTML=`<div class="cnt">⚠️ 自動產生、${esc(rs.qa||"未核對")}；地點座標與 MapCode 以各部門核對後為準。</div>`+(rs.routes||[]).map((r,i)=>{const on=pk&&pk.route_id===r.route_id;
   return `<div class="card rcard${on?" picked":""}" data-rid="${esc(r.route_id)}"><h4>${on?"✅ ":""}${esc(routeName(r,i))}</h4><div class="desc">${esc(r.summary||"")}</div>
   ${(r.bases||[]).length?`<div class="cnt">住宿：${r.bases.map(b=>esc(b.area_zh||areaZh(b.area))+" "+esc(b.nights)+" 晚").join("、")}</div>`:""}
   <details class="dsum"><summary>每日摘要（${(r.days||[]).length} 天）</summary>${daySums(r).map(d=>`<div class="cnt">第 ${esc(d.day)} 天${d.date?"（"+esc(d.date)+"）":""}・住${esc(d.base_zh||"待定")}：${(d.highlights||[]).length?d.highlights.map(esc).join("、"):"自由活動／移動"}${dmTxt(d.drive_min)?"・"+dmTxt(d.drive_min):""}</div>`).join("")}</details>
   ${(r.warnings||[]).length?`<details class="dsum"><summary>注意事項（${r.warnings.length}）</summary>${r.warnings.map(w=>`<div class="todo">⚠️ ${esc(zhText(w))}</div>`).join("")}</details>`:""}
-  <div class="btns"><button class="btn ${on?"":"pri"}" type="button" data-pick="${esc(r.route_id)}">${on?"✅ 已選這條（重新建立）":"✅ 選這條路線"}</button></div></div>`;}).join("")
+  <div class="btns"><button class="btn ${on?"":"pri"}" type="button" data-pick="${esc(r.route_id)}">${on?"✅ 已選這條（重新建立）":"✅ 選這條路線"}</button><label class="rchk"><input type="checkbox" name="asel" value="${esc(r.route_id)}" ${asel.indexOf(r.route_id)>=0?"checked":""}> 勾選比較</label></div></div>`;}).join("")
+  +((rs.routes||[]).length>=2?cmpBarHtml("auto",asel.length):"")
   +(notes.length?`<details class="dsum" id="userNotes"><summary>待確認事項（${notes.length}）</summary><ul>${notes.map(n=>`<li>${esc(n)}</li>`).join("")}</ul></details>`:"")
   +`<div class="btns"><button class="btn sm" type="button" id="autoDl">⬇ 下載路線 JSON</button></div><div id="buildTrip"></div>`;
- if(pk) renderBuild(rs,pk.route_id);}
+ if(pk) renderBuild(rs,pk.route_id); if(CMP.src==="auto"&&window.__cmp&&asel.length>=2) cmpRender("auto");}
 function renderBuild(rs,routeId){const el=$("#buildTrip"); if(!el) return; const i=(rs.routes||[]).findIndex(r=>r.route_id===routeId); if(i<0){el.innerHTML=""; return;} const r=rs.routes[i], sums=daySums(r);
  el.innerHTML=`<div class="card" id="build3"><h3>③ 建立行程：${esc(routeName(r,i))}</h3>
   <div class="cnt">住宿：${(r.bases||[]).map(b=>"🏨 "+esc(b.area_zh||areaZh(b.area))+" "+esc(b.nights)+" 晚").join("<br>")||"待定"}</div>
   ${(r.days||[]).map((d,k)=>{const sm=sums[k]||{}; return `<div class="bday"><b>第 ${esc(d.day)} 天${d.date?"（"+esc(d.date)+"）":""}</b>・住${esc(sm.base_zh||dayBase(r,d.day)||"待定")}${dmTxt(d.drive_min)?"・"+dmTxt(d.drive_min):""}
    ${(d.stops||[]).length?(d.stops||[]).map(x=>{const f=FOOD_RE.test((x.name||"")+(x.note||"")), u=x.google_maps&&/^https:\/\//.test(x.google_maps)?x.google_maps:(x.lat!=null&&x.lng!=null?"https://www.google.com/maps/search/?api=1&query="+x.lat+"%2C"+x.lng:"");
     return `<div class="cnt">${f?"🍽":"📍"} ${u?`<a target="_blank" rel="noopener" href="${esc(u)}">${esc(x.name)}</a>`:esc(x.name)}${x.note?"<br><span class=\"cnt\">"+esc(x.note)+"</span>":""}</div>`;}).join(""):`<div class="cnt">自由活動／移動日</div>`}</div>`;}).join("")}
-  <div class="btns"><button class="btn" type="button" id="verifyLatest" disabled title="即將推出">🔄 驗證最新資料（即將推出）</button><button class="btn" type="button" id="unpick">換一條路線</button></div></div>`;}
+  <div class="btns">${(()=>{const lt=ltGet(rs.request_id), same=lt&&lt.adopted_route===routeId; return `<button class="btn ok big" type="button" id="adoptRoute" data-rid="${esc(r.route_id)}">${same?"🔄 重新採用這套路線":"✅ 採用這套路線，建立本機行程"}</button>${lt?`<button class="btn" type="button" data-ltopen="${esc(lt.trip_id)}">🧳 打開本機行程</button>`:""}`;})()}<button class="btn" type="button" id="verifyLatest" disabled title="即將推出">🔄 驗證最新資料（即將推出）</button><button class="btn" type="button" id="unpick">換一條路線</button></div>
+  <div class="cnt">採用後在這台裝置的瀏覽器裡組成行程（不呼叫後台、不扣額度），並帶入需求的班號、已匯入的訂房與餐廳部補點。定案與正式上架照舊：在「每日」按「✅ 送出定案（final.json）」傳給總經理。</div></div>`;}
 function autoSubmit(dr,j){const b=backendCfg(); if(!b) return Promise.resolve(false); const inv=(($("#newForm [name=invite]")||{}).value||"").trim(), tsb=$("#newForm .tsBox"), tk=tsToken(tsb);
  if(!inv){$("#newErr").textContent="請填邀請碼（或清空後改用匯出 JSON）"; return Promise.resolve(null);}
  if(!tk){$("#newErr").textContent="請先完成驗證碼"; return Promise.resolve(null);}
@@ -1544,20 +1568,24 @@ function newForm(r){r=r||{}; const d=r.dates||{}, t=r.travelers||{adults:2}, bu=
 function renderNew(){const P=$("#modpanel"); let h=`<h2 class="nh">➕ 新增旅遊規劃</h2><div class="steps"><span class="on">① 需求</span><span>② 路線建議</span><span>③ 挑選路線</span><span>→ 機票・租車・住宿…</span></div>`;
  const hv=hashView(); if(hv&&!(DRAFT&&DRAFT.backend&&DRAFT.backend.view_code===hv)){ h+=backendCfg()?autoCardHtml(hv):`<div class="card wait" id="autoOff"><h3>② 路線建議（後台自動排）</h3><div class="desc">後台尚未啟用，暫時無法用代號查看。</div></div>`;}
  if(TID&&!DRAFT&&D){ // 已發布行程
-  const t=TE||{}; h+=`<div class="card"><h3>① 需求（已開案）</h3><div class="desc">${esc(t.title||"")}<br>${esc(t.start_date||"")}～${esc(t.end_date||"")}${t.travelers?"・大人 "+esc(t.travelers.adults||0)+(t.travelers.children?"、小孩 "+esc(t.travelers.children):""):""}<br>${esc(t.region||"")}</div><div class="cnt">要改需求請在聊天室告訴總經理。</div><div class="btns"><button class="btn pri" type="button" id="newBlank">➕ 開新行程（草稿）</button></div></div>`;
+  const t=TE||{}; if(t.local) h+=`<div class="card"><h3>① 需求（🧳 本機行程，尚未上架）</h3><div class="desc">${esc(t.title||"")}<br>${esc(t.start_date||"")}～${esc(t.end_date||"")}</div><div class="cnt">由後台路線在本機建立（${esc(D.meta.qa||"未核對")}）；座標與 MapCode 以各部門核對後為準。定案請在「每日」按「✅ 送出定案（final.json）」傳給總經理；正式上架仍由各部門補資料後資訊部發布。</div><div class="btns">${drLoad().some(x=>x.id===TID)?`<button class="btn" type="button" id="ltDraft">📝 打開草稿（需求／後台路線卡）</button>`:""}<button class="btn" type="button" id="ltExport">⬇ 匯出本機行程包（給資訊部上架）</button><button class="btn pri" type="button" id="newBlank">➕ 開新行程（草稿）</button></div></div>`+rfStatusHtml();
+  else h+=`<div class="card"><h3>① 需求（已開案）</h3><div class="desc">${esc(t.title||"")}<br>${esc(t.start_date||"")}～${esc(t.end_date||"")}${t.travelers?"・大人 "+esc(t.travelers.adults||0)+(t.travelers.children?"、小孩 "+esc(t.travelers.children):""):""}<br>${esc(t.region||"")}</div><div class="cnt">要改需求請在聊天室告訴總經理。</div><div class="btns"><button class="btn pri" type="button" id="newBlank">➕ 開新行程（草稿）</button></div></div>`;
   const sel=selLoad(), R=D.plan.routes;
-  h+=`<div class="card" id="routePick"><h3>② 路線建議・③ 挑選（可複選）</h3>${Object.keys(R).map(k=>{const m=(D.meta.routes||[]).find(x=>x.key===k)||{}; return `<label class="rpick"><input type="checkbox" name="rsel" value="${esc(k)}" ${sel.indexOf(k)>=0?"checked":""}><b>路線 ${esc(k)}${k===D.meta.recommended_route?"（推薦）":""}</b> ${esc(R[k].name||m.name||"")}${m.days?"・"+esc(m.days)+" 天":""} <a href="?trip=${encodeURIComponent(TID)}&route=${encodeURIComponent(k)}" data-goroute="${esc(k)}">看路線</a></label>`;}).join("")}
-   <div class="cnt" id="selCnt">已選 ${sel.length} 條（存在本機，會一起寫進 decisions 匯出）</div><div class="btns"><button class="btn pri" type="button" id="toFlights">下一步：✈️ 機票 →</button><button class="btn expDec" type="button">⬇ 匯出決定（decisions JSON）</button></div></div>`;
+  h+=`<div class="card" id="routePick"><h3>② 路線建議・③ 挑選（可複選）</h3>${Object.keys(R).map(k=>{const m=(D.meta.routes||[]).find(x=>x.key===k)||{}; return `<label class="rpick"><input type="checkbox" name="rsel" value="${esc(k)}" ${sel.indexOf(k)>=0?"checked":""}><b>路線 ${esc(k)}${k===D.meta.recommended_route?(TE&&TE.local?"（採用中）":"（推薦）"):""}</b> ${esc(R[k].name||m.name||"")}${m.days?"・"+esc(m.days)+" 天":""} <a href="?trip=${encodeURIComponent(TID)}&route=${encodeURIComponent(k)}" data-goroute="${esc(k)}">看路線</a></label>`;}).join("")}
+   <div class="cnt" id="selCnt">已選 ${sel.length} 條（存在本機，會一起寫進 decisions 匯出）</div><div class="btns"><button class="btn pri" type="button" id="toFlights">下一步：✈️ 機票 →</button><button class="btn expDec" type="button">⬇ 匯出決定（decisions JSON）</button></div></div>`+(Object.keys(R).length>=2?cmpBarHtml("trip",sel.filter(k=>R[k]).length):"");
  } else {
   h+=`<div class="card"><h3>① 需求${DRAFT?"（草稿 "+esc(DRAFT.id)+"）":""}</h3>${newForm(DRAFT&&DRAFT.request)}</div>
   ${DRAFT&&DRAFT.backend&&backendCfg()?autoCardHtml(DRAFT.backend.view_code):`<div class="card wait" id="waitPub"><h3>② 路線建議・③ 挑選路線</h3><div class="desc">${backendCfg()?"🤖 按「🚀 送到後台排路線」後由後台自動排程（約數分鐘），完成後會自動顯示在這裡。<br>填邀請碼並完成驗證碼後按「🚀 送到後台排路線」，後台會排 2～4 條路線。":"⏳ 等待企畫部發布。<br>後台尚未啟用：請按「📤 匯出 JSON／複製文字」。"}</div></div>`}`;
  }
  const ds=drVisible(); if(ds.length) h+=`<div class="card"><h3>本機草稿（${ds.length}）</h3>${ds.map(d=>`<div><a href="?trip=${encodeURIComponent(d.id)}&mod=new" data-draft="${esc(d.id)}">📝 ${esc(drTitle(d.request||{}))}</a> <span class="cnt">${esc((d.updated_at||"").slice(0,16).replace("T"," "))}${d.submitted_at?"・已送出":""}</span></div>`).join("")}</div>`;
- P.querySelectorAll(".tsBox").forEach(tsRemove); P.innerHTML=h; tsMount(P); const lv=hashLodging(); if(lv&&LG.vc!==lv&&backendCfg()) setTimeout(()=>lgOpen(lv),0); const ap=$("#autoPub"); if(ap){const v=hashView()&&!(DRAFT&&DRAFT.backend&&DRAFT.backend.view_code===hashView())?hashView():DRAFT.backend.view_code; autoPoll(v);} else clearTimeout(POLL_T);}
-function waitHtml(){return `<div class="card wait"><h3>⏳ 等待企畫部發布</h3><div class="desc">「${esc(DRAFT?drTitle(DRAFT.request):"")}」還是本機草稿，沒有路線資料；企畫部發布後機票・租車・住宿等模組才會出現內容。</div><div class="btns"><button class="btn pri" type="button" data-m2="new">回「新增旅遊規劃」</button></div></div>`;}
+ cmpKill(); P.querySelectorAll(".tsBox").forEach(tsRemove); P.innerHTML=h; tsMount(P); const lv=hashLodging(); if(lv&&LG.vc!==lv&&backendCfg()) setTimeout(()=>lgOpen(lv),0); const ap=$("#autoPub"); if(ap){const v=hashView()&&!(DRAFT&&DRAFT.backend&&DRAFT.backend.view_code===hashView())?hashView():DRAFT.backend.view_code; autoPoll(v);} else clearTimeout(POLL_T);}
+function waitHtml(){const lt=DRAFT&&ltGet(DRAFT.id), ready=DRAFT&&((AUTO.result&&AUTO.result.request_id===DRAFT.id)||(DRAFT.backend&&DRAFT.backend.status==="published"));
+ if(lt) return `<div class="card wait"><h3>🧳 已建立本機行程</h3><div class="desc">這份草稿已採用「${esc(lt.adopted_route)}」建立本機行程；機票・租車・住宿・景點・餐廳・每日都在本機行程裡。</div><div class="btns"><button class="btn pri" type="button" data-ltopen="${esc(lt.trip_id)}">🧳 打開本機行程</button><button class="btn" type="button" data-m2="new" data-scroll="autoPub">回「新增旅遊規劃」</button></div></div>`;
+ if(ready) return `<div class="card wait"><h3>✅ 後台路線已產生</h3><div class="desc">後台路線已產生。請到「新增旅遊規劃」挑選並按「✅ 採用這套路線，建立本機行程」，各模組才會出現內容。</div><div class="btns"><button class="btn pri" type="button" data-m2="new" data-scroll="autoPub">回「新增旅遊規劃」</button></div></div>`;
+ return `<div class="card wait"><h3>⏳ 等待企畫部發布</h3><div class="desc">「${esc(DRAFT?drTitle(DRAFT.request):"")}」還是本機草稿，沒有路線資料；企畫部發布後機票・租車・住宿等模組才會出現內容。</div><div class="btns"><button class="btn pri" type="button" data-m2="new">回「新增旅遊規劃」</button></div></div>`;}
 function openDraft(dr,opt){opt=opt||{}; ++loadSeq; return loadIntake().then(()=>{
  TID=dr.id; DRAFT=dr; D=null; route=null; TE={id:dr.id,title:drTitle(dr.request||{})+"（草稿）"};
- $("#ttl").textContent=TE.title; document.title=TE.title+"｜互動行程"; $("#rsw").innerHTML=""; $("#routeSel").innerHTML=""; $("#rname").textContent=dr.backend&&dr.backend.view_code?"本機草稿・已送後台自動排程":"本機草稿・等待企畫部發布";
+ $("#ttl").textContent=TE.title; document.title=TE.title+"｜互動行程"; $("#rsw").innerHTML=""; $("#routeSel").innerHTML=""; $("#rname").textContent=ltGet(dr.id)?"本機草稿・已建立本機行程（可從行程選單打開）":dr.backend&&dr.backend.view_code?"本機草稿・已送後台自動排程":"本機草稿・等待企畫部發布";
  fillTripSel(); $("#loading").hidden=true; $("#tripList").hidden=true; $("#mods").hidden=false;
  showMod(MODS.indexOf(opt.mod)>=0?opt.mod:"new",true); syncUrl(!!opt.push); setHH(); window.__ready=true;});}
 function openNewBlank(push){++loadSeq; return loadIntake().then(()=>{TID=null; D=null; DRAFT=null; route=null; TE=null;
@@ -1594,12 +1622,12 @@ document.addEventListener("click",e=>{
  const dl=e.target.closest("[data-draft]"); if(dl){e.preventDefault(); const d=drLoad().find(x=>x.id===dl.dataset.draft); if(d) openDraft(d,{mod:"new",push:true}); return;}
  const gr=e.target.closest("[data-goroute]"); if(gr){e.preventDefault(); setRoute(gr.dataset.goroute,{push:true}); showMod("spots"); return;}
  if(e.target.id==="toFlights"){showMod("flights"); return;}
- const m2=e.target.closest("[data-m2]"); if(m2){showMod(m2.dataset.m2); return;}
+ const m2=e.target.closest("[data-m2]"); if(m2){showMod(m2.dataset.m2); if(m2.dataset.scroll){const sc=m2.dataset.scroll; setTimeout(()=>{const a=$("#build3")||$("#"+sc); if(a) a.scrollIntoView({block:"start"});},400);} return;}
 });
 document.addEventListener("focusin",e=>{ if(e.target.name==="invite") tsMount();});
 document.addEventListener("click",e=>{const r=e.target.closest(".tsRetry"); if(r){tsRetry(r.closest(".tsBox"));}});
 document.addEventListener("change",e=>{
- if(e.target.name==="rsel"){const v=[...document.querySelectorAll('#routePick [name="rsel"]:checked')].map(x=>x.value); selSave(v); $("#selCnt").textContent="已選 "+v.length+" 條（存在本機，會一起寫進 decisions 匯出）"; toast("已存路線選擇");}});
+ if(e.target.name==="rsel"){let v=[...document.querySelectorAll('#routePick [name="rsel"]:checked')].map(x=>x.value); if(v.length>CMP_MAX&&e.target.checked){e.target.checked=false; v=v.filter(x=>x!==e.target.value); toast("一次最多比較／合併 "+CMP_MAX+" 套");} selSave(v); cmpSync(v.filter(k=>D&&D.plan.routes[k]).length); $("#selCnt").textContent="已選 "+v.length+" 條（存在本機，會一起寫進 decisions 匯出）"; toast("已存路線選擇");}});
 document.addEventListener("submit",e=>{const fm=e.target;
  if(fm.id==="flForm"){e.preventDefault(); const o={}; new FormData(fm).forEach((v,k)=>o[k]=String(v).trim()); const L=gfFlex(o); $("#flLinks").innerHTML=`<div class="cnt">${L.length} 組日期</div>`+L.map(x=>`<a class="btn" target="_blank" rel="noopener" href="${esc(x.url)}">${esc(x.date)}${x.ret?" → "+esc(x.ret):""}</a>`).join(""); return;}
  if(!fm.classList.contains("bk")) return; e.preventDefault(); const dk=fm.dataset.dk, o={}; new FormData(fm).forEach((v,k)=>{v=String(v).trim(); if(v) o[k]=v;});
@@ -1614,10 +1642,199 @@ document.addEventListener("click",e=>{
  const rd=e.target.closest("[data-rbdel]"); if(rd){const d=decLoad(); d.restaurants=d.restaurants.filter(r=>r.id!==rd.dataset.rbdel); decSave(d); renderRbook(); toast("已刪除");}
 });
 
+/* ---------- 1.9.8 採用後台路線 → 本機行程（索引 plan:local_trips:v1＋單筆 plan:local_trip:<id>:v1）；路線複選比較（地圖疊圖＋指標表）
+   全部在瀏覽器本機：不呼叫 Worker 寫入端點、不呼叫 Codex。MapCode／座標只用 route_set 原有值，沒有就留空。 ---------- */
+const LTK="plan:local_trips:v1", LT_SCHEMA="agency.local_trip.v1";
+function ltKey(id){return "plan:local_trip:"+id+":v1";}
+function ltIndex(){try{const j=JSON.parse(ls.get(LTK)||"null"); return j&&Array.isArray(j.trips)?j.trips.filter(t=>t&&typeof t.id==="string"):[];}catch(e){return [];}}
+function ltGet(id){ if(!id) return null; try{const j=JSON.parse(ls.get(ltKey(id))||"null"); return j&&j.schema===LT_SCHEMA&&j.route_set&&Array.isArray(j.route_set.routes)&&j.route_set.routes.length?j:null;}catch(e){return null;}}
+function ltVisible(){const p=drPublished(); return ltIndex().filter(t=>!p.has(t.id)&&ltGet(t.id));}
+function ltSave(pkg){ try{localStorage.setItem(ltKey(pkg.trip_id),JSON.stringify(pkg));}catch(e){toast("本機空間不足，請先匯出備份（⬇ 下載路線 JSON／⬇ 匯出決定）再試",4500); return false;}
+ const a=ltIndex().filter(t=>t.id!==pkg.trip_id); a.push({id:pkg.trip_id,title:pkg.title,start_date:pkg.start_date,end_date:pkg.end_date,adopted_route:pkg.adopted_route,updated_at:pkg.updated_at});
+ ls.set(LTK,JSON.stringify({schema:"agency.local_trips.v1",trips:a})); return true;}
+function wkOf(date){const t=Date.parse(String(date||"")+"T00:00:00Z"); return isFinite(t)?"週"+WK[new Date(t).getUTCDay()]:"";}
+function addDays(date,n){const t=Date.parse(String(date||"")+"T00:00:00Z"); return isFinite(t)?new Date(t+n*864e5).toISOString().slice(0,10):"";}
+function ltStopId(x){ if(x&&x.ref) return String(x.ref); return "h_"+sha1hex([x.name||"",x.lat,x.lng].join("|")).slice(0,12);}
+function ltKind(x){const r=String(x.ref||""); if(/^db:db_r_/.test(r)) return "restaurant"; if(/^db:db_[so]_/.test(r)) return "spot"; return FOOD_RE.test(x.name||"")?"restaurant":"spot";}
+function ltMeal(x){const n=String(x.note||""), m=n.match(/^(早餐|午餐|晚餐|點心|咖啡)/)||n.match(/(早餐|午餐|晚餐)/); return m?({早餐:"breakfast",午餐:"lunch",晚餐:"dinner",點心:"snack",咖啡:"cafe"})[m[1]]:null;}
+function ltStay(x){const m=String(x.note||"").match(/停留約\s*(\d+)\s*分/); return m?+m[1]:null;}
+function ltSegs(r,start){let d=start; const out=[]; (r.bases||[]).forEach((b,i)=>{const n=+b.nights||0; if(!n||!d) return; const co=addDays(d,n); out.push({i,area:b.area_zh||areaZh(b.area)||String(b.area||""),raw:String(b.area||""),nights:n,check_in:d,check_out:co}); d=co;}); return out;}
+const ltNorm=s=>String(s||"").toLowerCase().replace(/[\s・·()（）\[\]【】,，、.\-_/]+/g,"");
+function ltBooking(bks,s){return bks.find(b=>b.check_in&&b.check_in===s.check_in)||bks.find(b=>{const h=ltNorm(b.hotel_name); return h.length>=2&&(ltNorm(s.raw).includes(h)||ltNorm(s.area).includes(h)||h.includes(ltNorm(s.area)));})||null;}
+function ltTitle(pkg){return pkg.title||("後台路線 "+pkg.trip_id);}
+function ltDates(rs,req){const dd=(req&&req.dates)||{}, r0=(rs.routes||[])[0]||{}, ds=(r0.days||[]); return {start:dd.start||(ds[0]&&ds[0].date)||"",end:dd.end||(ds.length&&ds[ds.length-1].date)||""};}
+/* route_set＋需求＋已匯入訂房 → 與 loadTripData 相同形狀的 D */
+function ltBuild(pkg){const rs=pkg.route_set, req=pkg.request||{}, dt=ltDates(rs,req), start=dt.start, bks=bkLoad("itin:"+pkg.trip_id+":bookings:v1");
+ const spots={}, rests={}, bases=[], bkeys={}, lodging=[], mroutes=[], plan={version:"local",dept:"後台自動排路線（本機採用，未核對）",note:"由 agency.route_set.v1 在瀏覽器本機轉成",routes:{}};
+ const bkey=a=>{a=a||"（住宿點待定）"; if(!bkeys[a]){bkeys[a]="lb_"+sha1hex(a).slice(0,8); bases.push({key:bkeys[a],area:a});} return bkeys[a];};
+ (rs.routes||[]).forEach((r,ri)=>{const rid=String(r.route_id||("r"+(ri+1))), segs=ltSegs(r,start), sums=daySums(r), nd=(r.days||[]).length;
+  segs.forEach(s=>{const b=ltBooking(bks,s); lodging.push({route:rid,base:bkey(s.area),area:s.area,name:(b&&b.hotel_name)||s.area,lat:null,lng:null,check_in:s.check_in,check_out:s.check_out,nights:s.nights,status:b?"booked":"suggested",
+   booking:b?{hotel_name:b.hotel_name||null,booking_code:b.booking_code||null,price_jpy:b.price_jpy==null?null:b.price_jpy,price_twd:b.price_twd==null?null:b.price_twd,payment_status:b.payment_status||null,booking_site:b.booking_site||null}:null});});
+  const segOn=date=>segs.find(s=>s.check_in<=date&&date<s.check_out)||null;
+  const days=(r.days||[]).map((d,k)=>{const dn=+d.day||k+1, date=d.date||addDays(start,dn-1), sg=segOn(date), prev=segs.find(s=>s.check_out===date)||null, sm=sums[k]||{}, last=sg||(k===nd-1?null:segs[segs.length-1]||null);
+   const items=(d.stops||[]).map(x=>{const id=ltStopId(x), t=ltKind(x), bag=t==="restaurant"?rests:spots;
+    if(!bag[id]) bag[id]={id,type:t,name:x.name||"（未命名）",lat:x.lat==null||x.lat===""?null:+x.lat,lng:x.lng==null||x.lng===""?null:+x.lng,google_maps:/^https:\/\//.test(x.google_maps||"")?x.google_maps:"",mapcode:x.mapcode||null,
+     description:x.note||"",note:x.source_url?"資料來源："+x.source_url:"",sources:x.source_url?[x.source_url]:[],category:t==="restaurant"?"後台路線":(/^db:db_o_/.test(x.ref||"")?"onsen":"auto"),base:(sg||prev)?bkey((sg||prev).area):"",region:(sg||prev)?(sg||prev).area:"",routes:[],parkings:[],stay_minutes:ltStay(x),auto:true};
+    if(bag[id].routes.indexOf(rid)<0) bag[id].routes.push(rid);
+    const it={type:t,id,name:x.name||"",leg_min:typeof x.leg_min==="number"?x.leg_min:null}; if(t==="restaurant"){const m=ltMeal(x); if(m) it.meal=m;} return it;});
+   return {day:dn,date,weekday:wkOf(date),base:last?bkey(last.area):"",base_area:last?last.area:"",start:{name:prev?prev.area:""},end:{name:sg?sg.area:""},mode:"自駕（後台路線）",note:sm.text||"",total_drive_min:typeof d.drive_min==="number"?d.drive_min:null,items};});
+  plan.routes[rid]={name:routeName(r,ri),summary:r.summary||"",warnings:(r.warnings||[]).map(String),days};
+  mroutes.push({key:rid,name:routeName(r,ri),days:days.length,rank:ri+1});});
+ const fo=flSplit(req.flights||{}), flights=[]; if(fo.out) flights.push({dir:"out",airline:"",flight_no:fo.out,dep:"",arr:"",date:dt.start}); if(fo.in) flights.push({dir:"in",airline:"",flight_no:fo.in,dep:"",arr:"",date:dt.end});
+ const tv=req.travelers||{};
+ const meta={schema:"trip-maps.trip-meta.v1",local:true,source:"adopted_route_set",qa:rs.qa||"未核對",trip:{id:pkg.trip_id,title:ltTitle(pkg),region:req.region_custom||req.region||"",start_date:dt.start,end_date:dt.end,travelers:{adults:tv.adults==null?null:tv.adults,children:tv.children||0},style:"self-drive"},
+  routes:mroutes,recommended_route:pkg.adopted_route,bases,lodging,flights,car_request:req.car||null,flights_status:(req.flights&&req.flights.status)||null,user_notes:userNotes(rs)};
+ return {meta,spots:Object.values(spots),plan,bases,lodging,rests:Object.values(rests).map(normRest),rplan:null,cplaces:null};}
+function ltEntry(pkg){const rs=pkg.route_set, n={s:0,r:0}, seen={};
+ (rs.routes||[]).forEach(r=>(r.days||[]).forEach(d=>(d.stops||[]).forEach(x=>{const id=ltStopId(x); if(seen[id]) return; seen[id]=1; ltKind(x)==="restaurant"?n.r++:n.s++;})));
+ const tv=(pkg.request&&pkg.request.travelers)||null;
+ return {id:pkg.trip_id,title:ltTitle(pkg)+"（本機行程）",region:(pkg.request&&(pkg.request.region_custom||pkg.request.region))||"",start_date:pkg.start_date,end_date:pkg.end_date,travelers:tv,style:"self-drive",
+  routes:(rs.routes||[]).map((r,i)=>({key:String(r.route_id),name:routeName(r,i),days:(r.days||[]).length})),default_route:pkg.adopted_route,counts:{spots:n.s,restaurants:n.r},data_version:"local-"+String(pkg.updated_at||"").replace(/\D/g,"").slice(0,14),local:true};}
+function ltDraftFor(rs){const a=drLoad(), rid=rs&&rs.request_id;
+ if(DRAFT&&(DRAFT.id===rid||(DRAFT.backend&&DRAFT.backend.view_code===AUTO.vc))) return DRAFT;
+ return a.find(d=>d.id===rid)||a.find(d=>d.backend&&AUTO.vc&&d.backend.view_code===AUTO.vc)||null;}
+function ltAdopt(rs,routeId){ if(!rs||!Array.isArray(rs.routes)) return Promise.resolve(false); const r=rs.routes.find(x=>x.route_id===routeId); if(!r){toast("找不到這套路線"); return Promise.resolve(false);}
+ const dr=ltDraftFor(rs), id=String(rs.request_id||(dr&&dr.id)||"");
+ if(!/^draft-[A-Za-z0-9-]+$/.test(id)){toast("這份路線沒有對應的需求代號，無法建立本機行程",3500); return Promise.resolve(false);}
+ if(drPublished().has(id)){toast("這個行程已正式上架，改開上架版",3000); return openTrip(id,{push:true}).then(()=>false);}
+ const old=ltGet(id), now=nowISO();
+ if(old&&old.adopted_route===routeId&&!confirm("會更新本機行程的建議行程（你改過的每日清單會保留，不覆蓋已有項目）。確定？")) return Promise.resolve(false);
+ const req=(dr&&dr.request)||(old&&old.request)||null;
+ if(dr&&dr.id!==id){const src=bkLoad("itin:"+dr.id+":bookings:v1"); if(src.length) bkSave(bkMerge(bkLoad("itin:"+id+":bookings:v1"),src),"itin:"+id+":bookings:v1");}
+ const dt=ltDates(rs,req);
+ const pkg={schema:LT_SCHEMA,trip_id:id,title:req?drTitle(req):"後台路線 "+id,start_date:dt.start,end_date:dt.end,created_at:old?old.created_at:now,updated_at:now,adopted_route:routeId,adopted_at:now,source:"adopted_route_set",qa:rs.qa||"未核對",app_version:APPV,request:req,route_set:rs};
+ pkg.rest_fill=(old&&old.rest_fill)||null; pkg.rest_fill_source=(old&&old.rest_fill_source)||""; pkg.rest_slots_applied=(old&&old.rest_slots_applied)||[];
+ return (pkg.rest_fill?Promise.resolve(null):rfFetch(id)).then(rf=>{
+  if(rf){pkg.rest_fill=rf; pkg.rest_fill_source="網站資料檔（data/handoffs/"+id+"/restaurants.json）";}
+  if(pkg.rest_fill){const d=rfApply(ltBuild(pkg),pkg), ap=[]; Object.keys(d.slots).forEach(r=>Object.keys(d.slots[r]).forEach(dy=>d.slots[r][dy].forEach(s=>ap.push(r+"|"+s.key)))); pkg.rest_slots_applied=ap;}
+  if(!ltSave(pkg)) return false;
+  ls.set("itin:"+id+":route",routeId);
+  return openTrip(id,{route:routeId,mod:"daily",push:true}).then(()=>{toast("已建立本機行程，機票／住宿／景點等模組可以用了。"+(pkg.rest_fill?"已帶入餐廳部補點 "+pkg.rest_fill.fills.filter(f=>f.route.indexOf(routeId)>=0).length+" 餐（這套路線）。":"餐廳部補點尚未提供。")+"這份尚未上架，部門補完資料後仍可由資訊部正式發布。",5500); return true;});});}
+function ltSetAdopted(k){const pkg=ltGet(TID); if(!pkg||!D.plan.routes[k]) return; pkg.adopted_route=k; pkg.updated_at=nowISO(); if(!ltSave(pkg)) return; D.meta.recommended_route=k; TE.default_route=k; setRoute(k,{push:true}); if(curMod==="new") renderMod(); toast("已改為採用「"+(D.plan.routes[k].name||k)+"」");}
+function ltExport(){const pkg=ltGet(TID); if(!pkg) return; download("local_trip_"+TID+".json",JSON.stringify(Object.assign({},pkg,{exported_at:nowISO(),bookings:bkLoad(),decisions:decLoad(),itinerary:store()}),null,1),"application/json"); toast("已匯出本機行程包（可交給資訊部上架）");}
+/* ---------- 複選比較 ---------- */
+const CMP_COL=["#e53935","#1e88e5","#2e7d32"], CMP_DASH=[null,"10 6","2 7"], CMP_MAX=3;
+let CMP={map:null,src:null,groups:{}};
+function aselKey(){return AUTO.result?autoSelKey(AUTO.result.request_id||"auto"):null;}
+function aselLoad(){const k=aselKey(); if(!k) return []; try{const j=JSON.parse(ls.get(k)||"null"); return j&&Array.isArray(j.routes)?j.routes:[];}catch(e){return [];}}
+function aselSave(a){const k=aselKey(); if(k) ls.set(k,JSON.stringify({routes:a,updated_at:nowISO()}));}
+function cmpFromRs(rs,ids){return ids.map(id=>{const i=(rs.routes||[]).findIndex(r=>r.route_id===id); if(i<0) return null; const r=rs.routes[i];
+ return {id,name:routeName(r,i),days:(r.days||[]).map(d=>({day:d.day,date:d.date,drive:typeof d.drive_min==="number"?d.drive_min:null,stops:(d.stops||[]).map(x=>({name:x.name,lat:x.lat,lng:x.lng,type:ltKind(x),id:ltStopId(x),gm:x.google_maps}))})),
+  bases:(r.bases||[]).map(b=>({area:b.area_zh||areaZh(b.area),nights:b.nights})),warn:(r.warnings||[]).length};}).filter(Boolean);}
+function cmpFromD(ids){return ids.filter(k=>D&&D.plan.routes[k]).map(k=>{const R=D.plan.routes[k], Lg=(D.lodging||[]).filter(l=>l.route===k);
+ return {id:k,name:R.name||("路線 "+k),days:R.days.map(d=>({day:d.day,date:d.date,drive:typeof d.total_drive_min==="number"?d.total_drive_min:null,stops:(d.items||[]).map(x=>{const t=x.type==="restaurant"?"restaurant":"spot", o=(t==="restaurant"?RS:SP)[x.id]||x; return {name:o.name||x.name||x.id,lat:o.lat,lng:o.lng,type:t,id:x.id,gm:o.google_maps};})})),
+  bases:Lg.length?Lg.map(l=>({area:l.area,nights:l.nights})):[...new Set(R.days.map(d=>BASEN[d.base]||d.base).filter(Boolean))].map(a=>({area:a,nights:null})),warn:Array.isArray(R.warnings)?R.warnings.length:null};});}
+function hm(m){m=Math.round(m); return m>=60?Math.floor(m/60)+" 小時 "+(m%60)+" 分":m+" 分";}
+function cmpMetrics(c){const dr=c.days.map(d=>d.drive), kn=dr.filter(v=>v!=null), sum=kn.reduce((a,b)=>a+b,0), all=dr.length&&kn.length===dr.length;
+ const ns=c.days.reduce((a,d)=>a+d.stops.length,0), nr=c.days.reduce((a,d)=>a+d.stops.filter(s=>s.type==="restaurant").length,0), mx=kn.length?Math.max(...kn):null;
+ return {days:c.days.length,total:all?sum:null,partial:!all&&kn.length?sum:null,unknownDays:dr.length-kn.length,max:mx,maxDay:mx!=null?c.days[dr.indexOf(mx)].day:null,avg:kn.length?sum/kn.length:null,stops:ns,spots:ns-nr,rests:nr,
+  bases:c.bases,moves:Math.max(0,c.bases.length-1),warn:c.warn};}
+function cmpTable(cs,src){const ms=cs.map(cmpMetrics), tot=ms.map(m=>m.total), best=tot.every(v=>v!=null)?Math.min(...tot):null;
+ const row=(label,f)=>`<tr><th scope="row">${label}</th>${ms.map((m,i)=>`<td>${f(m,i)}</td>`).join("")}</tr>`;
+ return `<div class="cmpWrap"><table class="cmpT"><thead><tr><th>指標</th>${cs.map((c,i)=>`<th style="border-top:4px solid ${CMP_COL[i]}"><span class="cdot" style="background:${CMP_COL[i]}"></span>${esc(c.name)}</th>`).join("")}</tr></thead><tbody>`
+  +row("天數",m=>m.days+" 天")
+  +row("總車程（座標估算）",m=>m.total!=null?hm(m.total)+(best!=null&&m.total===best&&cs.length>1?' <span class="tag rest">最少</span>':""):(m.partial!=null?"至少 "+hm(m.partial)+"（"+m.unknownDays+" 天不明）":"不明"))
+  +row("平均每天車程",m=>m.avg!=null?hm(m.avg):"不明")
+  +row("最長單日車程",m=>m.max!=null?hm(m.max)+"（第 "+m.maxDay+" 天）":"不明")
+  +row("停靠數",m=>m.stops+" 站<br><span class=\"cnt\">景點 "+m.spots+"・餐廳 "+m.rests+"</span>")
+  +row("住宿點與晚數",m=>m.bases.length?m.bases.map(b=>esc(b.area)+(b.nights!=null?" "+esc(b.nights)+" 晚":"")).join("<br>"):"尚未提供")
+  +row("換房次數",m=>m.bases.length?m.moves+" 次":"不明")
+  +row("注意事項／待確認",m=>m.warn==null?"—":m.warn+" 則")
+  +`<tr><th scope="row">動作</th>${cs.map(c=>`<td><div class="btns"><button class="btn sm" type="button" data-cmpview="${esc(c.id)}">看這套</button><button class="btn sm ok" type="button" data-cmpadopt="${esc(c.id)}">${src==="auto"?"採用這套":"設為採用"}</button></div></td>`).join("")}</tr>`
+  +`</tbody></table></div>`;}
+function cmpKill(){ if(CMP.map){try{CMP.map.remove();}catch(e){} CMP.map=null; CMP.groups={};} }
+function cmpMapDraw(cs){cmpKill(); const el=$("#cmpMap"); if(!el) return; if(typeof L==="undefined"){el.innerHTML='<div style="padding:20px">地圖載入失敗（無法連到 Leaflet CDN）</div>'; return;}
+ const m=L.map(el,{zoomControl:true}); L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",{maxZoom:18,attribution:'&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'}).addTo(m);
+ const all=[]; CMP.map=m; CMP.groups={};
+ cs.forEach((c,i)=>{const g=L.layerGroup(), pts=[], col=CMP_COL[i];
+  c.days.forEach(d=>d.stops.forEach(s=>{ if(s.lat==null||s.lng==null||!isFinite(+s.lat)||!isFinite(+s.lng)) return; const ll=[+s.lat,+s.lng]; pts.push(ll); all.push(ll);
+   const has=s.type==="restaurant"?RS[s.id]:SP[s.id], gm=s.gm&&/^https:\/\//.test(s.gm)?s.gm:"";
+   L.circleMarker(ll,{radius:s.type==="restaurant"?5:6,color:"#fff",weight:1.5,fillColor:col,fillOpacity:.95}).bindPopup(`<b>${s.type==="restaurant"?"🍴 ":""}${esc(s.name)}</b><br><span style="color:${col}">●</span> ${esc(c.name)}・第 ${esc(d.day)} 天${has?`<br><button class="btn sm" data-open="${s.type}:${esc(s.id)}">詳情／導航</button>`:""}${gm?` <a class="btn sm" target="_blank" rel="noopener" href="${esc(gm)}">Google 地圖</a>`:""}`).addTo(g);}));
+  if(pts.length>1) L.polyline(pts,{color:col,weight:4,opacity:.75,dashArray:CMP_DASH[i]||null}).addTo(g);
+  g.addTo(m); CMP.groups[c.id]=g;});
+ if(all.length) m.fitBounds(all,{padding:[24,24]}); else m.setView([33.6,130.4],8);
+ window.__cmpMap=m; window.__cmpLayers=Object.keys(CMP.groups).length; setTimeout(()=>m.invalidateSize(),60);}
+function cmpRender(src,scroll){const box=$("#cmpBox"); if(!box) return; src=src||CMP.src; let cs=[];
+ if(src==="auto"){ if(!AUTO.result) return; cs=cmpFromRs(AUTO.result,aselLoad()); } else if(D){ cs=cmpFromD(selLoad()); }
+ cs=cs.slice(0,CMP_MAX); CMP.src=src;
+ if(cs.length<2){cmpKill(); box.innerHTML='<div class="cnt">請勾選 2～3 套路線再按「📊 比較已勾選的路線」。</div>'; window.__cmp=null; return;}
+ box.innerHTML=`<div class="card cmpCard" id="cmpCard"><h3>📊 路線比較（${cs.length} 套）</h3><div class="cnt">車程為後台座標估算，非正式導航時間；不另加評分。點地圖上的點可看是哪一套、第幾天。</div>
+  <div class="cmpLeg">${cs.map((c,i)=>`<label><input type="checkbox" data-cmptog="${esc(c.id)}" checked><span class="cline" style="border-color:${CMP_COL[i]};border-top-style:${i?(i===1?"dashed":"dotted"):"solid"}"></span>${esc(c.name)}</label>`).join("")}</div>
+  <div id="cmpMap" class="cmpMap"></div>${cmpTable(cs,src)}<div class="btns"><button class="btn sm" type="button" id="cmpClose">收起比較</button></div></div>`;
+ cmpMapDraw(cs); window.__cmp={src,ids:cs.map(c=>c.id),metrics:cs.map(cmpMetrics)};
+ if(scroll){const c=$("#cmpCard"); if(c) c.scrollIntoView({block:"start"});}}
+function cmpBarHtml(src,n){return `<div class="card cmpBar" id="cmpBar"><b>📊 複選比較</b>：勾選 2～3 套後按下面按鈕，地圖疊在一起（每套不同顏色）並排比較指標。<div class="btns"><button class="btn pri" type="button" id="cmpBtn" data-src="${src}" ${n>=2?"":"disabled"}>📊 比較已勾選的路線</button><span class="cnt" id="cmpCnt">已勾 ${n} 套（最多 ${CMP_MAX} 套）</span></div><div id="cmpBox"></div></div>`;}
+function cmpSync(n){const b=$("#cmpBtn"); if(b) b.disabled=n<2; const c=$("#cmpCnt"); if(c) c.textContent="已勾 "+n+" 套（最多 "+CMP_MAX+" 套）"; if($("#cmpCard")) cmpRender(CMP.src);}
+document.addEventListener("change",e=>{const t=e.target;
+ if(t.name==="asel"){let v=[...document.querySelectorAll('#autoRes [name="asel"]:checked')].map(x=>x.value); if(v.length>CMP_MAX){t.checked=false; toast("一次最多比較／合併 "+CMP_MAX+" 套"); v=v.filter(x=>x!==t.value);} aselSave(v); cmpSync(v.length); return;}
+ const tg=t.closest&&t.closest("[data-cmptog]"); if(tg&&CMP.map){const g=CMP.groups[tg.dataset.cmptog]; if(g){ if(tg.checked) g.addTo(CMP.map); else CMP.map.removeLayer(g);} }});
+document.addEventListener("click",e=>{const t=e.target;
+ if(t.id==="adoptRoute"&&AUTO.result){ltAdopt(AUTO.result,t.dataset.rid); return;}
+ const lo=t.closest("[data-ltopen]"); if(lo){openTrip(lo.dataset.ltopen,{push:true,mod:"daily"}); return;}
+ if(t.id==="ltDraft"){const d=drLoad().find(x=>x.id===TID); if(d) openDraft(d,{mod:"new",push:true}); else toast("這台裝置找不到原本的草稿"); return;}
+ if(t.id==="ltExport"){ltExport(); return;}
+ if(t.id==="cmpBtn"){cmpRender(t.dataset.src,true); return;}
+ if(t.id==="cmpClose"){cmpKill(); const b=$("#cmpBox"); if(b) b.innerHTML=""; return;}
+ const cv=t.closest("[data-cmpview]"); if(cv){const k=cv.dataset.cmpview;
+  if(CMP.src==="auto"){const c=document.querySelector(`.rcard[data-rid="${CSS.escape(k)}"]`); if(c){c.scrollIntoView({block:"start"}); c.classList.add("flash"); setTimeout(()=>c.classList.remove("flash"),1500);} }
+  else if(D&&D.plan.routes[k]){setRoute(k,{push:true}); showMod("spots");} return;}
+ const ca=t.closest("[data-cmpadopt]"); if(ca){const k=ca.dataset.cmpadopt;
+  if(CMP.src==="auto"){ltAdopt(AUTO.result,k);} else if(TE&&TE.local){ltSetAdopted(k);} else if(D&&D.plan.routes[k]){setRoute(k,{push:true}); toast("已設為目前路線「"+(D.plan.routes[k].name||k)+"」");} return;}});
+/* ---------- 1.9.8 餐廳部補點（agency.restaurant_fill.public.v1；靜態檔 data/handoffs/<request_id>/restaurants.json，或手動匯入）
+   每一餐排第一個選項；可換成其他選項、可刪整餐（存在 itin:<行程>:v1，重新整理保留）；MapCode 只用檔案原值。 ---------- */
+const RF_SCHEMA="agency.restaurant_fill.public.v1";
+function rfClean(j,tid){ if(!j||typeof j!=="object"||!Array.isArray(j.fills)) return null;
+ const fixes=Object.assign({},j.coordinate_fixes||{});
+ (j.coordinate_checks||[]).forEach(c=>{ if(c&&c.db_id&&/^錯誤/.test(String(c.conclusion||""))&&c.correct&&c.correct.lat!=null) fixes[c.db_id]={lat:+c.correct.lat,lng:+c.correct.lng}; });
+ const DROP={coord_source:1,coord_note:1,mapcode_crosscheck:1,google_rating_note:1};
+ const fills=j.fills.filter(f=>f&&Array.isArray(f.options)&&f.options.length&&/^D?\d+$/.test(String(f.day||""))&&f.meal).map(f=>({route:[].concat(f.route||[]).map(String),day:+String(f.day).replace(/^D/,""),date:f.date||null,weekday:f.weekday||null,meal:String(f.meal),base:f.base||"",lodging_note:f.lodging_note||null,warnings:Array.isArray(f.warnings)?f.warnings.map(String):[],
+  options:f.options.filter(o=>o&&o.id&&o.name).map(o=>{const x={}; Object.keys(o).forEach(k=>{ if(!DROP[k]) x[k]=o[k]; }); return x;})})).filter(f=>f.options.length);
+ return {schema:RF_SCHEMA,request_id:j.request_id||(j.trip&&j.trip.handoff)||tid||null,version:j.version||null,generated_at:j.generated_at||null,department:j.department||"旅遊餐廳部",
+  lodging_meal_status:(j.lodging_meal_status||[]).map(s=>({base:s.base,meal_plan:s.meal_plan,affected:s.affected})),coordinate_fixes:fixes,fills};}
+function rfFetch(id){return fetchJson("data/handoffs/index.json",true).then(ix=>{const L=ix&&Array.isArray(ix.restaurants)?ix.restaurants:[]; if(L.indexOf(id)<0) return null; return fetchJson("data/handoffs/"+encodeURIComponent(id)+"/restaurants.json",true);}).then(j=>{const c=rfClean(j,id); return c&&(!c.request_id||c.request_id===id)?c:null;}).catch(()=>null);}
+const MEAL_ZH={breakfast:"早餐",lunch:"午餐",dinner:"晚餐",snack:"點心",cafe:"咖啡"};
+/* ltBuild 之後呼叫：把補點餐廳放進 rests、D.rplan（建議行程依餐別插入）、D.slots（換選項用） */
+function rfApply(d,pkg){const rf=pkg.rest_fill; d.slots={}; if(!rf) return d; const fx=rf.coordinate_fixes||{};
+ // 資料庫餐廳座標更正（route_set 的 db: 參照）
+ d.rests.concat(d.spots).forEach(o=>{const k=String(o.id||"").replace(/^db:/,""); if(fx[k]){o.lat=+fx[k].lat; o.lng=+fx[k].lng; o.google_maps="";}});
+ const RSx={}; d.rests.forEach(r=>RSx[r.id]=r); const rplan={};
+ Object.keys(d.plan.routes).forEach(rid=>{const days=d.plan.routes[rid].days; rplan[rid]=[]; d.slots[rid]={};
+  rf.fills.filter(f=>f.route.indexOf(rid)>=0).forEach(f=>{const di=days.find(x=>x.day===f.day); if(!di) return;
+   f.options.forEach(o=>{ if(!RSx[o.id]){ const r=normRest({id:o.id,name:o.name,lat:o.lat==null?null:+o.lat,lng:o.lng==null?null:+o.lng,mapcode:o.mapcode||null,mapcode_source:o.mapcode?o.mapcode_source||"":"",description:o.intro||"",category:o.category||"",cuisine:o.category||"",price_range:o.price||"",address:o.address||"",phone:o.phone||"",hours:o.hours||"",closed:o.closed_days||"",reservation:o.reservation||"",tabelog_score:o.tabelog_score==null?null:o.tabelog_score,google_rating:o.google_rating==null?null:o.google_rating,parkings:o.parkings||[],sources:o.sources||[],base:di.base,base_area:f.base,routes:[],meal:[],note:o.meal_note||"",fill:true});
+     RSx[o.id]=r; d.rests.push(r);} const r=RSx[o.id]; if(r.routes.indexOf(rid)<0) r.routes.push(rid); if(r.meal.indexOf(f.meal)<0) r.meal.push(f.meal); });
+   const key="D"+f.day+"|"+f.meal; (d.slots[rid][f.day]=d.slots[rid][f.day]||[]).push({key,day:f.day,meal:f.meal,base:f.base,lodging_note:f.lodging_note,warnings:f.warnings,options:f.options.map(o=>({id:o.id,open_note:o.open_note||"",open_that_day:o.open_that_day,meal_note:o.meal_note||""}))});
+   let dd=rplan[rid].find(x=>x.day===f.day); if(!dd){dd={day:f.day,items:[]}; rplan[rid].push(dd);} dd.items.push({id:f.options[0].id,type:"restaurant",meal:f.meal});});});
+ d.rplan=rplan; d.meta.rest_fill={count:rf.fills.length,generated_at:rf.generated_at,department:rf.department,source:pkg.rest_fill_source||"",lodging_meal_status:rf.lodging_meal_status||[]}; return d;}
+function slotsOf(r,day){return (D&&D.slots&&D.slots[r]&&D.slots[r][day])||[];}
+function slotOf(r,day,it){ if(!it||it.type!=="restaurant") return null; const m=mealOf(it); return slotsOf(r,day).find(s=>s.options.some(o=>o.id===it.id)&&(!m||m===s.meal))||null;}
+function slotHtml(i,it){const s=slotOf(route,curDay,it); if(!s) return ""; const cur=s.options.find(o=>o.id===it.id)||{};
+ const odn=cur.open_that_day===false?'<div class="alert">⚠️ 當天可能公休</div>':cur.open_that_day==="unknown"?'<div class="alert">⚠️ 當天是否營業不明，請電話確認</div>':"";
+ return `<div class="slot"><label>🍽 ${esc(MEAL_ZH[s.meal]||s.meal)}選項（餐廳部 ${s.options.length} 選 1）：<select data-slotsel="${i}">${s.options.map((o,k)=>{const r=RS[o.id]; return `<option value="${esc(o.id)}" ${o.id===it.id?"selected":""}>${k+1}. ${esc(r?r.name.split("／")[0]:o.id)}${k===0?"（預設）":""}</option>`;}).join("")}</select></label>
+  ${odn}${cur.open_note?`<div class="cnt">🕒 ${esc(cur.open_note)}</div>`:""}${cur.meal_note?`<div class="cnt">📝 ${esc(cur.meal_note)}</div>`:""}${s.lodging_note?`<div class="cnt">🏨 ${esc(s.lodging_note)}（住宿含餐就按「刪除」刪掉這一餐）</div>`:""}${(s.warnings||[]).map(w=>`<div class="cnt">⚠️ ${esc(w)}</div>`).join("")}</div>`;}
+function slotMissing(r,day,arr){const miss=slotsOf(r,day).filter(s=>!arr.some(x=>x.type==="restaurant"&&s.options.some(o=>o.id===x.id)&&(!mealOf(x)||mealOf(x)===s.meal))); if(!miss.length) return "";
+ return `<div class="cnt slotmiss">已刪除的餐：${miss.map(s=>`<button class="btn sm" type="button" data-slotadd="${esc(s.key)}">➕ 加回${esc(MEAL_ZH[s.meal]||s.meal)}</button>`).join(" ")}</div>`;}
+document.addEventListener("change",e=>{const t=e.target; if(!t.dataset||t.dataset.slotsel==null) return; const i=+t.dataset.slotsel, arr=(itin(route)[curDay]||[]).map(x=>Object.assign({},x)); if(!arr[i]) return;
+ const s=slotOf(route,curDay,arr[i]); arr[i].id=t.value; if(s) arr[i].meal=s.meal; saveDay(route,curDay,arr); renderItin(); toast("已換成「"+((RS[t.value]||{}).name||t.value).split("／")[0]+"」");});
+document.addEventListener("click",e=>{const b=e.target.closest("[data-slotadd]"); if(!b) return; const s=slotsOf(route,curDay).find(x=>x.key===b.dataset.slotadd); if(!s) return;
+ saveDay(route,curDay,mergeByMeal(itin(route)[curDay]||[],[{id:s.options[0].id,type:"restaurant",meal:s.meal}])); renderItin(); toast("已加回"+(MEAL_ZH[s.meal]||""));});
+/* 補點資料到了（自動抓到或手動匯入）：存進本機行程包；已經改過的每日行程只補「之前沒帶入過」的餐，不動使用者刪掉／換過的 */
+function rfStore(pkg,rf,srcName){ if(!pkg||!rf) return false; const before=new Set(pkg.rest_slots_applied||[]), itk="itin:"+pkg.trip_id+":v1"; pkg.rest_fill=rf; pkg.rest_fill_source=srcName; pkg.updated_at=nowISO();
+ const d=rfApply(ltBuild(pkg),pkg); let s={}; try{s=JSON.parse(ls.get(itk)||"{}")||{};}catch(e){} let added=0; const applied=[];
+ Object.keys(d.slots).forEach(rid=>Object.keys(d.slots[rid]).forEach(day=>d.slots[rid][day].forEach(sl=>{const k=rid+"|"+sl.key; applied.push(k); if(before.has(k)||!s[rid]||!s[rid][day]) return;
+  const arr=s[rid][day]; if(arr.some(x=>x.type==="restaurant"&&sl.options.some(o=>o.id===x.id))) return; s[rid][day]=arr.concat([{type:"restaurant",id:sl.options[0].id,meal:sl.meal}]); added++;})));
+ pkg.rest_slots_applied=applied; if(!ltSave(pkg)) return false; if(added) ls.set(itk,JSON.stringify(s)); return true;}
+function rfImport(file){ if(!file) return; file.text().then(t=>{let j; try{j=JSON.parse(t);}catch(e){toast("檔案不是有效 JSON"); return;} const rf=rfClean(j,TID);
+ if(!rf){toast("看不懂這個檔案（需要餐廳部 restaurants_fill／restaurants.json）",3500); return;}
+ if(rf.request_id&&rf.request_id!==TID&&!confirm("這份餐廳資料屬於「"+rf.request_id+"」，不是目前行程，仍要匯入嗎？")) return;
+ rf.request_id=TID; if(rfStore(ltGet(TID),rf,"手動匯入："+file.name)) openTrip(TID,{route,mod:curMod,day:curDay}).then(()=>toast("已匯入餐廳部補點 "+rf.fills.length+" 餐",3000));});}
+function rfStatusHtml(){ if(!TE||!TE.local) return ""; const m=D.meta.rest_fill;
+ return `<div class="card rfcard">${m?`🍽 餐廳部補點：這套路線已帶入 ${Object.values((D.slots||{})[route]||{}).reduce((a,x)=>a+x.length,0)} 餐（餐廳部共 ${m.count} 筆餐次；每餐預設第 1 個選項，可在「每日」換選項或刪除）<br><span class="cnt">來源：${esc(m.source||"")}${m.generated_at?"・"+esc(String(m.generated_at).slice(0,16).replace("T"," ")):""}</span>`:`🍽 餐廳部補點：尚未提供`}
+  <div class="btns"><label class="btn sm">⬆ 手動匯入餐廳 JSON<input type="file" class="rfImp" accept="application/json,.json" hidden></label></div></div>`;}
+document.addEventListener("change",e=>{ if(e.target.classList&&e.target.classList.contains("rfImp")){rfImport(e.target.files[0]); e.target.value="";}});
 $("#cuadd").addEventListener("click",()=>cuForm(null));
 $("#cucopy").addEventListener("click",()=>{const t=cuText(); if(!t){toast("還沒有自訂景點");return;} window.__lastCuText=t; copyText(t,"已複製自訂景點清單，可貼給景點部補查");});
 setTimeout(listPoll,1200);
-window.__app={lgShrink,LG_NMAX,quotaUntil,bkMsg,plQueued,plSched,QF,areaZh,zhText,userNotes,routeName,pickLoad,doneAlert,bkGate,listPoll,bkLoad,bkSave,bkRow,bkDateCell,buildXlsx,bkXlsxDownload,XLSX_COLS,lgOpen,flSplit,flJoin,flText,backendCfg,hashView,get AUTO(){return AUTO;},drLoad,drVisible,reqExport,reqText,readNewForm,selLoad,selectedRoutes,get DRAFT(){return DRAFT;},get INTAKE(){return INTAKE;},DL,BUF,decLoad,decSave,decExport,showMod,pickupDefault,dropoffDefault,get curMod(){return curMod;},bestDay,localNearby,SCATS,photonSearch,queryVariants,qTokens,localSearch,photonMulti,parseLocationInput,cpLoad,cpSave,cpId,sha1hex,searchPlaces,searchCenter,SEARCH_ENDPOINTS,openSearch,get SRVCP(){return SRVCP;},parseLoc,cuLoad,cuText,cuMerge,stopsOf,mergeByMeal,get SAME(){return SAME;},setRoute,openTrip,showTab,addTo,itin,suggested,store,exportJson,buildKml,buildCsv,buildFinal,importText,parseImport,
+window.__app={ltGet,ltIndex,ltBuild,ltEntry,ltAdopt,cmpRender,cmpFromRs,cmpMetrics,rfClean,rfFetch,slotOf,get CMP(){return CMP;},lgShrink,LG_NMAX,quotaUntil,bkMsg,plQueued,plSched,QF,areaZh,zhText,userNotes,routeName,pickLoad,doneAlert,bkGate,listPoll,bkLoad,bkSave,bkRow,bkDateCell,buildXlsx,bkXlsxDownload,XLSX_COLS,lgOpen,flSplit,flJoin,flText,backendCfg,hashView,get AUTO(){return AUTO;},drLoad,drVisible,reqExport,reqText,readNewForm,selLoad,selectedRoutes,get DRAFT(){return DRAFT;},get INTAKE(){return INTAKE;},DL,BUF,decLoad,decSave,decExport,showMod,pickupDefault,dropoffDefault,get curMod(){return curMod;},bestDay,localNearby,SCATS,photonSearch,queryVariants,qTokens,localSearch,photonMulti,parseLocationInput,cpLoad,cpSave,cpId,sha1hex,searchPlaces,searchCenter,SEARCH_ENDPOINTS,openSearch,get SRVCP(){return SRVCP;},parseLoc,cuLoad,cuText,cuMerge,stopsOf,mergeByMeal,get SAME(){return SAME;},setRoute,openTrip,showTab,addTo,itin,suggested,store,exportJson,buildKml,buildCsv,buildFinal,importText,parseImport,
  get trip(){return TID;},get route(){return route;},get day(){return curDay;},get RS(){return RS;},get SP(){return SP;},get D(){return D;},get RESTS(){return RESTS;},K};
 })();
 </script>
