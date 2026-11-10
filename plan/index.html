@@ -218,7 +218,7 @@ pre.json{background:#f4f6f8;border-radius:8px;padding:8px;font-size:11px;max-hei
 <script>
 (function(){
 "use strict";
-const APPV="plan-multi-1.9.6";
+const APPV="plan-multi-1.9.7";
 /* 1.8 後台自動排路線（Cloudflare Worker）：網址部署後填入。空字串＝後台未啟用，網頁維持 1.7 行為（匯出 JSON＋複製文字）。site key 是公開值。 */
 const BACKEND_CFG={url:"https://trip-intake.turbo99992001.workers.dev",turnstile_site_key:"0x4AAAAAAFs8wmzPidNkiUBU"};
 const CAT={popular:"熱門",natural:"自然絕景",shrine:"神社寺院",historic:"歷史",onsen:"溫泉",hidden:"私房",food:"美食",experience:"親子／體驗",anime:"動漫",anime_game:"🎮 動漫・遊戲周邊",festival:"活動／花季",custom:"👤 自訂地點"};
@@ -1313,11 +1313,12 @@ function bkFetch(path,opt){const b=backendCfg(); if(!b) return Promise.reject(ne
  return fetch(b.url+path,{method:opt.method||"GET",headers:Object.assign({"Content-Type":"application/json"},opt.headers||{}),body:opt.body?JSON.stringify(opt.body):undefined,signal:ctl.signal,cache:"no-store",credentials:"omit",referrerPolicy:"no-referrer"})
   .then(r=>r.text().then(t=>{let j=null; try{j=t?JSON.parse(t):null;}catch(e){} if(r.status===429&&j&&j.code==="kv_quota") quotaSet(); return {status:r.status,ok:r.ok,j};})).finally(()=>clearTimeout(tm));}
 const BK_ERR={400:"資料格式有誤",403:"驗證碼或邀請碼不正確",413:"資料太大",429:"今天的送件次數已用完，明天再試",503:"目前排隊已滿，請稍後再試"};
-const ST_TXT={queued:"⏳ 排隊中",running:"⚙️ 後台排路線中",validating:"🔎 檢查中",published:"✅ 路線已產生",failed:"❌ 自動排路線失敗",rejected:"⛔ 需求被退回"};
+const ST_TXT={queued:"⏳ 排隊中",running:"⚙️ 後台排路線中",validating:"🔎 檢查中",published:"✅ 路線已產生",failed:"❌ 自動排路線失敗",rejected:"⛔ 需求被退回",handed_off:"📋 已轉交旅行社"};
 let POLL_T=null, AUTO={vc:null,status:null,result:null};
+/* 1.9.7 轉交旅行社：handed_off 視同排程中（持續輪詢，完成後自動顯示）；PWA 顯示 error「Codex 額度不足，已轉交旅行社人工規劃」 */
 /* 1.9.2 進度：已收到→排程中→完成／失敗；狀態寫回草稿（localStorage），重新整理後接續輪詢 */
 const ST_DONE={published:1,failed:1,rejected:1};
-function stPhase(st){return st==="published"?3:(st==="failed"||st==="rejected")?-1:(st==="running"||st==="validating")?2:1;}
+function stPhase(st){return st==="published"?3:(st==="failed"||st==="rejected")?-1:(st==="running"||st==="validating"||st==="handed_off")?2:1;}
 function stepHtml(st){const p=stPhase(st), L=["已收到","排程中",p<0?"失敗":"完成"]; return `<div class="steps bkSteps" data-phase="${p}">`+L.map((t,i)=>`<span class="${p<0?(i<2?"on":"bad"):(i<p?"on":"")}">${i+1}. ${t}</span>`).join("")+`</div>`;}
 function drSetStatus(vc,st){ if(!vc||!st) return; const a=drLoad(); let ch=false, done=null; a.forEach(d=>{ if(d.backend&&d.backend.view_code===vc){ if(d.backend.status!==st){d.backend.status=st; d.backend.status_at=nowISO(); ch=true;} if(st==="published"&&!d.backend.notified){d.backend.notified=nowISO(); ch=true; done=d;}}}); if(ch) drSaveAll(a); if(done) doneAlert(done); if(DRAFT&&DRAFT.backend&&DRAFT.backend.view_code===vc) DRAFT.backend.status=st;}
 /* 1.9.3 完成提示：對話框＋（允許時）Notification＋vibrate；不支援就安靜略過 */
