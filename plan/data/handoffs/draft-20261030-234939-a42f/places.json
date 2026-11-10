@@ -2,7 +2,7 @@
  "schema": "agency.places.v1",
  "request_id": "draft-20261030-234939-a42f",
  "version": "2026-11-11-a1+merged",
- "generated_at": "2026-11-11T02:58:10+08:00",
+ "generated_at": "2026-11-11T07:17:11+08:00",
  "department": "旅遊資訊部",
  "note": "A1：景點類別由 OSM 標籤＋名稱關鍵字規則推出（category_source=osm_rule），判不出標 uncat（待分類）。A3：資料庫餐廳類型取自 trip-db 候選（OSM）。其餘欄位 null＝尚未查（不覆蓋網頁現值），待景點部／餐廳部補。",
  "category_codes": {
@@ -8375,6 +8375,152 @@
    "checked_date": "2026-11-11",
    "note": "預算為 Tabelog 每人預算區間。",
    "cuisine_source": "Tabelog 2026-11-11"
+  },
+  "rf_tak_amaterasu": {
+   "kind": "restaurant",
+   "name": "あまてらすの隠れcafe（アマテラスの隠れcafe）",
+   "cuisine_group": "咖啡廳",
+   "cuisine": "咖啡館（輕食・霜淇淋・高千穗牛熱狗）",
+   "budget_lunch": "¥1,000–¥1,999（Tabelog）",
+   "budget_dinner": "不適用",
+   "closed_days": "不定休",
+   "hours": "10:00–17:00",
+   "reservation": {
+    "required": false,
+    "accepts": false,
+    "method": "不收（現場候位）",
+    "note": null
+   },
+   "google_maps_url": "https://www.google.com/maps/search/?api=1&query=32.7355756579069,131.35120122052942",
+   "ratings": [
+    {
+     "source": "tabelog",
+     "score": 3.49,
+     "scale": 5,
+     "url": "https://tabelog.com/miyazaki/A4505/A450502/45007779/",
+     "checked_at": "2026-11-11"
+    }
+   ],
+   "mapcode": "330 837 762*44",
+   "mapcode_source": "saibara convgeo 換算並反查一致（誤差 1.1 m）；Mapion 右鍵同座標取得 330 837 762*44，與 saibara 完全一致",
+   "sources": [
+    {
+     "url": "https://tabelog.com/miyazaki/A4505/A450502/45007779/",
+     "checked_at": "2026-11-11"
+    },
+    {
+     "url": "https://takachiho-kanko.info/gourmet/30/",
+     "checked_at": "2026-11-11"
+    },
+    {
+     "url": "https://www.mapple.net/spot/45010700/",
+     "checked_at": "2026-11-11"
+    },
+    {
+     "url": "https://www.openstreetmap.org/node/5087204212",
+     "checked_at": "2026-11-11"
+    },
+    {
+     "url": "https://www.mapion.co.jp/m2/32.735576,131.351201,18",
+     "checked_at": "2026-11-11"
+    }
+   ],
+   "field_status": {
+    "ratings.google": "待查（PlacesSearch 工具不可用）",
+    "budget_dinner": "不適用"
+   },
+   "checked_date": "2026-11-11",
+   "note": "11/29 週日：無固定公休（不定休，當天需確認）",
+   "cuisine_source": "Tabelog 2026-11-11",
+   "parking": {
+    "available": true,
+    "type": "dedicated",
+    "name": "店家停車場",
+    "fee": "免費（mapple）",
+    "capacity": "5 台（高千穗町觀光協會）／10 台（Tabelog、mapple），來源不一致",
+    "lat": null,
+    "lng": null,
+    "mapcode": null,
+    "mapcode_source": "待查（公開資料無停車場位置；OSM 150 m 內無停車場資料）",
+    "walk_min": null,
+    "note": "位置待查，可先用餐廳本身 MapCode 導航到店前",
+    "source": "https://takachiho-kanko.info/gourmet/30/"
+   }
+  },
+  "rf_aso_kusasenri": {
+   "kind": "restaurant",
+   "name": "草千里食堂（ニュー草千里 2F）",
+   "cuisine_group": "食堂",
+   "cuisine": "赤牛丼・鄉土料理・麵類（食券制美食街形式，約 300 席）",
+   "budget_lunch": "¥2,000–¥2,999（Tabelog）",
+   "budget_dinner": "不適用",
+   "closed_days": "不定休（基本上全年無休）",
+   "hours": "11:00–16:00（L.O. 15:00）",
+   "reservation": {
+    "required": false,
+    "accepts": false,
+    "method": "不收（食券制）",
+    "note": "10 人以上團體可預約專用菜單（官網）"
+   },
+   "google_maps_url": "https://www.google.com/maps/search/?api=1&query=32.88613331771669,131.05421910225837",
+   "ratings": [
+    {
+     "source": "tabelog",
+     "score": 3.38,
+     "scale": 5,
+     "url": "https://tabelog.com/kumamoto/A4302/A430201/43017385/",
+     "checked_at": "2026-11-11"
+    }
+   ],
+   "mapcode": "256 456 863*75",
+   "mapcode_source": "saibara convgeo 換算並反查一致（誤差 1.7 m）；Mapion 右鍵同座標取得 256 456 833*42，saibara 反查誤差 1.8 m，兩碼指向同一點（相距約 3 m）",
+   "sources": [
+    {
+     "url": "https://tabelog.com/kumamoto/A4302/A430201/43017385/",
+     "checked_at": "2026-11-11"
+    },
+    {
+     "url": "https://newkusasenri.com/",
+     "checked_at": "2026-11-11"
+    },
+    {
+     "url": "https://kumamoto.guide/shugaku/programs/detail/341",
+     "checked_at": "2026-11-11"
+    },
+    {
+     "url": "https://www.npfj.or.jp/branch-list/aso/",
+     "checked_at": "2026-11-11"
+    },
+    {
+     "url": "https://www.openstreetmap.org/way/410730413",
+     "checked_at": "2026-11-11"
+    },
+    {
+     "url": "https://www.mapion.co.jp/m2/32.886133,131.054219,18",
+     "checked_at": "2026-11-11"
+    }
+   ],
+   "field_status": {
+    "ratings.google": "待查（PlacesSearch 工具不可用）",
+    "budget_dinner": "不適用"
+   },
+   "checked_date": "2026-11-11",
+   "note": "11/30 週一：基本上全年無休",
+   "cuisine_source": "Tabelog 2026-11-11",
+   "parking": {
+    "available": true,
+    "type": "dedicated",
+    "name": "草千里駐車場（自然公園財團阿蘇支部管理，有料）",
+    "fee": "乗用車 ¥500（當日有效）",
+    "capacity": "普通車約 300 台（熊本縣教育旅行網）",
+    "lat": 32.8861,
+    "lng": 131.0548212,
+    "mapcode": "256 456 835*41",
+    "mapcode_source": "沿用景點部 places_spots.json 草千里停車場入口（Mapion 取得、saibara 反查一致 2.3 m）；餐廳部再以 saibara 反查一次，誤差 2 m",
+    "walk_min": 1,
+    "note": "官網：到草千里各設施用餐須停這個有料停車場；入口點距餐廳直線約 56 m。免費的「草千里展望駐車場」在另一側",
+    "source": "https://newkusasenri.com/"
+   }
   }
  }
 }

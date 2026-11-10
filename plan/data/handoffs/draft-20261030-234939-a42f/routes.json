@@ -472,7 +472,7 @@
               "leg_min": 8
             },
             {
-              "ref": null,
+              "ref": "rf_tak_amaterasu",
               "name": "アマテラスの隠れcafe",
               "lat": 32.7355756579069,
               "lng": 131.35120122052942,
@@ -1495,7 +1495,7 @@
               "leg_min": 10
             },
             {
-              "ref": null,
+              "ref": "rf_tak_amaterasu",
               "name": "アマテラスの隠れcafe",
               "lat": 32.7355756579069,
               "lng": 131.35120122052942,
@@ -1568,7 +1568,7 @@
               "leg_min": 18
             },
             {
-              "ref": null,
+              "ref": "rf_aso_kusasenri",
               "name": "草千里食堂",
               "lat": 32.88613331771669,
               "lng": 131.05421910225837,
@@ -2427,7 +2427,7 @@
               "leg_min": 10
             },
             {
-              "ref": null,
+              "ref": "rf_tak_amaterasu",
               "name": "アマテラスの隠れcafe",
               "lat": 32.7355756579069,
               "lng": 131.35120122052942,
