@@ -2,7 +2,7 @@
  "schema": "agency.places.v1",
  "request_id": "draft-20261030-234939-a42f",
  "version": "2026-11-11-a1+merged",
- "generated_at": "2026-11-11T12:24:40+08:00",
+ "generated_at": "2026-11-12T00:47:08+08:00",
  "department": "旅遊資訊部",
  "note": "A1：景點類別由 OSM 標籤＋名稱關鍵字規則推出（category_source=osm_rule），判不出標 uncat（待分類）。A3：資料庫餐廳類型取自 trip-db 候選（OSM）。其餘欄位 null＝尚未查（不覆蓋網頁現值），待景點部／餐廳部補。",
  "category_codes": {
@@ -55,7 +55,10 @@
    "sources": [
     {
      "url": "https://www.hagishi.com/search/detail.php?d=100050",
-     "checked_at": "2026-11-11"
+     "checked_at": "2026-11-12",
+     "fields": [
+      "phone"
+     ]
     },
     {
      "url": "https://www.hagishi.com/access/parking/",
@@ -77,14 +80,23 @@
      "fields": [
       "parking"
      ]
+    },
+    {
+     "url": "https://www.google.com/maps/place/%E8%90%A9%E5%9F%8E%E8%B7%A1%E6%8C%87%E6%9C%88%E5%85%AC%E5%9C%92/@34.4175201,131.3837761,15z/data=!4m6!3m5!1s0x3544af67e33b5367:0xa3ae87640106b398!8m2!3d34.4176028!4d131.3835522!16s%2Fg%2F119w2pg6k&entry=ttu&g_ep=EgoyMDI2MTEwNC4wIKXMDSoASAFQAw%3D%3D",
+     "checked_at": "2026-11-12",
+     "fields": [
+      "address"
+     ]
     }
    ],
    "field_status": {
     "stay_minutes": "估計",
     "season_note": "估計",
-    "parking.walk_min": "估計"
+    "parking.walk_min": "估計",
+    "phone": "已查",
+    "address": "已查"
    },
-   "checked_date": "2026-11-11",
+   "checked_date": "2026-11-12",
    "ratings": [
     {
      "source": "google",
@@ -94,7 +106,9 @@
      "checked_at": "2026-11-11",
      "check_method": "google_maps_tool"
     }
-   ]
+   ],
+   "phone": "0838-25-1826",
+   "address": "〒758-0057 山口県萩市堀内1区85-1"
   },
   "db:db_s_a07c985095": {
    "kind": "spot",
@@ -132,11 +146,17 @@
    "sources": [
     {
      "url": "https://www.hagishi.com/search/detail.php?d=100009",
-     "checked_at": "2026-11-11"
+     "checked_at": "2026-11-12",
+     "fields": [
+      "phone"
+     ]
     },
     {
      "url": "https://showin-jinja.or.jp/guide-map/",
-     "checked_at": "2026-11-11"
+     "checked_at": "2026-11-12",
+     "fields": [
+      "address"
+     ]
     },
     {
      "url": "https://www.google.com/maps/place/%E6%9D%BE%E4%B8%8B%E6%9D%91%E5%A1%BE/@34.4121503,131.4173353,15z/data=!4m6!3m5!1s0x3544af94351ec9f9:0x500627551ca02a9a!8m2!3d34.4121475!4d131.4173279!16s%2Fm%2F0nbf2mh",
@@ -159,9 +179,11 @@
    "field_status": {
     "stay_minutes": "估計",
     "season_note": "查無（無特定季節亮點）",
-    "parking.walk_min": "估計"
+    "parking.walk_min": "估計",
+    "phone": "已查",
+    "address": "已查"
    },
-   "checked_date": "2026-11-11",
+   "checked_date": "2026-11-12",
    "ratings": [
     {
      "source": "google",
@@ -171,7 +193,9 @@
      "checked_at": "2026-11-11",
      "check_method": "google_maps_tool"
     }
-   ]
+   ],
+   "phone": "0838-22-4643",
+   "address": "〒758-0011 山口県萩市椿東1537"
   },
   "db:db_s_95d6b77d92": {
    "kind": "spot",
@@ -183,7 +207,7 @@
    "category_source": "osm_rule",
    "category_basis": "名稱符合「historic」關鍵字",
    "hours": "09:00–17:00（12–2 月至 16:30）",
-   "closed_days": "週二（逢假日順延翌日）",
+   "closed_days": "疑似已閉館（Google 標示閉業，須確認）；既有資料：週二（逢假日順延翌日）",
    "admission": "一般 ¥500／高大學生 ¥300／小中學生 ¥200",
    "stay_minutes": 40,
    "rain_ok": true,
@@ -205,11 +229,15 @@
    },
    "mapcode": "243 886 395*70",
    "mapcode_source": "Mapion 右鍵取得 243 886 395*70，以 saibara convgeo 反查一致（誤差 2.1 m）；saibara 正向換算 243 886 395*78（反查誤差 1.0 m）。換算點：停車場入口 34.415171,131.382493（停車場 way/687241774 無入口節點；取輪廓上距車道最近點（約 6 m））",
-   "description": "萩城跡停車場旁的私立史料館，展出藩政時代至明治初期的武具、書簡與日本最古老的八音盒「紙腔琴」等。",
+   "description": "【疑似已閉館】Google 地圖標示閉業，官方未查到公告，須確認。萩城跡停車場旁的私立史料館，展出藩政時代至明治初期的武具、書簡與日本最古老的八音盒「紙腔琴」等。",
    "sources": [
     {
      "url": "https://www.museum.or.jp/museum/6506",
-     "checked_at": "2026-11-11"
+     "checked_at": "2026-11-12",
+     "fields": [
+      "address",
+      "alert"
+     ]
     },
     {
      "url": "https://kojodan.jp/castle/86/memo/1369.html",
@@ -222,16 +250,29 @@
      "fields": [
       "parking"
      ]
+    },
+    {
+     "url": "https://www.google.com/maps/place/%E8%90%A9%E5%8F%B2%E6%96%99%E9%A4%A8/data=!4m7!3m6!1s0x3544af675203d9c1:0x9c827a4cd01f4ddd",
+     "checked_at": "2026-11-12",
+     "fields": [
+      "alert"
+     ]
     }
    ],
    "field_status": {
     "stay_minutes": "估計",
     "season_note": "查無（無特定季節亮點）",
     "parking.walk_min": "估計",
-    "ratings.google": "待查（Google 搜尋落到萩博物館（另一館））"
+    "ratings.google": "待查（Google 搜尋落到萩博物館（另一館））",
+    "address": "已查"
    },
-   "checked_date": "2026-11-11",
-   "note": "資料來源為第三方博物館目錄（非官網），2026 年是否仍營業未能以官網確認；Google 地圖搜尋落到萩博物館（另一館，約 850 m），故 Google 分數待查。"
+   "checked_date": "2026-11-12",
+   "note": "資料來源為第三方博物館目錄（非官網），2026 年是否仍營業未能以官網確認；Google 地圖搜尋落到萩博物館（另一館，約 850 m），故 Google 分數待查。 風險項：Google 地圖「萩史料館」標示閉業；個人旅遊部落格（2025-05-25）稱已於疫情前悄悄閉館。官方未查到公告，須確認。未從路線移除。查證日 2026-11-12。",
+   "address": "〒758-0057 山口県萩市堀内83-33",
+   "alert": {
+    "level": "closed",
+    "text": "Google 標示閉業，須確認（官方未查到公告）"
+   }
   },
   "db:db_s_31414eedae": {
    "kind": "spot",
@@ -270,7 +311,11 @@
    "sources": [
     {
      "url": "https://hum-web.jp/info/",
-     "checked_at": "2026-11-11"
+     "checked_at": "2026-11-12",
+     "fields": [
+      "phone",
+      "address"
+     ]
     },
     {
      "url": "https://hum-web.jp/exhibition/",
@@ -291,9 +336,11 @@
     }
    ],
    "field_status": {
-    "stay_minutes": "估計"
+    "stay_minutes": "估計",
+    "phone": "已查",
+    "address": "已查"
    },
-   "checked_date": "2026-11-11",
+   "checked_date": "2026-11-12",
    "ratings": [
     {
      "source": "google",
@@ -303,7 +350,9 @@
      "checked_at": "2026-11-11",
      "check_method": "google_maps_tool"
     }
-   ]
+   ],
+   "phone": "0838-24-2400",
+   "address": "〒758-0074 山口県萩市平安古町586-1"
   },
   "db:db_s_4190cb3233": {
    "kind": "spot",
@@ -341,7 +390,11 @@
    "sources": [
     {
      "url": "https://www.hagishi.com/search/detail.php?d=100087",
-     "checked_at": "2026-11-11"
+     "checked_at": "2026-11-12",
+     "fields": [
+      "phone",
+      "address"
+     ]
     },
     {
      "url": "https://www.google.com/maps/place/%E6%81%B5%E7%BE%8E%E9%A0%88%E3%83%B6%E9%BC%BB%E9%80%A0%E8%88%B9%E6%89%80%E8%B7%A1/@34.430493,131.4121753,15z/data=!4m6!3m5!1s0x3544afb1f1152bbb:0x32cfe3e23da674b2!8m2!3d34.4304985!4d131.4123651!16s%2Fg%2F11bc87rk8c",
@@ -356,9 +409,11 @@
    "field_status": {
     "stay_minutes": "估計",
     "season_note": "查無（無特定季節亮點）",
-    "parking.walk_min": "估計"
+    "parking.walk_min": "估計",
+    "phone": "已查",
+    "address": "已查"
    },
-   "checked_date": "2026-11-11",
+   "checked_date": "2026-11-12",
    "ratings": [
     {
      "source": "google",
@@ -368,7 +423,9 @@
      "checked_at": "2026-11-11",
      "check_method": "google_maps_tool"
     }
-   ]
+   ],
+   "phone": "0838-25-3380",
+   "address": "〒758-0011 山口県萩市椿東5159-14ほか"
   },
   "db:db_s_e6d6e19c3a": {
    "kind": "spot",
@@ -406,7 +463,11 @@
    "sources": [
     {
      "url": "https://www.hagishi.com/search/detail.php?d=100081",
-     "checked_at": "2026-11-11"
+     "checked_at": "2026-11-12",
+     "fields": [
+      "phone",
+      "address"
+     ]
     },
     {
      "url": "https://www.hagishi.com/access/parking/",
@@ -433,9 +494,11 @@
    "field_status": {
     "stay_minutes": "估計",
     "season_note": "查無（無特定季節亮點）",
-    "parking.walk_min": "估計"
+    "parking.walk_min": "估計",
+    "phone": "已查",
+    "address": "已查"
    },
-   "checked_date": "2026-11-11",
+   "checked_date": "2026-11-12",
    "ratings": [
     {
      "source": "google",
@@ -445,7 +508,9 @@
      "checked_at": "2026-11-11",
      "check_method": "google_maps_tool"
     }
-   ]
+   ],
+   "phone": "0838-25-3380",
+   "address": "〒758-0011 山口県萩市椿東4897-7"
   },
   "db:db_s_c43f7638ba": {
    "kind": "spot",
@@ -484,7 +549,11 @@
    "sources": [
     {
      "url": "https://akihaku.jimdofree.com/%E3%81%94%E5%88%A9%E7%94%A8%E6%A1%88%E5%86%85/",
-     "checked_at": "2026-11-11"
+     "checked_at": "2026-11-12",
+     "fields": [
+      "phone",
+      "address"
+     ]
     },
     {
      "url": "https://www.google.com/maps/place/%E7%BE%8E%E7%A5%A2%E5%B8%82%E7%AB%8B%E7%A7%8B%E5%90%89%E5%8F%B0%E7%A7%91%E5%AD%A6%E5%8D%9A%E7%89%A9%E9%A4%A8/@34.2350117,131.3072713,15z/data=!4m6!3m5!1s0x35449e710eb21927:0xf01317072a17a2c6!8m2!3d34.2350233!4d131.3073126!16s%2Fg%2F1tfsf68f",
@@ -506,9 +575,11 @@
    ],
    "field_status": {
     "stay_minutes": "估計",
-    "season_note": "估計"
+    "season_note": "估計",
+    "phone": "已查",
+    "address": "已查"
    },
-   "checked_date": "2026-11-11",
+   "checked_date": "2026-11-12",
    "ratings": [
     {
      "source": "google",
@@ -518,7 +589,9 @@
      "checked_at": "2026-11-11",
      "check_method": "google_maps_tool"
     }
-   ]
+   ],
+   "phone": "0837-62-0640",
+   "address": "〒754-0511 山口県美祢市秋芳町秋吉11237-938"
   },
   "db:db_s_cdf9fdca35": {
    "kind": "spot",
@@ -561,7 +634,11 @@
     },
     {
      "url": "https://yamaguchi-tourism.jp/spot/detail_10467.html",
-     "checked_at": "2026-11-11"
+     "checked_at": "2026-11-12",
+     "fields": [
+      "phone",
+      "address"
+     ]
     },
     {
      "url": "https://www.google.com/maps/place/%E8%B5%A4%E9%96%93%E7%A5%9E%E5%AE%AE+%E5%AE%9D%E7%89%A9%E6%AE%BF/@33.9595636,130.9484903,15z/data=!4m6!3m5!1s0x3543bd77885b45db:0x49b7cc962e10012a!8m2!3d33.9595636!4d130.9484707!16s%2Fg%2F1v3dpxqd",
@@ -583,9 +660,11 @@
    ],
    "field_status": {
     "stay_minutes": "估計",
-    "season_note": "查無（無特定季節亮點）"
+    "season_note": "查無（無特定季節亮點）",
+    "phone": "已查",
+    "address": "已查"
    },
-   "checked_date": "2026-11-11",
+   "checked_date": "2026-11-12",
    "ratings": [
     {
      "source": "google",
@@ -596,7 +675,9 @@
      "check_method": "google_maps_tool"
     }
    ],
-   "note": "寶物殿時間與票價來自第三方整理頁，官網未直接確認"
+   "note": "寶物殿時間與票價來自第三方整理頁，官網未直接確認",
+   "phone": "083-231-4138",
+   "address": "〒750-0003 山口県下関市阿弥陀寺町4-1"
   },
   "db:db_s_81e984d61a": {
    "kind": "spot",
@@ -634,7 +715,11 @@
    "sources": [
     {
      "url": "https://www.shimohaku.jp/o/contents.html?contnum=5&node=106",
-     "checked_at": "2026-11-11"
+     "checked_at": "2026-11-12",
+     "fields": [
+      "phone",
+      "address"
+     ]
     },
     {
      "url": "https://www.google.com/maps/place/%E6%97%A5%E6%B8%85%E8%AC%9B%E5%92%8C%E8%A8%98%E5%BF%B5%E9%A4%A8/@33.9590407,130.948352,15z/data=!4m6!3m5!1s0x3543bd77f4ead647:0xaf931cb3befccd2b!8m2!3d33.959015!4d130.9483464!16s%2Fg%2F11fjy4r7q4",
@@ -656,9 +741,11 @@
    ],
    "field_status": {
     "stay_minutes": "估計",
-    "season_note": "查無（無特定季節亮點）"
+    "season_note": "查無（無特定季節亮點）",
+    "phone": "已查",
+    "address": "已查"
    },
-   "checked_date": "2026-11-11",
+   "checked_date": "2026-11-12",
    "ratings": [
     {
      "source": "google",
@@ -668,7 +755,9 @@
      "checked_at": "2026-11-11",
      "check_method": "google_maps_tool"
     }
-   ]
+   ],
+   "phone": "083-241-1080",
+   "address": "〒750-0003 山口県下関市阿弥陀寺町4-3"
   },
   "db:db_s_5a59588791": {
    "kind": "spot",
@@ -706,11 +795,17 @@
    "sources": [
     {
      "url": "https://www.kyu-eikoku-ryoujikan.com/rules/",
-     "checked_at": "2026-11-11"
+     "checked_at": "2026-11-12",
+     "fields": [
+      "phone"
+     ]
     },
     {
      "url": "https://www.kyu-eikoku-ryoujikan.com/access/",
-     "checked_at": "2026-11-11"
+     "checked_at": "2026-11-12",
+     "fields": [
+      "address"
+     ]
     },
     {
      "url": "https://www.google.com/maps/place/%E6%97%A7%E4%B8%8B%E9%96%A2%E8%8B%B1%E5%9B%BD%E9%A0%98%E4%BA%8B%E9%A4%A8/@33.9569379,130.9431845,15z/data=!4m6!3m5!1s0x3543bd9e9b7f4d37:0x3e97541384693f3e!8m2!3d33.9569428!4d130.9432083!16s%2Fg%2F11b6yd6fw4",
@@ -732,9 +827,11 @@
    ],
    "field_status": {
     "stay_minutes": "估計",
-    "season_note": "查無（無特定季節亮點）"
+    "season_note": "查無（無特定季節亮點）",
+    "phone": "已查",
+    "address": "已查"
    },
-   "checked_date": "2026-11-11",
+   "checked_date": "2026-11-12",
    "ratings": [
     {
      "source": "google",
@@ -744,7 +841,9 @@
      "checked_at": "2026-11-11",
      "check_method": "google_maps_tool"
     }
-   ]
+   ],
+   "phone": "083-235-1906",
+   "address": "〒750-0005 山口県下関市唐戸町4-11 2階"
   },
   "db:db_s_1e3d6e1f51": {
    "kind": "spot",
@@ -805,12 +904,22 @@
      "fields": [
       "parking"
      ]
+    },
+    {
+     "url": "https://www.google.com/maps/place/%E3%82%AA%E3%83%BC%E3%83%B4%E3%82%A3%E3%82%B8%E3%83%A7%E3%83%B3%E6%B5%B7%E5%B3%A1%E3%82%86%E3%82%81%E3%82%BF%E3%83%AF%E3%83%BC%EF%BC%88%E4%B8%80%E8%88%AC%E8%B2%A1%E5%9B%A3%E6%B3%95%E4%BA%BA%E5%B1%B1%E5%8F%A3%E7%9C%8C%E5%9B%BD%E9%9A%9B%E7%B7%8F%E5%90%88%E3%82%BB%E3%83%B3%E3%82%BF%E3%83%BC%EF%BC%89/@33.9497968,130.929736,15z/data=!4m6!3m5!1s0x3543bdb9b85aaaab:0x50ffa47b6c878402!8m2!3d33.9498343!4d130.9297528!16s%2Fm%2F0521xtg&entry=ttu&g_ep=EgoyMDI2MTEwNC4wIKXMDSoASAFQAw%3D%3D",
+     "checked_at": "2026-11-12",
+     "fields": [
+      "phone",
+      "address"
+     ]
     }
    ],
    "field_status": {
-    "stay_minutes": "估計"
+    "stay_minutes": "估計",
+    "phone": "已查",
+    "address": "已查"
    },
-   "checked_date": "2026-11-11",
+   "checked_date": "2026-11-12",
    "ratings": [
     {
      "source": "google",
@@ -820,7 +929,9 @@
      "checked_at": "2026-11-11",
      "check_method": "google_maps_tool"
     }
-   ]
+   ],
+   "phone": "083-231-5877",
+   "address": "〒750-0018 山口県下関市豊前田町3丁目3-1"
   },
   "db:db_s_cd3190ad3a": {
    "kind": "spot",
@@ -931,7 +1042,10 @@
    "sources": [
     {
      "url": "https://mojiko-retoro9.jp/spot/kanmon_kaikyo_museum/",
-     "checked_at": "2026-11-11"
+     "checked_at": "2026-11-12",
+     "fields": [
+      "phone"
+     ]
     },
     {
      "url": "https://www.mojiko.info/about/parking.html",
@@ -953,13 +1067,22 @@
      "fields": [
       "parking"
      ]
+    },
+    {
+     "url": "https://www.google.com/maps/place/%E9%96%A2%E9%96%80%E6%B5%B7%E5%B3%A1%E3%83%9F%E3%83%A5%E3%83%BC%E3%82%B8%E3%82%A2%E3%83%A0/@33.9437996,130.9567826,15z/data=!4m6!3m5!1s0x3543bd885d3aa1d5:0xfcbfffd9305e4fa7!8m2!3d33.9437731!4d130.9569443!16s%2Fg%2F1z449_zjk&entry=ttu&g_ep=EgoyMDI2MTEwNC4wIKXMDSoASAFQAw%3D%3D",
+     "checked_at": "2026-11-12",
+     "fields": [
+      "address"
+     ]
     }
    ],
    "field_status": {
     "stay_minutes": "估計",
-    "season_note": "查無（無特定季節亮點）"
+    "season_note": "查無（無特定季節亮點）",
+    "phone": "已查",
+    "address": "已查"
    },
-   "checked_date": "2026-11-11",
+   "checked_date": "2026-11-12",
    "ratings": [
     {
      "source": "google",
@@ -970,7 +1093,9 @@
      "check_method": "google_maps_tool"
     }
    ],
-   "note": "停車費出自門司港停車場資訊，對應的實際停車場名稱待現場確認"
+   "note": "停車費出自門司港停車場資訊，對應的實際停車場名稱待現場確認",
+   "phone": "093-321-4151",
+   "address": "〒801-0841 福岡県北九州市門司区西海岸1丁目3-3 関門海峡ミュージアム 4階"
   },
   "db:db_s_1cecc994ad": {
    "kind": "spot",
@@ -1030,13 +1155,23 @@
      "fields": [
       "parking"
      ]
+    },
+    {
+     "url": "https://mojiko-retoro9.jp/spot/former_moji_customs/",
+     "checked_at": "2026-11-12",
+     "fields": [
+      "phone",
+      "address"
+     ]
     }
    ],
    "field_status": {
     "stay_minutes": "估計",
-    "season_note": "查無（無特定季節亮點）"
+    "season_note": "查無（無特定季節亮點）",
+    "phone": "已查",
+    "address": "已查"
    },
-   "checked_date": "2026-11-11",
+   "checked_date": "2026-11-12",
    "ratings": [
     {
      "source": "google",
@@ -1046,7 +1181,9 @@
      "checked_at": "2026-11-11",
      "check_method": "google_maps_tool"
     }
-   ]
+   ],
+   "phone": "093-321-4151",
+   "address": "〒801-0853 福岡県北九州市門司区東港町1-24"
   },
   "db:db_s_a23c488779": {
    "kind": "spot",
@@ -1086,7 +1223,11 @@
    "sources": [
     {
      "url": "https://k-rhm.jp/",
-     "checked_at": "2026-11-11"
+     "checked_at": "2026-11-12",
+     "fields": [
+      "phone",
+      "address"
+     ]
     },
     {
      "url": "https://www.k-rhm.jp/guide/",
@@ -1112,9 +1253,11 @@
    ],
    "field_status": {
     "stay_minutes": "估計",
-    "season_note": "查無（無特定季節亮點）"
+    "season_note": "查無（無特定季節亮點）",
+    "phone": "已查",
+    "address": "已查"
    },
-   "checked_date": "2026-11-11",
+   "checked_date": "2026-11-12",
    "ratings": [
     {
      "source": "google",
@@ -1124,7 +1267,9 @@
      "checked_at": "2026-11-11",
      "check_method": "google_maps_tool"
     }
-   ]
+   ],
+   "phone": "093-322-1006",
+   "address": "〒801-0833 福岡県北九州市門司区清滝2丁目3-29"
   },
   "db:db_r_cd2d93e583": {
    "kind": "restaurant",
@@ -1142,7 +1287,7 @@
     "method": "不收（現場候位）",
     "note": null
    },
-   "google_maps_url": "https://www.google.com/maps/search/?api=1&query=33.9459244%2C130.9615312",
+   "google_maps_url": "https://www.google.com/maps/search/?api=1&query=%E4%BC%BD%E5%93%A9%E6%9C%AC%E8%88%97%20%E9%96%80%E5%8F%B8%E6%B8%AF%E3%83%AC%E3%83%88%E3%83%AD%E5%BA%97%20%E7%A6%8F%E5%B2%A1%E7%9C%8C%E5%8C%97%E4%B9%9D%E5%B7%9E%E5%B8%82%E9%96%80%E5%8F%B8%E5%8C%BA%E6%B8%AF%E7%94%BA9-1%20%E9%98%BF%E6%B3%A2%E5%B1%8B%E3%83%93%E3%83%AB%202F",
    "ratings": [
     {
      "source": "tabelog",
@@ -1162,7 +1307,7 @@
     },
     {
      "url": "https://tabelog.com/tw/fukuoka/A4004/A400501/40006677/",
-     "checked_at": "2026-11-11",
+     "checked_at": "2026-11-12",
      "title": "Tabelog（繁中鏡像頁，與日文頁同店號；日文頁網址取自該頁 hreflang=ja）",
      "fields": [
       "ratings.tabelog",
@@ -1171,7 +1316,24 @@
       "budget_dinner",
       "hours",
       "closed_days",
-      "reservation"
+      "reservation",
+      "phone"
+     ]
+    },
+    {
+     "url": "https://tabelog.com/fukuoka/A4004/A400501/40006677/",
+     "checked_at": "2026-11-12",
+     "fields": [
+      "phone",
+      "address",
+      "description"
+     ]
+    },
+    {
+     "url": "https://www.google.com/maps/search/?api=1&query=%E4%BC%BD%E5%93%A9%E6%9C%AC%E8%88%97%20%E9%96%80%E5%8F%B8%E6%B8%AF%E3%83%AC%E3%83%88%E3%83%AD%E5%BA%97%20%E7%A6%8F%E5%B2%A1%E7%9C%8C%E5%8C%97%E4%B9%9D%E5%B7%9E%E5%B8%82%E9%96%80%E5%8F%B8%E5%8C%BA%E6%B8%AF%E7%94%BA9-1%20%E9%98%BF%E6%B3%A2%E5%B1%8B%E3%83%93%E3%83%AB%202F",
+     "checked_at": "2026-11-12",
+     "fields": [
+      "google_maps_url"
      ]
     }
    ],
@@ -1182,10 +1344,14 @@
     "hours": "已查",
     "reservation": "已查",
     "ratings.tabelog": "已查",
-    "ratings.google": "待查（PlacesSearch 工具不可用；schema 的 check_method 只允許 manual，未人工查看 Google 地圖店家頁，故不填）"
+    "ratings.google": "待查（PlacesSearch 工具不可用；schema 的 check_method 只允許 manual，未人工查看 Google 地圖店家頁，故不填）",
+    "phone": "已查",
+    "google_maps_url": "已查",
+    "address": "已查",
+    "description": "已查"
    },
    "cuisine_source": "Tabelog 2026-11-11",
-   "checked_date": "2026-11-11",
+   "checked_date": "2026-11-12",
    "parking": {
     "available": true,
     "type": "nearby",
@@ -1197,10 +1363,13 @@
     "mapcode": "16 715 172*80",
     "mapcode_source": "Mapion 右鍵取得 16 715 172*80，以 saibara convgeo 反查一致（誤差 2.0 m）；saibara 正向換算 16 715 172*88（反查誤差 1.7 m）。換算點：停車場入口 33.946437,130.962087（無入口節點；取輪廓上距車道最近點（約 10 m））",
     "walk_min": 1,
-    "note": "OSM way/1392919755；無入口節點；取輪廓上距車道最近點（約 10 m）；距店約 71 m（直線）。是否為店家專用或投幣式待查；停車費與台數待查；查核日 2026-11-11",
+    "note": "待查（需重選）：既有 OSM way/1392919755 已改標 building=yes、was:amenity=parking，停車場已不存在。未編造替代點。查證日 2026-11-12。",
     "source": "https://www.openstreetmap.org/way/1392919755"
    },
-   "note": "Tabelog 對應「伽哩本舗 門司港レトロ店」（港町9-1 阿波屋ビル 2F）。 預算為 Tabelog 每人預算區間。"
+   "note": "Tabelog 對應「伽哩本舗 門司港レトロ店」（港町9-1 阿波屋ビル 2F）。 預算為 Tabelog 每人預算區間。 停車場待查：既有 OSM 停車點已改標為建築物，需重選（見景點部／合併後 parking）。查證日 2026-11-12。",
+   "phone": "093-331-8839",
+   "address": "福岡県北九州市門司区港町9-1 阿波屋ビル 2F",
+   "description": "門司港懷舊區的燒咖哩專賣店（阿波屋大樓 2 樓），Tabelog 分類咖哩、咖啡店，價位 ¥1,000 以內。"
   },
   "db:db_s_87c2e33a85": {
    "kind": "spot",
@@ -1251,14 +1420,28 @@
      "fields": [
       "parking"
      ]
+    },
+    {
+     "url": "https://www.google.com/maps/place/%E6%97%A5%E6%9C%AC%E3%80%81%E5%A4%A7%E5%88%86%E7%9C%8C%E5%88%A5%E5%BA%9C%E5%B8%82+%E6%B9%AF%E3%81%91%E3%82%80%E3%82%8A%E9%80%9A%E3%82%8A/@33.3178,131.4775,15z/data=!4m6!3m5!1s0x3546a7a19c0c31c9:0xc62205a1b8b78a77!8m2!3d33.3147971!4d131.4770073!16s%2Fg%2F11svrxsnn0",
+     "checked_at": "2026-11-12",
+     "fields": [
+      "field_status.phone",
+      "field_status.address",
+      "google_maps_url",
+      "field_status.ratings.google"
+     ]
     }
    ],
    "field_status": {
     "stay_minutes": "估計",
     "season_note": "估計",
-    "ratings.google": "待查（Google 地圖無分數或為區域）"
+    "ratings.google": "不適用（區域／道路，Google 地圖無單一店家評分）",
+    "phone": "不適用（溫泉住宿區域，無單一電話）",
+    "address": "不適用（溫泉住宿區域；以座標導航）",
+    "google_maps_url": "已查"
    },
-   "checked_date": "2026-11-11"
+   "checked_date": "2026-11-12",
+   "google_maps_url": "https://www.google.com/maps/place/%E6%97%A5%E6%9C%AC%E3%80%81%E5%A4%A7%E5%88%86%E7%9C%8C%E5%88%A5%E5%BA%9C%E5%B8%82+%E6%B9%AF%E3%81%91%E3%82%80%E3%82%8A%E9%80%9A%E3%82%8A/@33.3178,131.4775,15z/data=!4m6!3m5!1s0x3546a7a19c0c31c9:0xc62205a1b8b78a77!8m2!3d33.3147971!4d131.4770073!16s%2Fg%2F11svrxsnn0"
   },
   "db:db_s_db077bef4c": {
    "kind": "spot",
@@ -1297,7 +1480,11 @@
    "sources": [
     {
      "url": "https://www.umijigoku.co.jp/fee/",
-     "checked_at": "2026-11-11"
+     "checked_at": "2026-11-12",
+     "fields": [
+      "phone",
+      "address"
+     ]
     },
     {
      "url": "https://www.beppu-jigoku.com/fee/index.html",
@@ -1323,9 +1510,11 @@
    ],
    "field_status": {
     "stay_minutes": "估計",
-    "season_note": "估計"
+    "season_note": "估計",
+    "phone": "已查",
+    "address": "已查"
    },
-   "checked_date": "2026-11-11",
+   "checked_date": "2026-11-12",
    "ratings": [
     {
      "source": "google",
@@ -1335,7 +1524,9 @@
      "checked_at": "2026-11-11",
      "check_method": "google_maps_tool"
     }
-   ]
+   ],
+   "phone": "0977-66-0121",
+   "address": "〒874-0045 大分県別府市鉄輪559-1"
   },
   "db:db_o_9cd6c1cde3": {
    "kind": "spot",
@@ -1514,7 +1705,10 @@
    "sources": [
     {
      "url": "https://www.city.beppu.oita.jp/sisetu/shieionsen/detail4.html",
-     "checked_at": "2026-11-11"
+     "checked_at": "2026-11-12",
+     "fields": [
+      "phone"
+     ]
     },
     {
      "url": "https://www.takegawara-onsen.com/fee.html",
@@ -1540,13 +1734,22 @@
      "fields": [
       "parking"
      ]
+    },
+    {
+     "url": "https://www.city.beppu.oita.jp/sisetu/shieionsen/detail4.htm",
+     "checked_at": "2026-11-12",
+     "fields": [
+      "address"
+     ]
     }
    ],
    "field_status": {
     "stay_minutes": "估計",
-    "season_note": "查無（無特定季節亮點）"
+    "season_note": "查無（無特定季節亮點）",
+    "phone": "已查",
+    "address": "已查"
    },
-   "checked_date": "2026-11-11",
+   "checked_date": "2026-11-12",
    "ratings": [
     {
      "source": "google",
@@ -1556,7 +1759,9 @@
      "checked_at": "2026-11-11",
      "check_method": "google_maps_tool"
     }
-   ]
+   ],
+   "phone": "0977-23-1585",
+   "address": "〒874-0944 大分県別府市元町16-23"
   },
   "db:db_s_4d06df956d": {
    "kind": "spot",
@@ -1585,7 +1790,7 @@
     "mapcode": "269 328 855*30",
     "mapcode_source": "Mapion 右鍵取得 269 328 855*30，以 saibara convgeo 反查一致（誤差 2.1 m）；saibara 正向換算 269 328 855*38（反查誤差 0.9 m）。換算點：停車場入口 33.261324,131.360213（無入口節點；取輪廓上距車道最近點（約 8 m））",
     "walk_min": null,
-    "note": "住宿區域，停車依各旅館；MapCode 換算點為 OSM 最近停車場入口",
+    "note": "待查（需重選）：既有 MapCode 換算點距「湯布院健康温泉館 駐車場」約 16 m，可能是設施專用停車場，不宜當作住宿區公用停車。未編造替代點。查證日 2026-11-12。",
     "source": "https://www.openstreetmap.org/way/412726760"
    },
    "mapcode": "269 328 855*30",
@@ -1603,14 +1808,28 @@
      "fields": [
       "parking"
      ]
+    },
+    {
+     "url": "https://www.google.com/maps/place/%E6%97%A5%E6%9C%AC%E3%80%81%E5%A4%A7%E5%88%86%E7%9C%8C%E7%94%B1%E5%B8%83%E5%B8%82+%E7%94%B1%E5%B8%83%E9%99%A2%E6%B8%A9%E6%B3%89/@33.2626,131.3557,15z/data=!4m6!3m5!1s0x3546adda17e590d1:0x50b023f7a070b46a!8m2!3d33.2625917!4d131.3554211!16s%2Fm%2F0nbgtch",
+     "checked_at": "2026-11-12",
+     "fields": [
+      "field_status.phone",
+      "field_status.address",
+      "google_maps_url",
+      "field_status.ratings.google"
+     ]
     }
    ],
    "field_status": {
     "stay_minutes": "不適用",
-    "ratings.google": "待查（Google 地圖無分數或為區域）"
+    "ratings.google": "不適用（區域／道路，Google 地圖無單一店家評分）",
+    "phone": "不適用（溫泉住宿區域，無單一電話）",
+    "address": "不適用（溫泉住宿區域；以座標導航）",
+    "google_maps_url": "已查"
    },
-   "checked_date": "2026-11-11",
-   "note": "這是住宿區域（非單一景點），停留時間不適用；MapCode 以 OSM 最近停車場入口換算"
+   "checked_date": "2026-11-12",
+   "note": "這是住宿區域（非單一景點），停留時間不適用；MapCode 以 OSM 最近停車場入口換算 停車點待查：既有換算點可能是設施專用停車場，需重選公用停車。未編造替代點。查證日 2026-11-12。",
+   "google_maps_url": "https://www.google.com/maps/place/%E6%97%A5%E6%9C%AC%E3%80%81%E5%A4%A7%E5%88%86%E7%9C%8C%E7%94%B1%E5%B8%83%E5%B8%82+%E7%94%B1%E5%B8%83%E9%99%A2%E6%B8%A9%E6%B3%89/@33.2626,131.3557,15z/data=!4m6!3m5!1s0x3546adda17e590d1:0x50b023f7a070b46a!8m2!3d33.2625917!4d131.3554211!16s%2Fm%2F0nbgtch"
   },
   "db:db_s_269ba95595": {
    "kind": "spot",
@@ -1657,6 +1876,16 @@
      "fields": [
       "parking"
      ]
+    },
+    {
+     "url": "https://www.google.com/maps/place/%E6%97%A5%E6%9C%AC%E3%80%81%E3%80%92879-5102+%E5%A4%A7%E5%88%86%E7%9C%8C%E7%94%B1%E5%B8%83%E5%B8%82%E6%B9%AF%E5%B8%83%E9%99%A2%E7%94%BA%E5%B7%9D%E4%B8%8A+%E6%B9%AF%E3%81%AE%E5%9D%AA%E8%A1%97%E9%81%93/@33.2636,131.3606,15z/data=!4m6!3m5!1s0x3546add644be3c49:0x559543e523425d82!8m2!3d33.266739!4d131.363057!16s%2Fg%2F11ghffwmfc",
+     "checked_at": "2026-11-12",
+     "fields": [
+      "field_status.phone",
+      "field_status.address",
+      "google_maps_url",
+      "field_status.ratings.google"
+     ]
     }
    ],
    "field_status": {
@@ -1664,10 +1893,14 @@
     "stay_minutes": "估計",
     "season_note": "查無（無特定季節亮點）",
     "parking.fee": "估計",
-    "ratings.google": "待查（Google 地圖無分數或為區域）"
+    "ratings.google": "不適用（區域／道路，Google 地圖無單一店家評分）",
+    "phone": "不適用（區域型街道，無單一電話）",
+    "address": "不適用（區域型街道；以座標導航）",
+    "google_maps_url": "已查"
    },
-   "checked_date": "2026-11-11",
-   "note": "店家營業時間為估計，未逐店查證"
+   "checked_date": "2026-11-12",
+   "note": "店家營業時間為估計，未逐店查證",
+   "google_maps_url": "https://www.google.com/maps/place/%E6%97%A5%E6%9C%AC%E3%80%81%E3%80%92879-5102+%E5%A4%A7%E5%88%86%E7%9C%8C%E7%94%B1%E5%B8%83%E5%B8%82%E6%B9%AF%E5%B8%83%E9%99%A2%E7%94%BA%E5%B7%9D%E4%B8%8A+%E6%B9%AF%E3%81%AE%E5%9D%AA%E8%A1%97%E9%81%93/@33.2636,131.3606,15z/data=!4m6!3m5!1s0x3546add644be3c49:0x559543e523425d82!8m2!3d33.266739!4d131.363057!16s%2Fg%2F11ghffwmfc"
   },
   "db:db_s_2309db8488": {
    "kind": "spot",
@@ -1708,7 +1941,11 @@
    "sources": [
     {
      "url": "https://www.visit-oita.jp/spots/detail/4362",
-     "checked_at": "2026-11-11"
+     "checked_at": "2026-11-12",
+     "fields": [
+      "phone",
+      "address"
+     ]
     },
     {
      "url": "https://sp.jorudan.co.jp/leaf/news/jrd_261110_1.html",
@@ -1737,9 +1974,11 @@
     }
    ],
    "field_status": {
-    "stay_minutes": "估計"
+    "stay_minutes": "估計",
+    "phone": "已查",
+    "address": "已查"
    },
-   "checked_date": "2026-11-11",
+   "checked_date": "2026-11-12",
    "ratings": [
     {
      "source": "google",
@@ -1749,7 +1988,9 @@
      "checked_at": "2026-11-11",
      "check_method": "google_maps_tool"
     }
-   ]
+   ],
+   "phone": "0977-84-2446",
+   "address": "〒879-5102 大分県由布市湯布院町川上1561-1"
   },
   "db:db_s_b92dba1f0d": {
    "kind": "spot",
@@ -1787,11 +2028,17 @@
    "sources": [
     {
      "url": "https://www.kanko-miyazaki.jp/spot/1017",
-     "checked_at": "2026-11-11"
+     "checked_at": "2026-11-12",
+     "fields": [
+      "phone"
+     ]
     },
     {
      "url": "https://oomijinja.or.jp/about/guidance/",
-     "checked_at": "2026-11-11"
+     "checked_at": "2026-11-12",
+     "fields": [
+      "address"
+     ]
     },
     {
      "url": "https://www.google.com/maps/place/%E5%A4%A7%E5%BE%A1%E7%A5%9E%E7%A4%BE/@32.4116829,131.6498851,15z/data=!4m6!3m5!1s0x3547141aafcd0c05:0x4c3f48a9397aaba2!8m2!3d32.4110516!4d131.6493415!16s%2Fg%2F1tfrzwdv",
@@ -1813,9 +2060,11 @@
    ],
    "field_status": {
     "stay_minutes": "估計",
-    "season_note": "查無（無特定季節亮點）"
+    "season_note": "查無（無特定季節亮點）",
+    "phone": "已查",
+    "address": "已查"
    },
-   "checked_date": "2026-11-11",
+   "checked_date": "2026-11-12",
    "ratings": [
     {
      "source": "google",
@@ -1825,7 +2074,9 @@
      "checked_at": "2026-11-11",
      "check_method": "google_maps_tool"
     }
-   ]
+   ],
+   "phone": "0982-52-3406",
+   "address": "〒883-0062 宮崎県日向市日知屋1"
   },
   "db:db_s_14f1c6a3af": {
    "kind": "spot",
@@ -1885,13 +2136,23 @@
      "fields": [
       "parking"
      ]
+    },
+    {
+     "url": "https://hyuga.or.jp/app/spots/view/43",
+     "checked_at": "2026-11-12",
+     "fields": [
+      "phone",
+      "address"
+     ]
     }
    ],
    "field_status": {
     "stay_minutes": "估計",
-    "season_note": "查無（無特定季節亮點）"
+    "season_note": "查無（無特定季節亮點）",
+    "phone": "已查",
+    "address": "已查"
    },
-   "checked_date": "2026-11-11",
+   "checked_date": "2026-11-12",
    "ratings": [
     {
      "source": "google",
@@ -1901,7 +2162,9 @@
      "checked_at": "2026-11-11",
      "check_method": "google_maps_tool"
     }
-   ]
+   ],
+   "phone": "0982-54-6177",
+   "address": "〒883-0001 宮崎県日向市細島1-1"
   },
   "db:db_s_e5ffd38b58": {
    "kind": "spot",
@@ -1943,11 +2206,12 @@
     },
     {
      "url": "https://www.google.com/maps/place/%E9%A1%98%E3%81%84%E3%81%8C%E5%8F%B6%E3%81%86%E3%82%AF%E3%83%AB%E3%82%B9%E3%81%AE%E6%B5%B7/@32.4171111,131.6591626,15z/data=!4m10!1m2!2m1!1z44Kv44Or44K544Gu5rW3IOaXpeWQkeW4gg!3m6!1s0x354715a3d1572d11:0x3dcd84f2cdef1c00!8m2!3d32.4171111!4d131.677187!15sChnjgq_jg6vjgrnjga7mtbcg5pel5ZCR5biCWh4iHOOCr-ODq-OCuSDjga4g5rW3IOaXpeWQkSDluIKSAQtzY2VuaWNfc3BvdJoBJENoZERTVWhOTUc5blMwVkpRMEZuU1VSU1ozTTNlalZCUlJBQuABAPoBBAgAEB8!16s%2Fg%2F122dyfcc",
-     "checked_at": "2026-11-11",
+     "checked_at": "2026-11-12",
      "title": "Google 地圖",
      "fields": [
       "ratings.google",
-      "hours"
+      "hours",
+      "address"
      ]
     },
     {
@@ -1957,13 +2221,22 @@
      "fields": [
       "parking"
      ]
+    },
+    {
+     "url": "https://hyuga.or.jp/app/spots/view/7",
+     "checked_at": "2026-11-12",
+     "fields": [
+      "phone"
+     ]
     }
    ],
    "field_status": {
     "stay_minutes": "估計",
-    "season_note": "查無（無特定季節亮點）"
+    "season_note": "查無（無特定季節亮點）",
+    "phone": "已查",
+    "address": "已查"
    },
-   "checked_date": "2026-11-11",
+   "checked_date": "2026-11-12",
    "ratings": [
     {
      "source": "google",
@@ -1973,7 +2246,9 @@
      "checked_at": "2026-11-11",
      "check_method": "google_maps_tool"
     }
-   ]
+   ],
+   "phone": "0982-54-6177",
+   "address": "〒883-0001 宮崎県日向市細島"
   },
   "db:db_s_4bf4144f89": {
    "kind": "spot",
@@ -2012,7 +2287,11 @@
    "sources": [
     {
      "url": "https://hyuga.or.jp/app/spots/view/21",
-     "checked_at": "2026-11-11"
+     "checked_at": "2026-11-12",
+     "fields": [
+      "field_status.phone",
+      "address"
+     ]
     },
     {
      "url": "https://0982navi.com/archives/6753",
@@ -2030,9 +2309,11 @@
    ],
    "field_status": {
     "stay_minutes": "估計",
-    "season_note": "查無（無特定季節亮點）"
+    "season_note": "查無（無特定季節亮點）",
+    "phone": "查無（日向市觀光協會官網與 Google 地圖皆未列設施電話）",
+    "address": "已查"
    },
-   "checked_date": "2026-11-11",
+   "checked_date": "2026-11-12",
    "ratings": [
     {
      "source": "google",
@@ -2042,7 +2323,8 @@
      "checked_at": "2026-11-11",
      "check_method": "google_maps_tool"
     }
-   ]
+   ],
+   "address": "〒883-0062 宮崎県日向市日知屋682-148"
   },
   "db:db_s_d265e2d834": {
    "kind": "spot",
@@ -2085,7 +2367,10 @@
    "sources": [
     {
      "url": "https://takachiho-kanko.info/boat/detail.php",
-     "checked_at": "2026-11-11"
+     "checked_at": "2026-11-12",
+     "fields": [
+      "phone"
+     ]
     },
     {
      "url": "https://sp.jorudan.co.jp/leaf/spot_55175.html",
@@ -2097,11 +2382,12 @@
     },
     {
      "url": "https://www.google.com/maps/place/%E9%AB%98%E5%8D%83%E7%A9%82%E5%B3%A1/@32.7012777,131.2827028,15z/data=!4m10!1m2!2m1!1z6auY5Y2D56mC5bOh!3m6!1s0x35472cddfea5092f:0x58795d299dc91f8b!8m2!3d32.7012777!4d131.3007272!15sCgzpq5jljYPnqYLls6FaDyIN6auY5Y2D56mCIOWzoZIBC3NjZW5pY19zcG90mgFEQ2k5RFFVbFJRVU52WkVOb2RIbGpSamx2VDJwU1UwMVdSWFJQUmtweFYyeG9RbEZyZUdwV1F6RlZVV3BTTTA1SFl4QULgAQD6AQUI9gMQGA!16s%2Fg%2F121d6d88",
-     "checked_at": "2026-11-11",
+     "checked_at": "2026-11-12",
      "title": "Google 地圖",
      "fields": [
       "ratings.google",
-      "hours"
+      "hours",
+      "address"
      ]
     },
     {
@@ -2114,9 +2400,11 @@
     }
    ],
    "field_status": {
-    "stay_minutes": "估計"
+    "stay_minutes": "估計",
+    "phone": "已查",
+    "address": "已查"
    },
-   "checked_date": "2026-11-11",
+   "checked_date": "2026-11-12",
    "ratings": [
     {
      "source": "google",
@@ -2127,7 +2415,9 @@
      "check_method": "google_maps_tool"
     }
    ],
-   "note": "划船需事前網路預約（乘船日 2 週前至 2 天前），本部不代訂"
+   "note": "划船需事前網路預約（乘船日 2 週前至 2 天前），本部不代訂",
+   "phone": "0982-73-1213",
+   "address": "〒882-1103 宮崎県西臼杵郡高千穂町向山"
   },
   "db:db_s_6b8f8cdbbb": {
    "kind": "spot",
@@ -2184,13 +2474,23 @@
      "fields": [
       "parking"
      ]
+    },
+    {
+     "url": "https://www.google.com/maps/place/%E9%AB%98%E5%8D%83%E7%A9%82%E7%A5%9E%E7%A4%BE/@32.7066706,131.3018922,15z/data=!4m6!3m5!1s0x35472ce8730bc035:0xbedd34618e78cbfa!8m2!3d32.7064465!4d131.3020093!16s%2Fm%2F0drxsvr&entry=ttu&g_ep=EgoyMDI2MTEwNC4wIKXMDSoASAFQAw%3D%3D",
+     "checked_at": "2026-11-12",
+     "fields": [
+      "phone",
+      "address"
+     ]
     }
    ],
    "field_status": {
     "stay_minutes": "估計",
-    "season_note": "查無（無特定季節亮點）"
+    "season_note": "查無（無特定季節亮點）",
+    "phone": "已查",
+    "address": "已查"
    },
-   "checked_date": "2026-11-11",
+   "checked_date": "2026-11-12",
    "ratings": [
     {
      "source": "google",
@@ -2200,7 +2500,9 @@
      "checked_at": "2026-11-11",
      "check_method": "google_maps_tool"
     }
-   ]
+   ],
+   "phone": "0982-72-2413",
+   "address": "〒882-1101 宮崎県西臼杵郡高千穂町三田井1037"
   },
   "db:db_s_3e09b24b3f": {
    "kind": "spot",
@@ -2239,7 +2541,11 @@
    "sources": [
     {
      "url": "https://amanoiwato-jinja.jp/pages/33/",
-     "checked_at": "2026-11-11"
+     "checked_at": "2026-11-12",
+     "fields": [
+      "phone",
+      "address"
+     ]
     },
     {
      "url": "https://amanoiwato-jinja.jp/pages/10/",
@@ -2265,9 +2571,11 @@
    ],
    "field_status": {
     "stay_minutes": "估計",
-    "season_note": "查無（無特定季節亮點）"
+    "season_note": "查無（無特定季節亮點）",
+    "phone": "已查",
+    "address": "已查"
    },
-   "checked_date": "2026-11-11",
+   "checked_date": "2026-11-12",
    "ratings": [
     {
      "source": "google",
@@ -2277,7 +2585,9 @@
      "checked_at": "2026-11-11",
      "check_method": "google_maps_tool"
     }
-   ]
+   ],
+   "phone": "0982-74-8239",
+   "address": "〒882-1621 宮崎県西臼杵郡高千穂町岩戸1073-1"
   },
   "db:db_s_ddabb91cd6": {
    "kind": "spot",
@@ -2315,7 +2625,10 @@
    "sources": [
     {
      "url": "https://amanoiwato-jinja.jp/pages/33/",
-     "checked_at": "2026-11-11"
+     "checked_at": "2026-11-12",
+     "fields": [
+      "phone"
+     ]
     },
     {
      "url": "https://www.google.com/maps/place/%E5%A4%A9%E5%AE%89%E6%B2%B3%E5%8E%9F/@32.7378698,131.3532338,15z/data=!4m6!3m5!1s0x35472bdb70b832bd:0x58a8b2c1602a72ab!8m2!3d32.7379011!4d131.3530726!16s%2Fg%2F1hjhjwv1m",
@@ -2333,13 +2646,22 @@
      "fields": [
       "parking"
      ]
+    },
+    {
+     "url": "https://www.google.com/maps/place/%E5%A4%A9%E5%AE%89%E6%B2%B3%E5%8E%9F/@32.7378698,131.3532338,15z/data=!4m6!3m5!1s0x35472bdb70b832bd:0x58a8b2c1602a72ab!8m2!3d32.7379011!4d131.3530726!16s%2Fg%2F1hjhjwv1m&entry=ttu&g_ep=EgoyMDI2MTEwNC4wIKXMDSoASAFQAw%3D%3D",
+     "checked_at": "2026-11-12",
+     "fields": [
+      "address"
+     ]
     }
    ],
    "field_status": {
     "stay_minutes": "估計",
-    "season_note": "估計"
+    "season_note": "估計",
+    "phone": "已查",
+    "address": "已查"
    },
-   "checked_date": "2026-11-11",
+   "checked_date": "2026-11-12",
    "ratings": [
     {
      "source": "google",
@@ -2349,7 +2671,9 @@
      "checked_at": "2026-11-11",
      "check_method": "google_maps_tool"
     }
-   ]
+   ],
+   "phone": "0982-74-8239",
+   "address": "〒882-1621 宮崎県西臼杵郡高千穂町岩戸"
   },
   "db:db_s_734b38d284": {
    "kind": "spot",
@@ -2388,7 +2712,11 @@
    "sources": [
     {
      "url": "https://amanoiwato-jinja.jp/pages/7/",
-     "checked_at": "2026-11-11"
+     "checked_at": "2026-11-12",
+     "fields": [
+      "phone",
+      "address"
+     ]
     },
     {
      "url": "https://www.google.com/maps/place/%E5%BE%B4%E5%8F%A4%E9%A4%A8/@32.732893,131.350581,15z/data=!4m6!3m5!1s0x35472b75fd3901a9:0x6c7c9f123af2f6ec!8m2!3d32.734173!4d131.3496995!16s%2Fg%2F11k1md9ldn",
@@ -2411,9 +2739,11 @@
    "field_status": {
     "closed_days": "待查",
     "stay_minutes": "估計",
-    "season_note": "查無（無特定季節亮點）"
+    "season_note": "查無（無特定季節亮點）",
+    "phone": "已查",
+    "address": "已查"
    },
-   "checked_date": "2026-11-11",
+   "checked_date": "2026-11-12",
    "ratings": [
     {
      "source": "google",
@@ -2424,7 +2754,9 @@
      "check_method": "google_maps_tool"
     }
    ],
-   "note": "休館日官網未明示（待查）"
+   "note": "休館日官網未明示（待查）",
+   "phone": "0982-74-8239",
+   "address": "〒882-1621 宮崎県西臼杵郡高千穂町岩戸1073-1（天岩戸神社境內）"
   },
   "db:db_s_e65d52e62d": {
    "kind": "spot",
@@ -2469,7 +2801,11 @@
    "sources": [
     {
      "url": "https://www.takachiho-kanko.info/sightseeing/8/",
-     "checked_at": "2026-11-11"
+     "checked_at": "2026-11-12",
+     "fields": [
+      "phone",
+      "address"
+     ]
     },
     {
      "url": "https://www.qsr.mlit.go.jp/n-michi/torupa/area/miyazakiken/takachihocho02.html",
@@ -2494,9 +2830,11 @@
     }
    ],
    "field_status": {
-    "stay_minutes": "估計"
+    "stay_minutes": "估計",
+    "phone": "已查",
+    "address": "已查"
    },
-   "checked_date": "2026-11-11",
+   "checked_date": "2026-11-12",
    "ratings": [
     {
      "source": "google",
@@ -2506,7 +2844,9 @@
      "checked_at": "2026-11-11",
      "check_method": "google_maps_tool"
     }
-   ]
+   ],
+   "phone": "0982-73-1213",
+   "address": "宮崎県西臼杵郡高千穂町押方"
   },
   "db:db_s_34dad51e7e": {
    "kind": "spot",
@@ -2554,14 +2894,24 @@
       "ratings.google",
       "hours"
      ]
+    },
+    {
+     "url": "https://www.google.com/maps/place/%E8%8D%92%E7%AB%8B%E7%A5%9E%E7%A4%BE/@32.7116233,131.3169702,15z/data=!4m6!3m5!1s0x35472c8e863e9311:0x8c44d7c88a679a81!8m2!3d32.7117866!4d131.3169418!16s%2Fg%2F121pw6xn&entry=ttu&g_ep=EgoyMDI2MTEwNC4wIKXMDSoASAFQAw%3D%3D",
+     "checked_at": "2026-11-12",
+     "fields": [
+      "phone",
+      "address"
+     ]
     }
    ],
    "field_status": {
     "stay_minutes": "估計",
     "season_note": "查無（無特定季節亮點）",
-    "parking.fee": "估計"
+    "parking.fee": "估計",
+    "phone": "已查",
+    "address": "已查"
    },
-   "checked_date": "2026-11-11",
+   "checked_date": "2026-11-12",
    "ratings": [
     {
      "source": "google",
@@ -2572,7 +2922,9 @@
      "check_method": "google_maps_tool"
     }
    ],
-   "note": "停車費官方頁只寫有停車場，免費為估計"
+   "note": "停車費官方頁只寫有停車場，免費為估計",
+   "phone": "0982-72-2368",
+   "address": "〒882-1101 宮崎県西臼杵郡高千穂町三田井667"
   },
   "db:db_s_e403dedc79": {
    "kind": "spot",
@@ -2609,7 +2961,7 @@
    },
    "mapcode": "291 659 365*74",
    "mapcode_source": "Mapion 右鍵取得 291 659 365*74，以 saibara convgeo 反查一致（誤差 1.9 m）；saibara 正向換算 291 659 365*73（反查誤差 1.3 m）。換算點：停車場入口 32.681782,130.990944（停車場 way/375879457 無入口節點；取輪廓上距車道最近點（約 7 m））",
-   "description": "1854 年建成的石造拱形水路橋，國寶，定時從橋身兩側噴出放水的景象十分壯觀。",
+   "description": "【待確認】疑似暫停上橋，無官方原文，不可視為確定閉鎖。1854 年建成的石造拱形水路橋，國寶，定時從橋身兩側噴出放水的景象十分壯觀。",
    "sources": [
     {
      "url": "https://tabitomari.jp/column/kumamoto-tsujunkyo-housui-2026",
@@ -2617,7 +2969,11 @@
     },
     {
      "url": "https://tsujunbridge.jp/news/3795/",
-     "checked_at": "2026-11-11"
+     "checked_at": "2026-11-12",
+     "fields": [
+      "phone",
+      "address"
+     ]
     },
     {
      "url": "https://kumamotoyamatotour.wixsite.com/mysite/blank-1",
@@ -2642,9 +2998,11 @@
     }
    ],
    "field_status": {
-    "stay_minutes": "估計"
+    "stay_minutes": "估計",
+    "phone": "已查",
+    "address": "已查"
    },
-   "checked_date": "2026-11-11",
+   "checked_date": "2026-11-12",
    "ratings": [
     {
      "source": "google",
@@ -2655,7 +3013,13 @@
      "check_method": "google_maps_tool"
     }
    ],
-   "note": "路線 A10 是 11/30（一），當天沒有放水，只能看橋本身"
+   "note": "路線 A10 是 11/30（一），當天沒有放水，只能看橋本身 風險項：通潤橋疑似暫停上橋，無官方原文，只標待確認，不是確定閉鎖。未從路線移除。",
+   "phone": "0967-72-1115",
+   "address": "〒861-3661 熊本県上益城郡山都町長原",
+   "alert": {
+    "level": "avoid",
+    "text": "疑似暫停上橋，無官方原文，待確認"
+   }
   },
   "db:db_s_b312097f35": {
    "kind": "spot",
@@ -2694,14 +3058,28 @@
     {
      "url": "https://www.qsr.mlit.go.jp/n-michi/torupa/area/kumamotoken/kamiamakusa01.html",
      "checked_at": "2026-11-11"
+    },
+    {
+     "url": "https://www.google.com/maps/place/%E6%97%A5%E6%9C%AC%E3%80%81%E5%A4%A9%E9%96%80%E6%A9%8B/@32.629,130.429,15z/data=!4m6!3m5!1s0x3540774d91c4f077:0x6587fd42763bfb2a!8m2!3d32.6111049!4d130.4587021!16s%2Fg%2F11gb3xjdgg",
+     "checked_at": "2026-11-12",
+     "fields": [
+      "field_status.phone",
+      "field_status.address",
+      "google_maps_url",
+      "field_status.ratings.google"
+     ]
     }
    ],
    "field_status": {
     "stay_minutes": "估計",
     "season_note": "查無（無特定季節亮點）",
-    "ratings.google": "待查（Google 地圖無分數或為區域）"
+    "ratings.google": "不適用（區域／道路，Google 地圖無單一店家評分）",
+    "phone": "不適用（道路橋梁，無現場電話）",
+    "address": "不適用（道路橋梁；以座標導航）",
+    "google_maps_url": "已查"
    },
-   "checked_date": "2026-11-11"
+   "checked_date": "2026-11-12",
+   "google_maps_url": "https://www.google.com/maps/place/%E6%97%A5%E6%9C%AC%E3%80%81%E5%A4%A9%E9%96%80%E6%A9%8B/@32.629,130.429,15z/data=!4m6!3m5!1s0x3540774d91c4f077:0x6587fd42763bfb2a!8m2!3d32.6111049!4d130.4587021!16s%2Fg%2F11gb3xjdgg"
   },
   "db:db_s_d980d846c7": {
    "kind": "spot",
@@ -2740,7 +3118,11 @@
    "sources": [
     {
      "url": "https://www.t-island.jp/spot/152",
-     "checked_at": "2026-11-11"
+     "checked_at": "2026-11-12",
+     "fields": [
+      "phone",
+      "address"
+     ]
     },
     {
      "url": "https://kami-amakusa.jp/archives/mountain/4679",
@@ -2757,9 +3139,11 @@
     }
    ],
    "field_status": {
-    "stay_minutes": "估計"
+    "stay_minutes": "估計",
+    "phone": "已查",
+    "address": "已查"
    },
-   "checked_date": "2026-11-11",
+   "checked_date": "2026-11-12",
    "ratings": [
     {
      "source": "google",
@@ -2769,7 +3153,9 @@
      "checked_at": "2026-11-11",
      "check_method": "google_maps_tool"
     }
-   ]
+   ],
+   "phone": "0964-56-5602",
+   "address": "熊本県上天草市松島町阿村"
   },
   "db:db_s_540d53f815": {
    "kind": "spot",
@@ -2812,7 +3198,11 @@
     },
     {
      "url": "https://utomichieki.com/facility/",
-     "checked_at": "2026-11-11"
+     "checked_at": "2026-11-12",
+     "fields": [
+      "phone",
+      "address"
+     ]
     },
     {
      "url": "https://www.google.com/maps/place/%E9%81%93%E3%81%AE%E9%A7%85+%E5%AE%87%E5%9C%9F%E3%83%9E%E3%83%AA%E3%83%BC%E3%83%8A+%E3%81%8A%E3%81%93%E3%81%97%E3%81%8D%E9%A4%A8/@32.662287,130.522806,15z/data=!4m6!3m5!1s0x35407b2d88b64039:0xff615cd83eb4be11!8m2!3d32.662329!4d130.5227769!16s%2Fg%2F12163_g5",
@@ -2833,9 +3223,11 @@
     }
    ],
    "field_status": {
-    "stay_minutes": "估計"
+    "stay_minutes": "估計",
+    "phone": "已查",
+    "address": "已查"
    },
-   "checked_date": "2026-11-11",
+   "checked_date": "2026-11-12",
    "ratings": [
     {
      "source": "google",
@@ -2845,7 +3237,9 @@
      "checked_at": "2026-11-11",
      "check_method": "google_maps_tool"
     }
-   ]
+   ],
+   "phone": "0964-27-1788",
+   "address": "〒869-3173 熊本県宇土市下網田町3084-1"
   },
   "db:db_s_c06b11e288": {
    "kind": "spot",
@@ -2857,7 +3251,7 @@
    "category_source": "osm_rule",
    "category_basis": "historic=castle",
    "hours": "自由參觀（八代宮境內）",
-   "closed_days": "無休",
+   "closed_days": "拆除中（須確認）；既有資料：無休",
    "admission": "免費",
    "stay_minutes": 30,
    "rain_ok": false,
@@ -2879,11 +3273,14 @@
    },
    "mapcode": "128 312 457*46",
    "mapcode_source": "Mapion 右鍵取得 128 312 457*46，以 saibara convgeo 反查一致（誤差 2.5 m）；saibara 正向換算 128 312 457*45（反查誤差 1.7 m）。換算點：停車場入口 32.507744,130.599839（無入口節點；取輪廓上距車道最近點（約 63 m））",
-   "description": "江戶初期以石灰岩築成的平城遺址，白色石垣與水堀保存良好，本丸現為八代宮。",
+   "description": "【拆除中須確認】2026/7/28 地震後，八代城跡／八代宮據報拆除中（交件檔未附官方原文，須確認）。江戶初期以石灰岩築成的平城遺址，白色石垣與水堀保存良好，本丸現為八代宮。",
    "sources": [
     {
      "url": "https://yatsushiro-guide.com/spot/2",
-     "checked_at": "2026-11-11"
+     "checked_at": "2026-11-12",
+     "fields": [
+      "field_status.phone"
+     ]
     },
     {
      "url": "https://shiro.shirabecho.com/castle-190/",
@@ -2905,13 +3302,22 @@
      "fields": [
       "parking"
      ]
+    },
+    {
+     "url": "https://www.google.com/maps/place/%E5%85%AB%E4%BB%A3%E5%9F%8E%E8%B7%A1/@32.5076218,130.5997864,15z/data=!4m6!3m5!1s0x35407fa405e4487b:0x5f9f9f9df5f57590!8m2!3d32.5076674!4d130.5995725!16s%2Fg%2F119w2lj_6&entry=ttu&g_ep=EgoyMDI2MTEwNC4wIKXMDSoASAFQAw%3D%3D",
+     "checked_at": "2026-11-12",
+     "fields": [
+      "address"
+     ]
     }
    ],
    "field_status": {
     "stay_minutes": "估計",
-    "season_note": "查無（無特定季節亮點）"
+    "season_note": "查無（無特定季節亮點）",
+    "phone": "查無（城跡無管理電話；八代城跡導覽頁只列鄰近松浜軒、お祭りでんでん館電話）",
+    "address": "已查"
    },
-   "checked_date": "2026-11-11",
+   "checked_date": "2026-11-12",
    "ratings": [
     {
      "source": "google",
@@ -2921,7 +3327,13 @@
      "checked_at": "2026-11-11",
      "check_method": "google_maps_tool"
     }
-   ]
+   ],
+   "note": "風險項：八代城跡／八代宮（本丸現為八代宮）2026/7/28 地震後拆除中（須確認；景點部交件檔未附官方原文）。未從路線移除。",
+   "address": "〒866-0862 熊本県八代市松江城町7-34",
+   "alert": {
+    "level": "temporarily_closed",
+    "text": "2026/7/28 地震後拆除中（須確認）"
+   }
   },
   "db:db_s_f9c2501904": {
    "kind": "spot",
@@ -3055,15 +3467,29 @@
      "fields": [
       "parking"
      ]
+    },
+    {
+     "url": "https://www.google.com/maps/place/%E5%AC%89%E9%87%8E%E6%B8%A9%E6%B3%89+%E6%B9%AF%E5%AE%BF%E5%BA%83%E5%A0%B4/@33.1007,129.989,15z/data=!4m6!3m5!1s0x354020aa4b3d6d85:0x4873e0b25c6ba4da!8m2!3d33.0967294!4d129.9836845!16s%2Fg%2F11b76tzdgq",
+     "checked_at": "2026-11-12",
+     "fields": [
+      "field_status.phone",
+      "field_status.address",
+      "google_maps_url",
+      "field_status.ratings.google"
+     ]
     }
    ],
    "field_status": {
     "stay_minutes": "估計",
     "season_note": "查無（無特定季節亮點）",
-    "ratings.google": "待查（Google 地圖無分數或為區域）"
+    "ratings.google": "不適用（區域／道路，Google 地圖無單一店家評分）",
+    "phone": "不適用（溫泉街區域，無單一電話）",
+    "address": "不適用（溫泉街區域；以座標導航）",
+    "google_maps_url": "已查"
    },
-   "checked_date": "2026-11-11",
-   "note": "路線座標靠近新幹線嬉野溫泉站，與溫泉街中心（シーボルトの湯一帶）相距約 1.7 km"
+   "checked_date": "2026-11-12",
+   "note": "路線座標靠近新幹線嬉野溫泉站，與溫泉街中心（シーボルトの湯一帶）相距約 1.7 km",
+   "google_maps_url": "https://www.google.com/maps/place/%E5%AC%89%E9%87%8E%E6%B8%A9%E6%B3%89+%E6%B9%AF%E5%AE%BF%E5%BA%83%E5%A0%B4/@33.1007,129.989,15z/data=!4m6!3m5!1s0x354020aa4b3d6d85:0x4873e0b25c6ba4da!8m2!3d33.0967294!4d129.9836845!16s%2Fg%2F11b76tzdgq"
   },
   "db:db_s_3a89f2d7ae": {
    "kind": "spot",
@@ -3108,15 +3534,19 @@
     },
     {
      "url": "https://konomachi-note.jp/places/spot-yutoku-inari/",
-     "checked_at": "2026-11-11"
+     "checked_at": "2026-11-12",
+     "fields": [
+      "phone"
+     ]
     },
     {
      "url": "https://www.google.com/maps/place/%E7%A5%90%E5%BE%B3%E7%A8%B2%E8%8D%B7%E7%A5%9E%E7%A4%BE/@33.073778,130.0899073,15z/data=!4m10!1m2!2m1!1z56WQ5b6z56iy6I2356We56S-!3m6!1s0x354024f4600d2901:0x7e95f782245107b!8m2!3d33.073778!4d130.1079317!15sChLnpZDlvrPnqLLojbfnpZ7npL5aFiIU56WQ5b6zIOeosuiNtyDnpZ7npL6SAQ1zaGludG9fc2hyaW5lmgFEQ2k5RFFVbFJRVU52WkVOb2RIbGpSamx2VDIxTmVWTnNaSGRTZW1SNVZtNWFNMWxWVmxOT2EwWktZbFZHY0ZSSFl4QULgAQD6AQQIFhAm!16s%2Fm%2F02q3vt5",
-     "checked_at": "2026-11-11",
+     "checked_at": "2026-11-12",
      "title": "Google 地圖",
      "fields": [
       "ratings.google",
-      "hours"
+      "hours",
+      "address"
      ]
     },
     {
@@ -3129,9 +3559,11 @@
     }
    ],
    "field_status": {
-    "stay_minutes": "估計"
+    "stay_minutes": "估計",
+    "phone": "已查",
+    "address": "已查"
    },
-   "checked_date": "2026-11-11",
+   "checked_date": "2026-11-12",
    "ratings": [
     {
      "source": "google",
@@ -3141,7 +3573,9 @@
      "checked_at": "2026-11-11",
      "check_method": "google_maps_tool"
     }
-   ]
+   ],
+   "phone": "0954-62-2151",
+   "address": "〒849-1321 佐賀県鹿島市古枝乙1855"
   },
   "db:db_s_5a64935d15": {
    "kind": "spot",
@@ -3197,13 +3631,23 @@
      "fields": [
       "parking"
      ]
+    },
+    {
+     "url": "https://www.google.com/maps/place/%E7%A5%90%E5%BE%B3%E5%8D%9A%E7%89%A9%E9%A4%A8/@33.0739372,130.1097882,15z/data=!4m6!3m5!1s0x354024f38cb78b91:0xbd687bf40a1928f7!8m2!3d33.0738442!4d130.1097645!16s%2Fg%2F1tdnc006&entry=ttu&g_ep=EgoyMDI2MTEwNC4wIKXMDSoASAFQAw%3D%3D",
+     "checked_at": "2026-11-12",
+     "fields": [
+      "phone",
+      "address"
+     ]
     }
    ],
    "field_status": {
     "stay_minutes": "估計",
-    "season_note": "查無（無特定季節亮點）"
+    "season_note": "查無（無特定季節亮點）",
+    "phone": "已查",
+    "address": "已查"
    },
-   "checked_date": "2026-11-11",
+   "checked_date": "2026-11-12",
    "ratings": [
     {
      "source": "google",
@@ -3213,7 +3657,9 @@
      "checked_at": "2026-11-11",
      "check_method": "google_maps_tool"
     }
-   ]
+   ],
+   "phone": "0954-62-2151",
+   "address": "〒849-1321 佐賀県鹿島市古枝"
   },
   "db:db_s_bc0ed60e18": {
    "kind": "spot",
@@ -3251,7 +3697,11 @@
    "sources": [
     {
      "url": "https://www.city.saga-kashima.lg.jp/kanko/main/?cont=kanko&fid=3",
-     "checked_at": "2026-11-11"
+     "checked_at": "2026-11-12",
+     "fields": [
+      "phone",
+      "address"
+     ]
     },
     {
      "url": "https://www.google.com/maps/place/%E9%B9%BF%E5%B3%B6%E5%9F%8E%E8%B7%A1/@33.1034228,130.0929556,15z/data=!4m6!3m5!1s0x354025f3d401eef5:0x44e80b8f3ddcfb4c!8m2!3d33.1028462!4d130.0933371!16s%2Fg%2F11h49qyxf9",
@@ -3273,9 +3723,11 @@
    ],
    "field_status": {
     "stay_minutes": "估計",
-    "season_note": "查無（無特定季節亮點）"
+    "season_note": "查無（無特定季節亮點）",
+    "phone": "已查",
+    "address": "已查"
    },
-   "checked_date": "2026-11-11",
+   "checked_date": "2026-11-12",
    "ratings": [
     {
      "source": "google",
@@ -3285,7 +3737,9 @@
      "checked_at": "2026-11-11",
      "check_method": "google_maps_tool"
     }
-   ]
+   ],
+   "phone": "0954-63-3414",
+   "address": "〒849-1311 佐賀県鹿島市大字高津原462付近"
   },
   "db:db_s_aee66ab3c7": {
    "kind": "spot",
@@ -3353,17 +3807,27 @@
     },
     {
      "url": "https://www.takeo-kk.net/season/autumn.html",
-     "checked_at": "2026-11-11",
+     "checked_at": "2026-11-12",
      "title": "類別依據",
      "fields": [
-      "categories"
+      "categories",
+      "phone"
+     ]
+    },
+    {
+     "url": "https://www.google.com/maps/place/%E5%BE%A1%E8%88%B9%E5%B1%B1%E6%A5%BD%E5%9C%92/@33.1819093,130.0182516,15z/data=!4m6!3m5!1s0x35402860aa4d0509:0x3076ed2f83eecc88!8m2!3d33.1823029!4d130.0179788!16s%2Fg%2F11dfh5zq2f&entry=ttu&g_ep=EgoyMDI2MTEwNC4wIKXMDSoASAFQAw%3D%3D",
+     "checked_at": "2026-11-12",
+     "fields": [
+      "address"
      ]
     }
    ],
    "field_status": {
-    "stay_minutes": "估計"
+    "stay_minutes": "估計",
+    "phone": "已查",
+    "address": "已查"
    },
-   "checked_date": "2026-11-11",
+   "checked_date": "2026-11-12",
    "ratings": [
     {
      "source": "google",
@@ -3373,7 +3837,9 @@
      "checked_at": "2026-11-11",
      "check_method": "google_maps_tool"
     }
-   ]
+   ],
+   "phone": "0954-23-3131",
+   "address": "〒843-0022 佐賀県武雄市武雄町大字武雄4100"
   },
   "db:db_o_4186870dff": {
    "kind": "spot",
@@ -3411,7 +3877,10 @@
    "sources": [
     {
      "url": "https://www.city.ureshino.lg.jp/kanko/siebold.html",
-     "checked_at": "2026-11-11"
+     "checked_at": "2026-11-12",
+     "fields": [
+      "phone"
+     ]
     },
     {
      "url": "https://www.google.com/maps/place/%E5%AC%89%E9%87%8E%E6%B8%A9%E6%B3%89%E5%85%AC%E8%A1%86%E6%B5%B4%E5%A0%B4+%E3%82%B7%E3%83%BC%E3%83%9C%E3%83%AB%E3%83%88%E3%81%AE%E6%B9%AF/@33.0965664,129.9855805,15z/data=!4m6!3m5!1s0x354020ab9b7eef0f:0x85f2cd8f3d200c45!8m2!3d33.0965391!4d129.9855667!16s%2Fg%2F1tdy278v",
@@ -3429,13 +3898,22 @@
      "fields": [
       "parking"
      ]
+    },
+    {
+     "url": "https://www.google.com/maps/place/%E5%AC%89%E9%87%8E%E6%B8%A9%E6%B3%89%E5%85%AC%E8%A1%86%E6%B5%B4%E5%A0%B4+%E3%82%B7%E3%83%BC%E3%83%9C%E3%83%AB%E3%83%88%E3%81%AE%E6%B9%AF/@33.0965664,129.9855805,15z/data=!4m6!3m5!1s0x354020ab9b7eef0f:0x85f2cd8f3d200c45!8m2!3d33.0965391!4d129.9855667!16s%2Fg%2F1tdy278v&entry=ttu&g_ep=EgoyMDI2MTEwNC4wIKXMDSoASAFQAw%3D%3D",
+     "checked_at": "2026-11-12",
+     "fields": [
+      "address"
+     ]
     }
    ],
    "field_status": {
     "stay_minutes": "估計",
-    "season_note": "查無（無特定季節亮點）"
+    "season_note": "查無（無特定季節亮點）",
+    "phone": "已查",
+    "address": "已查"
    },
-   "checked_date": "2026-11-11",
+   "checked_date": "2026-11-12",
    "ratings": [
     {
      "source": "google",
@@ -3445,7 +3923,9 @@
      "checked_at": "2026-11-11",
      "check_method": "google_maps_tool"
     }
-   ]
+   ],
+   "phone": "0954-43-1426",
+   "address": "〒843-0301 佐賀県嬉野市嬉野町大字下宿乙818-2"
   },
   "db:db_s_d36589ad92": {
    "kind": "spot",
@@ -3488,7 +3968,10 @@
     },
     {
      "url": "https://www.city.ureshino.lg.jp/edu/oshirase/_33218.html",
-     "checked_at": "2026-11-11"
+     "checked_at": "2026-11-12",
+     "fields": [
+      "field_status.phone"
+     ]
     },
     {
      "url": "https://www.google.com/maps/place/%E5%AC%89%E9%87%8E%E3%81%AE%E5%A4%A7%E3%83%81%E3%83%A3%E3%83%8E%E3%82%AD/@33.0985563,129.9337357,15z/data=!4m6!3m5!1s0x356a9ef314b84403:0x55ee0d610443f143!8m2!3d33.098565!4d129.9337159!16s%2Fg%2F1q5bm8pxn",
@@ -3510,9 +3993,10 @@
    ],
    "field_status": {
     "stay_minutes": "估計",
-    "season_note": "查無（無特定季節亮點）"
+    "season_note": "查無（無特定季節亮點）",
+    "phone": "查無（嬉野市官網與 Google 地圖皆未列電話）"
    },
-   "checked_date": "2026-11-11",
+   "checked_date": "2026-11-12",
    "ratings": [
     {
      "source": "google",
@@ -3531,7 +4015,7 @@
    "cuisine_group": "壽司",
    "cuisine": "壽司・和食",
    "budget_lunch": "¥1,000–¥1,999（Tabelog）",
-   "budget_dinner": null,
+   "budget_dinner": "¥3,000–5,000",
    "closed_days": "週一",
    "hours": "11:30–14:30、17:00–22:00",
    "reservation": {
@@ -3540,7 +4024,7 @@
     "method": "電話預約",
     "note": null
    },
-   "google_maps_url": "https://www.google.com/maps/search/?api=1&query=33.2139566%2C130.3721398",
+   "google_maps_url": "https://www.google.com/maps/search/?api=1&query=%E8%88%B9%E9%A0%AD%E5%AF%BF%E5%8F%B8%20%E7%A6%8F%E5%B2%A1%E7%9C%8C%E5%A4%A7%E5%B7%9D%E5%B8%82%E5%90%91%E5%B3%B61698-5",
    "ratings": [
     {
      "source": "tabelog",
@@ -3560,7 +4044,7 @@
     },
     {
      "url": "https://tabelog.com/tw/fukuoka/A4008/A400806/40026850/",
-     "checked_at": "2026-11-11",
+     "checked_at": "2026-11-12",
      "title": "Tabelog（繁中鏡像頁，與日文頁同店號；日文頁網址取自該頁 hreflang=ja）",
      "fields": [
       "ratings.tabelog",
@@ -3569,21 +4053,57 @@
       "budget_dinner",
       "hours",
       "closed_days",
-      "reservation"
+      "reservation",
+      "phone"
+     ]
+    },
+    {
+     "url": "https://tabelog.com/fukuoka/A4008/A400806/40026850/",
+     "checked_at": "2026-11-12",
+     "fields": [
+      "phone",
+      "address",
+      "description"
+     ]
+    },
+    {
+     "url": "https://www.google.com/maps/search/?api=1&query=%E8%88%B9%E9%A0%AD%E5%AF%BF%E5%8F%B8%20%E7%A6%8F%E5%B2%A1%E7%9C%8C%E5%A4%A7%E5%B7%9D%E5%B8%82%E5%90%91%E5%B3%B61698-5",
+     "checked_at": "2026-11-12",
+     "fields": [
+      "google_maps_url"
+     ]
+    },
+    {
+     "url": "https://www.bargourmet.net/htJ003324064.html",
+     "checked_at": "2026-11-12",
+     "fields": [
+      "budget_dinner"
+     ]
+    },
+    {
+     "url": "https://okawa-kk.com/members/sendozushi/",
+     "checked_at": "2026-11-12",
+     "fields": [
+      "address",
+      "description"
      ]
     }
    ],
    "field_status": {
     "budget_lunch": "已查",
-    "budget_dinner": "待查",
+    "budget_dinner": "已查",
     "closed_days": "已查",
     "hours": "已查",
     "reservation": "已查",
     "ratings.tabelog": "已查",
-    "ratings.google": "待查（PlacesSearch 工具不可用；schema 的 check_method 只允許 manual，未人工查看 Google 地圖店家頁，故不填）"
+    "ratings.google": "待查（PlacesSearch 工具不可用；schema 的 check_method 只允許 manual，未人工查看 Google 地圖店家頁，故不填）",
+    "phone": "已查",
+    "google_maps_url": "已查",
+    "address": "已查",
+    "description": "已查"
    },
    "cuisine_source": "Tabelog 2026-11-11",
-   "checked_date": "2026-11-11",
+   "checked_date": "2026-11-12",
    "parking": {
     "available": true,
     "type": "dedicated",
@@ -3598,7 +4118,10 @@
     "note": "OSM way/606029794；無入口節點；取輪廓上距車道最近點（約 9 m）；距店約 19 m（直線）。是否為店家專用或投幣式待查；停車費與台數待查；查核日 2026-11-11",
     "source": "https://www.openstreetmap.org/way/606029794"
    },
-   "note": "預算為 Tabelog 每人預算區間。"
+   "note": "預算為 Tabelog 每人預算區間。",
+   "phone": "0944-86-3665",
+   "address": "福岡県大川市向島1698-5",
+   "description": "大川市向島的在地壽司店，晚間營業為主（17:00–22:00），午間另有 11:30–14:30 時段；週一公休。"
   },
   "db:db_s_ecc2367753": {
    "kind": "spot",
@@ -3636,7 +4159,10 @@
    "sources": [
     {
      "url": "https://www.city.fukuoka.lg.jp/hakataku/t-shinko/luw/jotenji.html",
-     "checked_at": "2026-11-11"
+     "checked_at": "2026-11-12",
+     "fields": [
+      "field_status.phone"
+     ]
     },
     {
      "url": "https://yoka-fuku.com/2026/10/23/hakata-lightup-walk/",
@@ -3658,13 +4184,22 @@
      "fields": [
       "parking"
      ]
+    },
+    {
+     "url": "https://www.google.com/maps/place/%E5%8D%9A%E5%A4%9A%E5%8D%83%E5%B9%B4%E9%96%80/@33.5944127,130.4171219,15z/data=!4m6!3m5!1s0x3541910055adad55:0x5bcae139780ee90d!8m2!3d33.5943747!4d130.4172598!16s%2Fg%2F11xh5nprtx&entry=ttu&g_ep=EgoyMDI2MTEwNC4wIKXMDSoASAFQAw%3D%3D",
+     "checked_at": "2026-11-12",
+     "fields": [
+      "address"
+     ]
     }
    ],
    "field_status": {
     "stay_minutes": "估計",
-    "season_note": "查無（無特定季節亮點）"
+    "season_note": "查無（無特定季節亮點）",
+    "phone": "查無（承天寺通的門，福岡市博多區官網與 Google 地圖皆未列電話）",
+    "address": "已查"
    },
-   "checked_date": "2026-11-11",
+   "checked_date": "2026-11-12",
    "ratings": [
     {
      "source": "google",
@@ -3675,7 +4210,8 @@
      "check_method": "google_maps_tool"
     }
    ],
-   "note": "博多舊市街點燈活動 2026 年為 10/31–11/3，行程期間不會遇到"
+   "note": "博多舊市街點燈活動 2026 年為 10/31–11/3，行程期間不會遇到",
+   "address": "〒812-0011 福岡県福岡市博多区博多駅前1丁目7-29 承天寺通り"
   },
   "db:db_s_9148bc3a8e": {
    "kind": "spot",
@@ -3713,7 +4249,10 @@
    "sources": [
     {
      "url": "https://hakatamachiya.com/access/",
-     "checked_at": "2026-11-11"
+     "checked_at": "2026-11-12",
+     "fields": [
+      "phone"
+     ]
     },
     {
      "url": "https://hakatamachiya.com/news/opening-hours/",
@@ -3735,13 +4274,22 @@
      "fields": [
       "parking"
      ]
+    },
+    {
+     "url": "https://www.google.com/maps/place/%E3%80%8C%E5%8D%9A%E5%A4%9A%E7%94%BA%E5%AE%B6%E3%80%8D%E3%81%B5%E3%82%8B%E3%81%95%E3%81%A8%E9%A4%A8/@33.5936544,130.4115066,15z/data=!4m6!3m5!1s0x354191c019c4f8df:0x8df8e768e6dd5a4a!8m2!3d33.5937281!4d130.411474!16s%2Fg%2F11f615635m&entry=ttu&g_ep=EgoyMDI2MTEwNC4wIKXMDSoASAFQAw%3D%3D",
+     "checked_at": "2026-11-12",
+     "fields": [
+      "address"
+     ]
     }
    ],
    "field_status": {
     "stay_minutes": "估計",
-    "season_note": "查無（無特定季節亮點）"
+    "season_note": "查無（無特定季節亮點）",
+    "phone": "已查",
+    "address": "已查"
    },
-   "checked_date": "2026-11-11",
+   "checked_date": "2026-11-12",
    "ratings": [
     {
      "source": "google",
@@ -3751,7 +4299,9 @@
      "checked_at": "2026-11-11",
      "check_method": "google_maps_tool"
     }
-   ]
+   ],
+   "phone": "092-281-7761",
+   "address": "〒812-0039 福岡県福岡市博多区冷泉町6-10"
   },
   "db:db_r_dfe514d8e4": {
    "kind": "restaurant",
@@ -3769,7 +4319,7 @@
     "method": "電話預約",
     "note": "不接受自動預約系統（AutoReserve 等）代訂；逾時 15 分鐘未到會取消"
    },
-   "google_maps_url": "https://www.google.com/maps/place/?q=place_id:ChIJi08CmsCRQTURyfXjNXC-BOs",
+   "google_maps_url": "https://www.google.com/maps/search/?api=1&query=%E5%8D%9A%E5%A4%9A%E8%8F%AF%E5%91%B3%E9%B3%A5%20%E7%A5%87%E5%9C%92%E5%BA%97%20%E7%A6%8F%E5%B2%A1%E7%9C%8C%E7%A6%8F%E5%B2%A1%E5%B8%82%E5%8D%9A%E5%A4%9A%E5%8C%BA%E7%A5%87%E5%9C%92%E7%94%BA3-6",
    "ratings": [
     {
      "source": "tabelog",
@@ -3789,7 +4339,7 @@
     },
     {
      "url": "https://tabelog.com/tw/fukuoka/A4001/A400101/40002057/",
-     "checked_at": "2026-11-11",
+     "checked_at": "2026-11-12",
      "title": "Tabelog（繁中鏡像頁，與日文頁同店號；日文頁網址取自該頁 hreflang=ja）",
      "fields": [
       "ratings.tabelog",
@@ -3798,7 +4348,24 @@
       "budget_dinner",
       "hours",
       "closed_days",
-      "reservation"
+      "reservation",
+      "phone"
+     ]
+    },
+    {
+     "url": "https://tabelog.com/fukuoka/A4001/A400101/40002057/",
+     "checked_at": "2026-11-12",
+     "fields": [
+      "phone",
+      "address",
+      "description"
+     ]
+    },
+    {
+     "url": "https://www.google.com/maps/search/?api=1&query=%E5%8D%9A%E5%A4%9A%E8%8F%AF%E5%91%B3%E9%B3%A5%20%E7%A5%87%E5%9C%92%E5%BA%97%20%E7%A6%8F%E5%B2%A1%E7%9C%8C%E7%A6%8F%E5%B2%A1%E5%B8%82%E5%8D%9A%E5%A4%9A%E5%8C%BA%E7%A5%87%E5%9C%92%E7%94%BA3-6",
+     "checked_at": "2026-11-12",
+     "fields": [
+      "google_maps_url"
      ]
     }
    ],
@@ -3809,15 +4376,19 @@
     "hours": "已查",
     "reservation": "已查",
     "ratings.tabelog": "已查",
-    "ratings.google": "待查（PlacesSearch 工具不可用；schema 的 check_method 只允許 manual，未人工查看 Google 地圖店家頁，故不填）"
+    "ratings.google": "待查（PlacesSearch 工具不可用；schema 的 check_method 只允許 manual，未人工查看 Google 地圖店家頁，故不填）",
+    "phone": "已查",
+    "google_maps_url": "已查",
+    "address": "已查",
+    "description": "已查"
    },
    "cuisine_source": "Tabelog 2026-11-11",
-   "checked_date": "2026-11-11",
+   "checked_date": "2026-11-12",
    "parking": {
     "available": true,
     "type": "nearby",
-    "name": "OSM 未命名停車場",
-    "fee": null,
+    "name": "三井のリパーク 祇園町第3",
+    "fee": "全日 15 分 ¥300；入庫後 24 小時內最高 ¥1,900（可重複適用）",
     "capacity": null,
     "lat": 33.5916237,
     "lng": 130.4139295,
@@ -3827,7 +4398,10 @@
     "note": "OSM way/1087566779；無入口節點；取輪廓上距車道最近點（約 12 m）；距店約 63 m（直線）。是否為店家專用或投幣式待查；停車費與台數待查；查核日 2026-11-11",
     "source": "https://www.openstreetmap.org/way/1087566779"
    },
-   "note": "統一為「博多華味鳥 祇園店」（博多區祇園町3-6）：資料庫座標與祇園店相距約 4 m，r_a／r_c D14 的前一站博多千年門、博多歷史館到祇園店約 320–360 m（站前店約 670–740 m）。D14＝12/4 週五晚餐，祇園店 17:00–23:00 有營業。r_c 路線備註寫「博多站前店」需由企畫部改為祇園店（本部未改 routes.json）；資料庫另一筆 db_r_2c94b7cb7a「博多站前店」座標與本筆相同，實際站前店在博多驛前（約 486 m 外），座標需修正。Tabelog 只列晚間營業。 預算為 Tabelog 每人預算區間。"
+   "note": "統一為「博多華味鳥 祇園店」（博多區祇園町3-6）：資料庫座標與祇園店相距約 4 m，r_a／r_c D14 的前一站博多千年門、博多歷史館到祇園店約 320–360 m（站前店約 670–740 m）。D14＝12/4 週五晚餐，祇園店 17:00–23:00 有營業。r_c 路線備註寫「博多站前店」需由企畫部改為祇園店（本部未改 routes.json）；資料庫另一筆 db_r_2c94b7cb7a「博多站前店」座標與本筆相同，實際站前店在博多驛前（約 486 m 外），座標需修正。Tabelog 只列晚間營業。 預算為 Tabelog 每人預算區間。",
+   "phone": "092-273-1219",
+   "address": "福岡県福岡市博多区祇園町3-6",
+   "description": "博多水炊き（雞肉火鍋）連鎖名店的祇園店，只做晚餐（17:00 起），Tabelog 晚餐 ¥4,000–4,999。"
   },
   "db:db_s_ef6925b5b0": {
    "kind": "spot",
@@ -3870,7 +4444,10 @@
     },
     {
      "url": "https://www.kyuhaku.jp/exhibition/exhibition_s78.html",
-     "checked_at": "2026-11-11"
+     "checked_at": "2026-11-12",
+     "fields": [
+      "phone"
+     ]
     },
     {
      "url": "https://www.google.com/maps/place/%E4%B9%9D%E5%B7%9E%E5%9B%BD%E7%AB%8B%E5%8D%9A%E7%89%A9%E9%A4%A8/@33.5182194,130.5384631,15z/data=!4m6!3m5!1s0x354193a8e25d892b:0xbb2421372be6879c!8m2!3d33.5182578!4d130.5381224!16zL20vMDhqY2t0",
@@ -3888,14 +4465,23 @@
      "fields": [
       "parking"
      ]
+    },
+    {
+     "url": "https://www.google.com/maps/place/%E4%B9%9D%E5%B7%9E%E5%9B%BD%E7%AB%8B%E5%8D%9A%E7%89%A9%E9%A4%A8/@33.5182194,130.5384631,15z/data=!4m6!3m5!1s0x354193a8e25d892b:0xbb2421372be6879c!8m2!3d33.5182578!4d130.5381224!16zL20vMDhqY2t0&entry=ttu&g_ep=EgoyMDI2MTEwNC4wIKXMDSoASAFQAw%3D%3D",
+     "checked_at": "2026-11-12",
+     "fields": [
+      "address"
+     ]
     }
    ],
    "field_status": {
     "hours": "已查（Google 地圖）",
     "stay_minutes": "估計",
-    "season_note": "查無（無特定季節亮點）"
+    "season_note": "查無（無特定季節亮點）",
+    "phone": "已查",
+    "address": "已查"
    },
-   "checked_date": "2026-11-11",
+   "checked_date": "2026-11-12",
    "ratings": [
     {
      "source": "google",
@@ -3906,7 +4492,9 @@
      "check_method": "google_maps_tool"
     }
    ],
-   "note": "特別展會期請以官網為準"
+   "note": "特別展會期請以官網為準",
+   "phone": "050-5542-8600",
+   "address": "〒818-0118 福岡県太宰府市石坂4丁目7-2"
   },
   "db:db_s_78b9489288": {
    "kind": "spot",
@@ -3949,14 +4537,28 @@
     {
      "url": "https://ohoriteien.jp/",
      "checked_at": "2026-11-11"
+    },
+    {
+     "url": "https://www.google.com/maps/place/%E6%97%A5%E6%9C%AC%E3%80%81%E3%80%92810-0051+%E7%A6%8F%E5%B2%A1%E7%9C%8C%E7%A6%8F%E5%B2%A1%E5%B8%82%E4%B8%AD%E5%A4%AE%E5%8C%BA%E5%A4%A7%E6%BF%A0%E5%85%AC%E5%9C%92/@33.586,130.3765,15z/data=!4m6!3m5!1s0x354193ccebd1911f:0x483731aeac74e99f!8m2!3d33.5898244!4d130.3751317!16s%2Fg%2F1pxyttq1m",
+     "checked_at": "2026-11-12",
+     "fields": [
+      "field_status.phone",
+      "field_status.address",
+      "google_maps_url",
+      "field_status.ratings.google"
+     ]
     }
    ],
    "field_status": {
     "stay_minutes": "估計",
     "season_note": "估計",
-    "ratings.google": "待查（Google 地圖無分數或為區域）"
+    "ratings.google": "不適用（區域／道路，Google 地圖無單一店家評分）",
+    "phone": "不適用（大型都市公園，無單一現場電話）",
+    "address": "不適用（大型公園；以座標導航）",
+    "google_maps_url": "已查"
    },
-   "checked_date": "2026-11-11"
+   "checked_date": "2026-11-12",
+   "google_maps_url": "https://www.google.com/maps/place/%E6%97%A5%E6%9C%AC%E3%80%81%E3%80%92810-0051+%E7%A6%8F%E5%B2%A1%E7%9C%8C%E7%A6%8F%E5%B2%A1%E5%B8%82%E4%B8%AD%E5%A4%AE%E5%8C%BA%E5%A4%A7%E6%BF%A0%E5%85%AC%E5%9C%92/@33.586,130.3765,15z/data=!4m6!3m5!1s0x354193ccebd1911f:0x483731aeac74e99f!8m2!3d33.5898244!4d130.3751317!16s%2Fg%2F1pxyttq1m"
   },
   "db:db_o_468b8dbbf4": {
    "kind": "spot",
@@ -3994,11 +4596,17 @@
    "sources": [
     {
      "url": "https://namiha.jp/info/",
-     "checked_at": "2026-11-11"
+     "checked_at": "2026-11-12",
+     "fields": [
+      "phone"
+     ]
     },
     {
      "url": "https://namiha.jp/access/",
-     "checked_at": "2026-11-11"
+     "checked_at": "2026-11-12",
+     "fields": [
+      "address"
+     ]
     },
     {
      "url": "https://www.google.com/maps/place/%E3%81%BF%E3%81%AA%E3%81%A8%E6%B8%A9%E6%B3%89+%E6%B3%A2%E8%91%89%E3%81%AE%E6%B9%AF/@33.603743,130.3981117,15z/data=!4m6!3m5!1s0x354191f1753780b5:0x661183457f1d6d04!8m2!3d33.6038939!4d130.3982115!16s%2Fg%2F11bw_5cx9y",
@@ -4020,9 +4628,11 @@
    ],
    "field_status": {
     "stay_minutes": "估計",
-    "season_note": "查無（無特定季節亮點）"
+    "season_note": "查無（無特定季節亮點）",
+    "phone": "已查",
+    "address": "已查"
    },
-   "checked_date": "2026-11-11",
+   "checked_date": "2026-11-12",
    "ratings": [
     {
      "source": "google",
@@ -4032,7 +4642,9 @@
      "checked_at": "2026-11-11",
      "check_method": "google_maps_tool"
     }
-   ]
+   ],
+   "phone": "092-271-4126",
+   "address": "〒812-0021 福岡県福岡市博多区築港本町13-1"
   },
   "db:db_r_2c1d787fec": {
    "kind": "restaurant",
@@ -4050,7 +4662,7 @@
     "method": "不收（現場候位）",
     "note": null
    },
-   "google_maps_url": "https://www.google.com/maps/place/?q=place_id:ChIJffWFyyiSQTURzxSQ1YDL91I",
+   "google_maps_url": "https://www.google.com/maps/search/?api=1&query=%E5%85%83%E7%A5%96%E9%95%B7%E6%B5%9C%E5%B1%8B%20%E7%A6%8F%E5%B2%A1%E7%9C%8C%E7%A6%8F%E5%B2%A1%E5%B8%82%E4%B8%AD%E5%A4%AE%E5%8C%BA%E9%95%B7%E6%B5%9C2-5-25%20%E3%83%88%E3%83%A9%E3%82%B9%E3%83%88%E3%83%91%E3%83%BC%E3%82%AF%E9%95%B7%E6%B5%9C3%201F",
    "ratings": [
     {
      "source": "tabelog",
@@ -4070,7 +4682,7 @@
     },
     {
      "url": "https://tabelog.com/tw/fukuoka/A4001/A400104/40006844/",
-     "checked_at": "2026-11-11",
+     "checked_at": "2026-11-12",
      "title": "Tabelog（繁中鏡像頁，與日文頁同店號；日文頁網址取自該頁 hreflang=ja）",
      "fields": [
       "ratings.tabelog",
@@ -4079,7 +4691,24 @@
       "budget_dinner",
       "hours",
       "closed_days",
-      "reservation"
+      "reservation",
+      "phone"
+     ]
+    },
+    {
+     "url": "https://tabelog.com/fukuoka/A4001/A400104/40006844/",
+     "checked_at": "2026-11-12",
+     "fields": [
+      "phone",
+      "address",
+      "description"
+     ]
+    },
+    {
+     "url": "https://www.google.com/maps/search/?api=1&query=%E5%85%83%E7%A5%96%E9%95%B7%E6%B5%9C%E5%B1%8B%20%E7%A6%8F%E5%B2%A1%E7%9C%8C%E7%A6%8F%E5%B2%A1%E5%B8%82%E4%B8%AD%E5%A4%AE%E5%8C%BA%E9%95%B7%E6%B5%9C2-5-25%20%E3%83%88%E3%83%A9%E3%82%B9%E3%83%88%E3%83%91%E3%83%BC%E3%82%AF%E9%95%B7%E6%B5%9C3%201F",
+     "checked_at": "2026-11-12",
+     "fields": [
+      "google_maps_url"
      ]
     }
    ],
@@ -4090,10 +4719,14 @@
     "hours": "已查",
     "reservation": "已查",
     "ratings.tabelog": "已查",
-    "ratings.google": "待查（PlacesSearch 工具不可用；schema 的 check_method 只允許 manual，未人工查看 Google 地圖店家頁，故不填）"
+    "ratings.google": "待查（PlacesSearch 工具不可用；schema 的 check_method 只允許 manual，未人工查看 Google 地圖店家頁，故不填）",
+    "phone": "已查",
+    "google_maps_url": "已查",
+    "address": "已查",
+    "description": "已查"
    },
    "cuisine_source": "Tabelog 2026-11-11",
-   "checked_date": "2026-11-11",
+   "checked_date": "2026-11-12",
    "parking": {
     "available": true,
     "type": "nearby",
@@ -4108,7 +4741,10 @@
     "note": "OSM way/834091886；無入口節點；取輪廓上距車道最近點（約 14 m）；距店約 45 m（直線）。是否為店家專用或投幣式待查；停車費與台數待查；查核日 2026-11-11",
     "source": "https://www.openstreetmap.org/way/834091886"
    },
-   "note": "預算為 Tabelog 每人預算區間。"
+   "note": "預算為 Tabelog 每人預算區間。",
+   "phone": "092-711-8154",
+   "address": "福岡県福岡市中央区長浜2-5-25 トラストパーク長浜3 1F",
+   "description": "福岡長濱地區的長濱拉麵老店，細麵豚骨湯、可加麵（替玉），清晨 6 點開到凌晨，價位在 ¥1,000 以內。"
   },
   "db:db_r_c51b971faa": {
    "kind": "restaurant",
@@ -4126,7 +4762,7 @@
     "method": "不收（現場候位）",
     "note": null
    },
-   "google_maps_url": "https://www.google.com/maps/search/?api=1&query=33.5908233%2C130.4127936",
+   "google_maps_url": "https://www.google.com/maps/search/?api=1&query=FUK%20COFFEE%20%E7%A6%8F%E5%B2%A1%E7%9C%8C%E7%A6%8F%E5%B2%A1%E5%B8%82%E5%8D%9A%E5%A4%9A%E5%8C%BA%E7%A5%87%E5%9C%92%E7%94%BA6-22",
    "ratings": [
     {
      "source": "tabelog",
@@ -4146,7 +4782,7 @@
     },
     {
      "url": "https://tabelog.com/tw/fukuoka/A4001/A400101/40060713/",
-     "checked_at": "2026-11-11",
+     "checked_at": "2026-11-12",
      "title": "Tabelog（繁中鏡像頁，與日文頁同店號；日文頁網址取自該頁 hreflang=ja）",
      "fields": [
       "ratings.tabelog",
@@ -4155,7 +4791,24 @@
       "budget_dinner",
       "hours",
       "closed_days",
-      "reservation"
+      "reservation",
+      "phone"
+     ]
+    },
+    {
+     "url": "https://tabelog.com/fukuoka/A4001/A400101/40060713/",
+     "checked_at": "2026-11-12",
+     "fields": [
+      "phone",
+      "address",
+      "description"
+     ]
+    },
+    {
+     "url": "https://www.google.com/maps/search/?api=1&query=FUK%20COFFEE%20%E7%A6%8F%E5%B2%A1%E7%9C%8C%E7%A6%8F%E5%B2%A1%E5%B8%82%E5%8D%9A%E5%A4%9A%E5%8C%BA%E7%A5%87%E5%9C%92%E7%94%BA6-22",
+     "checked_at": "2026-11-12",
+     "fields": [
+      "google_maps_url"
      ]
     }
    ],
@@ -4166,10 +4819,14 @@
     "hours": "已查",
     "reservation": "已查",
     "ratings.tabelog": "已查",
-    "ratings.google": "待查（PlacesSearch 工具不可用；schema 的 check_method 只允許 manual，未人工查看 Google 地圖店家頁，故不填）"
+    "ratings.google": "待查（PlacesSearch 工具不可用；schema 的 check_method 只允許 manual，未人工查看 Google 地圖店家頁，故不填）",
+    "phone": "已查",
+    "google_maps_url": "已查",
+    "address": "已查",
+    "description": "已查"
    },
    "cuisine_source": "Tabelog 2026-11-11",
-   "checked_date": "2026-11-11",
+   "checked_date": "2026-11-12",
    "parking": {
     "available": true,
     "type": "nearby",
@@ -4184,7 +4841,10 @@
     "note": "OSM way/1087566769；無入口節點；取輪廓上距車道最近點（約 5 m）；距店約 52 m（直線）。是否為店家專用或投幣式待查；停車費與台數待查；查核日 2026-11-11",
     "source": "https://www.openstreetmap.org/way/1087566769"
    },
-   "note": "預算為 Tabelog 每人預算區間。"
+   "note": "預算為 Tabelog 每人預算區間。",
+   "phone": "092-281-7300",
+   "address": "福岡県福岡市博多区祇園町6-22",
+   "description": "博多祇園的咖啡店，08:00–20:00 營業，適合早餐或午後休息。"
   },
   "db:db_s_4b13bcbe9c": {
    "kind": "spot",
@@ -4223,7 +4883,11 @@
    "sources": [
     {
      "url": "https://kazukiyasuo.com/information.html",
-     "checked_at": "2026-11-11"
+     "checked_at": "2026-11-12",
+     "fields": [
+      "phone",
+      "address"
+     ]
     },
     {
      "url": "https://nanavi.jp/sightseeing/kazukiyasuo/",
@@ -4250,9 +4914,11 @@
    "field_status": {
     "hours": "已查（Google 地圖）",
     "stay_minutes": "估計",
-    "season_note": "查無（無特定季節亮點）"
+    "season_note": "查無（無特定季節亮點）",
+    "phone": "已查",
+    "address": "已查"
    },
-   "checked_date": "2026-11-11",
+   "checked_date": "2026-11-12",
    "ratings": [
     {
      "source": "google",
@@ -4262,7 +4928,9 @@
      "checked_at": "2026-11-11",
      "check_method": "google_maps_tool"
     }
-   ]
+   ],
+   "phone": "0837-43-2500",
+   "address": "〒759-3802 山口県長門市三隅中226"
   },
   "db:db_s_7871952db9": {
    "kind": "spot",
@@ -4302,7 +4970,11 @@
    "sources": [
     {
      "url": "https://nanavi.jp/sightseeing/akasakisajiki/",
-     "checked_at": "2026-11-11"
+     "checked_at": "2026-11-12",
+     "fields": [
+      "phone",
+      "address"
+     ]
     },
     {
      "url": "https://www.google.com/maps/place/%E8%B5%A4%E5%B4%8E%E7%A5%9E%E7%A4%BE%E6%A5%BD%E6%A1%9F%E6%95%B7/@34.3650248,131.1829983,15z/data=!4m6!3m5!1s0x35435dc1043ea80f:0x575857bc66def0bd!8m2!3d34.3650109!4d131.1830931!16s%2Fg%2F11frb18jvx",
@@ -4318,9 +4990,11 @@
     "closed_days": "待查",
     "stay_minutes": "估計",
     "season_note": "查無（無特定季節亮點）",
-    "parking.fee": "估計"
+    "parking.fee": "估計",
+    "phone": "已查",
+    "address": "已查"
    },
-   "checked_date": "2026-11-11",
+   "checked_date": "2026-11-12",
    "ratings": [
     {
      "source": "google",
@@ -4331,7 +5005,9 @@
      "check_method": "google_maps_tool"
     }
    ],
-   "note": "開放時間官方未明示（待查）"
+   "note": "開放時間官方未明示（待查）",
+   "phone": "0837-22-3517",
+   "address": "〒759-4101 山口県長門市東深川字土井の内2668番ほか"
   },
   "db:db_s_f49a6151ff": {
    "kind": "spot",
@@ -4373,7 +5049,11 @@
     },
     {
      "url": "https://www.hagishi.com/search/detail.php?d=1100190",
-     "checked_at": "2026-11-11"
+     "checked_at": "2026-11-12",
+     "fields": [
+      "phone",
+      "address"
+     ]
     },
     {
      "url": "https://www.google.com/maps/place/%E5%A4%A7%E6%9D%BF%E5%B1%B1%E3%81%9F%E3%81%9F%E3%82%89%E8%A3%BD%E9%89%84%E9%81%BA%E8%B7%A1/@34.505539,131.520323,15z/data=!4m10!1m2!2m1!1z5aSn5p2_5bGx44Gf44Gf44KJ6KO96YmE6YG66Leh!3m6!1s0x355b4b46e4f1d913:0xe6840c1eea25abcb!8m2!3d34.505539!4d131.5383474!15sCh7lpKfmnb_lsbHjgZ_jgZ_jgonoo73piYTpgbrot6FaJiIk5aSnIOadvyDlsbEg44GfIOOBn-OCiSDoo73piYQg6YG66LehkgETaGlzdG9yaWNhbF9sYW5kbWFya5oBRENpOURRVWxSUVVOdlpFTm9kSGxqUmpsdlQyNUtVVmxYV201VFZXaHZVa2hHTW1KdFNsaFZSRnBaVFVab1dsWXhSUkFC4AEA-gEECBEQJQ!16s%2Fg%2F11b6_szdv6",
@@ -4388,9 +5068,11 @@
    "field_status": {
     "stay_minutes": "估計",
     "season_note": "估計",
-    "parking.fee": "估計"
+    "parking.fee": "估計",
+    "phone": "已查",
+    "address": "已查"
    },
-   "checked_date": "2026-11-11",
+   "checked_date": "2026-11-12",
    "ratings": [
     {
      "source": "google",
@@ -4400,7 +5082,9 @@
      "checked_at": "2026-11-11",
      "check_method": "google_maps_tool"
     }
-   ]
+   ],
+   "phone": "0838-25-3380",
+   "address": "山口県萩市大字紫福10257-11"
   },
   "db:db_r_3d710ec62a": {
    "kind": "restaurant",
@@ -4418,7 +5102,7 @@
     "method": "不收（現場候位）",
     "note": null
    },
-   "google_maps_url": "https://www.google.com/maps/search/?api=1&query=33.9490744%2C130.9642571",
+   "google_maps_url": "https://www.google.com/maps/search/?api=1&query=%E9%96%80%E5%8F%B8%E6%B8%AF%E8%8C%B6%E5%AF%AE%20%E5%88%A5%E9%A4%A8%20%E7%A6%8F%E5%B2%A1%E7%9C%8C%E5%8C%97%E4%B9%9D%E5%B7%9E%E5%B8%82%E9%96%80%E5%8F%B8%E5%8C%BA%E6%9D%B1%E6%B8%AF%E7%94%BA2-17",
    "ratings": [
     {
      "source": "tabelog",
@@ -4438,7 +5122,7 @@
     },
     {
      "url": "https://tabelog.com/tw/fukuoka/A4004/A400501/40033336/",
-     "checked_at": "2026-11-11",
+     "checked_at": "2026-11-12",
      "title": "Tabelog（繁中鏡像頁，與日文頁同店號；日文頁網址取自該頁 hreflang=ja）",
      "fields": [
       "ratings.tabelog",
@@ -4447,7 +5131,24 @@
       "budget_dinner",
       "hours",
       "closed_days",
-      "reservation"
+      "reservation",
+      "phone"
+     ]
+    },
+    {
+     "url": "https://tabelog.com/fukuoka/A4004/A400501/40033336/",
+     "checked_at": "2026-11-12",
+     "fields": [
+      "phone",
+      "address",
+      "description"
+     ]
+    },
+    {
+     "url": "https://www.google.com/maps/search/?api=1&query=%E9%96%80%E5%8F%B8%E6%B8%AF%E8%8C%B6%E5%AF%AE%20%E5%88%A5%E9%A4%A8%20%E7%A6%8F%E5%B2%A1%E7%9C%8C%E5%8C%97%E4%B9%9D%E5%B7%9E%E5%B8%82%E9%96%80%E5%8F%B8%E5%8C%BA%E6%9D%B1%E6%B8%AF%E7%94%BA2-17",
+     "checked_at": "2026-11-12",
+     "fields": [
+      "google_maps_url"
      ]
     }
    ],
@@ -4458,16 +5159,20 @@
     "hours": "已查",
     "reservation": "已查",
     "ratings.tabelog": "已查",
-    "ratings.google": "待查（PlacesSearch 工具不可用；schema 的 check_method 只允許 manual，未人工查看 Google 地圖店家頁，故不填）"
+    "ratings.google": "待查（PlacesSearch 工具不可用；schema 的 check_method 只允許 manual，未人工查看 Google 地圖店家頁，故不填）",
+    "phone": "已查",
+    "google_maps_url": "已查",
+    "address": "已查",
+    "description": "已查"
    },
    "cuisine_source": "Tabelog 2026-11-11",
-   "checked_date": "2026-11-11",
+   "checked_date": "2026-11-12",
    "parking": {
     "available": true,
     "type": "nearby",
-    "name": "OSM 未命名停車場",
-    "fee": null,
-    "capacity": null,
+    "name": "門司港レトロ駐車場",
+    "fee": "普通車 ¥200／小時（3 小時內）；¥800／次（3–12 小時）",
+    "capacity": "普通車 144 台（大型巴士 12 台）",
     "lat": 33.9489055,
     "lng": 130.9641106,
     "mapcode": "16 715 449*06",
@@ -4476,7 +5181,10 @@
     "note": "OSM way/770666533；停車場輪廓與道路（service/parking_aisle）交會節點 node/9103107875；距店約 45 m（直線）。是否為店家專用或投幣式待查；停車費與台數待查；查核日 2026-11-11",
     "source": "https://www.openstreetmap.org/way/770666533"
    },
-   "note": "預算為 Tabelog 每人預算區間。"
+   "note": "預算為 Tabelog 每人預算區間。",
+   "phone": "093-331-9595",
+   "address": "福岡県北九州市門司区東港町2-17",
+   "description": "門司港懷舊區的餐廳兼咖啡店，Tabelog 分類為咖哩與餐廳，可吃門司港名物燒咖哩；3–12 月營業到 21:00。"
   },
   "db:db_o_aeee4e5898": {
    "kind": "spot",
@@ -4514,7 +5222,11 @@
    "sources": [
     {
      "url": "https://beppu-tourism.com/onsen/umezono-onsen/",
-     "checked_at": "2026-11-11"
+     "checked_at": "2026-11-12",
+     "fields": [
+      "phone",
+      "address"
+     ]
     },
     {
      "url": "https://www.google.com/maps/place/%E6%A2%85%E5%9C%92%E6%B8%A9%E6%B3%89/@33.2775458,131.5043286,15z/data=!4m6!3m5!1s0x3546a6c32e2c72b5:0xb447dbbab22199da!8m2!3d33.2776019!4d131.5043296!16s%2Fg%2F11dfy2v2kz",
@@ -4536,9 +5248,11 @@
    ],
    "field_status": {
     "stay_minutes": "估計",
-    "season_note": "查無（無特定季節亮點）"
+    "season_note": "查無（無特定季節亮點）",
+    "phone": "已查",
+    "address": "已查"
    },
-   "checked_date": "2026-11-11",
+   "checked_date": "2026-11-12",
    "ratings": [
     {
      "source": "google",
@@ -4548,7 +5262,9 @@
      "checked_at": "2026-11-11",
      "check_method": "google_maps_tool"
     }
-   ]
+   ],
+   "phone": "0977-23-4748",
+   "address": "〒874-0944 大分県別府市元町5-23"
   },
   "db:db_s_d063343da0": {
    "kind": "spot",
@@ -4587,7 +5303,11 @@
    "sources": [
     {
      "url": "https://www.kanko-miyazaki.jp/golf_surfing/1171",
-     "checked_at": "2026-11-11"
+     "checked_at": "2026-11-12",
+     "fields": [
+      "phone",
+      "address"
+     ]
     },
     {
      "url": "https://naminoritai.com/spots/miyazaki/isegahama/",
@@ -4605,9 +5325,11 @@
    ],
    "field_status": {
     "stay_minutes": "估計",
-    "season_note": "查無（無特定季節亮點）"
+    "season_note": "查無（無特定季節亮點）",
+    "phone": "已查",
+    "address": "已查"
    },
-   "checked_date": "2026-11-11",
+   "checked_date": "2026-11-12",
    "ratings": [
     {
      "source": "google",
@@ -4617,7 +5339,9 @@
      "checked_at": "2026-11-11",
      "check_method": "google_maps_tool"
     }
-   ]
+   ],
+   "phone": "0982-66-1026",
+   "address": "〒883-0062 宮崎県日向市日知屋599-3"
   },
   "db:db_s_1ac90c7f2c": {
    "kind": "spot",
@@ -4657,7 +5381,10 @@
    "sources": [
     {
      "url": "https://hyuga.or.jp/contents/archives/3216",
-     "checked_at": "2026-11-11"
+     "checked_at": "2026-11-12",
+     "fields": [
+      "phone"
+     ]
     },
     {
      "url": "https://www.google.com/maps/place/%E7%B4%B0%E5%B3%B6%E7%81%AF%E5%8F%B0/@32.4233587,131.6852936,15z/data=!4m6!3m5!1s0x354715a3d1572d11:0x71108f3c061d676!8m2!3d32.4233663!4d131.6853841!16s%2Fg%2F11hc_2hxgs",
@@ -4675,13 +5402,22 @@
      "fields": [
       "parking"
      ]
+    },
+    {
+     "url": "https://www.google.com/maps/place/%E7%B4%B0%E5%B3%B6%E7%81%AF%E5%8F%B0/@32.4233587,131.6852936,15z/data=!4m6!3m5!1s0x354715a3d1572d11:0x71108f3c061d676!8m2!3d32.4233663!4d131.6853841!16s%2Fg%2F11hc_2hxgs&entry=ttu&g_ep=EgoyMDI2MTEwNC4wIKXMDSoASAFQAw%3D%3D",
+     "checked_at": "2026-11-12",
+     "fields": [
+      "address"
+     ]
     }
    ],
    "field_status": {
     "stay_minutes": "估計",
-    "season_note": "查無（無特定季節亮點）"
+    "season_note": "查無（無特定季節亮點）",
+    "phone": "已查",
+    "address": "已查"
    },
-   "checked_date": "2026-11-11",
+   "checked_date": "2026-11-12",
    "ratings": [
     {
      "source": "google",
@@ -4691,7 +5427,9 @@
      "checked_at": "2026-11-11",
      "check_method": "google_maps_tool"
     }
-   ]
+   ],
+   "phone": "0982-55-0235",
+   "address": "〒883-0001 宮崎県日向市細島"
   },
   "db:db_s_9bea30f744": {
    "kind": "spot",
@@ -4729,7 +5467,11 @@
    "sources": [
     {
      "url": "https://www.kanko-miyazaki.jp/spot/1342",
-     "checked_at": "2026-11-11"
+     "checked_at": "2026-11-12",
+     "fields": [
+      "phone",
+      "address"
+     ]
     },
     {
      "url": "https://www.google.com/maps/place/%E5%BE%A1%E9%89%BE%E3%83%B6%E6%B5%A6%E5%85%AC%E5%9C%92/@32.4222909,131.6563473,15z/data=!4m10!1m2!2m1!1z5b6h6Ym-44O25rWmIOaXpeWQkeW4gg!3m6!1s0x35471412f134d5ad:0xd6f8e10042a12424!8m2!3d32.4222909!4d131.6743717!15sChblvqHpib7jg7bmtaYg5pel5ZCR5biCWhwiGuW-oSDpib4g44O2IOa1piDml6XlkJEg5biCkgEEcGFya5oBI0NoWkRTVWhOTUc5blMwVkpRMEZuU1VNeE4zSjJTbU5CRUFF4AEA-gEECBUQIw!16s%2Fg%2F119ty0htz",
@@ -4744,9 +5486,11 @@
    "field_status": {
     "stay_minutes": "估計",
     "season_note": "查無（無特定季節亮點）",
-    "parking.fee": "估計"
+    "parking.fee": "估計",
+    "phone": "已查",
+    "address": "已查"
    },
-   "checked_date": "2026-11-11",
+   "checked_date": "2026-11-12",
    "ratings": [
     {
      "source": "google",
@@ -4756,7 +5500,9 @@
      "checked_at": "2026-11-11",
      "check_method": "google_maps_tool"
     }
-   ]
+   ],
+   "phone": "0982-66-1026",
+   "address": "〒883-0001 宮崎県日向市細島92"
   },
   "db:db_s_298f866b10": {
    "kind": "spot",
@@ -4799,7 +5545,10 @@
     },
     {
      "url": "https://amaterasu-railway.jp/information",
-     "checked_at": "2026-11-11"
+     "checked_at": "2026-11-12",
+     "fields": [
+      "phone"
+     ]
     },
     {
      "url": "https://www.openstreetmap.org/way/208502999",
@@ -4808,16 +5557,36 @@
      "fields": [
       "parking"
      ]
+    },
+    {
+     "url": "https://www.google.com/maps/place/%E9%AB%98%E5%8D%83%E7%A9%82%E3%81%82%E3%81%BE%E3%81%A6%E3%82%89%E3%81%99%E9%89%84%E9%81%93%E6%A0%AA%E5%BC%8F%E4%BC%9A%E7%A4%BE/@32.714675,131.2888796,15z/data=!4m10!1m2!2m1!1z6auY5Y2D56mC5qmL5qKBIOmrmOWNg-epguOBguOBvuOBpuOCieOBmemJhOmBkw!3m6!1s0x35472c936c888f9b:0x3854020238b9abc0!8m2!3d32.714675!4d131.306904!15sCi7pq5jljYPnqYLmqYvmooEg6auY5Y2D56mC44GC44G-44Gm44KJ44GZ6YmE6YGTWjMiMemrmOWNg-epgiDmqYvmooEg6auY5Y2D56mCIOOBguOBvuOBpuOCieOBmSDpiYTpgZOSARFoZXJpdGFnZV9yYWlscm9hZJoBI0NoWkRTVWhOTUc5blMwVkpRMEZuU1VSU2VIWjVSRXhCRUFF4AEA-gEECFMQJA!16s%2Fg%2F1vfw9mz2",
+     "checked_at": "2026-11-12",
+     "fields": [
+      "address"
+     ]
+    },
+    {
+     "url": "https://www.google.com/maps/place/%E9%AB%98%E5%8D%83%E7%A9%82%E6%A9%8B%E6%A2%81/@32.7097,131.3013,15z/data=!4m6!3m5!1s0x35472c66535a19eb:0x6fc35dc3e511705!8m2!3d32.7069778!4d131.3292776!16s%2Fg%2F122n5_kf",
+     "checked_at": "2026-11-12",
+     "fields": [
+      "google_maps_url"
+     ]
     }
    ],
    "field_status": {
     "stay_minutes": "估計",
     "season_note": "查無（無特定季節亮點）",
     "parking.fee": "估計",
-    "ratings.google": "待查（Google 搜尋落到高千穗あまてらす鐵道公司）"
+    "ratings.google": "待查（Google 搜尋落到高千穗あまてらす鐵道公司）",
+    "phone": "已查",
+    "address": "已查",
+    "google_maps_url": "已查"
    },
-   "checked_date": "2026-11-11",
-   "note": "Google 搜尋落在鐵道公司，未取用其評分"
+   "checked_date": "2026-11-12",
+   "note": "Google 搜尋落在鐵道公司，未取用其評分",
+   "phone": "0982-72-3216",
+   "address": "宮崎県西臼杵郡高千穂町（高千穂鉄橋）",
+   "google_maps_url": "https://www.google.com/maps/place/%E9%AB%98%E5%8D%83%E7%A9%82%E6%A9%8B%E6%A2%81/@32.7097,131.3013,15z/data=!4m6!3m5!1s0x35472c66535a19eb:0x6fc35dc3e511705!8m2!3d32.7069778!4d131.3292776!16s%2Fg%2F122n5_kf"
   },
   "db:db_s_32593cda3c": {
    "kind": "spot",
@@ -4864,11 +5633,12 @@
     },
     {
      "url": "https://www.google.com/maps/place/%E7%99%BD%E5%B7%9D%E6%B0%B4%E6%BA%90/@32.8253719,131.0772855,15z/data=!4m10!1m2!2m1!1z55m95bed5rC05rqQIOWNl-mYv-iYhw!3m6!1s0x3540d966523871cd:0x113c62ca21333c9a!8m2!3d32.8253719!4d131.0953099!15sChbnmb3lt53msLTmupAg5Y2X6Zi_6JiHWhoiGOeZveW3nSDmsLTmupAg5Y2XIOmYv-iYh5IBEnRvdXJpc3RfYXR0cmFjdGlvbpoBJENoZERTVWhOTUc5blMwVkpRMEZuU1VSd2QwNWhSWEpSUlJBQuABAPoBBAgRECQ!16s%2Fg%2F11fwgrlfjd",
-     "checked_at": "2026-11-11",
+     "checked_at": "2026-11-12",
      "title": "Google 地圖",
      "fields": [
       "ratings.google",
-      "hours"
+      "hours",
+      "address"
      ]
     },
     {
@@ -4878,13 +5648,22 @@
      "fields": [
       "parking"
      ]
+    },
+    {
+     "url": "https://minamiaso.info/spot/shirakawaspring/",
+     "checked_at": "2026-11-12",
+     "fields": [
+      "phone"
+     ]
     }
    ],
    "field_status": {
     "stay_minutes": "估計",
-    "season_note": "查無（無特定季節亮點）"
+    "season_note": "查無（無特定季節亮點）",
+    "phone": "已查",
+    "address": "已查"
    },
-   "checked_date": "2026-11-11",
+   "checked_date": "2026-11-12",
    "ratings": [
     {
      "source": "google",
@@ -4894,7 +5673,9 @@
      "checked_at": "2026-11-11",
      "check_method": "google_maps_tool"
     }
-   ]
+   ],
+   "phone": "0967-67-2222",
+   "address": "〒869-1502 熊本県阿蘇郡南阿蘇村白川2040"
   },
   "db:db_s_4d0e8a1cd0": {
    "kind": "spot",
@@ -4936,11 +5717,12 @@
     },
     {
      "url": "https://www.google.com/maps/place/%E8%8D%89%E5%8D%83%E9%87%8C%E3%83%B6%E6%B5%9C/@32.8818249,131.0353035,15z/data=!4m10!1m2!2m1!1z6I2J5Y2D6YeM44O25rWcIOmYv-iYhw!3m6!1s0x354128aa1961ab5d:0xf8f3dcd6bdc48e4e!8m2!3d32.8818249!4d131.0533279!15sChbojYnljYPph4zjg7bmtZwg6Zi_6JiHWhsiGeiNiSDljYPph4wg44O2IOa1nCDpmL_omIeSARJ0b3VyaXN0X2F0dHJhY3Rpb26aASRDaGREU1VoTk1HOW5TMFZKUTBGblNVTlFkWFpZVEhGQlJSQULgAQD6AQQIABAj!16s%2Fg%2F113k1jgcg",
-     "checked_at": "2026-11-11",
+     "checked_at": "2026-11-12",
      "title": "Google 地圖",
      "fields": [
       "ratings.google",
-      "hours"
+      "hours",
+      "address"
      ]
     },
     {
@@ -4950,13 +5732,22 @@
      "fields": [
       "parking"
      ]
+    },
+    {
+     "url": "https://kumamoto.guide/spots/detail/210",
+     "checked_at": "2026-11-12",
+     "fields": [
+      "phone"
+     ]
     }
    ],
    "field_status": {
     "stay_minutes": "估計",
-    "season_note": "估計"
+    "season_note": "估計",
+    "phone": "已查",
+    "address": "已查"
    },
-   "checked_date": "2026-11-11",
+   "checked_date": "2026-11-12",
    "ratings": [
     {
      "source": "google",
@@ -4966,7 +5757,9 @@
      "checked_at": "2026-11-11",
      "check_method": "google_maps_tool"
     }
-   ]
+   ],
+   "phone": "0967-34-1600",
+   "address": "〒869-1505 熊本県阿蘇郡阿蘇市草千里ヶ浜"
   },
   "db:db_s_e2a49dfbe1": {
    "kind": "spot",
@@ -5008,7 +5801,10 @@
     },
     {
      "url": "https://www.city.amakusa.kumamoto.jp/kiji0031449/index.html",
-     "checked_at": "2026-11-11"
+     "checked_at": "2026-11-12",
+     "fields": [
+      "phone"
+     ]
     },
     {
      "url": "https://www.google.com/maps/place/%E6%A3%9A%E5%BA%95%E5%9F%8E%E8%B7%A1/@32.4148847,130.3338114,15z/data=!4m6!3m5!1s0x353f92eb65566d89:0x265cb1cac9de02c3!8m2!3d32.4149181!4d130.3337801!16s%2Fg%2F11f11mkmpr",
@@ -5026,15 +5822,24 @@
      "fields": [
       "parking"
      ]
+    },
+    {
+     "url": "https://www.google.com/maps/place/%E6%A3%9A%E5%BA%95%E5%9F%8E%E8%B7%A1/@32.4148847,130.3338114,15z/data=!4m6!3m5!1s0x353f92eb65566d89:0x265cb1cac9de02c3!8m2!3d32.4149181!4d130.3337801!16s%2Fg%2F11f11mkmpr&entry=ttu&g_ep=EgoyMDI2MTEwNC4wIKXMDSoASAFQAw%3D%3D",
+     "checked_at": "2026-11-12",
+     "fields": [
+      "address"
+     ]
     }
    ],
    "field_status": {
     "stay_minutes": "估計",
     "season_note": "查無（無特定季節亮點）",
     "parking.walk_min": "估計",
-    "parking.fee": "估計"
+    "parking.fee": "估計",
+    "phone": "已查",
+    "address": "已查"
    },
-   "checked_date": "2026-11-11",
+   "checked_date": "2026-11-12",
    "ratings": [
     {
      "source": "google",
@@ -5044,7 +5849,9 @@
      "checked_at": "2026-11-11",
      "check_method": "google_maps_tool"
     }
-   ]
+   ],
+   "phone": "0969-23-1111",
+   "address": "〒861-6402 熊本県天草市倉岳町棚底字尾崎"
   },
   "db:db_s_4c27010caf": {
    "kind": "spot",
@@ -5082,7 +5889,11 @@
    "sources": [
     {
      "url": "https://www.arita-touki.com/",
-     "checked_at": "2026-11-11"
+     "checked_at": "2026-11-12",
+     "fields": [
+      "phone",
+      "address"
+     ]
     },
     {
      "url": "https://www.arita-touki.com/event_info/4776.html",
@@ -5100,9 +5911,11 @@
    ],
    "field_status": {
     "stay_minutes": "估計",
-    "season_note": "查無（無特定季節亮點）"
+    "season_note": "查無（無特定季節亮點）",
+    "phone": "已查",
+    "address": "已查"
    },
-   "checked_date": "2026-11-11",
+   "checked_date": "2026-11-12",
    "ratings": [
     {
      "source": "google",
@@ -5112,7 +5925,9 @@
      "checked_at": "2026-11-11",
      "check_method": "google_maps_tool"
     }
-   ]
+   ],
+   "phone": "0955-41-0030",
+   "address": "〒844-0014 佐賀県西松浦郡有田町戸矢乙370-2"
   },
   "db:db_s_ff21da9c25": {
    "kind": "spot",
@@ -5150,7 +5965,10 @@
    "sources": [
     {
      "url": "https://www.yumeginga.jp/users_guide.html",
-     "checked_at": "2026-11-11"
+     "checked_at": "2026-11-12",
+     "fields": [
+      "phone"
+     ]
     },
     {
      "url": "https://www.google.com/maps/place/%E4%BD%90%E8%B3%80%E7%9C%8C%E7%AB%8B%E5%AE%87%E5%AE%99%E7%A7%91%E5%AD%A6%E9%A4%A8+%E3%82%86%E3%82%81%E3%81%8E%E3%82%93%E3%81%8C/@33.1791038,130.0353699,15z/data=!4m6!3m5!1s0x354028ec2bd3a803:0xf4c8e6c107b8757f!8m2!3d33.1791421!4d130.035404!16s%2Fg%2F120scy13",
@@ -5168,14 +5986,23 @@
      "fields": [
       "parking"
      ]
+    },
+    {
+     "url": "https://www.google.com/maps/place/%E4%BD%90%E8%B3%80%E7%9C%8C%E7%AB%8B%E5%AE%87%E5%AE%99%E7%A7%91%E5%AD%A6%E9%A4%A8+%E3%82%86%E3%82%81%E3%81%8E%E3%82%93%E3%81%8C/@33.1791038,130.0353699,15z/data=!4m6!3m5!1s0x354028ec2bd3a803:0xf4c8e6c107b8757f!8m2!3d33.1791421!4d130.035404!16s%2Fg%2F120scy13&entry=ttu&g_ep=EgoyMDI2MTEwNC4wIKXMDSoASAFQAw%3D%3D",
+     "checked_at": "2026-11-12",
+     "fields": [
+      "address"
+     ]
     }
    ],
    "field_status": {
     "hours": "已查（Google 地圖）",
     "stay_minutes": "估計",
-    "season_note": "查無（無特定季節亮點）"
+    "season_note": "查無（無特定季節亮點）",
+    "phone": "已查",
+    "address": "已查"
    },
-   "checked_date": "2026-11-11",
+   "checked_date": "2026-11-12",
    "ratings": [
     {
      "source": "google",
@@ -5185,7 +6012,9 @@
      "checked_at": "2026-11-11",
      "check_method": "google_maps_tool"
     }
-   ]
+   ],
+   "phone": "0954-20-1666",
+   "address": "〒843-0021 佐賀県武雄市武雄町大字永島16351"
   },
   "db:db_s_947717e1fa": {
    "kind": "spot",
@@ -5223,7 +6052,11 @@
    "sources": [
     {
      "url": "https://www.takeo-kk.net/sightseeing/001371.php",
-     "checked_at": "2026-11-11"
+     "checked_at": "2026-11-12",
+     "fields": [
+      "field_status.phone",
+      "address"
+     ]
     },
     {
      "url": "https://www.city.takeo.lg.jp/kyouiku/bunkazai/pages/bunkazai/bunkazai-106.htm",
@@ -5242,9 +6075,11 @@
    "field_status": {
     "stay_minutes": "估計",
     "season_note": "查無（無特定季節亮點）",
-    "parking.fee": "估計"
+    "parking.fee": "估計",
+    "phone": "查無（武雄市觀光協會官網電話欄空白，Google 地圖未列）",
+    "address": "已查"
    },
-   "checked_date": "2026-11-11",
+   "checked_date": "2026-11-12",
    "ratings": [
     {
      "source": "google",
@@ -5254,7 +6089,8 @@
      "checked_at": "2026-11-11",
      "check_method": "google_maps_tool"
     }
-   ]
+   ],
+   "address": "〒843-0013 佐賀県武雄市橘町大字大日"
   },
   "db:db_r_1c577dd3c4": {
    "kind": "restaurant",
@@ -5272,7 +6108,7 @@
     "method": "不收（現場候位）",
     "note": null
    },
-   "google_maps_url": "https://www.google.com/maps/search/?api=1&query=33.5932093%2C130.4045625",
+   "google_maps_url": "https://www.google.com/maps/search/?api=1&query=%E4%B8%80%E8%98%AD%20%E6%9C%AC%E7%A4%BE%E7%B7%8F%E6%9C%AC%E5%BA%97%20%E7%A6%8F%E5%B2%A1%E7%9C%8C%E7%A6%8F%E5%B2%A1%E5%B8%82%E5%8D%9A%E5%A4%9A%E5%8C%BA%E4%B8%AD%E6%B4%B25-3-2",
    "ratings": [
     {
      "source": "tabelog",
@@ -5292,7 +6128,7 @@
     },
     {
      "url": "https://tabelog.com/tw/fukuoka/A4001/A400102/40000130/",
-     "checked_at": "2026-11-11",
+     "checked_at": "2026-11-12",
      "title": "Tabelog（繁中鏡像頁，與日文頁同店號；日文頁網址取自該頁 hreflang=ja）",
      "fields": [
       "ratings.tabelog",
@@ -5301,7 +6137,24 @@
       "budget_dinner",
       "hours",
       "closed_days",
-      "reservation"
+      "reservation",
+      "phone"
+     ]
+    },
+    {
+     "url": "https://tabelog.com/fukuoka/A4001/A400102/40000130/",
+     "checked_at": "2026-11-12",
+     "fields": [
+      "phone",
+      "address",
+      "description"
+     ]
+    },
+    {
+     "url": "https://www.google.com/maps/search/?api=1&query=%E4%B8%80%E8%98%AD%20%E6%9C%AC%E7%A4%BE%E7%B7%8F%E6%9C%AC%E5%BA%97%20%E7%A6%8F%E5%B2%A1%E7%9C%8C%E7%A6%8F%E5%B2%A1%E5%B8%82%E5%8D%9A%E5%A4%9A%E5%8C%BA%E4%B8%AD%E6%B4%B25-3-2",
+     "checked_at": "2026-11-12",
+     "fields": [
+      "google_maps_url"
      ]
     }
    ],
@@ -5312,10 +6165,14 @@
     "hours": "已查",
     "reservation": "已查",
     "ratings.tabelog": "已查",
-    "ratings.google": "待查（PlacesSearch 工具不可用；schema 的 check_method 只允許 manual，未人工查看 Google 地圖店家頁，故不填）"
+    "ratings.google": "待查（PlacesSearch 工具不可用；schema 的 check_method 只允許 manual，未人工查看 Google 地圖店家頁，故不填）",
+    "phone": "已查",
+    "google_maps_url": "已查",
+    "address": "已查",
+    "description": "已查"
    },
    "cuisine_source": "Tabelog 2026-11-11",
-   "checked_date": "2026-11-11",
+   "checked_date": "2026-11-12",
    "parking": {
     "available": true,
     "type": "nearby",
@@ -5330,7 +6187,10 @@
     "note": "OSM way/1567192893；無入口節點；取輪廓上距車道最近點（約 16 m）；距店約 75 m（直線）。是否為店家專用或投幣式待查；停車費與台數待查；查核日 2026-11-11",
     "source": "https://www.openstreetmap.org/way/1567192893"
    },
-   "note": "Tabelog 對應「一蘭 本社総本店」（中洲）。 預算為 Tabelog 每人預算區間。"
+   "note": "Tabelog 對應「一蘭 本社総本店」（中洲）。 預算為 Tabelog 每人預算區間。",
+   "phone": "050-3733-2600",
+   "address": "福岡県福岡市博多区中洲5-3-2",
+   "description": "一蘭拉麵位於中洲的本社總本店，豚骨拉麵，24 小時營業、全年無休，適合深夜或清晨用餐。"
   },
   "db:db_o_e9e5bf3681": {
    "kind": "spot",
@@ -5390,14 +6250,24 @@
      "fields": [
       "parking"
      ]
+    },
+    {
+     "url": "https://www.google.com/maps/place/%E9%87%91%E5%8D%B0%E3%81%AE%E6%B9%AF/@33.6828553,130.2904699,15z/data=!4m6!3m5!1s0x3541f2c22f8307cb:0x836148969a6e13a9!8m2!3d33.6828472!4d130.2904338!16s%2Fg%2F1v44brj4&entry=ttu&g_ep=EgoyMDI2MTEwNC4wIKXMDSoASAFQAw%3D%3D",
+     "checked_at": "2026-11-12",
+     "fields": [
+      "phone",
+      "address"
+     ]
     }
    ],
    "field_status": {
     "stay_minutes": "估計",
     "season_note": "查無（無特定季節亮點）",
-    "parking.fee": "估計"
+    "parking.fee": "估計",
+    "phone": "已查",
+    "address": "已查"
    },
-   "checked_date": "2026-11-11",
+   "checked_date": "2026-11-12",
    "ratings": [
     {
      "source": "google",
@@ -5407,7 +6277,9 @@
      "checked_at": "2026-11-11",
      "check_method": "google_maps_tool"
     }
-   ]
+   ],
+   "phone": "092-603-6631",
+   "address": "〒811-0325 福岡県福岡市東区勝馬1803-1"
   },
   "db:db_r_10c9266683": {
    "kind": "restaurant",
@@ -5425,7 +6297,7 @@
     "method": "官網／TableCheck 網路預約、電話預約",
     "note": "午餐從官網預約；吧台晚餐可電話或網路預約；包廂請電話預約（官網 FAQ）"
    },
-   "google_maps_url": "https://www.google.com/maps/place/?q=place_id:ChIJx7zaE4eRQTURntscDlwa6cE",
+   "google_maps_url": "https://www.google.com/maps/search/?api=1&query=%E5%8D%9A%E5%A4%9A%E6%96%99%E4%BA%AD%20%E7%A8%9A%E5%8A%A0%E6%A6%AE%20%E7%A6%8F%E5%B2%A1%E7%9C%8C%E7%A6%8F%E5%B2%A1%E5%B8%82%E4%B8%AD%E5%A4%AE%E5%8C%BA%E5%A4%A7%E5%90%8D2-2-17",
    "ratings": [
     {
      "source": "tabelog",
@@ -5445,7 +6317,7 @@
     },
     {
      "url": "https://tabelog.com/tw/fukuoka/A4001/A400104/40000023/",
-     "checked_at": "2026-11-11",
+     "checked_at": "2026-11-12",
      "title": "Tabelog（繁中鏡像頁，與日文頁同店號；日文頁網址取自該頁 hreflang=ja）",
      "fields": [
       "ratings.tabelog",
@@ -5454,7 +6326,24 @@
       "budget_dinner",
       "hours",
       "closed_days",
-      "reservation"
+      "reservation",
+      "phone"
+     ]
+    },
+    {
+     "url": "https://tabelog.com/fukuoka/A4001/A400104/40000023/",
+     "checked_at": "2026-11-12",
+     "fields": [
+      "phone",
+      "address",
+      "description"
+     ]
+    },
+    {
+     "url": "https://www.google.com/maps/search/?api=1&query=%E5%8D%9A%E5%A4%9A%E6%96%99%E4%BA%AD%20%E7%A8%9A%E5%8A%A0%E6%A6%AE%20%E7%A6%8F%E5%B2%A1%E7%9C%8C%E7%A6%8F%E5%B2%A1%E5%B8%82%E4%B8%AD%E5%A4%AE%E5%8C%BA%E5%A4%A7%E5%90%8D2-2-17",
+     "checked_at": "2026-11-12",
+     "fields": [
+      "google_maps_url"
      ]
     }
    ],
@@ -5465,10 +6354,14 @@
     "hours": "已查",
     "reservation": "已查",
     "ratings.tabelog": "已查",
-    "ratings.google": "待查（PlacesSearch 工具不可用；schema 的 check_method 只允許 manual，未人工查看 Google 地圖店家頁，故不填）"
+    "ratings.google": "待查（PlacesSearch 工具不可用；schema 的 check_method 只允許 manual，未人工查看 Google 地圖店家頁，故不填）",
+    "phone": "已查",
+    "google_maps_url": "已查",
+    "address": "已查",
+    "description": "已查"
    },
    "cuisine_source": "Tabelog 2026-11-11",
-   "checked_date": "2026-11-11",
+   "checked_date": "2026-11-12",
    "parking": {
     "available": true,
     "type": "nearby",
@@ -5483,7 +6376,10 @@
     "note": "OSM way/1378468979；無入口節點；取輪廓上距車道最近點（約 32 m）；距店約 46 m（直線）。是否為店家專用或投幣式待查；停車費與台數待查；查核日 2026-11-11",
     "source": "https://www.openstreetmap.org/way/1378468979"
    },
-   "note": "預算為 Tabelog 每人預算區間。"
+   "note": "預算為 Tabelog 每人預算區間。",
+   "phone": "092-721-4624",
+   "address": "福岡県福岡市中央区大名2-2-17",
+   "description": "福岡大名的老字號料亭，主打海鮮、壽司與日本料理；晚間價位高（Tabelog 晚餐 ¥10,000–14,999），週末中午有較平價的午餐時段。"
   },
   "db:db_r_7770db46ca": {
    "kind": "restaurant",
@@ -5501,7 +6397,7 @@
     "method": "不收（現場候位）",
     "note": null
    },
-   "google_maps_url": "https://www.google.com/maps/search/?api=1&query=33.5882444%2C130.4170779",
+   "google_maps_url": "https://www.google.com/maps/search/?api=1&query=%E5%8D%9A%E5%A4%9A%E4%B8%80%E5%B9%B8%E8%88%8E%20%E7%B7%8F%E6%9C%AC%E5%BA%97%20%E7%A6%8F%E5%B2%A1%E7%9C%8C%E7%A6%8F%E5%B2%A1%E5%B8%82%E5%8D%9A%E5%A4%9A%E5%8C%BA%E5%8D%9A%E5%A4%9A%E9%A7%85%E5%89%8D3-23-12%20%E5%85%89%E5%92%8C%E3%83%93%E3%83%AB%201F",
    "ratings": [
     {
      "source": "tabelog",
@@ -5521,7 +6417,7 @@
     },
     {
      "url": "https://tabelog.com/tw/fukuoka/A4001/A400101/40006062/",
-     "checked_at": "2026-11-11",
+     "checked_at": "2026-11-12",
      "title": "Tabelog（繁中鏡像頁，與日文頁同店號；日文頁網址取自該頁 hreflang=ja）",
      "fields": [
       "ratings.tabelog",
@@ -5530,7 +6426,24 @@
       "budget_dinner",
       "hours",
       "closed_days",
-      "reservation"
+      "reservation",
+      "phone"
+     ]
+    },
+    {
+     "url": "https://tabelog.com/fukuoka/A4001/A400101/40006062/",
+     "checked_at": "2026-11-12",
+     "fields": [
+      "phone",
+      "address",
+      "description"
+     ]
+    },
+    {
+     "url": "https://www.google.com/maps/search/?api=1&query=%E5%8D%9A%E5%A4%9A%E4%B8%80%E5%B9%B8%E8%88%8E%20%E7%B7%8F%E6%9C%AC%E5%BA%97%20%E7%A6%8F%E5%B2%A1%E7%9C%8C%E7%A6%8F%E5%B2%A1%E5%B8%82%E5%8D%9A%E5%A4%9A%E5%8C%BA%E5%8D%9A%E5%A4%9A%E9%A7%85%E5%89%8D3-23-12%20%E5%85%89%E5%92%8C%E3%83%93%E3%83%AB%201F",
+     "checked_at": "2026-11-12",
+     "fields": [
+      "google_maps_url"
      ]
     }
    ],
@@ -5541,10 +6454,14 @@
     "hours": "已查",
     "reservation": "已查",
     "ratings.tabelog": "已查",
-    "ratings.google": "待查（PlacesSearch 工具不可用；schema 的 check_method 只允許 manual，未人工查看 Google 地圖店家頁，故不填）"
+    "ratings.google": "待查（PlacesSearch 工具不可用；schema 的 check_method 只允許 manual，未人工查看 Google 地圖店家頁，故不填）",
+    "phone": "已查",
+    "google_maps_url": "已查",
+    "address": "已查",
+    "description": "已查"
    },
    "cuisine_source": "Tabelog 2026-11-11",
-   "checked_date": "2026-11-11",
+   "checked_date": "2026-11-12",
    "parking": {
     "available": true,
     "type": "nearby",
@@ -5559,7 +6476,10 @@
     "note": "OSM way/1428326506；無入口節點；取輪廓上距車道最近點（約 8 m）；距店約 62 m（直線）。是否為店家專用或投幣式待查；停車費與台數待查；查核日 2026-11-11",
     "source": "https://www.openstreetmap.org/way/1428326506"
    },
-   "note": "預算為 Tabelog 每人預算區間。"
+   "note": "預算為 Tabelog 每人預算區間。",
+   "phone": "092-432-1190",
+   "address": "福岡県福岡市博多区博多駅前3-23-12 光和ビル 1F",
+   "description": "博多站前的豚骨拉麵名店總本店，也有煎餃與下酒菜；週一至週六營業到 22:30，價位 ¥1,000 以內。"
   },
   "db:db_s_c44445f58c": {
    "kind": "spot",
@@ -5571,7 +6491,7 @@
    "category_source": "osm_rule",
    "category_basis": "tourism=museum（博物館・美術館歸歷史／文化）",
    "hours": "09:00–12:00、13:00–16:45",
-   "closed_days": "週一；1 月、6 月、12 月整月休館（1/1–5 開館）",
+   "closed_days": "疑似已閉館（Google 標示閉業，須確認）；既有資料：週一；1 月、6 月、12 月整月休館（1/1–5 開館）",
    "admission": "大人・高中生 ¥1,000／中學生以下 ¥300",
    "stay_minutes": 30,
    "rain_ok": true,
@@ -5593,11 +6513,14 @@
    },
    "mapcode": "243 887 098*31",
    "mapcode_source": "Mapion 右鍵取得 243 887 098*31，以 saibara convgeo 反查一致（誤差 1.8 m）；saibara 正向換算 243 887 098*30（反查誤差 1.8 m）。換算點：停車場入口 34.412575,131.391604（停車場 way/729213233 無入口節點；取輪廓上距車道最近點（約 3 m））",
-   "description": "收藏高麗茶碗與萩燒等茶碗的私人美術館。",
+   "description": "【疑似已閉館】Google 地圖標示閉業；MuseumNavi 標題為【閉館】；法人登記 2024-01-16 閉鎖。須確認。收藏高麗茶碗與萩燒等茶碗的私人美術館。",
    "sources": [
     {
      "url": "https://www.jalan.net/kankou/spt_35204cc3300033559/",
-     "checked_at": "2026-11-11"
+     "checked_at": "2026-11-12",
+     "fields": [
+      "address"
+     ]
     },
     {
      "url": "https://www.openstreetmap.org/way/729213233",
@@ -5606,15 +6529,35 @@
      "fields": [
       "parking"
      ]
+    },
+    {
+     "url": "https://www.museumnavi.com/museums/954/main",
+     "checked_at": "2026-11-12",
+     "fields": [
+      "alert"
+     ]
+    },
+    {
+     "url": "https://houjin-lookup.info/number/3250005004803",
+     "checked_at": "2026-11-12",
+     "fields": [
+      "alert"
+     ]
     }
    ],
    "field_status": {
     "stay_minutes": "估計",
     "season_note": "查無（無特定季節亮點）",
-    "ratings.google": "待查（Google 地圖無分數或為區域）"
+    "ratings.google": "待查（Google 地圖無分數或為區域）",
+    "address": "已查"
    },
-   "checked_date": "2026-11-11",
-   "note": "資料來源為旅遊網站（非官網），開館資訊待現場或電話確認"
+   "checked_date": "2026-11-12",
+   "note": "資料來源為旅遊網站（非官網），開館資訊待現場或電話確認 風險項：Google 標示閉業；MuseumNavi「【閉館】石井茶碗美術館」；法人ルックアップ顯示財團法人石井茶碗美術館登記 2024-01-16 閉鎖。須確認。未從路線移除。查證日 2026-11-12。",
+   "address": "〒758-0077 山口県萩市南古萩町33-3",
+   "alert": {
+    "level": "closed",
+    "text": "Google 標示閉業；MuseumNavi 與法人登記顯示已閉館，須確認"
+   }
   },
   "db:db_s_c5ed6ae4d7": {
    "kind": "spot",
@@ -5667,13 +6610,23 @@
       "ratings.google",
       "hours"
      ]
+    },
+    {
+     "url": "https://taibi-hagi.jp/access.html",
+     "checked_at": "2026-11-12",
+     "fields": [
+      "phone",
+      "address"
+     ]
     }
    ],
    "field_status": {
     "stay_minutes": "估計",
-    "season_note": "查無（無特定季節亮點）"
+    "season_note": "查無（無特定季節亮點）",
+    "phone": "已查",
+    "address": "已查"
    },
-   "checked_date": "2026-11-11",
+   "checked_date": "2026-11-12",
    "ratings": [
     {
      "source": "google",
@@ -5683,7 +6636,9 @@
      "checked_at": "2026-11-11",
      "check_method": "google_maps_tool"
     }
-   ]
+   ],
+   "phone": "0838-26-5180",
+   "address": "〒758-0011 山口県萩市椿東10426-1"
   },
   "db:db_s_6457f1dc88": {
    "kind": "spot",
@@ -5721,7 +6676,11 @@
    "sources": [
     {
      "url": "https://kinuyo-bunka.jp/information",
-     "checked_at": "2026-11-11"
+     "checked_at": "2026-11-12",
+     "fields": [
+      "phone",
+      "address"
+     ]
     },
     {
      "url": "https://www.openstreetmap.org/way/382829525",
@@ -5730,14 +6689,27 @@
      "fields": [
       "parking"
      ]
+    },
+    {
+     "url": "https://www.google.com/maps/place/%E7%94%B0%E4%B8%AD%E7%B5%B9%E4%BB%A3%E3%81%B6%E3%82%93%E3%81%8B%E9%A4%A8/@33.9555,130.944,15z/data=!4m6!3m5!1s0x3543bd9e52877273:0x4c4825e12c2cf4ae!8m2!3d33.9590636!4d130.9411541!16s%2Fg%2F1td67p38",
+     "checked_at": "2026-11-12",
+     "fields": [
+      "google_maps_url"
+     ]
     }
    ],
    "field_status": {
     "stay_minutes": "估計",
     "season_note": "查無（無特定季節亮點）",
-    "ratings.google": "待查（Google 只回地址）"
+    "ratings.google": "待查（Google 只回地址）",
+    "phone": "已查",
+    "address": "已查",
+    "google_maps_url": "已查"
    },
-   "checked_date": "2026-11-11"
+   "checked_date": "2026-11-12",
+   "phone": "083-250-7666",
+   "address": "〒750-0008 山口県下関市田中町5-7",
+   "google_maps_url": "https://www.google.com/maps/place/%E7%94%B0%E4%B8%AD%E7%B5%B9%E4%BB%A3%E3%81%B6%E3%82%93%E3%81%8B%E9%A4%A8/@33.9555,130.944,15z/data=!4m6!3m5!1s0x3543bd9e52877273:0x4c4825e12c2cf4ae!8m2!3d33.9590636!4d130.9411541!16s%2Fg%2F1td67p38"
   },
   "db:db_s_473ea616df": {
    "kind": "spot",
@@ -5784,15 +6756,36 @@
      "fields": [
       "parking"
      ]
+    },
+    {
+     "url": "https://mojiko-retoro9.jp/spot/former_moji_mitsui_club/",
+     "checked_at": "2026-11-12",
+     "fields": [
+      "phone",
+      "address"
+     ]
+    },
+    {
+     "url": "https://www.google.com/maps/place/%E6%97%A7+%E9%96%80%E5%8F%B8%E4%B8%89%E4%BA%95%E5%80%B6%E6%A5%BD%E9%83%A8/@33.9456994,130.9444806,15z/data=!4m10!1m2!2m1!1z5pen6ZaA5Y-45LiJ5LqV5YC25qW96YOo!3m6!1s0x3543962916dbdded:0x74d6999ce1b06426!8m2!3d33.9456994!4d130.962505!15sChjml6fploDlj7jkuInkupXlgLbmpb3pg6haHSIb5penIOmWgOWPuCDkuInkupUg5YC25qW96YOokgETaGlzdG9yaWNhbF9sYW5kbWFya5oBRENpOURRVWxSUVVOdlpFTm9kSGxqUmpsdlQyNXdibEpzU201bGJGWnpZekJLTW1NeFpHcGtSVlo0VVcwNVVXTkhZeEFC4AEA-gEECAAQFw!16s%2Fg%2F12yygldx2",
+     "checked_at": "2026-11-12",
+     "fields": [
+      "google_maps_url"
+     ]
     }
    ],
    "field_status": {
     "stay_minutes": "估計",
     "season_note": "查無（無特定季節亮點）",
-    "ratings.google": "待查（Google 只回地址）"
+    "ratings.google": "待查（Google 只回地址）",
+    "phone": "已查",
+    "address": "已查",
+    "google_maps_url": "已查"
    },
-   "checked_date": "2026-11-11",
-   "note": "Google 評分未取得（搜尋結果只回地址）"
+   "checked_date": "2026-11-12",
+   "note": "Google 評分未取得（搜尋結果只回地址）",
+   "phone": "093-321-4151",
+   "address": "〒801-0852 福岡県北九州市門司区港町7-1",
+   "google_maps_url": "https://www.google.com/maps/place/%E6%97%A7+%E9%96%80%E5%8F%B8%E4%B8%89%E4%BA%95%E5%80%B6%E6%A5%BD%E9%83%A8/@33.9456994,130.9444806,15z/data=!4m10!1m2!2m1!1z5pen6ZaA5Y-45LiJ5LqV5YC25qW96YOo!3m6!1s0x3543962916dbdded:0x74d6999ce1b06426!8m2!3d33.9456994!4d130.962505!15sChjml6fploDlj7jkuInkupXlgLbmpb3pg6haHSIb5penIOmWgOWPuCDkuInkupUg5YC25qW96YOokgETaGlzdG9yaWNhbF9sYW5kbWFya5oBRENpOURRVWxSUVVOdlpFTm9kSGxqUmpsdlQyNXdibEpzU201bGJGWnpZekJLTW1NeFpHcGtSVlo0VVcwNVVXTkhZeEFC4AEA-gEECAAQFw!16s%2Fg%2F12yygldx2"
   },
   "db:db_r_ea69591dbe": {
    "kind": "restaurant",
@@ -5865,15 +6858,15 @@
    "cuisine": "海鮮・壽司・居酒屋（福喜 本店）",
    "budget_lunch": "～¥999（Tabelog）",
    "budget_dinner": "¥3,000–¥3,999（Tabelog）",
-   "closed_days": null,
-   "hours": "11:30–23:00",
+   "closed_days": "來源不一致，須確認。官網訂位頁 fukuki.owst.jp（2026-11-12）：不定休；公司頁 fukuki-honkan.net：年中無休。",
+   "hours": "來源不一致，須確認。既有資料：11:30–23:00；官網訂位頁 fukuki.owst.jp（2026-11-12）：11:00–22:30。",
    "reservation": {
     "required": null,
     "accepts": true,
     "method": "電話預約",
     "note": null
    },
-   "google_maps_url": "https://www.google.com/maps/search/?api=1&query=33.206026%2C130.3744623",
+   "google_maps_url": "https://www.google.com/maps/search/?api=1&query=%E7%A6%8F%E5%96%9C%20%E6%9C%AC%E5%BA%97%20%E7%A6%8F%E5%B2%A1%E7%9C%8C%E5%A4%A7%E5%B7%9D%E5%B8%82%E6%A6%8E%E6%B4%A5834-1",
    "ratings": [
     {
      "source": "tabelog",
@@ -5893,7 +6886,7 @@
     },
     {
      "url": "https://tabelog.com/tw/fukuoka/A4008/A400806/40029823/",
-     "checked_at": "2026-11-11",
+     "checked_at": "2026-11-12",
      "title": "Tabelog（繁中鏡像頁，與日文頁同店號；日文頁網址取自該頁 hreflang=ja）",
      "fields": [
       "ratings.tabelog",
@@ -5902,21 +6895,59 @@
       "budget_dinner",
       "hours",
       "closed_days",
-      "reservation"
+      "reservation",
+      "phone"
+     ]
+    },
+    {
+     "url": "https://fukuki.owst.jp/",
+     "checked_at": "2026-11-12",
+     "fields": [
+      "closed_days",
+      "address",
+      "description",
+      "hours"
+     ]
+    },
+    {
+     "url": "https://fukuki-honkan.net/company",
+     "checked_at": "2026-11-12",
+     "fields": [
+      "closed_days"
+     ]
+    },
+    {
+     "url": "https://tabelog.com/fukuoka/A4008/A400806/40029823/",
+     "checked_at": "2026-11-12",
+     "fields": [
+      "phone",
+      "address",
+      "description"
+     ]
+    },
+    {
+     "url": "https://www.google.com/maps/search/?api=1&query=%E7%A6%8F%E5%96%9C%20%E6%9C%AC%E5%BA%97%20%E7%A6%8F%E5%B2%A1%E7%9C%8C%E5%A4%A7%E5%B7%9D%E5%B8%82%E6%A6%8E%E6%B4%A5834-1",
+     "checked_at": "2026-11-12",
+     "fields": [
+      "google_maps_url"
      ]
     }
    ],
    "field_status": {
     "budget_lunch": "已查",
     "budget_dinner": "已查",
-    "closed_days": "待查",
+    "closed_days": "已查",
     "hours": "已查",
     "reservation": "已查",
     "ratings.tabelog": "已查",
-    "ratings.google": "待查（PlacesSearch 工具不可用；schema 的 check_method 只允許 manual，未人工查看 Google 地圖店家頁，故不填）"
+    "ratings.google": "待查（PlacesSearch 工具不可用；schema 的 check_method 只允許 manual，未人工查看 Google 地圖店家頁，故不填）",
+    "phone": "已查",
+    "google_maps_url": "已查",
+    "address": "已查",
+    "description": "已查"
    },
    "cuisine_source": "Tabelog 2026-11-11",
-   "checked_date": "2026-11-11",
+   "checked_date": "2026-11-12",
    "parking": {
     "available": true,
     "type": "nearby",
@@ -5931,7 +6962,10 @@
     "note": "OSM way/743661418；無入口節點；取輪廓上距車道最近點（約 5 m）；距店約 19 m（直線）。是否為店家專用或投幣式待查；停車費與台數待查；查核日 2026-11-11",
     "source": "https://www.openstreetmap.org/way/743661418"
    },
-   "note": "Tabelog 對應「福喜 本店」（大川市榎津）。 預算為 Tabelog 每人預算區間。"
+   "note": "Tabelog 對應「福喜 本店」（大川市榎津）。 預算為 Tabelog 每人預算區間。 營業時間／公休並列（2026-11-12）：既有 11:30–23:00；官網訂位頁 https://fukuki.owst.jp/ 寫 11:00–22:30、不定休；公司頁 https://fukuki-honkan.net/company 寫年中無休。未擇一覆蓋。",
+   "phone": "0944-86-5062",
+   "address": "福岡県大川市榎津834-1",
+   "description": "大川市榎津的海鮮日本料理店，兼營居酒屋，中午平價、晚上約 ¥3,000–3,999（Tabelog）。"
   },
   "db:db_s_a37d49450d": {
    "kind": "spot",
@@ -5969,7 +7003,10 @@
    "sources": [
     {
      "url": "https://yokanavi.com/spots/26813",
-     "checked_at": "2026-11-11"
+     "checked_at": "2026-11-12",
+     "fields": [
+      "phone"
+     ]
     },
     {
      "url": "https://perelog.com/facilities/hakata-rekishikan",
@@ -5991,13 +7028,22 @@
      "fields": [
       "parking"
      ]
+    },
+    {
+     "url": "https://www.google.com/maps/place/%E5%8D%9A%E5%A4%9A%E6%AD%B4%E5%8F%B2%E9%A4%A8/@33.5927982,130.410919,15z/data=!4m6!3m5!1s0x3541919ffb679e8b:0xfd118169e8dc397a!8m2!3d33.5927825!4d130.4107805!16s%2Fg%2F11hf39rgx7&entry=ttu&g_ep=EgoyMDI2MTEwNC4wIKXMDSoASAFQAw%3D%3D",
+     "checked_at": "2026-11-12",
+     "fields": [
+      "address"
+     ]
     }
    ],
    "field_status": {
     "stay_minutes": "估計",
-    "season_note": "查無（無特定季節亮點）"
+    "season_note": "查無（無特定季節亮點）",
+    "phone": "已查",
+    "address": "已查"
    },
-   "checked_date": "2026-11-11",
+   "checked_date": "2026-11-12",
    "ratings": [
     {
      "source": "google",
@@ -6007,7 +7053,9 @@
      "checked_at": "2026-11-11",
      "check_method": "google_maps_tool"
     }
-   ]
+   ],
+   "phone": "092-291-2951",
+   "address": "〒812-0026 福岡県福岡市博多区上川端町1-1"
   },
   "db:db_s_5127f3c14a": {
    "kind": "spot",
@@ -6050,7 +7098,11 @@
    "sources": [
     {
      "url": "https://fukuoka-teien.com/rakusuien/information/",
-     "checked_at": "2026-11-11"
+     "checked_at": "2026-11-12",
+     "fields": [
+      "phone",
+      "address"
+     ]
     },
     {
      "url": "https://koyo.walkerplus.com/detail/ar1040e366303/data.html",
@@ -6075,9 +7127,11 @@
     }
    ],
    "field_status": {
-    "stay_minutes": "估計"
+    "stay_minutes": "估計",
+    "phone": "已查",
+    "address": "已查"
    },
-   "checked_date": "2026-11-11",
+   "checked_date": "2026-11-12",
    "ratings": [
     {
      "source": "google",
@@ -6087,7 +7141,9 @@
      "checked_at": "2026-11-11",
      "check_method": "google_maps_tool"
     }
-   ]
+   ],
+   "phone": "092-262-6665",
+   "address": "〒812-0018 福岡県福岡市博多区住吉2丁目10-7"
   },
   "rf_hagi_chiyo": {
    "kind": "restaurant",
@@ -6282,12 +7338,12 @@
      "checked_at": "2026-11-11"
     }
    ],
-   "mapcode": null,
-   "mapcode_source": null,
+   "mapcode": "243 887 617*02",
+   "mapcode_source": "saibara 正向換算並反查回讀一致（誤差 1 m）；Mapion 交叉比對 243 887 617*02（反查 1 m）",
    "sources": [
     {
      "url": "https://tabelog.com/tw/yamaguchi/A3503/A350301/35004560/",
-     "checked_at": "2026-11-11",
+     "checked_at": "2026-11-12",
      "title": "Tabelog（繁中鏡像頁，與日文頁同店號；日文頁網址取自該頁 hreflang=ja）",
      "fields": [
       "ratings.tabelog",
@@ -6296,7 +7352,62 @@
       "budget_dinner",
       "hours",
       "closed_days",
-      "reservation"
+      "reservation",
+      "phone"
+     ]
+    },
+    {
+     "url": "https://www.mapion.co.jp/phonebook/M01012/35204/G5111583-001/",
+     "checked_at": "2026-11-10",
+     "title": "Mapion 電話帳（restaurants_fill.json 記載與 MapCode 交叉核對同一代碼）",
+     "fields": [
+      "mapcode"
+     ]
+    },
+    {
+     "url": "https://saibara.sakura.ne.jp/map/convgeo.cgi",
+     "checked_at": "2026-11-12",
+     "fields": [
+      "mapcode"
+     ]
+    },
+    {
+     "url": "https://www.mapion.co.jp/",
+     "checked_at": "2026-11-12",
+     "fields": [
+      "mapcode"
+     ]
+    },
+    {
+     "url": "https://hagi-gochi.jp/eat/caffee_shiosai",
+     "checked_at": "2026-11-12",
+     "fields": [
+      "parking",
+      "address",
+      "description"
+     ]
+    },
+    {
+     "url": "https://www.openstreetmap.org/way/729275895",
+     "checked_at": "2026-11-12",
+     "fields": [
+      "parking"
+     ]
+    },
+    {
+     "url": "https://tabelog.com/yamaguchi/A3503/A350301/35004560/",
+     "checked_at": "2026-11-12",
+     "fields": [
+      "phone",
+      "address",
+      "description"
+     ]
+    },
+    {
+     "url": "https://www.google.com/maps/search/?api=1&query=%E7%8F%88%E7%90%B2%E9%A4%A8%20%E3%81%97%E3%81%8A%E3%81%95%E3%81%84%20%E5%B1%B1%E5%8F%A3%E7%9C%8C%E8%90%A9%E5%B8%82%E4%BB%8A%E9%AD%9A%E5%BA%97%E7%94%BA24-3",
+     "checked_at": "2026-11-12",
+     "fields": [
+      "google_maps_url"
      ]
     }
    ],
@@ -6307,11 +7418,26 @@
     "budget_dinner": "不適用",
     "hours": "已查",
     "closed_days": "已查",
-    "reservation": "已查"
+    "reservation": "已查",
+    "mapcode": "已查",
+    "parking": "已查",
+    "phone": "已查",
+    "google_maps_url": "已查",
+    "address": "已查",
+    "description": "已查"
    },
-   "checked_date": "2026-11-11",
+   "checked_date": "2026-11-12",
    "note": "Tabelog 營業 07:00–16:00，先前資料為 07:00–18:00。 預算為 Tabelog 每人預算區間。",
-   "cuisine_source": "Tabelog 2026-11-11"
+   "cuisine_source": "Tabelog 2026-11-11",
+   "parking": {
+    "available": true,
+    "type": "dedicated",
+    "capacity": "30 台",
+    "fee": "免費（店家客用，推定）"
+   },
+   "phone": "0838-25-6570",
+   "address": "山口県萩市今魚店町24-3",
+   "description": "萩市區的老咖啡館，7:00 開門，有吐司早餐（モーニング）套餐，適合早餐；週四公休。"
   },
   "rf_hagi_muraya": {
    "kind": "restaurant",
@@ -7317,9 +8443,9 @@
    "cuisine_group": "海鮮",
    "cuisine": "活魚料理・壽司・居酒屋",
    "budget_lunch": "¥1,000–¥1,999（Tabelog）",
-   "budget_dinner": null,
+   "budget_dinner": "¥3,000–3,500",
    "closed_days": "12/31–1/1（先前資料）",
-   "hours": "11:00–14:00、17:00–21:00（Tabelog）",
+   "hours": "來源不一致，須確認。Tabelog：11:00–14:00、17:00–21:00；先前資料晚間至 22:30。",
    "reservation": {
     "required": null,
     "accepts": true,
@@ -7336,12 +8462,12 @@
      "checked_at": "2026-11-11"
     }
    ],
-   "mapcode": null,
-   "mapcode_source": null,
+   "mapcode": "136 315 544*14",
+   "mapcode_source": "saibara 正向換算並反查回讀一致（誤差 1 m）；Mapion 交叉比對 136 315 545*82（反查 2 m）",
    "sources": [
     {
      "url": "https://tabelog.com/tw/miyazaki/A4504/A450403/45003717/",
-     "checked_at": "2026-11-11",
+     "checked_at": "2026-11-12",
      "title": "Tabelog（繁中鏡像頁，與日文頁同店號；日文頁網址取自該頁 hreflang=ja）",
      "fields": [
       "ratings.tabelog",
@@ -7350,7 +8476,63 @@
       "budget_dinner",
       "hours",
       "closed_days",
-      "reservation"
+      "reservation",
+      "phone"
+     ]
+    },
+    {
+     "url": "https://map.yahoo.co.jp/v3/place/HsKy0Bq6q4k",
+     "checked_at": "2026-11-10",
+     "title": "Yahoo!マップ（restaurants_fill.json 座標來源，供 saibara 換算並反查）",
+     "fields": [
+      "mapcode"
+     ]
+    },
+    {
+     "url": "https://saibara.sakura.ne.jp/map/convgeo.cgi",
+     "checked_at": "2026-11-12",
+     "fields": [
+      "mapcode"
+     ]
+    },
+    {
+     "url": "https://www.mapion.co.jp/",
+     "checked_at": "2026-11-12",
+     "fields": [
+      "mapcode"
+     ]
+    },
+    {
+     "url": "https://www.hotpepper.jp/strJ000902244/",
+     "checked_at": "2026-11-12",
+     "fields": [
+      "parking",
+      "budget_dinner",
+      "address",
+      "description"
+     ]
+    },
+    {
+     "url": "https://www.openstreetmap.org/way/1079235015",
+     "checked_at": "2026-11-12",
+     "fields": [
+      "parking"
+     ]
+    },
+    {
+     "url": "https://tabelog.com/miyazaki/A4504/A450403/45003717/",
+     "checked_at": "2026-11-12",
+     "fields": [
+      "phone",
+      "address",
+      "description"
+     ]
+    },
+    {
+     "url": "https://www.google.com/maps/search/?api=1&query=%E3%81%84%E3%81%91%E3%81%99%E3%81%AE%E5%A4%A7%E6%BC%81%E3%82%84%20%E5%AE%AE%E5%B4%8E%E7%9C%8C%E6%97%A5%E5%90%91%E5%B8%82%E4%B8%8A%E7%94%BA7-3",
+     "checked_at": "2026-11-12",
+     "fields": [
+      "google_maps_url"
      ]
     }
    ],
@@ -7358,14 +8540,29 @@
     "ratings.google": "待查（PlacesSearch 工具不可用；schema 的 check_method 只允許 manual，未人工查看 Google 地圖店家頁，故不填）",
     "ratings.tabelog": "已查",
     "budget_lunch": "已查",
-    "budget_dinner": "待查",
+    "budget_dinner": "已查",
     "hours": "已查",
     "closed_days": "已查",
-    "reservation": "已查"
+    "reservation": "已查",
+    "mapcode": "已查",
+    "parking": "已查",
+    "phone": "已查",
+    "google_maps_url": "已查",
+    "address": "已查",
+    "description": "已查"
    },
-   "checked_date": "2026-11-11",
-   "note": "Tabelog 晚間營業至 21:00，先前資料為 22:30。 預算為 Tabelog 每人預算區間。",
-   "cuisine_source": "Tabelog 2026-11-11"
+   "checked_date": "2026-11-12",
+   "note": "Tabelog 晚間營業至 21:00，先前資料為 22:30。 預算為 Tabelog 每人預算區間。 晚間營業並列：Tabelog 17:00–21:00；先前資料至 22:30。未擇一覆蓋。查證日 2026-11-12。",
+   "cuisine_source": "Tabelog 2026-11-11",
+   "parking": {
+    "available": true,
+    "type": "dedicated",
+    "capacity": "約 100 台",
+    "fee": "待查"
+   },
+   "phone": "0982-52-0001",
+   "address": "宮崎県日向市上町7-3（ホテルベルフォート日向 1F）",
+   "description": "日向市飯店ホテルベルフォート日向 1 樓的活魚料理店，有生簀，提供海鮮、壽司與居酒屋料理。"
   },
   "rf_hyu_komeda": {
    "kind": "restaurant",
@@ -7550,7 +8747,7 @@
     "method": "電話預約",
     "note": "先前資料：只有燒肉可預約"
    },
-   "google_maps_url": "https://www.google.com/maps/place/?q=place_id:ChIJ08WFNuksRzUR6LHx-22nnig",
+   "google_maps_url": "https://www.google.com/maps/search/?api=1&query=%E9%AB%98%E5%8D%83%E7%A9%82%E7%89%9B%E3%83%AC%E3%82%B9%E3%83%88%E3%83%A9%E3%83%B3%20%E5%92%8C%20%E5%AE%AE%E5%B4%8E%E7%9C%8C%E8%A5%BF%E8%87%BC%E6%9D%B5%E9%83%A1%E9%AB%98%E5%8D%83%E7%A9%82%E7%94%BA%E4%B8%89%E7%94%B0%E4%BA%951099-1",
    "ratings": [
     {
      "source": "tabelog",
@@ -7560,12 +8757,12 @@
      "checked_at": "2026-11-11"
     }
    ],
-   "mapcode": null,
-   "mapcode_source": null,
+   "mapcode": "330 742 450*52",
+   "mapcode_source": "saibara 正向換算並反查回讀一致（誤差 1 m）；Mapion 交叉比對 330 742 450*53（反查 1 m）",
    "sources": [
     {
      "url": "https://tabelog.com/tw/miyazaki/A4505/A450502/45004655/",
-     "checked_at": "2026-11-11",
+     "checked_at": "2026-11-12",
      "title": "Tabelog（繁中鏡像頁，與日文頁同店號；日文頁網址取自該頁 hreflang=ja）",
      "fields": [
       "ratings.tabelog",
@@ -7574,7 +8771,62 @@
       "budget_dinner",
       "hours",
       "closed_days",
-      "reservation"
+      "reservation",
+      "phone"
+     ]
+    },
+    {
+     "url": "https://map.yahoo.co.jp/v3/place/SoDamnWdugI",
+     "checked_at": "2026-11-10",
+     "title": "Yahoo!マップ（restaurants_fill.json 座標來源，供 saibara 換算並反查）",
+     "fields": [
+      "mapcode"
+     ]
+    },
+    {
+     "url": "https://saibara.sakura.ne.jp/map/convgeo.cgi",
+     "checked_at": "2026-11-12",
+     "fields": [
+      "mapcode"
+     ]
+    },
+    {
+     "url": "https://www.mapion.co.jp/",
+     "checked_at": "2026-11-12",
+     "fields": [
+      "mapcode"
+     ]
+    },
+    {
+     "url": "https://takachiho-kanko.info/gourmet/31/",
+     "checked_at": "2026-11-12",
+     "fields": [
+      "parking",
+      "address",
+      "description"
+     ]
+    },
+    {
+     "url": "https://www.openstreetmap.org/way/208502781",
+     "checked_at": "2026-11-12",
+     "fields": [
+      "parking"
+     ]
+    },
+    {
+     "url": "https://tabelog.com/miyazaki/A4505/A450502/45004655/",
+     "checked_at": "2026-11-12",
+     "fields": [
+      "phone",
+      "address",
+      "description"
+     ]
+    },
+    {
+     "url": "https://www.google.com/maps/search/?api=1&query=%E9%AB%98%E5%8D%83%E7%A9%82%E7%89%9B%E3%83%AC%E3%82%B9%E3%83%88%E3%83%A9%E3%83%B3%20%E5%92%8C%20%E5%AE%AE%E5%B4%8E%E7%9C%8C%E8%A5%BF%E8%87%BC%E6%9D%B5%E9%83%A1%E9%AB%98%E5%8D%83%E7%A9%82%E7%94%BA%E4%B8%89%E7%94%B0%E4%BA%951099-1",
+     "checked_at": "2026-11-12",
+     "fields": [
+      "google_maps_url"
      ]
     }
    ],
@@ -7585,20 +8837,35 @@
     "budget_dinner": "已查",
     "hours": "已查",
     "closed_days": "已查",
-    "reservation": "已查"
+    "reservation": "已查",
+    "mapcode": "已查",
+    "parking": "已查",
+    "phone": "已查",
+    "google_maps_url": "已查",
+    "address": "已查",
+    "description": "已查"
    },
-   "checked_date": "2026-11-11",
+   "checked_date": "2026-11-12",
    "note": "預算為 Tabelog 每人預算區間。",
-   "cuisine_source": "Tabelog 2026-11-11"
+   "cuisine_source": "Tabelog 2026-11-11",
+   "parking": {
+    "available": true,
+    "type": "dedicated",
+    "capacity": "50 台",
+    "fee": "待查"
+   },
+   "phone": "0982-73-1109",
+   "address": "宮崎県西臼杵郡高千穂町三田井1099-1（高千穂がまだせ市場内）",
+   "description": "高千穗「がまだせ市場」內的高千穗牛專門餐廳，有牛排、漢堡排、燒肉；週三公休。"
   },
   "rf_tak_sakuya": {
    "kind": "restaurant",
    "name": "咲耶 SAKUYA／咲耶",
    "cuisine_group": "燒肉",
    "cuisine": "燒肉・鄉土料理（現名「大衆焼き肉 SAKUYA 本丸」）",
-   "budget_lunch": null,
-   "budget_dinner": null,
-   "closed_days": null,
+   "budget_lunch": "¥1,001–1,500",
+   "budget_dinner": "¥2,001–3,000",
+   "closed_days": "來源不一致，須確認。高千穗町觀光協會／Tabelog（2026-11-12）：週一、週二（依預約狀況可能變動；2026/1/4–6 休）；Hot Pepper／先前西臼杵觀光網站：週二、週三。",
    "hours": "12:00–16:00、17:00–20:30",
    "reservation": {
     "required": null,
@@ -7606,7 +8873,7 @@
     "method": "電話預約",
     "note": "Tabelog 寫只收電話預約"
    },
-   "google_maps_url": "https://www.google.com/maps/place/?q=place_id:ChIJoSoqfXwtRzURWnNAKyh7hT0",
+   "google_maps_url": "https://www.google.com/maps/search/?api=1&query=%E5%92%B2%E8%80%B6%20SAKUYA%20%E5%AE%AE%E5%B4%8E%E7%9C%8C%E8%A5%BF%E8%87%BC%E6%9D%B5%E9%83%A1%E9%AB%98%E5%8D%83%E7%A9%82%E7%94%BA%E4%B8%89%E7%94%B0%E4%BA%95797",
    "ratings": [
     {
      "source": "tabelog",
@@ -7616,12 +8883,12 @@
      "checked_at": "2026-11-11"
     }
    ],
-   "mapcode": null,
-   "mapcode_source": null,
+   "mapcode": "330 742 727*45",
+   "mapcode_source": "saibara 正向換算並反查回讀一致（誤差 2 m）；Mapion 交叉比對 330 742 727*46（反查 2 m）",
    "sources": [
     {
      "url": "https://tabelog.com/tw/miyazaki/A4505/A450502/45013120/",
-     "checked_at": "2026-11-11",
+     "checked_at": "2026-11-12",
      "title": "Tabelog（繁中鏡像頁，與日文頁同店號；日文頁網址取自該頁 hreflang=ja）",
      "fields": [
       "ratings.tabelog",
@@ -7630,25 +8897,96 @@
       "budget_dinner",
       "hours",
       "closed_days",
-      "reservation"
+      "reservation",
+      "phone"
+     ]
+    },
+    {
+     "url": "https://www.hotpepper.jp/strJ003784091/",
+     "checked_at": "2026-11-12",
+     "title": "ホットペッパー（restaurants_fill.json 座標來源，供 saibara 換算並反查）",
+     "fields": [
+      "mapcode",
+      "budget_lunch",
+      "budget_dinner"
+     ]
+    },
+    {
+     "url": "https://saibara.sakura.ne.jp/map/convgeo.cgi",
+     "checked_at": "2026-11-12",
+     "fields": [
+      "mapcode"
+     ]
+    },
+    {
+     "url": "https://www.mapion.co.jp/",
+     "checked_at": "2026-11-12",
+     "fields": [
+      "mapcode"
+     ]
+    },
+    {
+     "url": "https://takachiho-kanko.info/gourmet/48/",
+     "checked_at": "2026-11-12",
+     "fields": [
+      "closed_days",
+      "parking",
+      "address",
+      "description"
+     ]
+    },
+    {
+     "url": "https://tabelog.com/miyazaki/A4505/A450502/45013120/",
+     "checked_at": "2026-11-12",
+     "fields": [
+      "closed_days",
+      "phone",
+      "address",
+      "description"
+     ]
+    },
+    {
+     "url": "https://www.openstreetmap.org/way/208503318",
+     "checked_at": "2026-11-12",
+     "fields": [
+      "parking"
+     ]
+    },
+    {
+     "url": "https://www.google.com/maps/search/?api=1&query=%E5%92%B2%E8%80%B6%20SAKUYA%20%E5%AE%AE%E5%B4%8E%E7%9C%8C%E8%A5%BF%E8%87%BC%E6%9D%B5%E9%83%A1%E9%AB%98%E5%8D%83%E7%A9%82%E7%94%BA%E4%B8%89%E7%94%B0%E4%BA%95797",
+     "checked_at": "2026-11-12",
+     "fields": [
+      "google_maps_url"
      ]
     }
    ],
    "field_status": {
     "ratings.google": "待查（PlacesSearch 工具不可用；schema 的 check_method 只允許 manual，未人工查看 Google 地圖店家頁，故不填）",
     "ratings.tabelog": "已查",
-    "budget_lunch": "待查",
-    "budget_dinner": "待查",
+    "budget_lunch": "已查",
+    "budget_dinner": "已查",
     "hours": "已查",
-    "closed_days": "待查",
-    "reservation": "已查"
+    "closed_days": "已查",
+    "reservation": "已查",
+    "mapcode": "已查",
+    "parking": "已查",
+    "phone": "已查",
+    "google_maps_url": "已查",
+    "address": "已查",
+    "description": "已查"
    },
-   "checked_date": "2026-11-11",
-   "note": "現名「大衆焼き肉 SAKUYA 本丸」（同址三田井797、同電話 0982-82-2490），業態轉為燒肉；名稱欄依清單保留原名。營業 12:00–16:00、17:00–20:30（Tabelog，先前資料晚間至 21:00）。公休日待查：Tabelog 寫週一、週二，西臼杵觀光網站寫週二、週三，來源不一致。 預算為 Tabelog 每人預算區間。",
+   "checked_date": "2026-11-12",
+   "note": "現名「大衆焼き肉 SAKUYA 本丸」（同址三田井797、同電話 0982-82-2490），業態轉為燒肉；名稱欄依清單保留原名。營業 12:00–16:00、17:00–20:30（Tabelog，先前資料晚間至 21:00）。公休日待查：Tabelog 寫週一、週二，西臼杵觀光網站寫週二、週三，來源不一致。 預算為 Tabelog 每人預算區間。 公休並列（2026-11-12）：高千穗町觀光協會 https://takachiho-kanko.info/gourmet/48/ 與 Tabelog 寫週一、週二；Hot Pepper（strJ003784091）與先前西臼杵觀光網站寫週二、週三。未擇一覆蓋。",
    "cuisine_source": "Tabelog 2026-11-11",
-   "clear": [
-    "closed_days"
-   ]
+   "parking": {
+    "available": true,
+    "type": "dedicated",
+    "capacity": "5–10 台（位置須電話詢問店家）",
+    "fee": "待查"
+   },
+   "phone": "0982-82-2490",
+   "address": "宮崎県西臼杵郡高千穂町三田井797",
+   "description": "高千穗巴士中心附近、以櫻花為主題的和風餐廳，提供鄉土料理、高千穗牛與地雞料理，午晚都有營業。"
   },
   "rf_tak_mugamuchu": {
    "kind": "restaurant",
@@ -8149,17 +9487,17 @@
    "name": "道の駅 上天草さんぱーる／上天草珍珠道之驛",
    "cuisine_group": "海鮮",
    "cuisine": "海鮮・日本料理（道之驛 上天草さんぱーる）",
-   "budget_lunch": null,
+   "budget_lunch": "¥1,000–1,999",
    "budget_dinner": "不適用",
    "closed_days": "依道之驛休館日",
-   "hours": "11:00–15:00（Tabelog；先前資料另有早餐 09:00–10:30）",
+   "hours": "來源不一致，須確認。Tabelog：11:00–15:00；國交省道之驛頁（既有路線註記）：餐廳早餐 09:00–11:00（L.O. 10:30）；先前資料另有早餐 09:00–10:30。",
    "reservation": {
     "required": false,
     "accepts": false,
     "method": "不收（現場候位）",
     "note": null
    },
-   "google_maps_url": "https://www.google.com/maps/search/?api=1&query=%E9%81%93%E3%81%AE%E9%A7%85%20%E4%B8%8A%E5%A4%A9%E8%8D%89%E3%81%95%E3%82%93%E3%81%B1%E3%83%BC%E3%82%8B%20%E7%86%8A%E6%9C%AC%E7%9C%8C%E4%B8%8A%E5%A4%A9%E8%8D%89%E5%B8%82%E5%A4%A7%E7%9F%A2%E9%87%8E%E7%94%BA%E4%B8%AD11582-24%20%E9%81%93%E3%81%AE%E9%A7%85%E4%B8%8A%E5%A4%A9%E8%8D%89%E3%81%95%E3%82%93%E3%81%B1%E3%83%BC%E3%82%8B",
+   "google_maps_url": "https://www.google.com/maps/search/?api=1&query=%E9%81%93%E3%81%AE%E9%A7%85%20%E4%B8%8A%E5%A4%A9%E8%8D%89%E3%81%95%E3%82%93%E3%81%B1%E3%83%BC%E3%82%8B%20%E3%83%AC%E3%82%B9%E3%83%88%E3%83%A9%E3%83%B3%20%E7%86%8A%E6%9C%AC%E7%9C%8C%E4%B8%8A%E5%A4%A9%E8%8D%89%E5%B8%82%E5%A4%A7%E7%9F%A2%E9%87%8E%E7%94%BA%E4%B8%AD11582-24",
    "ratings": [
     {
      "source": "tabelog",
@@ -8169,12 +9507,12 @@
      "checked_at": "2026-11-11"
     }
    ],
-   "mapcode": null,
-   "mapcode_source": null,
+   "mapcode": "372 845 740*14",
+   "mapcode_source": "saibara 正向換算並反查回讀一致（誤差 1 m）；Mapion 交叉比對 372 845 741*82（反查 2 m）",
    "sources": [
     {
      "url": "https://tabelog.com/tw/kumamoto/A4305/A430501/43010163/",
-     "checked_at": "2026-11-11",
+     "checked_at": "2026-11-12",
      "title": "Tabelog（繁中鏡像頁，與日文頁同店號；日文頁網址取自該頁 hreflang=ja）",
      "fields": [
       "ratings.tabelog",
@@ -8183,22 +9521,115 @@
       "budget_dinner",
       "hours",
       "closed_days",
-      "reservation"
+      "reservation",
+      "phone"
+     ]
+    },
+    {
+     "url": "https://saibara.sakura.ne.jp/map/convgeo.cgi",
+     "checked_at": "2026-11-12",
+     "fields": [
+      "mapcode"
+     ]
+    },
+    {
+     "url": "https://www.mapion.co.jp/",
+     "checked_at": "2026-11-12",
+     "fields": [
+      "mapcode"
+     ]
+    },
+    {
+     "url": "https://www.michi-no-eki.jp/stations/views/19837",
+     "checked_at": "2026-11-12",
+     "fields": [
+      "parking"
+     ]
+    },
+    {
+     "url": "https://www.openstreetmap.org/way/437159215",
+     "checked_at": "2026-11-12",
+     "fields": [
+      "parking"
+     ]
+    },
+    {
+     "url": "https://tabelog.com/kumamoto/A4305/A430501/43010163/",
+     "checked_at": "2026-11-12",
+     "fields": [
+      "phone",
+      "budget_lunch",
+      "address",
+      "description"
+     ]
+    },
+    {
+     "url": "https://www.google.com/maps/search/?api=1&query=%E9%81%93%E3%81%AE%E9%A7%85%20%E4%B8%8A%E5%A4%A9%E8%8D%89%E3%81%95%E3%82%93%E3%81%B1%E3%83%BC%E3%82%8B%20%E3%83%AC%E3%82%B9%E3%83%88%E3%83%A9%E3%83%B3%20%E7%86%8A%E6%9C%AC%E7%9C%8C%E4%B8%8A%E5%A4%A9%E8%8D%89%E5%B8%82%E5%A4%A7%E7%9F%A2%E9%87%8E%E7%94%BA%E4%B8%AD11582-24",
+     "checked_at": "2026-11-12",
+     "fields": [
+      "google_maps_url"
+     ]
+    },
+    {
+     "url": "https://sunpearl.jp/new/menu/",
+     "checked_at": "2026-11-12",
+     "fields": [
+      "budget_lunch",
+      "address",
+      "description"
+     ]
+    },
+    {
+     "url": "https://gotokyushu.com/kumamoto/michinoeki-kumamoto/kamiamakusa-sunpearl/",
+     "checked_at": "2026-11-12",
+     "fields": [
+      "budget_lunch"
+     ]
+    },
+    {
+     "url": "https://sunpearl.jp/new/",
+     "checked_at": "2026-11-12",
+     "fields": [
+      "address",
+      "description"
+     ]
+    },
+    {
+     "url": "https://www.qsr.mlit.go.jp/n-michi/michi_no_eki/kobetu/kamiamakusa/kamiamakusa.html",
+     "checked_at": "2026-11-12",
+     "fields": [
+      "hours"
      ]
     }
    ],
    "field_status": {
     "ratings.google": "待查（PlacesSearch 工具不可用；schema 的 check_method 只允許 manual，未人工查看 Google 地圖店家頁，故不填）",
     "ratings.tabelog": "已查",
-    "budget_lunch": "待查",
+    "budget_lunch": "已查",
     "budget_dinner": "不適用",
     "hours": "已查",
     "closed_days": "已查",
-    "reservation": "已查"
+    "reservation": "已查",
+    "mapcode": "已查",
+    "parking": "已查",
+    "phone": "已查",
+    "google_maps_url": "已查",
+    "address": "已查",
+    "description": "已查"
    },
-   "checked_date": "2026-11-11",
-   "note": "Tabelog 只列 11:00–15:00，D11/D12 早餐用途請確認早餐時段是否還有。 預算為 Tabelog 每人預算區間。",
-   "cuisine_source": "Tabelog 2026-11-11"
+   "checked_date": "2026-11-12",
+   "note": "Tabelog 只列 11:00–15:00，D11/D12 早餐用途請確認早餐時段是否還有。 預算為 Tabelog 每人預算區間。 營業時間並列：Tabelog 只列 11:00–15:00；國交省道之驛頁寫早餐 09:00–11:00（L.O. 10:30）；先前資料 09:00–10:30。停車場：官方台數／免費已補，入口座標與 MapCode 待查。查證日 2026-11-12。",
+   "cuisine_source": "Tabelog 2026-11-11",
+   "parking": {
+    "available": true,
+    "type": "dedicated",
+    "capacity": "普通車 129 台（大型 11 台）",
+    "fee": "免費",
+    "note": "道の駅公式 michi-no-eki.jp（2026-11-12）：普通車 129 台、大型 11 台、免費；入口座標與 MapCode 待查。附近 OSM way/437159215 中心點僅供參考（非入口，是否為店家停車場未確認）。"
+   },
+   "phone": "0964-58-5600",
+   "address": "熊本県上天草市大矢野町中11582-24",
+   "description": "天草五橋入口「道の駅 上天草さんぱーる」內的餐廳，9:00–10:30 有早餐，11:00–15:00 供應海鮮丼、天草漬け丼等午餐。"
   },
   "rf_kam_murata": {
    "kind": "restaurant",
@@ -8453,12 +9884,35 @@
    "mapcode_source": "saibara convgeo 換算並反查一致（誤差 1.1 m）；Mapion 右鍵同座標取得 330 837 762*44，與 saibara 完全一致",
    "sources": [
     {
+     "url": "https://tabelog.com/tw/miyazaki/A4505/A450502/45007779/",
+     "checked_at": "2026-11-12",
+     "fields": [
+      "phone"
+     ]
+    },
+    {
      "url": "https://tabelog.com/miyazaki/A4505/A450502/45007779/",
-     "checked_at": "2026-11-11"
+     "checked_at": "2026-11-12",
+     "fields": [
+      "phone",
+      "address",
+      "description"
+     ]
+    },
+    {
+     "url": "https://www.google.com/maps/search/?api=1&query=%E3%81%82%E3%81%BE%E3%81%A6%E3%82%89%E3%81%99%E3%81%AE%E9%9A%A0%E3%82%8Ccafe%20%E5%AE%AE%E5%B4%8E%E7%9C%8C%E8%A5%BF%E8%87%BC%E6%9D%B5%E9%83%A1%E9%AB%98%E5%8D%83%E7%A9%82%E7%94%BA%E5%A4%A7%E5%AD%97%E5%B2%A9%E6%88%B81082-21",
+     "checked_at": "2026-11-12",
+     "fields": [
+      "google_maps_url"
+     ]
     },
     {
      "url": "https://takachiho-kanko.info/gourmet/30/",
-     "checked_at": "2026-11-11"
+     "checked_at": "2026-11-12",
+     "fields": [
+      "address",
+      "description"
+     ]
     },
     {
      "url": "https://www.mapple.net/spot/45010700/",
@@ -8475,10 +9929,17 @@
    ],
    "field_status": {
     "ratings.google": "待查（PlacesSearch 工具不可用）",
+    "phone": "已查",
+    "google_maps_url": "已查",
+    "address": "已查",
+    "description": "已查",
     "budget_dinner": "不適用"
    },
-   "checked_date": "2026-11-11",
+   "checked_date": "2026-11-12",
    "note": "11/29 週日：無固定公休（不定休，當天需確認）",
+   "phone": "0982-76-1200",
+   "address": "宮崎県西臼杵郡高千穂町大字岩戸1082-21",
+   "description": "天岩戶神社附近的小咖啡館，10:00–17:00 營業、不定休，適合參拜前後喝茶吃輕食。",
    "cuisine_source": "Tabelog 2026-11-11",
    "parking": {
     "available": true,
@@ -8524,12 +9985,35 @@
    "mapcode_source": "saibara convgeo 換算並反查一致（誤差 1.7 m）；Mapion 右鍵同座標取得 256 456 833*42，saibara 反查誤差 1.8 m，兩碼指向同一點（相距約 3 m）",
    "sources": [
     {
+     "url": "https://tabelog.com/tw/kumamoto/A4302/A430201/43017385/",
+     "checked_at": "2026-11-12",
+     "fields": [
+      "phone"
+     ]
+    },
+    {
      "url": "https://tabelog.com/kumamoto/A4302/A430201/43017385/",
-     "checked_at": "2026-11-11"
+     "checked_at": "2026-11-12",
+     "fields": [
+      "phone",
+      "address",
+      "description"
+     ]
+    },
+    {
+     "url": "https://www.google.com/maps/search/?api=1&query=%E8%8D%89%E5%8D%83%E9%87%8C%E9%A3%9F%E5%A0%82%EF%BC%88%E3%83%8B%E3%83%A5%E3%83%BC%E8%8D%89%E5%8D%83%E9%87%8C%202F%EF%BC%89%20%E7%86%8A%E6%9C%AC%E7%9C%8C%E9%98%BF%E8%98%87%E5%B8%82%E6%B0%B8%E8%8D%892391-15%20%E3%83%8B%E3%83%A5%E3%83%BC%E8%8D%89%E5%8D%83%E9%87%8C%202F",
+     "checked_at": "2026-11-12",
+     "fields": [
+      "google_maps_url"
+     ]
     },
     {
      "url": "https://newkusasenri.com/",
-     "checked_at": "2026-11-11"
+     "checked_at": "2026-11-12",
+     "fields": [
+      "address",
+      "description"
+     ]
     },
     {
      "url": "https://kumamoto.guide/shugaku/programs/detail/341",
@@ -8550,10 +10034,17 @@
    ],
    "field_status": {
     "ratings.google": "待查（PlacesSearch 工具不可用）",
+    "phone": "已查",
+    "google_maps_url": "已查",
+    "address": "已查",
+    "description": "已查",
     "budget_dinner": "不適用"
    },
-   "checked_date": "2026-11-11",
+   "checked_date": "2026-11-12",
    "note": "11/30 週一：基本上全年無休",
+   "phone": "0967-34-0131",
+   "address": "熊本県阿蘇市永草2391-15 ニュー草千里 2F",
+   "description": "阿蘇草千里濱觀光設施「ニュー草千里」2 樓的食堂，只營業午間 11:00–16:00；用餐須停草千里有料停車場（¥500）。",
    "cuisine_source": "Tabelog 2026-11-11",
    "parking": {
     "available": true,
