@@ -82,7 +82,7 @@ a.tag{text-decoration:none;cursor:pointer}a.tag.rate{border:1px solid #ffcc80}.t
 .it.rest .ord{background:var(--rest)}.it .body{flex:1;min-width:0}
 .tn{display:flex;gap:6px;margin:6px 0;flex-wrap:wrap}.tn input{border:1px solid var(--line);border-radius:6px;padding:4px 6px;font-size:13px;min-width:0}.tn input[type=time]{flex:0 0 auto;width:110px}.tn input[type=text]{flex:1 1 140px}
 .att{border:1px solid #ffe0b2;background:#fff8f0;border-radius:8px;padding:8px;margin-top:8px}.att .row{display:flex;flex-wrap:wrap;align-items:center;gap:6px;margin:4px 0}.atth{font-size:14px}.atth b{cursor:pointer;color:#e65100}
-.alert{color:#c62828;font-weight:700;font-size:13px;margin:4px 0}
+.alert{color:#c62828;font-weight:700;font-size:13px;margin:4px 0;background:#ffebee;padding:6px 8px;border-radius:6px;line-height:1.4}
 .mergedicon{background:#1e88e5;border:3px solid #ef6c00;border-radius:50%;width:24px;height:24px;line-height:18px;text-align:center;font-size:12px;box-shadow:0 1px 3px rgba(0,0,0,.4)}
 .drive{font-size:12px;color:#455a64;margin:2px 0 6px 32px}
 .tools{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0}
@@ -261,7 +261,7 @@ pre.json{background:#f4f6f8;border-radius:8px;padding:8px;font-size:11px;max-hei
 <script>
 (function(){
 "use strict";
-const APPV="plan-multi-1.9.13";
+const APPV="plan-multi-1.9.14";
 /* 1.8 後台自動排路線（Cloudflare Worker）：網址部署後填入。空字串＝後台未啟用，網頁維持 1.7 行為（匯出 JSON＋複製文字）。site key 是公開值。 */
 const BACKEND_CFG={url:"https://trip-intake.turbo99992001.workers.dev",turnstile_site_key:"0x4AAAAAAFs8wmzPidNkiUBU"};
 const CAT={popular:"熱門",natural:"自然絕景",shrine:"神社寺院",historic:"歷史",onsen:"溫泉",hidden:"私房",food:"美食",experience:"親子／體驗",anime:"動漫",anime_game:"🎮 動漫・遊戲周邊",festival:"活動／花季",custom:"👤 自訂地點",auto:"🤖 後台路線景點",uncat:"🏷 待分類"};
@@ -1213,7 +1213,7 @@ function spotCard(s,sel){
  <div class="btns"><button class="btn" data-open="custom:${esc(s.id)}">詳情／導航</button><button class="btn pri addbtn" data-add="custom:${esc(s.id)}" data-sel="${sel}">＋加入行程</button>${s.server_only?"":`<button class="btn" data-cuedit="${esc(s.id)}">編輯</button><button class="btn warn" data-cudel="${esc(s.id)}">刪除</button>`}</div></div>`;
  const tags=[`<span class="tag ${s.category==="anime_game"?"ag":""}">${esc(CAT[s.category]||s.category)}</span>`,plSpotTags(s),s.event?`<span class="tag ev">📅 ${esc((s.date_label||"").slice(0,22))}</span>`:"",s.nearest_station?`<span class="tag">🚉 ${esc(s.nearest_station.split("／")[0].slice(0,24))}</span>`:"",s.base?`<span class="tag">${esc((BASEN[s.base]||s.base).split("（")[0])}</span>`:`<span class="tag">${esc(s.region||"")}</span>`,
   Object.keys(SAME).filter(k=>SAME[k]===s.id&&RS[k]).map(k=>`<span class="tag rest">🍴 同一站：${esc(RS[k].name.split("（")[0])}</span>`).join(""), s.rain_ok?'<span class="tag rain">☔ 雨天可</span>':"", s.stay_minutes?`<span class="tag">建議 ${s.stay_minutes} 分</span>`:"", (s.routes||[]).length?`<span class="tag">路線 ${esc(s.routes.join("/"))}</span>`:""].join("");
- return `<div class="card" data-id="${esc(s.id)}"><h3 data-open="spot:${esc(s.id)}">${esc(s.name)}</h3><div class="tags">${tags}</div><div class="desc">${esc((s.description||"").slice(0,90))}${(s.description||"").length>90?"…":""}</div>
+ return `<div class="card" data-id="${esc(s.id)}"><h3 data-open="spot:${esc(s.id)}">${esc(s.name)}</h3><div class="tags">${tags}</div>${alertHtml(s.alert,72)}<div class="desc">${esc((s.description||"").slice(0,90))}${(s.description||"").length>90?"…":""}</div>
  <div class="btns"><button class="btn" data-open="spot:${esc(s.id)}">詳情／導航</button><button class="btn pri addbtn" data-add="spot:${esc(s.id)}" data-sel="${sel}">＋加入行程</button></div></div>`;
 }
 function resvTxt(v){if(v==null||v==="") return ""; if(typeof v!=="object") return String(v); const a=[]; if(v.method) a.push(v.method); else if(v.required) a.push("需訂位"); else if(v.accepts===false) a.push("不收訂位"); if(v.note) a.push(v.note); return a.join("；");}
@@ -1275,7 +1275,7 @@ function renderItin(){
   const hid=st.hid.map(z=>get(z.x)).filter(Boolean).map(so=>`<div class="cnt">🔗 已合併同店景點「${esc(so.name)}」（${esc(so.id)}），以餐廳版為準</div>`).join("");
   h+=dr+`<div class="card it ${isR?"rest":""} ${atts.length?"merged":""}" data-idx="${i}" data-stop="${si}"><div class="ord">${si+1}</div><div class="body"><h3 data-open="${it.type}:${esc(it.id)}">${title}${atts.length?` <span class="tag rest">＋🍴 ${esc(atts.map(z=>z.o.name.split("（")[0]).join("、"))}</span>`:""}</h3>
    <div class="tags">${o.custom?'<span class="tag cu">👤 自訂</span>':""}${o.category==="anime_game"?'<span class="tag ag">🎮 動漫・遊戲周邊</span>':""}${isR?rateTags(o):""}${o.stay_minutes?`<span class="tag">停留約 ${o.stay_minutes} 分</span>`:""}${o.rain_ok?'<span class="tag rain">☔ 雨天可</span>':""}${o.hours?`<span class="tag">${esc(String(o.hours).slice(0,40))}</span>`:""}</div>
-   ${planBits(route,curDay,it)}${slotHtml(i,it)}${hid}${tnHtml(i,it)}
+   ${alertHtml(o.alert,72)}${planBits(route,curDay,it)}${slotHtml(i,it)}${hid}${tnHtml(i,it)}
    ${navBlock(Object.assign({},o,{parkings:pks}))}${ah}
    <div class="btns"><button class="btn sm" data-mv="${si}:-1" ${si===0?"disabled":""}>↑ 上移</button><button class="btn sm" data-mv="${si}:1" ${si===stops.length-1?"disabled":""}>↓ 下移</button><button class="btn sm warn" data-delstop="${si}">刪除${atts.length?"（整站）":""}</button><button class="btn sm" data-open="${it.type}:${esc(it.id)}">詳情</button></div></div></div>`;});
  if(di.train_to_end) h+=`<div class="train">🏨 到住宿／機場：${esc(di.train_to_end.how)}｜約 ${di.train_to_end.min} 分</div>`;
@@ -1299,7 +1299,7 @@ function openDetail(type,id){
   td("營業時間",["hours"],!!o.hours);td("休日",["closed_days"],!!o.closed);if(type!=="restaurant"){td("門票",["admission"],!!o.admission);td("雨天",["rain_ok"],typeof o.rain_ok==="boolean");td("季節／花季",["season_note","season_months"],!!o.season_note||!!(o.season_months&&o.season_months.length));td("停車場",["parking"],(o.parkings||[]).length>0);}td("MapCode",["mapcode"],!!o.mapcode);}add("6～7 月注意",o.june_july_note||o.rainy_season);add("查詢日期",o.info_checked_at||o.checked_date);
  const src=(o.sources||[]).map(u=>{const url=typeof u==="string"?u:(u.url||"");const t=typeof u==="string"?(/youtube\.com|youtu\.be/.test(u)?"▶ YouTube："+u:u):(u.title||u.url);return url?`<a href="${esc(url)}" target="_blank" rel="noopener">${esc(t)}</a>`:"";}).join("");
  const days=D.plan.routes[route].days.map(d=>`<option value="${d.day}" ${d.day===curDay?"selected":""}>Day ${d.day} ${d.date.slice(5).replace("-","/")}</option>`).join("");
- openModal(`<h2 style="font-size:18px;margin:0 36px 6px 0">${type==="restaurant"?"🍴 ":""}${esc(o.name)}</h2><div class="desc">${esc(o.description||"")}</div>
+ openModal(`<h2 style="font-size:18px;margin:0 36px 6px 0">${type==="restaurant"?"🍴 ":""}${esc(o.name)}</h2>${alertHtml(o.alert)}<div class="desc">${esc(o.description||"")}</div>
  <table class="info">${rows.join("")}</table>${navBlock(o)}
  <div class="btns" style="margin-top:10px"><select id="mdsel" style="min-height:40px">${days}</select><button class="btn pri" data-add="${type}:${esc(id)}" data-sel="mdsel">＋加入行程</button>${gmUrl(o)?`<a class="btn" target="_blank" rel="noopener" href="${esc(gmUrl(o))}">在 Google 地圖查看</a>`:""}</div>
  ${src?`<h4 style="margin:10px 0 4px">來源</h4><div class="src">${src}</div>`:""}${o.note?`<div class="cnt" style="margin-top:8px">備註：${esc(o.note)}</div>`:""}`);
@@ -2353,6 +2353,11 @@ const PL_MC=/^\d{1,4}( \d{3}){1,2}(\*\d{1,2})?$/, PL_MCSRC=/反查|回讀|逆変
 function catsOf(s){return s&&Array.isArray(s.categories)&&s.categories.length?s.categories:[s?s.category:""];}
 function plHttps(u){return typeof u==="string"&&/^https:\/\//.test(u)?u:"";}
 function plStr(v){return v==null?null:(typeof v==="string"?(v.trim()||null):(typeof v==="number"?String(v):null));}
+/* 1.9.14：休館／不建議旗標與 places.note */
+const ALERT_LV={closed:"⛔ 已停業／休館",temporarily_closed:"⚠️ 臨時休館",avoid:"⚠️ 不建議前往"};
+function plAlert(p){const a=p&&p.alert; if(!a||typeof a!=="object") return null; const lv=String(a.level||""); if(!ALERT_LV[lv]) return null; return {level:lv,text:plStr(a.text)||""};}
+function alertTxt(a){return a&&ALERT_LV[a.level]?ALERT_LV[a.level]+(a.text?" "+a.text:""):"";}
+function alertHtml(a,n){const t=alertTxt(a); if(!t) return ""; const s=n&&t.length>n?t.slice(0,n)+"…":t; return `<div class="alert">${esc(s)}</div>`;}
 function plMc(o){const m=plStr(o&&o.mapcode); return m&&PL_MC.test(m)&&PL_MCSRC.test(String(o.mapcode_source||""))?m:null;}
 function plClean(j,id){ if(!j||typeof j!=="object"||j.schema!==PL_SCHEMA||!j.places||typeof j.places!=="object") return null; if(j.request_id&&id&&j.request_id!==id) return null;
  const P={}; Object.keys(j.places).forEach(k=>{const p=j.places[k]; if(p&&typeof p==="object"&&(p.kind==="spot"||p.kind==="restaurant")) P[k]=p;});
@@ -2385,19 +2390,19 @@ function plApply(d,pl){ if(!d||!pl) return d; try{ const P=pl.places; let ns=0, 
   if(plStr(p.description)) s.description=plStr(p.description)+(s.description?"\n（後台路線備註）"+s.description:"");
   const mc=plMc(p); if(mc){s.mapcode=mc; s.mapcode_source=String(p.mapcode_source);}
   const pk=plParking(p); if(pk) s.parkings=pk.map(normPk);
-  plSources(s,p); setS(s,"info_checked_at",plStr(p.checked_date));});
+  plSources(s,p); setS(s,"info_checked_at",plStr(p.checked_date)); setS(s,"note",plStr(p.note)); const al=plAlert(p); if(al) s.alert=al;});
  Object.keys(P).forEach(id=>{ const p=P[id]; if(!p||p.kind!=="spot") return; if(d.spots.some(s=>s.id===id)) return;
   const cs=(Array.isArray(p.categories)?p.categories:[]).map(String).filter(c=>CAT[c]);
-  const s={id,type:"spot",name:p.name||id,lat:p.lat==null?null:+p.lat,lng:p.lng==null?null:+p.lng,address:plStr(p.address)||"",google_maps:plHttps(p.google_maps_url)||"",mapcode:null,description:plStr(p.description)||"",note:"",sources:[],category:cs[0]||"custom",categories:CAT_ORDER.filter(c=>cs.indexOf(c)>=0),category_source:p.category_source||"",base:"",region:plStr(p.area_group)||"",routes:[],parkings:[],stay_minutes:typeof p.stay_minutes==="number"?p.stay_minutes:60,hours:plStr(p.hours)||"",closed:plStr(p.closed_days)||"",admission:plStr(p.admission)||"",rain_ok:typeof p.rain_ok==="boolean"?p.rain_ok:null,phone:plStr(p.phone)||"",what_to_buy:plStr(p.what_to_buy)||"",from_places:true,pl:true,pl_status:p.field_status&&typeof p.field_status==="object"?p.field_status:{}};
+  const s={id,type:"spot",name:p.name||id,lat:p.lat==null?null:+p.lat,lng:p.lng==null?null:+p.lng,address:plStr(p.address)||"",google_maps:plHttps(p.google_maps_url)||"",mapcode:null,description:plStr(p.description)||"",sources:[],category:cs[0]||"custom",categories:CAT_ORDER.filter(c=>cs.indexOf(c)>=0),category_source:p.category_source||"",base:"",region:plStr(p.area_group)||"",routes:[],parkings:[],stay_minutes:typeof p.stay_minutes==="number"?p.stay_minutes:60,hours:plStr(p.hours)||"",closed:plStr(p.closed_days)||"",admission:plStr(p.admission)||"",rain_ok:typeof p.rain_ok==="boolean"?p.rain_ok:null,phone:plStr(p.phone)||"",what_to_buy:plStr(p.what_to_buy)||"",from_places:true,pl:true,pl_status:p.field_status&&typeof p.field_status==="object"?p.field_status:{},note:plStr(p.note)||"",alert:plAlert(p)};
   (p.route_days||[]).forEach(rd=>{ const k=rd&&rd.route; if(!k) return; const rid=/^r_/.test(k)?k:("r_"+String(k).toLowerCase()); if(s.routes.indexOf(rid)<0) s.routes.push(rid); });
   const mc2=plMc(p); if(mc2){s.mapcode=mc2; s.mapcode_source=String(p.mapcode_source);}
   const pk2=plParking(p); if(pk2) s.parkings=pk2.map(normPk);
-  plSources(s,p); setS(s,"info_checked_at",plStr(p.checked_date)); setS(s,"season_note",plStr(p.season_note));
+  plSources(s,p); setS(s,"info_checked_at",plStr(p.checked_date)); setS(s,"season_note",plStr(p.season_note)); setS(s,"note",plStr(p.note)); const al2=plAlert(p); if(al2) s.alert=al2;
   d.spots.push(s); ns++; });
  d.rests.forEach(r=>{const p=P[r.id]; if(!p||p.kind!=="restaurant") return; nr++; r.pl=true; r.pl_status=p.field_status&&typeof p.field_status==="object"?p.field_status:{}; plClear(r,p,true);
   if(plStr(p.cuisine_group)) r.category=plStr(p.cuisine_group); if(plStr(p.cuisine)) r.cuisine=plStr(p.cuisine); else if(plStr(p.cuisine_group)&&(!r.cuisine||r.category==="後台路線")) r.cuisine=plStr(p.cuisine_group);
   const bl=plStr(p.budget_lunch), bd=plStr(p.budget_dinner); if(bl||bd||r.price_range===""){r.budget_lunch=bl; r.budget_dinner=bd; r.price_range=[bl?"午 "+bl:"",bd?"晚 "+bd:""].filter(Boolean).join("／");}
-  setS(r,"closed",plStr(p.closed_days)); setS(r,"hours",plStr(p.hours));
+  setS(r,"closed",plStr(p.closed_days)); setS(r,"hours",plStr(p.hours)); setS(r,"note",plStr(p.note));
   if(p.reservation&&typeof p.reservation==="object") r.reservation={required:p.reservation.required==null?null:!!p.reservation.required,accepts:p.reservation.accepts==null?null:!!p.reservation.accepts,method:plStr(p.reservation.method)||"",note:plStr(p.reservation.note)||""};
   const gm=plHttps(p.google_maps_url); if(gm) r.google_maps=gm;
   const rt=(Array.isArray(p.ratings)?p.ratings:[]).filter(x=>x&&(x.source==="tabelog"||x.source==="google")&&typeof x.score==="number"&&x.score>=0&&x.score<=5&&plHttps(x.url))
@@ -2468,7 +2473,7 @@ function rtCtl(){const el=$("#rtCtl"); if(!el) return; const pkg=TE&&TE.local?lt
 document.addEventListener("click",e=>{const t=e.target.closest&&e.target.closest("[data-rt]"); if(!t) return; const k=t.dataset.rt;
  if(k==="apply") rtApply({}); else if(k==="backup") rtApply({backup:true}); else if(k==="mine") rtKeepMine(); else if(k==="revert") rtRevert();
  else if(k==="offer"){ if(D.rt_latest){D.rt_new=D.rt_latest; const ed=rtEdited(); if(ed.length) rtOffer(); else rtApply({});} }});
-window.__app={get AUTO(){return AUTO;},rtFetch,rtNewer,rtApply,rtOffer,rtKeepMine,rtRevert,rtEdited,parseLocationInput,queryVariants,qTokens,gmapsSearchUrl,dayArea,guessCat,classifyAg,findDup,enrichPlace,enrichAsync,searchPlaces,openSearch,bringIn,clipArm,clipTry,clipOn,suggestWhen,showPlaceCard,reverseAt,mapTypeahead,ensureMapSearch,cacheKey,nearbyParking,idbGet,idbSet,extractGmaps,applyBring,STAY_MIN,plClear,plClean,plApply,plFetch,catsOf,restTagN,ltInc,ltAddRoute,ltDelRoute,adoptSet,rShort,ltGet,ltIndex,ltBuild,ltEntry,ltAdopt,cmpRender,cmpFromRs,cmpMetrics,rfClean,rfFetch,slotOf,get CMP(){return CMP;},lgShrink,LG_NMAX,quotaUntil,bkMsg,plQueued,plSched,QF,areaZh,zhText,userNotes,routeName,pickLoad,doneAlert,bkGate,listPoll,bkLoad,bkSave,bkRow,bkDateCell,buildXlsx,bkXlsxDownload,XLSX_COLS,lgOpen,flSplit,flJoin,flText,backendCfg,hashView,get AUTO(){return AUTO;},drLoad,drVisible,reqExport,reqText,readNewForm,selLoad,selectedRoutes,get DRAFT(){return DRAFT;},get INTAKE(){return INTAKE;},DL,BUF,decLoad,decSave,decExport,showMod,pickupDefault,dropoffDefault,get curMod(){return curMod;},bestDay,localNearby,SCATS,photonSearch,queryVariants,qTokens,localSearch,photonMulti,parseLocationInput,cpLoad,cpSave,cpId,sha1hex,searchPlaces,searchCenter,SEARCH_ENDPOINTS,openSearch,get SRVCP(){return SRVCP;},parseLoc,cuLoad,cuText,cuMerge,stopsOf,mergeByMeal,get SAME(){return SAME;},setRoute,openTrip,showTab,addTo,itin,suggested,store,exportJson,buildKml,buildCsv,buildFinal,importText,parseImport,
+window.__app={get AUTO(){return AUTO;},rtFetch,rtNewer,rtApply,rtOffer,rtKeepMine,rtRevert,rtEdited,parseLocationInput,queryVariants,qTokens,gmapsSearchUrl,dayArea,guessCat,classifyAg,findDup,enrichPlace,enrichAsync,searchPlaces,openSearch,bringIn,clipArm,clipTry,clipOn,suggestWhen,showPlaceCard,reverseAt,mapTypeahead,ensureMapSearch,cacheKey,nearbyParking,idbGet,idbSet,extractGmaps,applyBring,STAY_MIN,plClear,plClean,plApply,plAlert,alertTxt,alertHtml,ALERT_LV,plFetch,catsOf,restTagN,ltInc,ltAddRoute,ltDelRoute,adoptSet,rShort,ltGet,ltIndex,ltBuild,ltEntry,ltAdopt,cmpRender,cmpFromRs,cmpMetrics,rfClean,rfFetch,slotOf,get CMP(){return CMP;},lgShrink,LG_NMAX,quotaUntil,bkMsg,plQueued,plSched,QF,areaZh,zhText,userNotes,routeName,pickLoad,doneAlert,bkGate,listPoll,bkLoad,bkSave,bkRow,bkDateCell,buildXlsx,bkXlsxDownload,XLSX_COLS,lgOpen,flSplit,flJoin,flText,backendCfg,hashView,get AUTO(){return AUTO;},drLoad,drVisible,reqExport,reqText,readNewForm,selLoad,selectedRoutes,get DRAFT(){return DRAFT;},get INTAKE(){return INTAKE;},DL,BUF,decLoad,decSave,decExport,showMod,pickupDefault,dropoffDefault,get curMod(){return curMod;},bestDay,localNearby,SCATS,photonSearch,queryVariants,qTokens,localSearch,photonMulti,parseLocationInput,cpLoad,cpSave,cpId,sha1hex,searchPlaces,searchCenter,SEARCH_ENDPOINTS,openSearch,get SRVCP(){return SRVCP;},parseLoc,cuLoad,cuText,cuMerge,stopsOf,mergeByMeal,get SAME(){return SAME;},setRoute,openTrip,showTab,addTo,itin,suggested,store,exportJson,buildKml,buildCsv,buildFinal,importText,parseImport,
  get trip(){return TID;},get route(){return route;},get day(){return curDay;},get RS(){return RS;},get SP(){return SP;},get D(){return D;},get RESTS(){return RESTS;},K};
 })();
 </script>
