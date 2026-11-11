@@ -190,10 +190,38 @@ header{padding-top:calc(8px + var(--sat));}
   .rsw button{min-height:44px;font-size:16px;padding:8px 14px;min-width:44px}
 }
 </style>
+<style id="v1916">
+/* 1.9.16：備份與轉移入口／面板；沿用 --sat，不擠壞頂端列 */
+#bakBtn{
+  flex:0 0 44px;width:44px;height:44px;min-width:44px;min-height:44px;
+  border:1px solid #90caf9;background:#0b3d91;color:#fff;border-radius:10px;
+  font-size:20px;line-height:1;cursor:pointer;padding:0;margin:0;
+  display:inline-flex;align-items:center;justify-content:center;
+}
+#bakSheet{position:fixed;inset:0;z-index:3200;display:none;align-items:flex-end;justify-content:center}
+#bakSheet.on{display:flex}
+#bakSheet .bakmask{position:absolute;inset:0;background:rgba(0,0,0,.45)}
+#bakSheet .bakbox{
+  position:relative;background:#fff;border-radius:14px 14px 0 0;width:100%;
+  max-width:560px;max-height:calc(90vh - var(--sat,0px));overflow:auto;
+  padding:16px 16px calc(16px + env(safe-area-inset-bottom,0px));
+  box-shadow:0 -8px 30px rgba(0,0,0,.2);
+}
+#bakSheet .bakbox .x{position:absolute;right:8px;top:6px;border:0;background:none;font-size:28px;cursor:pointer;width:44px;height:44px;min-width:44px;min-height:44px}
+#bakSheet .bakact,#tlBak,#toolsBak{min-height:44px;font-size:16px;padding:10px 14px}
+#bakSheet .baksum{margin:8px 0;padding-left:20px}
+#bakSheet #bakHint{margin-top:12px;line-height:1.5}
+#bakSheet #bakErr{background:#fdecea;color:#b71c1c;border-radius:8px;padding:10px;margin:8px 0}
+@media (min-width:821px){
+  #bakSheet{align-items:center}
+  #bakSheet .bakbox{border-radius:12px;max-height:90vh;margin:16px}
+}
+</style>
 </head>
 <body>
 <header id="hdr">
  <a class="home" href="../" title="回網站首頁（路線總覽地圖）">🗾</a>
+ <button type="button" id="bakBtn" class="bakbtn" aria-label="備份與轉移" title="備份與轉移">📦</button>
  <h1 id="ttl">互動行程</h1>
  <select id="tripSel" aria-label="選擇行程"></select>
  <div class="rsw" id="rsw"></div>
@@ -238,6 +266,7 @@ header{padding-top:calc(8px + var(--sat));}
    <div id="ilist"></div>
    <div class="tools">
     <h4>匯出／匯入（本行程・本路線）</h4>
+    <button class="btn" type="button" id="toolsBak">📦 備份與轉移（整包）</button>
     <button class="btn" id="expJson">⬇ 匯出 JSON</button>
     <button class="btn" id="expDec" type="button">⬇ 匯出決定（decisions JSON）</button>
     <button class="btn" id="expKml">⬇ 匯出 KML（My Maps）</button>
@@ -270,13 +299,15 @@ header{padding-top:calc(8px + var(--sat));}
  <button data-t="spots" class="on"><b>📍</b>景點</button><button data-t="rests"><b>🍴</b>餐廳</button><button data-t="itin"><b>🗓</b>行程</button><button data-t="map"><b>🗺</b>地圖</button>
 </nav>
 <div id="modal"><div class="box"><button class="x" id="mx" aria-label="關閉">×</button><div id="mbody"></div></div></div>
+<div id="bakSheet" hidden><div class="bakmask" id="bakMask"></div><div class="bakbox" role="dialog" aria-modal="true" aria-labelledby="bakTitle"><button class="x" id="bakClose" aria-label="關閉">×</button><div id="bakBody"></div></div></div>
+<input type="file" id="bakFile" accept="application/json,.json" hidden>
 <div id="clipBar"></div><div id="placeCard"></div><div id="toast"></div>
 <div id="swbar" role="status"><span>有新版本可用</span><button id="swUpd">更新</button><button id="swLater" aria-label="稍後">稍後</button></div>
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
 <script>
 (function(){
 "use strict";
-const APPV="plan-multi-1.9.15";
+const APPV="plan-multi-1.9.16";
 /* 1.8 後台自動排路線（Cloudflare Worker）：網址部署後填入。空字串＝後台未啟用，網頁維持 1.7 行為（匯出 JSON＋複製文字）。site key 是公開值。 */
 const BACKEND_CFG={url:"https://trip-intake.turbo99992001.workers.dev",turnstile_site_key:"0x4AAAAAAFs8wmzPidNkiUBU"};
 const CAT={popular:"熱門",natural:"自然絕景",shrine:"神社寺院",historic:"歷史",onsen:"溫泉",hidden:"私房",food:"美食",experience:"親子／體驗",anime:"動漫",anime_game:"🎮 動漫・遊戲周邊",festival:"活動／花季",custom:"👤 自訂地點",auto:"🤖 後台路線景點",uncat:"🏷 待分類"};
@@ -1428,7 +1459,7 @@ function showTripList(push){
  TID=null; D=null; DRAFT=null; curMod="spots"; $("#app").hidden=true; $("#bnav").hidden=true; $("#mods").hidden=true; $("#modpanel").hidden=true; $("#loading").hidden=true; fillTripSel();
  $("#ttl").textContent="互動行程"; document.title="安宏旅行社｜互動行程（景點＋餐廳）"; $("#rsw").innerHTML=""; $("#routeSel").innerHTML=""; $("#rname").textContent="";
  const st={flights:"收集中",review:"品管中",final:"已定案"};
- const dsl=drVisible(), lts=ltVisible(); setTimeout(listPoll,0); $("#tripList").innerHTML=`<h2 style="font-size:18px">選擇行程</h2><div class="btns"><a class="btn pri" id="tlNew" href="?mod=new">➕ 新增旅遊規劃（例：九州）</a></div>`+(lts.length?`<div class="card"><h3>🧳 本機行程（尚未上架）</h3>${lts.map(t=>`<div class="drow"><a href="?trip=${encodeURIComponent(t.id)}" data-trip="${esc(t.id)}">🧳 ${esc(t.title||t.id)}（${ltN(t.id)} 套）</a> <span class="cnt">${esc(t.start_date||"")}～${esc(t.end_date||"")}・${esc(ltInc(ltGet(t.id)).map(rKeyOf).join("／"))}</span></div>`).join("")}</div>`:"")+(dsl.length?`<div class="card"><h3>本機草稿</h3>${dsl.map(d=>`<div class="drow"><a href="?trip=${encodeURIComponent(d.id)}&mod=new" data-draft="${esc(d.id)}">📝 草稿：${esc(drTitle(d.request||{}))}</a>${d.backend&&d.backend.view_code?`<div class="cnt">代號 ${esc(d.backend.job_id||"")}・<span data-drst="${esc(d.backend.view_code)}">${esc(ST_TXT[d.backend.status]||"⏳ 已送出")}</span><br><a href="${esc(viewUrl(d.backend.view_code).replace(/^.*\?/,"?"))}" data-drlink>查看連結</a> <button class="btn" type="button" data-drcopy="${esc(viewUrl(d.backend.view_code))}">📋 複製</button></div>`:""}</div>`).join("")}</div>`:"")+TRIPS.trips.map(t=>`<div class="card"><h3 data-trip="${esc(t.id)}">${esc(t.title)}</h3>
+ const dsl=drVisible(), lts=ltVisible(); setTimeout(listPoll,0); $("#tripList").innerHTML=`<h2 style="font-size:18px">選擇行程</h2><div class="btns"><a class="btn pri" id="tlNew" href="?mod=new">➕ 新增旅遊規劃（例：九州）</a><button class="btn" type="button" id="tlBak">📦 備份與轉移</button></div>`+(lts.length?`<div class="card"><h3>🧳 本機行程（尚未上架）</h3>${lts.map(t=>`<div class="drow"><a href="?trip=${encodeURIComponent(t.id)}" data-trip="${esc(t.id)}">🧳 ${esc(t.title||t.id)}（${ltN(t.id)} 套）</a> <span class="cnt">${esc(t.start_date||"")}～${esc(t.end_date||"")}・${esc(ltInc(ltGet(t.id)).map(rKeyOf).join("／"))}</span></div>`).join("")}</div>`:"")+(dsl.length?`<div class="card"><h3>本機草稿</h3>${dsl.map(d=>`<div class="drow"><a href="?trip=${encodeURIComponent(d.id)}&mod=new" data-draft="${esc(d.id)}">📝 草稿：${esc(drTitle(d.request||{}))}</a>${d.backend&&d.backend.view_code?`<div class="cnt">代號 ${esc(d.backend.job_id||"")}・<span data-drst="${esc(d.backend.view_code)}">${esc(ST_TXT[d.backend.status]||"⏳ 已送出")}</span><br><a href="${esc(viewUrl(d.backend.view_code).replace(/^.*\?/,"?"))}" data-drlink>查看連結</a> <button class="btn" type="button" data-drcopy="${esc(viewUrl(d.backend.view_code))}">📋 複製</button></div>`:""}</div>`).join("")}</div>`:"")+TRIPS.trips.map(t=>`<div class="card"><h3 data-trip="${esc(t.id)}">${esc(t.title)}</h3>
   <div class="tags"><span class="tag">${esc(t.start_date)}～${esc(t.end_date)}</span>${t.travelers?`<span class="tag">大人 ${esc(t.travelers.adults||0)}${t.travelers.children?"、小孩 "+esc(t.travelers.children):""}</span>`:""}<span class="tag">景點 ${t.counts.spots}・餐廳 ${t.counts.restaurants}</span>${t.status_stage?`<span class="tag">${esc(st[t.status_stage]||t.status_stage)}</span>`:""}</div>
   <div class="desc">${esc(t.region||"")}</div>
   <div class="btns">${t.routes.map(r=>`<a class="btn ${r.key===t.default_route?"pri":""}" href="?trip=${encodeURIComponent(t.id)}&route=${encodeURIComponent(r.key)}" data-trip="${esc(t.id)}" data-route="${esc(r.key)}">路線 ${esc(r.key)}${r.key===t.default_route?"（推薦）":""}</a>`).join("")}</div>
@@ -2488,6 +2519,408 @@ function rtCtl(){const el=$("#rtCtl"); if(!el) return; const pkg=TE&&TE.local?lt
 document.addEventListener("click",e=>{const t=e.target.closest&&e.target.closest("[data-rt]"); if(!t) return; const k=t.dataset.rt;
  if(k==="apply") rtApply({}); else if(k==="backup") rtApply({backup:true}); else if(k==="mine") rtKeepMine(); else if(k==="revert") rtRevert();
  else if(k==="offer"){ if(D.rt_latest){D.rt_new=D.rt_latest; const ed=rtEdited(); if(ed.length) rtOffer(); else rtApply({});} }});
+/* ---------- 1.9.16 備份與轉移（整包匯出／匯入，不含快取與金鑰） ---------- */
+var BAK_SCHEMA="trip-maps-backup/1";
+var BAK_EXACT_IN=["plan:drafts:v1","plan:local_trips:v1","plan:bookings:new:v1","plan:lodging_jobs:v1","plan:clip_auto"];
+var BAK_PREF_IN=["itin:","custom:","plan:local_trip:","plan:bookings:","plan:lodging_jobs:","plan:drafts:"];
+var BAK_EXACT_OUT=["plan:tile_cache","plan:quota_pause_until","plan:clip_seen","plan:backend_override"];
+var BAK_PREF_OUT=["search:cache:"];
+var BAK_SECRET_RE=/(?:^|[._:-])(?:poll[_-]?token|passcode|view[_-]?code|invite(?:[_-]?code)?|secret|password|auth[_-]?token)(?:$|[._:-])/i;
+function bakSecretKey(k){return BAK_SECRET_RE.test(String(k||""));}
+function bakExcluded(k){
+  if(!k) return true;
+  if(BAK_EXACT_OUT.indexOf(k)>=0) return true;
+  if(BAK_PREF_OUT.some(function(p){return k.indexOf(p)===0;})) return true;
+  if(bakSecretKey(k)) return true;
+  return false;
+}
+function bakLegacyKey(k){return /^(?:[a-z0-9-]+_)(?:itinerary|route|food_itinerary|food_merged_sig|custom_spots)(?:_v\d+)?$/i.test(k);}
+function bakIncluded(k){
+  if(bakExcluded(k)) return false;
+  if(BAK_EXACT_IN.indexOf(k)>=0) return true;
+  if(BAK_PREF_IN.some(function(p){return k.indexOf(p)===0;})) return true;
+  if(bakLegacyKey(k)) return true;
+  return false;
+}
+function bakAllKeys(){
+  var a=[], i, k;
+  try{ for(i=0;i<localStorage.length;i++){ k=localStorage.key(i); if(k) a.push(k); } }catch(e){}
+  return a;
+}
+function bakCollect(){
+  var keys={}, all=bakAllKeys();
+  all.forEach(function(k){
+    if(!bakIncluded(k)) return;
+    try{ var v=localStorage.getItem(k); if(v!=null) keys[k]=v; }catch(e){}
+  });
+  Object.keys(keys).forEach(function(k){
+    var m=/:migrated_from:(.+)$/.exec(k);
+    if(m && m[1] && !bakExcluded(m[1]) && keys[m[1]]==null){
+      try{ var v=localStorage.getItem(m[1]); if(v!=null) keys[m[1]]=v; }catch(e){}
+    }
+  });
+  return keys;
+}
+function bakClassify(k){
+  if(k==="plan:local_trips:v1" || k.indexOf("plan:local_trip:")===0) return "本機行程包";
+  if(k==="plan:drafts:v1" || k.indexOf("plan:drafts:")===0) return "新增規劃草稿";
+  if(/:bookings:/.test(k) || k.indexOf("plan:bookings:")===0) return "訂房資料";
+  if(/:decisions:/.test(k)) return "機票／租車／住宿已訂";
+  if(/:notes:/.test(k) || /:final_notes$/.test(k)) return "行程備註";
+  if(/:custom:/.test(k) || k.indexOf("custom:")===0 || /custom_spots/.test(k)) return "自訂景點／餐廳";
+  if(/:selected_routes:/.test(k) || /:picked_route:/.test(k) || /:route$/.test(k)) return "已選路線";
+  if(/^itin:[^:]+:v1$/.test(k)) return "各路線行程";
+  if(k==="plan:lodging_jobs:v1") return "訂房辨識工作";
+  if(/migrated_from/.test(k) || /food_sig|final_version|clip_auto/.test(k)) return "其他設定";
+  return "其他使用者資料";
+}
+function bakCountItems(raw){
+  try{
+    var j=JSON.parse(raw);
+    if(j && Array.isArray(j.drafts)) return j.drafts.length;
+    if(j && Array.isArray(j.trips)) return j.trips.length;
+    if(j && Array.isArray(j.bookings)) return j.bookings.length;
+    if(j && Array.isArray(j.places)) return j.places.length;
+    if(Array.isArray(j)) return j.length;
+    if(j && typeof j==="object"){
+      if(Array.isArray(j.restaurants) || j.flights || j.car || (j.lodging && typeof j.lodging==="object"))
+        return (j.flights?1:0)+(j.car?1:0)+Object.keys(j.lodging||{}).length+(Array.isArray(j.restaurants)?j.restaurants.length:0);
+      return Object.keys(j).length;
+    }
+  }catch(e){}
+  return raw?1:0;
+}
+function bakSummary(pack){
+  var keys=pack.keys||{}, cats={}, nKey=0, nItem=0;
+  Object.keys(keys).forEach(function(k){
+    nKey++;
+    var c=bakClassify(k), n=bakCountItems(keys[k]);
+    nItem+=n;
+    cats[c]=(cats[c]||0)+n;
+  });
+  return {nKey:nKey, nItem:nItem, cats:cats, exported_at:pack.exported_at||"", app_version:pack.app_version||""};
+}
+function bakExportPack(){
+  return {schema:BAK_SCHEMA, exported_at:nowISO(), app_version:APPV, keys:bakCollect()};
+}
+function bakFileName(d){
+  d=d||new Date();
+  var p=function(n){return String(n).padStart(2,"0");};
+  return "trip-backup-"+d.getFullYear()+p(d.getMonth()+1)+p(d.getDate())+"-"+p(d.getHours())+p(d.getMinutes())+".json";
+}
+function bakValidate(txt){
+  if(txt==null || String(txt).trim()==="") return {ok:false, error:"檔案是空的，沒有可匯入的資料。現有資料沒有被改動。"};
+  var j;
+  try{ j=JSON.parse(txt); }
+  catch(e){ return {ok:false, error:"這個檔案不是有效的 JSON，請確認是本網頁「備份與轉移 → 匯出整包」產生的備份檔。現有資料沒有被改動。"}; }
+  if(!j || typeof j!=="object" || Array.isArray(j))
+    return {ok:false, error:"這不是本行程網頁的整包備份（格式不對）。請用「備份與轉移」匯出的 JSON 檔。現有資料沒有被改動。"};
+  if(j.schema!==BAK_SCHEMA){
+    if(typeof j.schema==="string")
+      return {ok:false, error:"這不是本行程網頁的整包備份（檔案類型："+j.schema+"）。請用「備份與轉移 → 匯出整包」產生的檔案。現有資料沒有被改動。"};
+    return {ok:false, error:"這不是本行程網頁的整包備份。請用「備份與轉移 → 匯出整包」產生的 JSON 檔。現有資料沒有被改動。"};
+  }
+  if(!j.keys || typeof j.keys!=="object" || Array.isArray(j.keys))
+    return {ok:false, error:"備份檔內容不完整（缺少資料項目），無法匯入。現有資料沒有被改動。"};
+  return {ok:true, data:j};
+}
+function bakParse(raw){
+  if(raw==null) return {ok:false};
+  try{ return {ok:true, json:true, v:JSON.parse(raw)}; }
+  catch(e){ return {ok:true, json:false, v:raw}; }
+}
+function bakStamp(v){
+  if(v==null) return null;
+  if(typeof v==="string" && /^\d{4}-\d{2}-\d{2}T/.test(v)){ var t=Date.parse(v); return isFinite(t)?t:null; }
+  if(typeof v==="object"){
+    var ks=["updated_at","generated_at","exported_at","picked_at","route_updated_at","created_at","submitted_at"], i, t;
+    for(i=0;i<ks.length;i++){ if(v[ks[i]]){ t=Date.parse(v[ks[i]]); if(isFinite(t)) return t; } }
+  }
+  return null;
+}
+function bakNewer(a,b){
+  var ta=bakStamp(a), tb=bakStamp(b);
+  if(ta==null && tb==null) return 0;
+  if(tb==null) return 1;
+  if(ta==null) return -1;
+  if(ta>tb) return 1;
+  if(tb>ta) return -1;
+  return 0;
+}
+function bakItemId(x){
+  if(!x || typeof x!=="object") return null;
+  if(typeof x.id==="string" && x.id) return "id:"+x.id;
+  if(x.booking_code) return "bc:"+x.booking_code;
+  if(x.hotel_name && x.check_in) return "ht:"+x.hotel_name+"|"+x.check_in;
+  if(x.trip_id) return "tid:"+x.trip_id;
+  if(x.route_id) return "rid:"+x.route_id;
+  return null;
+}
+function bakMergeArrays(localArr, bakArr, notes, path){
+  var out=localArr.slice(), idx=new Map();
+  out.forEach(function(x,i){ var id=bakItemId(x); if(id) idx.set(id,i); });
+  bakArr.forEach(function(b){
+    var id=bakItemId(b);
+    if(!id){
+      if(!out.some(function(x){ return JSON.stringify(x)===JSON.stringify(b); })){
+        notes.push(path+"：備份有一筆無法對應編號的項目，已追加");
+        out.push(b);
+      }
+      return;
+    }
+    if(!idx.has(id)){ out.push(b); idx.set(id, out.length-1); return; }
+    var i=idx.get(id), loc=out[i];
+    if(JSON.stringify(loc)===JSON.stringify(b)) return;
+    var cmp=bakNewer(b, loc);
+    if(cmp>0) out[i]=b;
+    else if(cmp<0) {}
+    else notes.push(path+"（"+id+"）兩邊都有但無法判斷哪個較新，已保留本機版本");
+  });
+  return out;
+}
+function bakMergeObj(local, bak, notes, path, inherited){
+  inherited=inherited||0;
+  if(Array.isArray(local) && Array.isArray(bak)) return bakMergeArrays(local, bak, notes, path);
+  if(local && bak && typeof local==="object" && typeof bak==="object" && !Array.isArray(local) && !Array.isArray(bak)){
+    var out=Object.assign({}, local);
+    var keys={};
+    Object.keys(local).forEach(function(x){ keys[x]=1; });
+    Object.keys(bak).forEach(function(x){ keys[x]=1; });
+    var arrF={drafts:1, trips:1, bookings:1, places:1, restaurants:1};
+    var here=bakNewer(bak, local)||inherited;
+    Object.keys(keys).forEach(function(k){
+      if(!(k in bak)) return;
+      if(!(k in local)){ out[k]=bak[k]; return; }
+      var lv=local[k], bv=bak[k];
+      if(Array.isArray(lv) && Array.isArray(bv) && (arrF[k] || (lv[0]&&bakItemId(lv[0])) || (bv[0]&&bakItemId(bv[0])))){
+        out[k]=bakMergeArrays(lv, bv, notes, path+"."+k); return;
+      }
+      if(lv && bv && typeof lv==="object" && typeof bv==="object" && !Array.isArray(lv) && !Array.isArray(bv)){
+        out[k]=bakMergeObj(lv, bv, notes, path+"."+k, here); return;
+      }
+      if(JSON.stringify(lv)===JSON.stringify(bv)) return;
+      var cmp=bakNewer(bv, lv);
+      if(!cmp) cmp=here;
+      if(cmp>0) out[k]=bv;
+      else if(cmp<0) {}
+      else notes.push(path+"."+k+"：兩邊不同且無法判斷較新，已保留本機");
+    });
+    var ta=bakStamp(local), tb=bakStamp(bak);
+    if(tb && (!ta || tb>ta) && bak.updated_at) out.updated_at=bak.updated_at;
+    return out;
+  }
+  var cmp=bakNewer(bak, local);
+  if(!cmp) cmp=inherited;
+  if(cmp>0) return bak;
+  if(cmp<0) return local;
+  if(JSON.stringify(local)===JSON.stringify(bak)) return local;
+  notes.push(path+"：兩邊不同且無法判斷較新，已保留本機");
+  return local;
+}
+function bakBuildMerged(pack, notes){
+  var local=bakCollect(), next=Object.assign({}, local), bkeys=pack.keys||{};
+  Object.keys(bkeys).forEach(function(k){
+    if(bakExcluded(k)) return;
+    if(!(k in local) || local[k]==null){ next[k]=bkeys[k]; return; }
+    if(local[k]===bkeys[k]) return;
+    var L=bakParse(local[k]), B=bakParse(bkeys[k]);
+    if(L.json && B.json){ next[k]=JSON.stringify(bakMergeObj(L.v, B.v, notes, k)); }
+    else {
+      var cmp=bakNewer(B.json?B.v:bkeys[k], L.json?L.v:local[k]);
+      if(cmp>0) next[k]=bkeys[k];
+      else if(cmp<0) {}
+      else notes.push(k+"：兩邊不同且無法判斷較新，已保留本機");
+    }
+  });
+  return next;
+}
+function bakBuildOverwrite(pack){
+  var next={}, bkeys=pack.keys||{}, k;
+  for(k in bkeys){ if(Object.prototype.hasOwnProperty.call(bkeys,k) && !bakExcluded(k) && bkeys[k]!=null) next[k]=bkeys[k]; }
+  return next;
+}
+function bakWrite(nextMap, mode){
+  var prev={}, all=bakAllKeys(), existing=all.filter(bakIncluded);
+  existing.forEach(function(k){ try{ prev[k]=localStorage.getItem(k); }catch(e){ prev[k]=null; } });
+  Object.keys(nextMap).forEach(function(k){ if(!(k in prev)){ try{ prev[k]=localStorage.getItem(k); }catch(e){ prev[k]=null; } } });
+  var written=[];
+  function rollback(){
+    written.forEach(function(k){
+      try{ if(!(k in prev) || prev[k]==null) localStorage.removeItem(k); }catch(e){}
+    });
+    Object.keys(prev).forEach(function(k){
+      try{ if(prev[k]==null) localStorage.removeItem(k); else localStorage.setItem(k, prev[k]); }catch(e){}
+    });
+  }
+  try{
+    if(mode==="overwrite"){
+      existing.forEach(function(k){ if(!(k in nextMap)) localStorage.removeItem(k); });
+    }
+    Object.keys(nextMap).forEach(function(k){
+      if(bakExcluded(k)) return;
+      var v=nextMap[k];
+      if(v==null) localStorage.removeItem(k);
+      else { localStorage.setItem(k, typeof v==="string"?v:JSON.stringify(v)); written.push(k); }
+    });
+    return {ok:true};
+  }catch(e){
+    rollback();
+    return {ok:false, error:"寫入失敗（瀏覽器空間可能不足），已恢復成匯入前的資料，沒有改動。"};
+  }
+}
+function bakIsIOS(){ return /iPad|iPhone|iPod/.test(navigator.userAgent||"") || (navigator.platform==="MacIntel" && navigator.maxTouchPoints>1); }
+function bakStandalone(){ try{ return (window.matchMedia && window.matchMedia("(display-mode: standalone)").matches) || !!navigator.standalone; }catch(e){ return false; } }
+function bakSaveFile(name, text){
+  var blob=new Blob([text],{type:"application/json;charset=utf-8"});
+  var file=null;
+  try{ file=new File([blob], name, {type:"application/json"}); }catch(e){}
+  download(name, text, "application/json");
+  function tryShare(){
+    if(file && navigator.share && navigator.canShare){
+      try{
+        if(navigator.canShare({files:[file]}))
+          return navigator.share({files:[file], title:name}).then(function(){return true;}).catch(function(){return false;});
+      }catch(e){}
+    }
+    return Promise.resolve(false);
+  }
+  if(bakIsIOS() || bakStandalone()) return tryShare();
+  return Promise.resolve(true);
+}
+function bakHint(){
+  return "清除 Safari 網站資料或刪除主畫面 App 會讓資料消失，建議定期匯出。訂房檔含訂房代號等個資，傳完請刪除。登入／金鑰類不包含。";
+}
+function bakSumHtml(sum){
+  var rows=Object.keys(sum.cats).sort().map(function(c){ return "<li>"+esc(c)+"："+sum.cats[c]+" 筆</li>"; }).join("");
+  return "<ul class=\"baksum\">"+rows+"</ul>"+
+    "<div class=\"cnt\">共 "+sum.nKey+" 個資料項目"+(sum.nItem?("，約 "+sum.nItem+" 筆"):"")+"</div>"+
+    (sum.exported_at?"<div class=\"cnt\">匯出時間："+esc(sum.exported_at)+"</div>":"")+
+    (sum.app_version?"<div class=\"cnt\">匯出時版本："+esc(sum.app_version)+"</div>":"");
+}
+function bakOpen(view, pack, err, notes){
+  var el=$("#bakSheet"); if(!el) return;
+  var body=$("#bakBody");
+  var h="<h2 id=\"bakTitle\" style=\"font-size:18px;margin:0 36px 8px 0\">📦 備份與轉移</h2>";
+  if(view==="error"){
+    h+="<div class=\"todo\" id=\"bakErr\" role=\"alert\">"+esc(err||"無法匯入")+"</div>";
+    h+="<div class=\"btns\"><button class=\"btn pri bakact\" type=\"button\" id=\"bakBack\">返回</button></div>";
+  } else if(view==="preview"){
+    var sum=bakSummary(pack);
+    h+="<div class=\"desc\">即將匯入這份備份，請先確認摘要，再選擇合併或覆蓋。</div>";
+    h+="<div id=\"bakPreview\">"+bakSumHtml(sum)+"</div>";
+    h+="<div class=\"btns\" style=\"flex-direction:column;align-items:stretch\">";
+    h+="<button class=\"btn pri bakact\" type=\"button\" id=\"bakMerge\">合併（同 key 以較新者為準，能對上編號的會合併）</button>";
+    h+="<button class=\"btn bakact\" type=\"button\" id=\"bakOver\">覆蓋（先自動下載一份目前資料備份）</button>";
+    h+="<button class=\"btn bakact\" type=\"button\" id=\"bakBack\">取消</button></div>";
+  } else if(view==="confirm"){
+    h+="<div class=\"desc\" id=\"bakConfirmMsg\">"+(err||"")+"</div>";
+    h+="<div class=\"btns\" style=\"flex-direction:column;align-items:stretch\">";
+    h+="<button class=\"btn pri bakact\" type=\"button\" id=\"bakDo\" data-mode=\""+esc(pack)+"\">確定匯入</button>";
+    h+="<button class=\"btn bakact\" type=\"button\" id=\"bakBack2\">返回</button></div>";
+  } else if(view==="done"){
+    h+="<div class=\"desc\" id=\"bakDone\">匯入完成，即將重新載入頁面。</div>";
+    if(notes && notes.length) h+="<div class=\"cnt\" id=\"bakNotes\">"+notes.map(function(n){return "<div>"+esc(n)+"</div>";}).join("")+"</div>";
+  } else {
+    var cur=bakExportPack(), sum=bakSummary(cur);
+    h+="<div class=\"desc\">可把這個瀏覽器（例如 Mac 網頁）的行程資料，整包移到另一台裝置（例如 iPhone 主畫面 App）。兩邊的資料原本各自獨立。</div>";
+    h+="<div id=\"bakCur\">"+bakSumHtml(sum)+"</div>";
+    h+="<div class=\"btns\" style=\"flex-direction:column;align-items:stretch\">";
+    h+="<button class=\"btn pri bakact\" type=\"button\" id=\"bakExport\">⬇ 匯出整包</button>";
+    h+="<button class=\"btn bakact\" type=\"button\" id=\"bakImport\">⬆ 匯入整包</button></div>";
+    h+="<p class=\"cnt\" id=\"bakHint\">"+esc(bakHint())+"</p>";
+  }
+  body.innerHTML=h;
+  el.classList.add("on"); el.removeAttribute("hidden");
+  window.__bakPack= (view==="preview"||view==="confirm")? (view==="confirm"?window.__bakPack:pack) : null;
+  if(view==="confirm") window.__bakMode=pack;
+}
+function bakClose(){
+  var el=$("#bakSheet"); if(!el) return;
+  el.classList.remove("on"); el.setAttribute("hidden","");
+  var f=$("#bakFile"); if(f) f.value="";
+  window.__bakPack=null; window.__bakMode=null;
+}
+function bakAfterWrite(notes){
+  bakOpen("done", null, null, notes);
+  toast("匯入完成，即將重新載入", 2500);
+  if(window.__bakNoReload) return;
+  setTimeout(function(){ location.reload(); }, 700);
+}
+function bakDoImport(mode){
+  var pack=window.__bakPack; if(!pack) return;
+  var notes=[], next, wr;
+  if(mode==="overwrite"){
+    var cur=JSON.stringify(bakExportPack(), null, 2);
+    bakSaveFile(bakFileName(), cur);
+    next=bakBuildOverwrite(pack);
+  } else {
+    next=bakBuildMerged(pack, notes);
+  }
+  wr=bakWrite(next, mode);
+  if(!wr.ok){ bakOpen("error", null, wr.error); return; }
+  bakAfterWrite(notes);
+}
+function bakOnFile(file){
+  if(!file) return;
+  var reader=new FileReader();
+  reader.onload=function(){
+    var v=bakValidate(reader.result);
+    if(!v.ok){ bakOpen("error", null, v.error); return; }
+    bakOpen("preview", v.data);
+  };
+  reader.onerror=function(){ bakOpen("error", null, "無法讀取這個檔案。現有資料沒有被改動。"); };
+  reader.readAsText(file);
+}
+document.addEventListener("click", function(e){
+  if(e.target.closest && e.target.closest("#bakBtn, #tlBak, #toolsBak")){
+    e.preventDefault(); bakOpen("home"); return;
+  }
+  if(e.target.id==="bakClose" || e.target.id==="bakMask"){ e.preventDefault(); bakClose(); return; }
+  if(e.target.id==="bakExport"){
+    e.preventDefault();
+    var pack=bakExportPack(), name=bakFileName(), txt=JSON.stringify(pack, null, 2);
+    bakSaveFile(name, txt).then(function(){ toast("已匯出整包備份（"+name+"）", 2500); });
+    return;
+  }
+  if(e.target.id==="bakImport"){
+    e.preventDefault();
+    var f=$("#bakFile"); if(f) f.click();
+    return;
+  }
+  if(e.target.id==="bakBack" || e.target.id==="bakBack2"){
+    e.preventDefault();
+    if(e.target.id==="bakBack2" && window.__bakPack) bakOpen("preview", window.__bakPack);
+    else bakOpen("home");
+    return;
+  }
+  if(e.target.id==="bakMerge"){
+    e.preventDefault();
+    bakOpen("confirm", "merge");
+    $("#bakConfirmMsg").innerHTML="將把備份與目前本機資料合併：同一個項目以較新者為準；清單會盡量依編號合併。無法判斷較新時會保留本機並在完成後提示。確定要合併匯入嗎？";
+    return;
+  }
+  if(e.target.id==="bakOver"){
+    e.preventDefault();
+    bakOpen("confirm", "overwrite");
+    $("#bakConfirmMsg").innerHTML="將用備份覆蓋目前本機的使用者資料（快取與登入／金鑰類不會動）。覆蓋前會先自動下載一份目前資料的備份。確定要覆蓋匯入嗎？";
+    return;
+  }
+  if(e.target.id==="bakDo"){
+    e.preventDefault();
+    bakDoImport(e.target.getAttribute("data-mode")||window.__bakMode||"merge");
+    return;
+  }
+});
+var _bakFileEl=$("#bakFile");
+if(_bakFileEl) _bakFileEl.addEventListener("change", function(e){ var f=e.target.files && e.target.files[0]; bakOnFile(f); e.target.value=""; });
+window.__bak={
+  SCHEMA:BAK_SCHEMA, collect:bakCollect, included:bakIncluded, excluded:bakExcluded,
+  exportPack:bakExportPack, validate:bakValidate, summary:bakSummary,
+  buildMerged:bakBuildMerged, buildOverwrite:bakBuildOverwrite, write:bakWrite,
+  fileName:bakFileName, classify:bakClassify, open:bakOpen, close:bakClose,
+  saveFile:bakSaveFile, hint:bakHint, secretKey:bakSecretKey
+};
+
 window.__app={get AUTO(){return AUTO;},rtFetch,rtNewer,rtApply,rtOffer,rtKeepMine,rtRevert,rtEdited,parseLocationInput,queryVariants,qTokens,gmapsSearchUrl,dayArea,guessCat,classifyAg,findDup,enrichPlace,enrichAsync,searchPlaces,openSearch,bringIn,clipArm,clipTry,clipOn,suggestWhen,showPlaceCard,reverseAt,mapTypeahead,ensureMapSearch,cacheKey,nearbyParking,idbGet,idbSet,extractGmaps,applyBring,STAY_MIN,plClear,plClean,plApply,plAlert,alertTxt,alertHtml,ALERT_LV,plFetch,catsOf,restTagN,ltInc,ltAddRoute,ltDelRoute,adoptSet,rShort,ltGet,ltIndex,ltBuild,ltEntry,ltAdopt,cmpRender,cmpFromRs,cmpMetrics,rfClean,rfFetch,slotOf,get CMP(){return CMP;},lgShrink,LG_NMAX,quotaUntil,bkMsg,plQueued,plSched,QF,areaZh,zhText,userNotes,routeName,pickLoad,doneAlert,bkGate,listPoll,bkLoad,bkSave,bkRow,bkDateCell,buildXlsx,bkXlsxDownload,XLSX_COLS,lgOpen,flSplit,flJoin,flText,backendCfg,hashView,get AUTO(){return AUTO;},drLoad,drVisible,reqExport,reqText,readNewForm,selLoad,selectedRoutes,get DRAFT(){return DRAFT;},get INTAKE(){return INTAKE;},DL,BUF,decLoad,decSave,decExport,showMod,pickupDefault,dropoffDefault,get curMod(){return curMod;},bestDay,localNearby,SCATS,photonSearch,queryVariants,qTokens,localSearch,photonMulti,parseLocationInput,cpLoad,cpSave,cpId,sha1hex,searchPlaces,searchCenter,SEARCH_ENDPOINTS,openSearch,get SRVCP(){return SRVCP;},parseLoc,cuLoad,cuText,cuMerge,stopsOf,mergeByMeal,get SAME(){return SAME;},setRoute,openTrip,showTab,addTo,itin,suggested,store,exportJson,buildKml,buildCsv,buildFinal,importText,parseImport,
  get trip(){return TID;},get route(){return route;},get day(){return curDay;},get RS(){return RS;},get SP(){return SP;},get D(){return D;},get RESTS(){return RESTS;},K};
 })();
