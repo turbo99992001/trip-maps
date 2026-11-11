@@ -1,5 +1,5 @@
-/* 安宏旅行社 互動行程 service worker（由 build_plan.py 產生版本號，勿手改 df9e0c16d9） */
-const VERSION = "df9e0c16d9";
+/* 安宏旅行社 互動行程 service worker（由 build_plan.py 產生版本號，勿手改 9695178a6d） */
+const VERSION = "9695178a6d";
 const SHELL = "plan-shell-" + VERSION;
 const DATA = "plan-data-v1";          // 行程資料：stale-while-revalidate（跨版本保留，舊 ?v= 會被修剪）
 const TILES = "plan-tiles-v1";        // 地圖圖磚：使用者開啟才快取，上限 TILE_MAX
