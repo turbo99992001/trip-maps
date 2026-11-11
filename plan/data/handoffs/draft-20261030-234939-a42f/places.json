@@ -2,7 +2,7 @@
  "schema": "agency.places.v1",
  "request_id": "draft-20261030-234939-a42f",
  "version": "2026-11-11-a1+merged",
- "generated_at": "2026-11-11T07:17:11+08:00",
+ "generated_at": "2026-11-11T10:45:19+08:00",
  "department": "旅遊資訊部",
  "note": "A1：景點類別由 OSM 標籤＋名稱關鍵字規則推出（category_source=osm_rule），判不出標 uncat（待分類）。A3：資料庫餐廳類型取自 trip-db 候選（OSM）。其餘欄位 null＝尚未查（不覆蓋網頁現值），待景點部／餐廳部補。",
  "category_codes": {
@@ -8521,6 +8521,6009 @@
     "note": "官網：到草千里各設施用餐須停這個有料停車場；入口點距餐廳直線約 56 m。免費的「草千里展望駐車場」在另一側",
     "source": "https://newkusasenri.com/"
    }
+  },
+  "sp_ag_hagi_geo": {
+   "kind": "spot",
+   "name": "ゲオ 萩店",
+   "name_ja": "ゲオ 萩店",
+   "categories": [
+    "anime_game"
+   ],
+   "category_source": "spots_dept",
+   "category_basis": "Google 地圖分類「リサイクル ショップ」；販售：中古／新品遊戲軟體與主機、DVD 等（GEO 連鎖二手店）",
+   "address": "〒758-0025 山口県萩市土原２０９ ２０９番地",
+   "lat": 34.4098002,
+   "lng": 131.4069321,
+   "phone": "0838-21-1005",
+   "hours": "11:00–21:00（每日）",
+   "closed_days": "無固定公休（Google 地圖每天都列營業時間）；臨時休業與年末年始待查",
+   "route_days": [
+    {
+     "route": "A",
+     "day": "D1",
+     "date": "2026-11-21",
+     "weekday": "週六",
+     "nearest_stop": null,
+     "distance_km": null,
+     "open_that_day": true
+    },
+    {
+     "route": "A",
+     "day": "D2",
+     "date": "2026-11-22",
+     "weekday": "週日",
+     "nearest_stop": "松下村塾",
+     "distance_km": 1.0,
+     "open_that_day": true
+    },
+    {
+     "route": "B",
+     "day": "D1",
+     "date": "2026-11-21",
+     "weekday": "週六",
+     "nearest_stop": null,
+     "distance_km": null,
+     "open_that_day": true
+    },
+    {
+     "route": "B",
+     "day": "D2",
+     "date": "2026-11-22",
+     "weekday": "週日",
+     "nearest_stop": "珈琲館 しおさい／咖啡館",
+     "distance_km": 1.4,
+     "open_that_day": true
+    },
+    {
+     "route": "C",
+     "day": "D1",
+     "date": "2026-11-21",
+     "weekday": "週六",
+     "nearest_stop": null,
+     "distance_km": null,
+     "open_that_day": true
+    },
+    {
+     "route": "C",
+     "day": "D2",
+     "date": "2026-11-22",
+     "weekday": "週日",
+     "nearest_stop": "松下村塾",
+     "distance_km": 1.0,
+     "open_that_day": true
+    }
+   ],
+   "nearest_route_point": {
+    "route": "A",
+    "day": "D2",
+    "stop": "松下村塾",
+    "distance_km": 1.0,
+    "method": "直線距離（Google 地圖店家座標 ↔ routes.json 站點座標）"
+   },
+   "area_group": "萩（住宿 11/21–22；D2 行程）",
+   "suggested_day": "D2（11/22 週日）萩市區行程空檔，或 11/21 入住當晚",
+   "what_to_buy": "中古／新品遊戲軟體與主機、DVD 等（GEO 連鎖二手店）",
+   "admission": "免費入店",
+   "rain_ok": true,
+   "stay_minutes": 45,
+   "parking": {
+    "available": null,
+    "type": null,
+    "name": null,
+    "fee": null,
+    "capacity": null,
+    "lat": null,
+    "lng": null,
+    "mapcode": null,
+    "mapcode_source": null,
+    "walk_min": null,
+    "note": "Google 地圖與 OSM 都查不到店家專用停車場資料；停車場入口座標待查，MapCode 未換算（不以店家座標代替）",
+    "source": null
+   },
+   "ratings": [
+    {
+     "source": "google",
+     "score": 3.3,
+     "scale": 5,
+     "url": "https://www.google.com/maps/place/%E3%82%B2%E3%82%AA+%E8%90%A9%E5%BA%97/@34.4098002,131.4069321,17z/data=!3m1!4b1!4m6!3m5!1s0x3544af9b4daa4617:0xaa94bc326671139b!8m2!3d34.4098002!4d131.4069321!16s%2Fg%2F1xn_l5tf",
+     "checked_at": "2026-11-11",
+     "check_method": "google_maps_tool"
+    }
+   ],
+   "description": "中古／新品遊戲軟體與主機、DVD 等（GEO 連鎖二手店）。距最近的路線點「松下村塾」（AD2）直線約 1.0 km。",
+   "sources": [
+    {
+     "url": "https://www.google.com/maps/place/%E3%82%B2%E3%82%AA+%E8%90%A9%E5%BA%97/@34.4098002,131.4069321,17z/data=!3m1!4b1!4m6!3m5!1s0x3544af9b4daa4617:0xaa94bc326671139b!8m2!3d34.4098002!4d131.4069321!16s%2Fg%2F1xn_l5tf",
+     "checked_at": "2026-11-11",
+     "title": "Google 地圖店家頁（google_maps_tool 自動查詢）",
+     "fields": [
+      "address",
+      "lat",
+      "lng",
+      "phone",
+      "hours",
+      "closed_days",
+      "ratings.google"
+     ]
+    }
+   ],
+   "field_status": {
+    "tax_free": "待查",
+    "nearest_station": "待查",
+    "stay_minutes": "估計",
+    "season_note": "不適用",
+    "mapcode": "待查"
+   },
+   "checked_date": "2026-11-11",
+   "proposed_ref": "sp_ag_hagi_geo"
+  },
+  "sp_ag_hagi_miyoshino": {
+   "kind": "spot",
+   "name": "ミヨシノ模型",
+   "name_ja": "ミヨシノ模型",
+   "categories": [
+    "anime_game"
+   ],
+   "category_source": "spots_dept",
+   "category_basis": "Google 地圖分類「おもちゃ店」；販售：模型、玩具（Google 分類：玩具店）",
+   "address": "〒758-0026 山口県萩市古萩町５０",
+   "lat": 34.414276,
+   "lng": 131.404957,
+   "phone": "0838-22-1569",
+   "hours": "09:00–18:00（每日）",
+   "closed_days": "無固定公休（Google 地圖每天都列營業時間）；臨時休業與年末年始待查",
+   "route_days": [
+    {
+     "route": "A",
+     "day": "D1",
+     "date": "2026-11-21",
+     "weekday": "週六",
+     "nearest_stop": null,
+     "distance_km": null,
+     "open_that_day": true
+    },
+    {
+     "route": "A",
+     "day": "D2",
+     "date": "2026-11-22",
+     "weekday": "週日",
+     "nearest_stop": "珈琲館 しおさい／咖啡館",
+     "distance_km": 1.1,
+     "open_that_day": true
+    },
+    {
+     "route": "B",
+     "day": "D1",
+     "date": "2026-11-21",
+     "weekday": "週六",
+     "nearest_stop": null,
+     "distance_km": null,
+     "open_that_day": true
+    },
+    {
+     "route": "B",
+     "day": "D2",
+     "date": "2026-11-22",
+     "weekday": "週日",
+     "nearest_stop": "珈琲館 しおさい／咖啡館",
+     "distance_km": 1.1,
+     "open_that_day": true
+    },
+    {
+     "route": "C",
+     "day": "D1",
+     "date": "2026-11-21",
+     "weekday": "週六",
+     "nearest_stop": null,
+     "distance_km": null,
+     "open_that_day": true
+    },
+    {
+     "route": "C",
+     "day": "D2",
+     "date": "2026-11-22",
+     "weekday": "週日",
+     "nearest_stop": "珈琲館 しおさい／咖啡館",
+     "distance_km": 1.1,
+     "open_that_day": true
+    }
+   ],
+   "nearest_route_point": {
+    "route": "A",
+    "day": "D2",
+    "stop": "珈琲館 しおさい／咖啡館",
+    "distance_km": 1.1,
+    "method": "直線距離（Google 地圖店家座標 ↔ routes.json 站點座標）"
+   },
+   "area_group": "萩（住宿 11/21–22；D2 行程）",
+   "suggested_day": "D2（11/22 週日）萩市區行程空檔，或 11/21 入住當晚",
+   "what_to_buy": "模型、玩具（Google 分類：玩具店）",
+   "admission": "免費入店",
+   "rain_ok": true,
+   "stay_minutes": 45,
+   "parking": {
+    "available": null,
+    "type": null,
+    "name": null,
+    "fee": null,
+    "capacity": null,
+    "lat": null,
+    "lng": null,
+    "mapcode": null,
+    "mapcode_source": null,
+    "walk_min": null,
+    "note": "停車場資料查無；停車場入口座標待查，MapCode 未換算（不以店家座標代替）",
+    "source": null
+   },
+   "ratings": [
+    {
+     "source": "google",
+     "score": 4.3,
+     "scale": 5,
+     "url": "https://www.google.com/maps/place/%E3%83%9F%E3%83%A8%E3%82%B7%E3%83%8E%E6%A8%A1%E5%9E%8B/@34.414276,131.404957,17z/data=!3m1!4b1!4m6!3m5!1s0x3544af9c16282f2d:0xef606f8351702eff!8m2!3d34.414276!4d131.404957!16s%2Fg%2F1tj5njbf",
+     "checked_at": "2026-11-11",
+     "check_method": "google_maps_tool"
+    }
+   ],
+   "description": "模型、玩具（Google 分類：玩具店）。距最近的路線點「珈琲館 しおさい／咖啡館」（AD2）直線約 1.1 km。",
+   "sources": [
+    {
+     "url": "https://www.google.com/maps/place/%E3%83%9F%E3%83%A8%E3%82%B7%E3%83%8E%E6%A8%A1%E5%9E%8B/@34.414276,131.404957,17z/data=!3m1!4b1!4m6!3m5!1s0x3544af9c16282f2d:0xef606f8351702eff!8m2!3d34.414276!4d131.404957!16s%2Fg%2F1tj5njbf",
+     "checked_at": "2026-11-11",
+     "title": "Google 地圖店家頁（google_maps_tool 自動查詢）",
+     "fields": [
+      "address",
+      "lat",
+      "lng",
+      "phone",
+      "hours",
+      "closed_days",
+      "ratings.google"
+     ]
+    }
+   ],
+   "field_status": {
+    "tax_free": "待查",
+    "nearest_station": "待查",
+    "stay_minutes": "估計",
+    "season_note": "不適用",
+    "mapcode": "待查"
+   },
+   "checked_date": "2026-11-11",
+   "proposed_ref": "sp_ag_hagi_miyoshino"
+  },
+  "sp_ag_nagato_geo": {
+   "kind": "spot",
+   "name": "HARUYAプラスゲオ長門店",
+   "name_ja": "HARUYAプラスゲオ長門店",
+   "categories": [
+    "anime_game"
+   ],
+   "category_source": "spots_dept",
+   "category_basis": "Google 地圖分類「ビデオレンタル店」；販售：書店＋GEO：二手／新品遊戲、影音租售（Google 分類：錄影帶出租店）",
+   "address": "〒759-4101 山口県長門市東深川正明市８６７",
+   "lat": 34.373565,
+   "lng": 131.1865046,
+   "phone": "0837-22-3021",
+   "hours": "09:00–21:00（每日）",
+   "closed_days": "無固定公休（Google 地圖每天都列營業時間）；臨時休業與年末年始待查",
+   "route_days": [
+    {
+     "route": "A",
+     "day": "D1",
+     "date": "2026-11-21",
+     "weekday": "週六",
+     "nearest_stop": null,
+     "distance_km": null,
+     "open_that_day": true
+    },
+    {
+     "route": "A",
+     "day": "D2",
+     "date": "2026-11-22",
+     "weekday": "週日",
+     "nearest_stop": "萩史料館",
+     "distance_km": 18.5,
+     "open_that_day": true
+    },
+    {
+     "route": "B",
+     "day": "D1",
+     "date": "2026-11-21",
+     "weekday": "週六",
+     "nearest_stop": null,
+     "distance_km": null,
+     "open_that_day": true
+    },
+    {
+     "route": "B",
+     "day": "D2",
+     "date": "2026-11-22",
+     "weekday": "週日",
+     "nearest_stop": "赤崎神社楽桟敷",
+     "distance_km": 1.0,
+     "open_that_day": true
+    },
+    {
+     "route": "C",
+     "day": "D1",
+     "date": "2026-11-21",
+     "weekday": "週六",
+     "nearest_stop": null,
+     "distance_km": null,
+     "open_that_day": true
+    },
+    {
+     "route": "C",
+     "day": "D2",
+     "date": "2026-11-22",
+     "weekday": "週日",
+     "nearest_stop": "萩史料館",
+     "distance_km": 18.5,
+     "open_that_day": true
+    }
+   ],
+   "nearest_route_point": {
+    "route": "B",
+    "day": "D2",
+    "stop": "赤崎神社楽桟敷",
+    "distance_km": 1.0,
+    "method": "直線距離（Google 地圖店家座標 ↔ routes.json 站點座標）"
+   },
+   "area_group": "萩（住宿 11/21–22；D2 行程）",
+   "suggested_day": "D2（11/22 週日）萩市區行程空檔，或 11/21 入住當晚",
+   "what_to_buy": "書店＋GEO：二手／新品遊戲、影音租售（Google 分類：錄影帶出租店）",
+   "admission": "免費入店",
+   "rain_ok": true,
+   "stay_minutes": 45,
+   "parking": {
+    "available": null,
+    "type": null,
+    "name": null,
+    "fee": null,
+    "capacity": null,
+    "lat": null,
+    "lng": null,
+    "mapcode": null,
+    "mapcode_source": null,
+    "walk_min": null,
+    "note": "Google 評論提到停車場寬敞，但位置與入口座標未查到；停車場入口座標待查，MapCode 未換算（不以店家座標代替）",
+    "source": null
+   },
+   "ratings": [
+    {
+     "source": "google",
+     "score": 3.6,
+     "scale": 5,
+     "url": "https://www.google.com/maps/place/HARUYA%E3%83%97%E3%83%A9%E3%82%B9%E3%82%B2%E3%82%AA%E9%95%B7%E9%96%80%E5%BA%97/@34.373565,131.1865046,17z/data=!3m1!4b1!4m6!3m5!1s0x35435dcedd1e3b3b:0x659f672180752501!8m2!3d34.373565!4d131.1865046!16s%2Fg%2F1w15x6wt",
+     "checked_at": "2026-11-11",
+     "check_method": "google_maps_tool"
+    }
+   ],
+   "description": "書店＋GEO：二手／新品遊戲、影音租售（Google 分類：錄影帶出租店）。距最近的路線點「赤崎神社楽桟敷」（BD2）直線約 1.0 km。",
+   "sources": [
+    {
+     "url": "https://www.google.com/maps/place/HARUYA%E3%83%97%E3%83%A9%E3%82%B9%E3%82%B2%E3%82%AA%E9%95%B7%E9%96%80%E5%BA%97/@34.373565,131.1865046,17z/data=!3m1!4b1!4m6!3m5!1s0x35435dcedd1e3b3b:0x659f672180752501!8m2!3d34.373565!4d131.1865046!16s%2Fg%2F1w15x6wt",
+     "checked_at": "2026-11-11",
+     "title": "Google 地圖店家頁（google_maps_tool 自動查詢）",
+     "fields": [
+      "address",
+      "lat",
+      "lng",
+      "phone",
+      "hours",
+      "closed_days",
+      "ratings.google"
+     ]
+    }
+   ],
+   "field_status": {
+    "tax_free": "待查",
+    "nearest_station": "待查",
+    "stay_minutes": "估計",
+    "season_note": "不適用",
+    "mapcode": "待查"
+   },
+   "checked_date": "2026-11-11",
+   "proposed_ref": "sp_ag_nagato_geo"
+  },
+  "sp_ag_shimo_smallworld": {
+   "kind": "spot",
+   "name": "sMALL☆wORLD 下関店",
+   "name_ja": "sMALL☆wORLD 下関店",
+   "categories": [
+    "anime_game"
+   ],
+   "category_source": "spots_dept",
+   "category_basis": "Google 地圖分類「鉄道模型店」；販售：鐵道模型、模型玩具（Google 分類：鉄道模型店）",
+   "address": "〒750-0025 山口県下関市竹崎町４丁目４−８ シーモール 3F",
+   "lat": 33.9490717,
+   "lng": 130.9238128,
+   "phone": "083-249-6565",
+   "hours": "10:00–19:30",
+   "closed_days": "週三",
+   "route_days": [
+    {
+     "route": "A",
+     "day": "D3",
+     "date": "2026-11-23",
+     "weekday": "週一",
+     "nearest_stop": "海峡ゆめタワー",
+     "distance_km": 0.6,
+     "open_that_day": true
+    },
+    {
+     "route": "B",
+     "day": "D3",
+     "date": "2026-11-23",
+     "weekday": "週一",
+     "nearest_stop": "海峡ゆめタワー",
+     "distance_km": 0.6,
+     "open_that_day": true
+    },
+    {
+     "route": "C",
+     "day": "D3",
+     "date": "2026-11-23",
+     "weekday": "週一",
+     "nearest_stop": "下関市立近代先人顕彰館（田中絹代ぶんか館）",
+     "distance_km": 1.9,
+     "open_that_day": true
+    }
+   ],
+   "nearest_route_point": {
+    "route": "A",
+    "day": "D3",
+    "stop": "海峡ゆめタワー",
+    "distance_km": 0.6,
+    "method": "直線距離（Google 地圖店家座標 ↔ routes.json 站點座標）"
+   },
+   "area_group": "下關（住宿 11/23；D3 行程）",
+   "suggested_day": "D3（11/23 週一・勤勞感謝日）下關行程後",
+   "what_to_buy": "鐵道模型、模型玩具（Google 分類：鉄道模型店）",
+   "admission": "免費入店",
+   "rain_ok": true,
+   "stay_minutes": 45,
+   "parking": {
+    "available": true,
+    "type": "dedicated",
+    "name": "〒750-0025 山口県下関市竹崎町４丁目４ シーモール下関 駐車場本館",
+    "fee": "07:00–19:00 每 30 分 ¥100、19:00–07:00 每 30 分 ¥50；平日最高 ¥500；シーモール當日購物入庫起 3 小時免費",
+    "capacity": 1600,
+    "lat": 33.9485216,
+    "lng": 130.922471,
+    "mapcode": "16 710 419*66",
+    "mapcode_source": "Mapion 右鍵取得 16 710 419*66，以 saibara convgeo 反查一致（誤差 0.7 m）；saibara 正向換算 16 710 419*66（反查誤差 0.7 m）。換算點：Google 地圖「〒750-0025 山口県下関市竹崎町４丁目４ シーモール下関 駐車場本館」標記點（非精確入口） 33.948522,130.922471",
+    "walk_min": null,
+    "note": "商場停車場",
+    "source": "https://www.seamall.jp/access/"
+   },
+   "mapcode": "16 710 419*66",
+   "mapcode_source": "依停車場入口／標記點換算：Mapion 右鍵取得 16 710 419*66，以 saibara convgeo 反查一致（誤差 0.7 m）；saibara 正向換算 16 710 419*66（反查誤差 0.7 m）。換算點：Google 地圖「〒750-0025 山口県下関市竹崎町４丁目４ シーモール下関 駐車場本館」標記點（非精確入口） 33.948522,130.922471",
+   "ratings": [
+    {
+     "source": "google",
+     "score": 4.9,
+     "scale": 5,
+     "url": "https://www.google.com/maps/place/sMALL%E2%98%86wORLD+%E4%B8%8B%E9%96%A2%E5%BA%97/@33.9490717,130.9238128,17z/data=!3m1!4b1!4m6!3m5!1s0x3543bd001abe41bb:0xa0e8bdfd8ebc8b6f!8m2!3d33.9490717!4d130.9238128!16s%2Fg%2F11xrkt9dn8",
+     "checked_at": "2026-11-11",
+     "check_method": "google_maps_tool"
+    }
+   ],
+   "description": "鐵道模型、模型玩具（Google 分類：鉄道模型店）。距最近的路線點「海峡ゆめタワー」（AD3）直線約 0.6 km。",
+   "sources": [
+    {
+     "url": "https://www.google.com/maps/place/sMALL%E2%98%86wORLD+%E4%B8%8B%E9%96%A2%E5%BA%97/@33.9490717,130.9238128,17z/data=!3m1!4b1!4m6!3m5!1s0x3543bd001abe41bb:0xa0e8bdfd8ebc8b6f!8m2!3d33.9490717!4d130.9238128!16s%2Fg%2F11xrkt9dn8",
+     "checked_at": "2026-11-11",
+     "title": "Google 地圖店家頁（google_maps_tool 自動查詢）",
+     "fields": [
+      "address",
+      "lat",
+      "lng",
+      "phone",
+      "hours",
+      "closed_days",
+      "ratings.google"
+     ]
+    },
+    {
+     "url": "https://www.seamall.jp/access/",
+     "checked_at": "2026-11-11",
+     "title": "シーモール 車でのアクセス（停車場費用）",
+     "fields": [
+      "parking"
+     ]
+    },
+    {
+     "url": "https://www.google.com/maps/place/%E6%97%A5%E6%9C%AC%E3%80%81%E3%80%92750-0025+%E5%B1%B1%E5%8F%A3%E7%9C%8C%E4%B8%8B%E9%96%A2%E5%B8%82%E7%AB%B9%E5%B4%8E%E7%94%BA%EF%BC%94%E4%B8%81%E7%9B%AE%EF%BC%94+%E3%82%B7%E3%83%BC%E3%83%A2%E3%83%BC%E3%83%AB%E4%B8%8B%E9%96%A2+%E9%A7%90%E8%BB%8A%E5%A0%B4%E6%9C%AC%E9%A4%A8/@33.9493,130.924,16z/data=!4m6!3m5!1s0x3543bdca3d8eb671:0xc89e42001e49423a!8m2!3d33.9485216!4d130.922471!16s%2Fg%2F11bw4f27lz",
+     "checked_at": "2026-11-11",
+     "title": "停車場位置：〒750-0025 山口県下関市竹崎町４丁目４ シーモール下関 駐車場本館",
+     "fields": [
+      "parking.lat",
+      "parking.lng"
+     ]
+    }
+   ],
+   "field_status": {
+    "tax_free": "待查",
+    "nearest_station": "待查",
+    "stay_minutes": "估計",
+    "season_note": "不適用"
+   },
+   "checked_date": "2026-11-11",
+   "proposed_ref": "sp_ag_shimo_smallworld"
+  },
+  "sp_ag_shimo_glimland": {
+   "kind": "spot",
+   "name": "グリムランド",
+   "name_ja": "グリムランド",
+   "categories": [
+    "anime_game"
+   ],
+   "category_source": "spots_dept",
+   "category_basis": "Google 地圖分類「おもちゃ店」；販售：玩具（Google 分類：おもちゃ店）",
+   "address": "〒750-0025 山口県下関市竹崎町４丁目４−８ シーモール 3F",
+   "lat": 33.9495573,
+   "lng": 130.9240694,
+   "phone": "083-222-6518",
+   "hours": "10:00–19:30（每日）",
+   "closed_days": "無固定公休（Google 地圖每天都列營業時間）；臨時休業與年末年始待查",
+   "route_days": [
+    {
+     "route": "A",
+     "day": "D3",
+     "date": "2026-11-23",
+     "weekday": "週一",
+     "nearest_stop": "海峡ゆめタワー",
+     "distance_km": 0.5,
+     "open_that_day": true
+    },
+    {
+     "route": "B",
+     "day": "D3",
+     "date": "2026-11-23",
+     "weekday": "週一",
+     "nearest_stop": "海峡ゆめタワー",
+     "distance_km": 0.5,
+     "open_that_day": true
+    },
+    {
+     "route": "C",
+     "day": "D3",
+     "date": "2026-11-23",
+     "weekday": "週一",
+     "nearest_stop": "下関市立近代先人顕彰館（田中絹代ぶんか館）",
+     "distance_km": 1.9,
+     "open_that_day": true
+    }
+   ],
+   "nearest_route_point": {
+    "route": "A",
+    "day": "D3",
+    "stop": "海峡ゆめタワー",
+    "distance_km": 0.5,
+    "method": "直線距離（Google 地圖店家座標 ↔ routes.json 站點座標）"
+   },
+   "area_group": "下關（住宿 11/23；D3 行程）",
+   "suggested_day": "D3（11/23 週一・勤勞感謝日）下關行程後",
+   "what_to_buy": "玩具（Google 分類：おもちゃ店）",
+   "admission": "免費入店",
+   "rain_ok": true,
+   "stay_minutes": 45,
+   "parking": {
+    "available": true,
+    "type": "dedicated",
+    "name": "〒750-0025 山口県下関市竹崎町４丁目４ シーモール下関 駐車場本館",
+    "fee": "07:00–19:00 每 30 分 ¥100、19:00–07:00 每 30 分 ¥50；平日最高 ¥500；シーモール當日購物入庫起 3 小時免費",
+    "capacity": 1600,
+    "lat": 33.9485216,
+    "lng": 130.922471,
+    "mapcode": "16 710 419*66",
+    "mapcode_source": "Mapion 右鍵取得 16 710 419*66，以 saibara convgeo 反查一致（誤差 0.7 m）；saibara 正向換算 16 710 419*66（反查誤差 0.7 m）。換算點：Google 地圖「〒750-0025 山口県下関市竹崎町４丁目４ シーモール下関 駐車場本館」標記點（非精確入口） 33.948522,130.922471",
+    "walk_min": null,
+    "note": "商場停車場",
+    "source": "https://www.seamall.jp/access/"
+   },
+   "mapcode": "16 710 419*66",
+   "mapcode_source": "依停車場入口／標記點換算：Mapion 右鍵取得 16 710 419*66，以 saibara convgeo 反查一致（誤差 0.7 m）；saibara 正向換算 16 710 419*66（反查誤差 0.7 m）。換算點：Google 地圖「〒750-0025 山口県下関市竹崎町４丁目４ シーモール下関 駐車場本館」標記點（非精確入口） 33.948522,130.922471",
+   "ratings": [
+    {
+     "source": "google",
+     "score": 4.1,
+     "scale": 5,
+     "url": "https://www.google.com/maps/place/%E3%82%B0%E3%83%AA%E3%83%A0%E3%83%A9%E3%83%B3%E3%83%89/@33.9495573,130.9240694,17z/data=!3m1!4b1!4m6!3m5!1s0x3543bdca1fa7eb19:0x90fff1a03f8b52a7!8m2!3d33.9495573!4d130.9240694!16s%2Fg%2F1ptw8y65h",
+     "checked_at": "2026-11-11",
+     "check_method": "google_maps_tool"
+    }
+   ],
+   "description": "玩具（Google 分類：おもちゃ店）。距最近的路線點「海峡ゆめタワー」（AD3）直線約 0.5 km。",
+   "sources": [
+    {
+     "url": "https://www.google.com/maps/place/%E3%82%B0%E3%83%AA%E3%83%A0%E3%83%A9%E3%83%B3%E3%83%89/@33.9495573,130.9240694,17z/data=!3m1!4b1!4m6!3m5!1s0x3543bdca1fa7eb19:0x90fff1a03f8b52a7!8m2!3d33.9495573!4d130.9240694!16s%2Fg%2F1ptw8y65h",
+     "checked_at": "2026-11-11",
+     "title": "Google 地圖店家頁（google_maps_tool 自動查詢）",
+     "fields": [
+      "address",
+      "lat",
+      "lng",
+      "phone",
+      "hours",
+      "closed_days",
+      "ratings.google"
+     ]
+    },
+    {
+     "url": "https://www.seamall.jp/access/",
+     "checked_at": "2026-11-11",
+     "title": "シーモール 車でのアクセス（停車場費用）",
+     "fields": [
+      "parking"
+     ]
+    },
+    {
+     "url": "https://www.google.com/maps/place/%E6%97%A5%E6%9C%AC%E3%80%81%E3%80%92750-0025+%E5%B1%B1%E5%8F%A3%E7%9C%8C%E4%B8%8B%E9%96%A2%E5%B8%82%E7%AB%B9%E5%B4%8E%E7%94%BA%EF%BC%94%E4%B8%81%E7%9B%AE%EF%BC%94+%E3%82%B7%E3%83%BC%E3%83%A2%E3%83%BC%E3%83%AB%E4%B8%8B%E9%96%A2+%E9%A7%90%E8%BB%8A%E5%A0%B4%E6%9C%AC%E9%A4%A8/@33.9493,130.924,16z/data=!4m6!3m5!1s0x3543bdca3d8eb671:0xc89e42001e49423a!8m2!3d33.9485216!4d130.922471!16s%2Fg%2F11bw4f27lz",
+     "checked_at": "2026-11-11",
+     "title": "停車場位置：〒750-0025 山口県下関市竹崎町４丁目４ シーモール下関 駐車場本館",
+     "fields": [
+      "parking.lat",
+      "parking.lng"
+     ]
+    }
+   ],
+   "field_status": {
+    "tax_free": "待查",
+    "nearest_station": "待查",
+    "stay_minutes": "估計",
+    "season_note": "不適用"
+   },
+   "checked_date": "2026-11-11",
+   "proposed_ref": "sp_ag_shimo_glimland"
+  },
+  "sp_ag_shimo_palo": {
+   "kind": "spot",
+   "name": "ガチャ専門店 TOYS SPOT PALO 下関店",
+   "name_ja": "ガチャ専門店 TOYS SPOT PALO 下関店",
+   "categories": [
+    "anime_game"
+   ],
+   "category_source": "spots_dept",
+   "category_basis": "Google 地圖分類「おもちゃ店」；販售：轉蛋（扭蛋）專門店",
+   "address": "〒750-0025 山口県下関市竹崎町４丁目４−７ シーモール 4階",
+   "lat": 33.9493602,
+   "lng": 130.9243862,
+   "hours": "10:00–19:30（每日）",
+   "closed_days": "無固定公休（Google 地圖每天都列營業時間）；臨時休業與年末年始待查",
+   "route_days": [
+    {
+     "route": "A",
+     "day": "D3",
+     "date": "2026-11-23",
+     "weekday": "週一",
+     "nearest_stop": "海峡ゆめタワー",
+     "distance_km": 0.5,
+     "open_that_day": true
+    },
+    {
+     "route": "B",
+     "day": "D3",
+     "date": "2026-11-23",
+     "weekday": "週一",
+     "nearest_stop": "海峡ゆめタワー",
+     "distance_km": 0.5,
+     "open_that_day": true
+    },
+    {
+     "route": "C",
+     "day": "D3",
+     "date": "2026-11-23",
+     "weekday": "週一",
+     "nearest_stop": "下関市立近代先人顕彰館（田中絹代ぶんか館）",
+     "distance_km": 1.9,
+     "open_that_day": true
+    }
+   ],
+   "nearest_route_point": {
+    "route": "A",
+    "day": "D3",
+    "stop": "海峡ゆめタワー",
+    "distance_km": 0.5,
+    "method": "直線距離（Google 地圖店家座標 ↔ routes.json 站點座標）"
+   },
+   "area_group": "下關（住宿 11/23；D3 行程）",
+   "suggested_day": "D3（11/23 週一・勤勞感謝日）下關行程後",
+   "what_to_buy": "轉蛋（扭蛋）專門店",
+   "admission": "免費入店",
+   "rain_ok": true,
+   "stay_minutes": 45,
+   "parking": {
+    "available": true,
+    "type": "dedicated",
+    "name": "〒750-0025 山口県下関市竹崎町４丁目４ シーモール下関 駐車場本館",
+    "fee": "07:00–19:00 每 30 分 ¥100、19:00–07:00 每 30 分 ¥50；平日最高 ¥500；シーモール當日購物入庫起 3 小時免費",
+    "capacity": 1600,
+    "lat": 33.9485216,
+    "lng": 130.922471,
+    "mapcode": "16 710 419*66",
+    "mapcode_source": "Mapion 右鍵取得 16 710 419*66，以 saibara convgeo 反查一致（誤差 0.7 m）；saibara 正向換算 16 710 419*66（反查誤差 0.7 m）。換算點：Google 地圖「〒750-0025 山口県下関市竹崎町４丁目４ シーモール下関 駐車場本館」標記點（非精確入口） 33.948522,130.922471",
+    "walk_min": null,
+    "note": "商場停車場",
+    "source": "https://www.seamall.jp/access/"
+   },
+   "mapcode": "16 710 419*66",
+   "mapcode_source": "依停車場入口／標記點換算：Mapion 右鍵取得 16 710 419*66，以 saibara convgeo 反查一致（誤差 0.7 m）；saibara 正向換算 16 710 419*66（反查誤差 0.7 m）。換算點：Google 地圖「〒750-0025 山口県下関市竹崎町４丁目４ シーモール下関 駐車場本館」標記點（非精確入口） 33.948522,130.922471",
+   "ratings": [
+    {
+     "source": "google",
+     "score": 3.1,
+     "scale": 5,
+     "url": "https://www.google.com/maps/place/%E3%82%AC%E3%83%81%E3%83%A3%E5%B0%82%E9%96%80%E5%BA%97+TOYS+SPOT+PALO+%E4%B8%8B%E9%96%A2%E5%BA%97/@33.9493602,130.9243862,17z/data=!3m1!4b1!4m6!3m5!1s0x3543bd3e60e46d47:0x5cb99134b96697f!8m2!3d33.9493602!4d130.9243862!16s%2Fg%2F11t51s3547",
+     "checked_at": "2026-11-11",
+     "check_method": "google_maps_tool"
+    }
+   ],
+   "description": "轉蛋（扭蛋）專門店。距最近的路線點「海峡ゆめタワー」（AD3）直線約 0.5 km。",
+   "sources": [
+    {
+     "url": "https://www.google.com/maps/place/%E3%82%AC%E3%83%81%E3%83%A3%E5%B0%82%E9%96%80%E5%BA%97+TOYS+SPOT+PALO+%E4%B8%8B%E9%96%A2%E5%BA%97/@33.9493602,130.9243862,17z/data=!3m1!4b1!4m6!3m5!1s0x3543bd3e60e46d47:0x5cb99134b96697f!8m2!3d33.9493602!4d130.9243862!16s%2Fg%2F11t51s3547",
+     "checked_at": "2026-11-11",
+     "title": "Google 地圖店家頁（google_maps_tool 自動查詢）",
+     "fields": [
+      "address",
+      "lat",
+      "lng",
+      "phone",
+      "hours",
+      "closed_days",
+      "ratings.google"
+     ]
+    },
+    {
+     "url": "https://www.seamall.jp/access/",
+     "checked_at": "2026-11-11",
+     "title": "シーモール 車でのアクセス（停車場費用）",
+     "fields": [
+      "parking"
+     ]
+    },
+    {
+     "url": "https://www.google.com/maps/place/%E6%97%A5%E6%9C%AC%E3%80%81%E3%80%92750-0025+%E5%B1%B1%E5%8F%A3%E7%9C%8C%E4%B8%8B%E9%96%A2%E5%B8%82%E7%AB%B9%E5%B4%8E%E7%94%BA%EF%BC%94%E4%B8%81%E7%9B%AE%EF%BC%94+%E3%82%B7%E3%83%BC%E3%83%A2%E3%83%BC%E3%83%AB%E4%B8%8B%E9%96%A2+%E9%A7%90%E8%BB%8A%E5%A0%B4%E6%9C%AC%E9%A4%A8/@33.9493,130.924,16z/data=!4m6!3m5!1s0x3543bdca3d8eb671:0xc89e42001e49423a!8m2!3d33.9485216!4d130.922471!16s%2Fg%2F11bw4f27lz",
+     "checked_at": "2026-11-11",
+     "title": "停車場位置：〒750-0025 山口県下関市竹崎町４丁目４ シーモール下関 駐車場本館",
+     "fields": [
+      "parking.lat",
+      "parking.lng"
+     ]
+    }
+   ],
+   "field_status": {
+    "tax_free": "待查",
+    "nearest_station": "待查",
+    "stay_minutes": "估計",
+    "season_note": "不適用",
+    "phone": "待查"
+   },
+   "checked_date": "2026-11-11",
+   "proposed_ref": "sp_ag_shimo_palo",
+   "note": "電話原為 070 開頭（Google 地圖），可能是私人行動或 IP 電話，無法確認是否為公開營業電話，2026-11-11 已改 null 標待查。"
+  },
+  "sp_ag_shimo_hobbyoff": {
+   "kind": "spot",
+   "name": "ホビーオフ 新下関店",
+   "name_ja": "ホビーオフ 新下関店",
+   "categories": [
+    "anime_game"
+   ],
+   "category_source": "spots_dept",
+   "category_basis": "Google 地圖分類「リサイクル ショップ」；販售：二手玩具、模型、公仔、遊戲（Hobby Off 二手連鎖）",
+   "address": "〒751-0873 山口県下関市秋根西町１丁目９−２５",
+   "lat": 34.0076681,
+   "lng": 130.9421996,
+   "phone": "083-250-8433",
+   "hours": "10:30–20:00（每日）",
+   "closed_days": "無固定公休（Google 地圖每天都列營業時間）；臨時休業與年末年始待查",
+   "route_days": [
+    {
+     "route": "A",
+     "day": "D3",
+     "date": "2026-11-23",
+     "weekday": "週一",
+     "nearest_stop": "赤間神宮宝物殿",
+     "distance_km": 5.4,
+     "open_that_day": true
+    },
+    {
+     "route": "B",
+     "day": "D3",
+     "date": "2026-11-23",
+     "weekday": "週一",
+     "nearest_stop": "海峡ゆめタワー",
+     "distance_km": 6.5,
+     "open_that_day": true
+    },
+    {
+     "route": "C",
+     "day": "D3",
+     "date": "2026-11-23",
+     "weekday": "週一",
+     "nearest_stop": "赤間神宮宝物殿",
+     "distance_km": 5.4,
+     "open_that_day": true
+    }
+   ],
+   "nearest_route_point": {
+    "route": "A",
+    "day": "D3",
+    "stop": "赤間神宮宝物殿",
+    "distance_km": 5.4,
+    "method": "直線距離（Google 地圖店家座標 ↔ routes.json 站點座標）"
+   },
+   "area_group": "下關（住宿 11/23；D3 行程）",
+   "suggested_day": "D3（11/23 週一・勤勞感謝日）下關行程後",
+   "what_to_buy": "二手玩具、模型、公仔、遊戲（Hobby Off 二手連鎖）",
+   "admission": "免費入店",
+   "rain_ok": true,
+   "stay_minutes": 45,
+   "parking": {
+    "available": null,
+    "type": null,
+    "name": null,
+    "fee": null,
+    "capacity": null,
+    "lat": null,
+    "lng": null,
+    "mapcode": null,
+    "mapcode_source": null,
+    "walk_min": null,
+    "note": "OSM 最近停車場約 480 m，無法確認是否為店家停車場；停車場入口座標待查，MapCode 未換算（不以店家座標代替）",
+    "source": null
+   },
+   "ratings": [
+    {
+     "source": "google",
+     "score": 3.6,
+     "scale": 5,
+     "url": "https://www.google.com/maps/place/%E3%83%9B%E3%83%93%E3%83%BC%E3%82%AA%E3%83%95+%E6%96%B0%E4%B8%8B%E9%96%A2%E5%BA%97/@34.0076681,130.9421996,17z/data=!3m1!4b1!4m6!3m5!1s0x3543a2b98a05bc9b:0x9f7f12cd23ccac76!8m2!3d34.0076681!4d130.9421996!16s%2Fg%2F1ptvzhnd9",
+     "checked_at": "2026-11-11",
+     "check_method": "google_maps_tool"
+    }
+   ],
+   "description": "二手玩具、模型、公仔、遊戲（Hobby Off 二手連鎖）。距最近的路線點「赤間神宮宝物殿」（AD3）直線約 5.4 km。",
+   "sources": [
+    {
+     "url": "https://www.google.com/maps/place/%E3%83%9B%E3%83%93%E3%83%BC%E3%82%AA%E3%83%95+%E6%96%B0%E4%B8%8B%E9%96%A2%E5%BA%97/@34.0076681,130.9421996,17z/data=!3m1!4b1!4m6!3m5!1s0x3543a2b98a05bc9b:0x9f7f12cd23ccac76!8m2!3d34.0076681!4d130.9421996!16s%2Fg%2F1ptvzhnd9",
+     "checked_at": "2026-11-11",
+     "title": "Google 地圖店家頁（google_maps_tool 自動查詢）",
+     "fields": [
+      "address",
+      "lat",
+      "lng",
+      "phone",
+      "hours",
+      "closed_days",
+      "ratings.google"
+     ]
+    }
+   ],
+   "field_status": {
+    "tax_free": "待查",
+    "nearest_station": "待查",
+    "stay_minutes": "估計",
+    "season_note": "不適用",
+    "mapcode": "待查"
+   },
+   "checked_date": "2026-11-11",
+   "proposed_ref": "sp_ag_shimo_hobbyoff"
+  },
+  "sp_ag_kokura_animate": {
+   "kind": "spot",
+   "name": "アニメイト小倉",
+   "name_ja": "アニメイト小倉",
+   "categories": [
+    "anime_game"
+   ],
+   "category_source": "spots_dept",
+   "category_basis": "Google 地圖分類「コミック書店」；販售：動漫周邊、漫畫、輕小說、CD/BD、遊戲",
+   "address": "〒802-0001 福岡県北九州市小倉北区浅野２丁目１４−５ あるあるCity3F",
+   "lat": 33.8876236,
+   "lng": 130.8846669,
+   "phone": "093-512-7743",
+   "hours": "11:00–20:00（每日）",
+   "closed_days": "無固定公休（Google 地圖每天都列營業時間）；臨時休業與年末年始待查",
+   "route_days": [
+    {
+     "route": "A",
+     "day": "D4",
+     "date": "2026-11-24",
+     "weekday": "週二",
+     "nearest_stop": "関門海峡ミュージアム",
+     "distance_km": 9.1,
+     "open_that_day": true
+    },
+    {
+     "route": "B",
+     "day": "D4",
+     "date": "2026-11-24",
+     "weekday": "週二",
+     "nearest_stop": "海峡ゆめタワー",
+     "distance_km": 8.1,
+     "open_that_day": true
+    },
+    {
+     "route": "C",
+     "day": "D4",
+     "date": "2026-11-24",
+     "weekday": "週二",
+     "nearest_stop": "関門海峡ミュージアム",
+     "distance_km": 9.1,
+     "open_that_day": true
+    }
+   ],
+   "nearest_route_point": {
+    "route": "B",
+    "day": "D4",
+    "stop": "海峡ゆめタワー",
+    "distance_km": 8.1,
+    "method": "直線距離（Google 地圖店家座標 ↔ routes.json 站點座標）"
+   },
+   "area_group": "小倉（D4 門司港→別府途中）",
+   "suggested_day": "D4（11/24 週二）離開門司港往別府途中順道",
+   "what_to_buy": "動漫周邊、漫畫、輕小說、CD/BD、遊戲",
+   "nearest_station": "JR 小倉駅步行約 5 分（同棟まんだらけ官網）",
+   "admission": "免費入店",
+   "rain_ok": true,
+   "stay_minutes": 45,
+   "parking": {
+    "available": true,
+    "type": "dedicated",
+    "name": "あるあるパーキング",
+    "fee": "每 30 分 ¥200；24 小時最高 平日 ¥600／週末假日 ¥900（4–8F），9F–R 平日 ¥500／週末假日 ¥800",
+    "capacity": 912,
+    "lat": 33.8879913,
+    "lng": 130.885649,
+    "mapcode": "16 496 166*77",
+    "mapcode_source": "Mapion 右鍵取得 16 496 166*77，以 saibara convgeo 反查一致（誤差 2.2 m）；saibara 正向換算 16 496 166*71（反查誤差 2.0 m）；兩者末段不同，依規則以 Mapion 為準。換算點：Google 地圖「あるあるパーキング」標記點（非精確入口） 33.887991,130.885649",
+    "walk_min": null,
+    "note": "商場停車場",
+    "source": "https://aruarucity.com/faq/"
+   },
+   "mapcode": "16 496 166*77",
+   "mapcode_source": "依停車場入口／標記點換算：Mapion 右鍵取得 16 496 166*77，以 saibara convgeo 反查一致（誤差 2.2 m）；saibara 正向換算 16 496 166*71（反查誤差 2.0 m）；兩者末段不同，依規則以 Mapion 為準。換算點：Google 地圖「あるあるパーキング」標記點（非精確入口） 33.887991,130.885649",
+   "ratings": [
+    {
+     "source": "google",
+     "score": 4.0,
+     "scale": 5,
+     "url": "https://www.google.com/maps/place/%E3%82%A2%E3%83%8B%E3%83%A1%E3%82%A4%E3%83%88%E5%B0%8F%E5%80%89/@33.8876236,130.8846669,17z/data=!3m1!4b1!4m6!3m5!1s0x3543bf485437b71f:0x2b4b14d53ce7915d!8m2!3d33.8876236!4d130.8846669!16s%2Fg%2F1vwlly47",
+     "checked_at": "2026-11-11",
+     "check_method": "google_maps_tool"
+    }
+   ],
+   "description": "動漫周邊、漫畫、輕小說、CD/BD、遊戲。距最近的路線點「海峡ゆめタワー」（BD4）直線約 8.1 km。",
+   "sources": [
+    {
+     "url": "https://www.google.com/maps/place/%E3%82%A2%E3%83%8B%E3%83%A1%E3%82%A4%E3%83%88%E5%B0%8F%E5%80%89/@33.8876236,130.8846669,17z/data=!3m1!4b1!4m6!3m5!1s0x3543bf485437b71f:0x2b4b14d53ce7915d!8m2!3d33.8876236!4d130.8846669!16s%2Fg%2F1vwlly47",
+     "checked_at": "2026-11-11",
+     "title": "Google 地圖店家頁（google_maps_tool 自動查詢）",
+     "fields": [
+      "address",
+      "lat",
+      "lng",
+      "phone",
+      "hours",
+      "closed_days",
+      "ratings.google"
+     ]
+    },
+    {
+     "url": "https://aruarucity.com/faq/",
+     "checked_at": "2026-11-11",
+     "title": "あるあるCity よくあるご質問（營業時間・停車場）",
+     "fields": [
+      "parking",
+      "closed_days"
+     ]
+    },
+    {
+     "url": "https://www.google.com/maps/place/%E3%81%82%E3%82%8B%E3%81%82%E3%82%8B%E3%83%91%E3%83%BC%E3%82%AD%E3%83%B3%E3%82%B0/data=!4m7!3m6!1s0x3543bf237e9408ff:0xe1259d69d6cc8ea5!8m2!3d33.8879913!4d130.885649!16s%2Fg%2F11stk2f7z3!19sChIJ_wiUfiO_QzURpY7M1mmdJeE",
+     "checked_at": "2026-11-11",
+     "title": "停車場位置：あるあるパーキング",
+     "fields": [
+      "parking.lat",
+      "parking.lng"
+     ]
+    }
+   ],
+   "field_status": {
+    "tax_free": "待查",
+    "stay_minutes": "估計",
+    "season_note": "不適用"
+   },
+   "checked_date": "2026-11-11",
+   "proposed_ref": "sp_ag_kokura_animate",
+   "note": "あるあるCity 官網：館內 11:00–20:00、年中無休（部分店舖不同）。同棟 5–6F 為北九州市漫畫博物館（非本次新增項目）。"
+  },
+  "sp_ag_kokura_mandarake": {
+   "kind": "spot",
+   "name": "まんだらけ小倉店",
+   "name_ja": "まんだらけ小倉店",
+   "categories": [
+    "anime_game"
+   ],
+   "category_source": "spots_dept",
+   "category_basis": "Google 地圖分類「コレクターズ ショップ」；販售：二手漫畫、公仔、玩具、遊戲、同人誌等收藏品",
+   "address": "〒802-0001 福岡県北九州市小倉北区浅野２丁目１４−５ あるあるシティ 4F",
+   "lat": 33.887445,
+   "lng": 130.8848477,
+   "phone": "093-512-1777",
+   "hours": "12:00–20:00（每日）",
+   "closed_days": "無固定公休（Google 地圖每天都列營業時間）；臨時休業與年末年始待查",
+   "route_days": [
+    {
+     "route": "A",
+     "day": "D4",
+     "date": "2026-11-24",
+     "weekday": "週二",
+     "nearest_stop": "関門海峡ミュージアム",
+     "distance_km": 9.1,
+     "open_that_day": true
+    },
+    {
+     "route": "B",
+     "day": "D4",
+     "date": "2026-11-24",
+     "weekday": "週二",
+     "nearest_stop": "海峡ゆめタワー",
+     "distance_km": 8.1,
+     "open_that_day": true
+    },
+    {
+     "route": "C",
+     "day": "D4",
+     "date": "2026-11-24",
+     "weekday": "週二",
+     "nearest_stop": "関門海峡ミュージアム",
+     "distance_km": 9.1,
+     "open_that_day": true
+    }
+   ],
+   "nearest_route_point": {
+    "route": "B",
+    "day": "D4",
+    "stop": "海峡ゆめタワー",
+    "distance_km": 8.1,
+    "method": "直線距離（Google 地圖店家座標 ↔ routes.json 站點座標）"
+   },
+   "area_group": "小倉（D4 門司港→別府途中）",
+   "suggested_day": "D4（11/24 週二）離開門司港往別府途中順道",
+   "what_to_buy": "二手漫畫、公仔、玩具、遊戲、同人誌等收藏品",
+   "nearest_station": "JR 小倉駅步行約 5 分（官網）",
+   "admission": "免費入店",
+   "rain_ok": true,
+   "stay_minutes": 45,
+   "parking": {
+    "available": true,
+    "type": "dedicated",
+    "name": "あるあるパーキング",
+    "fee": "每 30 分 ¥200；24 小時最高 平日 ¥600／週末假日 ¥900（4–8F），9F–R 平日 ¥500／週末假日 ¥800",
+    "capacity": 912,
+    "lat": 33.8879913,
+    "lng": 130.885649,
+    "mapcode": "16 496 166*77",
+    "mapcode_source": "Mapion 右鍵取得 16 496 166*77，以 saibara convgeo 反查一致（誤差 2.2 m）；saibara 正向換算 16 496 166*71（反查誤差 2.0 m）；兩者末段不同，依規則以 Mapion 為準。換算點：Google 地圖「あるあるパーキング」標記點（非精確入口） 33.887991,130.885649",
+    "walk_min": null,
+    "note": "商場停車場",
+    "source": "https://aruarucity.com/faq/"
+   },
+   "mapcode": "16 496 166*77",
+   "mapcode_source": "依停車場入口／標記點換算：Mapion 右鍵取得 16 496 166*77，以 saibara convgeo 反查一致（誤差 2.2 m）；saibara 正向換算 16 496 166*71（反查誤差 2.0 m）；兩者末段不同，依規則以 Mapion 為準。換算點：Google 地圖「あるあるパーキング」標記點（非精確入口） 33.887991,130.885649",
+   "ratings": [
+    {
+     "source": "google",
+     "score": 4.0,
+     "scale": 5,
+     "url": "https://www.google.com/maps/place/%E3%81%BE%E3%82%93%E3%81%A0%E3%82%89%E3%81%91%E5%B0%8F%E5%80%89%E5%BA%97/@33.887445,130.8848477,17z/data=!3m1!4b1!4m6!3m5!1s0x3543bf4cf979ccb5:0x89fc4f597d6adc57!8m2!3d33.887445!4d130.8848477!16s%2Fg%2F1tdd7msg",
+     "checked_at": "2026-11-11",
+     "check_method": "google_maps_tool"
+    }
+   ],
+   "description": "二手漫畫、公仔、玩具、遊戲、同人誌等收藏品。距最近的路線點「海峡ゆめタワー」（BD4）直線約 8.1 km。",
+   "sources": [
+    {
+     "url": "https://www.google.com/maps/place/%E3%81%BE%E3%82%93%E3%81%A0%E3%82%89%E3%81%91%E5%B0%8F%E5%80%89%E5%BA%97/@33.887445,130.8848477,17z/data=!3m1!4b1!4m6!3m5!1s0x3543bf4cf979ccb5:0x89fc4f597d6adc57!8m2!3d33.887445!4d130.8848477!16s%2Fg%2F1tdd7msg",
+     "checked_at": "2026-11-11",
+     "title": "Google 地圖店家頁（google_maps_tool 自動查詢）",
+     "fields": [
+      "address",
+      "lat",
+      "lng",
+      "phone",
+      "hours",
+      "closed_days",
+      "ratings.google"
+     ]
+    },
+    {
+     "url": "https://aruarucity.com/faq/",
+     "checked_at": "2026-11-11",
+     "title": "あるあるCity よくあるご質問（營業時間・停車場）",
+     "fields": [
+      "parking",
+      "closed_days"
+     ]
+    },
+    {
+     "url": "https://www.google.com/maps/place/%E3%81%82%E3%82%8B%E3%81%82%E3%82%8B%E3%83%91%E3%83%BC%E3%82%AD%E3%83%B3%E3%82%B0/data=!4m7!3m6!1s0x3543bf237e9408ff:0xe1259d69d6cc8ea5!8m2!3d33.8879913!4d130.885649!16s%2Fg%2F11stk2f7z3!19sChIJ_wiUfiO_QzURpY7M1mmdJeE",
+     "checked_at": "2026-11-11",
+     "title": "停車場位置：あるあるパーキング",
+     "fields": [
+      "parking.lat",
+      "parking.lng"
+     ]
+    },
+    {
+     "url": "https://www.mandarake.co.jp/dir/kkr/",
+     "checked_at": "2026-11-11",
+     "title": "まんだらけ 小倉店 官網",
+     "fields": [
+      "hours",
+      "closed_days",
+      "parking",
+      "nearest_station"
+     ]
+    }
+   ],
+   "field_status": {
+    "tax_free": "待查",
+    "stay_minutes": "估計",
+    "season_note": "不適用"
+   },
+   "checked_date": "2026-11-11",
+   "proposed_ref": "sp_ag_kokura_mandarake",
+   "note": "官網：12:00–20:00、年中無休。"
+  },
+  "sp_ag_kokura_surugaya": {
+   "kind": "spot",
+   "name": "駿河屋 小倉あるあるCity店 1号店・２号店",
+   "name_ja": "駿河屋 小倉あるあるCity店 1号店・２号店",
+   "categories": [
+    "anime_game"
+   ],
+   "category_source": "spots_dept",
+   "category_basis": "Google 地圖分類「ホビーショップ」；販售：二手遊戲、公仔、動漫周邊、卡牌",
+   "address": "〒802-0001 福岡県北九州市小倉北区浅野２丁目１４−５ 4F ある ある City 2F（1号店 ２号店",
+   "lat": 33.8876455,
+   "lng": 130.884624,
+   "phone": "093-551-1426",
+   "hours": "11:00–20:00（每日）",
+   "closed_days": "無固定公休（Google 地圖每天都列營業時間）；臨時休業與年末年始待查",
+   "route_days": [
+    {
+     "route": "A",
+     "day": "D4",
+     "date": "2026-11-24",
+     "weekday": "週二",
+     "nearest_stop": "関門海峡ミュージアム",
+     "distance_km": 9.1,
+     "open_that_day": true
+    },
+    {
+     "route": "B",
+     "day": "D4",
+     "date": "2026-11-24",
+     "weekday": "週二",
+     "nearest_stop": "海峡ゆめタワー",
+     "distance_km": 8.1,
+     "open_that_day": true
+    },
+    {
+     "route": "C",
+     "day": "D4",
+     "date": "2026-11-24",
+     "weekday": "週二",
+     "nearest_stop": "関門海峡ミュージアム",
+     "distance_km": 9.1,
+     "open_that_day": true
+    }
+   ],
+   "nearest_route_point": {
+    "route": "B",
+    "day": "D4",
+    "stop": "海峡ゆめタワー",
+    "distance_km": 8.1,
+    "method": "直線距離（Google 地圖店家座標 ↔ routes.json 站點座標）"
+   },
+   "area_group": "小倉（D4 門司港→別府途中）",
+   "suggested_day": "D4（11/24 週二）離開門司港往別府途中順道",
+   "what_to_buy": "二手遊戲、公仔、動漫周邊、卡牌",
+   "nearest_station": "JR 小倉駅步行約 5 分",
+   "admission": "免費入店",
+   "rain_ok": true,
+   "stay_minutes": 45,
+   "parking": {
+    "available": true,
+    "type": "dedicated",
+    "name": "あるあるパーキング",
+    "fee": "每 30 分 ¥200；24 小時最高 平日 ¥600／週末假日 ¥900（4–8F），9F–R 平日 ¥500／週末假日 ¥800",
+    "capacity": 912,
+    "lat": 33.8879913,
+    "lng": 130.885649,
+    "mapcode": "16 496 166*77",
+    "mapcode_source": "Mapion 右鍵取得 16 496 166*77，以 saibara convgeo 反查一致（誤差 2.2 m）；saibara 正向換算 16 496 166*71（反查誤差 2.0 m）；兩者末段不同，依規則以 Mapion 為準。換算點：Google 地圖「あるあるパーキング」標記點（非精確入口） 33.887991,130.885649",
+    "walk_min": null,
+    "note": "あるあるCity 首頁公告有「駿河屋小倉あるあるCity 駐車料金60分間無料サービス」，細節待查；商場停車場",
+    "source": "https://aruarucity.com/faq/"
+   },
+   "mapcode": "16 496 166*77",
+   "mapcode_source": "依停車場入口／標記點換算：Mapion 右鍵取得 16 496 166*77，以 saibara convgeo 反查一致（誤差 2.2 m）；saibara 正向換算 16 496 166*71（反查誤差 2.0 m）；兩者末段不同，依規則以 Mapion 為準。換算點：Google 地圖「あるあるパーキング」標記點（非精確入口） 33.887991,130.885649",
+   "ratings": [
+    {
+     "source": "google",
+     "score": 2.9,
+     "scale": 5,
+     "url": "https://www.google.com/maps/place/%E9%A7%BF%E6%B2%B3%E5%B1%8B+%E5%B0%8F%E5%80%89%E3%81%82%E3%82%8B%E3%81%82%E3%82%8BCity%E5%BA%97+1%E5%8F%B7%E5%BA%97%E3%83%BB%EF%BC%92%E5%8F%B7%E5%BA%97/@33.8876455,130.884624,17z/data=!3m1!4b1!4m6!3m5!1s0x3543bf490f873d29:0x63418b5464caa86c!8m2!3d33.8876455!4d130.884624!16s%2Fg%2F11g02l7hr6",
+     "checked_at": "2026-11-11",
+     "check_method": "google_maps_tool"
+    }
+   ],
+   "description": "二手遊戲、公仔、動漫周邊、卡牌。距最近的路線點「海峡ゆめタワー」（BD4）直線約 8.1 km。",
+   "sources": [
+    {
+     "url": "https://www.google.com/maps/place/%E9%A7%BF%E6%B2%B3%E5%B1%8B+%E5%B0%8F%E5%80%89%E3%81%82%E3%82%8B%E3%81%82%E3%82%8BCity%E5%BA%97+1%E5%8F%B7%E5%BA%97%E3%83%BB%EF%BC%92%E5%8F%B7%E5%BA%97/@33.8876455,130.884624,17z/data=!3m1!4b1!4m6!3m5!1s0x3543bf490f873d29:0x63418b5464caa86c!8m2!3d33.8876455!4d130.884624!16s%2Fg%2F11g02l7hr6",
+     "checked_at": "2026-11-11",
+     "title": "Google 地圖店家頁（google_maps_tool 自動查詢）",
+     "fields": [
+      "address",
+      "lat",
+      "lng",
+      "phone",
+      "hours",
+      "closed_days",
+      "ratings.google"
+     ]
+    },
+    {
+     "url": "https://aruarucity.com/faq/",
+     "checked_at": "2026-11-11",
+     "title": "あるあるCity よくあるご質問（營業時間・停車場）",
+     "fields": [
+      "parking",
+      "closed_days"
+     ]
+    },
+    {
+     "url": "https://www.google.com/maps/place/%E3%81%82%E3%82%8B%E3%81%82%E3%82%8B%E3%83%91%E3%83%BC%E3%82%AD%E3%83%B3%E3%82%B0/data=!4m7!3m6!1s0x3543bf237e9408ff:0xe1259d69d6cc8ea5!8m2!3d33.8879913!4d130.885649!16s%2Fg%2F11stk2f7z3!19sChIJ_wiUfiO_QzURpY7M1mmdJeE",
+     "checked_at": "2026-11-11",
+     "title": "停車場位置：あるあるパーキング",
+     "fields": [
+      "parking.lat",
+      "parking.lng"
+     ]
+    }
+   ],
+   "field_status": {
+    "tax_free": "待查",
+    "stay_minutes": "估計",
+    "season_note": "不適用"
+   },
+   "checked_date": "2026-11-11",
+   "proposed_ref": "sp_ag_kokura_surugaya"
+  },
+  "sp_ag_kokura_lashinbang": {
+   "kind": "spot",
+   "name": "らしんばん小倉店",
+   "name_ja": "らしんばん小倉店",
+   "categories": [
+    "anime_game"
+   ],
+   "category_source": "spots_dept",
+   "category_basis": "Google 地圖分類「ホビーショップ」；販售：二手動漫周邊、公仔、壓克力立牌、徽章",
+   "address": "〒802-0001 福岡県北九州市小倉北区浅野２丁目１４−５ あるあるCity 3階",
+   "lat": 33.8875419,
+   "lng": 130.8847304,
+   "phone": "0570-008-620",
+   "hours": "11:00–20:00（每日）",
+   "closed_days": "無固定公休（Google 地圖每天都列營業時間）；臨時休業與年末年始待查",
+   "route_days": [
+    {
+     "route": "A",
+     "day": "D4",
+     "date": "2026-11-24",
+     "weekday": "週二",
+     "nearest_stop": "関門海峡ミュージアム",
+     "distance_km": 9.1,
+     "open_that_day": true
+    },
+    {
+     "route": "B",
+     "day": "D4",
+     "date": "2026-11-24",
+     "weekday": "週二",
+     "nearest_stop": "海峡ゆめタワー",
+     "distance_km": 8.1,
+     "open_that_day": true
+    },
+    {
+     "route": "C",
+     "day": "D4",
+     "date": "2026-11-24",
+     "weekday": "週二",
+     "nearest_stop": "関門海峡ミュージアム",
+     "distance_km": 9.1,
+     "open_that_day": true
+    }
+   ],
+   "nearest_route_point": {
+    "route": "B",
+    "day": "D4",
+    "stop": "海峡ゆめタワー",
+    "distance_km": 8.1,
+    "method": "直線距離（Google 地圖店家座標 ↔ routes.json 站點座標）"
+   },
+   "area_group": "小倉（D4 門司港→別府途中）",
+   "suggested_day": "D4（11/24 週二）離開門司港往別府途中順道",
+   "what_to_buy": "二手動漫周邊、公仔、壓克力立牌、徽章",
+   "nearest_station": "JR 小倉駅步行約 5 分",
+   "admission": "免費入店",
+   "rain_ok": true,
+   "stay_minutes": 45,
+   "parking": {
+    "available": true,
+    "type": "dedicated",
+    "name": "あるあるパーキング",
+    "fee": "每 30 分 ¥200；24 小時最高 平日 ¥600／週末假日 ¥900（4–8F），9F–R 平日 ¥500／週末假日 ¥800",
+    "capacity": 912,
+    "lat": 33.8879913,
+    "lng": 130.885649,
+    "mapcode": "16 496 166*77",
+    "mapcode_source": "Mapion 右鍵取得 16 496 166*77，以 saibara convgeo 反查一致（誤差 2.2 m）；saibara 正向換算 16 496 166*71（反查誤差 2.0 m）；兩者末段不同，依規則以 Mapion 為準。換算點：Google 地圖「あるあるパーキング」標記點（非精確入口） 33.887991,130.885649",
+    "walk_min": null,
+    "note": "商場停車場",
+    "source": "https://aruarucity.com/faq/"
+   },
+   "mapcode": "16 496 166*77",
+   "mapcode_source": "依停車場入口／標記點換算：Mapion 右鍵取得 16 496 166*77，以 saibara convgeo 反查一致（誤差 2.2 m）；saibara 正向換算 16 496 166*71（反查誤差 2.0 m）；兩者末段不同，依規則以 Mapion 為準。換算點：Google 地圖「あるあるパーキング」標記點（非精確入口） 33.887991,130.885649",
+   "ratings": [
+    {
+     "source": "google",
+     "score": 3.5,
+     "scale": 5,
+     "url": "https://www.google.com/maps/place/%E3%82%89%E3%81%97%E3%82%93%E3%81%B0%E3%82%93%E5%B0%8F%E5%80%89%E5%BA%97/@33.8875419,130.8847304,17z/data=!3m1!4b1!4m6!3m5!1s0x3543bf4910f5e739:0x8c1aa73a93185226!8m2!3d33.8875419!4d130.8847304!16s%2Fg%2F11bxdcnpz3",
+     "checked_at": "2026-11-11",
+     "check_method": "google_maps_tool"
+    }
+   ],
+   "description": "二手動漫周邊、公仔、壓克力立牌、徽章。距最近的路線點「海峡ゆめタワー」（BD4）直線約 8.1 km。",
+   "sources": [
+    {
+     "url": "https://www.google.com/maps/place/%E3%82%89%E3%81%97%E3%82%93%E3%81%B0%E3%82%93%E5%B0%8F%E5%80%89%E5%BA%97/@33.8875419,130.8847304,17z/data=!3m1!4b1!4m6!3m5!1s0x3543bf4910f5e739:0x8c1aa73a93185226!8m2!3d33.8875419!4d130.8847304!16s%2Fg%2F11bxdcnpz3",
+     "checked_at": "2026-11-11",
+     "title": "Google 地圖店家頁（google_maps_tool 自動查詢）",
+     "fields": [
+      "address",
+      "lat",
+      "lng",
+      "phone",
+      "hours",
+      "closed_days",
+      "ratings.google"
+     ]
+    },
+    {
+     "url": "https://aruarucity.com/faq/",
+     "checked_at": "2026-11-11",
+     "title": "あるあるCity よくあるご質問（營業時間・停車場）",
+     "fields": [
+      "parking",
+      "closed_days"
+     ]
+    },
+    {
+     "url": "https://www.google.com/maps/place/%E3%81%82%E3%82%8B%E3%81%82%E3%82%8B%E3%83%91%E3%83%BC%E3%82%AD%E3%83%B3%E3%82%B0/data=!4m7!3m6!1s0x3543bf237e9408ff:0xe1259d69d6cc8ea5!8m2!3d33.8879913!4d130.885649!16s%2Fg%2F11stk2f7z3!19sChIJ_wiUfiO_QzURpY7M1mmdJeE",
+     "checked_at": "2026-11-11",
+     "title": "停車場位置：あるあるパーキング",
+     "fields": [
+      "parking.lat",
+      "parking.lng"
+     ]
+    }
+   ],
+   "field_status": {
+    "tax_free": "待查",
+    "stay_minutes": "估計",
+    "season_note": "不適用"
+   },
+   "checked_date": "2026-11-11",
+   "proposed_ref": "sp_ag_kokura_lashinbang"
+  },
+  "sp_ag_kokura_jungle": {
+   "kind": "spot",
+   "name": "ジャングル小倉店",
+   "name_ja": "ジャングル小倉店",
+   "categories": [
+    "anime_game"
+   ],
+   "category_source": "spots_dept",
+   "category_basis": "Google 地圖分類「ホビーショップ」；販售：二手公仔、玩具、遊戲",
+   "address": "〒802-0001 福岡県北九州市小倉北区浅野２丁目１４−５ あるあるcity ２F",
+   "lat": 33.8874621,
+   "lng": 130.8848081,
+   "phone": "093-967-7446",
+   "hours": "11:00–20:00（每日）",
+   "closed_days": "無固定公休（Google 地圖每天都列營業時間）；臨時休業與年末年始待查",
+   "route_days": [
+    {
+     "route": "A",
+     "day": "D4",
+     "date": "2026-11-24",
+     "weekday": "週二",
+     "nearest_stop": "関門海峡ミュージアム",
+     "distance_km": 9.1,
+     "open_that_day": true
+    },
+    {
+     "route": "B",
+     "day": "D4",
+     "date": "2026-11-24",
+     "weekday": "週二",
+     "nearest_stop": "海峡ゆめタワー",
+     "distance_km": 8.1,
+     "open_that_day": true
+    },
+    {
+     "route": "C",
+     "day": "D4",
+     "date": "2026-11-24",
+     "weekday": "週二",
+     "nearest_stop": "関門海峡ミュージアム",
+     "distance_km": 9.1,
+     "open_that_day": true
+    }
+   ],
+   "nearest_route_point": {
+    "route": "B",
+    "day": "D4",
+    "stop": "海峡ゆめタワー",
+    "distance_km": 8.1,
+    "method": "直線距離（Google 地圖店家座標 ↔ routes.json 站點座標）"
+   },
+   "area_group": "小倉（D4 門司港→別府途中）",
+   "suggested_day": "D4（11/24 週二）離開門司港往別府途中順道",
+   "what_to_buy": "二手公仔、玩具、遊戲",
+   "nearest_station": "JR 小倉駅步行約 5 分",
+   "admission": "免費入店",
+   "rain_ok": true,
+   "stay_minutes": 45,
+   "parking": {
+    "available": true,
+    "type": "dedicated",
+    "name": "あるあるパーキング",
+    "fee": "每 30 分 ¥200；24 小時最高 平日 ¥600／週末假日 ¥900（4–8F），9F–R 平日 ¥500／週末假日 ¥800",
+    "capacity": 912,
+    "lat": 33.8879913,
+    "lng": 130.885649,
+    "mapcode": "16 496 166*77",
+    "mapcode_source": "Mapion 右鍵取得 16 496 166*77，以 saibara convgeo 反查一致（誤差 2.2 m）；saibara 正向換算 16 496 166*71（反查誤差 2.0 m）；兩者末段不同，依規則以 Mapion 為準。換算點：Google 地圖「あるあるパーキング」標記點（非精確入口） 33.887991,130.885649",
+    "walk_min": null,
+    "note": "商場停車場",
+    "source": "https://aruarucity.com/faq/"
+   },
+   "mapcode": "16 496 166*77",
+   "mapcode_source": "依停車場入口／標記點換算：Mapion 右鍵取得 16 496 166*77，以 saibara convgeo 反查一致（誤差 2.2 m）；saibara 正向換算 16 496 166*71（反查誤差 2.0 m）；兩者末段不同，依規則以 Mapion 為準。換算點：Google 地圖「あるあるパーキング」標記點（非精確入口） 33.887991,130.885649",
+   "ratings": [
+    {
+     "source": "google",
+     "score": 3.3,
+     "scale": 5,
+     "url": "https://www.google.com/maps/place/%E3%82%B8%E3%83%A3%E3%83%B3%E3%82%B0%E3%83%AB%E5%B0%8F%E5%80%89%E5%BA%97/@33.8874621,130.8848081,17z/data=!3m1!4b1!4m6!3m5!1s0x3543bf491069f2f7:0xf47c30a40e932a61!8m2!3d33.8874621!4d130.8848081!16s%2Fg%2F11r9cpmxr",
+     "checked_at": "2026-11-11",
+     "check_method": "google_maps_tool"
+    }
+   ],
+   "description": "二手公仔、玩具、遊戲。距最近的路線點「海峡ゆめタワー」（BD4）直線約 8.1 km。",
+   "sources": [
+    {
+     "url": "https://www.google.com/maps/place/%E3%82%B8%E3%83%A3%E3%83%B3%E3%82%B0%E3%83%AB%E5%B0%8F%E5%80%89%E5%BA%97/@33.8874621,130.8848081,17z/data=!3m1!4b1!4m6!3m5!1s0x3543bf491069f2f7:0xf47c30a40e932a61!8m2!3d33.8874621!4d130.8848081!16s%2Fg%2F11r9cpmxr",
+     "checked_at": "2026-11-11",
+     "title": "Google 地圖店家頁（google_maps_tool 自動查詢）",
+     "fields": [
+      "address",
+      "lat",
+      "lng",
+      "phone",
+      "hours",
+      "closed_days",
+      "ratings.google"
+     ]
+    },
+    {
+     "url": "https://aruarucity.com/faq/",
+     "checked_at": "2026-11-11",
+     "title": "あるあるCity よくあるご質問（營業時間・停車場）",
+     "fields": [
+      "parking",
+      "closed_days"
+     ]
+    },
+    {
+     "url": "https://www.google.com/maps/place/%E3%81%82%E3%82%8B%E3%81%82%E3%82%8B%E3%83%91%E3%83%BC%E3%82%AD%E3%83%B3%E3%82%B0/data=!4m7!3m6!1s0x3543bf237e9408ff:0xe1259d69d6cc8ea5!8m2!3d33.8879913!4d130.885649!16s%2Fg%2F11stk2f7z3!19sChIJ_wiUfiO_QzURpY7M1mmdJeE",
+     "checked_at": "2026-11-11",
+     "title": "停車場位置：あるあるパーキング",
+     "fields": [
+      "parking.lat",
+      "parking.lng"
+     ]
+    }
+   ],
+   "field_status": {
+    "tax_free": "待查",
+    "stay_minutes": "估計",
+    "season_note": "不適用"
+   },
+   "checked_date": "2026-11-11",
+   "proposed_ref": "sp_ag_kokura_jungle"
+  },
+  "sp_ag_beppu_hobbyzone": {
+   "kind": "spot",
+   "name": "ホビーゾーン 別府店",
+   "name_ja": "ホビーゾーン 別府店",
+   "categories": [
+    "anime_game"
+   ],
+   "category_source": "spots_dept",
+   "category_basis": "Google 地圖分類「ホビーショップ」；販售：模型、玩具、卡牌、轉蛋（位於ゆめタウン別府）",
+   "address": "〒874-0943 大分県別府市楠町３８２−７",
+   "lat": 33.2761791,
+   "lng": 131.5078409,
+   "phone": "050-3626-2625",
+   "hours": "10:00–20:00（每日）",
+   "closed_days": "無固定公休（Google 地圖每天都列營業時間）；臨時休業與年末年始待查",
+   "route_days": [
+    {
+     "route": "A",
+     "day": "D5",
+     "date": "2026-11-25",
+     "weekday": "週三",
+     "nearest_stop": "竹瓦温泉",
+     "distance_km": 0.2,
+     "open_that_day": true
+    },
+    {
+     "route": "A",
+     "day": "D6",
+     "date": "2026-11-26",
+     "weekday": "週四",
+     "nearest_stop": "金鱗湖",
+     "distance_km": 12.9,
+     "open_that_day": true
+    },
+    {
+     "route": "B",
+     "day": "D5",
+     "date": "2026-11-25",
+     "weekday": "週三",
+     "nearest_stop": "金鱗湖",
+     "distance_km": 12.9,
+     "open_that_day": true
+    },
+    {
+     "route": "B",
+     "day": "D6",
+     "date": "2026-11-26",
+     "weekday": "週四",
+     "nearest_stop": "梅園温泉",
+     "distance_km": 0.4,
+     "open_that_day": true
+    },
+    {
+     "route": "C",
+     "day": "D5",
+     "date": "2026-11-25",
+     "weekday": "週三",
+     "nearest_stop": "竹瓦温泉",
+     "distance_km": 0.2,
+     "open_that_day": true
+    },
+    {
+     "route": "C",
+     "day": "D6",
+     "date": "2026-11-26",
+     "weekday": "週四",
+     "nearest_stop": "金鱗湖",
+     "distance_km": 12.9,
+     "open_that_day": true
+    }
+   ],
+   "nearest_route_point": {
+    "route": "A",
+    "day": "D5",
+    "stop": "竹瓦温泉",
+    "distance_km": 0.2,
+    "method": "直線距離（Google 地圖店家座標 ↔ routes.json 站點座標）"
+   },
+   "area_group": "別府／大分（住宿 11/24–26；D5–D6）",
+   "suggested_day": "D5–D6（11/25 週三、11/26 週四）別府行程空檔或晚上",
+   "what_to_buy": "模型、玩具、卡牌、轉蛋（位於ゆめタウン別府）",
+   "admission": "免費入店",
+   "rain_ok": true,
+   "stay_minutes": 45,
+   "parking": {
+    "available": true,
+    "type": "dedicated",
+    "name": "ゆめタウン別府 屋上駐車場",
+    "fee": null,
+    "capacity": null,
+    "lat": 33.2754574,
+    "lng": 131.5075034,
+    "mapcode": "46 376 575*45",
+    "mapcode_source": "Mapion 右鍵取得 46 376 575*45，以 saibara convgeo 反查一致（誤差 0.8 m）；saibara 正向換算 46 376 575*45（反查誤差 0.8 m）。換算點：Google 地圖「ゆめタウン別府 屋上駐車場」標記點（非精確入口） 33.275457,131.507503",
+    "walk_min": null,
+    "note": "商場停車場",
+    "source": "https://www.google.com/maps/place/%E3%82%86%E3%82%81%E3%82%BF%E3%82%A6%E3%83%B3%E5%88%A5%E5%BA%9C+%E5%B1%8B%E4%B8%8A%E9%A7%90%E8%BB%8A%E5%A0%B4/@33.2763,131.5076,16z/data=!4m6!3m5!1s0x3546a72b8cc1d5ef:0x5ed44f6cf8e70f3!8m2!3d33.2754574!4d131.5075034!16s%2Fg%2F11ffw76bwt"
+   },
+   "mapcode": "46 376 575*45",
+   "mapcode_source": "依停車場入口／標記點換算：Mapion 右鍵取得 46 376 575*45，以 saibara convgeo 反查一致（誤差 0.8 m）；saibara 正向換算 46 376 575*45（反查誤差 0.8 m）。換算點：Google 地圖「ゆめタウン別府 屋上駐車場」標記點（非精確入口） 33.275457,131.507503",
+   "ratings": [
+    {
+     "source": "google",
+     "score": 3.7,
+     "scale": 5,
+     "url": "https://www.google.com/maps/place/%E3%83%9B%E3%83%93%E3%83%BC%E3%82%BE%E3%83%BC%E3%83%B3+%E5%88%A5%E5%BA%9C%E5%BA%97/@33.2761791,131.5078409,17z/data=!3m1!4b1!4m6!3m5!1s0x3546a6c4cbd06d81:0xc8ab9c05dc2eca3a!8m2!3d33.2761791!4d131.5078409!16s%2Fg%2F1tfnqt8k",
+     "checked_at": "2026-11-11",
+     "check_method": "google_maps_tool"
+    }
+   ],
+   "description": "模型、玩具、卡牌、轉蛋（位於ゆめタウン別府）。距最近的路線點「竹瓦温泉」（AD5）直線約 0.2 km。",
+   "sources": [
+    {
+     "url": "https://www.google.com/maps/place/%E3%83%9B%E3%83%93%E3%83%BC%E3%82%BE%E3%83%BC%E3%83%B3+%E5%88%A5%E5%BA%9C%E5%BA%97/@33.2761791,131.5078409,17z/data=!3m1!4b1!4m6!3m5!1s0x3546a6c4cbd06d81:0xc8ab9c05dc2eca3a!8m2!3d33.2761791!4d131.5078409!16s%2Fg%2F1tfnqt8k",
+     "checked_at": "2026-11-11",
+     "title": "Google 地圖店家頁（google_maps_tool 自動查詢）",
+     "fields": [
+      "address",
+      "lat",
+      "lng",
+      "phone",
+      "hours",
+      "closed_days",
+      "ratings.google"
+     ]
+    },
+    {
+     "url": "https://www.google.com/maps/place/%E3%82%86%E3%82%81%E3%82%BF%E3%82%A6%E3%83%B3%E5%88%A5%E5%BA%9C+%E5%B1%8B%E4%B8%8A%E9%A7%90%E8%BB%8A%E5%A0%B4/@33.2763,131.5076,16z/data=!4m6!3m5!1s0x3546a72b8cc1d5ef:0x5ed44f6cf8e70f3!8m2!3d33.2754574!4d131.5075034!16s%2Fg%2F11ffw76bwt",
+     "checked_at": "2026-11-11",
+     "title": "停車場位置：ゆめタウン別府 屋上駐車場",
+     "fields": [
+      "parking.lat",
+      "parking.lng"
+     ]
+    }
+   ],
+   "field_status": {
+    "tax_free": "待查",
+    "nearest_station": "待查",
+    "stay_minutes": "估計",
+    "season_note": "不適用"
+   },
+   "checked_date": "2026-11-11",
+   "proposed_ref": "sp_ag_beppu_hobbyzone"
+  },
+  "sp_ag_beppu_gashacoco": {
+   "kind": "spot",
+   "name": "gashacoco ゆめタウン別府（カプセルトイ専門店）",
+   "name_ja": "gashacoco ゆめタウン別府（カプセルトイ専門店）",
+   "categories": [
+    "anime_game"
+   ],
+   "category_source": "spots_dept",
+   "category_basis": "Google 地圖分類「おもちゃ店」；販售：轉蛋（扭蛋）專門店（ゆめタウン別府 3F）",
+   "address": "〒874-0943 大分県別府市楠町３８２−７ ゆめタウン別府 ３階",
+   "lat": 33.2765772,
+   "lng": 131.5073325,
+   "hours": "10:00–21:00（每日）",
+   "closed_days": "無固定公休（Google 地圖每天都列營業時間）；臨時休業與年末年始待查",
+   "route_days": [
+    {
+     "route": "A",
+     "day": "D5",
+     "date": "2026-11-25",
+     "weekday": "週三",
+     "nearest_stop": "竹瓦温泉",
+     "distance_km": 0.2,
+     "open_that_day": true
+    },
+    {
+     "route": "A",
+     "day": "D6",
+     "date": "2026-11-26",
+     "weekday": "週四",
+     "nearest_stop": "金鱗湖",
+     "distance_km": 12.9,
+     "open_that_day": true
+    },
+    {
+     "route": "B",
+     "day": "D5",
+     "date": "2026-11-25",
+     "weekday": "週三",
+     "nearest_stop": "金鱗湖",
+     "distance_km": 12.9,
+     "open_that_day": true
+    },
+    {
+     "route": "B",
+     "day": "D6",
+     "date": "2026-11-26",
+     "weekday": "週四",
+     "nearest_stop": "梅園温泉",
+     "distance_km": 0.3,
+     "open_that_day": true
+    },
+    {
+     "route": "C",
+     "day": "D5",
+     "date": "2026-11-25",
+     "weekday": "週三",
+     "nearest_stop": "竹瓦温泉",
+     "distance_km": 0.2,
+     "open_that_day": true
+    },
+    {
+     "route": "C",
+     "day": "D6",
+     "date": "2026-11-26",
+     "weekday": "週四",
+     "nearest_stop": "金鱗湖",
+     "distance_km": 12.9,
+     "open_that_day": true
+    }
+   ],
+   "nearest_route_point": {
+    "route": "A",
+    "day": "D5",
+    "stop": "竹瓦温泉",
+    "distance_km": 0.2,
+    "method": "直線距離（Google 地圖店家座標 ↔ routes.json 站點座標）"
+   },
+   "area_group": "別府／大分（住宿 11/24–26；D5–D6）",
+   "suggested_day": "D5–D6（11/25 週三、11/26 週四）別府行程空檔或晚上",
+   "what_to_buy": "轉蛋（扭蛋）專門店（ゆめタウン別府 3F）",
+   "admission": "免費入店",
+   "rain_ok": true,
+   "stay_minutes": 45,
+   "parking": {
+    "available": true,
+    "type": "dedicated",
+    "name": "ゆめタウン別府 屋上駐車場",
+    "fee": null,
+    "capacity": null,
+    "lat": 33.2754574,
+    "lng": 131.5075034,
+    "mapcode": "46 376 575*45",
+    "mapcode_source": "Mapion 右鍵取得 46 376 575*45，以 saibara convgeo 反查一致（誤差 0.8 m）；saibara 正向換算 46 376 575*45（反查誤差 0.8 m）。換算點：Google 地圖「ゆめタウン別府 屋上駐車場」標記點（非精確入口） 33.275457,131.507503",
+    "walk_min": null,
+    "note": "商場停車場",
+    "source": "https://www.google.com/maps/place/%E3%82%86%E3%82%81%E3%82%BF%E3%82%A6%E3%83%B3%E5%88%A5%E5%BA%9C+%E5%B1%8B%E4%B8%8A%E9%A7%90%E8%BB%8A%E5%A0%B4/@33.2763,131.5076,16z/data=!4m6!3m5!1s0x3546a72b8cc1d5ef:0x5ed44f6cf8e70f3!8m2!3d33.2754574!4d131.5075034!16s%2Fg%2F11ffw76bwt"
+   },
+   "mapcode": "46 376 575*45",
+   "mapcode_source": "依停車場入口／標記點換算：Mapion 右鍵取得 46 376 575*45，以 saibara convgeo 反查一致（誤差 0.8 m）；saibara 正向換算 46 376 575*45（反查誤差 0.8 m）。換算點：Google 地圖「ゆめタウン別府 屋上駐車場」標記點（非精確入口） 33.275457,131.507503",
+   "ratings": [
+    {
+     "source": "google",
+     "score": 3.8,
+     "scale": 5,
+     "url": "https://www.google.com/maps/place/gashacoco+%E3%82%86%E3%82%81%E3%82%BF%E3%82%A6%E3%83%B3%E5%88%A5%E5%BA%9C%EF%BC%88%E3%82%AB%E3%83%97%E3%82%BB%E3%83%AB%E3%83%88%E3%82%A4%E5%B0%82%E9%96%80%E5%BA%97%EF%BC%89/@33.2765772,131.5073325,17z/data=!3m1!4b1!4m6!3m5!1s0x3546a7870937b0bd:0xc4f188b3e2516b21!8m2!3d33.2765772!4d131.5073325!16s%2Fg%2F11vpsy7s77",
+     "checked_at": "2026-11-11",
+     "check_method": "google_maps_tool"
+    }
+   ],
+   "description": "轉蛋（扭蛋）專門店（ゆめタウン別府 3F）。距最近的路線點「竹瓦温泉」（AD5）直線約 0.2 km。",
+   "sources": [
+    {
+     "url": "https://www.google.com/maps/place/gashacoco+%E3%82%86%E3%82%81%E3%82%BF%E3%82%A6%E3%83%B3%E5%88%A5%E5%BA%9C%EF%BC%88%E3%82%AB%E3%83%97%E3%82%BB%E3%83%AB%E3%83%88%E3%82%A4%E5%B0%82%E9%96%80%E5%BA%97%EF%BC%89/@33.2765772,131.5073325,17z/data=!3m1!4b1!4m6!3m5!1s0x3546a7870937b0bd:0xc4f188b3e2516b21!8m2!3d33.2765772!4d131.5073325!16s%2Fg%2F11vpsy7s77",
+     "checked_at": "2026-11-11",
+     "title": "Google 地圖店家頁（google_maps_tool 自動查詢）",
+     "fields": [
+      "address",
+      "lat",
+      "lng",
+      "phone",
+      "hours",
+      "closed_days",
+      "ratings.google"
+     ]
+    },
+    {
+     "url": "https://www.google.com/maps/place/%E3%82%86%E3%82%81%E3%82%BF%E3%82%A6%E3%83%B3%E5%88%A5%E5%BA%9C+%E5%B1%8B%E4%B8%8A%E9%A7%90%E8%BB%8A%E5%A0%B4/@33.2763,131.5076,16z/data=!4m6!3m5!1s0x3546a72b8cc1d5ef:0x5ed44f6cf8e70f3!8m2!3d33.2754574!4d131.5075034!16s%2Fg%2F11ffw76bwt",
+     "checked_at": "2026-11-11",
+     "title": "停車場位置：ゆめタウン別府 屋上駐車場",
+     "fields": [
+      "parking.lat",
+      "parking.lng"
+     ]
+    }
+   ],
+   "field_status": {
+    "tax_free": "待查",
+    "nearest_station": "待查",
+    "stay_minutes": "估計",
+    "season_note": "不適用",
+    "phone": "待查"
+   },
+   "checked_date": "2026-11-11",
+   "proposed_ref": "sp_ag_beppu_gashacoco",
+   "note": "電話原為 070 開頭（Google 地圖），可能是私人行動或 IP 電話，無法確認是否為公開營業電話，2026-11-11 已改 null 標待查。"
+  },
+  "sp_ag_beppu_funnymonster": {
+   "kind": "spot",
+   "name": "ファニーモンスター別府 カプセルトイ専門店",
+   "name_ja": "ファニーモンスター別府 カプセルトイ専門店",
+   "categories": [
+    "anime_game"
+   ],
+   "category_source": "spots_dept",
+   "category_basis": "Google 地圖分類「雑貨店」；販售：轉蛋（扭蛋）專門店",
+   "address": "〒874-0920 大分県別府市北浜１丁目３−１２ 1階",
+   "lat": 33.2791093,
+   "lng": 131.5039968,
+   "hours": "10:00–24:00（每日）",
+   "closed_days": "無固定公休（Google 地圖每天都列營業時間）；臨時休業與年末年始待查",
+   "route_days": [
+    {
+     "route": "A",
+     "day": "D5",
+     "date": "2026-11-25",
+     "weekday": "週三",
+     "nearest_stop": "竹瓦温泉",
+     "distance_km": 0.3,
+     "open_that_day": true
+    },
+    {
+     "route": "A",
+     "day": "D6",
+     "date": "2026-11-26",
+     "weekday": "週四",
+     "nearest_stop": "金鱗湖",
+     "distance_km": 12.6,
+     "open_that_day": true
+    },
+    {
+     "route": "B",
+     "day": "D5",
+     "date": "2026-11-25",
+     "weekday": "週三",
+     "nearest_stop": "金鱗湖",
+     "distance_km": 12.6,
+     "open_that_day": true
+    },
+    {
+     "route": "B",
+     "day": "D6",
+     "date": "2026-11-26",
+     "weekday": "週四",
+     "nearest_stop": "梅園温泉",
+     "distance_km": 0.2,
+     "open_that_day": true
+    },
+    {
+     "route": "C",
+     "day": "D5",
+     "date": "2026-11-25",
+     "weekday": "週三",
+     "nearest_stop": "竹瓦温泉",
+     "distance_km": 0.3,
+     "open_that_day": true
+    },
+    {
+     "route": "C",
+     "day": "D6",
+     "date": "2026-11-26",
+     "weekday": "週四",
+     "nearest_stop": "金鱗湖",
+     "distance_km": 12.6,
+     "open_that_day": true
+    }
+   ],
+   "nearest_route_point": {
+    "route": "B",
+    "day": "D6",
+    "stop": "梅園温泉",
+    "distance_km": 0.2,
+    "method": "直線距離（Google 地圖店家座標 ↔ routes.json 站點座標）"
+   },
+   "area_group": "別府／大分（住宿 11/24–26；D5–D6）",
+   "suggested_day": "D5–D6（11/25 週三、11/26 週四）別府行程空檔或晚上",
+   "what_to_buy": "轉蛋（扭蛋）專門店",
+   "admission": "免費入店",
+   "rain_ok": true,
+   "stay_minutes": 45,
+   "parking": {
+    "available": true,
+    "type": "nearby",
+    "name": "アサヒパーキング（OSM）",
+    "fee": null,
+    "capacity": null,
+    "lat": 33.2796649,
+    "lng": 131.5040819,
+    "mapcode": "46 405 143*30",
+    "mapcode_source": "Mapion 右鍵取得 46 405 143*30，以 saibara convgeo 反查一致（誤差 2.7 m）；saibara 正向換算 46 405 143*38（反查誤差 0.4 m）；兩者末段不同，依規則以 Mapion 為準。換算點：OSM 入口節點 node/12801297628（停車場 way/326366836） 33.279665,131.504082",
+    "walk_min": null,
+    "note": "OSM 標示的鄰近收費停車場，非店家專用",
+    "source": "https://www.openstreetmap.org/way/326366836"
+   },
+   "mapcode": "46 405 143*30",
+   "mapcode_source": "依停車場入口／標記點換算：Mapion 右鍵取得 46 405 143*30，以 saibara convgeo 反查一致（誤差 2.7 m）；saibara 正向換算 46 405 143*38（反查誤差 0.4 m）；兩者末段不同，依規則以 Mapion 為準。換算點：OSM 入口節點 node/12801297628（停車場 way/326366836） 33.279665,131.504082",
+   "ratings": [
+    {
+     "source": "google",
+     "score": 2.9,
+     "scale": 5,
+     "url": "https://www.google.com/maps/place/%E3%83%95%E3%82%A1%E3%83%8B%E3%83%BC%E3%83%A2%E3%83%B3%E3%82%B9%E3%82%BF%E3%83%BC%E5%88%A5%E5%BA%9C+%E3%82%AB%E3%83%97%E3%82%BB%E3%83%AB%E3%83%88%E3%82%A4%E5%B0%82%E9%96%80%E5%BA%97/@33.2791093,131.5039968,17z/data=!3m1!4b1!4m6!3m5!1s0x3546a7e9c2930505:0xdbf4cb6cdf8249ce!8m2!3d33.2791093!4d131.5039968!16s%2Fg%2F11ysymxsyc",
+     "checked_at": "2026-11-11",
+     "check_method": "google_maps_tool"
+    }
+   ],
+   "description": "轉蛋（扭蛋）專門店。距最近的路線點「梅園温泉」（BD6）直線約 0.2 km。",
+   "sources": [
+    {
+     "url": "https://www.google.com/maps/place/%E3%83%95%E3%82%A1%E3%83%8B%E3%83%BC%E3%83%A2%E3%83%B3%E3%82%B9%E3%82%BF%E3%83%BC%E5%88%A5%E5%BA%9C+%E3%82%AB%E3%83%97%E3%82%BB%E3%83%AB%E3%83%88%E3%82%A4%E5%B0%82%E9%96%80%E5%BA%97/@33.2791093,131.5039968,17z/data=!3m1!4b1!4m6!3m5!1s0x3546a7e9c2930505:0xdbf4cb6cdf8249ce!8m2!3d33.2791093!4d131.5039968!16s%2Fg%2F11ysymxsyc",
+     "checked_at": "2026-11-11",
+     "title": "Google 地圖店家頁（google_maps_tool 自動查詢）",
+     "fields": [
+      "address",
+      "lat",
+      "lng",
+      "phone",
+      "hours",
+      "closed_days",
+      "ratings.google"
+     ]
+    },
+    {
+     "url": "https://www.openstreetmap.org/way/326366836",
+     "checked_at": "2026-11-11",
+     "title": "停車場位置：アサヒパーキング（OSM）",
+     "fields": [
+      "parking.lat",
+      "parking.lng"
+     ]
+    }
+   ],
+   "field_status": {
+    "tax_free": "待查",
+    "nearest_station": "待查",
+    "stay_minutes": "估計",
+    "season_note": "不適用",
+    "phone": "待查"
+   },
+   "checked_date": "2026-11-11",
+   "proposed_ref": "sp_ag_beppu_funnymonster",
+   "note": "電話原為 070 開頭（Google 地圖），可能是私人行動或 IP 電話，無法確認是否為公開營業電話，2026-11-11 已改 null 標待查。"
+  },
+  "sp_ag_beppu_geo": {
+   "kind": "spot",
+   "name": "ゲオ別府青山店",
+   "name_ja": "ゲオ別府青山店",
+   "categories": [
+    "anime_game"
+   ],
+   "category_source": "spots_dept",
+   "category_basis": "Google 地圖分類「リサイクル ショップ」；販售：中古／新品遊戲軟體與主機（GEO 連鎖二手店）",
+   "address": "〒874-0828 大分県別府市山の手町１５−１５",
+   "lat": 33.2828943,
+   "lng": 131.4845886,
+   "phone": "0977-27-5752",
+   "hours": "09:00–23:00（每日）",
+   "closed_days": "無固定公休（Google 地圖每天都列營業時間）；臨時休業與年末年始待查",
+   "route_days": [
+    {
+     "route": "A",
+     "day": "D5",
+     "date": "2026-11-25",
+     "weekday": "週三",
+     "nearest_stop": "竹瓦温泉",
+     "distance_km": 2.1,
+     "open_that_day": true
+    },
+    {
+     "route": "A",
+     "day": "D6",
+     "date": "2026-11-26",
+     "weekday": "週四",
+     "nearest_stop": "金鱗湖",
+     "distance_km": 10.9,
+     "open_that_day": true
+    },
+    {
+     "route": "B",
+     "day": "D5",
+     "date": "2026-11-25",
+     "weekday": "週三",
+     "nearest_stop": "金鱗湖",
+     "distance_km": 10.9,
+     "open_that_day": true
+    },
+    {
+     "route": "B",
+     "day": "D6",
+     "date": "2026-11-26",
+     "weekday": "週四",
+     "nearest_stop": "梅園温泉",
+     "distance_km": 1.9,
+     "open_that_day": true
+    },
+    {
+     "route": "C",
+     "day": "D5",
+     "date": "2026-11-25",
+     "weekday": "週三",
+     "nearest_stop": "竹瓦温泉",
+     "distance_km": 2.1,
+     "open_that_day": true
+    },
+    {
+     "route": "C",
+     "day": "D6",
+     "date": "2026-11-26",
+     "weekday": "週四",
+     "nearest_stop": "金鱗湖",
+     "distance_km": 10.9,
+     "open_that_day": true
+    }
+   ],
+   "nearest_route_point": {
+    "route": "B",
+    "day": "D6",
+    "stop": "梅園温泉",
+    "distance_km": 1.9,
+    "method": "直線距離（Google 地圖店家座標 ↔ routes.json 站點座標）"
+   },
+   "area_group": "別府／大分（住宿 11/24–26；D5–D6）",
+   "suggested_day": "D5–D6（11/25 週三、11/26 週四）別府行程空檔或晚上",
+   "what_to_buy": "中古／新品遊戲軟體與主機（GEO 連鎖二手店）",
+   "admission": "免費入店",
+   "rain_ok": true,
+   "stay_minutes": 45,
+   "parking": {
+    "available": true,
+    "type": "nearby",
+    "name": "OSM 無名停車場（ゲオ別府青山店旁）",
+    "fee": null,
+    "capacity": null,
+    "lat": 33.2830075,
+    "lng": 131.4849135,
+    "mapcode": "46 403 494*38",
+    "mapcode_source": "Mapion 右鍵取得 46 403 494*38，以 saibara convgeo 反查一致（誤差 1.5 m）；saibara 正向換算 46 403 494*38（反查誤差 1.5 m）。換算點：停車場 way/423945608 無入口節點；取輪廓上距車道最近點（約 28 m） 33.283007,131.484914",
+    "walk_min": null,
+    "note": "OSM 店旁無名停車場（約 23 m），推定為店家停車場，未經官方確認",
+    "source": "https://www.openstreetmap.org/way/423945608"
+   },
+   "mapcode": "46 403 494*38",
+   "mapcode_source": "依停車場入口／標記點換算：Mapion 右鍵取得 46 403 494*38，以 saibara convgeo 反查一致（誤差 1.5 m）；saibara 正向換算 46 403 494*38（反查誤差 1.5 m）。換算點：停車場 way/423945608 無入口節點；取輪廓上距車道最近點（約 28 m） 33.283007,131.484914",
+   "ratings": [
+    {
+     "source": "google",
+     "score": 3.5,
+     "scale": 5,
+     "url": "https://www.google.com/maps/place/%E3%82%B2%E3%82%AA%E5%88%A5%E5%BA%9C%E9%9D%92%E5%B1%B1%E5%BA%97/@33.2828943,131.4845886,17z/data=!3m1!4b1!4m6!3m5!1s0x3546a6f6ef182739:0x328848c2a8da24aa!8m2!3d33.2828943!4d131.4845886!16s%2Fg%2F1vzqq1pk",
+     "checked_at": "2026-11-11",
+     "check_method": "google_maps_tool"
+    }
+   ],
+   "description": "中古／新品遊戲軟體與主機（GEO 連鎖二手店）。距最近的路線點「梅園温泉」（BD6）直線約 1.9 km。",
+   "sources": [
+    {
+     "url": "https://www.google.com/maps/place/%E3%82%B2%E3%82%AA%E5%88%A5%E5%BA%9C%E9%9D%92%E5%B1%B1%E5%BA%97/@33.2828943,131.4845886,17z/data=!3m1!4b1!4m6!3m5!1s0x3546a6f6ef182739:0x328848c2a8da24aa!8m2!3d33.2828943!4d131.4845886!16s%2Fg%2F1vzqq1pk",
+     "checked_at": "2026-11-11",
+     "title": "Google 地圖店家頁（google_maps_tool 自動查詢）",
+     "fields": [
+      "address",
+      "lat",
+      "lng",
+      "phone",
+      "hours",
+      "closed_days",
+      "ratings.google"
+     ]
+    },
+    {
+     "url": "https://www.openstreetmap.org/way/423945608",
+     "checked_at": "2026-11-11",
+     "title": "停車場位置：OSM 無名停車場（ゲオ別府青山店旁）",
+     "fields": [
+      "parking.lat",
+      "parking.lng"
+     ]
+    }
+   ],
+   "field_status": {
+    "tax_free": "待查",
+    "nearest_station": "待查",
+    "stay_minutes": "估計",
+    "season_note": "不適用"
+   },
+   "checked_date": "2026-11-11",
+   "proposed_ref": "sp_ag_beppu_geo"
+  },
+  "sp_ag_oita_animate": {
+   "kind": "spot",
+   "name": "アニメイトアミュプラザおおいた",
+   "name_ja": "アニメイトアミュプラザおおいた",
+   "categories": [
+    "anime_game"
+   ],
+   "category_source": "spots_dept",
+   "category_basis": "Google 地圖分類「コミック書店」；販售：動漫周邊、漫畫、CD/BD、遊戲",
+   "address": "〒870-0831 大分県大分市要町１−１４ アミュプラザおおいた 2F",
+   "lat": 33.2331459,
+   "lng": 131.60719,
+   "phone": "097-540-5005",
+   "hours": "10:00–20:00（每日）",
+   "closed_days": "無固定公休（Google 地圖每天都列營業時間）；臨時休業與年末年始待查",
+   "route_days": [
+    {
+     "route": "A",
+     "day": "D5",
+     "date": "2026-11-25",
+     "weekday": "週三",
+     "nearest_stop": "竹瓦温泉",
+     "distance_km": 10.6,
+     "open_that_day": true
+    },
+    {
+     "route": "A",
+     "day": "D6",
+     "date": "2026-11-26",
+     "weekday": "週四",
+     "nearest_stop": "金鱗湖",
+     "distance_km": 22.4,
+     "open_that_day": true
+    },
+    {
+     "route": "B",
+     "day": "D5",
+     "date": "2026-11-25",
+     "weekday": "週三",
+     "nearest_stop": "金鱗湖",
+     "distance_km": 22.4,
+     "open_that_day": true
+    },
+    {
+     "route": "B",
+     "day": "D6",
+     "date": "2026-11-26",
+     "weekday": "週四",
+     "nearest_stop": "梅園温泉",
+     "distance_km": 10.7,
+     "open_that_day": true
+    },
+    {
+     "route": "C",
+     "day": "D5",
+     "date": "2026-11-25",
+     "weekday": "週三",
+     "nearest_stop": "竹瓦温泉",
+     "distance_km": 10.6,
+     "open_that_day": true
+    },
+    {
+     "route": "C",
+     "day": "D6",
+     "date": "2026-11-26",
+     "weekday": "週四",
+     "nearest_stop": "金鱗湖",
+     "distance_km": 22.4,
+     "open_that_day": true
+    }
+   ],
+   "nearest_route_point": {
+    "route": "A",
+    "day": "D5",
+    "stop": "竹瓦温泉",
+    "distance_km": 10.6,
+    "method": "直線距離（Google 地圖店家座標 ↔ routes.json 站點座標）"
+   },
+   "area_group": "別府／大分（住宿 11/24–26；D5–D6）",
+   "suggested_day": "D5–D6（11/25 週三、11/26 週四）別府行程空檔或晚上",
+   "what_to_buy": "動漫周邊、漫畫、CD/BD、遊戲",
+   "nearest_station": "JR 大分駅（アミュプラザおおいた站體商場內）",
+   "admission": "免費入店",
+   "rain_ok": true,
+   "stay_minutes": 45,
+   "parking": {
+    "available": true,
+    "type": "nearby",
+    "name": "JRおおいたシティ 第2駐車場",
+    "fee": null,
+    "capacity": null,
+    "lat": 33.2317521,
+    "lng": 131.6064612,
+    "mapcode": "46 238 362*52",
+    "mapcode_source": "Mapion 右鍵取得 46 238 362*52，以 saibara convgeo 反查一致（誤差 2.4 m）；saibara 正向換算 46 238 361*74（反查誤差 2.0 m）；兩者末段不同，依規則以 Mapion 為準。換算點：Google 地圖「JRおおいたシティ 第2駐車場」標記點（非精確入口） 33.231752,131.606461",
+    "walk_min": null,
+    "note": "JR おおいたシティ 第2停車場（車站商場停車場之一）；費用與優惠待查",
+    "source": "https://www.google.com/maps/place/JR%E3%81%8A%E3%81%8A%E3%81%84%E3%81%9F%E3%82%B7%E3%83%86%E3%82%A3+%E7%AC%AC2%E9%A7%90%E8%BB%8A%E5%A0%B4/data=!4m7!3m6!1s0x35469f0a687e29e7:0xdbd5400c2fae9ec6!8m2!3d33.2317521!4d131.6064612!16s%2Fg%2F11q48358qd!19sChIJ5yl-aAqfRjURxp6uLwxA1ds"
+   },
+   "mapcode": "46 238 362*52",
+   "mapcode_source": "依停車場入口／標記點換算：Mapion 右鍵取得 46 238 362*52，以 saibara convgeo 反查一致（誤差 2.4 m）；saibara 正向換算 46 238 361*74（反查誤差 2.0 m）；兩者末段不同，依規則以 Mapion 為準。換算點：Google 地圖「JRおおいたシティ 第2駐車場」標記點（非精確入口） 33.231752,131.606461",
+   "ratings": [
+    {
+     "source": "google",
+     "score": 3.4,
+     "scale": 5,
+     "url": "https://www.google.com/maps/place/%E3%82%A2%E3%83%8B%E3%83%A1%E3%82%A4%E3%83%88%E3%82%A2%E3%83%9F%E3%83%A5%E3%83%97%E3%83%A9%E3%82%B6%E3%81%8A%E3%81%8A%E3%81%84%E3%81%9F/@33.2331459,131.60719,17z/data=!3m1!4b1!4m6!3m5!1s0x35469f64806ea963:0x8398030acf3a4631!8m2!3d33.2331459!4d131.60719!16s%2Fg%2F11bw5x9ylr",
+     "checked_at": "2026-11-11",
+     "check_method": "google_maps_tool"
+    }
+   ],
+   "description": "動漫周邊、漫畫、CD/BD、遊戲。距最近的路線點「竹瓦温泉」（AD5）直線約 10.6 km。",
+   "sources": [
+    {
+     "url": "https://www.google.com/maps/place/%E3%82%A2%E3%83%8B%E3%83%A1%E3%82%A4%E3%83%88%E3%82%A2%E3%83%9F%E3%83%A5%E3%83%97%E3%83%A9%E3%82%B6%E3%81%8A%E3%81%8A%E3%81%84%E3%81%9F/@33.2331459,131.60719,17z/data=!3m1!4b1!4m6!3m5!1s0x35469f64806ea963:0x8398030acf3a4631!8m2!3d33.2331459!4d131.60719!16s%2Fg%2F11bw5x9ylr",
+     "checked_at": "2026-11-11",
+     "title": "Google 地圖店家頁（google_maps_tool 自動查詢）",
+     "fields": [
+      "address",
+      "lat",
+      "lng",
+      "phone",
+      "hours",
+      "closed_days",
+      "ratings.google"
+     ]
+    },
+    {
+     "url": "https://www.google.com/maps/place/JR%E3%81%8A%E3%81%8A%E3%81%84%E3%81%9F%E3%82%B7%E3%83%86%E3%82%A3+%E7%AC%AC2%E9%A7%90%E8%BB%8A%E5%A0%B4/data=!4m7!3m6!1s0x35469f0a687e29e7:0xdbd5400c2fae9ec6!8m2!3d33.2317521!4d131.6064612!16s%2Fg%2F11q48358qd!19sChIJ5yl-aAqfRjURxp6uLwxA1ds",
+     "checked_at": "2026-11-11",
+     "title": "停車場位置：JRおおいたシティ 第2駐車場",
+     "fields": [
+      "parking.lat",
+      "parking.lng"
+     ]
+    }
+   ],
+   "field_status": {
+    "tax_free": "待查",
+    "stay_minutes": "估計",
+    "season_note": "不適用"
+   },
+   "checked_date": "2026-11-11",
+   "proposed_ref": "sp_ag_oita_animate",
+   "note": "離別府路線點約 10.6 km，需開往大分市（JR 大分駅）。"
+  },
+  "sp_ag_hyuga_surugaya": {
+   "kind": "spot",
+   "name": "駿河屋日向店",
+   "name_ja": "駿河屋日向店",
+   "categories": [
+    "anime_game"
+   ],
+   "category_source": "spots_dept",
+   "category_basis": "Google 地圖分類「ホビーショップ」；販售：二手遊戲、公仔、動漫周邊、卡牌",
+   "address": "〒883-0021 宮崎県日向市財光寺桃の木４９３−１",
+   "lat": 32.4102806,
+   "lng": 131.6300866,
+   "phone": "0982-66-1180",
+   "hours": "10:00–21:00（每日）",
+   "closed_days": "無固定公休（Google 地圖每天都列營業時間）；臨時休業與年末年始待查",
+   "route_days": [
+    {
+     "route": "A",
+     "day": "D7",
+     "date": "2026-11-27",
+     "weekday": "週五",
+     "nearest_stop": "いけすの大漁や／活魚大漁屋",
+     "distance_km": 1.8,
+     "open_that_day": true
+    },
+    {
+     "route": "A",
+     "day": "D8",
+     "date": "2026-11-28",
+     "weekday": "週六",
+     "nearest_stop": "日向岬グリーンパーク",
+     "distance_km": 2.8,
+     "open_that_day": true
+    },
+    {
+     "route": "B",
+     "day": "D7",
+     "date": "2026-11-27",
+     "weekday": "週五",
+     "nearest_stop": "いけすの大漁や／活魚大漁屋",
+     "distance_km": 1.8,
+     "open_that_day": true
+    },
+    {
+     "route": "B",
+     "day": "D8",
+     "date": "2026-11-28",
+     "weekday": "週六",
+     "nearest_stop": "御鉾ケ浦海水浴場",
+     "distance_km": 4.5,
+     "open_that_day": true
+    },
+    {
+     "route": "C",
+     "day": "D7",
+     "date": "2026-11-27",
+     "weekday": "週五",
+     "nearest_stop": "いけすの大漁や／活魚大漁屋",
+     "distance_km": 1.8,
+     "open_that_day": true
+    },
+    {
+     "route": "C",
+     "day": "D8",
+     "date": "2026-11-28",
+     "weekday": "週六",
+     "nearest_stop": "大御神社",
+     "distance_km": 1.9,
+     "open_that_day": true
+    }
+   ],
+   "nearest_route_point": {
+    "route": "A",
+    "day": "D7",
+    "stop": "いけすの大漁や／活魚大漁屋",
+    "distance_km": 1.8,
+    "method": "直線距離（Google 地圖店家座標 ↔ routes.json 站點座標）"
+   },
+   "area_group": "日向（住宿 11/27；D7）",
+   "suggested_day": "D7（11/27 週五）入住後或 D8 早上出發前",
+   "what_to_buy": "二手遊戲、公仔、動漫周邊、卡牌",
+   "admission": "免費入店",
+   "rain_ok": true,
+   "stay_minutes": 45,
+   "parking": {
+    "available": null,
+    "type": null,
+    "name": null,
+    "fee": null,
+    "capacity": null,
+    "lat": null,
+    "lng": null,
+    "mapcode": null,
+    "mapcode_source": null,
+    "walk_min": null,
+    "note": "Google 搜尋停車場只找到隔壁其他店家的停車場，店家停車場待查；停車場入口座標待查，MapCode 未換算（不以店家座標代替）",
+    "source": null
+   },
+   "ratings": [
+    {
+     "source": "google",
+     "score": 3.6,
+     "scale": 5,
+     "url": "https://www.google.com/maps/place/%E9%A7%BF%E6%B2%B3%E5%B1%8B%E6%97%A5%E5%90%91%E5%BA%97/@32.4102806,131.6300866,17z/data=!3m1!4b1!4m6!3m5!1s0x3547150066877199:0x9ecfe227b3cf5d81!8m2!3d32.4102806!4d131.6300866!16s%2Fg%2F11vyryq2xw",
+     "checked_at": "2026-11-11",
+     "check_method": "google_maps_tool"
+    }
+   ],
+   "description": "二手遊戲、公仔、動漫周邊、卡牌。距最近的路線點「いけすの大漁や／活魚大漁屋」（AD7）直線約 1.8 km。",
+   "sources": [
+    {
+     "url": "https://www.google.com/maps/place/%E9%A7%BF%E6%B2%B3%E5%B1%8B%E6%97%A5%E5%90%91%E5%BA%97/@32.4102806,131.6300866,17z/data=!3m1!4b1!4m6!3m5!1s0x3547150066877199:0x9ecfe227b3cf5d81!8m2!3d32.4102806!4d131.6300866!16s%2Fg%2F11vyryq2xw",
+     "checked_at": "2026-11-11",
+     "title": "Google 地圖店家頁（google_maps_tool 自動查詢）",
+     "fields": [
+      "address",
+      "lat",
+      "lng",
+      "phone",
+      "hours",
+      "closed_days",
+      "ratings.google"
+     ]
+    }
+   ],
+   "field_status": {
+    "tax_free": "待查",
+    "nearest_station": "待查",
+    "stay_minutes": "估計",
+    "season_note": "不適用",
+    "mapcode": "待查"
+   },
+   "checked_date": "2026-11-11",
+   "proposed_ref": "sp_ag_hyuga_surugaya"
+  },
+  "sp_ag_hyuga_mangasouko": {
+   "kind": "spot",
+   "name": "マンガ倉庫 日向店",
+   "name_ja": "マンガ倉庫 日向店",
+   "categories": [
+    "anime_game"
+   ],
+   "category_source": "spots_dept",
+   "category_basis": "Google 地圖分類「リサイクル ショップ」；販售：二手漫畫、遊戲、公仔、玩具（大型二手店）",
+   "address": "〒883-0062 宮崎県日向市日知屋１４７９８−１",
+   "lat": 32.4497195,
+   "lng": 131.6407917,
+   "phone": "0982-57-3105",
+   "hours": "10:00–22:00（每日）",
+   "closed_days": "無固定公休（Google 地圖每天都列營業時間）；臨時休業與年末年始待查",
+   "route_days": [
+    {
+     "route": "A",
+     "day": "D7",
+     "date": "2026-11-27",
+     "weekday": "週五",
+     "nearest_stop": "いけすの大漁や／活魚大漁屋",
+     "distance_km": 3.1,
+     "open_that_day": true
+    },
+    {
+     "route": "A",
+     "day": "D8",
+     "date": "2026-11-28",
+     "weekday": "週六",
+     "nearest_stop": "日向岬グリーンパーク",
+     "distance_km": 4.3,
+     "open_that_day": true
+    },
+    {
+     "route": "B",
+     "day": "D7",
+     "date": "2026-11-27",
+     "weekday": "週五",
+     "nearest_stop": "いけすの大漁や／活魚大漁屋",
+     "distance_km": 3.1,
+     "open_that_day": true
+    },
+    {
+     "route": "B",
+     "day": "D8",
+     "date": "2026-11-28",
+     "weekday": "週六",
+     "nearest_stop": "御鉾ケ浦海水浴場",
+     "distance_km": 4.6,
+     "open_that_day": true
+    },
+    {
+     "route": "C",
+     "day": "D7",
+     "date": "2026-11-27",
+     "weekday": "週五",
+     "nearest_stop": "いけすの大漁や／活魚大漁屋",
+     "distance_km": 3.1,
+     "open_that_day": true
+    },
+    {
+     "route": "C",
+     "day": "D8",
+     "date": "2026-11-28",
+     "weekday": "週六",
+     "nearest_stop": "大御神社",
+     "distance_km": 4.3,
+     "open_that_day": true
+    }
+   ],
+   "nearest_route_point": {
+    "route": "A",
+    "day": "D7",
+    "stop": "いけすの大漁や／活魚大漁屋",
+    "distance_km": 3.1,
+    "method": "直線距離（Google 地圖店家座標 ↔ routes.json 站點座標）"
+   },
+   "area_group": "日向（住宿 11/27；D7）",
+   "suggested_day": "D7（11/27 週五）入住後或 D8 早上出發前",
+   "what_to_buy": "二手漫畫、遊戲、公仔、玩具（大型二手店）",
+   "admission": "免費入店",
+   "rain_ok": true,
+   "stay_minutes": 45,
+   "parking": {
+    "available": true,
+    "type": "dedicated",
+    "name": "OSM 顧客停車場（メルクス日向）",
+    "fee": null,
+    "capacity": null,
+    "lat": 32.4490672,
+    "lng": 131.6406451,
+    "mapcode": "136 407 425*85",
+    "mapcode_source": "Mapion 右鍵取得 136 407 425*85，以 saibara convgeo 反查一致（誤差 2.3 m）；saibara 正向換算 136 407 424*17（反查誤差 1.7 m）；兩者末段不同，依規則以 Mapion 為準。換算點：停車場 way/1148753243 輪廓與道路（residential）交會節點 node/13264275247 32.449067,131.640645",
+    "walk_min": null,
+    "note": "OSM 顧客停車場（約 130 m），入口取輪廓與道路交會點；商場停車場",
+    "source": "https://www.openstreetmap.org/way/1148753243"
+   },
+   "mapcode": "136 407 425*85",
+   "mapcode_source": "依停車場入口／標記點換算：Mapion 右鍵取得 136 407 425*85，以 saibara convgeo 反查一致（誤差 2.3 m）；saibara 正向換算 136 407 424*17（反查誤差 1.7 m）；兩者末段不同，依規則以 Mapion 為準。換算點：停車場 way/1148753243 輪廓與道路（residential）交會節點 node/13264275247 32.449067,131.640645",
+   "ratings": [
+    {
+     "source": "google",
+     "score": 3.4,
+     "scale": 5,
+     "url": "https://www.google.com/maps/place/%E3%83%9E%E3%83%B3%E3%82%AC%E5%80%89%E5%BA%AB+%E6%97%A5%E5%90%91%E5%BA%97/@32.4497195,131.6407917,17z/data=!3m1!4b1!4m6!3m5!1s0x3547167fc1681f91:0xd8bf7c988b760693!8m2!3d32.4497195!4d131.6407917!16s%2Fg%2F12hn49_yk",
+     "checked_at": "2026-11-11",
+     "check_method": "google_maps_tool"
+    }
+   ],
+   "description": "二手漫畫、遊戲、公仔、玩具（大型二手店）。距最近的路線點「いけすの大漁や／活魚大漁屋」（AD7）直線約 3.1 km。",
+   "sources": [
+    {
+     "url": "https://www.google.com/maps/place/%E3%83%9E%E3%83%B3%E3%82%AC%E5%80%89%E5%BA%AB+%E6%97%A5%E5%90%91%E5%BA%97/@32.4497195,131.6407917,17z/data=!3m1!4b1!4m6!3m5!1s0x3547167fc1681f91:0xd8bf7c988b760693!8m2!3d32.4497195!4d131.6407917!16s%2Fg%2F12hn49_yk",
+     "checked_at": "2026-11-11",
+     "title": "Google 地圖店家頁（google_maps_tool 自動查詢）",
+     "fields": [
+      "address",
+      "lat",
+      "lng",
+      "phone",
+      "hours",
+      "closed_days",
+      "ratings.google"
+     ]
+    },
+    {
+     "url": "https://www.openstreetmap.org/way/1148753243",
+     "checked_at": "2026-11-11",
+     "title": "停車場位置：OSM 顧客停車場（メルクス日向）",
+     "fields": [
+      "parking.lat",
+      "parking.lng"
+     ]
+    }
+   ],
+   "field_status": {
+    "tax_free": "待查",
+    "nearest_station": "待查",
+    "stay_minutes": "估計",
+    "season_note": "不適用"
+   },
+   "checked_date": "2026-11-11",
+   "proposed_ref": "sp_ag_hyuga_mangasouko"
+  },
+  "sp_ag_hyuga_palo": {
+   "kind": "spot",
+   "name": "TOYS SPOT PALO 日向",
+   "name_ja": "TOYS SPOT PALO 日向",
+   "categories": [
+    "anime_game"
+   ],
+   "category_source": "spots_dept",
+   "category_basis": "Google 地圖分類「ゲームセンター」；販售：轉蛋（扭蛋）專門店（イオン日向店內）",
+   "address": "〒883-0064 宮崎県日向市日知屋 字古田町61-1",
+   "lat": 32.4244615,
+   "lng": 131.6512306,
+   "hours": "10:00–20:00（每日）",
+   "closed_days": "無固定公休（Google 地圖每天都列營業時間）；臨時休業與年末年始待查",
+   "route_days": [
+    {
+     "route": "A",
+     "day": "D7",
+     "date": "2026-11-27",
+     "weekday": "週五",
+     "nearest_stop": "大御神社",
+     "distance_km": 1.4,
+     "open_that_day": true
+    },
+    {
+     "route": "A",
+     "day": "D8",
+     "date": "2026-11-28",
+     "weekday": "週六",
+     "nearest_stop": "日向岬グリーンパーク",
+     "distance_km": 1.3,
+     "open_that_day": true
+    },
+    {
+     "route": "B",
+     "day": "D7",
+     "date": "2026-11-27",
+     "weekday": "週五",
+     "nearest_stop": "伊勢ケ浜海水浴場",
+     "distance_km": 1.3,
+     "open_that_day": true
+    },
+    {
+     "route": "B",
+     "day": "D8",
+     "date": "2026-11-28",
+     "weekday": "週六",
+     "nearest_stop": "御鉾ケ浦海水浴場",
+     "distance_km": 2.4,
+     "open_that_day": true
+    },
+    {
+     "route": "C",
+     "day": "D7",
+     "date": "2026-11-27",
+     "weekday": "週五",
+     "nearest_stop": "いけすの大漁や／活魚大漁屋",
+     "distance_km": 2.6,
+     "open_that_day": true
+    },
+    {
+     "route": "C",
+     "day": "D8",
+     "date": "2026-11-28",
+     "weekday": "週六",
+     "nearest_stop": "大御神社",
+     "distance_km": 1.4,
+     "open_that_day": true
+    }
+   ],
+   "nearest_route_point": {
+    "route": "A",
+    "day": "D8",
+    "stop": "日向岬グリーンパーク",
+    "distance_km": 1.3,
+    "method": "直線距離（Google 地圖店家座標 ↔ routes.json 站點座標）"
+   },
+   "area_group": "日向（住宿 11/27；D7）",
+   "suggested_day": "D7（11/27 週五）入住後或 D8 早上出發前",
+   "what_to_buy": "轉蛋（扭蛋）專門店（イオン日向店內）",
+   "admission": "免費入店",
+   "rain_ok": true,
+   "stay_minutes": 45,
+   "parking": {
+    "available": true,
+    "type": "dedicated",
+    "name": "イオン日向店 駐車場",
+    "fee": null,
+    "capacity": null,
+    "lat": 32.4249669,
+    "lng": 131.6518935,
+    "mapcode": "136 318 525*03",
+    "mapcode_source": "Mapion 右鍵取得 136 318 525*03，以 saibara convgeo 反查一致（誤差 1.2 m）；saibara 正向換算 136 318 525*03（反查誤差 1.2 m）。換算點：Google 地圖「イオン日向店 駐車場」標記點（非精確入口） 32.424967,131.651893",
+    "walk_min": null,
+    "note": "商場停車場",
+    "source": "https://www.google.com/maps/place/%E3%82%A4%E3%82%AA%E3%83%B3%E6%97%A5%E5%90%91%E5%BA%97+%E9%A7%90%E8%BB%8A%E5%A0%B4/data=!4m7!3m6!1s0x3547159c24d768a1:0x714ba5f83e6893bb!8m2!3d32.4249669!4d131.6518935!16s%2Fg%2F11gmww1w_m!19sChIJoWjXJJwVRzURu5NoPvilS3E"
+   },
+   "mapcode": "136 318 525*03",
+   "mapcode_source": "依停車場入口／標記點換算：Mapion 右鍵取得 136 318 525*03，以 saibara convgeo 反查一致（誤差 1.2 m）；saibara 正向換算 136 318 525*03（反查誤差 1.2 m）。換算點：Google 地圖「イオン日向店 駐車場」標記點（非精確入口） 32.424967,131.651893",
+   "description": "轉蛋（扭蛋）專門店（イオン日向店內）。距最近的路線點「日向岬グリーンパーク」（AD8）直線約 1.3 km。",
+   "sources": [
+    {
+     "url": "https://www.google.com/maps/place/TOYS+SPOT+PALO+%E6%97%A5%E5%90%91/@32.4244615,131.6512306,17z/data=!3m1!4b1!4m6!3m5!1s0x354715ca43a0d297:0xfaeb342109fe3db!8m2!3d32.4244615!4d131.6512306!16s%2Fg%2F11wx5dww85",
+     "checked_at": "2026-11-11",
+     "title": "Google 地圖店家頁（google_maps_tool 自動查詢）",
+     "fields": [
+      "address",
+      "lat",
+      "lng",
+      "phone",
+      "hours",
+      "closed_days",
+      "ratings.google"
+     ]
+    },
+    {
+     "url": "https://www.google.com/maps/place/%E3%82%A4%E3%82%AA%E3%83%B3%E6%97%A5%E5%90%91%E5%BA%97+%E9%A7%90%E8%BB%8A%E5%A0%B4/data=!4m7!3m6!1s0x3547159c24d768a1:0x714ba5f83e6893bb!8m2!3d32.4249669!4d131.6518935!16s%2Fg%2F11gmww1w_m!19sChIJoWjXJJwVRzURu5NoPvilS3E",
+     "checked_at": "2026-11-11",
+     "title": "停車場位置：イオン日向店 駐車場",
+     "fields": [
+      "parking.lat",
+      "parking.lng"
+     ]
+    }
+   ],
+   "field_status": {
+    "tax_free": "待查",
+    "nearest_station": "待查",
+    "stay_minutes": "估計",
+    "season_note": "不適用",
+    "ratings.google": "待查",
+    "phone": "待查"
+   },
+   "checked_date": "2026-11-11",
+   "proposed_ref": "sp_ag_hyuga_palo",
+   "note": "電話原為 070 開頭（Google 地圖），可能是私人行動或 IP 電話，無法確認是否為公開營業電話，2026-11-11 已改 null 標待查。"
+  },
+  "sp_ag_hyuga_gashapon": {
+   "kind": "spot",
+   "name": "ガシャポンバンダイオフィシャルショップ日向店",
+   "name_ja": "ガシャポンバンダイオフィシャルショップ日向店",
+   "categories": [
+    "anime_game"
+   ],
+   "category_source": "spots_dept",
+   "category_basis": "Google 地圖分類「おもちゃ店」；販售：萬代官方轉蛋（ハイパーモールメルクス日向、ナムコランド內）",
+   "address": "〒883-0062 宮崎県日向市日知屋１−１４７９８−１ ハイパーモールメルクス日向 内",
+   "lat": 32.450249,
+   "lng": 131.6400983,
+   "phone": "0982-55-8037",
+   "hours": "10:00–22:00（每日）",
+   "closed_days": "無固定公休（Google 地圖每天都列營業時間）；臨時休業與年末年始待查",
+   "route_days": [
+    {
+     "route": "A",
+     "day": "D7",
+     "date": "2026-11-27",
+     "weekday": "週五",
+     "nearest_stop": "いけすの大漁や／活魚大漁屋",
+     "distance_km": 3.2,
+     "open_that_day": true
+    },
+    {
+     "route": "A",
+     "day": "D8",
+     "date": "2026-11-28",
+     "weekday": "週六",
+     "nearest_stop": "日向岬グリーンパーク",
+     "distance_km": 4.4,
+     "open_that_day": true
+    },
+    {
+     "route": "B",
+     "day": "D7",
+     "date": "2026-11-27",
+     "weekday": "週五",
+     "nearest_stop": "いけすの大漁や／活魚大漁屋",
+     "distance_km": 3.2,
+     "open_that_day": true
+    },
+    {
+     "route": "B",
+     "day": "D8",
+     "date": "2026-11-28",
+     "weekday": "週六",
+     "nearest_stop": "御鉾ケ浦海水浴場",
+     "distance_km": 4.7,
+     "open_that_day": true
+    },
+    {
+     "route": "C",
+     "day": "D7",
+     "date": "2026-11-27",
+     "weekday": "週五",
+     "nearest_stop": "いけすの大漁や／活魚大漁屋",
+     "distance_km": 3.2,
+     "open_that_day": true
+    },
+    {
+     "route": "C",
+     "day": "D8",
+     "date": "2026-11-28",
+     "weekday": "週六",
+     "nearest_stop": "大御神社",
+     "distance_km": 4.4,
+     "open_that_day": true
+    }
+   ],
+   "nearest_route_point": {
+    "route": "A",
+    "day": "D7",
+    "stop": "いけすの大漁や／活魚大漁屋",
+    "distance_km": 3.2,
+    "method": "直線距離（Google 地圖店家座標 ↔ routes.json 站點座標）"
+   },
+   "area_group": "日向（住宿 11/27；D7）",
+   "suggested_day": "D7（11/27 週五）入住後或 D8 早上出發前",
+   "what_to_buy": "萬代官方轉蛋（ハイパーモールメルクス日向、ナムコランド內）",
+   "admission": "免費入店",
+   "rain_ok": true,
+   "stay_minutes": 45,
+   "parking": {
+    "available": true,
+    "type": "dedicated",
+    "name": "OSM 顧客停車場（メルクス日向）",
+    "fee": null,
+    "capacity": null,
+    "lat": 32.4490672,
+    "lng": 131.6406451,
+    "mapcode": "136 407 425*85",
+    "mapcode_source": "Mapion 右鍵取得 136 407 425*85，以 saibara convgeo 反查一致（誤差 2.3 m）；saibara 正向換算 136 407 424*17（反查誤差 1.7 m）；兩者末段不同，依規則以 Mapion 為準。換算點：停車場 way/1148753243 輪廓與道路（residential）交會節點 node/13264275247 32.449067,131.640645",
+    "walk_min": null,
+    "note": "與マンガ倉庫同一商場，共用 OSM 顧客停車場；商場停車場",
+    "source": "https://www.openstreetmap.org/way/1148753243"
+   },
+   "mapcode": "136 407 425*85",
+   "mapcode_source": "依停車場入口／標記點換算：Mapion 右鍵取得 136 407 425*85，以 saibara convgeo 反查一致（誤差 2.3 m）；saibara 正向換算 136 407 424*17（反查誤差 1.7 m）；兩者末段不同，依規則以 Mapion 為準。換算點：停車場 way/1148753243 輪廓與道路（residential）交會節點 node/13264275247 32.449067,131.640645",
+   "description": "萬代官方轉蛋（ハイパーモールメルクス日向、ナムコランド內）。距最近的路線點「いけすの大漁や／活魚大漁屋」（AD7）直線約 3.2 km。",
+   "sources": [
+    {
+     "url": "https://www.google.com/maps/place/%E3%82%AC%E3%82%B7%E3%83%A3%E3%83%9D%E3%83%B3%E3%83%90%E3%83%B3%E3%83%80%E3%82%A4%E3%82%AA%E3%83%95%E3%82%A3%E3%82%B7%E3%83%A3%E3%83%AB%E3%82%B7%E3%83%A7%E3%83%83%E3%83%97%E6%97%A5%E5%90%91%E5%BA%97/@32.450249,131.6400983,17z/data=!3m1!4b1!4m6!3m5!1s0x3547170030ad58a7:0x13c29db061bb19c7!8m2!3d32.450249!4d131.6400983!16s%2Fg%2F11zxj205zd",
+     "checked_at": "2026-11-11",
+     "title": "Google 地圖店家頁（google_maps_tool 自動查詢）",
+     "fields": [
+      "address",
+      "lat",
+      "lng",
+      "phone",
+      "hours",
+      "closed_days",
+      "ratings.google"
+     ]
+    },
+    {
+     "url": "https://www.openstreetmap.org/way/1148753243",
+     "checked_at": "2026-11-11",
+     "title": "停車場位置：OSM 顧客停車場（メルクス日向）",
+     "fields": [
+      "parking.lat",
+      "parking.lng"
+     ]
+    }
+   ],
+   "field_status": {
+    "tax_free": "待查",
+    "nearest_station": "待查",
+    "stay_minutes": "估計",
+    "season_note": "不適用",
+    "ratings.google": "待查"
+   },
+   "checked_date": "2026-11-11",
+   "proposed_ref": "sp_ag_hyuga_gashapon"
+  },
+  "sp_ag_yatsu_geo": {
+   "kind": "spot",
+   "name": "ゲオ八代松江店",
+   "name_ja": "ゲオ八代松江店",
+   "categories": [
+    "anime_game"
+   ],
+   "category_source": "spots_dept",
+   "category_basis": "Google 地圖分類「リサイクル ショップ」；販售：中古／新品遊戲軟體與主機（GEO 連鎖二手店）",
+   "address": "〒866-0883 熊本県八代市松江町128番地ノ1",
+   "lat": 32.5115724,
+   "lng": 130.5978922,
+   "phone": "0965-39-5170",
+   "hours": "09:00–23:00（每日）",
+   "closed_days": "無固定公休（Google 地圖每天都列營業時間）；臨時休業與年末年始待查",
+   "route_days": [
+    {
+     "route": "A",
+     "day": "D10",
+     "date": "2026-11-30",
+     "weekday": "週一",
+     "nearest_stop": "天門橋",
+     "distance_km": 17.1,
+     "open_that_day": true
+    },
+    {
+     "route": "A",
+     "day": "D11",
+     "date": "2026-12-01",
+     "weekday": "週二",
+     "nearest_stop": "八代城",
+     "distance_km": 0.5,
+     "open_that_day": true
+    },
+    {
+     "route": "B",
+     "day": "D10",
+     "date": "2026-11-30",
+     "weekday": "週一",
+     "nearest_stop": "天門橋",
+     "distance_km": 17.1,
+     "open_that_day": true
+    },
+    {
+     "route": "B",
+     "day": "D11",
+     "date": "2026-12-01",
+     "weekday": "週二",
+     "nearest_stop": "高舞登山展望區",
+     "distance_km": 14.7,
+     "open_that_day": true
+    },
+    {
+     "route": "C",
+     "day": "D10",
+     "date": "2026-11-30",
+     "weekday": "週一",
+     "nearest_stop": "天門橋",
+     "distance_km": 17.1,
+     "open_that_day": true
+    },
+    {
+     "route": "C",
+     "day": "D11",
+     "date": "2026-12-01",
+     "weekday": "週二",
+     "nearest_stop": "高舞登山展望區",
+     "distance_km": 14.7,
+     "open_that_day": true
+    }
+   ],
+   "nearest_route_point": {
+    "route": "A",
+    "day": "D11",
+    "stop": "八代城",
+    "distance_km": 0.5,
+    "method": "直線距離（Google 地圖店家座標 ↔ routes.json 站點座標）"
+   },
+   "area_group": "熊本南部／八代／天草（住宿 11/30–12/1；D10–D11）",
+   "suggested_day": "D10（11/30 週一）或 D11（12/1 週二）",
+   "what_to_buy": "中古／新品遊戲軟體與主機（GEO 連鎖二手店）",
+   "admission": "免費入店",
+   "rain_ok": true,
+   "stay_minutes": 45,
+   "parking": {
+    "available": null,
+    "type": null,
+    "name": null,
+    "fee": null,
+    "capacity": null,
+    "lat": null,
+    "lng": null,
+    "mapcode": null,
+    "mapcode_source": null,
+    "walk_min": null,
+    "note": "OSM 最近停車場約 250 m，無法確認；停車場入口座標待查，MapCode 未換算（不以店家座標代替）",
+    "source": null
+   },
+   "ratings": [
+    {
+     "source": "google",
+     "score": 3.3,
+     "scale": 5,
+     "url": "https://www.google.com/maps/place/%E3%82%B2%E3%82%AA%E5%85%AB%E4%BB%A3%E6%9D%BE%E6%B1%9F%E5%BA%97/@32.5115724,130.5978922,17z/data=!3m1!4b1!4m6!3m5!1s0x35407fa6681ea09d:0x8f66941696e34bbb!8m2!3d32.5115724!4d130.5978922!16s%2Fg%2F1tdk_b4q",
+     "checked_at": "2026-11-11",
+     "check_method": "google_maps_tool"
+    }
+   ],
+   "description": "中古／新品遊戲軟體與主機（GEO 連鎖二手店）。距最近的路線點「八代城」（AD11）直線約 0.5 km。",
+   "sources": [
+    {
+     "url": "https://www.google.com/maps/place/%E3%82%B2%E3%82%AA%E5%85%AB%E4%BB%A3%E6%9D%BE%E6%B1%9F%E5%BA%97/@32.5115724,130.5978922,17z/data=!3m1!4b1!4m6!3m5!1s0x35407fa6681ea09d:0x8f66941696e34bbb!8m2!3d32.5115724!4d130.5978922!16s%2Fg%2F1tdk_b4q",
+     "checked_at": "2026-11-11",
+     "title": "Google 地圖店家頁（google_maps_tool 自動查詢）",
+     "fields": [
+      "address",
+      "lat",
+      "lng",
+      "phone",
+      "hours",
+      "closed_days",
+      "ratings.google"
+     ]
+    }
+   ],
+   "field_status": {
+    "tax_free": "待查",
+    "nearest_station": "待查",
+    "stay_minutes": "估計",
+    "season_note": "不適用",
+    "mapcode": "待查"
+   },
+   "checked_date": "2026-11-11",
+   "proposed_ref": "sp_ag_yatsu_geo"
+  },
+  "sp_ag_yatsu_rise": {
+   "kind": "spot",
+   "name": "カプセルトイRISE(ゆめタウン八代店)",
+   "name_ja": "カプセルトイRISE(ゆめタウン八代店)",
+   "categories": [
+    "anime_game"
+   ],
+   "category_source": "spots_dept",
+   "category_basis": "Google 地圖分類「ゲームセンター」；販售：轉蛋（扭蛋）（ゆめタウン八代 2F）",
+   "address": "〒866-0045 熊本県八代市建馬町３−１ 2F",
+   "lat": 32.5057812,
+   "lng": 130.5856416,
+   "hours": "09:30–21:00（每日）",
+   "closed_days": "無固定公休（Google 地圖每天都列營業時間）；臨時休業與年末年始待查",
+   "route_days": [
+    {
+     "route": "A",
+     "day": "D10",
+     "date": "2026-11-30",
+     "weekday": "週一",
+     "nearest_stop": "天門橋",
+     "distance_km": 16.7,
+     "open_that_day": true
+    },
+    {
+     "route": "A",
+     "day": "D11",
+     "date": "2026-12-01",
+     "weekday": "週二",
+     "nearest_stop": "八代城",
+     "distance_km": 1.3,
+     "open_that_day": true
+    },
+    {
+     "route": "B",
+     "day": "D10",
+     "date": "2026-11-30",
+     "weekday": "週一",
+     "nearest_stop": "天門橋",
+     "distance_km": 16.7,
+     "open_that_day": true
+    },
+    {
+     "route": "B",
+     "day": "D11",
+     "date": "2026-12-01",
+     "weekday": "週二",
+     "nearest_stop": "高舞登山展望區",
+     "distance_km": 13.6,
+     "open_that_day": true
+    },
+    {
+     "route": "C",
+     "day": "D10",
+     "date": "2026-11-30",
+     "weekday": "週一",
+     "nearest_stop": "天門橋",
+     "distance_km": 16.7,
+     "open_that_day": true
+    },
+    {
+     "route": "C",
+     "day": "D11",
+     "date": "2026-12-01",
+     "weekday": "週二",
+     "nearest_stop": "高舞登山展望區",
+     "distance_km": 13.6,
+     "open_that_day": true
+    }
+   ],
+   "nearest_route_point": {
+    "route": "A",
+    "day": "D11",
+    "stop": "八代城",
+    "distance_km": 1.3,
+    "method": "直線距離（Google 地圖店家座標 ↔ routes.json 站點座標）"
+   },
+   "area_group": "熊本南部／八代／天草（住宿 11/30–12/1；D10–D11）",
+   "suggested_day": "D10（11/30 週一）或 D11（12/1 週二）",
+   "what_to_buy": "轉蛋（扭蛋）（ゆめタウン八代 2F）",
+   "admission": "免費入店",
+   "rain_ok": true,
+   "stay_minutes": 45,
+   "parking": {
+    "available": true,
+    "type": "dedicated",
+    "name": "ゆめタウン八代 屋上停車場（OSM）",
+    "fee": null,
+    "capacity": null,
+    "lat": 32.5054708,
+    "lng": 130.5856633,
+    "mapcode": "128 310 226*18",
+    "mapcode_source": "Mapion 右鍵取得 128 310 226*18，以 saibara convgeo 反查一致（誤差 0.2 m）；saibara 正向換算 128 310 226*18（反查誤差 0.2 m）。換算點：停車場為 OSM 節點 node/9150478744，以節點座標為準 32.505471,130.585663",
+    "walk_min": null,
+    "note": "商場停車場",
+    "source": "https://www.openstreetmap.org/node/9150478744"
+   },
+   "mapcode": "128 310 226*18",
+   "mapcode_source": "依停車場入口／標記點換算：Mapion 右鍵取得 128 310 226*18，以 saibara convgeo 反查一致（誤差 0.2 m）；saibara 正向換算 128 310 226*18（反查誤差 0.2 m）。換算點：停車場為 OSM 節點 node/9150478744，以節點座標為準 32.505471,130.585663",
+   "ratings": [
+    {
+     "source": "google",
+     "score": 3.4,
+     "scale": 5,
+     "url": "https://www.google.com/maps/place/%E3%82%AB%E3%83%97%E3%82%BB%E3%83%AB%E3%83%88%E3%82%A4RISE(%E3%82%86%E3%82%81%E3%82%BF%E3%82%A6%E3%83%B3%E5%85%AB%E4%BB%A3%E5%BA%97)/@32.5057812,130.5856416,17z/data=!3m1!4b1!4m6!3m5!1s0x35407f088277ddb5:0x46b5ab4a4d0c17c2!8m2!3d32.5057812!4d130.5856416!16s%2Fg%2F11yyq5wt49",
+     "checked_at": "2026-11-11",
+     "check_method": "google_maps_tool"
+    }
+   ],
+   "description": "轉蛋（扭蛋）（ゆめタウン八代 2F）。距最近的路線點「八代城」（AD11）直線約 1.3 km。",
+   "sources": [
+    {
+     "url": "https://www.google.com/maps/place/%E3%82%AB%E3%83%97%E3%82%BB%E3%83%AB%E3%83%88%E3%82%A4RISE(%E3%82%86%E3%82%81%E3%82%BF%E3%82%A6%E3%83%B3%E5%85%AB%E4%BB%A3%E5%BA%97)/@32.5057812,130.5856416,17z/data=!3m1!4b1!4m6!3m5!1s0x35407f088277ddb5:0x46b5ab4a4d0c17c2!8m2!3d32.5057812!4d130.5856416!16s%2Fg%2F11yyq5wt49",
+     "checked_at": "2026-11-11",
+     "title": "Google 地圖店家頁（google_maps_tool 自動查詢）",
+     "fields": [
+      "address",
+      "lat",
+      "lng",
+      "phone",
+      "hours",
+      "closed_days",
+      "ratings.google"
+     ]
+    },
+    {
+     "url": "https://www.openstreetmap.org/node/9150478744",
+     "checked_at": "2026-11-11",
+     "title": "停車場位置：ゆめタウン八代 屋上停車場（OSM）",
+     "fields": [
+      "parking.lat",
+      "parking.lng"
+     ]
+    }
+   ],
+   "field_status": {
+    "tax_free": "待查",
+    "nearest_station": "待查",
+    "stay_minutes": "估計",
+    "season_note": "不適用",
+    "phone": "待查"
+   },
+   "checked_date": "2026-11-11",
+   "proposed_ref": "sp_ag_yatsu_rise",
+   "note": "電話原為 070 開頭（Google 地圖），可能是私人行動或 IP 電話，無法確認是否為公開營業電話，2026-11-11 已改 null 標待查。"
+  },
+  "sp_ag_yatsu_offhouse": {
+   "kind": "spot",
+   "name": "ブックオフ・ハードオフ・オフハウス 熊本八代店",
+   "name_ja": "ブックオフ・ハードオフ・オフハウス 熊本八代店",
+   "categories": [
+    "anime_game"
+   ],
+   "category_source": "spots_dept",
+   "category_basis": "Google 地圖分類「リサイクル ショップ」；販售：二手書、遊戲、玩具、家電（BOOKOFF／HARD OFF 複合店）",
+   "address": "〒866-0873 熊本県八代市横手町字源代１１５２",
+   "lat": 32.5164652,
+   "lng": 130.6108355,
+   "phone": "0965-30-8193",
+   "hours": "10:00–20:00（每日）",
+   "closed_days": "無固定公休（Google 地圖每天都列營業時間）；臨時休業與年末年始待查",
+   "route_days": [
+    {
+     "route": "A",
+     "day": "D10",
+     "date": "2026-11-30",
+     "weekday": "週一",
+     "nearest_stop": "天門橋",
+     "distance_km": 17.7,
+     "open_that_day": true
+    },
+    {
+     "route": "A",
+     "day": "D11",
+     "date": "2026-12-01",
+     "weekday": "週二",
+     "nearest_stop": "八代城",
+     "distance_km": 1.4,
+     "open_that_day": true
+    },
+    {
+     "route": "B",
+     "day": "D10",
+     "date": "2026-11-30",
+     "weekday": "週一",
+     "nearest_stop": "天門橋",
+     "distance_km": 17.7,
+     "open_that_day": true
+    },
+    {
+     "route": "B",
+     "day": "D11",
+     "date": "2026-12-01",
+     "weekday": "週二",
+     "nearest_stop": "高舞登山展望區",
+     "distance_km": 15.9,
+     "open_that_day": true
+    },
+    {
+     "route": "C",
+     "day": "D10",
+     "date": "2026-11-30",
+     "weekday": "週一",
+     "nearest_stop": "天門橋",
+     "distance_km": 17.7,
+     "open_that_day": true
+    },
+    {
+     "route": "C",
+     "day": "D11",
+     "date": "2026-12-01",
+     "weekday": "週二",
+     "nearest_stop": "高舞登山展望區",
+     "distance_km": 15.9,
+     "open_that_day": true
+    }
+   ],
+   "nearest_route_point": {
+    "route": "A",
+    "day": "D11",
+    "stop": "八代城",
+    "distance_km": 1.4,
+    "method": "直線距離（Google 地圖店家座標 ↔ routes.json 站點座標）"
+   },
+   "area_group": "熊本南部／八代／天草（住宿 11/30–12/1；D10–D11）",
+   "suggested_day": "D10（11/30 週一）或 D11（12/1 週二）",
+   "what_to_buy": "二手書、遊戲、玩具、家電（BOOKOFF／HARD OFF 複合店）",
+   "admission": "免費入店",
+   "rain_ok": true,
+   "stay_minutes": 45,
+   "parking": {
+    "available": true,
+    "type": "nearby",
+    "name": "OSM 無名停車場（ブックオフ八代店旁）",
+    "fee": null,
+    "capacity": null,
+    "lat": 32.515719,
+    "lng": 130.6116547,
+    "mapcode": "128 343 440*05",
+    "mapcode_source": "Mapion 右鍵取得 128 343 440*05，以 saibara convgeo 反查一致（誤差 2.4 m）；saibara 正向換算 128 343 440*87（反查誤差 0.5 m）；兩者末段不同，依規則以 Mapion 為準。換算點：停車場 way/1442279428 無入口節點；取輪廓上距車道最近點（約 13 m） 32.515719,130.611655",
+    "walk_min": null,
+    "note": "OSM 店旁無名平面停車場（約 85 m），推定為店家停車場，未經官方確認",
+    "source": "https://www.openstreetmap.org/way/1442279428"
+   },
+   "mapcode": "128 343 440*05",
+   "mapcode_source": "依停車場入口／標記點換算：Mapion 右鍵取得 128 343 440*05，以 saibara convgeo 反查一致（誤差 2.4 m）；saibara 正向換算 128 343 440*87（反查誤差 0.5 m）；兩者末段不同，依規則以 Mapion 為準。換算點：停車場 way/1442279428 無入口節點；取輪廓上距車道最近點（約 13 m） 32.515719,130.611655",
+   "ratings": [
+    {
+     "source": "google",
+     "score": 3.5,
+     "scale": 5,
+     "url": "https://www.google.com/maps/place/%E3%83%96%E3%83%83%E3%82%AF%E3%82%AA%E3%83%95%E3%83%BB%E3%83%8F%E3%83%BC%E3%83%89%E3%82%AA%E3%83%95%E3%83%BB%E3%82%AA%E3%83%95%E3%83%8F%E3%82%A6%E3%82%B9+%E7%86%8A%E6%9C%AC%E5%85%AB%E4%BB%A3%E5%BA%97/@32.5164652,130.6108355,17z/data=!3m1!4b1!4m6!3m5!1s0x35407fb496d3f59f:0x905015dcd0262fd4!8m2!3d32.5164652!4d130.6108355!16s%2Fg%2F1tkb_wv3",
+     "checked_at": "2026-11-11",
+     "check_method": "google_maps_tool"
+    }
+   ],
+   "description": "二手書、遊戲、玩具、家電（BOOKOFF／HARD OFF 複合店）。距最近的路線點「八代城」（AD11）直線約 1.4 km。",
+   "sources": [
+    {
+     "url": "https://www.google.com/maps/place/%E3%83%96%E3%83%83%E3%82%AF%E3%82%AA%E3%83%95%E3%83%BB%E3%83%8F%E3%83%BC%E3%83%89%E3%82%AA%E3%83%95%E3%83%BB%E3%82%AA%E3%83%95%E3%83%8F%E3%82%A6%E3%82%B9+%E7%86%8A%E6%9C%AC%E5%85%AB%E4%BB%A3%E5%BA%97/@32.5164652,130.6108355,17z/data=!3m1!4b1!4m6!3m5!1s0x35407fb496d3f59f:0x905015dcd0262fd4!8m2!3d32.5164652!4d130.6108355!16s%2Fg%2F1tkb_wv3",
+     "checked_at": "2026-11-11",
+     "title": "Google 地圖店家頁（google_maps_tool 自動查詢）",
+     "fields": [
+      "address",
+      "lat",
+      "lng",
+      "phone",
+      "hours",
+      "closed_days",
+      "ratings.google"
+     ]
+    },
+    {
+     "url": "https://www.openstreetmap.org/way/1442279428",
+     "checked_at": "2026-11-11",
+     "title": "停車場位置：OSM 無名停車場（ブックオフ八代店旁）",
+     "fields": [
+      "parking.lat",
+      "parking.lng"
+     ]
+    }
+   ],
+   "field_status": {
+    "tax_free": "待查",
+    "nearest_station": "待查",
+    "stay_minutes": "估計",
+    "season_note": "不適用"
+   },
+   "checked_date": "2026-11-11",
+   "proposed_ref": "sp_ag_yatsu_offhouse"
+  },
+  "sp_ag_uto_hardoff": {
+   "kind": "spot",
+   "name": "ハードオフ熊本宇土店",
+   "name_ja": "ハードオフ熊本宇土店",
+   "categories": [
+    "anime_game"
+   ],
+   "category_source": "spots_dept",
+   "category_basis": "Google 地圖分類「リサイクル ショップ」；販售：二手遊戲主機、電玩、玩具（HARD OFF；同址有 BOOKOFF、OFF HOUSE）",
+   "address": "〒869-0411 熊本県宇土市水町５０−１",
+   "lat": 32.6916903,
+   "lng": 130.6736206,
+   "phone": "0964-23-1150",
+   "hours": "10:00–20:00（每日）",
+   "closed_days": "無固定公休（Google 地圖每天都列營業時間）；臨時休業與年末年始待查",
+   "route_days": [
+    {
+     "route": "A",
+     "day": "D10",
+     "date": "2026-11-30",
+     "weekday": "週一",
+     "nearest_stop": "天門橋",
+     "distance_km": 22.0,
+     "open_that_day": true
+    },
+    {
+     "route": "A",
+     "day": "D11",
+     "date": "2026-12-01",
+     "weekday": "週二",
+     "nearest_stop": "道の駅 宇土ﾏﾘｰﾅ",
+     "distance_km": 14.5,
+     "open_that_day": true
+    },
+    {
+     "route": "B",
+     "day": "D10",
+     "date": "2026-11-30",
+     "weekday": "週一",
+     "nearest_stop": "天門橋",
+     "distance_km": 22.0,
+     "open_that_day": true
+    },
+    {
+     "route": "B",
+     "day": "D11",
+     "date": "2026-12-01",
+     "weekday": "週二",
+     "nearest_stop": "天門橋",
+     "distance_km": 22.0,
+     "open_that_day": true
+    },
+    {
+     "route": "C",
+     "day": "D10",
+     "date": "2026-11-30",
+     "weekday": "週一",
+     "nearest_stop": "天門橋",
+     "distance_km": 22.0,
+     "open_that_day": true
+    },
+    {
+     "route": "C",
+     "day": "D11",
+     "date": "2026-12-01",
+     "weekday": "週二",
+     "nearest_stop": "道の駅 宇土ﾏﾘｰﾅ",
+     "distance_km": 14.5,
+     "open_that_day": true
+    }
+   ],
+   "nearest_route_point": {
+    "route": "A",
+    "day": "D11",
+    "stop": "道の駅 宇土ﾏﾘｰﾅ",
+    "distance_km": 14.5,
+    "method": "直線距離（Google 地圖店家座標 ↔ routes.json 站點座標）"
+   },
+   "area_group": "熊本南部／八代／天草（住宿 11/30–12/1；D10–D11）",
+   "suggested_day": "D10（11/30 週一）或 D11（12/1 週二）",
+   "what_to_buy": "二手遊戲主機、電玩、玩具（HARD OFF；同址有 BOOKOFF、OFF HOUSE）",
+   "admission": "免費入店",
+   "rain_ok": true,
+   "stay_minutes": 45,
+   "parking": {
+    "available": true,
+    "type": "nearby",
+    "name": "OSM 無名停車場（ハードオフ宇土店旁）",
+    "fee": null,
+    "capacity": null,
+    "lat": 32.6907035,
+    "lng": 130.6746027,
+    "mapcode": "29 066 427*85",
+    "mapcode_source": "Mapion 右鍵取得 29 066 427*85，以 saibara convgeo 反查一致（誤差 2.8 m）；saibara 正向換算 29 066 426*17（反查誤差 0.3 m）；兩者末段不同，依規則以 Mapion 為準。換算點：停車場 way/733888796 無入口節點；取輪廓上距車道最近點（約 3 m） 32.690703,130.674603",
+    "walk_min": null,
+    "note": "OSM 店旁無名平面停車場（約 120 m），推定為店家停車場，未經官方確認",
+    "source": "https://www.openstreetmap.org/way/733888796"
+   },
+   "mapcode": "29 066 427*85",
+   "mapcode_source": "依停車場入口／標記點換算：Mapion 右鍵取得 29 066 427*85，以 saibara convgeo 反查一致（誤差 2.8 m）；saibara 正向換算 29 066 426*17（反查誤差 0.3 m）；兩者末段不同，依規則以 Mapion 為準。換算點：停車場 way/733888796 無入口節點；取輪廓上距車道最近點（約 3 m） 32.690703,130.674603",
+   "ratings": [
+    {
+     "source": "google",
+     "score": 3.5,
+     "scale": 5,
+     "url": "https://www.google.com/maps/place/%E3%83%8F%E3%83%BC%E3%83%89%E3%82%AA%E3%83%95%E7%86%8A%E6%9C%AC%E5%AE%87%E5%9C%9F%E5%BA%97/@32.6916903,130.6736206,17z/data=!3m1!4b1!4m6!3m5!1s0x35408a329b07fc45:0x4e36fa79e26bf6d7!8m2!3d32.6916903!4d130.6736206!16s%2Fg%2F11b77hsk2v",
+     "checked_at": "2026-11-11",
+     "check_method": "google_maps_tool"
+    }
+   ],
+   "description": "二手遊戲主機、電玩、玩具（HARD OFF；同址有 BOOKOFF、OFF HOUSE）。距最近的路線點「道の駅 宇土ﾏﾘｰﾅ」（AD11）直線約 14.5 km。",
+   "sources": [
+    {
+     "url": "https://www.google.com/maps/place/%E3%83%8F%E3%83%BC%E3%83%89%E3%82%AA%E3%83%95%E7%86%8A%E6%9C%AC%E5%AE%87%E5%9C%9F%E5%BA%97/@32.6916903,130.6736206,17z/data=!3m1!4b1!4m6!3m5!1s0x35408a329b07fc45:0x4e36fa79e26bf6d7!8m2!3d32.6916903!4d130.6736206!16s%2Fg%2F11b77hsk2v",
+     "checked_at": "2026-11-11",
+     "title": "Google 地圖店家頁（google_maps_tool 自動查詢）",
+     "fields": [
+      "address",
+      "lat",
+      "lng",
+      "phone",
+      "hours",
+      "closed_days",
+      "ratings.google"
+     ]
+    },
+    {
+     "url": "https://www.openstreetmap.org/way/733888796",
+     "checked_at": "2026-11-11",
+     "title": "停車場位置：OSM 無名停車場（ハードオフ宇土店旁）",
+     "fields": [
+      "parking.lat",
+      "parking.lng"
+     ]
+    }
+   ],
+   "field_status": {
+    "tax_free": "待查",
+    "nearest_station": "待查",
+    "stay_minutes": "估計",
+    "season_note": "不適用"
+   },
+   "checked_date": "2026-11-11",
+   "proposed_ref": "sp_ag_uto_hardoff",
+   "note": "離 D11 最近路線點約 14.5 km，需繞路。"
+  },
+  "sp_ag_kumamoto_mugiwara": {
+   "kind": "spot",
+   "name": "ONE PIECE 麦わらストア 熊本店",
+   "name_ja": "ONE PIECE 麦わらストア 熊本店",
+   "categories": [
+    "anime_game"
+   ],
+   "category_source": "spots_dept",
+   "category_basis": "Google 地圖分類「ホビーショップ」；販售：ONE PIECE 官方周邊（熊本是作者尾田榮一郎的故鄉）",
+   "address": "〒860-0047 熊本県熊本市西区春日３丁目１５−15番地26 アミュプラザくまもと 6F",
+   "lat": 32.7889204,
+   "lng": 130.6888719,
+   "phone": "096-276-6939",
+   "hours": "10:00–20:00（每日）",
+   "closed_days": "無固定公休（Google 地圖每天都列營業時間）；臨時休業與年末年始待查",
+   "route_days": [
+    {
+     "route": "A",
+     "day": "D10",
+     "date": "2026-11-30",
+     "weekday": "週一",
+     "nearest_stop": "天門橋",
+     "distance_km": 29.2,
+     "open_that_day": true
+    },
+    {
+     "route": "A",
+     "day": "D11",
+     "date": "2026-12-01",
+     "weekday": "週二",
+     "nearest_stop": "道の駅 宇土ﾏﾘｰﾅ",
+     "distance_km": 20.9,
+     "open_that_day": true
+    },
+    {
+     "route": "B",
+     "day": "D10",
+     "date": "2026-11-30",
+     "weekday": "週一",
+     "nearest_stop": "天門橋",
+     "distance_km": 29.2,
+     "open_that_day": true
+    },
+    {
+     "route": "B",
+     "day": "D11",
+     "date": "2026-12-01",
+     "weekday": "週二",
+     "nearest_stop": "天門橋",
+     "distance_km": 29.2,
+     "open_that_day": true
+    },
+    {
+     "route": "C",
+     "day": "D10",
+     "date": "2026-11-30",
+     "weekday": "週一",
+     "nearest_stop": "天門橋",
+     "distance_km": 29.2,
+     "open_that_day": true
+    },
+    {
+     "route": "C",
+     "day": "D11",
+     "date": "2026-12-01",
+     "weekday": "週二",
+     "nearest_stop": "道の駅 宇土ﾏﾘｰﾅ",
+     "distance_km": 20.9,
+     "open_that_day": true
+    }
+   ],
+   "nearest_route_point": {
+    "route": "A",
+    "day": "D11",
+    "stop": "道の駅 宇土ﾏﾘｰﾅ",
+    "distance_km": 20.9,
+    "method": "直線距離（Google 地圖店家座標 ↔ routes.json 站點座標）"
+   },
+   "area_group": "熊本南部／八代／天草（住宿 11/30–12/1；D10–D11）",
+   "suggested_day": "D10（11/30 週一）或 D11（12/1 週二）",
+   "what_to_buy": "ONE PIECE 官方周邊（熊本是作者尾田榮一郎的故鄉）",
+   "nearest_station": "JR 熊本駅（アミュプラザくまもと 6F）",
+   "admission": "免費入店",
+   "rain_ok": true,
+   "stay_minutes": 45,
+   "parking": {
+    "available": true,
+    "type": "nearby",
+    "name": "ＪＲ熊本駅ビル第１",
+    "fee": null,
+    "capacity": null,
+    "lat": 32.7878283,
+    "lng": 130.6881523,
+    "mapcode": "29 427 145*76",
+    "mapcode_source": "Mapion 右鍵取得 29 427 145*76，以 saibara convgeo 反查一致（誤差 2.6 m）；saibara 正向換算 29 427 145*75（反查誤差 1.1 m）；兩者末段不同，依規則以 Mapion 為準。換算點：Google 地圖「ＪＲ熊本駅ビル第１」標記點（非精確入口） 32.787828,130.688152",
+    "walk_min": null,
+    "note": "JR 熊本駅ビル第1停車場（車站商場停車場）；費用與優惠待查",
+    "source": "https://www.google.com/maps/place/%EF%BC%AA%EF%BC%B2%E7%86%8A%E6%9C%AC%E9%A7%85%E3%83%93%E3%83%AB%E7%AC%AC%EF%BC%91/data=!4m7!3m6!1s0x3540f55b0d017c19:0xcb2bd0bb96e6674a!8m2!3d32.7878283!4d130.6881523!16s%2Fg%2F11mwl5hvkb!19sChIJGXwBDVv1QDURSmfmlrvQK8s"
+   },
+   "mapcode": "29 427 145*76",
+   "mapcode_source": "依停車場入口／標記點換算：Mapion 右鍵取得 29 427 145*76，以 saibara convgeo 反查一致（誤差 2.6 m）；saibara 正向換算 29 427 145*75（反查誤差 1.1 m）；兩者末段不同，依規則以 Mapion 為準。換算點：Google 地圖「ＪＲ熊本駅ビル第１」標記點（非精確入口） 32.787828,130.688152",
+   "ratings": [
+    {
+     "source": "google",
+     "score": 4.1,
+     "scale": 5,
+     "url": "https://www.google.com/maps/place/ONE+PIECE+%E9%BA%A6%E3%82%8F%E3%82%89%E3%82%B9%E3%83%88%E3%82%A2+%E7%86%8A%E6%9C%AC%E5%BA%97/@32.7889204,130.6888719,17z/data=!3m1!4b1!4m6!3m5!1s0x3540f5d65dee2541:0xd71d0ad4ae84dd32!8m2!3d32.7889204!4d130.6888719!16s%2Fg%2F11my56wsf5",
+     "checked_at": "2026-11-11",
+     "check_method": "google_maps_tool"
+    }
+   ],
+   "description": "ONE PIECE 官方周邊（熊本是作者尾田榮一郎的故鄉）。距最近的路線點「道の駅 宇土ﾏﾘｰﾅ」（AD11）直線約 20.9 km。",
+   "sources": [
+    {
+     "url": "https://www.google.com/maps/place/ONE+PIECE+%E9%BA%A6%E3%82%8F%E3%82%89%E3%82%B9%E3%83%88%E3%82%A2+%E7%86%8A%E6%9C%AC%E5%BA%97/@32.7889204,130.6888719,17z/data=!3m1!4b1!4m6!3m5!1s0x3540f5d65dee2541:0xd71d0ad4ae84dd32!8m2!3d32.7889204!4d130.6888719!16s%2Fg%2F11my56wsf5",
+     "checked_at": "2026-11-11",
+     "title": "Google 地圖店家頁（google_maps_tool 自動查詢）",
+     "fields": [
+      "address",
+      "lat",
+      "lng",
+      "phone",
+      "hours",
+      "closed_days",
+      "ratings.google"
+     ]
+    },
+    {
+     "url": "https://www.google.com/maps/place/%EF%BC%AA%EF%BC%B2%E7%86%8A%E6%9C%AC%E9%A7%85%E3%83%93%E3%83%AB%E7%AC%AC%EF%BC%91/data=!4m7!3m6!1s0x3540f55b0d017c19:0xcb2bd0bb96e6674a!8m2!3d32.7878283!4d130.6881523!16s%2Fg%2F11mwl5hvkb!19sChIJGXwBDVv1QDURSmfmlrvQK8s",
+     "checked_at": "2026-11-11",
+     "title": "停車場位置：ＪＲ熊本駅ビル第１",
+     "fields": [
+      "parking.lat",
+      "parking.lng"
+     ]
+    },
+    {
+     "url": "https://www.mugiwara-store.com/store/7206",
+     "checked_at": "2026-11-11",
+     "title": "ONE PIECE 麦わらストア 官網店舖頁",
+     "fields": [
+      "hours",
+      "address"
+     ]
+    }
+   ],
+   "field_status": {
+    "tax_free": "待查",
+    "stay_minutes": "估計",
+    "season_note": "不適用"
+   },
+   "checked_date": "2026-11-11",
+   "proposed_ref": "sp_ag_kumamoto_mugiwara",
+   "note": "離 D10／D11 路線點約 21–24 km，需繞進熊本市區（JR 熊本駅）。"
+  },
+  "sp_ag_kumamoto_animate": {
+   "kind": "spot",
+   "name": "アニメイト熊本",
+   "name_ja": "アニメイト熊本",
+   "categories": [
+    "anime_game"
+   ],
+   "category_source": "spots_dept",
+   "category_basis": "Google 地圖分類「コミック書店」；販售：動漫周邊、漫畫、CD/BD、遊戲",
+   "address": "〒860-0808 熊本県熊本市中央区手取本町４−１２ 3F",
+   "lat": 32.802681,
+   "lng": 130.709399,
+   "phone": "096-311-0133",
+   "hours": "10:00–20:00（每日）",
+   "closed_days": "無固定公休（Google 地圖每天都列營業時間）；臨時休業與年末年始待查",
+   "route_days": [
+    {
+     "route": "A",
+     "day": "D10",
+     "date": "2026-11-30",
+     "weekday": "週一",
+     "nearest_stop": "通潤橋",
+     "distance_km": 29.8,
+     "open_that_day": true
+    },
+    {
+     "route": "A",
+     "day": "D11",
+     "date": "2026-12-01",
+     "weekday": "週二",
+     "nearest_stop": "道の駅 宇土ﾏﾘｰﾅ",
+     "distance_km": 23.4,
+     "open_that_day": true
+    },
+    {
+     "route": "B",
+     "day": "D10",
+     "date": "2026-11-30",
+     "weekday": "週一",
+     "nearest_stop": "天門橋",
+     "distance_km": 31.6,
+     "open_that_day": true
+    },
+    {
+     "route": "B",
+     "day": "D11",
+     "date": "2026-12-01",
+     "weekday": "週二",
+     "nearest_stop": "天門橋",
+     "distance_km": 31.6,
+     "open_that_day": true
+    },
+    {
+     "route": "C",
+     "day": "D10",
+     "date": "2026-11-30",
+     "weekday": "週一",
+     "nearest_stop": "天門橋",
+     "distance_km": 31.6,
+     "open_that_day": true
+    },
+    {
+     "route": "C",
+     "day": "D11",
+     "date": "2026-12-01",
+     "weekday": "週二",
+     "nearest_stop": "道の駅 宇土ﾏﾘｰﾅ",
+     "distance_km": 23.4,
+     "open_that_day": true
+    }
+   ],
+   "nearest_route_point": {
+    "route": "A",
+    "day": "D11",
+    "stop": "道の駅 宇土ﾏﾘｰﾅ",
+    "distance_km": 23.4,
+    "method": "直線距離（Google 地圖店家座標 ↔ routes.json 站點座標）"
+   },
+   "area_group": "熊本南部／八代／天草（住宿 11/30–12/1；D10–D11）",
+   "suggested_day": "D10（11/30 週一）或 D11（12/1 週二）",
+   "what_to_buy": "動漫周邊、漫畫、CD/BD、遊戲",
+   "admission": "免費入店",
+   "rain_ok": true,
+   "stay_minutes": 45,
+   "parking": {
+    "available": true,
+    "type": "nearby",
+    "name": "熊本市駐車場（OSM）",
+    "fee": null,
+    "capacity": null,
+    "lat": 32.8028963,
+    "lng": 130.7086191,
+    "mapcode": "29 460 849*06",
+    "mapcode_source": "Mapion 右鍵取得 29 460 849*06，以 saibara convgeo 反查一致（誤差 2.5 m）；saibara 正向換算 29 460 849*05（反查誤差 1.9 m）；兩者末段不同，依規則以 Mapion 為準。換算點：停車場 way/412295519 無入口節點；取輪廓上距車道最近點（約 8 m） 32.802896,130.708619",
+    "walk_min": null,
+    "note": "OSM「熊本市駐車場」（約 90 m，公共立體停車場），非店家提携，費用待查",
+    "source": "https://www.openstreetmap.org/way/412295519"
+   },
+   "mapcode": "29 460 849*06",
+   "mapcode_source": "依停車場入口／標記點換算：Mapion 右鍵取得 29 460 849*06，以 saibara convgeo 反查一致（誤差 2.5 m）；saibara 正向換算 29 460 849*05（反查誤差 1.9 m）；兩者末段不同，依規則以 Mapion 為準。換算點：停車場 way/412295519 無入口節點；取輪廓上距車道最近點（約 8 m） 32.802896,130.708619",
+   "ratings": [
+    {
+     "source": "google",
+     "score": 4.1,
+     "scale": 5,
+     "url": "https://www.google.com/maps/place/%E3%82%A2%E3%83%8B%E3%83%A1%E3%82%A4%E3%83%88%E7%86%8A%E6%9C%AC/@32.802681,130.709399,17z/data=!3m1!4b1!4m6!3m5!1s0x3540f40c5b55c3f1:0x68b20b1febcc0efe!8m2!3d32.802681!4d130.709399!16s%2Fg%2F1tltk3xv",
+     "checked_at": "2026-11-11",
+     "check_method": "google_maps_tool"
+    }
+   ],
+   "description": "動漫周邊、漫畫、CD/BD、遊戲。距最近的路線點「道の駅 宇土ﾏﾘｰﾅ」（AD11）直線約 23.4 km。",
+   "sources": [
+    {
+     "url": "https://www.google.com/maps/place/%E3%82%A2%E3%83%8B%E3%83%A1%E3%82%A4%E3%83%88%E7%86%8A%E6%9C%AC/@32.802681,130.709399,17z/data=!3m1!4b1!4m6!3m5!1s0x3540f40c5b55c3f1:0x68b20b1febcc0efe!8m2!3d32.802681!4d130.709399!16s%2Fg%2F1tltk3xv",
+     "checked_at": "2026-11-11",
+     "title": "Google 地圖店家頁（google_maps_tool 自動查詢）",
+     "fields": [
+      "address",
+      "lat",
+      "lng",
+      "phone",
+      "hours",
+      "closed_days",
+      "ratings.google"
+     ]
+    },
+    {
+     "url": "https://www.openstreetmap.org/way/412295519",
+     "checked_at": "2026-11-11",
+     "title": "停車場位置：熊本市駐車場（OSM）",
+     "fields": [
+      "parking.lat",
+      "parking.lng"
+     ]
+    }
+   ],
+   "field_status": {
+    "tax_free": "待查",
+    "nearest_station": "待查",
+    "stay_minutes": "估計",
+    "season_note": "不適用"
+   },
+   "checked_date": "2026-11-11",
+   "proposed_ref": "sp_ag_kumamoto_animate",
+   "note": "離 D10／D11 路線點約 23 km，需繞進熊本市中心（下通一帶）。"
+  },
+  "sp_ag_amakusa_gachamori": {
+   "kind": "spot",
+   "name": "ガチャガチャの森 TSUTAYA天草店",
+   "name_ja": "ガチャガチャの森 TSUTAYA天草店",
+   "categories": [
+    "anime_game"
+   ],
+   "category_source": "spots_dept",
+   "category_basis": "Google 地圖分類「店舗」；販售：轉蛋（扭蛋）（TSUTAYA 天草店內）",
+   "address": "〒863-0031 熊本県天草市南新町６−６",
+   "lat": 32.4535977,
+   "lng": 130.1943976,
+   "phone": "0969-23-5005",
+   "hours": "09:00–22:00（每日）",
+   "closed_days": "無固定公休（Google 地圖每天都列營業時間）；臨時休業與年末年始待查",
+   "route_days": [
+    {
+     "route": "A",
+     "day": "D10",
+     "date": "2026-11-30",
+     "weekday": "週一",
+     "nearest_stop": "天門橋",
+     "distance_km": 30.3,
+     "open_that_day": true
+    },
+    {
+     "route": "A",
+     "day": "D11",
+     "date": "2026-12-01",
+     "weekday": "週二",
+     "nearest_stop": "高舞登山展望區",
+     "distance_km": 24.4,
+     "open_that_day": true
+    },
+    {
+     "route": "B",
+     "day": "D10",
+     "date": "2026-11-30",
+     "weekday": "週一",
+     "nearest_stop": "天門橋",
+     "distance_km": 30.3,
+     "open_that_day": true
+    },
+    {
+     "route": "B",
+     "day": "D11",
+     "date": "2026-12-01",
+     "weekday": "週二",
+     "nearest_stop": "棚底城跡",
+     "distance_km": 13.7,
+     "open_that_day": true
+    },
+    {
+     "route": "C",
+     "day": "D10",
+     "date": "2026-11-30",
+     "weekday": "週一",
+     "nearest_stop": "天門橋",
+     "distance_km": 30.3,
+     "open_that_day": true
+    },
+    {
+     "route": "C",
+     "day": "D11",
+     "date": "2026-12-01",
+     "weekday": "週二",
+     "nearest_stop": "高舞登山展望區",
+     "distance_km": 24.4,
+     "open_that_day": true
+    }
+   ],
+   "nearest_route_point": {
+    "route": "B",
+    "day": "D11",
+    "stop": "棚底城跡",
+    "distance_km": 13.7,
+    "method": "直線距離（Google 地圖店家座標 ↔ routes.json 站點座標）"
+   },
+   "area_group": "熊本南部／八代／天草（住宿 11/30–12/1；D10–D11）",
+   "suggested_day": "D10（11/30 週一）或 D11（12/1 週二）",
+   "what_to_buy": "轉蛋（扭蛋）（TSUTAYA 天草店內）",
+   "admission": "免費入店",
+   "rain_ok": true,
+   "stay_minutes": 45,
+   "parking": {
+    "available": null,
+    "type": null,
+    "name": null,
+    "fee": null,
+    "capacity": null,
+    "lat": null,
+    "lng": null,
+    "mapcode": null,
+    "mapcode_source": null,
+    "walk_min": null,
+    "note": "停車場位置未查到；停車場入口座標待查，MapCode 未換算（不以店家座標代替）",
+    "source": null
+   },
+   "ratings": [
+    {
+     "source": "google",
+     "score": 4.0,
+     "scale": 5,
+     "url": "https://www.google.com/maps/place/%E3%82%AC%E3%83%81%E3%83%A3%E3%82%AC%E3%83%81%E3%83%A3%E3%81%AE%E6%A3%AE+TSUTAYA%E5%A4%A9%E8%8D%89%E5%BA%97/@32.4535977,130.1943976,17z/data=!3m1!4b1!4m6!3m5!1s0x353fef12bc94c985:0x17595e109ed79c6f!8m2!3d32.4535977!4d130.1943976!16s%2Fg%2F11zxms15k4",
+     "checked_at": "2026-11-11",
+     "check_method": "google_maps_tool"
+    }
+   ],
+   "description": "轉蛋（扭蛋）（TSUTAYA 天草店內）。距最近的路線點「棚底城跡」（BD11）直線約 13.7 km。",
+   "sources": [
+    {
+     "url": "https://www.google.com/maps/place/%E3%82%AC%E3%83%81%E3%83%A3%E3%82%AC%E3%83%81%E3%83%A3%E3%81%AE%E6%A3%AE+TSUTAYA%E5%A4%A9%E8%8D%89%E5%BA%97/@32.4535977,130.1943976,17z/data=!3m1!4b1!4m6!3m5!1s0x353fef12bc94c985:0x17595e109ed79c6f!8m2!3d32.4535977!4d130.1943976!16s%2Fg%2F11zxms15k4",
+     "checked_at": "2026-11-11",
+     "title": "Google 地圖店家頁（google_maps_tool 自動查詢）",
+     "fields": [
+      "address",
+      "lat",
+      "lng",
+      "phone",
+      "hours",
+      "closed_days",
+      "ratings.google"
+     ]
+    }
+   ],
+   "field_status": {
+    "tax_free": "待查",
+    "nearest_station": "待查",
+    "stay_minutes": "估計",
+    "season_note": "不適用",
+    "mapcode": "待查"
+   },
+   "checked_date": "2026-11-11",
+   "proposed_ref": "sp_ag_amakusa_gachamori",
+   "note": "只適合 B 路線 D11（12/1，棚底城跡往南約 13.7 km）；上天草住宿附近沒找到更近的同類店。"
+  },
+  "sp_ag_takeo_mangasouko": {
+   "kind": "spot",
+   "name": "マンガ倉庫 武雄店 カプセル倉庫別館",
+   "name_ja": "マンガ倉庫 武雄店 カプセル倉庫別館",
+   "categories": [
+    "anime_game"
+   ],
+   "category_source": "spots_dept",
+   "category_basis": "Google 地圖分類「アミューズメント センター」；販售：轉蛋（カプセル倉庫別館），本館為二手漫畫、遊戲、公仔",
+   "address": "〒843-0222 佐賀県武雄市武雄町大字武雄５７７６−１",
+   "lat": 33.1883671,
+   "lng": 130.0121574,
+   "phone": "0954-27-7877",
+   "hours": "10:00–22:00（每日）",
+   "closed_days": "無固定公休（Google 地圖每天都列營業時間）；臨時休業與年末年始待查",
+   "route_days": [
+    {
+     "route": "A",
+     "day": "D12",
+     "date": "2026-12-02",
+     "weekday": "週三",
+     "nearest_stop": "嬉野溫泉街",
+     "distance_km": 9.2,
+     "open_that_day": true
+    },
+    {
+     "route": "A",
+     "day": "D13",
+     "date": "2026-12-03",
+     "weekday": "週四",
+     "nearest_stop": "御船山樂園",
+     "distance_km": 0.9,
+     "open_that_day": true
+    },
+    {
+     "route": "B",
+     "day": "D12",
+     "date": "2026-12-02",
+     "weekday": "週三",
+     "nearest_stop": "有田ポーセリンパーク",
+     "distance_km": 10.0,
+     "open_that_day": true
+    },
+    {
+     "route": "B",
+     "day": "D13",
+     "date": "2026-12-03",
+     "weekday": "週四",
+     "nearest_stop": "佐賀県立宇宙科学館",
+     "distance_km": 2.4,
+     "open_that_day": true
+    },
+    {
+     "route": "C",
+     "day": "D12",
+     "date": "2026-12-02",
+     "weekday": "週三",
+     "nearest_stop": "嬉野溫泉街",
+     "distance_km": 9.2,
+     "open_that_day": true
+    },
+    {
+     "route": "C",
+     "day": "D13",
+     "date": "2026-12-03",
+     "weekday": "週四",
+     "nearest_stop": "嬉野溫泉街",
+     "distance_km": 9.2,
+     "open_that_day": true
+    }
+   ],
+   "nearest_route_point": {
+    "route": "A",
+    "day": "D13",
+    "stop": "御船山樂園",
+    "distance_km": 0.9,
+    "method": "直線距離（Google 地圖店家座標 ↔ routes.json 站點座標）"
+   },
+   "area_group": "嬉野／武雄／鹿島（住宿 12/2–3；D12–D13）",
+   "suggested_day": "D13（12/3 週四）武雄・鹿島行程順道",
+   "what_to_buy": "轉蛋（カプセル倉庫別館），本館為二手漫畫、遊戲、公仔",
+   "admission": "免費入店",
+   "rain_ok": true,
+   "stay_minutes": 45,
+   "parking": {
+    "available": true,
+    "type": "nearby",
+    "name": "OSM 無名停車場（マンガ倉庫武雄店旁）",
+    "fee": null,
+    "capacity": null,
+    "lat": 33.1886589,
+    "lng": 130.0122968,
+    "mapcode": "104 376 232*63",
+    "mapcode_source": "Mapion 右鍵取得 104 376 232*63，以 saibara convgeo 反查一致（誤差 0.7 m）；saibara 正向換算 104 376 232*63（反查誤差 0.7 m）。換算點：停車場 way/459910839 無入口節點；取輪廓上距車道最近點（約 4 m） 33.188659,130.012297",
+    "walk_min": null,
+    "note": "OSM 店旁無名停車場（約 50 m），推定為店家停車場，未經官方確認",
+    "source": "https://www.openstreetmap.org/way/459910839"
+   },
+   "mapcode": "104 376 232*63",
+   "mapcode_source": "依停車場入口／標記點換算：Mapion 右鍵取得 104 376 232*63，以 saibara convgeo 反查一致（誤差 0.7 m）；saibara 正向換算 104 376 232*63（反查誤差 0.7 m）。換算點：停車場 way/459910839 無入口節點；取輪廓上距車道最近點（約 4 m） 33.188659,130.012297",
+   "ratings": [
+    {
+     "source": "google",
+     "score": 3.6,
+     "scale": 5,
+     "url": "https://www.google.com/maps/place/%E3%83%9E%E3%83%B3%E3%82%AC%E5%80%89%E5%BA%AB+%E6%AD%A6%E9%9B%84%E5%BA%97+%E3%82%AB%E3%83%97%E3%82%BB%E3%83%AB%E5%80%89%E5%BA%AB%E5%88%A5%E9%A4%A8/@33.1883671,130.0121574,17z/data=!3m1!4b1!4m6!3m5!1s0x35402934965655ed:0x1dfda8177e4e114b!8m2!3d33.1883671!4d130.0121574!16s%2Fg%2F11xmqrx2zg",
+     "checked_at": "2026-11-11",
+     "check_method": "google_maps_tool"
+    }
+   ],
+   "description": "轉蛋（カプセル倉庫別館），本館為二手漫畫、遊戲、公仔。距最近的路線點「御船山樂園」（AD13）直線約 0.9 km。",
+   "sources": [
+    {
+     "url": "https://www.google.com/maps/place/%E3%83%9E%E3%83%B3%E3%82%AC%E5%80%89%E5%BA%AB+%E6%AD%A6%E9%9B%84%E5%BA%97+%E3%82%AB%E3%83%97%E3%82%BB%E3%83%AB%E5%80%89%E5%BA%AB%E5%88%A5%E9%A4%A8/@33.1883671,130.0121574,17z/data=!3m1!4b1!4m6!3m5!1s0x35402934965655ed:0x1dfda8177e4e114b!8m2!3d33.1883671!4d130.0121574!16s%2Fg%2F11xmqrx2zg",
+     "checked_at": "2026-11-11",
+     "title": "Google 地圖店家頁（google_maps_tool 自動查詢）",
+     "fields": [
+      "address",
+      "lat",
+      "lng",
+      "phone",
+      "hours",
+      "closed_days",
+      "ratings.google"
+     ]
+    },
+    {
+     "url": "https://www.openstreetmap.org/way/459910839",
+     "checked_at": "2026-11-11",
+     "title": "停車場位置：OSM 無名停車場（マンガ倉庫武雄店旁）",
+     "fields": [
+      "parking.lat",
+      "parking.lng"
+     ]
+    }
+   ],
+   "field_status": {
+    "tax_free": "待查",
+    "nearest_station": "待查",
+    "stay_minutes": "估計",
+    "season_note": "不適用"
+   },
+   "checked_date": "2026-11-11",
+   "proposed_ref": "sp_ag_takeo_mangasouko"
+  },
+  "sp_ag_takeo_gashapon": {
+   "kind": "spot",
+   "name": "ガシャポンのデパート ゆめタウン武雄店",
+   "name_ja": "ガシャポンのデパート ゆめタウン武雄店",
+   "categories": [
+    "anime_game"
+   ],
+   "category_source": "spots_dept",
+   "category_basis": "Google 地圖分類「おもちゃ店」；販售：萬代轉蛋專門店（ゆめタウン武雄 2F）",
+   "address": "〒843-0022 佐賀県武雄市武雄町大字武雄４９９２ ゆめタウン武雄 2F",
+   "lat": 33.1887343,
+   "lng": 130.0248781,
+   "phone": "0954-22-5076",
+   "hours": "10:00–20:00（每日）",
+   "closed_days": "無固定公休（Google 地圖每天都列營業時間）；臨時休業與年末年始待查",
+   "route_days": [
+    {
+     "route": "A",
+     "day": "D12",
+     "date": "2026-12-02",
+     "weekday": "週三",
+     "nearest_stop": "嬉野溫泉街",
+     "distance_km": 9.4,
+     "open_that_day": true
+    },
+    {
+     "route": "A",
+     "day": "D13",
+     "date": "2026-12-03",
+     "weekday": "週四",
+     "nearest_stop": "御船山樂園",
+     "distance_km": 1.0,
+     "open_that_day": true
+    },
+    {
+     "route": "B",
+     "day": "D12",
+     "date": "2026-12-02",
+     "weekday": "週三",
+     "nearest_stop": "有田ポーセリンパーク",
+     "distance_km": 11.2,
+     "open_that_day": true
+    },
+    {
+     "route": "B",
+     "day": "D13",
+     "date": "2026-12-03",
+     "weekday": "週四",
+     "nearest_stop": "佐賀県立宇宙科学館",
+     "distance_km": 1.4,
+     "open_that_day": true
+    },
+    {
+     "route": "C",
+     "day": "D12",
+     "date": "2026-12-02",
+     "weekday": "週三",
+     "nearest_stop": "嬉野溫泉街",
+     "distance_km": 9.4,
+     "open_that_day": true
+    },
+    {
+     "route": "C",
+     "day": "D13",
+     "date": "2026-12-03",
+     "weekday": "週四",
+     "nearest_stop": "嬉野溫泉街",
+     "distance_km": 9.4,
+     "open_that_day": true
+    }
+   ],
+   "nearest_route_point": {
+    "route": "A",
+    "day": "D13",
+    "stop": "御船山樂園",
+    "distance_km": 1.0,
+    "method": "直線距離（Google 地圖店家座標 ↔ routes.json 站點座標）"
+   },
+   "area_group": "嬉野／武雄／鹿島（住宿 12/2–3；D12–D13）",
+   "suggested_day": "D13（12/3 週四）武雄・鹿島行程順道",
+   "what_to_buy": "萬代轉蛋專門店（ゆめタウン武雄 2F）",
+   "admission": "免費入店",
+   "rain_ok": true,
+   "stay_minutes": 45,
+   "parking": {
+    "available": true,
+    "type": "dedicated",
+    "name": "ゆめタウン武雄店・武雄競輪場 兼用駐車場",
+    "fee": null,
+    "capacity": null,
+    "lat": 33.187048,
+    "lng": 130.0247202,
+    "mapcode": "104 378 037*81",
+    "mapcode_source": "Mapion 右鍵取得 104 378 037*81，以 saibara convgeo 反查一致（誤差 1.9 m）；saibara 正向換算 104 378 037*80（反查誤差 1.1 m）；兩者末段不同，依規則以 Mapion 為準。換算點：Google 地圖「ゆめタウン武雄店・武雄競輪場 兼用駐車場」標記點（非精確入口） 33.187048,130.024720",
+    "walk_min": null,
+    "note": "商場停車場",
+    "source": "https://www.google.com/maps/place/%E3%82%86%E3%82%81%E3%82%BF%E3%82%A6%E3%83%B3%E6%AD%A6%E9%9B%84%E5%BA%97%E3%83%BB%E6%AD%A6%E9%9B%84%E7%AB%B6%E8%BC%AA%E5%A0%B4+%E5%85%BC%E7%94%A8%E9%A7%90%E8%BB%8A%E5%A0%B4/@33.1888,130.0249,16z/data=!4m6!3m5!1s0x354028f79fa580fb:0x50ca31529b73465!8m2!3d33.187048!4d130.0247202!16s%2Fg%2F11c72qjpnv"
+   },
+   "mapcode": "104 378 037*81",
+   "mapcode_source": "依停車場入口／標記點換算：Mapion 右鍵取得 104 378 037*81，以 saibara convgeo 反查一致（誤差 1.9 m）；saibara 正向換算 104 378 037*80（反查誤差 1.1 m）；兩者末段不同，依規則以 Mapion 為準。換算點：Google 地圖「ゆめタウン武雄店・武雄競輪場 兼用駐車場」標記點（非精確入口） 33.187048,130.024720",
+   "ratings": [
+    {
+     "source": "google",
+     "score": 4.4,
+     "scale": 5,
+     "url": "https://www.google.com/maps/place/%E3%82%AC%E3%82%B7%E3%83%A3%E3%83%9D%E3%83%B3%E3%81%AE%E3%83%87%E3%83%91%E3%83%BC%E3%83%88+%E3%82%86%E3%82%81%E3%82%BF%E3%82%A6%E3%83%B3%E6%AD%A6%E9%9B%84%E5%BA%97/@33.1887343,130.0248781,17z/data=!3m1!4b1!4m6!3m5!1s0x3540291a2bd3c299:0x428f96674423e560!8m2!3d33.1887343!4d130.0248781!16s%2Fg%2F11rp2_sctr",
+     "checked_at": "2026-11-11",
+     "check_method": "google_maps_tool"
+    }
+   ],
+   "description": "萬代轉蛋專門店（ゆめタウン武雄 2F）。距最近的路線點「御船山樂園」（AD13）直線約 1.0 km。",
+   "sources": [
+    {
+     "url": "https://www.google.com/maps/place/%E3%82%AC%E3%82%B7%E3%83%A3%E3%83%9D%E3%83%B3%E3%81%AE%E3%83%87%E3%83%91%E3%83%BC%E3%83%88+%E3%82%86%E3%82%81%E3%82%BF%E3%82%A6%E3%83%B3%E6%AD%A6%E9%9B%84%E5%BA%97/@33.1887343,130.0248781,17z/data=!3m1!4b1!4m6!3m5!1s0x3540291a2bd3c299:0x428f96674423e560!8m2!3d33.1887343!4d130.0248781!16s%2Fg%2F11rp2_sctr",
+     "checked_at": "2026-11-11",
+     "title": "Google 地圖店家頁（google_maps_tool 自動查詢）",
+     "fields": [
+      "address",
+      "lat",
+      "lng",
+      "phone",
+      "hours",
+      "closed_days",
+      "ratings.google"
+     ]
+    },
+    {
+     "url": "https://www.google.com/maps/place/%E3%82%86%E3%82%81%E3%82%BF%E3%82%A6%E3%83%B3%E6%AD%A6%E9%9B%84%E5%BA%97%E3%83%BB%E6%AD%A6%E9%9B%84%E7%AB%B6%E8%BC%AA%E5%A0%B4+%E5%85%BC%E7%94%A8%E9%A7%90%E8%BB%8A%E5%A0%B4/@33.1888,130.0249,16z/data=!4m6!3m5!1s0x354028f79fa580fb:0x50ca31529b73465!8m2!3d33.187048!4d130.0247202!16s%2Fg%2F11c72qjpnv",
+     "checked_at": "2026-11-11",
+     "title": "停車場位置：ゆめタウン武雄店・武雄競輪場 兼用駐車場",
+     "fields": [
+      "parking.lat",
+      "parking.lng"
+     ]
+    }
+   ],
+   "field_status": {
+    "tax_free": "待查",
+    "nearest_station": "待查",
+    "stay_minutes": "估計",
+    "season_note": "不適用"
+   },
+   "checked_date": "2026-11-11",
+   "proposed_ref": "sp_ag_takeo_gashapon"
+  },
+  "sp_ag_takeo_pelican": {
+   "kind": "spot",
+   "name": "おもちゃのペリカン 武雄店",
+   "name_ja": "おもちゃのペリカン 武雄店",
+   "categories": [
+    "anime_game"
+   ],
+   "category_source": "spots_dept",
+   "category_basis": "Google 地圖分類「おもちゃ店」；販售：玩具（ゆめタウン武雄內）",
+   "address": "〒843-0022 佐賀県武雄市武雄町大字武雄武雄４９９２",
+   "lat": 33.1887993,
+   "lng": 130.0249168,
+   "phone": "0954-22-5119",
+   "hours": "10:00–20:00（每日）",
+   "closed_days": "無固定公休（Google 地圖每天都列營業時間）；臨時休業與年末年始待查",
+   "route_days": [
+    {
+     "route": "A",
+     "day": "D12",
+     "date": "2026-12-02",
+     "weekday": "週三",
+     "nearest_stop": "嬉野溫泉街",
+     "distance_km": 9.4,
+     "open_that_day": true
+    },
+    {
+     "route": "A",
+     "day": "D13",
+     "date": "2026-12-03",
+     "weekday": "週四",
+     "nearest_stop": "御船山樂園",
+     "distance_km": 1.0,
+     "open_that_day": true
+    },
+    {
+     "route": "B",
+     "day": "D12",
+     "date": "2026-12-02",
+     "weekday": "週三",
+     "nearest_stop": "有田ポーセリンパーク",
+     "distance_km": 11.2,
+     "open_that_day": true
+    },
+    {
+     "route": "B",
+     "day": "D13",
+     "date": "2026-12-03",
+     "weekday": "週四",
+     "nearest_stop": "佐賀県立宇宙科学館",
+     "distance_km": 1.4,
+     "open_that_day": true
+    },
+    {
+     "route": "C",
+     "day": "D12",
+     "date": "2026-12-02",
+     "weekday": "週三",
+     "nearest_stop": "嬉野溫泉街",
+     "distance_km": 9.4,
+     "open_that_day": true
+    },
+    {
+     "route": "C",
+     "day": "D13",
+     "date": "2026-12-03",
+     "weekday": "週四",
+     "nearest_stop": "嬉野溫泉街",
+     "distance_km": 9.4,
+     "open_that_day": true
+    }
+   ],
+   "nearest_route_point": {
+    "route": "A",
+    "day": "D13",
+    "stop": "御船山樂園",
+    "distance_km": 1.0,
+    "method": "直線距離（Google 地圖店家座標 ↔ routes.json 站點座標）"
+   },
+   "area_group": "嬉野／武雄／鹿島（住宿 12/2–3；D12–D13）",
+   "suggested_day": "D13（12/3 週四）武雄・鹿島行程順道",
+   "what_to_buy": "玩具（ゆめタウン武雄內）",
+   "admission": "免費入店",
+   "rain_ok": true,
+   "stay_minutes": 45,
+   "parking": {
+    "available": true,
+    "type": "dedicated",
+    "name": "ゆめタウン武雄店・武雄競輪場 兼用駐車場",
+    "fee": null,
+    "capacity": null,
+    "lat": 33.187048,
+    "lng": 130.0247202,
+    "mapcode": "104 378 037*81",
+    "mapcode_source": "Mapion 右鍵取得 104 378 037*81，以 saibara convgeo 反查一致（誤差 1.9 m）；saibara 正向換算 104 378 037*80（反查誤差 1.1 m）；兩者末段不同，依規則以 Mapion 為準。換算點：Google 地圖「ゆめタウン武雄店・武雄競輪場 兼用駐車場」標記點（非精確入口） 33.187048,130.024720",
+    "walk_min": null,
+    "note": "商場停車場",
+    "source": "https://www.google.com/maps/place/%E3%82%86%E3%82%81%E3%82%BF%E3%82%A6%E3%83%B3%E6%AD%A6%E9%9B%84%E5%BA%97%E3%83%BB%E6%AD%A6%E9%9B%84%E7%AB%B6%E8%BC%AA%E5%A0%B4+%E5%85%BC%E7%94%A8%E9%A7%90%E8%BB%8A%E5%A0%B4/@33.1888,130.0249,16z/data=!4m6!3m5!1s0x354028f79fa580fb:0x50ca31529b73465!8m2!3d33.187048!4d130.0247202!16s%2Fg%2F11c72qjpnv"
+   },
+   "mapcode": "104 378 037*81",
+   "mapcode_source": "依停車場入口／標記點換算：Mapion 右鍵取得 104 378 037*81，以 saibara convgeo 反查一致（誤差 1.9 m）；saibara 正向換算 104 378 037*80（反查誤差 1.1 m）；兩者末段不同，依規則以 Mapion 為準。換算點：Google 地圖「ゆめタウン武雄店・武雄競輪場 兼用駐車場」標記點（非精確入口） 33.187048,130.024720",
+   "ratings": [
+    {
+     "source": "google",
+     "score": 3.4,
+     "scale": 5,
+     "url": "https://www.google.com/maps/place/%E3%81%8A%E3%82%82%E3%81%A1%E3%82%83%E3%81%AE%E3%83%9A%E3%83%AA%E3%82%AB%E3%83%B3+%E6%AD%A6%E9%9B%84%E5%BA%97/@33.1887993,130.0249168,17z/data=!3m1!4b1!4m6!3m5!1s0x354028f9ccdc2229:0x9363cb0c23e356fe!8m2!3d33.1887993!4d130.0249168!16s%2Fg%2F11b6dtcj4p",
+     "checked_at": "2026-11-11",
+     "check_method": "google_maps_tool"
+    }
+   ],
+   "description": "玩具（ゆめタウン武雄內）。距最近的路線點「御船山樂園」（AD13）直線約 1.0 km。",
+   "sources": [
+    {
+     "url": "https://www.google.com/maps/place/%E3%81%8A%E3%82%82%E3%81%A1%E3%82%83%E3%81%AE%E3%83%9A%E3%83%AA%E3%82%AB%E3%83%B3+%E6%AD%A6%E9%9B%84%E5%BA%97/@33.1887993,130.0249168,17z/data=!3m1!4b1!4m6!3m5!1s0x354028f9ccdc2229:0x9363cb0c23e356fe!8m2!3d33.1887993!4d130.0249168!16s%2Fg%2F11b6dtcj4p",
+     "checked_at": "2026-11-11",
+     "title": "Google 地圖店家頁（google_maps_tool 自動查詢）",
+     "fields": [
+      "address",
+      "lat",
+      "lng",
+      "phone",
+      "hours",
+      "closed_days",
+      "ratings.google"
+     ]
+    },
+    {
+     "url": "https://www.google.com/maps/place/%E3%82%86%E3%82%81%E3%82%BF%E3%82%A6%E3%83%B3%E6%AD%A6%E9%9B%84%E5%BA%97%E3%83%BB%E6%AD%A6%E9%9B%84%E7%AB%B6%E8%BC%AA%E5%A0%B4+%E5%85%BC%E7%94%A8%E9%A7%90%E8%BB%8A%E5%A0%B4/@33.1888,130.0249,16z/data=!4m6!3m5!1s0x354028f79fa580fb:0x50ca31529b73465!8m2!3d33.187048!4d130.0247202!16s%2Fg%2F11c72qjpnv",
+     "checked_at": "2026-11-11",
+     "title": "停車場位置：ゆめタウン武雄店・武雄競輪場 兼用駐車場",
+     "fields": [
+      "parking.lat",
+      "parking.lng"
+     ]
+    }
+   ],
+   "field_status": {
+    "tax_free": "待查",
+    "nearest_station": "待查",
+    "stay_minutes": "估計",
+    "season_note": "不適用"
+   },
+   "checked_date": "2026-11-11",
+   "proposed_ref": "sp_ag_takeo_pelican"
+  },
+  "sp_ag_kashima_geo": {
+   "kind": "spot",
+   "name": "ゲオ鹿島店",
+   "name_ja": "ゲオ鹿島店",
+   "categories": [
+    "anime_game"
+   ],
+   "category_source": "spots_dept",
+   "category_basis": "Google 地圖分類「リサイクル ショップ」；販售：中古／新品遊戲軟體與主機（GEO 連鎖二手店）",
+   "address": "〒849-1311 佐賀県鹿島市高津原3637番地1",
+   "lat": 33.1117217,
+   "lng": 130.0890735,
+   "phone": "0954-69-8311",
+   "hours": "09:00–23:00（每日）",
+   "closed_days": "無固定公休（Google 地圖每天都列營業時間）；臨時休業與年末年始待查",
+   "route_days": [
+    {
+     "route": "A",
+     "day": "D12",
+     "date": "2026-12-02",
+     "weekday": "週三",
+     "nearest_stop": "嬉野溫泉街",
+     "distance_km": 8.4,
+     "open_that_day": true
+    },
+    {
+     "route": "A",
+     "day": "D13",
+     "date": "2026-12-03",
+     "weekday": "週四",
+     "nearest_stop": "鹿島城跡",
+     "distance_km": 1.0,
+     "open_that_day": true
+    },
+    {
+     "route": "B",
+     "day": "D12",
+     "date": "2026-12-02",
+     "weekday": "週三",
+     "nearest_stop": "有田ポーセリンパーク",
+     "distance_km": 17.8,
+     "open_that_day": true
+    },
+    {
+     "route": "B",
+     "day": "D13",
+     "date": "2026-12-03",
+     "weekday": "週四",
+     "nearest_stop": "おつぼ山神籠石",
+     "distance_km": 8.0,
+     "open_that_day": true
+    },
+    {
+     "route": "C",
+     "day": "D12",
+     "date": "2026-12-02",
+     "weekday": "週三",
+     "nearest_stop": "嬉野溫泉街",
+     "distance_km": 8.4,
+     "open_that_day": true
+    },
+    {
+     "route": "C",
+     "day": "D13",
+     "date": "2026-12-03",
+     "weekday": "週四",
+     "nearest_stop": "祐德稻荷神社",
+     "distance_km": 4.5,
+     "open_that_day": true
+    }
+   ],
+   "nearest_route_point": {
+    "route": "A",
+    "day": "D13",
+    "stop": "鹿島城跡",
+    "distance_km": 1.0,
+    "method": "直線距離（Google 地圖店家座標 ↔ routes.json 站點座標）"
+   },
+   "area_group": "嬉野／武雄／鹿島（住宿 12/2–3；D12–D13）",
+   "suggested_day": "D13（12/3 週四）武雄・鹿島行程順道",
+   "what_to_buy": "中古／新品遊戲軟體與主機（GEO 連鎖二手店）",
+   "admission": "免費入店",
+   "rain_ok": true,
+   "stay_minutes": 45,
+   "parking": {
+    "available": null,
+    "type": null,
+    "name": null,
+    "fee": null,
+    "capacity": null,
+    "lat": null,
+    "lng": null,
+    "mapcode": null,
+    "mapcode_source": null,
+    "walk_min": null,
+    "note": "停車場位置未查到；停車場入口座標待查，MapCode 未換算（不以店家座標代替）",
+    "source": null
+   },
+   "ratings": [
+    {
+     "source": "google",
+     "score": 3.5,
+     "scale": 5,
+     "url": "https://www.google.com/maps/place/%E3%82%B2%E3%82%AA%E9%B9%BF%E5%B3%B6%E5%BA%97/@33.1117217,130.0890735,17z/data=!3m1!4b1!4m6!3m5!1s0x354025bc0185a333:0xb82d783b3159872a!8m2!3d33.1117217!4d130.0890735!16s%2Fg%2F1vyk08g_",
+     "checked_at": "2026-11-11",
+     "check_method": "google_maps_tool"
+    }
+   ],
+   "description": "中古／新品遊戲軟體與主機（GEO 連鎖二手店）。距最近的路線點「鹿島城跡」（AD13）直線約 1.0 km。",
+   "sources": [
+    {
+     "url": "https://www.google.com/maps/place/%E3%82%B2%E3%82%AA%E9%B9%BF%E5%B3%B6%E5%BA%97/@33.1117217,130.0890735,17z/data=!3m1!4b1!4m6!3m5!1s0x354025bc0185a333:0xb82d783b3159872a!8m2!3d33.1117217!4d130.0890735!16s%2Fg%2F1vyk08g_",
+     "checked_at": "2026-11-11",
+     "title": "Google 地圖店家頁（google_maps_tool 自動查詢）",
+     "fields": [
+      "address",
+      "lat",
+      "lng",
+      "phone",
+      "hours",
+      "closed_days",
+      "ratings.google"
+     ]
+    }
+   ],
+   "field_status": {
+    "tax_free": "待查",
+    "nearest_station": "待查",
+    "stay_minutes": "估計",
+    "season_note": "不適用",
+    "mapcode": "待查"
+   },
+   "checked_date": "2026-11-11",
+   "proposed_ref": "sp_ag_kashima_geo"
+  },
+  "sp_ag_kashima_gashapon": {
+   "kind": "spot",
+   "name": "ガシャポンバンダイオフィシャルショップ TSUTAYA積文館書店鹿島店",
+   "name_ja": "ガシャポンバンダイオフィシャルショップ TSUTAYA積文館書店鹿島店",
+   "categories": [
+    "anime_game"
+   ],
+   "category_source": "spots_dept",
+   "category_basis": "Google 地圖分類「おもちゃ店」；販售：萬代官方轉蛋（TSUTAYA 積文館書店鹿島店內）",
+   "address": "〒849-1311 佐賀県鹿島市高津原５０２５ 字四本松３６３９－1",
+   "lat": 33.1116506,
+   "lng": 130.0881907,
+   "phone": "0954-63-5139",
+   "hours": "10:00–21:45（每日）",
+   "closed_days": "無固定公休（Google 地圖每天都列營業時間）；臨時休業與年末年始待查",
+   "route_days": [
+    {
+     "route": "A",
+     "day": "D12",
+     "date": "2026-12-02",
+     "weekday": "週三",
+     "nearest_stop": "嬉野溫泉街",
+     "distance_km": 8.3,
+     "open_that_day": true
+    },
+    {
+     "route": "A",
+     "day": "D13",
+     "date": "2026-12-03",
+     "weekday": "週四",
+     "nearest_stop": "鹿島城跡",
+     "distance_km": 1.0,
+     "open_that_day": true
+    },
+    {
+     "route": "B",
+     "day": "D12",
+     "date": "2026-12-02",
+     "weekday": "週三",
+     "nearest_stop": "有田ポーセリンパーク",
+     "distance_km": 17.7,
+     "open_that_day": true
+    },
+    {
+     "route": "B",
+     "day": "D13",
+     "date": "2026-12-03",
+     "weekday": "週四",
+     "nearest_stop": "おつぼ山神籠石",
+     "distance_km": 7.9,
+     "open_that_day": true
+    },
+    {
+     "route": "C",
+     "day": "D12",
+     "date": "2026-12-02",
+     "weekday": "週三",
+     "nearest_stop": "嬉野溫泉街",
+     "distance_km": 8.3,
+     "open_that_day": true
+    },
+    {
+     "route": "C",
+     "day": "D13",
+     "date": "2026-12-03",
+     "weekday": "週四",
+     "nearest_stop": "祐德稻荷神社",
+     "distance_km": 4.5,
+     "open_that_day": true
+    }
+   ],
+   "nearest_route_point": {
+    "route": "A",
+    "day": "D13",
+    "stop": "鹿島城跡",
+    "distance_km": 1.0,
+    "method": "直線距離（Google 地圖店家座標 ↔ routes.json 站點座標）"
+   },
+   "area_group": "嬉野／武雄／鹿島（住宿 12/2–3；D12–D13）",
+   "suggested_day": "D13（12/3 週四）武雄・鹿島行程順道",
+   "what_to_buy": "萬代官方轉蛋（TSUTAYA 積文館書店鹿島店內）",
+   "admission": "免費入店",
+   "rain_ok": true,
+   "stay_minutes": 45,
+   "parking": {
+    "available": null,
+    "type": null,
+    "name": null,
+    "fee": null,
+    "capacity": null,
+    "lat": null,
+    "lng": null,
+    "mapcode": null,
+    "mapcode_source": null,
+    "walk_min": null,
+    "note": "停車場位置未查到；停車場入口座標待查，MapCode 未換算（不以店家座標代替）",
+    "source": null
+   },
+   "ratings": [
+    {
+     "source": "google",
+     "score": 3.3,
+     "scale": 5,
+     "url": "https://www.google.com/maps/place/%E3%82%AC%E3%82%B7%E3%83%A3%E3%83%9D%E3%83%B3%E3%83%90%E3%83%B3%E3%83%80%E3%82%A4%E3%82%AA%E3%83%95%E3%82%A3%E3%82%B7%E3%83%A3%E3%83%AB%E3%82%B7%E3%83%A7%E3%83%83%E3%83%97+TSUTAYA%E7%A9%8D%E6%96%87%E9%A4%A8%E6%9B%B8%E5%BA%97%E9%B9%BF%E5%B3%B6%E5%BA%97/@33.1116506,130.0881907,17z/data=!3m1!4b1!4m6!3m5!1s0x354025000387cefb:0x1a1b33403b684d83!8m2!3d33.1116506!4d130.0881907!16s%2Fg%2F11lczw2gq2",
+     "checked_at": "2026-11-11",
+     "check_method": "google_maps_tool"
+    }
+   ],
+   "description": "萬代官方轉蛋（TSUTAYA 積文館書店鹿島店內）。距最近的路線點「鹿島城跡」（AD13）直線約 1.0 km。",
+   "sources": [
+    {
+     "url": "https://www.google.com/maps/place/%E3%82%AC%E3%82%B7%E3%83%A3%E3%83%9D%E3%83%B3%E3%83%90%E3%83%B3%E3%83%80%E3%82%A4%E3%82%AA%E3%83%95%E3%82%A3%E3%82%B7%E3%83%A3%E3%83%AB%E3%82%B7%E3%83%A7%E3%83%83%E3%83%97+TSUTAYA%E7%A9%8D%E6%96%87%E9%A4%A8%E6%9B%B8%E5%BA%97%E9%B9%BF%E5%B3%B6%E5%BA%97/@33.1116506,130.0881907,17z/data=!3m1!4b1!4m6!3m5!1s0x354025000387cefb:0x1a1b33403b684d83!8m2!3d33.1116506!4d130.0881907!16s%2Fg%2F11lczw2gq2",
+     "checked_at": "2026-11-11",
+     "title": "Google 地圖店家頁（google_maps_tool 自動查詢）",
+     "fields": [
+      "address",
+      "lat",
+      "lng",
+      "phone",
+      "hours",
+      "closed_days",
+      "ratings.google"
+     ]
+    }
+   ],
+   "field_status": {
+    "tax_free": "待查",
+    "nearest_station": "待查",
+    "stay_minutes": "估計",
+    "season_note": "不適用",
+    "mapcode": "待查"
+   },
+   "checked_date": "2026-11-11",
+   "proposed_ref": "sp_ag_kashima_gashapon"
+  },
+  "sp_ag_fuk_pokemoncenter": {
+   "kind": "spot",
+   "name": "ポケモンセンターフクオカ",
+   "name_ja": "ポケモンセンターフクオカ",
+   "categories": [
+    "anime_game"
+   ],
+   "category_source": "spots_dept",
+   "category_basis": "Google 地圖分類「ホビーショップ」；販售：寶可夢官方周邊（玩偶、文具、服飾）、寶可夢卡牌、遊戲軟體",
+   "address": "〒812-0012 福岡県福岡市博多区博多駅中央街９−１ 博多マルイ 2F",
+   "lat": 33.5890033,
+   "lng": 130.4192564,
+   "phone": "092-413-5185",
+   "hours": "10:00–21:00（每日）",
+   "closed_days": "無固定公休（Google 地圖每天都列營業時間）；臨時休業與年末年始待查",
+   "route_days": [
+    {
+     "route": "A",
+     "day": "D14",
+     "date": "2026-12-04",
+     "weekday": "週五",
+     "nearest_stop": "博多華味鳥",
+     "distance_km": 0.6,
+     "open_that_day": true
+    },
+    {
+     "route": "A",
+     "day": "D15",
+     "date": "2026-12-05",
+     "weekday": "週六",
+     "nearest_stop": "みなと温泉 波葉の湯",
+     "distance_km": 2.5,
+     "open_that_day": true
+    },
+    {
+     "route": "A",
+     "day": "D16",
+     "date": "2026-12-06",
+     "weekday": "週日",
+     "nearest_stop": "FUK COFFEE",
+     "distance_km": 0.6,
+     "open_that_day": true
+    },
+    {
+     "route": "B",
+     "day": "D14",
+     "date": "2026-12-04",
+     "weekday": "週五",
+     "nearest_stop": "一蘭拉麵",
+     "distance_km": 1.4,
+     "open_that_day": true
+    },
+    {
+     "route": "B",
+     "day": "D15",
+     "date": "2026-12-05",
+     "weekday": "週六",
+     "nearest_stop": "稚加榮",
+     "distance_km": 2.5,
+     "open_that_day": true
+    },
+    {
+     "route": "B",
+     "day": "D16",
+     "date": "2026-12-06",
+     "weekday": "週日",
+     "nearest_stop": "博多一幸舍",
+     "distance_km": 0.2,
+     "open_that_day": true
+    },
+    {
+     "route": "C",
+     "day": "D14",
+     "date": "2026-12-04",
+     "weekday": "週五",
+     "nearest_stop": "博多華味鳥",
+     "distance_km": 0.6,
+     "open_that_day": true
+    },
+    {
+     "route": "C",
+     "day": "D15",
+     "date": "2026-12-05",
+     "weekday": "週六",
+     "nearest_stop": "庭園茶屋 樂水園",
+     "distance_km": 0.6,
+     "open_that_day": true
+    },
+    {
+     "route": "C",
+     "day": "D16",
+     "date": "2026-12-06",
+     "weekday": "週日",
+     "nearest_stop": "FUK COFFEE",
+     "distance_km": 0.6,
+     "open_that_day": true
+    }
+   ],
+   "nearest_route_point": {
+    "route": "B",
+    "day": "D16",
+    "stop": "博多一幸舍",
+    "distance_km": 0.2,
+    "method": "直線距離（Google 地圖店家座標 ↔ routes.json 站點座標）"
+   },
+   "area_group": "福岡（住宿 12/4–5；D14–D16）",
+   "suggested_day": "D14–D15（12/4 週五、12/5 週六）博多／天神",
+   "what_to_buy": "寶可夢官方周邊（玩偶、文具、服飾）、寶可夢卡牌、遊戲軟體",
+   "tax_free": "有（TaxFree.jp 將ポケモンセンター列為免稅對應品牌；本店條件官方未載，結帳前請確認）",
+   "nearest_station": "JR 博多駅博多口步行 3 分、地下鐵博多駅西13出口步行 2 分（官網）",
+   "admission": "免費入店",
+   "rain_ok": true,
+   "stay_minutes": 60,
+   "parking": {
+    "available": true,
+    "type": "nearby",
+    "name": "KITTE博多・JR博多シティ駐車場",
+    "fee": null,
+    "capacity": null,
+    "lat": 33.5888414,
+    "lng": 130.419799,
+    "mapcode": "13 320 259*75",
+    "mapcode_source": "Mapion 右鍵取得 13 320 259*75，以 saibara convgeo 反查一致（誤差 1.9 m）；saibara 正向換算 13 320 259*67（反查誤差 1.4 m）；兩者末段不同，依規則以 Mapion 為準。換算點：Google 地圖「KITTE博多・JR博多シティ駐車場」標記點（非精確入口） 33.588841,130.419799",
+    "walk_min": null,
+    "note": "KITTE博多・JR博多シティ停車場（博多站商場停車場），是否有購物優惠待查",
+    "source": "https://www.google.com/maps/place/KITTE%E5%8D%9A%E5%A4%9A%E3%83%BBJR%E5%8D%9A%E5%A4%9A%E3%82%B7%E3%83%86%E3%82%A3%E9%A7%90%E8%BB%8A%E5%A0%B4/data=!4m7!3m6!1s0x354191b62ab53953:0xb214130403a46fbb!8m2!3d33.5888414!4d130.419799!16s%2Fg%2F11vc3r341b!19sChIJUzm1KraRQTURu2-kAwQTFLI"
+   },
+   "mapcode": "13 320 259*75",
+   "mapcode_source": "依停車場入口／標記點換算：Mapion 右鍵取得 13 320 259*75，以 saibara convgeo 反查一致（誤差 1.9 m）；saibara 正向換算 13 320 259*67（反查誤差 1.4 m）；兩者末段不同，依規則以 Mapion 為準。換算點：Google 地圖「KITTE博多・JR博多シティ駐車場」標記點（非精確入口） 33.588841,130.419799",
+   "ratings": [
+    {
+     "source": "google",
+     "score": 4.2,
+     "scale": 5,
+     "url": "https://www.google.com/maps/place/%E3%83%9D%E3%82%B1%E3%83%A2%E3%83%B3%E3%82%BB%E3%83%B3%E3%82%BF%E3%83%BC%E3%83%95%E3%82%AF%E3%82%AA%E3%82%AB/@33.5890033,130.4192564,17z/data=!3m1!4b1!4m6!3m5!1s0x354191c78cd082ef:0x5f80c33c1baae5a2!8m2!3d33.5890033!4d130.4192564!16s%2Fg%2F12ml2ytj5",
+     "checked_at": "2026-11-11",
+     "check_method": "google_maps_tool"
+    }
+   ],
+   "description": "寶可夢官方周邊（玩偶、文具、服飾）、寶可夢卡牌、遊戲軟體。距最近的路線點「博多一幸舍」（BD16）直線約 0.2 km。",
+   "sources": [
+    {
+     "url": "https://www.google.com/maps/place/%E3%83%9D%E3%82%B1%E3%83%A2%E3%83%B3%E3%82%BB%E3%83%B3%E3%82%BF%E3%83%BC%E3%83%95%E3%82%AF%E3%82%AA%E3%82%AB/@33.5890033,130.4192564,17z/data=!3m1!4b1!4m6!3m5!1s0x354191c78cd082ef:0x5f80c33c1baae5a2!8m2!3d33.5890033!4d130.4192564!16s%2Fg%2F12ml2ytj5",
+     "checked_at": "2026-11-11",
+     "title": "Google 地圖店家頁（google_maps_tool 自動查詢）",
+     "fields": [
+      "address",
+      "lat",
+      "lng",
+      "phone",
+      "hours",
+      "closed_days",
+      "ratings.google"
+     ]
+    },
+    {
+     "url": "https://www.google.com/maps/place/KITTE%E5%8D%9A%E5%A4%9A%E3%83%BBJR%E5%8D%9A%E5%A4%9A%E3%82%B7%E3%83%86%E3%82%A3%E9%A7%90%E8%BB%8A%E5%A0%B4/data=!4m7!3m6!1s0x354191b62ab53953:0xb214130403a46fbb!8m2!3d33.5888414!4d130.419799!16s%2Fg%2F11vc3r341b!19sChIJUzm1KraRQTURu2-kAwQTFLI",
+     "checked_at": "2026-11-11",
+     "title": "停車場位置：KITTE博多・JR博多シティ駐車場",
+     "fields": [
+      "parking.lat",
+      "parking.lng"
+     ]
+    },
+    {
+     "url": "https://www.pokemon.co.jp/shop/pokecen/fukuoka/",
+     "checked_at": "2026-11-11",
+     "title": "ポケモンセンターフクオカ 官網",
+     "fields": [
+      "hours",
+      "address",
+      "phone",
+      "nearest_station"
+     ]
+    },
+    {
+     "url": "https://taxfree.jp/ja/temporary-return/tax-free-shops/pokemon-center/",
+     "checked_at": "2026-11-11",
+     "title": "TaxFree.jp ポケモンセンター",
+     "fields": [
+      "tax_free"
+     ]
+    }
+   ],
+   "field_status": {
+    "stay_minutes": "估計",
+    "season_note": "不適用"
+   },
+   "checked_date": "2026-11-11",
+   "proposed_ref": "sp_ag_fuk_pokemoncenter"
+  },
+  "sp_ag_fuk_nintendo": {
+   "kind": "spot",
+   "name": "Nintendo FUKUOKA",
+   "name_ja": "Nintendo FUKUOKA",
+   "categories": [
+    "anime_game"
+   ],
+   "category_source": "spots_dept",
+   "category_basis": "Google 地圖分類「ホビーショップ」；販售：任天堂主機、遊戲軟體、周邊、角色商品；有福岡限定商品（第三方報導）",
+   "address": "〒812-0012 福岡県福岡市博多区博多駅中央街１−１ アミュプラザ博多 8F",
+   "lat": 33.5902413,
+   "lng": 130.4198059,
+   "phone": "0570-013-312（官網）",
+   "hours": "10:00–20:00（每日）",
+   "closed_days": "無固定公休（Google 地圖每天都列營業時間）；臨時休業與年末年始待查",
+   "route_days": [
+    {
+     "route": "A",
+     "day": "D14",
+     "date": "2026-12-04",
+     "weekday": "週五",
+     "nearest_stop": "博多千年門",
+     "distance_km": 0.5,
+     "open_that_day": true
+    },
+    {
+     "route": "A",
+     "day": "D15",
+     "date": "2026-12-05",
+     "weekday": "週六",
+     "nearest_stop": "みなと温泉 波葉の湯",
+     "distance_km": 2.5,
+     "open_that_day": true
+    },
+    {
+     "route": "A",
+     "day": "D16",
+     "date": "2026-12-06",
+     "weekday": "週日",
+     "nearest_stop": "FUK COFFEE",
+     "distance_km": 0.7,
+     "open_that_day": true
+    },
+    {
+     "route": "B",
+     "day": "D14",
+     "date": "2026-12-04",
+     "weekday": "週五",
+     "nearest_stop": "一蘭拉麵",
+     "distance_km": 1.4,
+     "open_that_day": true
+    },
+    {
+     "route": "B",
+     "day": "D15",
+     "date": "2026-12-05",
+     "weekday": "週六",
+     "nearest_stop": "稚加榮",
+     "distance_km": 2.6,
+     "open_that_day": true
+    },
+    {
+     "route": "B",
+     "day": "D16",
+     "date": "2026-12-06",
+     "weekday": "週日",
+     "nearest_stop": "博多一幸舍",
+     "distance_km": 0.3,
+     "open_that_day": true
+    },
+    {
+     "route": "C",
+     "day": "D14",
+     "date": "2026-12-04",
+     "weekday": "週五",
+     "nearest_stop": "博多千年門",
+     "distance_km": 0.5,
+     "open_that_day": true
+    },
+    {
+     "route": "C",
+     "day": "D15",
+     "date": "2026-12-05",
+     "weekday": "週六",
+     "nearest_stop": "庭園茶屋 樂水園",
+     "distance_km": 0.7,
+     "open_that_day": true
+    },
+    {
+     "route": "C",
+     "day": "D16",
+     "date": "2026-12-06",
+     "weekday": "週日",
+     "nearest_stop": "FUK COFFEE",
+     "distance_km": 0.7,
+     "open_that_day": true
+    }
+   ],
+   "nearest_route_point": {
+    "route": "B",
+    "day": "D16",
+    "stop": "博多一幸舍",
+    "distance_km": 0.3,
+    "method": "直線距離（Google 地圖店家座標 ↔ routes.json 站點座標）"
+   },
+   "area_group": "福岡（住宿 12/4–5；D14–D16）",
+   "suggested_day": "D14–D15（12/4 週五、12/5 週六）博多／天神",
+   "what_to_buy": "任天堂主機、遊戲軟體、周邊、角色商品；有福岡限定商品（第三方報導）",
+   "tax_free": "不提供（多家旅遊網站報導，官網未載）",
+   "nearest_station": "JR 博多駅直結（アミュプラザ博多 8F）",
+   "admission": "免費入店",
+   "rain_ok": true,
+   "stay_minutes": 60,
+   "parking": {
+    "available": true,
+    "type": "nearby",
+    "name": "KITTE博多・JR博多シティ駐車場",
+    "fee": null,
+    "capacity": null,
+    "lat": 33.5888414,
+    "lng": 130.419799,
+    "mapcode": "13 320 259*75",
+    "mapcode_source": "Mapion 右鍵取得 13 320 259*75，以 saibara convgeo 反查一致（誤差 1.9 m）；saibara 正向換算 13 320 259*67（反查誤差 1.4 m）；兩者末段不同，依規則以 Mapion 為準。換算點：Google 地圖「KITTE博多・JR博多シティ駐車場」標記點（非精確入口） 33.588841,130.419799",
+    "walk_min": null,
+    "note": "KITTE博多・JR博多シティ停車場；是否有購物優惠待查",
+    "source": "https://www.google.com/maps/place/KITTE%E5%8D%9A%E5%A4%9A%E3%83%BBJR%E5%8D%9A%E5%A4%9A%E3%82%B7%E3%83%86%E3%82%A3%E9%A7%90%E8%BB%8A%E5%A0%B4/data=!4m7!3m6!1s0x354191b62ab53953:0xb214130403a46fbb!8m2!3d33.5888414!4d130.419799!16s%2Fg%2F11vc3r341b!19sChIJUzm1KraRQTURu2-kAwQTFLI"
+   },
+   "mapcode": "13 320 259*75",
+   "mapcode_source": "依停車場入口／標記點換算：Mapion 右鍵取得 13 320 259*75，以 saibara convgeo 反查一致（誤差 1.9 m）；saibara 正向換算 13 320 259*67（反查誤差 1.4 m）；兩者末段不同，依規則以 Mapion 為準。換算點：Google 地圖「KITTE博多・JR博多シティ駐車場」標記點（非精確入口） 33.588841,130.419799",
+   "ratings": [
+    {
+     "source": "google",
+     "score": 4.5,
+     "scale": 5,
+     "url": "https://www.google.com/maps/place/Nintendo+FUKUOKA/@33.5902413,130.4198059,17z/data=!3m1!4b1!4m6!3m5!1s0x354191007d7ddb31:0x136a549580755ef2!8m2!3d33.5902413!4d130.4198059!16s%2Fg%2F11ynymqy8w",
+     "checked_at": "2026-11-11",
+     "check_method": "google_maps_tool"
+    }
+   ],
+   "description": "任天堂主機、遊戲軟體、周邊、角色商品；有福岡限定商品（第三方報導）。距最近的路線點「博多一幸舍」（BD16）直線約 0.3 km。",
+   "sources": [
+    {
+     "url": "https://www.google.com/maps/place/Nintendo+FUKUOKA/@33.5902413,130.4198059,17z/data=!3m1!4b1!4m6!3m5!1s0x354191007d7ddb31:0x136a549580755ef2!8m2!3d33.5902413!4d130.4198059!16s%2Fg%2F11ynymqy8w",
+     "checked_at": "2026-11-11",
+     "title": "Google 地圖店家頁（google_maps_tool 自動查詢）",
+     "fields": [
+      "address",
+      "lat",
+      "lng",
+      "phone",
+      "hours",
+      "closed_days",
+      "ratings.google"
+     ]
+    },
+    {
+     "url": "https://www.google.com/maps/place/KITTE%E5%8D%9A%E5%A4%9A%E3%83%BBJR%E5%8D%9A%E5%A4%9A%E3%82%B7%E3%83%86%E3%82%A3%E9%A7%90%E8%BB%8A%E5%A0%B4/data=!4m7!3m6!1s0x354191b62ab53953:0xb214130403a46fbb!8m2!3d33.5888414!4d130.419799!16s%2Fg%2F11vc3r341b!19sChIJUzm1KraRQTURu2-kAwQTFLI",
+     "checked_at": "2026-11-11",
+     "title": "停車場位置：KITTE博多・JR博多シティ駐車場",
+     "fields": [
+      "parking.lat",
+      "parking.lng"
+     ]
+    },
+    {
+     "url": "https://www.nintendo.com/jp/officialstore/index.html",
+     "checked_at": "2026-11-11",
+     "title": "Nintendo 官方直營店頁",
+     "fields": [
+      "hours",
+      "address",
+      "phone",
+      "note"
+     ]
+    },
+    {
+     "url": "https://www.jrhakatacity.com/floor/detail/?cd=000485",
+     "checked_at": "2026-11-11",
+     "title": "アミュプラザ博多 樓層介紹",
+     "fields": [
+      "hours"
+     ]
+    },
+    {
+     "url": "https://www.trvlogue.com/ja/nintendo-store-fukuoka-guide",
+     "checked_at": "2026-11-11",
+     "title": "TRVLOGUE（免稅資訊）",
+     "fields": [
+      "tax_free"
+     ]
+    }
+   ],
+   "field_status": {
+    "stay_minutes": "估計",
+    "season_note": "不適用"
+   },
+   "checked_date": "2026-11-11",
+   "proposed_ref": "sp_ag_fuk_nintendo",
+   "note": "官網：週六日、假日等預期擁擠日以整理券入店（開店前 2F デッキ、開店後 8F 店前發放）；12/5（六）可能需要整理券。營業日依アミュプラザ博多。"
+  },
+  "sp_ag_fuk_surugaya": {
+   "kind": "spot",
+   "name": "駿河屋 博多マルイ店",
+   "name_ja": "駿河屋 博多マルイ店",
+   "categories": [
+    "anime_game"
+   ],
+   "category_source": "spots_dept",
+   "category_basis": "Google 地圖分類「ホビーショップ」；販售：二手遊戲、公仔、動漫周邊、卡牌（博多マルイ 6F）",
+   "address": "〒812-0012 福岡県福岡市博多区博多駅中央街９−１ 博多マルイ 6F",
+   "lat": 33.5889365,
+   "lng": 130.4195313,
+   "phone": "092-710-4437",
+   "hours": "10:00–21:00（每日）",
+   "closed_days": "無固定公休（Google 地圖每天都列營業時間）；臨時休業與年末年始待查",
+   "route_days": [
+    {
+     "route": "A",
+     "day": "D14",
+     "date": "2026-12-04",
+     "weekday": "週五",
+     "nearest_stop": "博多華味鳥",
+     "distance_km": 0.6,
+     "open_that_day": true
+    },
+    {
+     "route": "A",
+     "day": "D15",
+     "date": "2026-12-05",
+     "weekday": "週六",
+     "nearest_stop": "みなと温泉 波葉の湯",
+     "distance_km": 2.6,
+     "open_that_day": true
+    },
+    {
+     "route": "A",
+     "day": "D16",
+     "date": "2026-12-06",
+     "weekday": "週日",
+     "nearest_stop": "FUK COFFEE",
+     "distance_km": 0.7,
+     "open_that_day": true
+    },
+    {
+     "route": "B",
+     "day": "D14",
+     "date": "2026-12-04",
+     "weekday": "週五",
+     "nearest_stop": "一蘭拉麵",
+     "distance_km": 1.5,
+     "open_that_day": true
+    },
+    {
+     "route": "B",
+     "day": "D15",
+     "date": "2026-12-05",
+     "weekday": "週六",
+     "nearest_stop": "稚加榮",
+     "distance_km": 2.5,
+     "open_that_day": true
+    },
+    {
+     "route": "B",
+     "day": "D16",
+     "date": "2026-12-06",
+     "weekday": "週日",
+     "nearest_stop": "博多一幸舍",
+     "distance_km": 0.2,
+     "open_that_day": true
+    },
+    {
+     "route": "C",
+     "day": "D14",
+     "date": "2026-12-04",
+     "weekday": "週五",
+     "nearest_stop": "博多華味鳥",
+     "distance_km": 0.6,
+     "open_that_day": true
+    },
+    {
+     "route": "C",
+     "day": "D15",
+     "date": "2026-12-05",
+     "weekday": "週六",
+     "nearest_stop": "庭園茶屋 樂水園",
+     "distance_km": 0.6,
+     "open_that_day": true
+    },
+    {
+     "route": "C",
+     "day": "D16",
+     "date": "2026-12-06",
+     "weekday": "週日",
+     "nearest_stop": "FUK COFFEE",
+     "distance_km": 0.7,
+     "open_that_day": true
+    }
+   ],
+   "nearest_route_point": {
+    "route": "B",
+    "day": "D16",
+    "stop": "博多一幸舍",
+    "distance_km": 0.2,
+    "method": "直線距離（Google 地圖店家座標 ↔ routes.json 站點座標）"
+   },
+   "area_group": "福岡（住宿 12/4–5；D14–D16）",
+   "suggested_day": "D14–D15（12/4 週五、12/5 週六）博多／天神",
+   "what_to_buy": "二手遊戲、公仔、動漫周邊、卡牌（博多マルイ 6F）",
+   "nearest_station": "JR 博多駅（博多マルイ）",
+   "admission": "免費入店",
+   "rain_ok": true,
+   "stay_minutes": 60,
+   "parking": {
+    "available": true,
+    "type": "nearby",
+    "name": "KITTE博多・JR博多シティ駐車場",
+    "fee": null,
+    "capacity": null,
+    "lat": 33.5888414,
+    "lng": 130.419799,
+    "mapcode": "13 320 259*75",
+    "mapcode_source": "Mapion 右鍵取得 13 320 259*75，以 saibara convgeo 反查一致（誤差 1.9 m）；saibara 正向換算 13 320 259*67（反查誤差 1.4 m）；兩者末段不同，依規則以 Mapion 為準。換算點：Google 地圖「KITTE博多・JR博多シティ駐車場」標記點（非精確入口） 33.588841,130.419799",
+    "walk_min": null,
+    "note": "KITTE博多・JR博多シティ停車場",
+    "source": "https://www.google.com/maps/place/KITTE%E5%8D%9A%E5%A4%9A%E3%83%BBJR%E5%8D%9A%E5%A4%9A%E3%82%B7%E3%83%86%E3%82%A3%E9%A7%90%E8%BB%8A%E5%A0%B4/data=!4m7!3m6!1s0x354191b62ab53953:0xb214130403a46fbb!8m2!3d33.5888414!4d130.419799!16s%2Fg%2F11vc3r341b!19sChIJUzm1KraRQTURu2-kAwQTFLI"
+   },
+   "mapcode": "13 320 259*75",
+   "mapcode_source": "依停車場入口／標記點換算：Mapion 右鍵取得 13 320 259*75，以 saibara convgeo 反查一致（誤差 1.9 m）；saibara 正向換算 13 320 259*67（反查誤差 1.4 m）；兩者末段不同，依規則以 Mapion 為準。換算點：Google 地圖「KITTE博多・JR博多シティ駐車場」標記點（非精確入口） 33.588841,130.419799",
+   "ratings": [
+    {
+     "source": "google",
+     "score": 2.9,
+     "scale": 5,
+     "url": "https://www.google.com/maps/place/%E9%A7%BF%E6%B2%B3%E5%B1%8B+%E5%8D%9A%E5%A4%9A%E3%83%9E%E3%83%AB%E3%82%A4%E5%BA%97/@33.5889365,130.4195313,17z/data=!3m1!4b1!4m6!3m5!1s0x3541915a146347e7:0xee3154fea481e6c!8m2!3d33.5889365!4d130.4195313!16s%2Fg%2F11j95ms43p",
+     "checked_at": "2026-11-11",
+     "check_method": "google_maps_tool"
+    }
+   ],
+   "description": "二手遊戲、公仔、動漫周邊、卡牌（博多マルイ 6F）。距最近的路線點「博多一幸舍」（BD16）直線約 0.2 km。",
+   "sources": [
+    {
+     "url": "https://www.google.com/maps/place/%E9%A7%BF%E6%B2%B3%E5%B1%8B+%E5%8D%9A%E5%A4%9A%E3%83%9E%E3%83%AB%E3%82%A4%E5%BA%97/@33.5889365,130.4195313,17z/data=!3m1!4b1!4m6!3m5!1s0x3541915a146347e7:0xee3154fea481e6c!8m2!3d33.5889365!4d130.4195313!16s%2Fg%2F11j95ms43p",
+     "checked_at": "2026-11-11",
+     "title": "Google 地圖店家頁（google_maps_tool 自動查詢）",
+     "fields": [
+      "address",
+      "lat",
+      "lng",
+      "phone",
+      "hours",
+      "closed_days",
+      "ratings.google"
+     ]
+    },
+    {
+     "url": "https://www.google.com/maps/place/KITTE%E5%8D%9A%E5%A4%9A%E3%83%BBJR%E5%8D%9A%E5%A4%9A%E3%82%B7%E3%83%86%E3%82%A3%E9%A7%90%E8%BB%8A%E5%A0%B4/data=!4m7!3m6!1s0x354191b62ab53953:0xb214130403a46fbb!8m2!3d33.5888414!4d130.419799!16s%2Fg%2F11vc3r341b!19sChIJUzm1KraRQTURu2-kAwQTFLI",
+     "checked_at": "2026-11-11",
+     "title": "停車場位置：KITTE博多・JR博多シティ駐車場",
+     "fields": [
+      "parking.lat",
+      "parking.lng"
+     ]
+    }
+   ],
+   "field_status": {
+    "tax_free": "待查",
+    "stay_minutes": "估計",
+    "season_note": "不適用"
+   },
+   "checked_date": "2026-11-11",
+   "proposed_ref": "sp_ag_fuk_surugaya"
+  },
+  "sp_ag_fuk_lashinbang": {
+   "kind": "spot",
+   "name": "らしんばん博多マルイ店",
+   "name_ja": "らしんばん博多マルイ店",
+   "categories": [
+    "anime_game"
+   ],
+   "category_source": "spots_dept",
+   "category_basis": "Google 地圖分類「ホビーショップ」；販售：二手動漫周邊、公仔、徽章（博多マルイ 7F）",
+   "address": "〒812-0012 福岡県福岡市博多区博多駅中央街９番１ 博多マルイ 7階",
+   "lat": 33.5891138,
+   "lng": 130.4192547,
+   "phone": "0570-008-620",
+   "hours": "10:00–21:00（每日）",
+   "closed_days": "無固定公休（Google 地圖每天都列營業時間）；臨時休業與年末年始待查",
+   "route_days": [
+    {
+     "route": "A",
+     "day": "D14",
+     "date": "2026-12-04",
+     "weekday": "週五",
+     "nearest_stop": "博多華味鳥",
+     "distance_km": 0.6,
+     "open_that_day": true
+    },
+    {
+     "route": "A",
+     "day": "D15",
+     "date": "2026-12-05",
+     "weekday": "週六",
+     "nearest_stop": "みなと温泉 波葉の湯",
+     "distance_km": 2.5,
+     "open_that_day": true
+    },
+    {
+     "route": "A",
+     "day": "D16",
+     "date": "2026-12-06",
+     "weekday": "週日",
+     "nearest_stop": "FUK COFFEE",
+     "distance_km": 0.6,
+     "open_that_day": true
+    },
+    {
+     "route": "B",
+     "day": "D14",
+     "date": "2026-12-04",
+     "weekday": "週五",
+     "nearest_stop": "一蘭拉麵",
+     "distance_km": 1.4,
+     "open_that_day": true
+    },
+    {
+     "route": "B",
+     "day": "D15",
+     "date": "2026-12-05",
+     "weekday": "週六",
+     "nearest_stop": "稚加榮",
+     "distance_km": 2.5,
+     "open_that_day": true
+    },
+    {
+     "route": "B",
+     "day": "D16",
+     "date": "2026-12-06",
+     "weekday": "週日",
+     "nearest_stop": "博多一幸舍",
+     "distance_km": 0.2,
+     "open_that_day": true
+    },
+    {
+     "route": "C",
+     "day": "D14",
+     "date": "2026-12-04",
+     "weekday": "週五",
+     "nearest_stop": "博多華味鳥",
+     "distance_km": 0.6,
+     "open_that_day": true
+    },
+    {
+     "route": "C",
+     "day": "D15",
+     "date": "2026-12-05",
+     "weekday": "週六",
+     "nearest_stop": "庭園茶屋 樂水園",
+     "distance_km": 0.6,
+     "open_that_day": true
+    },
+    {
+     "route": "C",
+     "day": "D16",
+     "date": "2026-12-06",
+     "weekday": "週日",
+     "nearest_stop": "FUK COFFEE",
+     "distance_km": 0.6,
+     "open_that_day": true
+    }
+   ],
+   "nearest_route_point": {
+    "route": "B",
+    "day": "D16",
+    "stop": "博多一幸舍",
+    "distance_km": 0.2,
+    "method": "直線距離（Google 地圖店家座標 ↔ routes.json 站點座標）"
+   },
+   "area_group": "福岡（住宿 12/4–5；D14–D16）",
+   "suggested_day": "D14–D15（12/4 週五、12/5 週六）博多／天神",
+   "what_to_buy": "二手動漫周邊、公仔、徽章（博多マルイ 7F）",
+   "nearest_station": "JR 博多駅（博多マルイ）",
+   "admission": "免費入店",
+   "rain_ok": true,
+   "stay_minutes": 60,
+   "parking": {
+    "available": true,
+    "type": "nearby",
+    "name": "KITTE博多・JR博多シティ駐車場",
+    "fee": null,
+    "capacity": null,
+    "lat": 33.5888414,
+    "lng": 130.419799,
+    "mapcode": "13 320 259*75",
+    "mapcode_source": "Mapion 右鍵取得 13 320 259*75，以 saibara convgeo 反查一致（誤差 1.9 m）；saibara 正向換算 13 320 259*67（反查誤差 1.4 m）；兩者末段不同，依規則以 Mapion 為準。換算點：Google 地圖「KITTE博多・JR博多シティ駐車場」標記點（非精確入口） 33.588841,130.419799",
+    "walk_min": null,
+    "note": "KITTE博多・JR博多シティ停車場",
+    "source": "https://www.google.com/maps/place/KITTE%E5%8D%9A%E5%A4%9A%E3%83%BBJR%E5%8D%9A%E5%A4%9A%E3%82%B7%E3%83%86%E3%82%A3%E9%A7%90%E8%BB%8A%E5%A0%B4/data=!4m7!3m6!1s0x354191b62ab53953:0xb214130403a46fbb!8m2!3d33.5888414!4d130.419799!16s%2Fg%2F11vc3r341b!19sChIJUzm1KraRQTURu2-kAwQTFLI"
+   },
+   "mapcode": "13 320 259*75",
+   "mapcode_source": "依停車場入口／標記點換算：Mapion 右鍵取得 13 320 259*75，以 saibara convgeo 反查一致（誤差 1.9 m）；saibara 正向換算 13 320 259*67（反查誤差 1.4 m）；兩者末段不同，依規則以 Mapion 為準。換算點：Google 地圖「KITTE博多・JR博多シティ駐車場」標記點（非精確入口） 33.588841,130.419799",
+   "ratings": [
+    {
+     "source": "google",
+     "score": 4.5,
+     "scale": 5,
+     "url": "https://www.google.com/maps/place/%E3%82%89%E3%81%97%E3%82%93%E3%81%B0%E3%82%93%E5%8D%9A%E5%A4%9A%E3%83%9E%E3%83%AB%E3%82%A4%E5%BA%97/@33.5891138,130.4192547,17z/data=!3m1!4b1!4m6!3m5!1s0x3541915d6ec21e65:0xec263aed119b9539!8m2!3d33.5891138!4d130.4192547!16s%2Fg%2F11y2n603rv",
+     "checked_at": "2026-11-11",
+     "check_method": "google_maps_tool"
+    }
+   ],
+   "description": "二手動漫周邊、公仔、徽章（博多マルイ 7F）。距最近的路線點「博多一幸舍」（BD16）直線約 0.2 km。",
+   "sources": [
+    {
+     "url": "https://www.google.com/maps/place/%E3%82%89%E3%81%97%E3%82%93%E3%81%B0%E3%82%93%E5%8D%9A%E5%A4%9A%E3%83%9E%E3%83%AB%E3%82%A4%E5%BA%97/@33.5891138,130.4192547,17z/data=!3m1!4b1!4m6!3m5!1s0x3541915d6ec21e65:0xec263aed119b9539!8m2!3d33.5891138!4d130.4192547!16s%2Fg%2F11y2n603rv",
+     "checked_at": "2026-11-11",
+     "title": "Google 地圖店家頁（google_maps_tool 自動查詢）",
+     "fields": [
+      "address",
+      "lat",
+      "lng",
+      "phone",
+      "hours",
+      "closed_days",
+      "ratings.google"
+     ]
+    },
+    {
+     "url": "https://www.google.com/maps/place/KITTE%E5%8D%9A%E5%A4%9A%E3%83%BBJR%E5%8D%9A%E5%A4%9A%E3%82%B7%E3%83%86%E3%82%A3%E9%A7%90%E8%BB%8A%E5%A0%B4/data=!4m7!3m6!1s0x354191b62ab53953:0xb214130403a46fbb!8m2!3d33.5888414!4d130.419799!16s%2Fg%2F11vc3r341b!19sChIJUzm1KraRQTURu2-kAwQTFLI",
+     "checked_at": "2026-11-11",
+     "title": "停車場位置：KITTE博多・JR博多シティ駐車場",
+     "fields": [
+      "parking.lat",
+      "parking.lng"
+     ]
+    }
+   ],
+   "field_status": {
+    "tax_free": "待查",
+    "stay_minutes": "估計",
+    "season_note": "不適用"
+   },
+   "checked_date": "2026-11-11",
+   "proposed_ref": "sp_ag_fuk_lashinbang"
+  },
+  "sp_ag_fuk_animate_lachic": {
+   "kind": "spot",
+   "name": "アニメイトラシック福岡天神",
+   "name_ja": "アニメイトラシック福岡天神",
+   "categories": [
+    "anime_game"
+   ],
+   "category_source": "spots_dept",
+   "category_basis": "Google 地圖分類「コミック書店」；販售：九州最大 Animate：周邊、漫畫、CD/BD、遊戲、卡牌、畫材、咖啡（官網）",
+   "address": "〒810-8544 福岡県福岡市中央区天神２丁目１−１ ラシック福岡天神 8階",
+   "lat": 33.5886887,
+   "lng": 130.3999665,
+   "phone": "092-732-8070",
+   "hours": "10:00–20:00（每日）",
+   "closed_days": "無固定公休（Google 地圖每天都列營業時間）；臨時休業與年末年始待查",
+   "route_days": [
+    {
+     "route": "A",
+     "day": "D14",
+     "date": "2026-12-04",
+     "weekday": "週五",
+     "nearest_stop": "博多町家鄉土館",
+     "distance_km": 1.2,
+     "open_that_day": true
+    },
+    {
+     "route": "A",
+     "day": "D15",
+     "date": "2026-12-05",
+     "weekday": "週六",
+     "nearest_stop": "元祖 長浜屋拉麵",
+     "distance_km": 1.3,
+     "open_that_day": true
+    },
+    {
+     "route": "A",
+     "day": "D16",
+     "date": "2026-12-06",
+     "weekday": "週日",
+     "nearest_stop": "FUK COFFEE",
+     "distance_km": 1.2,
+     "open_that_day": true
+    },
+    {
+     "route": "B",
+     "day": "D14",
+     "date": "2026-12-04",
+     "weekday": "週五",
+     "nearest_stop": "一蘭拉麵",
+     "distance_km": 0.7,
+     "open_that_day": true
+    },
+    {
+     "route": "B",
+     "day": "D15",
+     "date": "2026-12-05",
+     "weekday": "週六",
+     "nearest_stop": "稚加榮",
+     "distance_km": 0.7,
+     "open_that_day": true
+    },
+    {
+     "route": "B",
+     "day": "D16",
+     "date": "2026-12-06",
+     "weekday": "週日",
+     "nearest_stop": "博多一幸舍",
+     "distance_km": 1.6,
+     "open_that_day": true
+    },
+    {
+     "route": "C",
+     "day": "D14",
+     "date": "2026-12-04",
+     "weekday": "週五",
+     "nearest_stop": "博多歴史館",
+     "distance_km": 1.1,
+     "open_that_day": true
+    },
+    {
+     "route": "C",
+     "day": "D15",
+     "date": "2026-12-05",
+     "weekday": "週六",
+     "nearest_stop": "博多町家鄉土館",
+     "distance_km": 1.2,
+     "open_that_day": true
+    },
+    {
+     "route": "C",
+     "day": "D16",
+     "date": "2026-12-06",
+     "weekday": "週日",
+     "nearest_stop": "FUK COFFEE",
+     "distance_km": 1.2,
+     "open_that_day": true
+    }
+   ],
+   "nearest_route_point": {
+    "route": "B",
+    "day": "D14",
+    "stop": "一蘭拉麵",
+    "distance_km": 0.7,
+    "method": "直線距離（Google 地圖店家座標 ↔ routes.json 站點座標）"
+   },
+   "area_group": "福岡（住宿 12/4–5；D14–D16）",
+   "suggested_day": "D14–D15（12/4 週五、12/5 週六）博多／天神",
+   "what_to_buy": "九州最大 Animate：周邊、漫畫、CD/BD、遊戲、卡牌、畫材、咖啡（官網）",
+   "nearest_station": "西鐵福岡（天神）駅直結（官網）",
+   "admission": "免費入店",
+   "rain_ok": true,
+   "stay_minutes": 60,
+   "parking": {
+    "available": true,
+    "type": "nearby",
+    "name": "天神地下街駐車場",
+    "fee": null,
+    "capacity": null,
+    "lat": 33.5901083,
+    "lng": 130.3994276,
+    "mapcode": "13 318 366*02",
+    "mapcode_source": "Mapion 右鍵取得 13 318 366*02，以 saibara convgeo 反查一致（誤差 2.2 m）；saibara 正向換算 13 318 366*84（反查誤差 1.4 m）；兩者末段不同，依規則以 Mapion 為準。換算點：Google 地圖「天神地下街駐車場」標記點（非精確入口） 33.590108,130.399428",
+    "walk_min": null,
+    "note": "天神地下街停車場（公共收費），非店家提携，費用待查",
+    "source": "https://www.google.com/maps/place/%E5%A4%A9%E7%A5%9E%E5%9C%B0%E4%B8%8B%E8%A1%97%E9%A7%90%E8%BB%8A%E5%A0%B4/data=!4m7!3m6!1s0x3541918e737bda11:0xaf9aea4d482e5e9d!8m2!3d33.5901083!4d130.3994276!16s%2Fg%2F1ptypxx1r!19sChIJEdp7c46RQTURnV4uSE3qmq8"
+   },
+   "mapcode": "13 318 366*02",
+   "mapcode_source": "依停車場入口／標記點換算：Mapion 右鍵取得 13 318 366*02，以 saibara convgeo 反查一致（誤差 2.2 m）；saibara 正向換算 13 318 366*84（反查誤差 1.4 m）；兩者末段不同，依規則以 Mapion 為準。換算點：Google 地圖「天神地下街駐車場」標記點（非精確入口） 33.590108,130.399428",
+   "ratings": [
+    {
+     "source": "google",
+     "score": 4.3,
+     "scale": 5,
+     "url": "https://www.google.com/maps/place/%E3%82%A2%E3%83%8B%E3%83%A1%E3%82%A4%E3%83%88%E3%83%A9%E3%82%B7%E3%83%83%E3%82%AF%E7%A6%8F%E5%B2%A1%E5%A4%A9%E7%A5%9E/@33.5886887,130.3999665,17z/data=!3m1!4b1!4m6!3m5!1s0x354191cb0435bf13:0x9561c20dc51cf!8m2!3d33.5886887!4d130.3999665!16s%2Fg%2F11p27w6shq",
+     "checked_at": "2026-11-11",
+     "check_method": "google_maps_tool"
+    }
+   ],
+   "description": "九州最大 Animate：周邊、漫畫、CD/BD、遊戲、卡牌、畫材、咖啡（官網）。距最近的路線點「一蘭拉麵」（BD14）直線約 0.7 km。",
+   "sources": [
+    {
+     "url": "https://www.google.com/maps/place/%E3%82%A2%E3%83%8B%E3%83%A1%E3%82%A4%E3%83%88%E3%83%A9%E3%82%B7%E3%83%83%E3%82%AF%E7%A6%8F%E5%B2%A1%E5%A4%A9%E7%A5%9E/@33.5886887,130.3999665,17z/data=!3m1!4b1!4m6!3m5!1s0x354191cb0435bf13:0x9561c20dc51cf!8m2!3d33.5886887!4d130.3999665!16s%2Fg%2F11p27w6shq",
+     "checked_at": "2026-11-11",
+     "title": "Google 地圖店家頁（google_maps_tool 自動查詢）",
+     "fields": [
+      "address",
+      "lat",
+      "lng",
+      "phone",
+      "hours",
+      "closed_days",
+      "ratings.google"
+     ]
+    },
+    {
+     "url": "https://www.google.com/maps/place/%E5%A4%A9%E7%A5%9E%E5%9C%B0%E4%B8%8B%E8%A1%97%E9%A7%90%E8%BB%8A%E5%A0%B4/data=!4m7!3m6!1s0x3541918e737bda11:0xaf9aea4d482e5e9d!8m2!3d33.5901083!4d130.3994276!16s%2Fg%2F1ptypxx1r!19sChIJEdp7c46RQTURnV4uSE3qmq8",
+     "checked_at": "2026-11-11",
+     "title": "停車場位置：天神地下街駐車場",
+     "fields": [
+      "parking.lat",
+      "parking.lng"
+     ]
+    },
+    {
+     "url": "https://www.animate.co.jp/shop/lachic_fukuokatenjin/",
+     "checked_at": "2026-11-11",
+     "title": "アニメイトラシック福岡天神 官網",
+     "fields": [
+      "hours",
+      "address",
+      "phone",
+      "what_to_buy",
+      "nearest_station"
+     ]
+    }
+   ],
+   "field_status": {
+    "tax_free": "待查",
+    "stay_minutes": "估計",
+    "season_note": "不適用"
+   },
+   "checked_date": "2026-11-11",
+   "proposed_ref": "sp_ag_fuk_animate_lachic",
+   "note": "2026-10-24 移轉開幕，官網稱九州最大 Animate。"
+  },
+  "sp_ag_fuk_animate_annex": {
+   "kind": "spot",
+   "name": "アニメイト福岡ANNEX",
+   "name_ja": "アニメイト福岡ANNEX",
+   "categories": [
+    "anime_game"
+   ],
+   "category_source": "spots_dept",
+   "category_basis": "Google 地圖分類「ホビーショップ」；販售：以動漫周邊為主的 Animate 分店（2026-11-02 開幕，官網）",
+   "address": "〒810-0001 福岡県福岡市中央区天神２丁目１１−１ 福岡パルコ本館 ８F",
+   "lat": 33.5909156,
+   "lng": 130.3987274,
+   "hours": "10:00–20:30（每日）",
+   "closed_days": "無固定公休（Google 地圖每天都列營業時間）；臨時休業與年末年始待查",
+   "route_days": [
+    {
+     "route": "A",
+     "day": "D14",
+     "date": "2026-12-04",
+     "weekday": "週五",
+     "nearest_stop": "博多町家鄉土館",
+     "distance_km": 1.2,
+     "open_that_day": true
+    },
+    {
+     "route": "A",
+     "day": "D15",
+     "date": "2026-12-05",
+     "weekday": "週六",
+     "nearest_stop": "元祖 長浜屋拉麵",
+     "distance_km": 1.1,
+     "open_that_day": true
+    },
+    {
+     "route": "A",
+     "day": "D16",
+     "date": "2026-12-06",
+     "weekday": "週日",
+     "nearest_stop": "FUK COFFEE",
+     "distance_km": 1.3,
+     "open_that_day": true
+    },
+    {
+     "route": "B",
+     "day": "D14",
+     "date": "2026-12-04",
+     "weekday": "週五",
+     "nearest_stop": "一蘭拉麵",
+     "distance_km": 0.6,
+     "open_that_day": true
+    },
+    {
+     "route": "B",
+     "day": "D15",
+     "date": "2026-12-05",
+     "weekday": "週六",
+     "nearest_stop": "稚加榮",
+     "distance_km": 0.7,
+     "open_that_day": true
+    },
+    {
+     "route": "B",
+     "day": "D16",
+     "date": "2026-12-06",
+     "weekday": "週日",
+     "nearest_stop": "博多一幸舍",
+     "distance_km": 1.7,
+     "open_that_day": true
+    },
+    {
+     "route": "C",
+     "day": "D14",
+     "date": "2026-12-04",
+     "weekday": "週五",
+     "nearest_stop": "博多歴史館",
+     "distance_km": 1.1,
+     "open_that_day": true
+    },
+    {
+     "route": "C",
+     "day": "D15",
+     "date": "2026-12-05",
+     "weekday": "週六",
+     "nearest_stop": "博多町家鄉土館",
+     "distance_km": 1.2,
+     "open_that_day": true
+    },
+    {
+     "route": "C",
+     "day": "D16",
+     "date": "2026-12-06",
+     "weekday": "週日",
+     "nearest_stop": "FUK COFFEE",
+     "distance_km": 1.3,
+     "open_that_day": true
+    }
+   ],
+   "nearest_route_point": {
+    "route": "B",
+    "day": "D14",
+    "stop": "一蘭拉麵",
+    "distance_km": 0.6,
+    "method": "直線距離（Google 地圖店家座標 ↔ routes.json 站點座標）"
+   },
+   "area_group": "福岡（住宿 12/4–5；D14–D16）",
+   "suggested_day": "D14–D15（12/4 週五、12/5 週六）博多／天神",
+   "what_to_buy": "以動漫周邊為主的 Animate 分店（2026-11-02 開幕，官網）",
+   "nearest_station": "地下鐵天神駅・西鐵福岡（天神）駅步行 2 分（官網）",
+   "admission": "免費入店",
+   "rain_ok": true,
+   "stay_minutes": 60,
+   "parking": {
+    "available": true,
+    "type": "nearby",
+    "name": "天神地下街駐車場",
+    "fee": null,
+    "capacity": null,
+    "lat": 33.5901083,
+    "lng": 130.3994276,
+    "mapcode": "13 318 366*02",
+    "mapcode_source": "Mapion 右鍵取得 13 318 366*02，以 saibara convgeo 反查一致（誤差 2.2 m）；saibara 正向換算 13 318 366*84（反查誤差 1.4 m）；兩者末段不同，依規則以 Mapion 為準。換算點：Google 地圖「天神地下街駐車場」標記點（非精確入口） 33.590108,130.399428",
+    "walk_min": null,
+    "note": "天神地下街停車場（公共收費），非店家提携，費用待查",
+    "source": "https://www.google.com/maps/place/%E5%A4%A9%E7%A5%9E%E5%9C%B0%E4%B8%8B%E8%A1%97%E9%A7%90%E8%BB%8A%E5%A0%B4/data=!4m7!3m6!1s0x3541918e737bda11:0xaf9aea4d482e5e9d!8m2!3d33.5901083!4d130.3994276!16s%2Fg%2F1ptypxx1r!19sChIJEdp7c46RQTURnV4uSE3qmq8"
+   },
+   "mapcode": "13 318 366*02",
+   "mapcode_source": "依停車場入口／標記點換算：Mapion 右鍵取得 13 318 366*02，以 saibara convgeo 反查一致（誤差 2.2 m）；saibara 正向換算 13 318 366*84（反查誤差 1.4 m）；兩者末段不同，依規則以 Mapion 為準。換算點：Google 地圖「天神地下街駐車場」標記點（非精確入口） 33.590108,130.399428",
+   "ratings": [
+    {
+     "source": "google",
+     "score": 4.2,
+     "scale": 5,
+     "url": "https://www.google.com/maps/place/%E3%82%A2%E3%83%8B%E3%83%A1%E3%82%A4%E3%83%88%E7%A6%8F%E5%B2%A1ANNEX/@33.5909156,130.3987274,17z/data=!3m1!4b1!4m6!3m5!1s0x35419188cfd631b5:0x7925b034c8a13526!8m2!3d33.5909156!4d130.3987274!16s%2Fg%2F1tctvb8k",
+     "checked_at": "2026-11-11",
+     "check_method": "google_maps_tool"
+    }
+   ],
+   "description": "以動漫周邊為主的 Animate 分店（2026-11-02 開幕，官網）。距最近的路線點「一蘭拉麵」（BD14）直線約 0.6 km。",
+   "sources": [
+    {
+     "url": "https://www.google.com/maps/place/%E3%82%A2%E3%83%8B%E3%83%A1%E3%82%A4%E3%83%88%E7%A6%8F%E5%B2%A1ANNEX/@33.5909156,130.3987274,17z/data=!3m1!4b1!4m6!3m5!1s0x35419188cfd631b5:0x7925b034c8a13526!8m2!3d33.5909156!4d130.3987274!16s%2Fg%2F1tctvb8k",
+     "checked_at": "2026-11-11",
+     "title": "Google 地圖店家頁（google_maps_tool 自動查詢）",
+     "fields": [
+      "address",
+      "lat",
+      "lng",
+      "phone",
+      "hours",
+      "closed_days",
+      "ratings.google"
+     ]
+    },
+    {
+     "url": "https://www.google.com/maps/place/%E5%A4%A9%E7%A5%9E%E5%9C%B0%E4%B8%8B%E8%A1%97%E9%A7%90%E8%BB%8A%E5%A0%B4/data=!4m7!3m6!1s0x3541918e737bda11:0xaf9aea4d482e5e9d!8m2!3d33.5901083!4d130.3994276!16s%2Fg%2F1ptypxx1r!19sChIJEdp7c46RQTURnV4uSE3qmq8",
+     "checked_at": "2026-11-11",
+     "title": "停車場位置：天神地下街駐車場",
+     "fields": [
+      "parking.lat",
+      "parking.lng"
+     ]
+    },
+    {
+     "url": "https://www.animate.co.jp/shop/fukuokatenjin/",
+     "checked_at": "2026-11-11",
+     "title": "アニメイト福岡ANNEX 官網",
+     "fields": [
+      "hours",
+      "address",
+      "what_to_buy",
+      "nearest_station"
+     ]
+    }
+   ],
+   "field_status": {
+    "phone": "待查",
+    "tax_free": "待查",
+    "stay_minutes": "估計",
+    "season_note": "不適用"
+   },
+   "checked_date": "2026-11-11",
+   "proposed_ref": "sp_ag_fuk_animate_annex",
+   "note": "2026-11-02 由原「アニメイト福岡パルコ」改裝開幕的周邊特化店（官網）。"
+  },
+  "sp_ag_fuk_mandarake": {
+   "kind": "spot",
+   "name": "まんだらけ 福岡店",
+   "name_ja": "まんだらけ 福岡店",
+   "categories": [
+    "anime_game"
+   ],
+   "category_source": "spots_dept",
+   "category_basis": "Google 地圖分類「コレクターズ ショップ」；販售：二手公仔、復古遊戲、玩具、寶可夢卡、漫畫（1F 有遊戲・玩具・卡牌）",
+   "address": "〒810-0041 福岡県福岡市中央区大名２丁目９−５ グランドビル",
+   "lat": 33.5901747,
+   "lng": 130.3937289,
+   "phone": "092-716-7774",
+   "hours": "12:00–20:00（每日）",
+   "closed_days": "無固定公休（Google 地圖每天都列營業時間）；臨時休業與年末年始待查",
+   "route_days": [
+    {
+     "route": "A",
+     "day": "D14",
+     "date": "2026-12-04",
+     "weekday": "週五",
+     "nearest_stop": "博多町家鄉土館",
+     "distance_km": 1.7,
+     "open_that_day": true
+    },
+    {
+     "route": "A",
+     "day": "D15",
+     "date": "2026-12-05",
+     "weekday": "週六",
+     "nearest_stop": "元祖 長浜屋拉麵",
+     "distance_km": 0.7,
+     "open_that_day": true
+    },
+    {
+     "route": "A",
+     "day": "D16",
+     "date": "2026-12-06",
+     "weekday": "週日",
+     "nearest_stop": "FUK COFFEE",
+     "distance_km": 1.8,
+     "open_that_day": true
+    },
+    {
+     "route": "B",
+     "day": "D14",
+     "date": "2026-12-04",
+     "weekday": "週五",
+     "nearest_stop": "一蘭拉麵",
+     "distance_km": 1.1,
+     "open_that_day": true
+    },
+    {
+     "route": "B",
+     "day": "D15",
+     "date": "2026-12-05",
+     "weekday": "週六",
+     "nearest_stop": "稚加榮",
+     "distance_km": 0.3,
+     "open_that_day": true
+    },
+    {
+     "route": "B",
+     "day": "D16",
+     "date": "2026-12-06",
+     "weekday": "週日",
+     "nearest_stop": "博多一幸舍",
+     "distance_km": 2.2,
+     "open_that_day": true
+    },
+    {
+     "route": "C",
+     "day": "D14",
+     "date": "2026-12-04",
+     "weekday": "週五",
+     "nearest_stop": "博多歴史館",
+     "distance_km": 1.6,
+     "open_that_day": true
+    },
+    {
+     "route": "C",
+     "day": "D15",
+     "date": "2026-12-05",
+     "weekday": "週六",
+     "nearest_stop": "みなと温泉 波葉の湯",
+     "distance_km": 1.6,
+     "open_that_day": true
+    },
+    {
+     "route": "C",
+     "day": "D16",
+     "date": "2026-12-06",
+     "weekday": "週日",
+     "nearest_stop": "FUK COFFEE",
+     "distance_km": 1.8,
+     "open_that_day": true
+    }
+   ],
+   "nearest_route_point": {
+    "route": "B",
+    "day": "D15",
+    "stop": "稚加榮",
+    "distance_km": 0.3,
+    "method": "直線距離（Google 地圖店家座標 ↔ routes.json 站點座標）"
+   },
+   "area_group": "福岡（住宿 12/4–5；D14–D16）",
+   "suggested_day": "D14–D15（12/4 週五、12/5 週六）博多／天神",
+   "what_to_buy": "二手公仔、復古遊戲、玩具、寶可夢卡、漫畫（1F 有遊戲・玩具・卡牌）",
+   "tax_free": "有（CardRank JP 2026-10 報導：只受理當日當店購物）",
+   "nearest_station": "地下鐵天神駅1號出口步行 2 分、赤坂駅3號出口步行 1 分（官網）",
+   "admission": "免費入店",
+   "rain_ok": true,
+   "stay_minutes": 60,
+   "parking": {
+    "available": true,
+    "type": "nearby",
+    "name": "タイムズ（OSM，まんだらけ福岡店旁）",
+    "fee": null,
+    "capacity": null,
+    "lat": 33.5901732,
+    "lng": 130.393334,
+    "mapcode": "13 317 374*38",
+    "mapcode_source": "Mapion 右鍵取得 13 317 374*38，以 saibara convgeo 反查一致（誤差 1.5 m）；saibara 正向換算 13 317 374*38（反查誤差 1.5 m）。換算點：停車場為 OSM 節點 node/3994614262，以節點座標為準 33.590173,130.393334",
+    "walk_min": null,
+    "note": "官網：店舖正面與附近有收費停車場；此點為 OSM 標示的鄰近タイムズ",
+    "source": "https://www.openstreetmap.org/node/3994614262"
+   },
+   "mapcode": "13 317 374*38",
+   "mapcode_source": "依停車場入口／標記點換算：Mapion 右鍵取得 13 317 374*38，以 saibara convgeo 反查一致（誤差 1.5 m）；saibara 正向換算 13 317 374*38（反查誤差 1.5 m）。換算點：停車場為 OSM 節點 node/3994614262，以節點座標為準 33.590173,130.393334",
+   "ratings": [
+    {
+     "source": "google",
+     "score": 4.2,
+     "scale": 5,
+     "url": "https://www.google.com/maps/place/%E3%81%BE%E3%82%93%E3%81%A0%E3%82%89%E3%81%91+%E7%A6%8F%E5%B2%A1%E5%BA%97/@33.5901747,130.3937289,17z/data=!3m1!4b1!4m6!3m5!1s0x3541918626400001:0x7063aa6e1eec713b!8m2!3d33.5901747!4d130.3937289!16s%2Fg%2F1tcwths2",
+     "checked_at": "2026-11-11",
+     "check_method": "google_maps_tool"
+    }
+   ],
+   "description": "二手公仔、復古遊戲、玩具、寶可夢卡、漫畫（1F 有遊戲・玩具・卡牌）。距最近的路線點「稚加榮」（BD15）直線約 0.3 km。",
+   "sources": [
+    {
+     "url": "https://www.google.com/maps/place/%E3%81%BE%E3%82%93%E3%81%A0%E3%82%89%E3%81%91+%E7%A6%8F%E5%B2%A1%E5%BA%97/@33.5901747,130.3937289,17z/data=!3m1!4b1!4m6!3m5!1s0x3541918626400001:0x7063aa6e1eec713b!8m2!3d33.5901747!4d130.3937289!16s%2Fg%2F1tcwths2",
+     "checked_at": "2026-11-11",
+     "title": "Google 地圖店家頁（google_maps_tool 自動查詢）",
+     "fields": [
+      "address",
+      "lat",
+      "lng",
+      "phone",
+      "hours",
+      "closed_days",
+      "ratings.google"
+     ]
+    },
+    {
+     "url": "https://www.openstreetmap.org/node/3994614262",
+     "checked_at": "2026-11-11",
+     "title": "停車場位置：タイムズ（OSM，まんだらけ福岡店旁）",
+     "fields": [
+      "parking.lat",
+      "parking.lng"
+     ]
+    },
+    {
+     "url": "https://www.mandarake.co.jp/dir/fko/",
+     "checked_at": "2026-11-11",
+     "title": "まんだらけ 福岡店 官網",
+     "fields": [
+      "hours",
+      "closed_days",
+      "parking",
+      "nearest_station"
+     ]
+    },
+    {
+     "url": "https://www.cardrankjp.com/buy-in-japan/shops",
+     "checked_at": "2026-11-11",
+     "title": "CardRank JP 店家指南",
+     "fields": [
+      "tax_free",
+      "what_to_buy"
+     ]
+    }
+   ],
+   "field_status": {
+    "stay_minutes": "估計",
+    "season_note": "不適用"
+   },
+   "checked_date": "2026-11-11",
+   "proposed_ref": "sp_ag_fuk_mandarake"
+  },
+  "sp_ag_fuk_gashapon_canal": {
+   "kind": "spot",
+   "name": "ガシャポンのデパート キャナルシティ博多店",
+   "name_ja": "ガシャポンのデパート キャナルシティ博多店",
+   "categories": [
+    "anime_game"
+   ],
+   "category_source": "spots_dept",
+   "category_basis": "Google 地圖分類「おもちゃ店」；販售：萬代轉蛋專門店（キャナルシティ博多 サウスビル B1）",
+   "address": "〒812-0018 福岡県福岡市博多区住吉１丁目２−７４ キャナルシティ博多サウスビル B1",
+   "lat": 33.5884979,
+   "lng": 130.4107175,
+   "phone": "0570-076-562",
+   "hours": "10:00–21:00（每日）",
+   "closed_days": "無固定公休（Google 地圖每天都列營業時間）；臨時休業與年末年始待查",
+   "route_days": [
+    {
+     "route": "A",
+     "day": "D14",
+     "date": "2026-12-04",
+     "weekday": "週五",
+     "nearest_stop": "博多華味鳥",
+     "distance_km": 0.5,
+     "open_that_day": true
+    },
+    {
+     "route": "A",
+     "day": "D15",
+     "date": "2026-12-05",
+     "weekday": "週六",
+     "nearest_stop": "みなと温泉 波葉の湯",
+     "distance_km": 2.1,
+     "open_that_day": true
+    },
+    {
+     "route": "A",
+     "day": "D16",
+     "date": "2026-12-06",
+     "weekday": "週日",
+     "nearest_stop": "FUK COFFEE",
+     "distance_km": 0.3,
+     "open_that_day": true
+    },
+    {
+     "route": "B",
+     "day": "D14",
+     "date": "2026-12-04",
+     "weekday": "週五",
+     "nearest_stop": "一蘭拉麵",
+     "distance_km": 0.8,
+     "open_that_day": true
+    },
+    {
+     "route": "B",
+     "day": "D15",
+     "date": "2026-12-05",
+     "weekday": "週六",
+     "nearest_stop": "稚加榮",
+     "distance_km": 1.7,
+     "open_that_day": true
+    },
+    {
+     "route": "B",
+     "day": "D16",
+     "date": "2026-12-06",
+     "weekday": "週日",
+     "nearest_stop": "博多一幸舍",
+     "distance_km": 0.6,
+     "open_that_day": true
+    },
+    {
+     "route": "C",
+     "day": "D14",
+     "date": "2026-12-04",
+     "weekday": "週五",
+     "nearest_stop": "博多歴史館",
+     "distance_km": 0.5,
+     "open_that_day": true
+    },
+    {
+     "route": "C",
+     "day": "D15",
+     "date": "2026-12-05",
+     "weekday": "週六",
+     "nearest_stop": "庭園茶屋 樂水園",
+     "distance_km": 0.3,
+     "open_that_day": true
+    },
+    {
+     "route": "C",
+     "day": "D16",
+     "date": "2026-12-06",
+     "weekday": "週日",
+     "nearest_stop": "FUK COFFEE",
+     "distance_km": 0.3,
+     "open_that_day": true
+    }
+   ],
+   "nearest_route_point": {
+    "route": "A",
+    "day": "D16",
+    "stop": "FUK COFFEE",
+    "distance_km": 0.3,
+    "method": "直線距離（Google 地圖店家座標 ↔ routes.json 站點座標）"
+   },
+   "area_group": "福岡（住宿 12/4–5；D14–D16）",
+   "suggested_day": "D14–D15（12/4 週五、12/5 週六）博多／天神",
+   "what_to_buy": "萬代轉蛋專門店（キャナルシティ博多 サウスビル B1）",
+   "admission": "免費入店",
+   "rain_ok": true,
+   "stay_minutes": 60,
+   "parking": {
+    "available": true,
+    "type": "nearby",
+    "name": "キャナルシティパーキング 地下駐車場入口",
+    "fee": null,
+    "capacity": null,
+    "lat": 33.5908564,
+    "lng": 130.4103519,
+    "mapcode": "13 319 465*15",
+    "mapcode_source": "Mapion 右鍵取得 13 319 465*15，以 saibara convgeo 反查一致（誤差 2.6 m）；saibara 正向換算 13 319 465*07（反查誤差 1.8 m）；兩者末段不同，依規則以 Mapion 為準。換算點：Google 地圖「キャナルシティパーキング 地下駐車場入口」標記點（Google 標示為入口） 33.590856,130.410352",
+    "walk_min": null,
+    "note": "キャナルシティ地下停車場入口（Google 標示為入口）；費用待查",
+    "source": "https://www.google.com/maps/place/%E3%82%AD%E3%83%A3%E3%83%8A%E3%83%AB%E3%82%B7%E3%83%86%E3%82%A3%E3%83%91%E3%83%BC%E3%82%AD%E3%83%B3%E3%82%B0+%E5%9C%B0%E4%B8%8B%E9%A7%90%E8%BB%8A%E5%A0%B4%E5%85%A5%E5%8F%A3/data=!4m7!3m6!1s0x354191449545a88d:0xb167e2c3947e08fe!8m2!3d33.5908564!4d130.4103519!16s%2Fg%2F11jdtk08tl!19sChIJjahFlUSRQTUR_gh-lMPiZ7E"
+   },
+   "mapcode": "13 319 465*15",
+   "mapcode_source": "依停車場入口／標記點換算：Mapion 右鍵取得 13 319 465*15，以 saibara convgeo 反查一致（誤差 2.6 m）；saibara 正向換算 13 319 465*07（反查誤差 1.8 m）；兩者末段不同，依規則以 Mapion 為準。換算點：Google 地圖「キャナルシティパーキング 地下駐車場入口」標記點（Google 標示為入口） 33.590856,130.410352",
+   "ratings": [
+    {
+     "source": "google",
+     "score": 3.7,
+     "scale": 5,
+     "url": "https://www.google.com/maps/place/%E3%82%AC%E3%82%B7%E3%83%A3%E3%83%9D%E3%83%B3%E3%81%AE%E3%83%87%E3%83%91%E3%83%BC%E3%83%88+%E3%82%AD%E3%83%A3%E3%83%8A%E3%83%AB%E3%82%B7%E3%83%86%E3%82%A3%E5%8D%9A%E5%A4%9A%E5%BA%97/@33.5884979,130.4107175,17z/data=!3m1!4b1!4m6!3m5!1s0x3541911277f5072f:0x701f8020fb138d00!8m2!3d33.5884979!4d130.4107175!16s%2Fg%2F11kfz21qr8",
+     "checked_at": "2026-11-11",
+     "check_method": "google_maps_tool"
+    }
+   ],
+   "description": "萬代轉蛋專門店（キャナルシティ博多 サウスビル B1）。距最近的路線點「FUK COFFEE」（AD16）直線約 0.3 km。",
+   "sources": [
+    {
+     "url": "https://www.google.com/maps/place/%E3%82%AC%E3%82%B7%E3%83%A3%E3%83%9D%E3%83%B3%E3%81%AE%E3%83%87%E3%83%91%E3%83%BC%E3%83%88+%E3%82%AD%E3%83%A3%E3%83%8A%E3%83%AB%E3%82%B7%E3%83%86%E3%82%A3%E5%8D%9A%E5%A4%9A%E5%BA%97/@33.5884979,130.4107175,17z/data=!3m1!4b1!4m6!3m5!1s0x3541911277f5072f:0x701f8020fb138d00!8m2!3d33.5884979!4d130.4107175!16s%2Fg%2F11kfz21qr8",
+     "checked_at": "2026-11-11",
+     "title": "Google 地圖店家頁（google_maps_tool 自動查詢）",
+     "fields": [
+      "address",
+      "lat",
+      "lng",
+      "phone",
+      "hours",
+      "closed_days",
+      "ratings.google"
+     ]
+    },
+    {
+     "url": "https://www.google.com/maps/place/%E3%82%AD%E3%83%A3%E3%83%8A%E3%83%AB%E3%82%B7%E3%83%86%E3%82%A3%E3%83%91%E3%83%BC%E3%82%AD%E3%83%B3%E3%82%B0+%E5%9C%B0%E4%B8%8B%E9%A7%90%E8%BB%8A%E5%A0%B4%E5%85%A5%E5%8F%A3/data=!4m7!3m6!1s0x354191449545a88d:0xb167e2c3947e08fe!8m2!3d33.5908564!4d130.4103519!16s%2Fg%2F11jdtk08tl!19sChIJjahFlUSRQTUR_gh-lMPiZ7E",
+     "checked_at": "2026-11-11",
+     "title": "停車場位置：キャナルシティパーキング 地下駐車場入口",
+     "fields": [
+      "parking.lat",
+      "parking.lng"
+     ]
+    }
+   ],
+   "field_status": {
+    "tax_free": "待查",
+    "nearest_station": "待查",
+    "stay_minutes": "估計",
+    "season_note": "不適用"
+   },
+   "checked_date": "2026-11-11",
+   "proposed_ref": "sp_ag_fuk_gashapon_canal"
   }
  }
 }
