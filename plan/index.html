@@ -307,7 +307,7 @@ header{padding-top:calc(8px + var(--sat));}
 <script>
 (function(){
 "use strict";
-const APPV="plan-multi-1.9.16";
+const APPV="plan-multi-1.9.17";
 /* 1.8 後台自動排路線（Cloudflare Worker）：網址部署後填入。空字串＝後台未啟用，網頁維持 1.7 行為（匯出 JSON＋複製文字）。site key 是公開值。 */
 const BACKEND_CFG={url:"https://trip-intake.turbo99992001.workers.dev",turnstile_site_key:"0x4AAAAAAFs8wmzPidNkiUBU"};
 const CAT={popular:"熱門",natural:"自然絕景",shrine:"神社寺院",historic:"歷史",onsen:"溫泉",hidden:"私房",food:"美食",experience:"親子／體驗",anime:"動漫",anime_game:"🎮 動漫・遊戲周邊",festival:"活動／花季",custom:"👤 自訂地點",auto:"🤖 後台路線景點",uncat:"🏷 待分類"};
@@ -1419,7 +1419,7 @@ function setRoute(r,opt){opt=opt||{};
 function fetchJson(path,optional){return fetch(path,{cache:"no-cache"}).then(r=>{if(!r.ok) throw new Error(path+" HTTP "+r.status); return r.json();}).catch(e=>{if(optional) return null; throw e;});}
 function loadTripData(e){
  if(e.local){const pkg=ltGet(e.id); if(!pkg) return Promise.reject(new Error("本機行程資料不見了"));
-  return Promise.all([(pkg.rest_fill?Promise.resolve(null):rfFetch(e.id)),plFetch(e.id),rtFetch(e.id)]).then(([rf,pl,rt])=>{ if(rf) rfStore(pkg,rf,"網站資料檔（data/handoffs/"+e.id+"/restaurants.json）"); const p2=ltGet(e.id)||pkg; const d=plApply(rfApply(ltBuild(p2),p2),pl); d.rt_latest=rt||null; d.rt_new=rt&&rtNewer(rt,p2.route_set)&&p2.rt_dismissed!==rt.generated_at?rt:null; return d;});}
+  return Promise.all([(pkg.rest_fill?Promise.resolve(null):rfFetch(e.id)),plFetch(e.id),rtFetch(e.id),refFetch(e.id)]).then(([rf,pl,rt,fref])=>{ if(rf) rfStore(pkg,rf,"網站資料檔（data/handoffs/"+e.id+"/restaurants.json）"); const p2=ltGet(e.id)||pkg; const d=plApply(rfApply(ltBuild(p2),p2),pl); d.rt_latest=rt||null; d.rt_new=rt&&rtNewer(rt,p2.route_set)&&p2.rt_dismissed!==rt.generated_at?rt:null; if(fref) d.fill_ref=fref; return d;});}
  if(CACHE[e.id]) return Promise.resolve(CACHE[e.id]);
  const b="data/"+encodeURIComponent(e.id)+"/", v="?v="+encodeURIComponent(e.data_version||"");
  return Promise.all([fetchJson(b+"meta.json"+v),fetchJson(b+"spots.json"+v),fetchJson(b+"spot_plan.json"+v),fetchJson(b+"restaurants.json"+v,true),fetchJson(b+"restaurant_plan.json"+v,true),fetchJson(b+"custom_places.json"+v,true)])
@@ -1748,6 +1748,7 @@ function renderMod(){ if(curMod==="new") return renderNew(); if(DRAFT||!D){$("#m
  const P=$("#modpanel"), f=FL(), ad=(TE.travelers&&TE.travelers.adults)||1; let h="";
  const note=`<div class="cnt">預約、付款請安宏親自確認；這裡只記錄「已訂好」的內容，存在本機瀏覽器。</div>`;
  if(curMod==="flights"){
+  h+=fillRefFlightsHtml();
   if(D.meta.local) h+=`<div class="card"><h3>需求表單填的航班</h3><div class="desc">${f&&f.outbound?`去程 ${esc(f.outbound.flight)}（${esc(f.outbound.date)}）`:"去程：尚未提供"}<br>${f&&f.inbound?`回程 ${esc(f.inbound.flight)}（${esc(f.inbound.date)}）`:"回程：尚未提供"}${D.meta.flights_status?"<br>"+esc(D.meta.flights_status):""}</div><div class="todo">起飛／抵達時刻尚未提供：請到下方「已訂好 → 手動輸入」補上，或由機票部補。</div></div>`;
   else if(f&&f.outbound) h+=`<div class="card"><h3>目前航班（機票部）</h3><div class="desc">${esc(f.airline||"")}<br>去程 ${esc(f.outbound.flight)} ${esc(f.outbound.date)} ${esc(f.outbound.from)} ${esc(f.outbound.dep)} → ${esc(f.outbound.to)} ${esc(f.outbound.arr)}${f.inbound?`<br>回程 ${esc(f.inbound.flight)} ${esc(f.inbound.date)} ${esc(f.inbound.from)} ${esc(f.inbound.dep)} → ${esc(f.inbound.to)} ${esc(f.inbound.arr)}`:""}</div></div>`;
   const o=(f&&f.outbound)||{}, i=(f&&f.inbound)||{};
@@ -1755,13 +1756,14 @@ function renderMod(){ if(curMod==="new") return renderNew(); if(DRAFT||!D){$("#m
   h+=`<div class="card"><h3>已訂好 → 手動輸入</h3>${bookForm("flights",{airline:f&&f.airline,out_flight:o.flight,out_date:o.date,out_dep:o.dep,out_arr:o.arr,in_flight:i.flight,in_date:i.date,in_dep:i.dep,in_arr:i.arr})}</div>`;
  } else if(curMod==="car"){
   const pu=pickupDefault(), dr=dropoffDefault(), apt=(f&&f.outbound&&f.outbound.to)||"";
+  h+=fillRefCarHtml();
   h+=`<div class="card"><h3>租車建議時間</h3><div class="desc" id="carBuf">取車：${esc(pu.replace("T"," ")||"（沒有航班資料）")}（入境後 ${BUF.pickup_after_arrival_min} 分）<br>還車：${esc(dr.replace("T"," ")||"（沒有航班資料）")}（起飛前 ${BUF.return_before_departure_min} 分）</div>${D.meta.local?`<div class="cnt">需求：${esc(D.meta.car_request||"尚未提供")}${pu?"":"；沒有航班時刻，取還車時間尚未提供"}</div>`:""}<div class="btns">${lk(carLinks({airport:apt}))}</div></div>`;
   h+=`<div class="card"><h3>已訂好 → 手動輸入</h3>${bookForm("car",{pickup_at:pu,dropoff_at:dr,pickup_place:AP[apt]||apt,dropoff_place:AP[(f&&f.inbound&&f.inbound.from)||""]||""})}</div>`;
  } else if(curMod==="lodging"){
   const L=(D.lodging||[]).filter(l=>l.route===route);
   if(D.meta.local&&D.meta.rest_fill&&(D.meta.rest_fill.lodging_meal_status||[]).length) h+=`<div class="card"><h3>住宿含餐（餐廳部整理）</h3>${D.meta.rest_fill.lodging_meal_status.map(s=>`<div class="cnt">🏨 ${esc(s.base)}：${esc(s.meal_plan||"")}${(s.affected||[]).length?"（影響："+esc(s.affected.join("、"))+"）":""}</div>`).join("")}<div class="cnt">住宿含餐的那幾餐，請到「每日」把餐廳刪掉。</div></div>`;
   h+=`<div class="cnt">路線 ${esc(route)}：${L.length} 個住宿據點。評分請點「樂天トラベル（評分）」或「在 Google 地圖看評分」。</div>`;
-  h+=L.map(l=>`<div class="card lod" data-base="${esc(l.base)}"><h3>${esc(l.area)}</h3><div class="desc">${l.booking?`✅ 已匯入訂房：${esc(l.booking.hotel_name||l.name)}${l.booking.booking_code?"・代號 "+esc(l.booking.booking_code):""}${l.booking.price_jpy!=null?"・¥"+esc(l.booking.price_jpy):""}${l.booking.price_twd!=null?"・NT$"+esc(l.booking.price_twd):""}${l.booking.payment_status?"・"+esc(l.booking.payment_status):""}（請安宏確認）`:l.status==="suggested"?`後台路線住宿點：${esc(l.name)}<br><span class="todo">飯店訂房資料尚未提供（可到「已訂好 → 手動輸入」，或由住宿部補）</span>`:`建議：${esc(l.name)}`}<br>${esc(l.check_in)}～${esc(l.check_out)}（${esc(l.nights)} 晚）</div><div class="btns">${lk(hotelLinks({name:l.name,area:l.area,checkin:l.check_in,checkout:l.check_out,adults:ad}))}</div><details${decGet("lodging:"+l.base)?" open":""}><summary>已訂好 → 手動輸入</summary>${bookForm("lodging:"+l.base,{hotel:l.name,check_in:l.check_in,check_out:l.check_out})}</details></div>`).join("")||`<div class="cnt">此路線沒有住宿資料</div>`;
+  h+=L.map(l=>`<div class="card lod" data-base="${esc(l.base)}"><h3>${esc(l.area)}</h3><div class="desc">${l.booking?`✅ 已匯入訂房：${esc(l.booking.hotel_name||l.name)}${l.booking.booking_code?"・代號 "+esc(l.booking.booking_code):""}${l.booking.price_jpy!=null?"・¥"+esc(l.booking.price_jpy):""}${l.booking.price_twd!=null?"・NT$"+esc(l.booking.price_twd):""}${l.booking.payment_status?"・"+esc(l.booking.payment_status):""}（請安宏確認）`:l.status==="suggested"?`後台路線住宿點：${esc(l.name)}<br><span class="todo">飯店訂房資料尚未提供（可到「已訂好 → 手動輸入」，或由住宿部補）</span>`:`建議：${esc(l.name)}`}<br>${esc(l.check_in)}～${esc(l.check_out)}（${esc(l.nights)} 晚）</div><div class="btns">${lk(hotelLinks({name:l.name,area:l.area,checkin:l.check_in,checkout:l.check_out,adults:ad}))}</div>${fillRefLodgeBlock(l)}<details${decGet("lodging:"+l.base)?" open":""}><summary>已訂好 → 手動輸入</summary>${bookForm("lodging:"+l.base,{hotel:l.name,check_in:l.check_in,check_out:l.check_out})}</details></div>`).join("")||`<div class="cnt">此路線沒有住宿資料</div>`;
  }
  P.innerHTML=curRouteHtml()+h+note+`<div class="tools"><button class="btn expDec" type="button">⬇ 匯出決定（decisions JSON）</button></div>`;
 }
@@ -2412,6 +2414,42 @@ function plFetch(id){ if(!id) return Promise.resolve(null);
  const t=new Promise(res=>setTimeout(()=>res(null),6000));
  const f=fetchJson("data/handoffs/index.json",true).then(ix=>{const L=ix&&Array.isArray(ix.places)?ix.places:[]; if(L.indexOf(id)<0) return null; return fetchJson("data/handoffs/"+encodeURIComponent(id)+"/places.json",true);}).then(j=>plClean(j,id)).catch(()=>null);
  return Promise.race([f,t]);}
+function refFetch(id){ if(!id) return Promise.resolve(null);
+ return fetchJson("data/handoffs/index.json",true).then(ix=>{const L=ix&&Array.isArray(ix.places)?ix.places:[]; if(L.indexOf(id)<0) return null; return fetchJson("data/handoffs/"+encodeURIComponent(id)+"/trip_fill_reference.json",true);})
+  .then(j=>j&&j.schema==="agency.trip_fill_reference.v1"?j:null).catch(()=>null);}
+function fillRefTxt(v,n){ if(v==null||v==="") return ""; if(typeof v==="string"||typeof v==="number"||typeof v==="boolean") return String(v); if(Array.isArray(v)) return v.map(x=>fillRefTxt(x,n)).filter(Boolean).join("；"); if(typeof v!=="object") return "";
+ if(v.option_a&&v.option_b) return "需安宏選擇："+v.option_a+" ／ "+v.option_b+(v.unresolved?"（尚未判定）":"");
+ const pair=[]; if(v.lasoeur!=null) pair.push("ラ・スール福岡："+fillRefTxt(v.lasoeur,n)); if(v.monterey_fukuoka!=null) pair.push("ホテルモントレ福岡："+fillRefTxt(v.monterey_fukuoka,n)); if(pair.length) return pair.join("；");
+ if(v.lat!=null&&v.lng!=null) return v.lat+", "+v.lng; if(v.check_in&&v.check_out) return "入住 "+v.check_in+"、退房 "+v.check_out;
+ if(v.main||v.reservation) return ["代表 "+(v.main||""),"預約 "+(v.reservation||"")].filter(s=>s.trim().length>3).join("；");
+ try{ const s=JSON.stringify(v); return s&&s!=="{}"?(n&&s.length>n?s.slice(0,n)+"…":s):""; }catch(e){ return ""; } }
+function fillRefItem(area,name,ci,co){ const items=(((D||{}).fill_ref||{}).lodging||{}).items||[]; if(!items.length) return null;
+ let hit=items.find(it=>it.stay&&it.stay.check_in===ci&&it.stay.check_out===co); if(hit) return hit;
+ const blob=(name||"")+" "+(area||""); return items.find(it=>it.trip_name&&blob&&(blob.indexOf(it.trip_name)>=0||it.trip_name.indexOf((name||area||"").slice(0,6))>=0))||null; }
+function fillRefFieldsHtml(fields,keys){ if(!fields) return ""; const ks=keys||Object.keys(fields); return ks.map(k=>{ const b=fields[k]; if(!b) return "";
+  if(/^待查/.test(String(b.status||""))||(typeof b.value==="string"&&b.value==="待查")) return `<div class="cnt"><b>${esc(k)}</b>：<span class="todo">待查</span>${b.note?"（"+esc(String(b.note).slice(0,100))+"）":""}</div>`;
+  const val=fillRefTxt(b.value,280); if(!val) return ""; return `<div class="cnt"><b>${esc(k)}</b>：${esc(val)}${b.status?"（"+esc(b.status)+"）":""}</div>`; }).filter(Boolean).join(""); }
+function fillRefFlightsHtml(){ const f=((D||{}).fill_ref||{}).flights; if(!f) return "";
+  const o=f.outbound||{}, i=f.inbound||{};
+  return `<div class="card" id="fillRefFlights"><h3>機票補查（參考，須安宏確認）</h3><div class="cnt">${esc(f.disclaimer||"參考，須安宏確認。")}</div>
+  <div class="desc">去程 ${esc(o.flight||"")} ${esc(o.date||"")} ${esc(o.from||"")} ${esc(o.dep_time||"")} → ${esc(o.to||"")} ${esc(o.arr_time||"")}<br>回程 ${esc(i.flight||"")} ${esc(i.date||"")} ${esc(i.from||"")} ${esc(i.dep_time||"")} → ${esc(i.to||"")} ${esc(i.arr_time||"")}</div>
+  ${f.booking_status?`<div class="cnt">訂票狀態：${esc(f.booking_status)}${f.booking_note?"；"+esc(String(f.booking_note).slice(0,160)):""}</div>`:""}
+  ${f.baggage&&f.baggage.status?`<div class="cnt">行李：${esc(f.baggage.status)}</div>`:""}
+  ${f.price&&(f.price.cash_twd_reference||f.price.per)?`<div class="cnt">參考票價：${esc(fillRefTxt(f.price.cash_twd_reference?("TWD "+f.price.cash_twd_reference+"（"+ (f.price.per||"") +"）"):f.price,200))}</div>`:""}
+  ${(f.unresolved||[]).length?`<div class="todo">仍待查：${esc((f.unresolved||[]).map(x=>typeof x==="string"?x:fillRefTxt(x,80)).join("；").slice(0,300))}</div>`:""}</div>`; }
+function fillRefCarHtml(){ const t=((D||{}).fill_ref||{}).transport; if(!t) return "";
+  const pr=t.proposal||{}, kep=pr.kep||{};
+  return `<div class="card" id="fillRefCar"><h3>租車提案（須安宏確認）</h3><div class="cnt">${esc(t.disclaimer||"提案，須安宏確認。尚未訂車。")}</div>
+  <div class="desc">${esc(t.pickup||"")}<br>${esc(t.dropoff||"")}<br>${esc(t.pickup_dropoff_time||"")}</div>
+  ${t.hours?`<div class="cnt">營業時間：${esc(String(t.hours).slice(0,280))}</div>`:""}
+  ${t.price?`<div class="cnt">報價：${esc(String(t.price).slice(0,400))}</div>`:""}
+  <div class="cnt"><b>${esc(pr.title||"Toyota 福岡INTERNATIONAL店報價與 ETC、KEP")}</b></div>
+  <div class="todo">KEP 不適用：行程 16 日超過上限 10 日；Toyota 目前不受理 KEP。${kep.recommendation?" "+esc(String(kep.recommendation).slice(0,200)):""}</div>
+  <div class="cnt">ETC 卡（Toyota）：${esc(fillRefTxt((pr.etc||{}).toyota,120) || "見提案")}。標示為「提案，須安宏確認」。${t.reservation_status?" 預約狀態："+esc(t.reservation_status):""}</div></div>`; }
+function fillRefLodgeBlock(l){ const it=fillRefItem(l.area,l.name,l.check_in,l.check_out); if(!it) return "";
+  const keys=["official_name","phone","address","mapcode","coords","check_in_out_time","price","parking","free_cancel_until","booking_status"];
+  return `<div class="cnt fillref" style="margin-top:8px"><b>住宿補查（參考，須安宏確認）</b>${it.choice_needed?`<div class="todo">${esc(it.choice_label||"需安宏選擇，不要二選一")}</div>`:""}<div class="cnt">${esc(it.disclaimer||"參考，須安宏確認。尚未訂房。")}</div>${fillRefFieldsHtml(it.fields,keys)}</div>`; }
+
 function plSources(o,p){const have=new Set((o.sources||[]).map(u=>typeof u==="string"?u:(u&&u.url)||"")); (Array.isArray(p.sources)?p.sources:[]).forEach(s=>{const u=plHttps(s&&s.url); if(u&&!have.has(u)){have.add(u); o.sources.push({url:u,title:(s.title?s.title+"・":"")+u+(s.checked_at?"（查核 "+s.checked_at+"）":"")});}});}
 function plParking(p){const k=p&&p.parking; if(!k||typeof k!=="object") return null;
  if(k.available===false) return [{name:"無停車場",type:"dedicated",exists:false,note:plStr(k.note)||"無專用停車場（景點部查核）"}];
