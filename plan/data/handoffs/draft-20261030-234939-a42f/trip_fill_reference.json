@@ -1,0 +1,1838 @@
+{
+ "schema": "agency.trip_fill_reference.v1",
+ "request_id": "draft-20261030-234939-a42f",
+ "generated_at": "2026-11-12T00:46:15+08:00",
+ "checked_at": "2026-11-12",
+ "disclaimer": "參考，須安宏確認。本檔未寫入 trip.json。未訂房／未訂車；免費取消期限仍待查。",
+ "lodging": {
+  "disclaimer": "參考，須安宏確認。8 間皆尚未選定、尚未訂房。",
+  "pending_for_an_hong": [
+   "8 間住宿皆尚未選定、尚未訂房；任何訂房或付款須安宏親自確認，部門未聯絡旅館、未下單。",
+   "各館 free_cancel_until（免費取消期限）公開資料無法對應到尚未成立的訂單，一律待查。心庵與兩間モントレ有公開取消規則，已另記 public_cancel_policy，但仍不能代替訂單期限。",
+   "各館 booking_opens（開放預訂時間）公開資料未查得，待查。",
+   "プレザント日向：晚餐固定時間仍待向旅館確認（沿用 2026-11-11）。",
+   "湯楽亭：2026-12-02（週三）退房當日早餐，官網仍未明文，需向旅館確認（沿用 2026-11-11）。",
+   "湯楽亭：11/30–12/02 兩晚連泊能否一次預訂（じゃらん 2 泊仍查無、部分方案 1 泊限定），需向旅館確認（沿用 2026-11-11）。",
+   "湯楽亭：2026 年 12 月營業日／臨時休館行事曆訂房前再看官網お知らせ（沿用 2026-11-11）。",
+   "福岡蒙特利：請安宏決定要住「ホテルモントレ ラ・スール福岡」（大名／天神）還是「ホテルモントレ福岡」（渡辺通），兩者是不同飯店。",
+   "匠晴の宿 心庵：實際入住日與所查近傍日皆無公開標價，價格待查；若要住，需安宏自行向官網或旅館確認房況與價錢。公式 FAQ 請於預約時聲明要停車。",
+   "實際入住日在じゃらん查無空室、僅有近傍日參考價者：萩小町（11/21–23 無、11/20 有）、風の海（11/23 無、11/24 有）、プレザント日向（11/27 無、11/20／12/01 有）、ソレスト高千穂（2 泊無、11/28 1 泊僅剩高階早餐房）、湯楽亭（2 泊無、兩晚可分別查到 1 泊價）。訂房前請再查實際日。",
+   "ホテルモントレ福岡 停車場：官網住宿頁寫 63 台、交通頁寫 60 台，一般時租亦不一致（400円／300円）。2026-10-01 起住宿停車為 2,000円／泊。",
+   "各館停車場入口座標與入口 MapCode 皆未查得獨立公開點（未用館址代替）。自駕進場前如需入口 MapCode，請安宏以館址 MapCode 或現場引導為準，或再請部門用衛星圖人工標入口後才可查。"
+  ],
+  "items": [
+   {
+    "ref": "lodging:base[0]",
+    "trip_name": "萩溫泉鄉萩小町旅館",
+    "stay": {
+     "check_in": "2026-11-21",
+     "check_out": "2026-11-23",
+     "nights": 2,
+     "party": "大人2名（handoff request.travelers.adults=2）"
+    },
+    "identification_note": "正式名稱依官網為「夕景の宿 海のゆりかご 萩小町」，位於山口縣萩市椿東6509。同縣另有「源泉の宿 萩本陣」（萩市椿東385-8，TEL 0838-22-5252，https://www.hagihonjin.co.jp/），為不同旅館，不可混淆。",
+    "choice_needed": false,
+    "choice_label": null,
+    "disclaimer": "參考，須安宏確認。尚未訂房。",
+    "filled_fields": [
+     "official_name",
+     "official_url",
+     "address",
+     "phone",
+     "coords",
+     "mapcode",
+     "check_in_out_time",
+     "price",
+     "parking"
+    ],
+    "pending_fields": [
+     "booking_status",
+     "free_cancel_until",
+     "booking_opens"
+    ],
+    "fields": {
+     "booking_status": {
+      "status": "待查",
+      "value": "待查",
+      "note": "尚未選定方案、未訂房（chosen 為 null）。訂房須安宏親自確認，部門未聯絡旅館、未下單。",
+      "checked_at": "2026-11-12"
+     },
+     "official_name": {
+      "status": "已補",
+      "value": "夕景の宿 海のゆりかご 萩小町",
+      "note": "官網頁首與頁尾、交通頁皆用此正式名稱。簡稱「萩小町」。不是萩本陣。",
+      "checked_at": "2026-11-12",
+      "source_urls": [
+       "https://www.hagi-komachi.jp/",
+       "https://www.hagi-komachi.jp/access/"
+      ]
+     },
+     "official_url": {
+      "status": "已補",
+      "value": "https://www.hagi-komachi.jp/",
+      "note": "官方網站（本欄為盤點外加欄，不計入 71）。",
+      "checked_at": "2026-11-12",
+      "source_urls": [
+       "https://www.hagi-komachi.jp/"
+      ]
+     },
+     "address": {
+      "status": "已補",
+      "value": "〒758-0011 山口県萩市椿東6509",
+      "note": "官網交通頁與頁尾。山口縣萩市已核對。觀光協會另寫「萩市椿東越ヶ浜6509」，番地相同。",
+      "checked_at": "2026-11-12",
+      "source_urls": [
+       "https://www.hagi-komachi.jp/access/",
+       "https://www.hagi-komachi.jp/"
+      ]
+     },
+     "phone": {
+      "status": "已補",
+      "value": "0838-25-0121",
+      "note": "官網公開電話。",
+      "checked_at": "2026-11-12",
+      "source_urls": [
+       "https://www.hagi-komachi.jp/access/",
+       "https://www.hagi-komachi.jp/"
+      ]
+     },
+     "coords": {
+      "status": "已補",
+      "value": {
+       "lat": 34.445124,
+       "lng": 131.415192,
+       "datum": "WGS84"
+      },
+      "note": "採用じゃらん設施頁座標 34.445124, 131.415192。萩市觀光協會官方地圖為 34.445096, 131.414890（約 30 m，視為同一館）。國土地理院住址檢索「山口県萩市椿東６５０９番地」回 34.446995, 131.420166，距上述點約 560 m，可能是大地號中心，未採用為館址點。官網 Google 地圖嵌入為大範圍中心（經度明顯偏移），未採用。",
+      "checked_at": "2026-11-12",
+      "source_urls": [
+       "https://www.jalan.net/yad386157/",
+       "https://www.hagishi.com/search/detail.php?d=400023",
+       "https://msearch.gsi.go.jp/address-search/AddressSearch?q=%E5%B1%B1%E5%8F%A3%E7%9C%8C%E8%90%A9%E5%B8%82%E6%A4%BF%E6%9D%B16509"
+      ]
+     },
+     "mapcode": {
+      "status": "已補",
+      "value": "588 395 003*33",
+      "note": "官網未刊 MapCode。以じゃらん館址座標在 Mapion（https://www.mapion.co.jp/m2/34.445124,131.415192,19）右鍵查詢，彈出 MapCode 588 395 003*33，彈出座標 34.445124,131.415192 與查詢座標一致（回讀）。同集群的觀光協會點 34.445096,131.414890 在 Mapion 回讀為相鄰碼 588 395 002*30（約 30 m）。未用公式推算，未採用 560 m 外的國土地理院點。",
+      "checked_at": "2026-11-12",
+      "source_urls": [
+       "https://www.mapion.co.jp/m2/34.445124,131.415192,19",
+       "https://www.jalan.net/yad386157/"
+      ],
+      "mapcode_source": "Mapion https://www.mapion.co.jp/m2/34.445124,131.415192,19 右鍵顯示 588 395 003*33；彈出座標 34.445124,131.415192 與查詢座標一致（回讀）。"
+     },
+     "check_in_out_time": {
+      "status": "已補",
+      "value": {
+       "check_in": "14:00",
+       "check_out": "11:00",
+       "applies_to": "本行程 2026-11-21～11-23 適用 14:00／11:00"
+      },
+      "note": "官網交通頁／頁尾與じゃらん標準時刻皆為入住 14:00、退房 11:00。館方在じゃらんお知らせ（查核日可見）寫：自 2026-12-01（火）住宿分起改為入住 15:00、退房 10:00；方案可能不同。本行程退房日為 11/23，仍適用變更前的 14:00／11:00。萩市觀光協會頁另寫 15:00／10:00，與現行官網不符，以官網與上述公告為準。",
+      "checked_at": "2026-11-12",
+      "source_urls": [
+       "https://www.hagi-komachi.jp/access/",
+       "https://www.jalan.net/yad386157/",
+       "https://www.jalan.net/yad386157/topics/entry0006767360.html"
+      ]
+     },
+     "price": {
+      "status": "已補",
+      "value": {
+       "actual_stay": "2026-11-21 起 2 泊（及同日 1 泊）、11/22 1 泊：じゃらん 大人2名 1 室查無方案（頁面顯示「別の日程だと空室があります」）。",
+       "nearby_reference": [
+        {
+         "date": "2026-11-20",
+         "nights": 1,
+         "adults": 2,
+         "rooms": 1,
+         "tax": "税込",
+         "examples": [
+          {
+           "plan": "【万福の旅】やまぐち観光特典！更に5％OFF…【夕朝食付】",
+           "meals": "朝・夕",
+           "total_jpy": 50160,
+           "per_person_jpy": 25080
+          },
+          {
+           "plan": "【万福の旅】…小町スイート宿泊【夕朝食付】",
+           "meals": "朝・夕",
+           "total_jpy": 63360,
+           "per_person_jpy": 31680
+          },
+          {
+           "plan": "【万福の旅】…『あわび×ふぐ刺し』…【２大味覚会席】（視房型）",
+           "meals": "朝・夕",
+           "total_jpy_range": [
+            66000,
+            83600
+           ]
+          }
+         ],
+         "source": "https://www.jalan.net/yad386157/plan/?stayYear=2026&stayMonth=11&stayDay=20&stayCount=1&roomCount=1&adultNum=2"
+        },
+        {
+         "date": "2026-11-16",
+         "nights": 1,
+         "adults": 2,
+         "note": "另有標價方案（平日近傍），實際行程日仍無空室。",
+         "source": "https://www.jalan.net/yad386157/plan/?stayYear=2026&stayMonth=11&stayDay=16&stayCount=1&roomCount=1&adultNum=2"
+        }
+       ],
+       "published_starting_rate": {
+        "text": "萩市觀光協會：1泊2食 15,400円～，另收入湯税 150円（未標具體入住日，僅作公開下限參考）",
+        "source": "https://www.hagishi.com/search/detail.php?d=400023"
+       },
+       "ikyu": "一休（ikyu.com）本次以 curl 查詢回 HTTP 403，未能取得標價，已略過。"
+      },
+      "note": "實際入住日在じゃらん查無空室，改以相近日期 11/20（行程前 1 日）1 泊標價作參考，並註明。未下單。合計為大人2名、1室、税込。",
+      "checked_at": "2026-11-12",
+      "source_urls": [
+       "https://www.jalan.net/yad386157/plan/?stayYear=2026&stayMonth=11&stayDay=21&stayCount=2&roomCount=1&adultNum=2",
+       "https://www.jalan.net/yad386157/plan/?stayYear=2026&stayMonth=11&stayDay=20&stayCount=1&roomCount=1&adultNum=2",
+       "https://www.hagishi.com/search/detail.php?d=400023"
+      ]
+     },
+     "parking": {
+      "status": "已補",
+      "value": {
+       "available": true,
+       "fee": "無料",
+       "reservation_required": false,
+       "capacity": "約60台（公式）；觀光協會另寫普通車60台、大型3台",
+       "entrance_lat": null,
+       "entrance_lng": null,
+       "entrance_mapcode": null
+      },
+      "note": "官網交通頁：約60台（無料）。未寫須預約（送迎才要預約）。停車場入口座標與入口 MapCode 查無獨立公開點，未以館址座標代替，故為 null。",
+      "checked_at": "2026-11-12",
+      "source_urls": [
+       "https://www.hagi-komachi.jp/access/",
+       "https://www.hagishi.com/search/detail.php?d=400023"
+      ]
+     },
+     "free_cancel_until": {
+      "status": "待查",
+      "value": "待查",
+      "note": "公開資料未查得此行訂單的免費取消期限。",
+      "checked_at": "2026-11-12"
+     },
+     "booking_opens": {
+      "status": "待查",
+      "value": "待查",
+      "note": "公開資料未查得開放預訂時間。",
+      "checked_at": "2026-11-12"
+     }
+    }
+   },
+   {
+    "ref": "lodging:base[1]",
+    "trip_name": "下關溫泉風之海飯店",
+    "stay": {
+     "check_in": "2026-11-23",
+     "check_out": "2026-11-24",
+     "nights": 1,
+     "party": "大人2名"
+    },
+    "identification_note": null,
+    "choice_needed": false,
+    "choice_label": null,
+    "disclaimer": "參考，須安宏確認。尚未訂房。",
+    "filled_fields": [
+     "official_name",
+     "official_url",
+     "address",
+     "phone",
+     "coords",
+     "mapcode",
+     "check_in_out_time",
+     "price",
+     "parking"
+    ],
+    "pending_fields": [
+     "booking_status",
+     "free_cancel_until",
+     "booking_opens"
+    ],
+    "fields": {
+     "booking_status": {
+      "status": "待查",
+      "value": "待查",
+      "note": "尚未選定方案、未訂房。須安宏確認後才可下單。",
+      "checked_at": "2026-11-12"
+     },
+     "official_name": {
+      "status": "已補",
+      "value": "下関温泉 風の海 -KAZE NO UMI-",
+      "note": "官網正式名稱。",
+      "checked_at": "2026-11-12",
+      "source_urls": [
+       "https://hotel-kazenoumi.co.jp/",
+       "https://hotel-kazenoumi.co.jp/access/"
+      ]
+     },
+     "official_url": {
+      "status": "已補",
+      "value": "https://hotel-kazenoumi.co.jp/",
+      "note": "官方網站。",
+      "checked_at": "2026-11-12",
+      "source_urls": [
+       "https://hotel-kazenoumi.co.jp/"
+      ]
+     },
+     "address": {
+      "status": "已補",
+      "value": "〒752-0985 山口県下関市長府外浦町2-1",
+      "note": "官網頁尾與交通頁。",
+      "checked_at": "2026-11-12",
+      "source_urls": [
+       "https://hotel-kazenoumi.co.jp/",
+       "https://hotel-kazenoumi.co.jp/access/"
+      ]
+     },
+     "phone": {
+      "status": "已補",
+      "value": "083-241-1180",
+      "note": "官網公開電話。傳真 083-246-3110。",
+      "checked_at": "2026-11-12",
+      "source_urls": [
+       "https://hotel-kazenoumi.co.jp/",
+       "https://hotel-kazenoumi.co.jp/access/"
+      ]
+     },
+     "coords": {
+      "status": "已補",
+      "value": {
+       "lat": 33.9867621,
+       "lng": 130.9912979,
+       "datum": "WGS84"
+      },
+      "note": "以官網交通頁明文刊載的 MapCode 16 869 007*27 反查世界測地系座標（33.9867621, 130.9912979），並在 Mapion 同點右鍵回讀得到同一碼。官網 Google 地圖嵌入中心為 33.9870442, 130.9915747（約 35 m）。國土地理院住址 33.989162, 130.991791 距此約 270 m，未採用。じゃらん設施頁 33.985581, 130.988724 距此約 280 m，僅作參考、未採用為館址點。",
+      "checked_at": "2026-11-12",
+      "source_urls": [
+       "https://hotel-kazenoumi.co.jp/access/",
+       "https://www.mapion.co.jp/m2/33.9867621,130.9912979,19"
+      ]
+     },
+     "mapcode": {
+      "status": "已補",
+      "value": "16 869 007*27",
+      "note": "官網交通頁明文刊載「マップコード 16 869 007* 27」。將該碼反查為 33.9867621, 130.9912979 後，於 Mapion 該點右鍵回讀，彈出 MapCode 16 869 007*27、彈出座標 33.986762,130.991298，與官網碼及反查座標一致。未憑空推算。",
+      "checked_at": "2026-11-12",
+      "source_urls": [
+       "https://hotel-kazenoumi.co.jp/access/",
+       "https://www.mapion.co.jp/m2/33.9867621,130.9912979,19"
+      ],
+      "mapcode_source": "官網 https://hotel-kazenoumi.co.jp/access/ 明文刊載 16 869 007*27；反查座標於 Mapion https://www.mapion.co.jp/m2/33.9867621,130.9912979,19 右鍵回讀，彈出同一碼且座標一致。"
+     },
+     "check_in_out_time": {
+      "status": "已補",
+      "value": {
+       "check_in": "15:00",
+       "check_out": "11:00"
+      },
+      "note": "官網館內案内頁寫入住 15:00、退房 11:00。じゃらん標準時刻與下關旅館組合頁相同。",
+      "checked_at": "2026-11-12",
+      "source_urls": [
+       "https://hotel-kazenoumi.co.jp/facilities/",
+       "https://www.jalan.net/yad396558/",
+       "https://www.shimonoseki-ryokan.com/kazenoumi"
+      ]
+     },
+     "price": {
+      "status": "已補",
+      "value": {
+       "actual_stay": "2026-11-23 1 泊、大人2名：じゃらん查無方案。",
+       "nearby_reference": [
+        {
+         "date": "2026-11-24",
+         "nights": 1,
+         "adults": 2,
+         "rooms": 1,
+         "tax": "税込（合計＝大人2名）",
+         "examples": [
+          {
+           "plan": "【全室オーシャンビュー】…極上満関善席プラン",
+           "meals": "朝・夕",
+           "total_jpy": 132000
+          },
+          {
+           "plan": "1泊2食付【山口県を味わう≪やまぐち旬彩会席≫プラン】",
+           "meals": "朝・夕",
+           "total_jpy": 132000
+          },
+          {
+           "plan": "【全室オーシャンビュー】温泉展望風呂付客室と和会席ふく刺しを愉しむ！",
+           "meals": "朝・夕",
+           "total_jpy": 107800
+          },
+          {
+           "plan": "【1泊夕食付】…旬の和会席と客室温泉展望風呂",
+           "meals": "夕のみ",
+           "total_jpy": 100100
+          },
+          {
+           "plan": "【全室オーシャンビュー】1泊朝食付プラン",
+           "meals": "朝のみ",
+           "total_jpy": 85800
+          }
+         ],
+         "source": "https://www.jalan.net/yad396558/plan/?stayYear=2026&stayMonth=11&stayDay=24&stayCount=1&roomCount=1&adultNum=2"
+        }
+       ],
+       "ikyu": "一休（ikyu.com）本次以 curl 查詢回 HTTP 403，未能取得標價，已略過。"
+      },
+      "note": "實際入住日 11/23 查無空室，改以隔日 11/24 1 泊標價作參考並註明。未下單。",
+      "checked_at": "2026-11-12",
+      "source_urls": [
+       "https://www.jalan.net/yad396558/plan/?stayYear=2026&stayMonth=11&stayDay=23&stayCount=1&roomCount=1&adultNum=2",
+       "https://www.jalan.net/yad396558/plan/?stayYear=2026&stayMonth=11&stayDay=24&stayCount=1&roomCount=1&adultNum=2"
+      ]
+     },
+     "parking": {
+      "status": "已補",
+      "value": {
+       "available": true,
+       "fee": "無料",
+       "reservation_required": false,
+       "capacity": "屋外25台",
+       "restriction": "車幅2.7m、車長5m",
+       "entrance_lat": null,
+       "entrance_lng": null,
+       "entrance_mapcode": null
+      },
+      "note": "官網交通頁：無料屋外駐車場25台（予約不要），並註車寬／車長限制。入口座標與入口 MapCode 查無獨立公開點，未以館址代替，故為 null。",
+      "checked_at": "2026-11-12",
+      "source_urls": [
+       "https://hotel-kazenoumi.co.jp/access/"
+      ]
+     },
+     "free_cancel_until": {
+      "status": "待查",
+      "value": "待查",
+      "note": "未查得此行訂單的免費取消期限。",
+      "checked_at": "2026-11-12"
+     },
+     "booking_opens": {
+      "status": "待查",
+      "value": "待查",
+      "note": "未查得開放預訂時間。",
+      "checked_at": "2026-11-12"
+     }
+    }
+   },
+   {
+    "ref": "lodging:base[2]",
+    "trip_name": "別府溫泉心庵旅館",
+    "stay": {
+     "check_in": "2026-11-24",
+     "check_out": "2026-11-27",
+     "nights": 3,
+     "party": "大人2名"
+    },
+    "identification_note": null,
+    "choice_needed": false,
+    "choice_label": null,
+    "disclaimer": "參考，須安宏確認。尚未訂房。",
+    "filled_fields": [
+     "official_name",
+     "official_url",
+     "address",
+     "phone",
+     "coords",
+     "mapcode",
+     "check_in_out_time",
+     "parking",
+     "public_cancel_policy"
+    ],
+    "pending_fields": [
+     "booking_status",
+     "price",
+     "free_cancel_until",
+     "booking_opens"
+    ],
+    "fields": {
+     "booking_status": {
+      "status": "待查",
+      "value": "待查",
+      "note": "尚未選定方案、未訂房。須安宏確認後才可下單。",
+      "checked_at": "2026-11-12"
+     },
+     "official_name": {
+      "status": "已補",
+      "value": "匠晴の宿 心庵（しんあん）",
+      "note": "官網正式名稱。泊食分離、素泊まり風格的溫泉宿。已核對為大分縣別府市，不是其他同名設施。",
+      "checked_at": "2026-11-12",
+      "source_urls": [
+       "https://sin-an.com/",
+       "https://sin-an.com/access/"
+      ]
+     },
+     "official_url": {
+      "status": "已補",
+      "value": "https://sin-an.com/",
+      "note": "官方網站。",
+      "checked_at": "2026-11-12",
+      "source_urls": [
+       "https://sin-an.com/"
+      ]
+     },
+     "address": {
+      "status": "已補",
+      "value": "〒874-0927 大分県別府市弓ヶ浜町3番10号",
+      "note": "官網頁尾與連絡頁。",
+      "checked_at": "2026-11-12",
+      "source_urls": [
+       "https://sin-an.com/",
+       "https://sin-an.com/contact/"
+      ]
+     },
+     "phone": {
+      "status": "已補",
+      "value": "0977-75-8400",
+      "note": "官網公開電話；受付 8:30〜20:00。",
+      "checked_at": "2026-11-12",
+      "source_urls": [
+       "https://sin-an.com/"
+      ]
+     },
+     "coords": {
+      "status": "已補",
+      "value": {
+       "lat": 33.286324,
+       "lng": 131.502686,
+       "datum": "WGS84"
+      },
+      "note": "國土地理院住址檢索「大分県別府市弓ケ浜町３番１０号」＝33.286324, 131.502686。じゃらん設施頁 33.286186, 131.502623（約 16 m）。官網 Google 地圖嵌入中心約 33.286293, 131.501654（經度略偏，可能是圖面中心，未單獨採用）。",
+      "checked_at": "2026-11-12",
+      "source_urls": [
+       "https://msearch.gsi.go.jp/address-search/AddressSearch?q=%E5%A4%A7%E5%88%86%E7%9C%8C%E5%88%A5%E5%BA%9C%E5%B8%82%E5%BC%93%E3%83%B6%E6%B5%9C%E7%94%BA3%E7%95%AA10%E5%8F%B7",
+       "https://www.jalan.net/yad360288/",
+       "https://sin-an.com/access/"
+      ]
+     },
+     "mapcode": {
+      "status": "已補",
+      "value": "46 405 858*38",
+      "note": "官網未刊 MapCode。以國土地理院住址座標在 Mapion（https://www.mapion.co.jp/m2/33.286324,131.502686,19）右鍵查詢，彈出 46 405 858*38，彈出座標 33.286324,131.502686 與查詢座標一致（回讀）。",
+      "checked_at": "2026-11-12",
+      "source_urls": [
+       "https://www.mapion.co.jp/m2/33.286324,131.502686,19"
+      ],
+      "mapcode_source": "Mapion https://www.mapion.co.jp/m2/33.286324,131.502686,19 右鍵顯示 46 405 858*38；彈出座標與查詢座標一致（回讀）。"
+     },
+     "check_in_out_time": {
+      "status": "已補",
+      "value": {
+       "check_in": "15:00～19:00",
+       "check_out": "11:00"
+      },
+      "note": "官網 FAQ：チェックイン 15:00〜19:00、チェックアウト 11:00まで；可寄放行李。じゃらん標準時刻與楽天 FAQ 相同。遲到須聯絡，否則可能視為不泊。",
+      "checked_at": "2026-11-12",
+      "source_urls": [
+       "https://sin-an.com/faq/",
+       "https://www.jalan.net/yad360288/",
+       "https://travel.rakuten.co.jp/HOTEL/153304/153304.html"
+      ]
+     },
+     "price": {
+      "status": "待查",
+      "value": {
+       "actual_stay": "2026-11-24 起 3 泊及同日／11/25／11/16／12/01／12/04 的 1 泊：じゃらん皆顯示無方案。10/18 查詢回 404（過舊日期）。",
+       "rakuten_facility_page": "楽天施設頁本次未讀到公開「○○円〜」起價。",
+       "ikyu": "一休（ikyu.com）本次以 curl 查詢回 HTTP 403，未能取得標價，已略過。",
+       "note": "未取得可供引用的公開標價，價格維持待查。未下單、未聯絡旅館。"
+      },
+      "note": "實際入住日與多個近傍日在じゃらん均無標價，不編造價格。",
+      "checked_at": "2026-11-12",
+      "source_urls": [
+       "https://www.jalan.net/yad360288/plan/?stayYear=2026&stayMonth=11&stayDay=24&stayCount=3&roomCount=1&adultNum=2",
+       "https://travel.rakuten.co.jp/HOTEL/153304/153304.html",
+       "https://sin-an.com/"
+      ]
+     },
+     "parking": {
+      "status": "已補",
+      "value": {
+       "available": true,
+       "fee": "無料",
+       "reservation_required": "公式FAQ：スペースに限りがあるため、予約時に駐車場利用を申し付ける。楽天寫「先着順」。是否保證車位待向旅館確認。",
+       "capacity": null,
+       "entrance_lat": null,
+       "entrance_lng": null,
+       "entrance_mapcode": null
+      },
+      "note": "官網 FAQ 確認有免費停車場，並請於預約時聲明要使用。楽天寫無料・先着順。入口座標／MapCode 查無，未以館址代替。",
+      "checked_at": "2026-11-12",
+      "source_urls": [
+       "https://sin-an.com/faq/",
+       "https://travel.rakuten.co.jp/HOTEL/153304/153304.html"
+      ]
+     },
+     "public_cancel_policy": {
+      "status": "已補",
+      "value": {
+       "text": "ご宿泊予約の1週間前よりキャンセル料金。7日〜3日前 50%、2日〜1日前 70%、当日・不泊 100%。",
+       "note": "這是官網公開規則，不是本行程訂單的免費取消期限。"
+      },
+      "note": "僅記錄公開取消規則。free_cancel_until 仍標待查。",
+      "checked_at": "2026-11-12",
+      "source_urls": [
+       "https://sin-an.com/faq/"
+      ]
+     },
+     "free_cancel_until": {
+      "status": "待查",
+      "value": "待查",
+      "note": "雖有公開取消規則，此行訂單的免費取消期限仍待安宏確認。",
+      "checked_at": "2026-11-12",
+      "source_urls": [
+       "https://sin-an.com/faq/"
+      ]
+     },
+     "booking_opens": {
+      "status": "待查",
+      "value": "待查",
+      "note": "未查得開放預訂時間。",
+      "checked_at": "2026-11-12"
+     }
+    }
+   },
+   {
+    "ref": "lodging:base[3]",
+    "trip_name": "プレザント日向（Pleasant日向／Pleasant Hyuga）",
+    "stay": {
+     "check_in": "2026-11-27",
+     "check_out": "2026-11-28",
+     "nights": 1,
+     "party": "大人2名"
+    },
+    "identification_note": null,
+    "choice_needed": false,
+    "choice_label": null,
+    "disclaimer": "參考，須安宏確認。尚未訂房。",
+    "filled_fields": [
+     "official_name",
+     "official_url",
+     "address",
+     "phone",
+     "coords",
+     "mapcode",
+     "check_in_out_time",
+     "price",
+     "parking"
+    ],
+    "pending_fields": [
+     "booking_status",
+     "parking.coords",
+     "parking.mapcode",
+     "dinner_time",
+     "booking_opens",
+     "free_cancel_until"
+    ],
+    "fields": {
+     "booking_status": {
+      "status": "待查",
+      "value": "待查",
+      "note": "尚未選定方案、未訂房。須安宏確認。",
+      "checked_at": "2026-11-12"
+     },
+     "official_name": {
+      "status": "已補",
+      "value": "Pleasant日向（プレザント日向）",
+      "note": "沿用 2026-11-11，並於 2026-11-12 再核對官網。",
+      "checked_at": "2026-11-12",
+      "source_urls": [
+       "https://pleasant-hyuga.com/",
+       "https://pleasant-hyuga.com/access.html"
+      ]
+     },
+     "official_url": {
+      "status": "已補",
+      "value": "https://pleasant-hyuga.com/",
+      "note": "沿用並再核對。",
+      "checked_at": "2026-11-12",
+      "source_urls": [
+       "https://pleasant-hyuga.com/"
+      ]
+     },
+     "address": {
+      "status": "已補",
+      "value": "〒883-0022 宮崎県日向市平岩64-1",
+      "note": "沿用官網地址，2026-11-12 再核對。",
+      "checked_at": "2026-11-12",
+      "source_urls": [
+       "https://pleasant-hyuga.com/access.html"
+      ]
+     },
+     "phone": {
+      "status": "已補",
+      "value": "0982-57-2727",
+      "note": "沿用官網公開電話。傳真 0982-57-2728。",
+      "checked_at": "2026-11-12",
+      "source_urls": [
+       "https://pleasant-hyuga.com/access.html"
+      ]
+     },
+     "coords": {
+      "status": "已補",
+      "value": {
+       "lat": 32.373809,
+       "lng": 131.632306,
+       "datum": "WGS84"
+      },
+      "note": "採用じゃらん設施頁 32.373809, 131.632306。官網 Google 地圖嵌入中心為 32.373781, 131.629747（緯度相近、經度差約 240 m，疑為圖面中心，未採用）。國土地理院「平岩６４番地」（非 64-1）為 32.372902, 131.633698，距じゃらん點約 160 m，精度較粗，未採用。",
+      "checked_at": "2026-11-12",
+      "source_urls": [
+       "https://www.jalan.net/yad367060/",
+       "https://pleasant-hyuga.com/access.html",
+       "https://msearch.gsi.go.jp/address-search/AddressSearch?q=%E5%AE%AE%E5%B4%8E%E7%9C%8C%E6%97%A5%E5%90%91%E5%B8%82%E5%B9%B3%E5%B2%A964-1"
+      ]
+     },
+     "mapcode": {
+      "status": "已補",
+      "value": "136 136 395*85",
+      "note": "官網未刊 MapCode。以じゃらん館址座標在 Mapion（https://www.mapion.co.jp/m2/32.373809,131.632306,19）右鍵查詢，彈出 136 136 395*85，彈出座標 32.373809,131.632306 與查詢座標一致（回讀）。",
+      "checked_at": "2026-11-12",
+      "source_urls": [
+       "https://www.mapion.co.jp/m2/32.373809,131.632306,19",
+       "https://www.jalan.net/yad367060/"
+      ],
+      "mapcode_source": "Mapion https://www.mapion.co.jp/m2/32.373809,131.632306,19 右鍵顯示 136 136 395*85；彈出座標與查詢座標一致（回讀）。"
+     },
+     "check_in_out_time": {
+      "status": "已補",
+      "value": {
+       "check_in": "15:00（最終 23:00）",
+       "early_check_in": "公式：14:00 可（沿用 2026-11-11）",
+       "check_out": "10:00"
+      },
+      "note": "沿用 2026-11-11 公式記載，2026-11-12 再核對官網交通頁與じゃらん標準時刻。",
+      "checked_at": "2026-11-12",
+      "source_urls": [
+       "https://pleasant-hyuga.com/access.html",
+       "https://www.jalan.net/yad367060/"
+      ]
+     },
+     "price": {
+      "status": "已補",
+      "value": {
+       "actual_stay": "2026-11-27 1 泊、大人2名：じゃらん查無方案。11/26、11/28、11/16 同樣無方案。",
+       "nearby_reference": [
+        {
+         "date": "2026-11-20",
+         "nights": 1,
+         "adults": 2,
+         "tax": "税込",
+         "examples": [
+          {
+           "plan": "【2食付き】…『宮崎牛』ステーキコース",
+           "meals": "朝・夕",
+           "per_person_jpy": 15180,
+           "total_jpy": 30360
+          },
+          {
+           "plan": "【夕食のみ】…『宮崎牛』ステーキコース",
+           "meals": "夕のみ",
+           "per_person_jpy": 13530,
+           "total_jpy": 27060
+          },
+          {
+           "plan": "【2食付き】海幸旬会席【Sea】",
+           "meals": "朝・夕",
+           "per_person_jpy": 14080,
+           "total_jpy": 28160
+          },
+          {
+           "plan": "【2食付き】名物ジャンボエビフライ【Std】",
+           "meals": "朝・夕",
+           "per_person_jpy": 11880,
+           "total_jpy": 23760
+          },
+          {
+           "plan": "【2食付き】日替わりおまかせ定食",
+           "meals": "朝・夕",
+           "per_person_jpy": 9680,
+           "total_jpy": 19360
+          }
+         ],
+         "source": "https://www.jalan.net/yad367060/plan/?stayYear=2026&stayMonth=11&stayDay=20&stayCount=1&roomCount=1&adultNum=2"
+        },
+        {
+         "date": "2026-12-01",
+         "nights": 1,
+         "adults": 2,
+         "note": "行程後數日，亦有 2食／夕食のみ標價（例如宮崎牛 2食 合計 38,060 円）。",
+         "source": "https://www.jalan.net/yad367060/plan/?stayYear=2026&stayMonth=12&stayDay=01&stayCount=1&roomCount=1&adultNum=2"
+        }
+       ],
+       "ikyu": "一休（ikyu.com）本次以 curl 查詢回 HTTP 403，未能取得標價，已略過。"
+      },
+      "note": "實際入住日查無空室，改以相近日期 11/20 與 12/01 標價作參考並註明。未下單。",
+      "checked_at": "2026-11-12",
+      "source_urls": [
+       "https://www.jalan.net/yad367060/plan/?stayYear=2026&stayMonth=11&stayDay=27&stayCount=1&roomCount=1&adultNum=2",
+       "https://www.jalan.net/yad367060/plan/?stayYear=2026&stayMonth=11&stayDay=20&stayCount=1&roomCount=1&adultNum=2"
+      ]
+     },
+     "parking": {
+      "status": "已補",
+      "value": {
+       "available": true,
+       "fee": "無料（滞在中24時間駐車可）",
+       "reservation_required": "公式未寫須預約（待查是否旺季要先報）",
+       "capacity": null,
+       "entrance_lat": null,
+       "entrance_lng": null,
+       "entrance_mapcode": null
+      },
+      "note": "停車場有無與免費：沿用 2026-11-11 公式（無料・滞在中24時間駐車可）。入口座標與入口 MapCode 仍未查得，未以館址代替。",
+      "checked_at": "2026-11-12",
+      "source_urls": [
+       "https://pleasant-hyuga.com/"
+      ]
+     },
+     "parking.coords": {
+      "status": "待查",
+      "note": "已確認有停車場，但入口座標查無獨立公開點，未以館址座標代替。",
+      "checked_at": "2026-11-12"
+     },
+     "parking.mapcode": {
+      "status": "待查",
+      "note": "入口 MapCode 因無入口座標而無法向 Mapion 查詢，維持 null，未編造。",
+      "checked_at": "2026-11-12"
+     },
+     "dinner_time": {
+      "status": "待查",
+      "value": "待查",
+      "note": "沿用 2026-11-11：官網與じゃらん／楽天方案皆未刊固定晚餐時刻。需安宏向旅館確認。本次未重查、未聯絡。",
+      "checked_at": "2026-11-12",
+      "source_urls": [
+       "https://pleasant-hyuga.com/cuisine.html",
+       "https://pleasant-hyuga.com/facilities.html"
+      ]
+     },
+     "booking_opens": {
+      "status": "待查",
+      "value": "待查",
+      "note": "未查得開放預訂時間。",
+      "checked_at": "2026-11-12"
+     },
+     "free_cancel_until": {
+      "status": "待查",
+      "value": "待查",
+      "note": "未查得此行訂單的免費取消期限。",
+      "checked_at": "2026-11-12"
+     }
+    }
+   },
+   {
+    "ref": "lodging:base[4]",
+    "trip_name": "Solest高千穗酒店 (Solest Takachiho Hotel)",
+    "stay": {
+     "check_in": "2026-11-28",
+     "check_out": "2026-11-30",
+     "nights": 2,
+     "party": "大人2名"
+    },
+    "identification_note": null,
+    "choice_needed": false,
+    "choice_label": null,
+    "disclaimer": "參考，須安宏確認。尚未訂房。",
+    "filled_fields": [
+     "official_name",
+     "official_url",
+     "address",
+     "phone",
+     "coords",
+     "mapcode",
+     "check_in_out_time",
+     "price",
+     "parking"
+    ],
+    "pending_fields": [
+     "booking_status",
+     "free_cancel_until",
+     "booking_opens"
+    ],
+    "fields": {
+     "booking_status": {
+      "status": "待查",
+      "value": "待查",
+      "note": "尚未選定方案、未訂房。須安宏確認。",
+      "checked_at": "2026-11-12"
+     },
+     "official_name": {
+      "status": "已補",
+      "value": "ソレスト高千穂ホテル",
+      "note": "官網正式名稱。宮崎縣西臼杵郡高千穂町。",
+      "checked_at": "2026-11-12",
+      "source_urls": [
+       "https://solest-takachiho.jp/",
+       "https://solest-takachiho.jp/access/"
+      ]
+     },
+     "official_url": {
+      "status": "已補",
+      "value": "https://solest-takachiho.jp/",
+      "note": "官方網站。",
+      "checked_at": "2026-11-12",
+      "source_urls": [
+       "https://solest-takachiho.jp/"
+      ]
+     },
+     "address": {
+      "status": "已補",
+      "value": "〒882-1101 宮崎県西臼杵郡高千穂町三田井1261-1",
+      "note": "官網交通頁與頁尾。",
+      "checked_at": "2026-11-12",
+      "source_urls": [
+       "https://solest-takachiho.jp/access/"
+      ]
+     },
+     "phone": {
+      "status": "已補",
+      "value": "0982-83-0001",
+      "note": "官網公開電話。",
+      "checked_at": "2026-11-12",
+      "source_urls": [
+       "https://solest-takachiho.jp/"
+      ]
+     },
+     "coords": {
+      "status": "已補",
+      "value": {
+       "lat": 32.7077704,
+       "lng": 131.3049019,
+       "datum": "WGS84"
+      },
+      "note": "OpenStreetMap 具名節點「Solest Takachiho Hotel」node/11779953333＝32.7077704, 131.3049019。じゃらん設施頁 32.707687, 131.304667（約 25 m）。國土地理院對「三田井1261-1」只回到町字「高千穂町三田井」中心 32.715862, 131.320145（約 1.6 km），未採用。官網交通頁無座標。",
+      "checked_at": "2026-11-12",
+      "source_urls": [
+       "https://www.openstreetmap.org/node/11779953333",
+       "https://www.jalan.net/yad376236/"
+      ]
+     },
+     "mapcode": {
+      "status": "已補",
+      "value": "330 741 476*21",
+      "note": "官網未刊 MapCode。以 OSM 具名節點座標在 Mapion（https://www.mapion.co.jp/m2/32.7077704,131.3049019,19）右鍵查詢，彈出 330 741 476*21，彈出座標 32.707770,131.304902 與查詢座標一致（回讀）。",
+      "checked_at": "2026-11-12",
+      "source_urls": [
+       "https://www.mapion.co.jp/m2/32.7077704,131.3049019,19",
+       "https://www.openstreetmap.org/node/11779953333"
+      ],
+      "mapcode_source": "Mapion https://www.mapion.co.jp/m2/32.7077704,131.3049019,19 右鍵顯示 330 741 476*21；彈出座標與查詢座標一致（回讀）。"
+     },
+     "check_in_out_time": {
+      "status": "已補",
+      "value": {
+       "check_in": "15:00",
+       "check_out": "10:00"
+      },
+      "note": "官網交通／客房頁未刊入住退房時刻。じゃらん標準時刻與高千穂町觀光協會頁皆為 15:00／10:00。",
+      "checked_at": "2026-11-12",
+      "source_urls": [
+       "https://www.jalan.net/yad376236/",
+       "https://takachiho-kanko.info/stay/19/"
+      ]
+     },
+     "price": {
+      "status": "已補",
+      "value": {
+       "actual_stay_2nights": "2026-11-28 起 2 泊：じゃらん查無方案。11/29 1 泊亦無。",
+       "actual_first_night": {
+        "date": "2026-11-28",
+        "nights": 1,
+        "adults": 2,
+        "tax": "税込",
+        "examples": [
+         {
+          "plan": "【プレミアム】ビューバスツインルームで過ごす極上のひと時♪♪＜朝食付＞",
+          "meals": "朝のみ",
+          "per_person_jpy": 46827,
+          "total_jpy": 93654,
+          "note": "當日僅見此檔；價格明顯高於觀光協會公開下限，應為高階房僅剩。"
+         }
+        ],
+        "source": "https://www.jalan.net/yad376236/plan/?stayYear=2026&stayMonth=11&stayDay=28&stayCount=1&roomCount=1&adultNum=2"
+       },
+       "published_starting_rate": {
+        "text": "高千穂町觀光協會：税込 10,500円～（ダブル1泊朝食付き）、13,200円～（ダブル1泊2食付き）。未標具體入住日。",
+        "source": "https://takachiho-kanko.info/stay/19/"
+       },
+       "ikyu": "一休（ikyu.com）本次以 curl 查詢回 HTTP 403，未能取得標價，已略過。"
+      },
+      "note": "兩晚連泊查無；實際入住首日 11/28 的 1 泊有一檔早餐附高級房標價。未下單。",
+      "checked_at": "2026-11-12",
+      "source_urls": [
+       "https://www.jalan.net/yad376236/plan/?stayYear=2026&stayMonth=11&stayDay=28&stayCount=2&roomCount=1&adultNum=2",
+       "https://www.jalan.net/yad376236/plan/?stayYear=2026&stayMonth=11&stayDay=28&stayCount=1&roomCount=1&adultNum=2",
+       "https://takachiho-kanko.info/stay/19/"
+      ]
+     },
+     "parking": {
+      "status": "已補",
+      "value": {
+       "available": true,
+       "fee": "無料",
+       "reservation_required": false,
+       "capacity": "55台（楽天・Yahoo!マップ）。JTB 另寫約56台，差 1 台，以楽天為主並註記。",
+       "entrance_lat": null,
+       "entrance_lng": null,
+       "entrance_mapcode": null
+      },
+      "note": "官網交通頁未寫停車場。楽天地圖頁：有り 55台 無料 予約不要。Yahoo!マップ寫 55台。入口座標／MapCode 查無，未以館址代替。",
+      "checked_at": "2026-11-12",
+      "source_urls": [
+       "https://travel.rakuten.co.jp/HOTEL/165619/rtmap.html",
+       "https://map.yahoo.co.jp/v3/place/mu603wJCagw"
+      ]
+     },
+     "free_cancel_until": {
+      "status": "待查",
+      "value": "待查",
+      "note": "未查得此行訂單的免費取消期限。",
+      "checked_at": "2026-11-12"
+     },
+     "booking_opens": {
+      "status": "待查",
+      "value": "待查",
+      "note": "未查得開放預訂時間。",
+      "checked_at": "2026-11-12"
+     }
+    }
+   },
+   {
+    "ref": "lodging:base[5]",
+    "trip_name": "大洞窟の宿 湯楽亭",
+    "stay": {
+     "check_in": "2026-11-30",
+     "check_out": "2026-12-02",
+     "nights": 2,
+     "party": "大人2名"
+    },
+    "identification_note": null,
+    "choice_needed": false,
+    "choice_label": null,
+    "disclaimer": "參考，須安宏確認。尚未訂房。",
+    "filled_fields": [
+     "official_name",
+     "official_url",
+     "address",
+     "phone",
+     "coords",
+     "mapcode",
+     "price"
+    ],
+    "pending_fields": [
+     "booking_status",
+     "parking.coords",
+     "parking.mapcode",
+     "booking_opens",
+     "free_cancel_until"
+    ],
+    "fields": {
+     "booking_status": {
+      "status": "待查",
+      "value": "待查",
+      "note": "尚未選定方案、未訂房。須安宏確認。",
+      "checked_at": "2026-11-12"
+     },
+     "official_name": {
+      "status": "已補",
+      "value": "大洞窟の宿 湯楽亭",
+      "note": "沿用 2026-11-11，並再核對官網。位於熊本縣上天草市，不是湯布院。",
+      "checked_at": "2026-11-12",
+      "source_urls": [
+       "https://yurakutei.jp/",
+       "https://yurakutei.jp/access"
+      ]
+     },
+     "official_url": {
+      "status": "已補",
+      "value": "https://yurakutei.jp/",
+      "note": "沿用並再核對。",
+      "checked_at": "2026-11-12",
+      "source_urls": [
+       "https://yurakutei.jp/"
+      ]
+     },
+     "address": {
+      "status": "已補",
+      "value": "〒869-3602 熊本県上天草市大矢野町上5190-2",
+      "note": "沿用官網地址，2026-11-12 再核對。",
+      "checked_at": "2026-11-12",
+      "source_urls": [
+       "https://yurakutei.jp/access"
+      ]
+     },
+     "phone": {
+      "status": "已補",
+      "value": "0964-56-0536",
+      "note": "沿用官網公開電話。",
+      "checked_at": "2026-11-12",
+      "source_urls": [
+       "https://yurakutei.jp/access"
+      ]
+     },
+     "coords": {
+      "status": "已補",
+      "value": {
+       "lat": 32.595932,
+       "lng": 130.405564,
+       "datum": "WGS84"
+      },
+      "note": "官網交通頁 Google Map 嵌入以 q=32.595932,130.405564 指定地點。じゃらん設施頁座標完全相同。國土地理院對「大矢野町上」只回到字中心，未採用。",
+      "checked_at": "2026-11-12",
+      "source_urls": [
+       "https://yurakutei.jp/access",
+       "https://www.jalan.net/yad341506/"
+      ]
+     },
+     "mapcode": {
+      "status": "已補",
+      "value": "677 033 118*68",
+      "note": "官網未刊 MapCode。以官網／じゃらん相同座標在 Mapion（https://www.mapion.co.jp/m2/32.595932,130.405564,19）右鍵查詢，彈出 677 033 118*68，彈出座標 32.595932,130.405564 與查詢座標一致（回讀）。",
+      "checked_at": "2026-11-12",
+      "source_urls": [
+       "https://www.mapion.co.jp/m2/32.595932,130.405564,19",
+       "https://yurakutei.jp/access"
+      ],
+      "mapcode_source": "Mapion https://www.mapion.co.jp/m2/32.595932,130.405564,19 右鍵顯示 677 033 118*68；彈出座標與查詢座標一致（回讀）。"
+     },
+     "price": {
+      "status": "已補",
+      "value": {
+       "actual_stay_2nights": "2026-11-30 起 2 泊：じゃらん仍查無方案（與 2026-11-11 結論相同；部分方案有 1 泊限定）。",
+       "actual_nights_as_1n": [
+        {
+         "date": "2026-11-30",
+         "nights": 1,
+         "adults": 2,
+         "tax": "税込",
+         "examples": [
+          {
+           "plan": "〈震災・施設制限あり〉【1泊2食付】天然温泉・洞窟風呂＆海鮮懐石◇当館スタンダード",
+           "meals": "朝・夕",
+           "per_person_jpy": 22000,
+           "total_jpy": 44000
+          },
+          {
+           "plan": "〈震災・施設制限あり〉【朝食付き】…名物あら汁",
+           "meals": "朝のみ",
+           "per_person_jpy": 14300,
+           "total_jpy": 28600
+          },
+          {
+           "plan": "〈震災・施設制限あり〉【素泊り】…シンプルステイ",
+           "meals": "食事なし",
+           "per_person_jpy": 12100,
+           "total_jpy": 24200
+          }
+         ],
+         "source": "https://www.jalan.net/yad341506/plan/?stayYear=2026&stayMonth=11&stayDay=30&stayCount=1&roomCount=1&adultNum=2"
+        },
+        {
+         "date": "2026-12-01",
+         "nights": 1,
+         "adults": 2,
+         "note": "12/1（週二，即行程第二晚）1 泊同樣有含早餐／1泊2食標價，金額與 11/30 1 泊相同量級。",
+         "source": "https://www.jalan.net/yad341506/plan/?stayYear=2026&stayMonth=12&stayDay=01&stayCount=1&roomCount=1&adultNum=2"
+        }
+       ],
+       "ikyu": "一休（ikyu.com）本次以 curl 查詢回 HTTP 403，未能取得標價，已略過。",
+       "restriction_note": "方案名稱多標〈震災・施設制限あり〉，訂房前需再看官網現況。"
+      },
+      "note": "兩晚一次預訂在じゃらん仍查無；改以實際入住日與次日的 1 泊標價作參考，並註明連泊須安宏向旅館確認。未下單。",
+      "checked_at": "2026-11-12",
+      "source_urls": [
+       "https://www.jalan.net/yad341506/plan/?stayYear=2026&stayMonth=11&stayDay=30&stayCount=2&roomCount=1&adultNum=2",
+       "https://www.jalan.net/yad341506/plan/?stayYear=2026&stayMonth=11&stayDay=30&stayCount=1&roomCount=1&adultNum=2",
+       "https://www.jalan.net/yad341506/plan/?stayYear=2026&stayMonth=12&stayDay=01&stayCount=1&roomCount=1&adultNum=2"
+      ]
+     },
+     "parking.coords": {
+      "status": "待查",
+      "note": "官網：專用免費停車場在館前方（混凝土＋砂利，有「湯楽亭」看板）。無法從公開圖資單獨標出入口點，未以館址座標代替。",
+      "checked_at": "2026-11-12",
+      "source_urls": [
+       "https://yurakutei.jp/access"
+      ]
+     },
+     "parking.mapcode": {
+      "status": "待查",
+      "note": "入口 MapCode 因無入口座標而未向 Mapion 查詢，維持 null，未編造。",
+      "checked_at": "2026-11-12"
+     },
+     "booking_opens": {
+      "status": "待查",
+      "value": "待查",
+      "note": "未查得開放預訂時間。12 月營業日行事曆仍待看官網お知らせ（沿用 2026-11-11 待辦）。",
+      "checked_at": "2026-11-12"
+     },
+     "free_cancel_until": {
+      "status": "待查",
+      "value": "待查",
+      "note": "未查得此行訂單的免費取消期限。",
+      "checked_at": "2026-11-12"
+     }
+    }
+   },
+   {
+    "ref": "lodging:base[6]",
+    "trip_name": "嬉野溫泉華翠苑飯店",
+    "stay": {
+     "check_in": "2026-12-02",
+     "check_out": "2026-12-04",
+     "nights": 2,
+     "party": "大人2名"
+    },
+    "identification_note": null,
+    "choice_needed": false,
+    "choice_label": null,
+    "disclaimer": "參考，須安宏確認。尚未訂房。",
+    "filled_fields": [
+     "official_name",
+     "official_url",
+     "address",
+     "phone",
+     "coords",
+     "mapcode",
+     "check_in_out_time",
+     "price",
+     "parking"
+    ],
+    "pending_fields": [
+     "booking_status",
+     "free_cancel_until",
+     "booking_opens"
+    ],
+    "fields": {
+     "booking_status": {
+      "status": "待查",
+      "value": "待查",
+      "note": "尚未選定方案、未訂房。須安宏確認。",
+      "checked_at": "2026-11-12"
+     },
+     "official_name": {
+      "status": "已補",
+      "value": "嬉野温泉 ホテル華翠苑（かすいえん）",
+      "note": "官網正式名稱。佐賀縣嬉野市。",
+      "checked_at": "2026-11-12",
+      "source_urls": [
+       "https://kasuien.co.jp/",
+       "https://kasuien.co.jp/access/"
+      ]
+     },
+     "official_url": {
+      "status": "已補",
+      "value": "https://kasuien.co.jp/",
+      "note": "官方網站。",
+      "checked_at": "2026-11-12",
+      "source_urls": [
+       "https://kasuien.co.jp/"
+      ]
+     },
+     "address": {
+      "status": "已補",
+      "value": "〒843-0304 佐賀県嬉野市嬉野町岩屋川内甲333番地",
+      "note": "官網交通頁與頁尾。",
+      "checked_at": "2026-11-12",
+      "source_urls": [
+       "https://kasuien.co.jp/access/"
+      ]
+     },
+     "phone": {
+      "status": "已補",
+      "value": {
+       "reservation": "0570-026-112",
+       "main": "0954-42-2111"
+      },
+      "note": "官網：予約 TEL 0570-026-112（ナビダイヤル，受付 9:00～18:00）；代表TEL（予約以外）0954-42-2111（受付 9:00～19:00）。交通頁表格另列 0954-42-2111。",
+      "checked_at": "2026-11-12",
+      "source_urls": [
+       "https://kasuien.co.jp/",
+       "https://kasuien.co.jp/access/"
+      ]
+     },
+     "coords": {
+      "status": "已補",
+      "value": {
+       "lat": 33.093836,
+       "lng": 129.981996,
+       "datum": "WGS84"
+      },
+      "note": "じゃらん設施頁 33.093836, 129.981996，與官網 Google 地圖嵌入中心 33.0938357, 129.9819957 幾乎一致。OSM 具名節點「ホテル華翠苑」node/14139613201＝33.0937738, 129.9819752（約 7 m）。官網 MapCode 反查點 33.0939752, 129.9820305（約 16 m），同一館。國土地理院對「岩屋川内」只回到字中心（差約 4 km），未採用。",
+      "checked_at": "2026-11-12",
+      "source_urls": [
+       "https://www.jalan.net/yad324965/",
+       "https://kasuien.co.jp/access/",
+       "https://www.openstreetmap.org/node/14139613201"
+      ]
+     },
+     "mapcode": {
+      "status": "已補",
+      "value": "104 013 783*06",
+      "note": "官網交通頁明文刊載「マップコード 104 013 783*06」。將該碼反查為 33.0939752, 129.9820305 後，於 Mapion 該點右鍵回讀，彈出 MapCode 104 013 783*06、彈出座標 33.093975,129.982030，與官網碼及反查座標一致。",
+      "checked_at": "2026-11-12",
+      "source_urls": [
+       "https://kasuien.co.jp/access/",
+       "https://www.mapion.co.jp/m2/33.0939752,129.9820305,19"
+      ],
+      "mapcode_source": "官網 https://kasuien.co.jp/access/ 明文刊載 104 013 783*06；反查座標於 Mapion https://www.mapion.co.jp/m2/33.0939752,129.9820305,19 右鍵回讀，彈出同一碼且座標一致。"
+     },
+     "check_in_out_time": {
+      "status": "已補",
+      "value": {
+       "check_in": "15:00（最終 19:30）",
+       "check_out": "10:00"
+      },
+      "note": "官網 FAQ：チェックインは15:00、チェックアウトは10:00；並請於 19:30 前入住。じゃらん標準時刻 15:00／10:00。楽天設備頁亦寫 15:00（最終 19:30）。部分記念日方案退房可至 12:00，以方案為準。",
+      "checked_at": "2026-11-12",
+      "source_urls": [
+       "https://kasuien.co.jp/faq/",
+       "https://www.jalan.net/yad324965/",
+       "https://travel.rakuten.co.jp/HOTEL/107623/107623_std.html"
+      ]
+     },
+     "price": {
+      "status": "已補",
+      "value": {
+       "actual_stay": {
+        "date": "2026-12-02",
+        "nights": 2,
+        "adults": 2,
+        "rooms": 1,
+        "tax": "税込（合計＝大人2名、2泊）",
+        "examples": [
+         {
+          "plan": "【一番人気・佐賀牛】…『佐賀牛付会席プラン』",
+          "meals": "朝・夕",
+          "room_example": "温泉付モダンラグジュアリールーム（禁煙）2024年リニューアル",
+          "total_jpy": 141900
+         },
+         {
+          "plan": "【基本プラン】…『季節の会席プラン』",
+          "meals": "朝・夕",
+          "total_jpy": 133100
+         },
+         {
+          "plan": "◎【特選・二大食材】…『特選プラン～贅・ぜい～』",
+          "meals": "朝・夕",
+          "total_jpy": 159500
+         },
+         {
+          "plan": "◎【特選・三大食材】…『特選プラン～雅（みやび）～』",
+          "meals": "朝・夕",
+          "total_jpy": 177100
+         },
+         {
+          "plan": "【記念日】…『アニバーサリープラン』（このプランチェックアウト 12:00）",
+          "meals": "朝・夕",
+          "total_jpy": 150700
+         },
+         {
+          "plan": "【素泊り】…『シンプルステイ素泊りプラン』",
+          "meals": "食事なし",
+          "total_jpy": 111100
+         }
+        ],
+        "source": "https://www.jalan.net/yad324965/plan/?stayYear=2026&stayMonth=12&stayDay=02&stayCount=2&roomCount=1&adultNum=2"
+       },
+       "ikyu": "一休（ikyu.com）本次以 curl 查詢回 HTTP 403，未能取得標價，已略過。"
+      },
+      "note": "實際入住日 12/02 起 2 泊、大人2名，じゃらん有多檔標價。未下單。",
+      "checked_at": "2026-11-12",
+      "source_urls": [
+       "https://www.jalan.net/yad324965/plan/?stayYear=2026&stayMonth=12&stayDay=02&stayCount=2&roomCount=1&adultNum=2"
+      ]
+     },
+     "parking": {
+      "status": "已補",
+      "value": {
+       "available": true,
+       "fee": "無料（楽天）",
+       "reservation_required": false,
+       "capacity": "80台（楽天；官網未寫台數）",
+       "location_official": "公式：玄関前與飯店側邊有停車場；機車另有約 100 m 外有頂車位，當日由館員引導。",
+       "entrance_lat": null,
+       "entrance_lng": null,
+       "entrance_mapcode": null
+      },
+      "note": "官網確認有停車場（門口與側邊）。台數與免費、予約不要見楽天設備頁「駐車場 有り ８０台 無料 予約不要」。入口座標／MapCode 查無，未以館址代替。",
+      "checked_at": "2026-11-12",
+      "source_urls": [
+       "https://kasuien.co.jp/access/",
+       "https://travel.rakuten.co.jp/HOTEL/107623/107623_std.html"
+      ]
+     },
+     "free_cancel_until": {
+      "status": "待查",
+      "value": "待查",
+      "note": "未查得此行訂單的免費取消期限。",
+      "checked_at": "2026-11-12"
+     },
+     "booking_opens": {
+      "status": "待查",
+      "value": "待查",
+      "note": "未查得開放預訂時間。",
+      "checked_at": "2026-11-12"
+     }
+    }
+   },
+   {
+    "ref": "lodging:base[7]",
+    "trip_name": "福岡蒙特利飯店",
+    "stay": {
+     "check_in": "2026-12-04",
+     "check_out": "2026-12-06",
+     "nights": 2,
+     "party": "大人2名"
+    },
+    "identification_note": "行程只寫「福岡蒙特利飯店」。福岡市有兩間同集團飯店，公開資料無法判定哪一間，故兩間都列出，不猜測。",
+    "choice_needed": true,
+    "choice_label": "需安宏選擇：ラ・スール福岡 或 ホテルモントレ福岡（不要二選一）",
+    "disclaimer": "參考，須安宏確認。尚未訂房。",
+    "filled_fields": [
+     "official_name",
+     "official_url",
+     "address",
+     "phone",
+     "coords",
+     "mapcode",
+     "check_in_out_time",
+     "parking",
+     "public_cancel_policy"
+    ],
+    "pending_fields": [
+     "booking_status",
+     "price",
+     "free_cancel_until",
+     "booking_opens"
+    ],
+    "fields": {
+     "booking_status": {
+      "status": "待查",
+      "value": "待查",
+      "note": "尚未選定要住哪一間、也尚未訂房。須安宏確認。",
+      "checked_at": "2026-11-12"
+     },
+     "official_name": {
+      "status": "已補",
+      "value": {
+       "unresolved": true,
+       "option_a": "ホテルモントレ ラ・スール福岡",
+       "option_b": "ホテルモントレ福岡"
+      },
+      "note": "集團官方飯店一覽確認福岡市有這兩間，位置與電話都不同。行程名稱不足以判定，兩間都列出，不猜。",
+      "checked_at": "2026-11-12",
+      "source_urls": [
+       "https://www.hotelmonterey.co.jp/lasoeur_fukuoka/",
+       "https://www.hotelmonterey.co.jp/fukuoka/",
+       "https://www.hotelmonterey.co.jp/hotellist/fukuoka.html"
+      ]
+     },
+     "official_url": {
+      "status": "已補",
+      "value": {
+       "lasoeur": "https://www.hotelmonterey.co.jp/lasoeur_fukuoka/",
+       "monterey_fukuoka": "https://www.hotelmonterey.co.jp/fukuoka/"
+      },
+      "note": "兩間官網。",
+      "checked_at": "2026-11-12",
+      "source_urls": [
+       "https://www.hotelmonterey.co.jp/lasoeur_fukuoka/",
+       "https://www.hotelmonterey.co.jp/fukuoka/"
+      ]
+     },
+     "address": {
+      "status": "已補",
+      "value": {
+       "lasoeur": "〒810-0041 福岡県福岡市中央区大名2丁目8番27号",
+       "monterey_fukuoka": "〒810-0004 福岡県福岡市中央区渡辺通3丁目4番13号"
+      },
+      "note": "各官網頁尾。",
+      "checked_at": "2026-11-12",
+      "source_urls": [
+       "https://www.hotelmonterey.co.jp/lasoeur_fukuoka/",
+       "https://www.hotelmonterey.co.jp/fukuoka/"
+      ]
+     },
+     "phone": {
+      "status": "已補",
+      "value": {
+       "lasoeur": "092-726-7111",
+       "monterey_fukuoka": "092-734-7111"
+      },
+      "note": "各官網公開電話。兩間號碼不同。",
+      "checked_at": "2026-11-12",
+      "source_urls": [
+       "https://www.hotelmonterey.co.jp/lasoeur_fukuoka/",
+       "https://www.hotelmonterey.co.jp/fukuoka/"
+      ]
+     },
+     "coords": {
+      "status": "已補",
+      "value": {
+       "lasoeur": {
+        "lat": 33.5909629,
+        "lng": 130.3953751,
+        "datum": "WGS84",
+        "note": "與じゃらん 33.590967, 130.395351（約 2 m）、國土地理院住址 33.591145, 130.395401（約 20 m）一致。"
+       },
+       "monterey_fukuoka": {
+        "lat": 33.5847601,
+        "lng": 130.4046954,
+        "datum": "WGS84",
+        "note": "與 OSM node/9555322519 33.5847264, 130.404609（約 8 m）、官網地圖圖釘 33°35'05.1\"N 130°24'16.6\"E、じゃらん 33.584849, 130.404905 同一館。"
+       }
+      },
+      "note": "兩間座標分別對應官網刊載 MapCode 的反查點，並與じゃらん／國土地理院／OSM 交叉核對。",
+      "checked_at": "2026-11-12",
+      "source_urls": [
+       "https://www.hotelmonterey.co.jp/lasoeur_fukuoka/access/",
+       "https://www.hotelmonterey.co.jp/fukuoka/access/",
+       "https://www.jalan.net/yad381642/",
+       "https://www.jalan.net/yad364185/",
+       "https://www.openstreetmap.org/node/9555322519"
+      ]
+     },
+     "mapcode": {
+      "status": "已補",
+      "value": {
+       "lasoeur": "13 317 471*45",
+       "monterey_fukuoka": "13 288 715*87"
+      },
+      "note": "兩間官網交通頁都明文刊載 MapCode。ラ・スール：13 317 471*45，反查 33.5909629, 130.3953751 後於 Mapion 右鍵回讀得到同一碼，彈出座標 33.590963,130.395375。モントレ福岡：13 288 715*87，反查 33.5847601, 130.4046954 後於 Mapion 右鍵回讀得到同一碼，彈出座標 33.584760,130.404695。未憑空推算。",
+      "checked_at": "2026-11-12",
+      "source_urls": [
+       "https://www.hotelmonterey.co.jp/lasoeur_fukuoka/access/",
+       "https://www.hotelmonterey.co.jp/fukuoka/access/",
+       "https://www.mapion.co.jp/m2/33.5909629,130.3953751,19",
+       "https://www.mapion.co.jp/m2/33.5847601,130.4046954,19"
+      ],
+      "mapcode_source": "兩間皆為官網明文刊載，並以反查座標在 Mapion 右鍵回讀，彈出同一碼且座標一致。"
+     },
+     "check_in_out_time": {
+      "status": "已補",
+      "value": {
+       "lasoeur": {
+        "check_in": "15:00",
+        "check_out": "11:00"
+       },
+       "monterey_fukuoka": {
+        "check_in": "15:00",
+        "check_out": "11:00"
+       }
+      },
+      "note": "兩間官網住宿案内皆為 15:00／11:00。じゃらん標準時刻相同。部分方案可能不同（例如モントレ福岡某早餐方案寫退房 12:00）。另有福岡市住宿稅（依素泊料金級距，須另付）。",
+      "checked_at": "2026-11-12",
+      "source_urls": [
+       "https://www.hotelmonterey.co.jp/lasoeur_fukuoka/stay/",
+       "https://www.hotelmonterey.co.jp/fukuoka/stay/",
+       "https://www.jalan.net/yad381642/",
+       "https://www.jalan.net/yad364185/"
+      ]
+     },
+     "price": {
+      "status": "待查",
+      "value": {
+       "identity": "尚未判定住哪一間。",
+       "actual_stay": "2026-12-04 起 2 泊及 12/04、12/05、12/01、12/11 的 1 泊：兩間在じゃらん皆查無方案。ラ・スール另查 11/20、11/27 亦無。",
+       "nearby_reference_monterey_fukuoka_only": {
+        "date": "2026-11-27",
+        "nights": 1,
+        "adults": 2,
+        "hotel": "ホテルモントレ福岡（不是ラ・スール）",
+        "tax": "税込（合計＝大人2名；住宿稅另計）",
+        "examples": [
+         {
+          "plan": "【観光やビジネスに最適】シンプルステイプラン…＜朝食付＞",
+          "meals": "朝のみ",
+          "total_jpy": 65000
+         },
+         {
+          "plan": "同系列＜素泊まり＞",
+          "meals": "食事なし",
+          "total_jpy": 57000
+         },
+         {
+          "plan": "【じゃらんスペシャルウィーク】期間限定…＜朝食付＞",
+          "meals": "朝のみ",
+          "total_jpy": 59300,
+          "note": "活動檔期，不可直接套用到 12/4"
+         }
+        ],
+        "source": "https://www.jalan.net/yad364185/plan/?stayYear=2026&stayMonth=11&stayDay=27&stayCount=1&roomCount=1&adultNum=2"
+       },
+       "lasoeur": "實際入住日與所查近傍日皆無じゃらん標價。",
+       "ikyu": "一休（ikyu.com）本次以 curl 查詢回 HTTP 403，未能取得標價，已略過。",
+       "reason_pending": "因館別未定，且兩間實際入住日都沒有公開標價，本欄以待查計算。"
+      },
+      "note": "實際入住日無標價；僅モントレ福岡有 11/27 近傍參考價。ラ・スール待查。未下單。",
+      "checked_at": "2026-11-12",
+      "source_urls": [
+       "https://www.jalan.net/yad381642/plan/?stayYear=2026&stayMonth=12&stayDay=04&stayCount=2&roomCount=1&adultNum=2",
+       "https://www.jalan.net/yad364185/plan/?stayYear=2026&stayMonth=12&stayDay=04&stayCount=2&roomCount=1&adultNum=2",
+       "https://www.jalan.net/yad364185/plan/?stayYear=2026&stayMonth=11&stayDay=27&stayCount=1&roomCount=1&adultNum=2"
+      ]
+     },
+     "parking": {
+      "status": "已補",
+      "value": {
+       "lasoeur": {
+        "available": true,
+        "fee": "宿泊優待 1,800円／1泊（15:00～翌12:00；楽天一處寫翌11:00，以官網 12:00 為準）",
+        "reservation_required": false,
+        "capacity": "28台（普通車14＋ハイルーフ14）",
+        "restriction": "普通車 高1.55m／寬2.05m／長5.30m 以內 14台；ハイルーフ 高2.00m／寬2.05m／長5.30m 以內 14台",
+        "entrance_note": "公式：入口在昭和通側，飯店與日產租車之間。滿車時到飯店停車場後再引導近鄰停車場。",
+        "entrance_lat": null,
+        "entrance_lng": null,
+        "entrance_mapcode": null
+       },
+       "monterey_fukuoka": {
+        "available": true,
+        "fee": "2026-10-01 起住宿 2,000円／1台／1泊（此前日費 1,500円）。一般 60分 400円（住宿頁）／300円（交通頁，數字不一致）。",
+        "reservation_required": false,
+        "capacity": "住宿頁寫立體停車場 63台，交通頁寫 60台，不一致，待以現場或再查為準。",
+        "restriction": "車長5.3m、車寬2.0m、車高2.0m、重2.5t 任一項超過不可使用。",
+        "entrance_lat": null,
+        "entrance_lng": null,
+        "entrance_mapcode": null
+       }
+      },
+      "note": "兩間皆為先着順、予約不可。入口座標與入口 MapCode 雖有文字描述（ラ・スール在昭和通、日產租車旁），但公開圖資無法單獨標出入口點，未以館址代替，故為 null。",
+      "checked_at": "2026-11-12",
+      "source_urls": [
+       "https://www.hotelmonterey.co.jp/lasoeur_fukuoka/stay/",
+       "https://www.hotelmonterey.co.jp/lasoeur_fukuoka/access/",
+       "https://www.hotelmonterey.co.jp/fukuoka/stay/",
+       "https://www.hotelmonterey.co.jp/fukuoka/access/",
+       "https://www.jalan.net/yad381642/",
+       "https://www.jalan.net/yad364185/"
+      ]
+     },
+     "public_cancel_policy": {
+      "status": "已補",
+      "value": {
+       "both": "官網住宿約款：不泊 100%、當日 100%、前日 80%、2日前 50%、3日前 20%、4日～7日前 10%。方案或通路可能不同。",
+       "note": "這是公開規則，不是本行程訂單的免費取消期限。"
+      },
+      "note": "僅記錄公開取消規則。",
+      "checked_at": "2026-11-12",
+      "source_urls": [
+       "https://www.hotelmonterey.co.jp/lasoeur_fukuoka/stay/",
+       "https://www.hotelmonterey.co.jp/fukuoka/stay/"
+      ]
+     },
+     "free_cancel_until": {
+      "status": "待查",
+      "value": "待查",
+      "note": "雖有公開取消規則，此行訂單的免費取消期限仍待安宏確認。",
+      "checked_at": "2026-11-12"
+     },
+     "booking_opens": {
+      "status": "待查",
+      "value": "待查",
+      "note": "未查得開放預訂時間。",
+      "checked_at": "2026-11-12"
+     }
+    }
+   }
+  ]
+ },
+ "flights": {
+  "disclaimer": "參考，須安宏確認。已訂票額度與實際行李額度仍待查。",
+  "booking_status": "待安宏確認",
+  "booking_note": "需求寫「已自行訂好（填班號）」：去程 BR106、回程 BR101。本次只查公開班表與參考票價，未讀訂位紀錄、未改票、未進入乘客資料或付款頁。訂位代號與實際艙等／票種仍待安宏確認。",
+  "airports": [
+   {
+    "code": "TPE",
+    "name": "臺灣桃園國際機場",
+    "terminal": "第二航廈（T2）",
+    "role": "去程出發、回程抵達；台灣端不是松山 TSA",
+    "source_url": "https://www.flight.info/BR106",
+    "source_alt": [
+     "https://www.flight.info/BR101",
+     "https://info.flightmapper.net/flight/EVA_Air_BR_106",
+     "https://www.evaair.com/zh-tw/fly-prepare/at-the-airport/worldwide-airports/?countryCode=TPE"
+    ],
+    "checked_at": "2026-11-12"
+   },
+   {
+    "code": "FUK",
+    "name": "福岡機場",
+    "terminal": "國際線客運大樓（時刻表標記 TI／Terminal I；與國內線客運大樓分開）",
+    "role": "去程抵達、回程出發；取還車請以福岡國際線為準",
+    "source_url": "https://www.fukuoka-airport.jp/tw/flight/airline/br.html",
+    "source_alt": [
+     "https://www.fukuoka-airport.jp/tw/flight/flow_int/",
+     "https://www.fukuoka-airport.jp/tw/map/index.html?floor_id=int",
+     "https://www.flight.info/BR106",
+     "https://www.flight.info/BR101"
+    ],
+    "checked_at": "2026-11-12",
+    "note": "福岡機場官網長榮頁寫明報到在國際線；櫃檯位置每天不同，須查出發當日航班資訊。國際線客運大樓 3F 為登機櫃檯／出境，2F 入境審查，1F 到達大廳。"
+   }
+  ],
+  "outbound": {
+   "flight": "BR106",
+   "airline": "長榮航空 EVA Air",
+   "date": "2026-11-21",
+   "weekday": "週六",
+   "from": "TPE",
+   "to": "FUK",
+   "dep_time": "08:00",
+   "dep_tz": "UTC+8",
+   "arr_time": "11:15",
+   "arr_tz": "UTC+9",
+   "duration": "2h15m",
+   "aircraft": "Boeing 787-10",
+   "source_url": "https://www.flight.info/BR106",
+   "checked_at": "2026-11-12",
+   "note": "flight.info 未來 30 日班表列 2026-11-21 08:00 TPE→FUK，機型 Boeing 787-10；exa.ai 同日資料為 781、T2→TI。時刻與航廈與 flightmapper、Google Flights 一致。機型可能臨近出發變更。"
+  },
+  "inbound": {
+   "flight": "BR101",
+   "airline": "長榮航空 EVA Air",
+   "date": "2026-12-06",
+   "weekday": "週日",
+   "from": "FUK",
+   "to": "TPE",
+   "dep_time": "20:55",
+   "dep_tz": "UTC+9",
+   "arr_time": "22:40",
+   "arr_tz": "UTC+8",
+   "duration": "2h45m",
+   "aircraft": "Airbus A321",
+   "source_url": "https://www.flight.info/BR101",
+   "checked_at": "2026-11-12",
+   "note": "flight.info 未來 30 日班表列 2026-12-06 20:55 FUK→TPE，機型 Airbus A321；exa.ai 同日資料為 321、TI→T2。冬季班期（2026-10-25 起）時刻 20:55–22:40，與部分舊資料的 22:25／22:15 不同，本次以針對 12/6 的班表為準。回程為晚班，當晚還車與赴國際線報到時間需預留；長榮福岡報到開關櫃時刻本次查無公開固定公告，列待查。"
+  },
+  "baggage": {
+   "status": "已查官方規則；本行程已訂票之實際額度待查",
+   "route_class": "短程航線（往返亞洲地區間）",
+   "economy_checked": {
+    "fare_deluxe_or_classic": "尊寵（B/Y）／經典（Q/H/M）：2 件，各 23 公斤",
+    "fare_basic_or_light": "基本（V/W/S）／輕省（A）：1 件，23 公斤",
+    "size": "單件長寬高總和（含輪子、把手）不超過 158 公分"
+   },
+   "carry_on": {
+    "economy": "1 件，每件不超過 7 公斤；尺寸上限 23×36×56 公分或三邊合計 115 公分",
+    "personal_item": "另可帶 1 件個人物品，原則 40×30×10 公分或三邊合計 80 公分"
+   },
+   "note": "安宏已自行訂票，本次不知票種（基本／經典／尊寵），故 chosen 行李欄為待查。請以電子機票上的免費行李額度為準。短程經濟艙無限萬哩遊酬賓機票官方為兩件各 23 公斤。",
+   "source_url": "https://www.evaair.com/zh-tw/fly-prepare/baggage/free-baggage/checked-baggage/",
+   "source_alt": [
+    "https://www.evaair.com/zh-tw/fly-prepare/baggage/free-baggage/carry-on-baggage/"
+   ],
+   "checked_at": "2026-11-12"
+  },
+  "price": {
+   "cash_twd_reference": 25073,
+   "currency": "TWD",
+   "per": "1 位成人、經濟艙、含稅及其他費用的來回票價（起）",
+   "travelers_in_search": 1,
+   "trip_travelers": 2,
+   "cash_twd_reference_for_2_adults_if_same_fare": null,
+   "note": "只供參考，已自行訂好，不下單。Google Flights 於 2026-11-12 查 2026-11-21 去程／2026-12-06 回程：去程長榮 08:00–11:15（即 BR106，頁面顯示長榮航空／全日空航空共掛）直達、1 成人含稅來回 NT$25,073 起。此價是該去程搭配 12/6 回程的最低來回組合，結果頁尚未展開回程班次，因此不能確認回程是否為 BR101。同日長榮另一班去程 16:25–19:55（BR102）顯示來回 NT$32,348 起。票價會變動，且可能另收行李等附加費用。實際已付金額待安宏確認。未以 2 位成人重查，故不推算兩人合計。",
+   "booking_status": "待安宏確認",
+   "source_url": "https://www.google.com/travel/flights?hl=zh-TW&curr=TWD&q=Flights%20from%20TPE%20to%20FUK%20on%202026-11-21%20through%202026-12-06",
+   "checked_at": "2026-11-12",
+   "other_outbound_reference": [
+    {
+     "airline": "台灣虎航",
+     "dep": "06:45",
+     "arr": "10:00",
+     "cash_twd_rt_from": 12181
+    },
+    {
+     "airline": "星宇航空",
+     "dep": "14:45",
+     "arr": "18:00",
+     "cash_twd_rt_from": 14494
+    },
+    {
+     "airline": "亞洲航空",
+     "dep": "11:55",
+     "arr": "15:20",
+     "cash_twd_rt_from": 18090
+    },
+    {
+     "airline": "中華航空",
+     "dep": "16:25",
+     "arr": "19:35",
+     "cash_twd_rt_from": 21553
+    },
+    {
+     "airline": "長榮航空 BR106",
+     "dep": "08:00",
+     "arr": "11:15",
+     "cash_twd_rt_from": 25073
+    },
+    {
+     "airline": "長榮航空 BR102",
+     "dep": "16:25",
+     "arr": "19:55",
+     "cash_twd_rt_from": 32348
+    }
+   ]
+  },
+  "unresolved": [
+   "訂位代號／電子機票尚未提供（booking_ref 待查）",
+   "已訂票之艙等與票種（基本／經典／尊寵等）未提供，因此本行程實際託運行李件數待查；僅能列出長榮短程經濟艙官方規則",
+   "Google Flights 參考價 NT$25,073 為 1 成人、去程 BR106 搭配 12/6 回程的最低來回含稅起價，未在結果頁確認回程是否為 BR101，也未查 2 位成人合計",
+   "實際已付票款／里程或稅費金額待安宏確認",
+   "長榮官網時刻表與各地機場資訊頁本次以 curl 查詢回 403（邊緣阻擋），未能直接讀取官網時刻表原文；時刻改以 flight.info、flightmapper、exa.ai、Google Flights 交叉核對。行李規則引用長榮官網公開頁（搜尋結果可見原文表格）",
+   "福岡長榮報到櫃檯編號每日不同；報到開始／截止時刻本次查無公開固定公告，待查（影響 D16 還車時間）"
+  ],
+  "checked_at": "2026-11-12"
+ },
+ "transport": {
+  "disclaimer": "提案，須安宏確認。尚未訂車，部門未聯絡店家、未付款。",
+  "pickup": "推薦：Toyota 福岡INTERNATIONAL店（福岡空港國際線；1F 租車共同櫃台免費接駁約 3 分）。備選（若要 KEP）：Times 福岡空港國際線店。",
+  "dropoff": "同一國際線對應店舗還車（Toyota 則還福岡INTERNATIONAL店；Times 則還福岡空港國際線店）。最晚 2026-12-06 17:55 JST。",
+  "pickup_dropoff_time": "最早取車 2026-11-21 12:45 JST（BR106 公開抵達 11:15＋入境後 90 分）；最晚還車 2026-12-06 17:55 JST（BR101 公開起飛 20:55－起飛前 180 分）。Tabirai 報價以 13:00～17:55 查，15泊16日。",
+  "hours": "Toyota 福岡INTERNATIONAL店 8:00～20:00（休業日 8/25，本行程取還日營業）；Times 福岡空港國際線店 8:00～19:00（年中無休）；Nippon／Nissan 國際線店 9:00～19:00；Budget／Niconico 國際線店 8:00～20:00；ORIX 國際線店 9:00～18:00（與 17:55 還車幾乎衝突）。取 12:45／還 17:55 對 Toyota、Times、Nippon、Nissan、Budget、Niconico 無營業時間衝突。",
+  "price": "Tabirai 福岡空港國際線、2026-11-21 13:00～2026-12-06 17:55、15泊16日、稅込。Toyota W1（Sienta 級）¥177,650（約 NT$36,922，含 CDW／ナビ／ETC 車載器；另加 ETC 卡 ¥550，NOC 加購估計 ¥550×16＝¥8,800，全含約 ¥187,000／NT$38,866）。Toyota C1 ¥134,420。Times W-1（Freed 同級）¥202,389（含 CDW；ETC 卡本店說明 ¥330／次）。Nippon NB スタンダード ¥120,230（是否含 CDW 待確認；ETC 卡 8 日～1 個月 ¥1,100）。Nissan／ORIX／Budget 國際線報價待查。匯率 JPY/TWD 0.207837（open.er-api.com，匯率更新 2026-11-11 08:02 Asia/Taipei）。Toyota 15 日以上可能適用月租制，顯示價可能與實付不同。",
+  "reservation_status": "待查（未訂車）",
+  "proposal": {
+   "title": "Toyota 福岡INTERNATIONAL店報價與 ETC、KEP 不適用（16 日超過上限）",
+   "shop": "推薦：Toyota 福岡INTERNATIONAL店（福岡空港國際線）。備選（若要 KEP）：Times 福岡空港國際線店。",
+   "quote_summary": "Tabirai 福岡空港國際線、2026-11-21 13:00～2026-12-06 17:55、15泊16日、稅込。Toyota W1（Sienta 級）¥177,650（約 NT$36,922，含 CDW／ナビ／ETC 車載器；另加 ETC 卡 ¥550，NOC 加購估計 ¥550×16＝¥8,800，全含約 ¥187,000／NT$38,866）。Toyota C1 ¥134,420。Times W-1（Freed 同級）¥202,389（含 CDW；ETC 卡本店說明 ¥330／次）。Nippon NB スタンダード ¥120,230（是否含 CDW 待確認；ETC 卡 8 日～1 個月 ¥1,100）。Nissan／ORIX／Budget 國際線報價待查。匯率 JPY/TWD 0.207837（open.er-api.com，匯率更新 2026-11-11 08:02 Asia/Taipei）。Toyota 15 日以上可能適用月租制，顯示價可能與實付不同。",
+   "etc": {
+    "toyota": {
+     "jpy": 550,
+     "unit": "1回",
+     "source": "https://rent.toyota.co.jp/static/service/option/",
+     "queried_at": "2026-11-12"
+    },
+    "general": "ETC 車載器與 ETC 卡是兩回事。車上有機器不代表有卡。台灣無法自行持有日本發行的 ETC 卡（一般情況），務必向店舗租卡。KEP 必須用指定卡。"
+   },
+   "kep": {
+    "status": "實施中（至 2027-03-31）；本行程日期適用",
+    "max_days": 10,
+    "trip_days": 16,
+    "not_applicable_reason": "本行程 16 日超過 KEP 最長 10 日；Toyota 目前不受理 KEP；山口／關門等路段本來就不在 KEP 範圍。",
+    "itinerary_implication": "本行程 D1–D3 先北上萩、下關（山口，本州），這些路段本來就不在 KEP 範圍。全程 16 日也超過 KEP 最長連續 10 日。即使購買，最多覆蓋九州島內連續 10 日（例如約 11/24 別府之後至 12/3 前後），其餘日與關門外路段仍須另付通行費。能否在取車日之後再開始計算 KEP 使用期間，本次未在公開條款中查到可確定的操作說明，待查（不聯絡店家）。",
+    "recommendation": "若堅持用 KEP：選仍受理的 Times／Nissan／Niconico，並另編列關門外與超過 10 日的通行費。若選 Toyota（本檔首選），改用租來的 ETC 卡實報實銷，不買 KEP。",
+    "source": "https://www.w-nexco.co.jp/global/en/kep/",
+    "checked_at": "2026-11-12"
+   },
+   "label": "提案，須安宏確認"
+  },
+  "sources": [
+   "https://rent.toyota.co.jp/sp/shop/detail.aspx?eCode=068&rCode=68101",
+   "https://rent.toyota.co.jp/sp/shop/detail.aspx?eCode=068&rCode=68101",
+   "https://www.fukuoka-airport.jp/assets/flight/schedule/doc/11/202611_timetable_int.pdf",
+   "https://rent.toyota.co.jp/sp/shop/detail.aspx?eCode=068&rCode=68101",
+   "https://www.tabirai.net/car/fukuoka/search/rentacar.aspx?SYF=20261121&SYT=20261206&SYFT=13%3A00&SYTT=17%3A55&SAF=140203&SAT=140203&STP=6",
+   "https://rent.toyota.co.jp/sp/shop/detail.aspx?eCode=068&rCode=68101",
+   "依盤點與總經理規定：預約須由安宏親自確認，部門不得代訂、不得聯絡租車公司或付款。chosen 維持 null。"
+  ],
+  "checked_at": "2026-11-12"
+ }
+}
