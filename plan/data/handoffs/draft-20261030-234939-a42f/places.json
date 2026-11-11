@@ -2,7 +2,7 @@
  "schema": "agency.places.v1",
  "request_id": "draft-20261030-234939-a42f",
  "version": "2026-11-11-a1+merged",
- "generated_at": "2026-11-11T10:45:19+08:00",
+ "generated_at": "2026-11-11T12:24:40+08:00",
  "department": "旅遊資訊部",
  "note": "A1：景點類別由 OSM 標籤＋名稱關鍵字規則推出（category_source=osm_rule），判不出標 uncat（待分類）。A3：資料庫餐廳類型取自 trip-db 候選（OSM）。其餘欄位 null＝尚未查（不覆蓋網頁現值），待景點部／餐廳部補。",
  "category_codes": {
@@ -238,10 +238,11 @@
    "name": "山口県立萩美術館・浦上記念館",
    "name_ja": "山口県立萩美術館・浦上記念館",
    "categories": [
-    "historic"
+    "historic",
+    "festival"
    ],
-   "category_source": "osm_rule",
-   "category_basis": "名稱符合「historic」關鍵字",
+   "category_source": "spots_dept",
+   "category_basis": "原類別 historic；新增 festival。依據：活動／花季：特別展「NIGO®と半泥子」「萩焼 New Age」「萩大賞展Ⅶ」2026/10/31–12/20；11/22（日）11:00 有學藝員導覽，正好是路線 A2 造訪日。會期中休館 11/24、11/30。來源：萩美術館官網 https://hum-web.jp/exhibition/ （查詢日 2026-11-11）",
    "hours": "09:00–17:00（入館至 16:30）",
    "closed_days": "週一（逢假日開館）；特別展期間休 11/24（二）、11/30（一）、12/14（一）；年末年始",
    "admission": "特別展期間（10/31–12/20）一般 ¥1,500／學生・70 歲以上 ¥1,300／18 歲以下免費；平時一般 ¥400",
@@ -1053,10 +1054,11 @@
    "name_ja": "九州鉄道記念館",
    "categories": [
     "historic",
-    "experience"
+    "experience",
+    "popular"
    ],
-   "category_source": "osm_rule",
-   "category_basis": "名稱符合「historic」關鍵字；名稱符合「experience」關鍵字",
+   "category_source": "spots_dept",
+   "category_basis": "原類別 historic/experience；新增 popular。依據：熱門：Google 地圖「九州鉄道記念館」評分 4.3、評論約 5,326 則（2026-11-11 google_maps_tool 查得；門檻：評論 ≥5,000 且評分 ≥4.0）；來源 https://www.google.com/maps/place/%E4%B9%9D%E5%B7%9E%E9%89%84%E9%81%93%E8%A8%98%E5%BF%B5%E9%A4%A8/@33.9431488,130.9437694,15z/data=!4m10!1m2!2m1!1z5Lmd5bee6YmE6YGT6KiY5b-16aSoIOemj-WyoeecjA!3m6!1s0x3543962628f42ec3:0x870d39e12011b4ee!8m2!3d33.9431488!4d130.9617938!15sCh_kuZ3lt57piYTpgZPoqJjlv7XppKgg56aP5bKh55yMWiUiI-S5neW3niDpiYTpgZMg6KiY5b-1IOmkqCDnpo_lsqEg55yMkgELcmFpbF9tdXNldW2aASNDaFpEU1VoTk1HOW5TMFZKUTBGblNVUmtORmx1Tmt4M0VBReABAPoBBAgAEBw!16s%2Fg%2F120lqbdq",
    "hours": "09:00–17:00（入館至 16:30）",
    "closed_days": "每月第 2 個週三（7 月第 2 週三・四；8 月無休），2026/11 為 11/11",
    "admission": "大人 ¥500／中學生以下 ¥250（未滿 4 歲免費）",
@@ -1263,10 +1265,11 @@
    "name": "海地獄",
    "name_ja": "海地獄",
    "categories": [
-    "onsen"
+    "onsen",
+    "popular"
    ],
-   "category_source": "osm_rule",
-   "category_basis": "名稱符合「onsen」關鍵字",
+   "category_source": "spots_dept",
+   "category_basis": "原類別 onsen；新增 popular。依據：熱門：Google 地圖「海地獄」評分 4.3、評論約 12,839 則（2026-11-11 google_maps_tool 查得；門檻：評論 ≥5,000 且評分 ≥4.0）；來源 https://www.google.com/maps/place/%E6%B5%B7%E5%9C%B0%E7%8D%84/@33.3158884,131.4696829,15z/data=!4m6!3m5!1s0x3546a7bc889f8fab:0xc7089fd23db438f!8m2!3d33.3168115!4d131.4687384!16s%2Fg%2F1vrq7fxs",
    "hours": "08:00–17:00",
    "closed_days": "無休",
    "admission": "大人 ¥500／小中學生 ¥250（地獄巡禮 7 處共通券大人 ¥2,400）",
@@ -1344,7 +1347,7 @@
    "category_source": "osm_rule",
    "category_basis": "資料庫溫泉類／tourism=attraction",
    "hours": "（原金龍地獄已於 2009 年停業）原址「地獄溫泉博物館」09:00–18:00（最終入場 17:30）",
-   "closed_days": "原金龍地獄停業；地獄溫泉博物館不定休（年約 4 天）",
+   "closed_days": "停業（原金龍地獄已於 2009 年停業；原址為地獄溫泉博物館，不定休，年約 4 天）",
    "admission": "地獄溫泉博物館 大人 ¥1,500／小孩 ¥1,000",
    "stay_minutes": 60,
    "rain_ok": true,
@@ -1366,7 +1369,7 @@
    },
    "mapcode": "46 522 428*88",
    "mapcode_source": "Mapion 右鍵取得 46 522 428*88，以 saibara convgeo 反查一致（誤差 2.8 m）；saibara 正向換算 46 522 427*11（反查誤差 1.4 m）。換算點：停車場入口 33.315663,131.474796（停車場輪廓與道路（residential）交會節點 node/4264725277）（saibara 正向值 46 522 427*11 末段差 1，屬兩工具在格界的取值差異，以 Mapion 為準）",
-   "description": "原為鐵輪的「金龍地獄」，停業後原址於 2022 年改建為地獄溫泉博物館，用影像與展示介紹別府溫泉成因。",
+   "description": "【已停業】原金龍地獄已不存在，建議改訪原址「地獄溫泉博物館」或從路線刪除。原為鐵輪的「金龍地獄」，停業後原址於 2022 年改建為地獄溫泉博物館，用影像與展示介紹別府溫泉成因。",
    "sources": [
     {
      "url": "https://jigoku-museum.com/",
@@ -1386,12 +1389,17 @@
     }
    ],
    "field_status": {
+    "closed_days": "已查（停業，2026-11-11）",
     "stay_minutes": "估計",
     "season_note": "查無（無特定季節亮點）",
     "ratings.google": "待查（Google 搜尋落到かまど地獄（另一處））"
    },
    "checked_date": "2026-11-11",
-   "note": "路線上寫的「金龍地獄」已不存在，建議行程企畫部改成「地獄溫泉博物館」或刪除；Google 評分未取（搜尋結果落到かまど地獄）"
+   "note": "路線上寫的「金龍地獄」已不存在，建議行程企畫部改成「地獄溫泉博物館」或刪除；Google 評分未取（搜尋結果落到かまど地獄）",
+   "alert": {
+    "level": "closed",
+    "text": "已停業，建議改訪地獄溫泉博物館或從路線刪除"
+   }
   },
   "db:db_o_cafce80ae9": {
    "kind": "spot",
@@ -1403,7 +1411,7 @@
    "category_source": "osm_rule",
    "category_basis": "資料庫溫泉類／tourism=attraction",
    "hours": null,
-   "closed_days": "非公開（私有地／寺院境內，一般遊客通常無法參觀）",
+   "closed_days": "不建議前往（非公開，私有地／寺院境內，一般遊客通常無法參觀）",
    "admission": null,
    "stay_minutes": null,
    "rain_ok": false,
@@ -1425,7 +1433,7 @@
    },
    "mapcode": "46 431 118*06",
    "mapcode_source": "Mapion 右鍵取得 46 431 118*06，以 saibara convgeo 反查一致（誤差 2.7 m）；saibara 正向換算 46 431 118*05（反查誤差 0.2 m）。換算點：景點本身座標（無停車場入口資料） 33.287594,131.472140（非公開地點（私有地／寺院境內），無停車場；MapCode 以景點座標換算）",
-   "description": "位於別府南立石靈泉寺境內深處的噴氣地，是別府地獄的一部分，但目前不對外開放。",
+   "description": "【不建議前往】非公開地點，一般遊客通常無法參觀，建議從路線移除。位於別府南立石靈泉寺境內深處的噴氣地，是別府地獄的一部分，但目前不對外開放。",
    "sources": [
     {
      "url": "https://www.weblio.jp/content/%E9%B6%B4%E8%A6%8B%E5%9C%B0%E7%8D%84",
@@ -1447,6 +1455,7 @@
    ],
    "field_status": {
     "hours": "待查",
+    "closed_days": "已查（非公開，2026-11-11）",
     "admission": "待查",
     "stay_minutes": "不適用",
     "season_note": "查無（無特定季節亮點）"
@@ -1462,17 +1471,22 @@
      "check_method": "google_maps_tool"
     }
    ],
-   "note": "不是觀光設施，建議行程企畫部從路線移除"
+   "note": "不是觀光設施，建議行程企畫部從路線移除",
+   "alert": {
+    "level": "avoid",
+    "text": "非公開，一般遊客通常無法參觀，建議從路線移除"
+   }
   },
   "db:db_o_bc55f8b8c1": {
    "kind": "spot",
    "name": "竹瓦温泉",
    "name_ja": "竹瓦温泉",
    "categories": [
-    "onsen"
+    "onsen",
+    "popular"
    ],
-   "category_source": "osm_rule",
-   "category_basis": "資料庫溫泉類／amenity=public_bath",
+   "category_source": "spots_dept",
+   "category_basis": "原類別 onsen；新增 popular。依據：熱門：Google 地圖「竹瓦温泉」評分 4.1、評論約 5,267 則（2026-11-11 google_maps_tool 查得；門檻：評論 ≥5,000 且評分 ≥4.0）；來源 https://www.google.com/maps/place/%E7%AB%B9%E7%93%A6%E6%B8%A9%E6%B3%89/@33.2774716,131.5059789,15z/data=!4m6!3m5!1s0x3546a6dbc076d72f:0x30437b42d69f3478!8m2!3d33.2774556!4d131.5059894!16s%2Fg%2F12245xl5",
    "hours": "06:30–22:30（砂湯另有時段）",
    "closed_days": "每月第 3 個週三（逢假日改翌日），2026/11 為 11/18",
    "admission": "普通浴 大人 ¥300／小孩 ¥100；砂湯 ¥1,500（6 歲以上）",
@@ -1660,10 +1674,11 @@
    "name": "金鱗湖",
    "name_ja": "金鱗湖",
    "categories": [
-    "natural"
+    "natural",
+    "popular"
    ],
-   "category_source": "osm_rule",
-   "category_basis": "名稱符合「natural」關鍵字",
+   "category_source": "spots_dept",
+   "category_basis": "原類別 natural；新增 popular。依據：熱門：Google 地圖「金鱗湖」評分 4.1、評論約 23,075 則（2026-11-11 google_maps_tool 查得；門檻：評論 ≥5,000 且評分 ≥4.0）；來源 https://www.google.com/maps/place/%E9%87%91%E9%B1%97%E6%B9%96/@33.2666644,131.3510028,15z/data=!4m10!1m2!2m1!1z6YeR6bGX5rmWIOeUseW4g-W4gg!3m6!1s0x3546ae7d9e05b46b:0x8e77ad60f3cd87e6!8m2!3d33.2666644!4d131.3690272!15sChPph5HpsZfmuZYg55Sx5biD5biCWhgiFumHkSDpsZcg5rmWIOeUseW4gyDluIKSAQtzY2VuaWNfc3BvdOABAA!16s%2Fg%2F1239vfsr",
    "hours": "自由參觀（24 小時）",
    "closed_days": "無休",
    "admission": "免費",
@@ -1965,10 +1980,11 @@
    "name": "日向岬グリーンパーク",
    "name_ja": "日向岬グリーンパーク",
    "categories": [
-    "natural"
+    "natural",
+    "hidden"
    ],
-   "category_source": "osm_rule",
-   "category_basis": "名稱符合「natural」關鍵字",
+   "category_source": "spots_dept",
+   "category_basis": "原類別 natural；新增 hidden。依據：私房：Google 地圖「日向岬グリーンパーク」評分 4.3、評論僅約 208 則（2026-11-11 google_maps_tool 查得；門檻：評論 <300 且評分 ≥4.3，口碑好但遊客少）；來源 https://www.google.com/maps/place/%E6%97%A5%E5%90%91%E5%B2%AC%E3%82%B0%E3%83%AA%E3%83%BC%E3%83%B3%E3%83%91%E3%83%BC%E3%82%AF/@32.4146565,131.6596708,15z/data=!4m6!3m5!1s0x3547146d28fb77e7:0x7bc0fe7da82f2a79!8m2!3d32.4181382!4d131.6686549!16s%2Fg%2F119tjlbfd",
    "hours": "自由入園",
    "closed_days": "無休",
    "admission": "免費",
@@ -2033,10 +2049,13 @@
    "name": "高千穗峽",
    "name_ja": "高千穂峡",
    "categories": [
-    "natural"
+    "natural",
+    "popular",
+    "festival",
+    "experience"
    ],
-   "category_source": "osm_rule",
-   "category_basis": "名稱符合「natural」關鍵字",
+   "category_source": "spots_dept",
+   "category_basis": "原類別 natural；新增 popular/festival/experience。依據：熱門：Google 地圖「高千穂峡」評分 4.5、評論約 20,260 則（2026-11-11 google_maps_tool 查得；門檻：評論 ≥5,000 且評分 ≥4.0）；來源 https://www.google.com/maps/place/%E9%AB%98%E5%8D%83%E7%A9%82%E5%B3%A1/@32.7012777,131.2827028,15z/data=!4m10!1m2!2m1!1z6auY5Y2D56mC5bOh!3m6!1s0x35472cddfea5092f:0x58795d299dc91f8b!8m2!3d32.7012777!4d131.3007272!15sCgzpq5jljYPnqYLls6FaDyIN6auY5Y2D56mCIOWzoZIBC3NjZW5pY19zcG90mgFEQ2k5RFFVbFJRVU52WkVOb2RIbGpSamx2VDJwU1UwMVdSWFJQUmtweFYyeG9RbEZyZUdwV1F6RlZVV3BTTTA1SFl4QULgAQD6AQUI9gMQGA!16s%2Fg%2F121d6d88；活動／花季：紅葉例年 11 月中旬–下旬，2026 年預測 11/22 起進入見頃；路線 A8／B8／C8 11/28 造訪。來源：ジョルダン紅葉情報 https://sp.jorudan.co.jp/leaf/spot_55175.html （查詢日 2026-11-11）；親子／體驗：可租划船（貸しボート，乘船日 2 週前到 2 天前網路預約，本部不代訂）。來源：高千穗町觀光協會 https://takachiho-kanko.info/boat/detail.php （查詢日 2026-11-11）",
    "hours": "峽谷步道自由參觀；划船 08:30–17:00（受理至 16:30）",
    "closed_days": "無休（划船遇增水停駛）",
    "admission": "免費；划船 30 分鐘 1 艘 ¥5,100（11 月），11 月部分日期為完全預約制",
@@ -2115,10 +2134,11 @@
    "name": "高千穗神社",
    "name_ja": "高千穂神社",
    "categories": [
-    "shrine"
+    "shrine",
+    "popular"
    ],
-   "category_source": "osm_rule",
-   "category_basis": "名稱符合「shrine」關鍵字",
+   "category_source": "spots_dept",
+   "category_basis": "原類別 shrine；新增 popular。依據：熱門：Google 地圖「高千穂神社」評分 4.5、評論約 7,631 則（2026-11-11 google_maps_tool 查得；門檻：評論 ≥5,000 且評分 ≥4.0）；來源 https://www.google.com/maps/place/%E9%AB%98%E5%8D%83%E7%A9%82%E7%A5%9E%E7%A4%BE/@32.7066706,131.3018922,15z/data=!4m6!3m5!1s0x35472ce8730bc035:0xbedd34618e78cbfa!8m2!3d32.7064465!4d131.3020093!16s%2Fm%2F0drxsvr",
    "hours": "境內自由參拜；高千穗神樂每晚 20:00–21:00",
    "closed_days": "神樂休演 11/22、11/23、12/31、1/1",
    "admission": "參拜免費；神樂 ¥1,000（小學生以下免費）",
@@ -2187,10 +2207,11 @@
    "name": "天岩戶神社",
    "name_ja": "天岩戸神社",
    "categories": [
-    "shrine"
+    "shrine",
+    "popular"
    ],
-   "category_source": "osm_rule",
-   "category_basis": "名稱符合「shrine」關鍵字",
+   "category_source": "spots_dept",
+   "category_basis": "原類別 shrine；新增 popular。依據：熱門：Google 地圖「天岩戸神社 西本宮」評分 4.6、評論約 6,081 則（2026-11-11 google_maps_tool 查得；門檻：評論 ≥5,000 且評分 ≥4.0）；來源 https://www.google.com/maps/place/%E5%A4%A9%E5%B2%A9%E6%88%B8%E7%A5%9E%E7%A4%BE+%E8%A5%BF%E6%9C%AC%E5%AE%AE/@32.7344861,131.3326881,15z/data=!4m10!1m2!2m1!1z5aSp5bKp5oi456We56S-!3m6!1s0x35472bc29ea4137d:0xff8f3f0128b1bca4!8m2!3d32.7344861!4d131.3507125!15sCg_lpKnlsqnmiLjnpZ7npL5aEiIQ5aSp5bKp5oi4IOelnuekvpIBDXNoaW50b19zaHJpbmWaAURDaTlEUVVsUlFVTnZaRU5vZEhsalJqbHZUMjE0YWxaV1RsVlNWMFp0VkZkd1JHTXpiRTFOVjFJMFZHMDVjVlJXUlJBQuABAPoBBAgAECc!16s%2Fm%2F0ds9vq6",
    "hours": "境內自由參拜；西本宮天岩戶遙拜由神職導覽 09:00–16:30 每 30 分鐘一梯",
    "closed_days": "無休",
    "admission": "免費",
@@ -2410,10 +2431,12 @@
    "name": "國見之丘",
    "name_ja": "国見ヶ丘",
    "categories": [
-    "natural"
+    "natural",
+    "hidden",
+    "festival"
    ],
-   "category_source": "osm_rule",
-   "category_basis": "名稱符合「natural」關鍵字",
+   "category_source": "spots_dept",
+   "category_basis": "原類別 natural；新增 hidden/festival。依據：私房：Google 地圖「国見ヶ丘」評分 4.6、評論僅約 98 則（2026-11-11 google_maps_tool 查得；門檻：評論 <300 且評分 ≥4.3，口碑好但遊客少）；來源 https://www.google.com/maps/place/%E5%9B%BD%E8%A6%8B%E3%83%B6%E4%B8%98/@32.7191167,131.2811037,15z/data=!4m6!3m5!1s0x3540d334822d5bef:0x74c27eaeec7626e!8m2!3d32.7202611!4d131.2786994!16s%2Fg%2F11fylvsyzf；活動／花季：雲海季 9 月下旬–12 月上旬的清晨（晴、冷、無風時較易出現），涵蓋路線 B8 11/28。來源：高千穗町觀光協會 https://www.takachiho-kanko.info/sightseeing/8/ （查詢日 2026-11-11）",
    "hours": "自由參觀（24 小時）",
    "closed_days": "無休",
    "admission": "免費",
@@ -2685,10 +2708,11 @@
    "name": "高舞登山展望區",
    "name_ja": "高舞登山",
    "categories": [
-    "natural"
+    "natural",
+    "hidden"
    ],
-   "category_source": "osm_rule",
-   "category_basis": "名稱符合「natural」關鍵字",
+   "category_source": "spots_dept",
+   "category_basis": "原類別 natural；新增 hidden。依據：私房：Google 地圖「高舞登山展望台」評分 4.3、評論僅約 30 則（2026-11-11 google_maps_tool 查得；門檻：評論 <300 且評分 ≥4.3，口碑好但遊客少）；來源 https://www.google.com/maps/place/%E9%AB%98%E8%88%9E%E7%99%BB%E5%B1%B1%E5%B1%95%E6%9C%9B%E5%8F%B0/@32.5225206,130.4235934,15z/data=!4m10!1m2!2m1!1z6auY6Iie55m75bGxIOWxleacm-WPsCDkuIrlpKnojYnluII!3m6!1s0x353f899292cbef47:0x40798b27349a7557!8m2!3d32.5225206!4d130.4416178!15sCiPpq5joiJ7nmbvlsbEg5bGV5pyb5Y-wIOS4iuWkqeiNieW4gpIBEnRvdXJpc3RfYXR0cmFjdGlvbuABAA!16s%2Fg%2F11vc5m0qf3",
    "hours": "自由參觀",
    "closed_days": "無休",
    "admission": "免費",
@@ -2909,7 +2933,7 @@
    "category_source": "osm_rule",
    "category_basis": "名稱符合「historic」關鍵字",
    "hours": null,
-   "closed_days": "因 2026/7/28 地震臨時休館中（當面休館，重開日未定）；館內咖啡廳 09:00–16:00、週一休",
+   "closed_days": "臨時休館中（2026/7/28 地震，重開日未定）；館內咖啡廳 09:00–16:00、週一休",
    "admission": "（平時）一般 ¥310／大學生 ¥200／高中生以下免費",
    "stay_minutes": null,
    "rain_ok": true,
@@ -2931,7 +2955,7 @@
    },
    "mapcode": "128 311 474*46",
    "mapcode_source": "Mapion 右鍵取得 128 311 474*46，以 saibara convgeo 反查一致（誤差 2.6 m）；saibara 正向換算 128 311 474*45（反查誤差 0.6 m）。換算點：停車場入口 32.507752,130.596223（無入口節點；取輪廓上距車道最近點（約 10 m））",
-   "description": "伊東豐雄設計的市立博物館，展出八代城與松井家的歷史文物。",
+   "description": "【臨時休館】2026/7/28 地震後臨時休館、重開日未定，A11（12/1）無法參觀展示，建議改排或刪除。伊東豐雄設計的市立博物館，展出八代城與松井家的歷史文物。",
    "sources": [
     {
      "url": "https://www.city.yatsushiro.lg.jp/museum/kiji00326755/index.html",
@@ -2961,6 +2985,7 @@
    ],
    "field_status": {
     "hours": "待查",
+    "closed_days": "已查（臨時休館，市官網 2026-11-11 再確認，2026-11-11）",
     "stay_minutes": "不適用",
     "season_note": "查無（無特定季節亮點）"
    },
@@ -2975,7 +3000,11 @@
      "check_method": "google_maps_tool"
     }
    ],
-   "note": "臨時休館中，A11（12/1）無法參觀展示，建議改排或刪除"
+   "note": "臨時休館中，A11（12/1）無法參觀展示，建議改排或刪除",
+   "alert": {
+    "level": "temporarily_closed",
+    "text": "臨時休館中，A11（12/1）無法參觀展示，建議改排或刪除"
+   }
   },
   "db:db_s_752215c5cb": {
    "kind": "spot",
@@ -3041,10 +3070,11 @@
    "name": "祐德稻荷神社",
    "name_ja": "祐徳稲荷神社",
    "categories": [
-    "shrine"
+    "shrine",
+    "popular"
    ],
-   "category_source": "osm_rule",
-   "category_basis": "名稱符合「shrine」關鍵字",
+   "category_source": "spots_dept",
+   "category_basis": "原類別 shrine；新增 popular。依據：熱門：Google 地圖「祐徳稲荷神社」評分 4.5、評論約 10,650 則（2026-11-11 google_maps_tool 查得；門檻：評論 ≥5,000 且評分 ≥4.0）；來源 https://www.google.com/maps/place/%E7%A5%90%E5%BE%B3%E7%A8%B2%E8%8D%B7%E7%A5%9E%E7%A4%BE/@33.073778,130.0899073,15z/data=!4m10!1m2!2m1!1z56WQ5b6z56iy6I2356We56S-!3m6!1s0x354024f4600d2901:0x7e95f782245107b!8m2!3d33.073778!4d130.1079317!15sChLnpZDlvrPnqLLojbfnpZ7npL5aFiIU56WQ5b6zIOeosuiNtyDnpZ7npL6SAQ1zaGludG9fc2hyaW5lmgFEQ2k5RFFVbFJRVU52WkVOb2RIbGpSamx2VDIxTmVWTnNaSGRTZW1SNVZtNWFNMWxWVmxOT2EwWktZbFZHY0ZSSFl4QULgAQD6AQQIFhAm!16s%2Fm%2F02q3vt5",
    "hours": "境內自由參拜",
    "closed_days": "無休",
    "admission": "免費（祐德博物館另計）",
@@ -3262,10 +3292,12 @@
    "name": "御船山樂園",
    "name_ja": "御船山楽園",
    "categories": [
-    "natural"
+    "natural",
+    "popular",
+    "festival"
    ],
-   "category_source": "osm_rule",
-   "category_basis": "名稱符合「natural」關鍵字",
+   "category_source": "spots_dept",
+   "category_basis": "原類別 natural；新增 popular/festival。依據：熱門：Google 地圖「御船山楽園」評分 4.1、評論約 5,450 則（2026-11-11 google_maps_tool 查得；門檻：評論 ≥5,000 且評分 ≥4.0）；來源 https://www.google.com/maps/place/%E5%BE%A1%E8%88%B9%E5%B1%B1%E6%A5%BD%E5%9C%92/@33.1819093,130.0182516,15z/data=!4m6!3m5!1s0x35402860aa4d0509:0x3076ed2f83eecc88!8m2!3d33.1823029!4d130.0179788!16s%2Fg%2F11dfh5zq2f；活動／花季：2026 紅葉まつり 11/6（五）–12/6（日），晝 8:00–17:30、夜間點燈 17:30–22:00，雨天照常；全期落在行程內（A13 12/3）。來源：御船山楽園官網 https://www.mifuneyamarakuen.jp/autumn/ 、武雄市觀光協會 https://www.takeo-kk.net/season/autumn.html （查詢日 2026-11-11）",
    "hours": "紅葉祭期間 日間 08:00–17:30、夜間 17:30–22:00",
    "closed_days": "紅葉祭（11/6–12/6）期間無休，雨天照常",
    "admission": "日間或夜間 大人 ¥600／小學生 ¥300；日夜共通 大人 ¥900／小學生 ¥400",
@@ -3317,6 +3349,14 @@
      "title": "OSM 停車場",
      "fields": [
       "parking"
+     ]
+    },
+    {
+     "url": "https://www.takeo-kk.net/season/autumn.html",
+     "checked_at": "2026-11-11",
+     "title": "類別依據",
+     "fields": [
+      "categories"
      ]
     }
    ],
@@ -3794,10 +3834,11 @@
    "name": "九州國立博物館",
    "name_ja": "九州国立博物館",
    "categories": [
-    "historic"
+    "historic",
+    "popular"
    ],
-   "category_source": "osm_rule",
-   "category_basis": "名稱符合「historic」關鍵字",
+   "category_source": "spots_dept",
+   "category_basis": "原類別 historic；新增 popular。依據：熱門：Google 地圖「九州国立博物館」評分 4.3、評論約 10,424 則（2026-11-11 google_maps_tool 查得；門檻：評論 ≥5,000 且評分 ≥4.0）；來源 https://www.google.com/maps/place/%E4%B9%9D%E5%B7%9E%E5%9B%BD%E7%AB%8B%E5%8D%9A%E7%89%A9%E9%A4%A8/@33.5182194,130.5384631,15z/data=!4m6!3m5!1s0x354193a8e25d892b:0xbb2421372be6879c!8m2!3d33.5182578!4d130.5381224!16zL20vMDhqY2t0",
    "hours": "09:30–17:00（Google）",
    "closed_days": "週一（逢假日改翌日）、12/24–31",
    "admission": "特別展「卑彌呼之鏡」一般 ¥2,000／大學生 ¥1,200／高中生以下免費（平時文化交流展另計）",
@@ -4150,10 +4191,11 @@
    "name": "香月泰男美術館",
    "name_ja": "香月泰男美術館",
    "categories": [
-    "historic"
+    "historic",
+    "hidden"
    ],
-   "category_source": "osm_rule",
-   "category_basis": "tourism=museum（博物館・美術館歸歷史／文化）",
+   "category_source": "spots_dept",
+   "category_basis": "原類別 historic；新增 hidden。依據：私房：Google 地圖「香月泰男美術館」評分 4.3、評論僅約 178 則（2026-11-11 google_maps_tool 查得；門檻：評論 <300 且評分 ≥4.3，口碑好但遊客少）；來源 https://www.google.com/maps/place/%E9%A6%99%E6%9C%88%E6%B3%B0%E7%94%B7%E7%BE%8E%E8%A1%93%E9%A4%A8/@34.3587529,131.2626619,15z/data=!4m6!3m5!1s0x35435f6d6581809b:0x564bf5f4c860bf4f!8m2!3d34.3586885!4d131.2627557!16s%2Fg%2F1tjl3pf0",
    "hours": "09:00–17:00（Google）",
    "closed_days": "週二（逢假日開館、翌平日休）、年末年始",
    "admission": "一般 ¥500／小中高生 ¥200",
@@ -4228,10 +4270,11 @@
    "name_ja": "赤崎神社楽桟敷",
    "categories": [
     "shrine",
-    "historic"
+    "historic",
+    "hidden"
    ],
-   "category_source": "osm_rule",
-   "category_basis": "historic=archaeological_site；名稱符合「shrine」關鍵字",
+   "category_source": "spots_dept",
+   "category_basis": "原類別 shrine/historic；新增 hidden。依據：私房：Google 地圖「赤崎神社楽桟敷」評分 4.8、評論僅約 4 則（2026-11-11 google_maps_tool 查得；門檻：評論 <300 且評分 ≥4.3，口碑好但遊客少）；來源 https://www.google.com/maps/place/%E8%B5%A4%E5%B4%8E%E7%A5%9E%E7%A4%BE%E6%A5%BD%E6%A1%9F%E6%95%B7/@34.3650248,131.1829983,15z/data=!4m6!3m5!1s0x35435dc1043ea80f:0x575857bc66def0bd!8m2!3d34.3650109!4d131.1830931!16s%2Fg%2F11frb18jvx",
    "hours": "自由參觀",
    "closed_days": null,
    "admission": "免費",
@@ -4512,10 +4555,11 @@
    "name": "伊勢ケ浜海水浴場",
    "name_ja": "伊勢ケ浜海水浴場",
    "categories": [
-    "natural"
+    "natural",
+    "hidden"
    ],
-   "category_source": "osm_rule",
-   "category_basis": "名稱符合「natural」關鍵字",
+   "category_source": "spots_dept",
+   "category_basis": "原類別 natural；新增 hidden。依據：私房：Google 地圖「伊勢ヶ浜海水浴場」評分 4.3、評論僅約 187 則（2026-11-11 google_maps_tool 查得；門檻：評論 <300 且評分 ≥4.3，口碑好但遊客少）；來源 https://www.google.com/maps/place/%E4%BC%8A%E5%8B%A2%E3%83%B6%E6%B5%9C%E6%B5%B7%E6%B0%B4%E6%B5%B4%E5%A0%B4/@32.413065,131.6514082,15z/data=!4m6!3m5!1s0x3547145a6134a785:0x593e696782933bb9!8m2!3d32.4130145!4d131.6518435!16s%2Fg%2F11h0mjg6_0",
    "hours": "自由參觀",
    "closed_days": "無休",
    "admission": "免費",
@@ -4581,10 +4625,11 @@
    "name_ja": "Hososhima Light House",
    "categories": [
     "historic",
-    "natural"
+    "natural",
+    "hidden"
    ],
    "category_source": "spots_dept",
-   "category_basis": "明治時代燈塔（歷史）＋日向岬海景（景點部判定）",
+   "category_basis": "原類別 historic/natural；新增 hidden。依據：私房：Google 地圖「細島灯台」評分 4.3、評論僅約 130 則（2026-11-11 google_maps_tool 查得；門檻：評論 <300 且評分 ≥4.3，口碑好但遊客少）；來源 https://www.google.com/maps/place/%E7%B4%B0%E5%B3%B6%E7%81%AF%E5%8F%B0/@32.4233587,131.6852936,15z/data=!4m6!3m5!1s0x354715a3d1572d11:0x71108f3c061d676!8m2!3d32.4233663!4d131.6853841!16s%2Fg%2F11hc_2hxgs",
    "hours": "外觀自由參觀（內部僅特定日開放，2026 年為 11/1）",
    "closed_days": "內部平時不開放",
    "admission": "免費",
@@ -4779,10 +4824,11 @@
    "name": "白川水源",
    "name_ja": "白川水源",
    "categories": [
-    "natural"
+    "natural",
+    "popular"
    ],
-   "category_source": "osm_rule",
-   "category_basis": "名稱符合「natural」關鍵字",
+   "category_source": "spots_dept",
+   "category_basis": "原類別 natural；新增 popular。依據：熱門：Google 地圖「白川水源」評分 4.4、評論約 6,970 則（2026-11-11 google_maps_tool 查得；門檻：評論 ≥5,000 且評分 ≥4.0）；來源 https://www.google.com/maps/place/%E7%99%BD%E5%B7%9D%E6%B0%B4%E6%BA%90/@32.8253719,131.0772855,15z/data=!4m10!1m2!2m1!1z55m95bed5rC05rqQIOWNl-mYv-iYhw!3m6!1s0x3540d966523871cd:0x113c62ca21333c9a!8m2!3d32.8253719!4d131.0953099!15sChbnmb3lt53msLTmupAg5Y2X6Zi_6JiHWhoiGOeZveW3nSDmsLTmupAg5Y2XIOmYv-iYh5IBEnRvdXJpc3RfYXR0cmFjdGlvbpoBJENoZERTVWhOTUc5blMwVkpRMEZuU1VSd2QwNWhSWEpSUlJBQuABAPoBBAgRECQ!16s%2Fg%2F11fwgrlfjd",
    "hours": "水源 24 小時開放；受理 12–3 月 08:00–17:00（4–11 月 07:00–18:00）",
    "closed_days": "無休",
    "admission": "環境保全協力金 ¥100（高中生以上）",
@@ -5575,10 +5621,11 @@
    "name": "萩陶芸美術館・吉賀大眉記念館",
    "name_ja": "萩陶芸美術館・吉賀大眉記念館",
    "categories": [
-    "historic"
+    "historic",
+    "hidden"
    ],
-   "category_source": "osm_rule",
-   "category_basis": "名稱符合「historic」關鍵字",
+   "category_source": "spots_dept",
+   "category_basis": "原類別 historic；新增 hidden。依據：私房：Google 地圖「萩陶芸美術館「吉賀大眉記念館」」評分 4.4、評論僅約 12 則（2026-11-11 google_maps_tool 查得；門檻：評論 <300 且評分 ≥4.3，口碑好但遊客少）；來源 https://www.google.com/maps/place/%E8%90%A9%E9%99%B6%E8%8A%B8%E7%BE%8E%E8%A1%93%E9%A4%A8%E3%80%8C%E5%90%89%E8%B3%80%E5%A4%A7%E7%9C%89%E8%A8%98%E5%BF%B5%E9%A4%A8%E3%80%8D/@34.425111,131.415372,15z/data=!4m6!3m5!1s0x3544afb0b013a505:0xaf9e3a2bd2631908!8m2!3d34.424895!4d131.4156784!16s%2Fg%2F1tgq4fvx",
    "hours": "10:00–16:00",
    "closed_days": "平日休館（只在週五・六・日與假日開館）",
    "admission": "大人 ¥600／國高中生 ¥300／小學生 ¥200",
@@ -5968,10 +6015,11 @@
    "name_ja": "樂水園",
    "categories": [
     "natural",
-    "historic"
+    "historic",
+    "festival"
    ],
    "category_source": "spots_dept",
-   "category_basis": "日本庭園（自然景觀）＋明治商人別邸與茶室（歷史）（景點部判定）",
+   "category_basis": "原類別 natural/historic；新增 festival。依據：活動／花季：紅葉例年 11 月下旬–12 月上旬；路線 C15 12/5 造訪。來源：Walkerplus 紅葉情報 https://koyo.walkerplus.com/detail/ar1040e366303/data.html 、楽水園官網 https://fukuoka-teien.com/rakusuien/information/ （查詢日 2026-11-11）",
    "hours": "09:00–17:00",
    "closed_days": "週二（逢假日改翌日）、12/29–1/1",
    "admission": "大人 ¥100／小孩 ¥50；茶室抹茶 ¥1,100（另計，不定期）",
