@@ -307,7 +307,7 @@ header{padding-top:calc(8px + var(--sat));}
 <script>
 (function(){
 "use strict";
-const APPV="plan-multi-1.9.17";
+const APPV="plan-multi-1.9.18";
 /* 1.8 後台自動排路線（Cloudflare Worker）：網址部署後填入。空字串＝後台未啟用，網頁維持 1.7 行為（匯出 JSON＋複製文字）。site key 是公開值。 */
 const BACKEND_CFG={url:"https://trip-intake.turbo99992001.workers.dev",turnstile_site_key:"0x4AAAAAAFs8wmzPidNkiUBU"};
 const CAT={popular:"熱門",natural:"自然絕景",shrine:"神社寺院",historic:"歷史",onsen:"溫泉",hidden:"私房",food:"美食",experience:"親子／體驗",anime:"動漫",anime_game:"🎮 動漫・遊戲周邊",festival:"活動／花季",custom:"👤 自訂地點",auto:"🤖 後台路線景點",uncat:"🏷 待分類"};
@@ -1183,7 +1183,7 @@ function mergeByMeal(arr,items){
 }
 function suggested(r){
  const out={}; const days=D.plan.routes[r].days;
- days.forEach(d=>{out[d.day]=d.items.map(x=>x.type==="restaurant"?Object.assign({type:"restaurant",id:x.id},x.meal?{meal:x.meal}:{}):({type:"spot",id:x.id}));});
+ days.forEach(d=>{out[d.day]=d.items.map(x=>{const it=x.type==="restaurant"?Object.assign({type:"restaurant",id:x.id},x.meal?{meal:x.meal}:{}):({type:"spot",id:x.id}); if(x.time) it.time=x.time; if(x.note) it.note=x.note; if(x.optional) it.optional=true; return it;});});
  if(RPLAN&&Array.isArray(RPLAN[r])) RPLAN[r].forEach(dd=>{ if(out[dd.day]) out[dd.day]=mergeByMeal(out[dd.day],dd.items); });
  return out;
 }
@@ -1267,7 +1267,7 @@ function restCard(r,sel){
  const sc=[rateTags(r),
   r.cuisine?`<span class="tag">${esc(r.cuisine)}</span>`:"",r.price_range?`<span class="tag">${esc(r.price_range)}</span>`:"",r.meal?`<span class="tag">${esc([].concat(r.meal).map(m=>MEAL[m]||m).join("／"))}</span>`:"",
   r.base_area?`<span class="tag">📍 ${esc(String(r.base_area).split("（")[0])}</span>`:"",SAME[r.id]&&SP[SAME[r.id]]?`<span class="tag rest">🔗 與景點同一站：${esc(SP[SAME[r.id]].name.split("（")[0])}</span>`:"",resvTxt(r.reservation)?`<span class="tag">訂位：${esc(resvTxt(r.reservation).slice(0,30))}</span>`:"",r.closed&&r.pl?`<span class="tag">休 ${esc(String(r.closed).slice(0,20))}</span>`:"",r.mapcode&&r.pl?`<span class="tag">MapCode ${esc(r.mapcode)}</span>`:"",r.checked_date?`<span class="tag">查核 ${esc(r.checked_date)}${r.checked_by?"（"+esc(r.checked_by)+"）":""}</span>`:""].join("");
- return `<div class="card" data-id="${esc(r.id)}"><h3 data-open="restaurant:${esc(r.id)}">🍴 ${esc(r.name)}</h3><div class="tags">${sc}</div><div class="desc">${esc((r.description||"").slice(0,90))}</div>
+ return `<div class="card" data-id="${esc(r.id)}"><h3 data-open="restaurant:${esc(r.id)}">🍴 ${esc(r.name)}</h3><div class="tags">${sc}</div>${alertHtml(r.alert,72)}<div class="desc">${esc((r.description||"").slice(0,90))}</div>
  <div class="btns"><button class="btn" data-open="restaurant:${esc(r.id)}">詳情／導航</button><button class="btn pri addbtn" data-add="restaurant:${esc(r.id)}" data-sel="${sel}">＋加入行程</button>${(gmUrl(r)||r.name)?`<a class="btn gmlink" target="_blank" rel="noopener" href="${esc(gmUrl(r)||(SEARCH_ENDPOINTS.gmaps+encodeURIComponent(r.name)))}">Google 地圖</a>`:""}</div></div>`;
 }
 function filtSpots(){
@@ -1421,6 +1421,17 @@ function loadTripData(e){
  if(e.local){const pkg=ltGet(e.id); if(!pkg) return Promise.reject(new Error("本機行程資料不見了"));
   return Promise.all([(pkg.rest_fill?Promise.resolve(null):rfFetch(e.id)),plFetch(e.id),rtFetch(e.id),refFetch(e.id)]).then(([rf,pl,rt,fref])=>{ if(rf) rfStore(pkg,rf,"網站資料檔（data/handoffs/"+e.id+"/restaurants.json）"); const p2=ltGet(e.id)||pkg; const d=plApply(rfApply(ltBuild(p2),p2),pl); d.rt_latest=rt||null; d.rt_new=rt&&rtNewer(rt,p2.route_set)&&p2.rt_dismissed!==rt.generated_at?rt:null; if(fref) d.fill_ref=fref; return d;});}
  if(CACHE[e.id]) return Promise.resolve(CACHE[e.id]);
+ if(e.source==="handoff"||(e.request_id&&/^draft-/.test(String(e.id||e.request_id)))){
+  const hid=e.request_id||e.id;
+  return Promise.all([rtFetch(hid),plFetch(hid),rfFetch(hid),refFetch(hid)]).then(([rt,pl,rf,fref])=>{
+   if(!rt) throw new Error("找不到靜態路線 "+hid);
+   const pkg={trip_id:e.id,title:e.title,route_set:rt,request:e.request||{dates:{start:e.start_date,end:e.end_date},travelers:e.travelers||{},region:e.region||""},adopted_route:e.default_route||((rt.routes[0]||{}).route_id),included_routes:(rt.routes||[]).map(r=>String(r.route_id)),start_date:e.start_date,end_date:e.end_date,updated_at:rt.generated_at};
+   if(rf) pkg.rest_fill=rf;
+   const d=plApply(rfApply(ltBuild(pkg),pkg),pl);
+   if(d.meta){d.meta.local=false; d.meta.source="static_handoff"; if(e.title) d.meta.trip=Object.assign({},d.meta.trip||{},{id:e.id,title:e.title,start_date:e.start_date,end_date:e.end_date});}
+   d.rt_latest=rt; d.rt_new=null; if(fref) d.fill_ref=fref; CACHE[e.id]=d; return d;
+  });
+ }
  const b="data/"+encodeURIComponent(e.id)+"/", v="?v="+encodeURIComponent(e.data_version||"");
  return Promise.all([fetchJson(b+"meta.json"+v),fetchJson(b+"spots.json"+v),fetchJson(b+"spot_plan.json"+v),fetchJson(b+"restaurants.json"+v,true),fetchJson(b+"restaurant_plan.json"+v,true),fetchJson(b+"custom_places.json"+v,true)])
  .then(([meta,sp,plan,rs,rp,cpl])=>{const pick=j=>j&&(Array.isArray(j)?j:(j.restaurants||j.items||[]));
@@ -1748,6 +1759,7 @@ function renderMod(){ if(curMod==="new") return renderNew(); if(DRAFT||!D){$("#m
  const P=$("#modpanel"), f=FL(), ad=(TE.travelers&&TE.travelers.adults)||1; let h="";
  const note=`<div class="cnt">預約、付款請安宏親自確認；這裡只記錄「已訂好」的內容，存在本機瀏覽器。</div>`;
  if(curMod==="flights"){
+  h+=fillRefBudgetHtml();
   h+=fillRefFlightsHtml();
   if(D.meta.local) h+=`<div class="card"><h3>需求表單填的航班</h3><div class="desc">${f&&f.outbound?`去程 ${esc(f.outbound.flight)}（${esc(f.outbound.date)}）`:"去程：尚未提供"}<br>${f&&f.inbound?`回程 ${esc(f.inbound.flight)}（${esc(f.inbound.date)}）`:"回程：尚未提供"}${D.meta.flights_status?"<br>"+esc(D.meta.flights_status):""}</div><div class="todo">起飛／抵達時刻尚未提供：請到下方「已訂好 → 手動輸入」補上，或由機票部補。</div></div>`;
   else if(f&&f.outbound) h+=`<div class="card"><h3>目前航班（機票部）</h3><div class="desc">${esc(f.airline||"")}<br>去程 ${esc(f.outbound.flight)} ${esc(f.outbound.date)} ${esc(f.outbound.from)} ${esc(f.outbound.dep)} → ${esc(f.outbound.to)} ${esc(f.outbound.arr)}${f.inbound?`<br>回程 ${esc(f.inbound.flight)} ${esc(f.inbound.date)} ${esc(f.inbound.from)} ${esc(f.inbound.dep)} → ${esc(f.inbound.to)} ${esc(f.inbound.arr)}`:""}</div></div>`;
@@ -1756,10 +1768,11 @@ function renderMod(){ if(curMod==="new") return renderNew(); if(DRAFT||!D){$("#m
   h+=`<div class="card"><h3>已訂好 → 手動輸入</h3>${bookForm("flights",{airline:f&&f.airline,out_flight:o.flight,out_date:o.date,out_dep:o.dep,out_arr:o.arr,in_flight:i.flight,in_date:i.date,in_dep:i.dep,in_arr:i.arr})}</div>`;
  } else if(curMod==="car"){
   const pu=pickupDefault(), dr=dropoffDefault(), apt=(f&&f.outbound&&f.outbound.to)||"";
+  h+=fillRefBudgetHtml();
   h+=fillRefCarHtml();
   h+=`<div class="card"><h3>租車建議時間</h3><div class="desc" id="carBuf">取車：${esc(pu.replace("T"," ")||"（沒有航班資料）")}（入境後 ${BUF.pickup_after_arrival_min} 分）<br>還車：${esc(dr.replace("T"," ")||"（沒有航班資料）")}（起飛前 ${BUF.return_before_departure_min} 分）</div>${D.meta.local?`<div class="cnt">需求：${esc(D.meta.car_request||"尚未提供")}${pu?"":"；沒有航班時刻，取還車時間尚未提供"}</div>`:""}<div class="btns">${lk(carLinks({airport:apt}))}</div></div>`;
   h+=`<div class="card"><h3>已訂好 → 手動輸入</h3>${bookForm("car",{pickup_at:pu,dropoff_at:dr,pickup_place:AP[apt]||apt,dropoff_place:AP[(f&&f.inbound&&f.inbound.from)||""]||""})}</div>`;
- } else if(curMod==="lodging"){
+ } else if(curMod==="lodging"){ h+=fillRefBudgetHtml();
   const L=(D.lodging||[]).filter(l=>l.route===route);
   if(D.meta.local&&D.meta.rest_fill&&(D.meta.rest_fill.lodging_meal_status||[]).length) h+=`<div class="card"><h3>住宿含餐（餐廳部整理）</h3>${D.meta.rest_fill.lodging_meal_status.map(s=>`<div class="cnt">🏨 ${esc(s.base)}：${esc(s.meal_plan||"")}${(s.affected||[]).length?"（影響："+esc(s.affected.join("、"))+"）":""}</div>`).join("")}<div class="cnt">住宿含餐的那幾餐，請到「每日」把餐廳刪掉。</div></div>`;
   h+=`<div class="cnt">路線 ${esc(route)}：${L.length} 個住宿據點。評分請點「樂天トラベル（評分）」或「在 Google 地圖看評分」。</div>`;
@@ -2164,7 +2177,7 @@ function ltSave(pkg){ try{localStorage.setItem(ltKey(pkg.trip_id),JSON.stringify
 function wkOf(date){const t=Date.parse(String(date||"")+"T00:00:00Z"); return isFinite(t)?"週"+WK[new Date(t).getUTCDay()]:"";}
 function addDays(date,n){const t=Date.parse(String(date||"")+"T00:00:00Z"); return isFinite(t)?new Date(t+n*864e5).toISOString().slice(0,10):"";}
 function ltStopId(x){ if(x&&x.ref) return String(x.ref); return "h_"+sha1hex([x.name||"",x.lat,x.lng].join("|")).slice(0,12);}
-function ltKind(x){const r=String(x.ref||""); if(/^db:db_r_/.test(r)||/^rf_/.test(r)) return "restaurant"; if(/^db:db_[so]_/.test(r)) return "spot"; return FOOD_RE.test(x.name||"")?"restaurant":"spot";}
+function ltKind(x){if(x&&(x.kind==="restaurant"||x.kind==="spot")) return x.kind; const r=String(x.ref||""); if(/^db:db_r_/.test(r)||/^rf_/.test(r)||/^rI-/.test(r)||/^r-/.test(r)) return "restaurant"; if(/^db:db_[so]_/.test(r)||/^s_/.test(r)) return "spot"; return FOOD_RE.test(x.name||"")?"restaurant":"spot";}
 function ltMeal(x){const n=String(x.note||""), m=n.match(/^(早餐|午餐|晚餐|點心|咖啡)/)||n.match(/(早餐|午餐|晚餐)/); return m?({早餐:"breakfast",午餐:"lunch",晚餐:"dinner",點心:"snack",咖啡:"cafe"})[m[1]]:null;}
 function ltStay(x){const m=String(x.note||"").match(/停留約\s*(\d+)\s*分/); return m?+m[1]:null;}
 function ltSegs(r,start){let d=start; const out=[]; (r.bases||[]).forEach((b,i)=>{const n=+b.nights||0; if(!n||!d) return; const co=addDays(d,n); out.push({i,area:b.area_zh||areaZh(b.area)||String(b.area||""),raw:String(b.area||""),nights:n,check_in:d,check_out:co}); d=co;}); return out;}
@@ -2186,7 +2199,7 @@ function ltBuild(pkg){const rs=pkg.route_set, req=pkg.request||{}, dt=ltDates(rs
     if(!bag[id]) bag[id]={id,type:t,name:x.name||"（未命名）",lat:x.lat==null||x.lat===""?null:+x.lat,lng:x.lng==null||x.lng===""?null:+x.lng,google_maps:/^https:\/\//.test(x.google_maps||"")?x.google_maps:"",mapcode:null,route_mapcode:x.mapcode||null,
      description:x.note||"",note:x.source_url?"資料來源："+x.source_url:"",sources:x.source_url?[x.source_url]:[],category:t==="restaurant"?"後台路線":(/^db:db_o_/.test(x.ref||"")?"onsen":"auto"),base:(sg||prev)?bkey((sg||prev).area):"",region:(sg||prev)?(sg||prev).area:"",routes:[],parkings:[],stay_minutes:ltStay(x),auto:true};
     if(bag[id].routes.indexOf(rid)<0) bag[id].routes.push(rid);
-    const it={type:t,id,name:x.name||"",leg_min:typeof x.leg_min==="number"?x.leg_min:null}; if(t==="restaurant"){const m=ltMeal(x); if(m) it.meal=m;} return it;});
+    const it={type:t,id,name:x.name||"",leg_min:typeof x.leg_min==="number"?x.leg_min:null}; if(t==="restaurant"){const m=ltMeal(x); if(m) it.meal=m;} if(x.time) it.time=String(x.time).slice(0,5); if(x.note) it.note=String(x.note); if(x.optional) it.optional=true; return it;});
    return {day:dn,date,weekday:wkOf(date),base:last?bkey(last.area):"",base_area:last?last.area:"",start:{name:prev?prev.area:""},end:{name:sg?sg.area:""},mode:"自駕（後台路線）",note:sm.text||"",total_drive_min:typeof d.drive_min==="number"?d.drive_min:null,items};});
   plan.routes[rid]={name:routeName(r,ri),summary:r.summary||"",warnings:(r.warnings||[]).map(String),days};
   mroutes.push({key:rid,name:routeName(r,ri),days:days.length,rank:ri+1});});
@@ -2429,6 +2442,12 @@ function fillRefItem(area,name,ci,co){ const items=(((D||{}).fill_ref||{}).lodgi
 function fillRefFieldsHtml(fields,keys){ if(!fields) return ""; const ks=keys||Object.keys(fields); return ks.map(k=>{ const b=fields[k]; if(!b) return "";
   if(/^待查/.test(String(b.status||""))||(typeof b.value==="string"&&b.value==="待查")) return `<div class="cnt"><b>${esc(k)}</b>：<span class="todo">待查</span>${b.note?"（"+esc(String(b.note).slice(0,100))+"）":""}</div>`;
   const val=fillRefTxt(b.value,280); if(!val) return ""; return `<div class="cnt"><b>${esc(k)}</b>：${esc(val)}${b.status?"（"+esc(b.status)+"）":""}</div>`; }).filter(Boolean).join(""); }
+function fillRefBudgetHtml(){ const b=((D||{}).fill_ref||{}).budget; if(!b) return "";
+  const vs=b.variants||{};
+  const row=(k,fb)=>{const v=vs[k]; if(!v) return ""; const tot=v.total_twd!=null?v.total_twd:v.total; const n=tot!=null?Number(tot).toLocaleString("en-US"):""; return `<div class="cnt"><b>${esc(v.label||fb)}</b>：NT$ ${esc(n)}</div>`;};
+  return `<div class="card" id="fillRefBudget"><h3>預算三版（參考，須安宏確認）</h3><div class="cnt">${esc(b.disclaimer||"參考，須安宏確認。")}</div>
+  ${row("comfort","舒適版")}${row("budget","平價版")}${row("mix","混搭版")}
+  ${b.flights_note?`<div class="todo">${esc(String(b.flights_note))}</div>`:""}</div>`; }
 function fillRefFlightsHtml(){ const f=((D||{}).fill_ref||{}).flights; if(!f) return "";
   const o=f.outbound||{}, i=f.inbound||{};
   return `<div class="card" id="fillRefFlights"><h3>機票補查（參考，須安宏確認）</h3><div class="cnt">${esc(f.disclaimer||"參考，須安宏確認。")}</div>
@@ -2438,14 +2457,16 @@ function fillRefFlightsHtml(){ const f=((D||{}).fill_ref||{}).flights; if(!f) re
   ${f.price&&(f.price.cash_twd_reference||f.price.per)?`<div class="cnt">參考票價：${esc(fillRefTxt(f.price.cash_twd_reference?("TWD "+f.price.cash_twd_reference+"（"+ (f.price.per||"") +"）"):f.price,200))}</div>`:""}
   ${(f.unresolved||[]).length?`<div class="todo">仍待查：${esc((f.unresolved||[]).map(x=>typeof x==="string"?x:fillRefTxt(x,80)).join("；").slice(0,300))}</div>`:""}</div>`; }
 function fillRefCarHtml(){ const t=((D||{}).fill_ref||{}).transport; if(!t) return "";
-  const pr=t.proposal||{}, kep=pr.kep||{};
+  const pr=t.proposal||{}, kep=pr.kep||{}, etc=pr.etc||{};
+  const kepReason=kep.not_applicable_reason||"";
+  const kepRec=kep.recommendation||"";
   return `<div class="card" id="fillRefCar"><h3>租車提案（須安宏確認）</h3><div class="cnt">${esc(t.disclaimer||"提案，須安宏確認。尚未訂車。")}</div>
   <div class="desc">${esc(t.pickup||"")}<br>${esc(t.dropoff||"")}<br>${esc(t.pickup_dropoff_time||"")}</div>
   ${t.hours?`<div class="cnt">營業時間：${esc(String(t.hours).slice(0,280))}</div>`:""}
   ${t.price?`<div class="cnt">報價：${esc(String(t.price).slice(0,400))}</div>`:""}
-  <div class="cnt"><b>${esc(pr.title||"Toyota 福岡INTERNATIONAL店報價與 ETC、KEP")}</b></div>
-  <div class="todo">KEP 不適用：行程 16 日超過上限 10 日；Toyota 目前不受理 KEP。${kep.recommendation?" "+esc(String(kep.recommendation).slice(0,200)):""}</div>
-  <div class="cnt">ETC 卡（Toyota）：${esc(fillRefTxt((pr.etc||{}).toyota,120) || "見提案")}。標示為「提案，須安宏確認」。${t.reservation_status?" 預約狀態："+esc(t.reservation_status):""}</div></div>`; }
+  ${pr.title?`<div class="cnt"><b>${esc(pr.title)}</b></div>`:""}
+  ${kepReason||kepRec?`<div class="todo">${esc((kepReason?kepReason:"")+(kepRec?" "+kepRec:"").slice(0,400))}</div>`:""}
+  ${etc.toyota||etc.general||etc.times||t.reservation_status?`<div class="cnt">${etc.toyota?"ETC 卡（Toyota）："+esc(fillRefTxt(etc.toyota,120))+"。":""}${etc.times?" ETC（Times）："+esc(fillRefTxt(etc.times,160))+"。":""}${!etc.toyota&&etc.general?" ETC："+esc(String(etc.general).slice(0,240))+"。":""} 標示為「提案，須安宏確認」。${t.reservation_status?" 預約狀態："+esc(t.reservation_status):""}</div>`:""}</div>`; }
 function fillRefLodgeBlock(l){ const it=fillRefItem(l.area,l.name,l.check_in,l.check_out); if(!it) return "";
   const keys=["official_name","phone","address","mapcode","coords","check_in_out_time","price","parking","free_cancel_until","booking_status"];
   return `<div class="cnt fillref" style="margin-top:8px"><b>住宿補查（參考，須安宏確認）</b>${it.choice_needed?`<div class="todo">${esc(it.choice_label||"需安宏選擇，不要二選一")}</div>`:""}<div class="cnt">${esc(it.disclaimer||"參考，須安宏確認。尚未訂房。")}</div>${fillRefFieldsHtml(it.fields,keys)}</div>`; }
@@ -2495,7 +2516,7 @@ function plApply(d,pl){ if(!d||!pl) return d; try{ const P=pl.places; let ns=0, 
    const tb=r.ratings.find(x=>x.source==="tabelog"), gg=r.ratings.find(x=>x.source==="google"); if(tb){r.tabelog_score=tb.score; if(tb.url) r.tabelog_url=tb.url;} if(gg){r.google_rating=gg.score; r.google_rating_count=null;}}
   const mc=plMc(p); if(mc){r.mapcode=mc; r.mapcode_source=String(p.mapcode_source);}
   const pk=plParking(p); if(pk) r.parkings=pk.map(normPk);
-  plSources(r,p); if(plStr(p.checked_date)){r.checked_date=plStr(p.checked_date); r.checked_by="";}});
+  plSources(r,p); if(plStr(p.checked_date)){r.checked_date=plStr(p.checked_date); r.checked_by="";} const alr=plAlert(p); if(alr) r.alert=alr;});
  d.meta.places={version:pl.version,generated_at:pl.generated_at,department:pl.department,spots:ns,rests:nr}; d.places_applied=true;
  }catch(e){ console.warn("places.json 套用失敗，退回原本顯示",e); } return d;}
 /* 顯示用 */
