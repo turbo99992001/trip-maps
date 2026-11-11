@@ -152,6 +152,29 @@ pre.json{background:#f4f6f8;border-radius:8px;padding:8px;font-size:11px;max-hei
 @media (max-width:820px){.rsw{display:flex!important;flex:1 1 100%;flex-wrap:nowrap;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none;gap:6px;padding-bottom:2px}.rsw::-webkit-scrollbar{display:none}.rsw button{flex:0 0 auto;white-space:nowrap;min-height:36px;font-size:14px}.rsw:not(:empty)~#routeSel{display:none!important}}
 @media (max-width:820px){.cmpMap{height:52vh}.cmpT{font-size:12px}.cmpT thead th{min-width:112px}}
 </style>
+<style id="v1913">
+.qrow{display:flex;gap:6px;align-items:stretch;margin-bottom:6px}.qrow .search{flex:1;min-width:0;margin-bottom:0}.qrow .btn{flex:0 0 auto;white-space:nowrap;align-self:stretch}
+#clipBar,#placeCard{position:fixed;left:8px;right:8px;bottom:calc(16px + env(safe-area-inset-bottom));z-index:3600;background:#fff;border:2px solid #1565c0;border-radius:14px;padding:12px;box-shadow:0 8px 28px rgba(0,0,0,.25);display:none;max-height:72vh;overflow:auto;max-width:560px;margin:0 auto}
+#clipBar.on,#placeCard.on{display:block}#placeCard{border-color:#00897b;z-index:3550}
+#clipBar .cliphd,#placeCard h3{font-size:17px;font-weight:700;margin:0 28px 6px 0}
+#clipBar .clipdup{background:#e0f2f1;border-radius:8px;padding:6px 8px;margin:4px 0}
+.clipbtns{flex-wrap:wrap}.clipbtns .btn.big{flex:1 1 100%;min-height:48px;font-size:17px}
+.clipmore{margin:6px 0}.clipmore summary{cursor:pointer;color:var(--pri);font-size:14px;min-height:36px}
+.clipmore label{display:block;font-size:13px;margin:4px 0;color:var(--mut)}.clipmore input,.clipmore select{width:100%;box-sizing:border-box;font-size:16px;padding:8px;border:1px solid var(--line);border-radius:8px;min-height:40px}
+.clipopt{display:flex;align-items:center;gap:6px;font-size:13px;margin-top:6px;min-height:36px}
+#mapSearch{position:absolute;left:8px;right:8px;top:8px;z-index:800;background:#fff;border-radius:10px;box-shadow:0 2px 10px rgba(0,0,0,.18);padding:6px}
+.msrow{display:flex;gap:6px;align-items:stretch}.msrow input{flex:1;min-width:0;border:1px solid var(--line);border-radius:8px;padding:8px;font-size:16px}
+.msrow select{min-height:40px;border-radius:8px;border:1px solid var(--line);font-size:14px;max-width:42%}
+#mapSug{max-height:40vh;overflow:auto;margin-top:4px}#mapSug .msitem{display:block;width:100%;text-align:left;border:0;border-bottom:1px solid var(--line);background:#fff;padding:8px 10px;font-size:14px;min-height:44px}
+#mapSug .msitem:active,#mapSug .msitem:focus{background:#e3f2fd}
+#placeCard .skel{color:#90a4ae}#placeCard table.info{margin-top:4px}
+#srClipBtn{display:none}#srClipBtn.show{display:inline-flex}
+@media (max-width:820px){
+ .qrow{flex-wrap:wrap}.qrow .btn{flex:1 1 auto;min-height:42px}
+ #clipBar,#placeCard{left:0;right:0;bottom:calc(62px + env(safe-area-inset-bottom));border-radius:14px 14px 0 0;max-height:70vh;max-width:none}
+ #mapSearch{left:6px;right:6px;top:6px}.msrow{flex-wrap:wrap}.msrow .btn{flex:1 1 auto;min-height:42px}
+}
+</style>
 </head>
 <body>
 <header id="hdr">
@@ -232,13 +255,13 @@ pre.json{background:#f4f6f8;border-radius:8px;padding:8px;font-size:11px;max-hei
  <button data-t="spots" class="on"><b>📍</b>景點</button><button data-t="rests"><b>🍴</b>餐廳</button><button data-t="itin"><b>🗓</b>行程</button><button data-t="map"><b>🗺</b>地圖</button>
 </nav>
 <div id="modal"><div class="box"><button class="x" id="mx" aria-label="關閉">×</button><div id="mbody"></div></div></div>
-<div id="toast"></div>
+<div id="clipBar"></div><div id="placeCard"></div><div id="toast"></div>
 <div id="swbar" role="status"><span>有新版本可用</span><button id="swUpd">更新</button><button id="swLater" aria-label="稍後">稍後</button></div>
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
 <script>
 (function(){
 "use strict";
-const APPV="plan-multi-1.9.11";
+const APPV="plan-multi-1.9.13";
 /* 1.8 後台自動排路線（Cloudflare Worker）：網址部署後填入。空字串＝後台未啟用，網頁維持 1.7 行為（匯出 JSON＋複製文字）。site key 是公開值。 */
 const BACKEND_CFG={url:"https://trip-intake.turbo99992001.workers.dev",turnstile_site_key:"0x4AAAAAAFs8wmzPidNkiUBU"};
 const CAT={popular:"熱門",natural:"自然絕景",shrine:"神社寺院",historic:"歷史",onsen:"溫泉",hidden:"私房",food:"美食",experience:"親子／體驗",anime:"動漫",anime_game:"🎮 動漫・遊戲周邊",festival:"活動／花季",custom:"👤 自訂地點",auto:"🤖 後台路線景點",uncat:"🏷 待分類"};
@@ -295,12 +318,12 @@ function cpLoad(){return cpLoadKey(K.cp);}
 const cuLoad=cpLoad;
 function cpClean(x){ const lat=x.lat==null||x.lat===""?null:+x.lat, lng=x.lng==null||x.lng===""?null:+x.lng;
  return {id:x.id,source:"user",kind:x.kind||"spot",name:String(x.name||"").slice(0,120),address:String(x.address||""),lat,lng,coord_source:x.coord_source||"manual",osm:x.osm||null,gmaps_input:x.gmaps_input||x.source_input||null,
-  google_maps:lat==null?null:gmSearch(lat,lng),nav_url:lat==null?null:navU(lat,lng),mapcode:x.mapcode||null,mapcode_status:x.mapcode_status||(x.mapcode?"ok":"pending"),note:String(x.note||"").slice(0,1000),
+  google_maps:lat==null?null:(x.google_maps||gmSearch(lat,lng)),nav_url:lat==null?null:navU(lat,lng),mapcode:x.mapcode||null,mapcode_status:x.mapcode_status||(x.mapcode?"ok":"pending"),mapcode_source:x.mapcode_source||null,note:String(x.note||"").slice(0,1000),phone:String(x.phone||"").slice(0,40),hours:String(x.hours||"").slice(0,200),closed_days:String(x.closed_days||"").slice(0,80),website:x.website||null,parkings:Array.isArray(x.parkings)?x.parkings: [],ratings:Array.isArray(x.ratings)?x.ratings.filter(r=>r&&(r.source==="tabelog"||r.source==="google")&&typeof r.score==="number"):[],field_status:x.field_status&&typeof x.field_status==="object"?x.field_status:{},hours_source:x.hours_source||"",phone_source:x.phone_source||"",address_source:x.address_source||"",category_source:x.category_source||"",
   added_day:x.added_day==null?null:+x.added_day,added_at:x.added_at||x.created_at||nowISO(),updated_at:x.updated_at||null,prefecture:String(x.prefecture||"").slice(0,20),category:x.category||"custom",stay_minutes:+x.stay_minutes||60,legacy_id:x.legacy_id||null};}
 function cpOverlay(x){ const s=SRVCP[x.id]; if(!s) return x; const y=Object.assign({},x); // 伺服器（景點部補查）只補空欄；mapcode*、parkings 以伺服器為準
  for(const k of Object.keys(s)){ if(k==="id") continue; if(/^mapcode/.test(k)||k==="parkings") y[k]=s[k]; else if(y[k]==null||y[k]==="") y[k]=s[k]; }
  if(y.lat!=null&&y.lng!=null){ y.google_maps=gmSearch(y.lat,y.lng); y.nav_url=navU(y.lat,y.lng); if(y.coord_source==="pending_shortlink"&&s.lat!=null) y.coord_source=s.coord_source||"server"; } return y;}
-function cuNorm(x){ const y=cpOverlay(cpClean(x)); return Object.assign(y,{type:"custom",custom:true,region:"自訂"+(y.prefecture?"・"+y.prefecture:""),description:y.note||y.address||"",routes:Object.keys(D.plan.routes),parkings:y.parkings||[],rain_ok:false,source_input:y.gmaps_input||"",created_at:y.added_at,server_only:!!x.server_only});}
+function cuNorm(x){ const y=cpOverlay(cpClean(x)); return Object.assign(y,{type:"custom",custom:true,region:"自訂"+(y.prefecture?"・"+y.prefecture:""),description:y.note||y.address||"",routes:Object.keys(D.plan.routes),parkings:y.parkings||[],rain_ok:false,source_input:y.gmaps_input||"",created_at:y.added_at,server_only:!!x.server_only,hours:y.hours,phone:y.phone,website:y.website,field_status:y.field_status,ratings:y.ratings,closed:y.closed_days||y.closed});}
 function cuSync(list){ for(let i=D.spots.length-1;i>=0;i--) if(D.spots[i].custom){delete SP[D.spots[i].id]; D.spots.splice(i,1);}
  const loc=list||cpLoad(); const ids=new Set(loc.map(x=>x.id));
  loc.concat(Object.values(SRVCP).filter(s=>!ids.has(s.id)).map(s=>Object.assign({},s,{server_only:true}))).forEach(x=>{const o=cuNorm(x); D.spots.push(o); SP[o.id]=o;}); }
@@ -349,7 +372,7 @@ function parseLoc(raw){
 }
 function cuRefs(id){const s=store(); const out=[]; for(const r of Object.keys(s)) for(const d of Object.keys(s[r]||{})) if(Array.isArray(s[r][d])&&s[r][d].some(x=>x&&x.id===id)) out.push(`路線 ${r} Day ${d}`); return out;}
 function cuUsed(){const ids=new Set(); const it=itin(route); Object.keys(it).forEach(d=>(it[d]||[]).forEach(x=>{if(x&&x.type==="custom") ids.add(x.id);})); return Object.values(SP).filter(o=>o.custom&&ids.has(o.id)).map(o=>{const c=cpClean(o); if(o.parkings&&o.parkings.length) c.parkings=o.parkings; return c;});}
-function cuText(){const L=cuLoad(); if(!L.length) return ""; return "【自訂地點清單（"+(TE?TE.title:TID)+"），請景點部補查 MapCode／停車場】\n"+L.map((x,i)=>`${i+1}. ${x.name}｜${x.prefecture||x.address||"縣名未填"}｜${x.lat==null?"座標待解析（"+(x.gmaps_input||"")+"）":x.lat+","+x.lng}｜${x.id}${x.note?"｜備註："+x.note:""}`).join("\n");}
+function cuText(){const L=cuLoad(); if(!L.length) return ""; return "【自訂地點清單（"+(TE?TE.title:TID)+"），請景點部補查 MapCode／停車場／待補欄（Saibara 換算並反查；前端不能離線算 MapCode）】\n"+L.map((x,i)=>`${i+1}. ${x.name}｜${x.prefecture||x.address||"縣名未填"}｜${x.lat==null?"座標待解析（"+(x.gmaps_input||"")+"）":x.lat+","+x.lng}｜${x.id}｜類別：${x.category||""}｜電話：${x.phone||"待補"}｜營業：${x.hours||"待補"}｜MapCode：${x.mapcode||"待查"}｜停車場：${(x.parkings&&x.parkings.length)?x.parkings.length+" 處":"待補"}${x.field_status?"｜狀態："+JSON.stringify(x.field_status):""}${x.note?"｜備註："+x.note:""}`).join("\n");}
 function cuAfter(){fillSelects(); renderSpots(); renderItin();}
 function cuForm(id){
  const o=id?cuLoad().find(x=>x.id===id):null; const cats=Object.keys(CAT).filter(k=>k!=="festival");
@@ -397,7 +420,8 @@ async function fetchT(url,opt,ms){const ac=new AbortController(); const t=setTim
 function reEsc(s){return String(s).replace(/[.*+?^${}()|[\]\\]/g,"\\\\$&").replace(/"/g,'\\"');}
 function bboxOf(c,r){const dLat=r/111320, dLng=r/(111320*Math.cos(c.lat*Math.PI/180)); return [c.lng-dLng,c.lat-dLat,c.lng+dLng,c.lat+dLat].map(v=>v.toFixed(5));}
 async function photonSearch(q,c,r){
- const u=`${SEARCH_ENDPOINTS.photon[0]}?q=${encodeURIComponent(q)}&bbox=${bboxOf(c,r).join(",")}&lat=${c.lat.toFixed(5)}&lon=${c.lng.toFixed(5)}&limit=20`;
+ const unl=!r||r<=0||r>=9e8; const cc=c||{lat:36.5,lng:138.0};
+ const u=`${SEARCH_ENDPOINTS.photon[0]}?q=${encodeURIComponent(q)}&bbox=${unl?"122,20,154,46":bboxOf(cc,r).join(",")}&lat=${cc.lat.toFixed(5)}&lon=${cc.lng.toFixed(5)}&limit=${unl?40:20}`;
  await waitGap("photon"); let res=await fetchT(u+"&lang=default",{},15000);
  if(res.status===400){ await waitGap("photon"); res=await fetchT(u,{},15000); }
  if(!res.ok) throw new Error("Photon HTTP "+res.status); const j=await res.json();
@@ -407,13 +431,15 @@ async function photonSearch(q,c,r){
 /* 找附近分類（OSM 標籤；本地資料同時列出） */
 const SCATS=[{k:"spot",l:"🏯 景點",f:['["tourism"~"^(attraction|museum|viewpoint|gallery|zoo|aquarium|theme_park)$"]','["historic"~"^(castle|temple|shrine|monument)$"]'],loc:"spot"},
  {k:"food",l:"🍜 美食",f:['["amenity"~"^(restaurant|fast_food)$"]'],loc:"restaurant"},{k:"cafe",l:"☕ 咖啡甜點",f:['["amenity"="cafe"]','["shop"~"^(confectionery|pastry)$"]']},
- {k:"shop",l:"🛍 購物",f:['["shop"~"^(mall|department_store|anime|games|video_games|toys|books|electronics|variety_store|second_hand)$"]']},
+ {k:"shop",l:"🛍 購物",f:['["shop"~"^(mall|department_store|anime|games|video_games|toys|books|electronics|variety_store|second_hand|hobby|collector|model)$"]','["leisure"="amusement_arcade"]']},
  {k:"hotel",l:"🏨 住宿",f:['["tourism"~"^(hotel|guest_house|hostel)$"]'],loc:"lodging"},{k:"conv",l:"🏪 便利商店",f:['["shop"="convenience"]']},
  {k:"parking",l:"🅿️ 停車場",f:['["amenity"="parking"]']},{k:"station",l:"🚉 車站",f:['["railway"="station"]']},{k:"onsen",l:"♨️ 溫泉",f:['["amenity"="public_bath"]','["leisure"="spa"]']}];
-const OSMCAT={restaurant:"餐廳",fast_food:"速食",cafe:"咖啡",convenience:"便利商店",parking:"停車場",station:"車站",hotel:"飯店",guest_house:"民宿",hostel:"青旅",attraction:"景點",museum:"博物館",viewpoint:"展望點",gallery:"美術館",zoo:"動物園",aquarium:"水族館",theme_park:"樂園",castle:"城",temple:"寺",shrine:"神社",mall:"購物中心",department_store:"百貨",anime:"動漫",games:"遊戲",video_games:"電玩",toys:"玩具",books:"書店",electronics:"電器",public_bath:"錢湯／溫泉",spa:"溫泉",confectionery:"甜點",pastry:"甜點",second_hand:"二手",variety_store:"雜貨"};
+const OSMCAT={restaurant:"餐廳",fast_food:"速食",cafe:"咖啡",convenience:"便利商店",parking:"停車場",station:"車站",hotel:"飯店",guest_house:"民宿",hostel:"青旅",attraction:"景點",museum:"博物館",viewpoint:"展望點",gallery:"美術館",zoo:"動物園",aquarium:"水族館",theme_park:"樂園",castle:"城",temple:"寺",shrine:"神社",mall:"購物中心",department_store:"百貨",anime:"動漫",games:"遊戲",video_games:"電玩",toys:"玩具",books:"書店",electronics:"電器",public_bath:"錢湯／溫泉",spa:"溫泉",confectionery:"甜點",pastry:"甜點",second_hand:"二手",variety_store:"雜貨",hobby:"模型／嗜好",collector:"收藏",model:"模型",amusement_arcade:"遊戲中心",arcade:"遊戲中心"};
 async function overpassCat(k,c,r){ const cat=SCATS.find(x=>x.k===k); if(!cat) throw new Error("沒有這個分類"); const at=`around:${Math.round(Math.min(r,3000))},${c.lat.toFixed(5)},${c.lng.toFixed(5)}`;
  return overpassRun(`[out:json][timeout:25];(${cat.f.map(f=>`nwr(${at})${f}["name"];`).join("")});out center tags 40;`,cat.l);}
-async function overpassSearch(q,c,r){ const e=reEsc(q), at=`around:${Math.round(r)},${c.lat.toFixed(5)},${c.lng.toFixed(5)}`;
+async function overpassSearch(q,c,r){ const e=reEsc(q), unl=!r||r<=0||r>=9e8;
+ if(unl) return overpassRun(`[out:json][timeout:25];area["ISO3166-1"="JP"][admin_level=2]->.jp;(nwr(area.jp)["name"~"${e}",i]["shop"];nwr(area.jp)["name"~"${e}",i]["amenity"];nwr(area.jp)["name"~"${e}",i]["tourism"];nwr(area.jp)["brand"~"${e}",i];nwr(area.jp)["name:ja"~"${e}",i]["shop"];);out center tags 30;`,q);
+ const at=`around:${Math.round(r)},${c.lat.toFixed(5)},${c.lng.toFixed(5)}`;
  return overpassRun(`[out:json][timeout:25];(nwr(${at})["name"~"${e}",i];nwr(${at})["brand"~"${e}",i];nwr(${at})["name:ja"~"${e}",i];);out center tags 50;`,q);}
 async function overpassRun(ql,q){
  let last=null;
@@ -423,7 +449,7 @@ async function overpassRun(ql,q){
    return (j.elements||[]).map(el=>{const t=el.tags||{}; const lat=el.lat!=null?el.lat:(el.center&&el.center.lat), lng=el.lon!=null?el.lon:(el.center&&el.center.lon);
     return {name:[t.name||t["name:ja"]||t.brand||q,t.branch&&!(t.name||"").includes(t.branch)?t.branch:""].filter(Boolean).join(" "),lat:+lat,lng:+lng,osm:el.type+"/"+el.id,
      address:t["addr:full"]||[t["addr:province"],t["addr:city"],t["addr:quarter"],t["addr:neighbourhood"],t["addr:block_number"],t["addr:housenumber"]].filter(Boolean).join(" "),src:"overpass",
-     cat:OSMCAT[t.shop||t.amenity||t.tourism||t.historic||t.railway||t.leisure]||null,hours:t.opening_hours||null,web:t.website||null};});
+     cat:OSMCAT[t.shop||t.amenity||t.tourism||t.historic||t.railway||t.leisure]||null,hours:t.opening_hours||null,web:t.website||null,phone:t.phone||t["contact:phone"]||null,tags:t,category:(typeof guessCat==="function"&&guessCat(t.name||t.brand||q,t,OSMCAT[t.shop||t.amenity||t.tourism]||null))||null};});
   }catch(err){ last=err; } }
  throw last||new Error("Overpass 失敗");}
 /* ---------- 查詢改寫：中文（繁／簡）→ 日文／英文。可維護對照表：每列 [中文寫法（| 分隔）, 日文, 英文, 是否地名] ---------- */
@@ -434,14 +460,14 @@ const QMAP=[
  ["東武|东武","東武","Tobu"],["京成","京成","Keisei"],["阪急","阪急","Hankyu"],["JR","JR","JR"],["王子","プリンス","Prince"],["希爾頓|希尔顿","ヒルトン","Hilton"],
  ["喜來登|喜来登","シェラトン","Sheraton"],["萬豪|万豪","マリオット","Marriott"],["凱悅|凯悦","ハイアット","Hyatt"],["東橫|东横","東横イン","Toyoko Inn"],["大和魯內|大和鲁内","ダイワロイネット","Daiwa Roynet"],
  ["百貨公司|百貨|百货","百貨店","Department Store"],["購物中心|购物中心|商場|商场|購物城","ショッピングモール","Shopping Mall"],["暢貨中心|奥特莱斯|Outlet","アウトレット","Outlet"],
- ["便利商店|便利店","コンビニ","Convenience Store"],["超市","スーパー","Supermarket"],["藥妝|药妆","ドラッグストア","Drugstore"],["溫泉|温泉","温泉","Onsen"],["神社","神社","Shrine"],
+ ["便利商店|便利店","コンビニ","Convenience Store"],["超市","スーパー","Supermarket"],["藥妝|药妆","ドラッグストア","Drugstore"],["Sundrug|杉藥妝|珊朵","サンドラッグ","Sundrug"],["Cosmos|科摩思","コスモス","Cosmos"],["Welcia|威康","ウェルシア","Welcia"],["溫泉|温泉","温泉","Onsen"],["神社","神社","Shrine"],
  ["公園|公园","公園","Park"],["美術館|美术馆","美術館","Art Museum"],["博物館|博物馆","博物館","Museum"],["水族館|水族馆","水族館","Aquarium"],["動物園|动物园","動物園","Zoo"],
  ["拉麵|拉面","ラーメン","Ramen"],["燒肉|烧肉","焼肉","Yakiniku"],["壽司|寿司","寿司","Sushi"],["迴轉壽司|回转寿司","回転寿司","Conveyor Sushi"],["咖啡廳|咖啡店|咖啡","カフェ","Cafe"],
  ["蕎麥麵|荞麦面","そば","Soba"],["烏龍麵|乌冬面","うどん","Udon"],["炸豬排|炸猪排","とんかつ","Tonkatsu"],["停車場|停车场","駐車場","Parking"],["休息站|道之驛","道の駅","Michi-no-eki"],
  ["服務區|服务区","サービスエリア","Service Area"],["加油站","ガソリンスタンド","Gas Station"],["瞭望台|展望台","展望台","Observatory"],["鐵塔|铁塔","タワー","Tower"],
- ["駿河屋|骏河屋","駿河屋","Surugaya"],["唐吉訶德|唐吉诃德|驚安殿堂|惊安殿堂","ドン・キホーテ","Don Quijote"],["友都八喜","ヨドバシカメラ","Yodobashi Camera"],["必酷|BIC","ビックカメラ","Bic Camera"],
- ["優衣庫|优衣库","ユニクロ","Uniqlo"],["無印良品|无印良品","無印良品","MUJI"],["松本清","マツモトキヨシ","Matsumoto Kiyoshi"],["寶可夢中心|宝可梦中心","ポケモンセンター","Pokemon Center"],
- ["動畫城|动画城","アニメイト","Animate"],["曼陀羅|曼陀罗","まんだらけ","Mandarake"],["扭蛋","ガチャ","Gacha"],["淺草寺|浅草寺","浅草寺","Senso-ji"],["明治神宮|明治神宫","明治神宮","Meiji Jingu"],
+ ["駿河屋|骏河屋","駿河屋","Surugaya"],["唐吉訶德|唐吉诃德|驚安殿堂|惊安殿堂","ドン・キホーテ","Don Quijote"],["友都八喜","ヨドバシカメラ","Yodobashi Camera"],["必酷|BIC","ビックカメラ","Bic Camera"],["山田電機|山田电机","ヤマダ電機","Yamada Denki"],
+ ["優衣庫|优衣库","ユニクロ","Uniqlo"],["GU|ジーユー","ジーユー","GU"],["無印良品|无印良品","無印良品","MUJI"],["BOOKOFF|書蟲|Book-Off","ブックオフ","BOOKOFF"],["百圓商店|百元商店|百元店|Daiso|ダイソー","100円ショップ","Daiso"],["Seria|セリア","セリア","Seria"],["Can Do|CanDo|キャンドゥ","キャンドゥ","Can Do"],["松本清","マツモトキヨシ","Matsumoto Kiyoshi"],["寶可夢中心|宝可梦中心","ポケモンセンター","Pokemon Center"],
+ ["安利美特|動畫城|动画城","アニメイト","Animate"],["曼陀羅|曼陀罗","まんだらけ","Mandarake"],["任天堂","任天堂","Nintendo"],["虎之穴|虎穴","とらのあな","Toranoana"],["Melonbooks|甜瓜書店|美侖","メロンブックス","Melonbooks"],["二手遊戲|中古遊戲","中古ゲーム","Used Games"],["遊戲中心|遊樂中心|街機","ゲームセンター","Arcade"],["模型店|公仔店|公仔","模型店","Hobby"],["扭蛋|轉蛋|转蛋|扭蛋機|扭蛋之森|轉蛋之森","ガチャガチャの森","Gacha no Mori"],["トレカ|卡牌|交換卡片|卡片商店","トレーディングカード","Trading Cards"],["卡片實驗室|卡牌實驗室|カードラボ","カードラボ","Card Labo"],["晴天屋|晴れる屋","晴れる屋","Hareruya"],["Hard Off|硬體特賣|哈多オフ","ハードオフ","Hard Off"],["Hobby Off|嗜好特賣","ホビーオフ","Hobby Off"],["拉斯因班|らしんばん","らしんばん","Lashinbang"],["淺草寺|浅草寺","浅草寺","Senso-ji"],["明治神宮|明治神宫","明治神宮","Meiji Jingu"],
  ["東京鐵塔|东京铁塔","東京タワー","Tokyo Tower"],["晴空塔","スカイツリー","Skytree"],["雷門|雷门","雷門","Kaminarimon"],
  ["東京|东京","東京","Tokyo",2],["日本","日本","Japan",2],["羽田","羽田","Haneda",1],["成田","成田","Narita",1],["池袋","池袋","Ikebukuro",1],["新宿","新宿","Shinjuku",1],
  ["澀谷|涩谷","渋谷","Shibuya",1],["淺草|浅草","浅草","Asakusa",1],["秋葉原","秋葉原","Akihabara",1],["上野","上野","Ueno",1],["銀座|银座","銀座","Ginza",1],["品川","品川","Shinagawa",1],
@@ -475,7 +501,7 @@ function localNearby(k,c,r){ const cat=SCATS.find(x=>x.k===k); if(!cat||!cat.loc
  if(cat.loc==="spot") arr=D.spots.map(o=>({o,kind:o.custom?"custom":"spot"})); else if(cat.loc==="restaurant") arr=(RESTS||[]).map(o=>({o,kind:"restaurant"}));
  else { const seen=new Set(); arr=(D.lodging||[]).filter(o=>o.lat!=null&&!seen.has(o.name)&&seen.add(o.name)).map(o=>({o,kind:"lodging"})); }
  return arr.filter(({o})=>o.lat!=null).map(({o,kind})=>locItem(o,kind,c)).filter(x=>x.dist<=r).sort((a,b)=>a.dist-b.dist).slice(0,15);}
-function locItem(o,kind,c){ return {local:true,kind,id:o.id,name:o.name,lat:o.lat,lng:o.lng,address:o.address||o.area||"",src:"local",dist:(c&&o.lat!=null)?distM(c.lat,c.lng,+o.lat,+o.lng):null,
+function locItem(o,kind,c){ const cc=c||{lat:36.5,lng:138.0}; return {local:true,kind,id:o.id,name:o.name,lat:o.lat,lng:o.lng,address:o.address||o.area||"",src:"local",dist:(o.lat!=null)?distM(cc.lat,cc.lng,+o.lat,+o.lng):null,
   cat:kind==="restaurant"?(o.cuisine||"餐廳"):kind==="lodging"?"住宿":(CAT[o.category]||null),hours:o.hours||null,stay:o.stay_minutes||null,rating:o.google_rating||null,price:o.price_range||null};}
 function localSearch(q,c){ const t=qTokens(q); const full=nz(q); const parts=t.filter(x=>x.place!==2).map(x=>nz(x.ja)).filter(Boolean); const partsRaw=t.filter(x=>x.place!==2).map(x=>nz(x.raw)).filter(Boolean);
  const en=nz(t.map(x=>x.en||x.raw).join(""));
@@ -489,31 +515,451 @@ function localSearch(q,c){ const t=qTokens(q); const full=nz(q); const parts=t.f
 async function photonMulti(q,c,r){ const vs=queryVariants(q); const all=[]; let okN=0, lastErr=null;
  let tried=0; for(const v of vs){ if(tried>=3&&all.length>=5) break; tried++; try{ const xs=await photonSearch(v,c,r); okN++; xs.forEach(x=>{x.q=v; all.push(x);}); }catch(e){ lastErr=e; } }
  if(!okN&&lastErr) throw lastErr; all.variants=vs; return all;}
-async function searchPlaces(svc,q,c,r){ q=String(q||"").trim(); if(!q&&!svc.startsWith("cat:")) throw new Error("請輸入關鍵字"); if(!c) throw new Error("這一天沒有可用的中心座標");
+async function searchPlaces(svc,q,c,r){ q=String(q||"").trim(); if(!q&&!svc.startsWith("cat:")) throw new Error("請輸入關鍵字"); const unl=!r||r<=0||r>=9e8; if(!c&&!unl) throw new Error("這一天沒有可用的中心座標"); if(!c) c={lat:36.5,lng:138.0,label:"日本"};
  const key=[svc,q,c.lat.toFixed(3),c.lng.toFixed(3),r].join("|"); const hit=cacheGet(key); if(hit) return {items:hit,cached:true};
  if(navigator.onLine===false){const e=new Error(OFFLINE_MSG); e.offline=true; throw e;}
  let raw; if(svc.startsWith("cat:")) raw=await overpassCat(svc.slice(4),c,r); else if(svc==="overpass"){ const t=qTokens(q).filter(x=>!x.place); raw=await overpassSearch(t.length?t.map(x=>x.ja).join(" "):kj(q),c,r); } else raw=await photonMulti(q,c,r); const seen=new Set();
- const items=raw.filter(x=>!(svc.startsWith("cat:")&&!x.name)).filter(x=>isFinite(x.lat)&&isFinite(x.lng)&&inJp(x.lat,x.lng)).map(x=>Object.assign(x,{dist:distM(c.lat,c.lng,x.lat,x.lng)})).filter(x=>x.dist<=r).sort((a,b)=>a.dist-b.dist)
+ const items=raw.filter(x=>!(svc.startsWith("cat:")&&!x.name)).filter(x=>isFinite(x.lat)&&isFinite(x.lng)&&inJp(x.lat,x.lng)).map(x=>Object.assign(x,{dist:distM(c.lat,c.lng,x.lat,x.lng)})).filter(x=>unl||x.dist<=r).sort((a,b)=>(a.dist==null?1e12:a.dist)-(b.dist==null?1e12:b.dist))
   .filter(x=>{const k=x.osm||(x.lat.toFixed(5)+","+x.lng.toFixed(5)); if(seen.has(k)) return false; seen.add(k); return true;});
  cacheSet(key,items); return {items,cached:false};}
 async function gsiSearch(addr){ if(navigator.onLine===false){const e=new Error(OFFLINE_MSG); e.offline=true; throw e;}
  await waitGap("gsi"); const res=await fetchT(SEARCH_ENDPOINTS.gsi+"?q="+encodeURIComponent(addr),{},15000); if(!res.ok) throw new Error("GSI HTTP "+res.status);
  const j=await res.json(); const f=Array.isArray(j)?j[0]:null; if(!f||!f.geometry) return null; const [lng,lat]=f.geometry.coordinates; if(!inJp(+lat,+lng)) return null;
  return {lat:Math.round(lat*1e6)/1e6,lng:Math.round(lng*1e6)/1e6,address:(f.properties&&f.properties.title)||addr};}
-function parseLocationInput(str){ const t=String(str||"").trim(); if(!t) return {err:"請貼上 Google 地圖網址、座標或住址"};
+function parseLocationInput(str,hintName){ const raw=String(str||"").trim(); if(!raw) return {err:"請貼上 Google 地圖網址、座標或住址"};
+ const ex=(typeof extractGmaps==="function")?extractGmaps(raw):{text:raw,url:null,name:hintName||null};
+ let t=ex.url||raw, name=hintName||ex.name||null;
  let s=t; try{s=decodeURIComponent(t);}catch(e){}
  const num="(-?\\d+(?:\\.\\d+)?)"; let m;
- const ok=(a,b,src)=>{const lat=+a,lng=+b; if(!inJp(lat,lng)) return {err:`座標 ${lat}, ${lng} 不在日本範圍（緯度 20–46、經度 122–154），請確認沒有把緯度、經度貼反`}; return {lat:Math.round(lat*1e7)/1e7,lng:Math.round(lng*1e7)/1e7,source:src};};
- if((m=s.match(new RegExp("^\\s*"+num+"\\s*[,，]\\s*"+num+"\\s*$")))) return ok(m[1],m[2],"manual");
- const pn=(()=>{const mm=t.match(/\/maps\/place\/([^/@?]+)/); if(!mm) return null; try{return decodeURIComponent(mm[1].replace(/\+/g," ")).trim()||null;}catch(e){return null;}})();
- const okN=(a,b,src)=>{const r=ok(a,b,src); if(pn&&!r.err) r.name=pn; return r;};
- if((m=s.match(new RegExp("!3d"+num+"!4d"+num)))) return okN(m[1],m[2],"gmaps_url");
- if((m=s.match(new RegExp("@"+num+","+num)))) return okN(m[1],m[2],"gmaps_url");
- if((m=s.match(new RegExp("[?&](?:q|query|destination|ll)=(?:loc:)?"+num+"\\s*,\\s*"+num)))) return ok(m[1],m[2],"gmaps_url");
- if(/(maps\.app\.goo\.gl|goo\.gl\/maps)/i.test(t)) return {needsResolve:true,url:t};
+ const ok=(a,b,src)=>{const lat=+a,lng=+b; if(!inJp(lat,lng)) return {err:`座標 ${lat}, ${lng} 不在日本範圍（緯度 20–46、經度 122–154），請確認沒有把緯度、經度貼反`}; const r={lat:Math.round(lat*1e7)/1e7,lng:Math.round(lng*1e7)/1e7,source:src}; if(name) r.name=name; return r;};
+ if((m=s.match(new RegExp("^\\s*"+num+"\\s*[,，\\s]\\s*"+num+"\\s*$")))) return ok(m[1],m[2],"manual");
+ const pn=(()=>{const mm=String(t).match(/\/maps\/place\/([^/@?]+)/); if(!mm) return null; try{const n=decodeURIComponent(mm[1].replace(/\+/g," ")).trim(); return n&&!/^-?\d/.test(n)?n:null;}catch(e){return null;}})();
+ if(pn) name=name||pn;
+ if((m=s.match(new RegExp("!3d"+num+"!4d"+num)))) return ok(m[1],m[2],"gmaps_url");
+ if((m=s.match(new RegExp("@"+num+","+num)))) return ok(m[1],m[2],"gmaps_url");
+ if((m=s.match(new RegExp("[?&](?:q|query|destination|ll|center)=(?:loc:)?"+num+"\\s*,\\s*"+num)))) return ok(m[1],m[2],"gmaps_url");
+ if(/(maps\.app\.goo\.gl|goo\.gl\/maps)/i.test(raw)||/(maps\.app\.goo\.gl|goo\.gl\/maps)/i.test(t)) return {needsResolve:true,url:ex.url||t,name:name||null};
+ if(/^https?:/i.test(t)&&!/google\.[^\/]+\/maps/i.test(t)&&!/goo\.gl/i.test(t)) return {err:"這個網址裡找不到座標。請在 Google 地圖按分享→複製連結，改用完整網址（網址列的長網址，含 /place/…/@緯度,經度），或貼座標（例：35.6586, 139.7454）。"};
  if(/^https?:/i.test(t)) return {err:"這個網址裡找不到座標。請在 Google 地圖長按／右鍵點地點複製座標（例：35.6586, 139.7454），或複製網址列的完整網址。"};
- return {address:t};}
-function gmapsSearchUrl(q,day){const di=dayInfo(route,day||curDay); const area=di?String(di.base_area||BASEN[di.base]||"").split("（")[0].replace(/^東京\s*/,"東京 "):""; return SEARCH_ENDPOINTS.gmaps+encodeURIComponent((String(q||"").trim()+" "+area).trim());}
+ return name&&name!==raw?{address:raw,name:name}:{address:raw};}
+/* ---------- 1.9.13 搜尋／帶入（譯名、不限範圍、剪貼簿、去重、欄位自動帶入） ---------- */
+const CLIP_K="plan:clip_auto", CLIP_SEEN_K="plan:clip_seen";
+let runSearch=null, clipArmed=false, clipArmedAt=0, clipDenied=false;
+const STAY_MIN={anime_game:60,anime:60,food:75,cafe:40,shrine:45,historic:60,natural:60,onsen:90,experience:60,popular:60,hidden:60,festival:90,custom:60,shop:45,parking:10,conv:15,station:20,hotel:0};
+function clipOn(){try{return ls.get(CLIP_K)!=="0";}catch(e){return true;}}
+function clipSet(on){try{ls.set(CLIP_K,on?"1":"0");}catch(e){}}
+function clipHash(t){t=String(t||""); let h=2166136261; for(let i=0;i<t.length;i++){h^=t.charCodeAt(i); h=Math.imul(h,16777619);} return (h>>>0).toString(16);}
+function clipSeenArr(){try{const a=JSON.parse(ls.get(CLIP_SEEN_K)||"[]"); return Array.isArray(a)?a.slice(-40):[];}catch(e){return [];}}
+function clipWasSeen(h){return clipSeenArr().indexOf(h)>=0;}
+function clipRemember(h){const a=clipSeenArr(); if(a.indexOf(h)<0) a.push(h); try{ls.set(CLIP_SEEN_K,JSON.stringify(a.slice(-40)));}catch(e){}}
+function clipArm(){clipArmed=true; clipArmedAt=Date.now(); clipDenied=false;}
+function dayArea(day){
+ if(!D||!D.plan||!D.plan.routes||!route||!D.plan.routes[route]) return "";
+ const di=dayInfo(route,day||curDay); if(!di) return "";
+ let a=String(di.base_area||BASEN[di.base]||"").split("（")[0].replace(/^東京\s*/,"東京 ").trim();
+ if(a) return a;
+ const sc=searchCenter(day||curDay); if(sc&&sc.label) return String(sc.label).split("（")[0].trim();
+ if(di.start&&di.start.name) return String(di.start.name).split("（")[0].trim();
+ return "";
+}
+
+const AG_SHOP={games:1,video_games:1,anime:1,toys:1,collector:1,hobby:1,model:1};
+const AG_WIKIDATA_OK={Q1041890:1,Q89673816:1,Q6747833:1,Q11188604:1,Q11310200:1,Q11227310:1,Q11281322:1,Q10851653:1,Q11337980:1,Q11313866:1,Q11346634:1,Q125055805:1,Q893011:1,Q11327274:1,Q11296854:1,Q10931663:1,Q4120053:1,Q116767280:1,Q865297:1};
+const AG_SH_SUB={games:1,video_games:1,anime:1,manga:1,toys:1,hobby:1,comics:1,figures:1,model:1,cards:1,trading_cards:1};
+const AG_RX_AUTO=/アニメイト|Animate|安利美特|動畫城|动画城|ポケモンセンター|寶可夢中心|宝可梦中心|ポケセン|Pok[eé]mon\s*Center|まんだらけ|Mandarake|曼陀羅|曼陀罗|駿河屋|骏河屋|Surugaya|らしんばん|Lashinbang|ジャンプショップ|JUMP\s*SHOP|ケイ・ブックス|K-BOOKS|メロンブックス|Melonbooks|梅洛恩|ゲーマーズ|ホビーオフ|Hobby\s*Off|ハードオフ|Hard\s*Off|ゲームセンター|ガチャガチャの森|ガチャポン|ガシャポン|カプセルトイ|ガチャガチャ|(?<![ァ-ヶ])ガチャ|轉蛋|转蛋|扭蛋|ガンダムベース|Gundam\s*Base|Nintendo\s*Store|ニンテンドーストア|Nintendo\s*(TOKYO|OSAKA|KYOTO)|(?<![A-Za-z])GiGO(?![A-Za-z])|タイトーステーション|Taito\s*Station|ラウンドワン|ROUND\s*ONE|(?<![A-Za-z])Round1(?![A-Za-z])|スーパーポテト|Super\s*Potato|カードラボ|晴れる屋|Hareruya|トレーディングカード|トレカ|カードショップ|とらのあな|虎之穴|虎穴|キデイランド|Kiddy\s*Land|コトブキヤ|Kotobukiya|ボークス|イエローサブマリン|Yellow\s*Submarine|ワンダーグー|WonderGOO|トイザらス|Toys.?R.?Us|プラモデル|ガンプラ|模型店|周邊店|周边店|周邊商品|周边商品|動漫周邊|动漫周边|二手遊戲|二手游戏|中古ゲーム|遊戲中心|游戏中心|ゲーセン/i;
+const AG_RX_REVIEW=/漫画ミュージアム|マンガミュージアム|アニメーションミュージアム|まんが美術館|漫画美術館|マンガ・アニメ|動漫博物館|动漫博物馆|漫畫博物館|ソフマップ|Sofmap|フィギュア|ホビー館|ホビーセンター|聖地|巡礼|巡礼地|アニメの舞台/i;
+const AG_RX_EXCLUDE=/マンガン|フィギュアスケート|サバイバル\s*ゲーム|ローマンガラス|パチンコ|パチスロ|pachinko|pachislo|西松屋|アカチャンホンポ|モードオフ|Mode\s*Off/i;
+const AG_RX_OFFHOUSE=/オフハウス|Off\s*House|OFF･HOUSE/i;
+const AG_RX_HARDOFF=/ハードオフ|Hard\s*Off|ホビーオフ|Hobby\s*Off/i;
+const AG_SECOND=/ゲーム|遊戲|游戏|アニメ|動漫|动漫|フィギュア|公仔|卡牌|トレカ|カード|ホビー|hobby|ガンプラ|プラモデル|カプセルトイ|ガチャ/i;
+const AG_PACHINKO=/パチンコ|パチスロ|pachinko|pachislo|adult_gaming/i;
+function agHay(name,tags){ tags=tags||{}; return [name,tags.name,tags.brand,tags["name:ja"],tags["name:en"],tags["brand:ja"],tags["brand:en"],tags.operator,tags.official_name,tags.shop,tags.amenity,tags.tourism,tags.leisure,tags["shop:type"],tags.wikidata,tags["brand:wikidata"]].filter(Boolean).join(" "); }
+function isPachinko(name,tags){ tags=tags||{}; const h=agHay(name,tags); return !!(AG_PACHINKO.test(h)||tags.leisure==="adult_gaming_centre"||tags.amenity==="adult_gaming_centre"||tags.shop==="adult_gaming_centre"); }
+function isSecondHandAnime(name,tags){ tags=tags||{}; const h=agHay(name,tags); const sh=tags.shop==="second_hand"||/second_hand|中古店|二手店|リサイクル/.test(h); if(!sh) return false; const sub=String(tags.second_hand||"").toLowerCase(); if(AG_SH_SUB[sub]) return true; for(const k in tags){ if(/^second_hand:/.test(k)&&AG_SH_SUB[k.split(":")[1]]&&/^(yes|only|true|1)$/i.test(String(tags[k]))) return true; } return AG_SECOND.test(h); }
+function isBookoffHobby(name,tags){ const h=agHay(name,tags); if(!/BOOKOFF|ブックオフ|書蟲/i.test(h)) return false; return AG_SECOND.test(h); }
+function classifyAg(name,tags,osmCat){
+ tags=tags||{};
+ const hay=agHay(name,tags)+(osmCat?(" "+osmCat):"");
+ const shop=tags.shop||"", lei=tags.leisure||"";
+ const reasons=[];
+ if(AG_RX_EXCLUDE.test(hay)||isPachinko(name,tags)) return {level:"skip",reasons:["exclude"],cat:null};
+ if(AG_RX_OFFHOUSE.test(hay)&&!AG_RX_HARDOFF.test(hay)&&!isBookoffHobby(name,tags)) return {level:"skip",reasons:["exclude_offhouse"],cat:null};
+ if(lei==="adult_gaming_centre"||tags.amenity==="adult_gaming_centre") return {level:"skip",reasons:["exclude_tag"],cat:null};
+ if((shop==="second_hand"||/古着|二手衣|中古衣|リサイクルショップ/.test(hay))&&!isSecondHandAnime(name,tags)&&!AG_RX_AUTO.test(hay)&&!isBookoffHobby(name,tags)&&!AG_RX_HARDOFF.test(hay))
+  return {level:"skip",reasons:["exclude_second_hand_clothes"],cat:null};
+ if(String(tags.second_hand||"").toLowerCase()==="clothes"&&!AG_RX_AUTO.test(hay)&&!isSecondHandAnime(name,tags))
+  return {level:"skip",reasons:["exclude_second_hand_clothes"],cat:null};
+ const wd=tags["brand:wikidata"]||tags.wikidata||"";
+ if(AG_WIKIDATA_OK[wd]) reasons.push("wikidata:"+wd);
+ if(lei==="amusement_arcade") reasons.push("osm:leisure=amusement_arcade");
+ if(AG_SHOP[shop]) reasons.push("osm:shop="+shop);
+ if(isSecondHandAnime(name,tags)) reasons.push("second_hand_anime");
+ if(isBookoffHobby(name,tags)) reasons.push("bookoff_hobby");
+ if(AG_RX_AUTO.test(hay)) reasons.push("name_brand");
+ if(reasons.length) return {level:"auto",reasons,cat:"anime_game"};
+ if(AG_RX_REVIEW.test(hay)||(/museum|ミュージアム|美術館|博物館/i.test(hay)&&/漫画|マンガ|アニメ|動漫|动漫/i.test(hay)))
+  return {level:"review",reasons:["review_name"],cat:null};
+ return {level:"skip",reasons:[],cat:null};
+}
+function guessCat(name,tags,osmCat){
+ tags=tags||{};
+ const hay=agHay(name,tags)+(osmCat?(" "+osmCat):"");
+ const ag=classifyAg(name,tags,osmCat);
+ if(ag.level==="auto") return "anime_game";
+ const t=(tags.shop||"")+" "+(tags.amenity||"")+" "+(tags.tourism||"")+" "+(tags.historic||"")+" "+(tags.leisure||"")+" "+(osmCat||"");
+ if(/shrine|神社|寺|temple/i.test(hay)||tags.historic==="shrine"||tags.historic==="temple") return "shrine";
+ if(/onsen|温泉|溫泉|public_bath|spa/i.test(hay)) return "onsen";
+ if(/museum|castle|historic|史跡|城|ミュージアム|美術館|博物館/i.test(t+" "+hay)||tags.historic||tags.tourism==="museum") return "historic";
+ if(/viewpoint|park|peak|beach|gorge|natural|絕景/i.test(t)) return "natural";
+ if(/restaurant|cafe|fast_food|food|拉麵|焼肉|寿司|食堂/i.test(hay)) return "food";
+ if(/theme_park|zoo|aquarium|experience|親子/i.test(hay)) return "experience";
+ if(/hotel|guest_house|hostel|旅館|飯店/i.test(hay)) return "custom";
+ return "custom";
+}
+function stayOf(cat,kind){ if(kind==="restaurant") return STAY_MIN.food; return STAY_MIN[cat]||STAY_MIN.custom||60; }
+function nameSim(a,b){
+ const x=nz(a), y=nz(b); if(!x||!y) return 0; if(x===y) return 1;
+ if(x.indexOf(y)>=0||y.indexOf(x)>=0) return Math.min(x.length,y.length)/Math.max(x.length,y.length);
+ let n=0; const s=x.length<y.length?x:y, l=x.length<y.length?y:x; for(let i=0;i<s.length-1;i++) if(l.indexOf(s.slice(i,i+2))>=0) n++;
+ return s.length>1?n/(s.length-1):0;
+}
+function findDup(lat,lng,name){
+ const cand=[]; (D.spots||[]).forEach(o=>cand.push({o,kind:o.custom?"custom":"spot"}));
+ (typeof RESTS!=="undefined"&&RESTS||D.rests||[]).forEach(o=>cand.push({o,kind:"restaurant"}));
+ let best=null;
+ cand.forEach(c=>{ const o=c.o; if(o.lat==null||o.lng==null) return;
+  const d=isFinite(lat)?distM(+lat,+lng,+o.lat,+o.lng):1e12, sim=nameSim(name,o.name), score=(sim*1000)+(d<1e12?(200-Math.min(d,200)):0);
+  const hit=(d<=80&&sim>=0.45)||(d<=30&&sim>=0.25)||(d<=20&&sim>=0.15)||(sim>=0.92&&d<=250);
+  if(hit&&(!best||score>best.score)) best={o,kind:c.kind,dist:d,sim,score}; });
+ return best;
+}
+function extractGmaps(str){
+ const t=String(str||"").trim(); if(!t) return {text:""};
+ const um=t.match(/https?:\/\/(?:maps\.app\.goo\.gl\/\S+|goo\.gl\/maps\/\S+|www\.google\.[^\s\/]+\/maps\S+|google\.[^\s\/]+\/maps\S+)/i);
+ const url=um?um[0].replace(/[)\].,;，。]+$/,""):null;
+ let name=null;
+ if(url){ const rest=t.replace(url, "\n").replace(/https?:\/\/\S+/g," ").replace(/\s+/g," ").trim(); if(rest&&!/^https?:/i.test(rest)&&rest.length<=120) name=rest;
+  const pm=url.match(/\/maps\/place\/([^/@?]+)/); if(pm){ try{const n=decodeURIComponent(pm[1].replace(/\+/g," ")).trim(); if(n&&!/^-?\d/.test(n)) name=name||n;}catch(e){} } }
+ return {text:t,url,name};
+}
+function isShortMaps(t){return /(maps\.app\.goo\.gl|goo\.gl\/maps)/i.test(String(t||""));}
+const SHORT_MSG="短網址（maps.app.goo.gl）無法在網頁直接展開。請在 Google 地圖按「分享→複製連結」後，改用完整網址：用手機瀏覽器打開短網址，再從網址列複製長網址貼上（含 /place/…/@緯度,經度）。若已寫店名，也可按「用店名搜尋」找看看。";
+function suggestWhen(lat,lng,kind){
+ if(!D||!D.plan||!D.plan.routes[route]) return {day:curDay,time:null,meal:null,m:null,label:""};
+ let best=null;
+ D.plan.routes[route].days.forEach(d=>{
+  const pts=[]; if(d.start&&d.start.lat!=null) pts.push(d.start);
+  (itin(route)[d.day]||[]).forEach(x=>{const o=get(x); if(o&&o.lat!=null) pts.push(o);});
+  const lg=lodgingOn(route,d.date); if(lg&&lg.lat!=null) pts.push(lg);
+  const sc=searchCenter(d.day); if(sc) pts.push(sc);
+  let m=1e12; pts.forEach(p=>{ if(p.lat!=null) m=Math.min(m,distM(+p.lat,+p.lng,+lat,+lng)); });
+  if(!best||m<best.m) best={day:+d.day,m,date:d.date};
+ });
+ if(!best) best={day:curDay,m:null,date:""};
+ const items=itin(route)[best.day]||[], has={};
+ items.forEach(x=>{ if(x.type==="restaurant") has[mealOf(x)||""]=1; });
+ let time=null, meal=null;
+ if(kind==="restaurant"||kind==="food"){
+  if(!has.lunch){time="12:00"; meal="lunch";} else if(!has.dinner){time="18:00"; meal="dinner";} else if(!has.snack){time="15:00"; meal="snack";} else time="19:30";
+ }else{
+  const times=items.map(x=>x.time).filter(Boolean).sort();
+  if(times.length){ const last=times[times.length-1], [hh,mm]=last.split(":").map(Number); const tot=(hh||0)*60+(mm||0)+75; time=String(Math.floor((tot%1440)/60)).padStart(2,"0")+":"+String(tot%60).padStart(2,"0"); if(tot>=22*60) time="16:00"; }
+  else time="10:30";
+ }
+ const km=best.m!=null&&best.m<1e12?(best.m>=1000?(best.m/1000).toFixed(1)+" km":best.m+" m"):"";
+ return {day:best.day,time,meal,m:best.m,label:"Day "+best.day+(best.date?" "+String(best.date).slice(5).replace("-","/"):"")+(time?" "+time:"")+(km?"（離當天行程 "+km+"）":"")};
+}
+function enrichPlace(p){
+ p=Object.assign({},p); const tags=p.tags||{};
+ const fs=Object.assign({},p.field_status||{});
+ const mark=(k,st)=>{ if(st) fs[k]=st; else delete fs[k]; };
+ const setIf=(k,v,src)=>{ if(v!=null&&v!==""){ p[k]=v; if(src) p[k+"_source"]=src; mark(k,null); return true;} return false; };
+ const dup=(p.lat!=null&&p.lng!=null)?findDup(p.lat,p.lng,p.name):null;
+ if(dup&&dup.o){
+  const o=dup.o;
+  if(!p.address) setIf("address",o.address||o.area||"","local");
+  if(p.lat==null){ p.lat=o.lat; p.lng=o.lng; p.coord_source=p.coord_source||"local"; }
+  if(!p.phone) setIf("phone",o.phone||o.tel,"local");
+  if(!p.hours) setIf("hours",o.hours,"local");
+  if(!p.closed_days&&(o.closed||o.closed_days)) setIf("closed_days",o.closed||o.closed_days,"local");
+  if(!p.website) setIf("website",o.website||o.web||"","local");
+  if((!p.parkings||!p.parkings.length)&&o.parkings&&o.parkings.length){ p.parkings=o.parkings; mark("parking",null); p.parking_source="local"; }
+  if(o.mapcode){ p.mapcode=o.mapcode; p.mapcode_source=o.mapcode_source||"local"; p.mapcode_status="ok"; mark("mapcode",null); }
+  if(o.category&&o.category!=="custom"&&o.category!=="auto"){ p.category=o.category; p.category_source=p.category_source||"local"; }
+  if(o.stay_minutes) p.stay_minutes=o.stay_minutes;
+  const rates=[];
+  if(o.tabelog_score!=null&&o.tabelog_url) rates.push({source:"tabelog",score:o.tabelog_score,url:o.tabelog_url,scale:5});
+  if(o.google_rating!=null) rates.push({source:"google",score:o.google_rating,url:o.google_maps||o.tabelog_url||"",scale:5});
+  if(Array.isArray(o.ratings)) o.ratings.forEach(r=>{ if(r&&(r.source==="tabelog"||r.source==="google")&&typeof r.score==="number"){ if(!rates.some(x=>x.source===r.source)) rates.push({source:r.source,score:r.score,url:r.url||"",scale:r.scale||5,checked_at:r.checked_at||""}); } });
+  if(rates.length) p.ratings=rates;
+  p.dup=dup;
+ }
+ const ag=classifyAg(p.name,tags,p.cat||p.osm_cat); p.ag_level=ag.level; p.ag_reasons=ag.reasons;
+ const cat=guessCat(p.name,tags,p.cat||p.osm_cat)||p.category||"custom";
+ if(!p.category||p.category==="custom"||cat==="anime_game"){ p.category=cat; p.category_source=p.category_source||(cat==="anime_game"?"rule":"guess"); }
+ if(!p.stay_minutes) p.stay_minutes=stayOf(p.category,p.kind);
+ if(!p.address){ const adr=p.address||tags["addr:full"]||[tags["addr:province"],tags["addr:city"],tags["addr:quarter"],tags["addr:neighbourhood"],tags["addr:block_number"],tags["addr:housenumber"]].filter(Boolean).join(""); if(adr) setIf("address",adr,"osm"); }
+ if(!p.phone){ const ph=tags.phone||tags["contact:phone"]||p.phone; if(ph) setIf("phone",ph,"osm"); }
+ if(!p.hours){ const ho=tags.opening_hours||p.hours; if(ho) setIf("hours",ho,"osm"); }
+ if(!p.website){ const w=tags.website||tags["contact:website"]||p.web||p.website; if(w) setIf("website",w,"osm"); }
+ if(!p.closed_days&&tags.opening_hours&&/off|closed/i.test(tags.opening_hours)) setIf("closed_days",tags.opening_hours,"osm");
+ ["address","phone","hours","website"].forEach(k=>{ if(!p[k]) mark(k,"待補"); });
+ if(!(p.parkings&&p.parkings.length)) mark("parking","待補");
+ if(!p.mapcode){ p.mapcode=null; p.mapcode_status="pending"; mark("mapcode","待查"); }
+ if(!p.ratings||!p.ratings.length){ p.ratings=[]; mark("ratings","未查"); }
+ p.field_status=fs;
+ if(p.lat!=null&&p.lng!=null){ p.google_maps=p.google_maps||gmSearch(p.lat,p.lng); p.nav_url=p.nav_url||navU(p.lat,p.lng); }
+ p.suggest=suggestWhen(p.lat,p.lng,p.category==="food"||p.kind==="restaurant"?"restaurant":"spot");
+ return p;
+}
+function pendingNote(p){
+ const fs=p.field_status||{}; const a=[];
+ if(fs.mapcode) a.push("MapCode "+fs.mapcode+"（前端不能自己算，請景點部用 Saibara 換算並反查後補）");
+ if(fs.hours) a.push("營業時間 "+fs.hours);
+ if(fs.phone) a.push("電話 "+fs.phone);
+ if(fs.address) a.push("地址 "+fs.address);
+ if(fs.parking) a.push("停車場 "+fs.parking);
+ if(fs.website) a.push("官網 "+fs.website);
+ if(fs.ratings) a.push("評分 "+fs.ratings+"（不編造 Tabelog／Google）");
+ return a.length?a.join("；"):"";
+}
+function applyBring(p,opt){
+ opt=opt||{}; const day=+(opt.day|| (p.suggest&&p.suggest.day) || ($("#srDay")&&$("#srDay").value) || curDay);
+ if(p.dup&&opt.useDup!==false&&opt.useDup!=="new"){
+  const it={}; if(p.suggest&&p.suggest.time) it.time=p.suggest.time; if(p.suggest&&p.suggest.meal&&p.dup.kind==="restaurant") it.meal=p.suggest.meal;
+  if(opt.insertNear!==false) it.insertNear=true;
+  addTo(p.dup.kind==="restaurant"?"restaurant":(p.dup.kind==="custom"?"custom":"spot"), p.dup.o.id, day, it);
+  window.__lastAdded=p.dup.o.id; toast("已加入既有「"+p.dup.o.name+"」到 Day "+day,3500); return p.dup.o;
+ }
+ const rec={name:p.name,lat:p.lat,lng:p.lng,address:p.address||"",phone:p.phone||"",hours:p.hours||"",closed_days:p.closed_days||"",website:p.website||"",
+  osm:p.osm||null,coord_source:p.coord_source||p.src||"manual",gmaps_input:p.gmaps_input||p.raw||null,kind:p.kind||"other",category:p.category||"custom",
+  stay_minutes:p.stay_minutes||stayOf(p.category,p.kind),parkings:p.parkings||[],ratings:p.ratings||[],field_status:p.field_status||{},
+  mapcode:p.mapcode||null,mapcode_status:p.mapcode? (p.mapcode_status||"ok"):"pending",mapcode_source:p.mapcode_source||null,
+  note:p.note||pendingNote(p),added_day:day,google_maps:p.google_maps,nav_url:p.nav_url,hours_source:p.hours_source,phone_source:p.phone_source,address_source:p.address_source,category_source:p.category_source};
+ const place=addPlaceToDay(rec,day,{insertNear:opt.insertNear!==false,time:(p.suggest&&p.suggest.time)||undefined,meal:(p.suggest&&p.suggest.meal)||undefined});
+ window.__lastAdded=place.id; window.__lastBring=place;
+ toast("已加入「"+place.name+"」到 Day "+day+(p.suggest&&p.suggest.time?" "+p.suggest.time:"")+"。"+((place.field_status||{}).mapcode?" MapCode 待查。":""),4000);
+ renderSpots(); renderItin(); return place;
+}
+function hideClipBar(){const b=$("#clipBar"); if(b){b.classList.remove("on"); b.innerHTML="";}}
+function showBringBar(p,raw){
+ p=enrichPlace(p); p.raw=raw||p.raw||p.gmaps_input||""; window.__bringDraft=p;
+ let bar=$("#clipBar"); if(!bar){bar=document.createElement("div"); bar.id="clipBar"; document.body.appendChild(bar);}
+ const name=p.name||"這個地點", sug=p.suggest||{}, fs=p.field_status||{};
+ const bits=[p.category?CAT[p.category]||p.category:"", p.hours?("營業 "+p.hours): (fs.hours?"營業 "+fs.hours:""), p.phone?("☎ "+p.phone):(fs.phone?"電話 "+fs.phone:""), p.mapcode?("MapCode "+p.mapcode):"MapCode 待查", p.address||"", fs.ratings?"評分 未查":(p.ratings&&p.ratings.length?p.ratings.map(r=>r.source+" "+r.score).join("／"):"")].filter(Boolean);
+ let html=`<div class="cliphd">帶入「${esc(name)}」？</div>`;
+ if(p.dup) html+=`<div class="clipdup">已有：<b>${esc(p.dup.o.name)}</b>（${p.dup.kind==="restaurant"?"本行程餐廳":p.dup.kind==="custom"?"我的自訂地點":"本行程景點"}，約 ${p.dup.dist<1000?p.dup.dist+" m":(p.dup.dist/1000).toFixed(1)+" km"}）</div>`;
+ if(p.ag_level==="review") html+=`<div class="clipdup">待審：博物館／聖地等，不自動歸「動漫・遊戲周邊」</div>`;
+ html+=`<div class="cnt">${esc(bits.join(" ｜ "))}</div>`;
+ html+=`<div class="cnt">建議加到 ${esc(sug.label||("Day "+(sug.day||curDay)))}，停留約 ${p.stay_minutes||60} 分</div>`;
+ html+=`<details class="clipmore"><summary>更多</summary>
+  <label>名稱 <input id="brName" value="${esc(p.name||"")}"></label>
+  <label>地址 <input id="brAddr" value="${esc(p.address||"")}"></label>
+  <label>電話 <input id="brPhone" value="${esc(p.phone||"")}"></label>
+  <label>營業 <input id="brHours" value="${esc(p.hours||"")}"></label>
+  <label>類別 <select id="brCat">${Object.keys(CAT).filter(k=>k!=="festival"&&k!=="auto").map(k=>`<option value="${k}" ${p.category===k?"selected":""}>${esc(CAT[k])}</option>`).join("")}</select></label>
+  <label>停留分鐘 <input id="brStay" type="number" min="5" max="720" step="5" value="${p.stay_minutes||60}"></label>
+  <label>加入哪一天 <select id="brDay">${(D.plan.routes[route].days||[]).map(d=>`<option value="${d.day}" ${+d.day===(sug.day||curDay)?"selected":""}>Day ${d.day}</option>`).join("")}</select></label>
+  <label>時間 <input id="brTime" type="time" value="${esc(sug.time||"")}"></label>
+  <label>備註 <input id="brNote" value="${esc(p.note||"")}"></label>
+ </details>`;
+ html+=`<div class="btns clipbtns">`;
+ if(p.dup) html+=`<button type="button" class="btn pri big" id="brUseDup">加入既有「${esc(String(p.dup.o.name).slice(0,16))}」</button><button type="button" class="btn" id="brNew">仍新增一筆</button>`;
+ else html+=`<button type="button" class="btn pri big" id="brGo">確認加入</button>`;
+ html+=`<button type="button" class="btn" id="brSkip">忽略</button><button type="button" class="btn sm" id="brMute">不再提示這段文字</button></div>
+ <label class="clipopt"><input type="checkbox" id="brClipOn" ${clipOn()?"checked":""}> 從 Google 地圖回來時自動偵測剪貼簿</label>`;
+ bar.innerHTML=html; bar.classList.add("on");
+ const readMore=()=>{ const d=window.__bringDraft||p; d.name=($("#brName")&&$("#brName").value.trim())||d.name; d.address=$("#brAddr")&&$("#brAddr").value.trim()||d.address; d.phone=$("#brPhone")&&$("#brPhone").value.trim()||d.phone; d.hours=$("#brHours")&&$("#brHours").value.trim()||d.hours; if($("#brCat")) d.category=$("#brCat").value; if($("#brStay")) d.stay_minutes=Math.max(5,Math.min(720,parseInt($("#brStay").value,10)||60)); if($("#brNote")) d.note=$("#brNote").value.trim(); if($("#brTime")&&d.suggest) d.suggest.time=$("#brTime").value||d.suggest.time; return d; };
+ const hide=()=>{bar.classList.remove("on");};
+ if($("#brClipOn")) $("#brClipOn").onchange=()=>clipSet($("#brClipOn").checked);
+ const h=clipHash(raw||p.raw||name);
+ if($("#brGo")) $("#brGo").onclick=()=>{const d=readMore(); applyBring(d,{day:$("#brDay")&&$("#brDay").value,useDup:false}); clipRemember(h); hide();};
+ if($("#brUseDup")) $("#brUseDup").onclick=()=>{const d=readMore(); applyBring(d,{day:$("#brDay")&&$("#brDay").value,useDup:true}); clipRemember(h); hide();};
+ if($("#brNew")) $("#brNew").onclick=()=>{const d=readMore(); applyBring(d,{day:$("#brDay")&&$("#brDay").value,useDup:"new"}); clipRemember(h); hide();};
+ if($("#brSkip")) $("#brSkip").onclick=()=>{clipRemember(h); hide(); toast("已忽略",1500);};
+ if($("#brMute")) $("#brMute").onclick=()=>{clipRemember(h); hide(); toast("之後不會再問這段文字",2000);};
+}
+function showPasteFallback(why){
+ let bar=$("#clipBar"); if(!bar){bar=document.createElement("div"); bar.id="clipBar"; document.body.appendChild(bar);}
+ bar.innerHTML=`<div class="cliphd">無法自動讀取剪貼簿${why?"（"+esc(why)+"）":""}</div>
+  <div class="cnt">請按一次「📋 貼上」，或把 Google 地圖的完整網址／座標貼到「搜尋地點」視窗下方。</div>
+  <div class="btns clipbtns"><button type="button" class="btn pri big" id="brPaste">📋 貼上</button><button type="button" class="btn" id="brSkip2">關閉</button></div>
+  <label class="clipopt"><input type="checkbox" id="brClipOn" ${clipOn()?"checked":""}> 從 Google 地圖回來時自動偵測剪貼簿</label>`;
+ bar.classList.add("on"); clipDenied=true;
+ if($("#brClipOn")) $("#brClipOn").onchange=()=>clipSet($("#brClipOn").checked);
+ if($("#brPaste")) $("#brPaste").onclick=()=>clipTry(true);
+ if($("#brSkip2")) $("#brSkip2").onclick=()=>bar.classList.remove("on");
+ const b=$("#srClipBtn"); if(b){ b.style.display="inline-flex"; b.classList.add("pri","big"); }
+}
+function looksLikePlace(t){ t=String(t||""); return /google\.[^\s]*\/maps|maps\.app\.goo\.gl|goo\.gl\/maps|-?\d{1,3}\.\d+\s*[,，]\s*-?\d{1,3}\.\d+/.test(t); }
+async function clipTry(fromBtn){
+ if(!fromBtn&&(!clipArmed||!clipOn())) return;
+ try{
+  if(!navigator.clipboard||!navigator.clipboard.readText){ if(fromBtn||clipArmed) showPasteFallback("這個瀏覽器不支援自動讀取"); return; }
+  const t=await navigator.clipboard.readText();
+  if(!t||!String(t).trim()){ if(fromBtn) toast("剪貼簿是空的",2000); return; }
+  const h=clipHash(t); if(!fromBtn&&clipWasSeen(h)) return;
+  if(!looksLikePlace(t)&&!fromBtn) return;
+  return bringIn(t,{fromClip:true});
+ }catch(e){ showPasteFallback(fromBtn?"請在跳出的視窗允許貼上":"瀏覽器要你按一下才准讀取剪貼簿"); }
+}
+function onClipResume(){ if(document.hidden) return; if(!clipArmed||!clipOn()) return; if(Date.now()-clipArmedAt>30*60*1000) return; clipTry(false); }
+async function bringIn(raw,opt){
+ opt=opt||{}; const extracted=extractGmaps(raw); const src=extracted.url||raw;
+ const r=parseLocationInput(src, extracted.name);
+ const day=opt.day||($("#srDay")&&+$("#srDay").value)||curDay;
+ if(r.err){ if($("#srPMsg")){$("#srPMsg").textContent=r.err; $("#srPMsg").classList.add("bad");} toast(r.err,4000); return r; }
+ if(r.needsResolve){
+  const nm=r.name||extracted.name||(opt.name||"").trim();
+  const msg=SHORT_MSG;
+  if($("#srPMsg")){$("#srPMsg").textContent=msg; $("#srPMsg").classList.add("bad");}
+  if(nm){ const q=nm; if($("#srQ")) $("#srQ").value=q; toast("短網址無法展開，改用店名「"+q+"」搜尋",3500); if(typeof runSearch==="function") runSearch("photon",q); else if($("#srGo")) $("#srGo").click(); }
+  else toast(msg,6000);
+  return r;
+ }
+ if(r.address&&r.lat==null){
+  const q=r.address; if($("#srQ")) $("#srQ").value=q; toast("這段是店名或住址，先幫你搜尋",2500); if($("#srGo")) $("#srGo").click(); return r;
+ }
+ const name=r.name||extracted.name||(opt.name||"").trim()||(r.address)||"";
+ const p=enrichPlace({name:name||("自訂地點 "+r.lat.toFixed(4)+","+r.lng.toFixed(4)),lat:r.lat,lng:r.lng,coord_source:r.source||"gmaps_url",gmaps_input:String(raw).trim(),address:r.address||"",raw:raw,kind:"other"});
+ if(!p.name) p.name=`自訂地點 ${p.lat.toFixed(4)},${p.lng.toFixed(4)}`;
+ showBringBar(p,raw); return p;
+}
+function gmapHref(q,day){ return "https://www.google.com/maps/search/?api=1&query="+encodeURIComponent((String(q||"").trim()+" "+dayArea(day)).trim()); }
+function bindGmapBtn(a,inp,dayFn){ if(!a) return;
+ const sync=()=>{try{a.href=gmapHref(inp&&inp.value||"", dayFn?dayFn():curDay);}catch(e){a.href="https://www.google.com/maps/search/?api=1&query="+encodeURIComponent((inp&&inp.value)||"");}};
+ sync(); if(inp) inp.addEventListener("input",sync); a.addEventListener("click",()=>{clipArm(); sync();}); a.setAttribute("rel","noopener"); a.setAttribute("target","_blank");
+}
+function wireListSearch(){
+ const q=$("#q"), rq=$("#rq");
+ if(q&&!$("#qGmap")){ const row=document.createElement("div"); row.className="qrow"; q.parentNode.insertBefore(row,q); row.appendChild(q); const a=document.createElement("a"); a.id="qGmap"; a.className="btn"; a.textContent="在 Google 地圖搜尋"; row.appendChild(a); bindGmapBtn(a,q,()=>$("#dsel1")&&+$("#dsel1").value||curDay); }
+ if(rq&&!$("#rqGmap")){ const row=document.createElement("div"); row.className="qrow"; rq.parentNode.insertBefore(row,rq); row.appendChild(rq); const a=document.createElement("a"); a.id="rqGmap"; a.className="btn"; a.textContent="在 Google 地圖搜尋"; row.appendChild(a); bindGmapBtn(a,rq,()=>$("#dsel2")&&+$("#dsel2").value||curDay); }
+}
+function shareBoot(){
+ try{
+  const u=new URL(location.href); const text=u.searchParams.get("text")||"", url=u.searchParams.get("url")||"", title=u.searchParams.get("title")||"";
+  if(!text&&!url) return;
+  const raw=[title,text,url].filter(Boolean).join("\n");
+  if(!looksLikePlace(raw)&&!isShortMaps(raw)) return;
+  clipArm();
+  const drop=()=>{ u.searchParams.delete("text"); u.searchParams.delete("url"); u.searchParams.delete("title"); history.replaceState({},"",u.pathname+u.search+u.hash); };
+  const go=()=>{ drop(); bringIn(raw,{fromShare:true}); };
+  if(window.__ready) go(); else document.addEventListener("DOMContentLoaded",()=>{ const i=setInterval(()=>{ if(window.__ready){ clearInterval(i); go(); } },200); setTimeout(()=>clearInterval(i),20000); });
+ }catch(e){}
+}
+document.addEventListener("visibilitychange",onClipResume);
+window.addEventListener("focus",onClipResume);
+window.addEventListener("pageshow",onClipResume);
+
+
+/* ---------- 1.9.13 地圖搜尋／點選反查／資料卡／IndexedDB 快取／附近停車場 ---------- */
+const IDB_NAME="plan-place-cache-v1", IDB_STORE="places", IDB_TTL=30*86400e3;
+let idbP=null, mapSugTimer=null, mapRevBusy=false, lastRevAt=0;
+function idbOpen(){ if(idbP) return idbP; if(!window.indexedDB) return Promise.resolve(null);
+ idbP=new Promise(res=>{ try{ const r=indexedDB.open(IDB_NAME,1); r.onupgradeneeded=()=>{const db=r.result; if(!db.objectStoreNames.contains(IDB_STORE)) db.createObjectStore(IDB_STORE,{keyPath:"key"});}; r.onsuccess=()=>res(r.result); r.onerror=()=>res(null);}catch(e){res(null);} }); return idbP; }
+function cacheKey(lat,lng,osm){ const ll=(lat!=null&&lng!=null)?(+lat).toFixed(4)+","+(+lng).toFixed(4):""; return String(osm||"")+"|"+ll; }
+async function idbGet(key){ const db=await idbOpen(); if(!db||!key) return null; return new Promise(res=>{ try{ const q=db.transaction(IDB_STORE,"readonly").objectStore(IDB_STORE).get(key); q.onsuccess=()=>{const v=q.result; if(v&&v.t&&Date.now()-v.t<IDB_TTL) res(v.v); else res(null);}; q.onerror=()=>res(null);}catch(e){res(null);} }); }
+async function idbSet(key,v){ const db=await idbOpen(); if(!db||!key) return; return new Promise(res=>{ try{ db.transaction(IDB_STORE,"readwrite").objectStore(IDB_STORE).put({key,t:Date.now(),v}); res(); }catch(e){res();} }); }
+async function nearbyParking(lat,lng){
+ const key="pk|"+cacheKey(lat,lng,null); const hit=await idbGet(key); if(hit) return hit;
+ const ql=`[out:json][timeout:15];(nwr(around:300,${(+lat).toFixed(6)},${(+lng).toFixed(6)})["amenity"="parking"];);out center tags 12;`;
+ try{ const xs=await overpassRun(ql,"parking"); const items=(xs||[]).filter(x=>isFinite(x.lat)&&isFinite(x.lng)).map(x=>({name:x.name||"停車場",lat:+x.lat,lng:+x.lng,fee:(x.tags&& (x.tags.fee||x.tags.charge))||x.fee||null,capacity:(x.tags&&x.tags.capacity)||null,dist:distM(+lat,+lng,+x.lat,+x.lng),osm:x.osm,mapcode:null,mapcode_status:"pending",type:"nearby",source:"overpass"})).sort((a,b)=>a.dist-b.dist).slice(0,8);
+  await idbSet(key,items); return items; }
+ catch(e){ return null; } }
+async function enrichAsync(p){
+ p=p||{}; p.field_status=p.field_status||{};
+ if(p.lat!=null&&!(p.parkings&&p.parkings.length)&&!p._pkTried){ p._pkTried=true; p.field_status.parking=p.field_status.parking||"查詢中…"; const pk=await nearbyParking(p.lat,p.lng);
+  if(pk&&pk.length){ p.parkings=pk; delete p.field_status.parking; p.parking_source="overpass"; } else p.field_status.parking="待補"; }
+ p=enrichPlace(p); return p; }
+function insertNear(day,it,lat,lng){
+ const arr=(itin(route)[day]||[]).slice(); let pos=arr.length;
+ if(lat!=null&&lng!=null){ let best=1e12, bi=arr.length; arr.forEach((x,i)=>{ const o=get(x); if(o&&o.lat!=null){ const d=distM(+o.lat,+o.lng,+lat,+lng); if(d<=best){best=d; bi=i+1;} } }); pos=bi; }
+ arr.splice(pos,0,it); saveDay(route,day,arr); return pos; }
+function showPlaceCard(p,opt){
+ opt=opt||{}; p=enrichPlace(p); window.__placeCard=p;
+ let el=$("#placeCard"); if(!el){ el=document.createElement("div"); el.id="placeCard"; document.body.appendChild(el); }
+ const sug=p.suggest||suggestWhen(p.lat,p.lng,p.category==="food"||p.kind==="restaurant"?"restaurant":"spot"); p.suggest=sug;
+ const fs=p.field_status||{}, sk=v=>v?esc(v):'<span class="skel">查詢中…</span>', todo=k=>fs[k]?`<span class="todo">${esc(fs[k])}</span>`:"";
+ const days=(D&&D.plan&&D.plan.routes[route]?D.plan.routes[route].days:[]).map(d=>`<option value="${d.day}" ${+d.day===(sug.day||curDay)?"selected":""}>Day ${d.day}${d.date?" "+String(d.date).slice(5).replace("-","/"):""}</option>`).join("");
+ const rates=[]; if(p.dup&&p.ratings&&p.ratings.length) p.ratings.forEach(r=>{ if(r.source==="tabelog") rates.push("Tabelog "+r.score+(r.url?" ↗":"")); });
+ const gm=p.google_maps||(p.lat!=null?gmSearch(p.lat,p.lng):"");
+ const pks=(p.parkings||[]).slice(0,6);
+ el.innerHTML=`<button class="x" type="button" id="pcX" aria-label="關閉">×</button>
+  <h3>${esc(p.name||"這個地點")}</h3>
+  <div class="tags">${p.category?`<span class="tag ${p.category==="anime_game"?"ag":""}">${esc(CAT[p.category]||p.category)}</span>`:""}${p.dup?`<span class="tag cu">已有：${esc(p.dup.kind==="restaurant"?"本行程餐廳":p.dup.kind==="custom"?"自訂":"本行程景點")}</span>`:""}${p.ag_level==="review"?`<span class="tag cu">待審（博物館／聖地）</span>`:""}${p.cat?`<span class="tag">${esc(p.cat)}</span>`:""}</div>
+  <table class="info">
+   <tr><td>地址</td><td>${p.address?esc(p.address):todo("address")||"—"}</td></tr>
+   <tr><td>座標</td><td>${p.lat!=null?esc(p.lat+", "+p.lng):"待查"}</td></tr>
+   <tr><td>電話</td><td>${p.phone?esc(p.phone):todo("phone")||"—"}</td></tr>
+   <tr><td>營業</td><td>${p.hours?esc(p.hours):todo("hours")||"—"}</td></tr>
+   <tr><td>MapCode</td><td>${p.mapcode?esc(p.mapcode):`<span class="todo">待查</span>`}${p.lat!=null?` <a class="btn sm" target="_blank" rel="noopener" href="${mapionUrl(p.lat,p.lng)}">在 Mapion 查</a>`:""}</td></tr>
+   <tr><td>評分</td><td>${rates.length?esc(rates.join("／"))+"； ":""}${gm?`<a target="_blank" rel="noopener" href="${esc(gm)}">Google 地圖</a>`:"未查"}</td></tr>
+   <tr><td>停車場</td><td>${fs.parking==="查詢中…"?sk():(pks.length?pks.map(x=>esc((x.name||"停車場")+(x.dist!=null?" "+(x.dist>=1000?(x.dist/1000).toFixed(1)+" km":x.dist+" m"):"")+(x.fee?" ｜收費 "+x.fee:"")+(x.capacity?" ｜車位 "+x.capacity:"")+" ｜MapCode 待查")).join("<br>"):(todo("parking")||"待補"))}</td></tr>
+  </table>
+  <div class="cnt">建議：${esc(sug.label||("Day "+(sug.day||curDay)))}，停留約 ${p.stay_minutes||60} 分</div>
+  <div class="btns"><select id="pcDay" aria-label="加入哪一天">${days}</select><button class="btn pri big" type="button" id="pcAdd">加入第 <span id="pcDayN">${sug.day||curDay}</span> 天</button><a class="btn" id="pcG" target="_blank" rel="noopener" href="${gmapHref(p.name,sug.day)}">在 Google 地圖搜尋</a></div>`;
+ el.classList.add("on"); clipArm();
+ const sync=()=>{ const v=$("#pcDay")&&$("#pcDay").value; if($("#pcDayN")&&v) $("#pcDayN").textContent=v; };
+ if($("#pcDay")) $("#pcDay").onchange=sync;
+ if($("#pcX")) $("#pcX").onclick=()=>el.classList.remove("on");
+ if($("#pcAdd")) $("#pcAdd").onclick=()=>{ const day=+$("#pcDay").value||sug.day||curDay; p.suggest=p.suggest||sug; p.suggest.day=day; applyBring(p,{day,useDup:p.dup?true:false,insertNear:true}); el.classList.remove("on"); if(map&&p.lat!=null){ try{ map.setView([p.lat,p.lng],16);}catch(e){} } renderMarkers(); };
+ // background enrich（只在尚未查停車場時跑一次，避免 showPlaceCard↔enrichAsync 無限重繪）
+ if(!opt.noEnrich && p.lat!=null && !(p.parkings&&p.parkings.length) && !p._pkTried){
+  enrichAsync(p).then(q=>{ if(window.__placeCard!==p&&window.__placeCard!==q) return; const daySel=$("#pcDay")&&$("#pcDay").value; showPlaceCard(q,{noEnrich:true}); if(daySel&&$("#pcDay")) $("#pcDay").value=daySel; }).catch(()=>{});
+ }
+}
+async function reverseAt(lat,lng){
+ if(mapRevBusy) return; const now=Date.now(); if(now-lastRevAt<800) return; lastRevAt=now; mapRevBusy=true;
+ try{
+  const loc=findDup(lat,lng,""); const near=loc&&loc.dist<=50?loc:null;
+  const key=cacheKey(lat,lng,null); const cached=await idbGet("rv|"+key);
+  if(cached){ showPlaceCard(Object.assign({coord_source:cached.coord_source||"cache"},cached)); return; }
+  if(near){ const p=enrichPlace({name:near.o.name,lat:near.o.lat,lng:near.o.lng,address:near.o.address||"",osm:near.o.osm,kind:near.kind,category:near.o.category,src:"local"}); showPlaceCard(p); await idbSet("rv|"+key,p); return; }
+  showPlaceCard({name:"地圖上的位置",lat,lng,coord_source:"map_click",kind:"other",field_status:{hours:"查詢中…",phone:"查詢中…",address:"查詢中…",parking:"查詢中…"}});
+  let items=[];
+  try{ const ql=`[out:json][timeout:15];(nwr(around:40,${(+lat).toFixed(6)},${(+lng).toFixed(6)})["name"];);out center tags 8;`; items=await overpassRun(ql,"reverse"); }catch(e){ items=[]; }
+  if((!items||!items.length)&&navigator.onLine!==false){
+   try{ await waitGap("photon"); const u=`https://photon.komoot.io/reverse?lat=${(+lat).toFixed(6)}&lon=${(+lng).toFixed(6)}&lang=default`; const res=await fetchT(u,{},12000); if(res.ok){ const j=await res.json(); items=(j.features||[]).map(f=>{const pr=f.properties||{}, g=(f.geometry&&f.geometry.coordinates)||[]; return {name:pr.name||pr.street||"地圖上的位置",lat:+g[1]||+lat,lng:+g[0]||+lng,address:[pr.state,pr.city,pr.district,pr.street,pr.housenumber].filter(Boolean).join(" "),osm:pr.osm_type&&pr.osm_id?(({N:"node",W:"way",R:"relation"})[pr.osm_type]||pr.osm_type)+"/"+pr.osm_id:null,src:"photon",tags:pr};}); } }catch(e){}
+  }
+  const best=(items||[]).filter(x=>isFinite(x.lat)&&isFinite(x.lng)&&x.name).map(x=>Object.assign(x,{dist:distM(lat,lng,x.lat,x.lng)})).sort((a,b)=>a.dist-b.dist)[0];
+  const p=enrichPlace(best?{name:best.name,lat:best.lat,lng:best.lng,address:best.address||"",osm:best.osm,src:best.src||"overpass",coord_source:best.src||"overpass",kind:"other",tags:best.tags||{},cat:best.cat}:{name:"地圖上的位置",lat,lng,coord_source:"map_click",kind:"other"});
+  await idbSet("rv|"+key,p); showPlaceCard(p);
+ } finally{ mapRevBusy=false; } }
+function renderMapSug(items,q){
+ const box=$("#mapSug"); if(!box) return; if(!items||!items.length){ box.hidden=true; box.innerHTML=`<div class="cnt">找不到「${esc(q)}」。可改日文名，或<button class="btn sm" type="button" id="msG2">在 Google 地圖搜尋</button></div>`; box.hidden=false; if($("#msG2")) $("#msG2").onclick=()=>{clipArm(); window.open(gmapHref(q,curDay),"_blank","noopener");}; return; }
+ box.innerHTML=items.slice(0,12).map((x,i)=>`<button type="button" class="msitem" data-msi="${i}"><b>${esc(x.name)}</b> <span class="cnt">${x.local?"本行程":"OSM"}${x.dist!=null?" ｜ "+(x.dist>=1000?(x.dist/1000).toFixed(1)+" km":x.dist+" m"):""}${x.address?" ｜ "+esc(String(x.address).slice(0,36)):""}${x.category||x.cat?" ｜ "+esc(CAT[x.category]||x.cat||""):""}</span></button>`).join("");
+ box.hidden=false; box._items=items;
+}
+async function mapTypeahead(q){
+ q=String(q||"").trim(); const box=$("#mapSug"); if(!q||q.length<2){ if(box){box.hidden=true; box.innerHTML="";} return; }
+ const c=searchCenter(curDay), r=+$("#mapR")&&+$("#mapR").value, unl=!r;
+ const loc=typeof localSearch==="function"?localSearch(q,c):[];
+ renderMapSug(loc,q);
+ if(navigator.onLine===false) return;
+ const key=["map",q,c?c.lat.toFixed(3):"",c?c.lng.toFixed(3):"",r||0].join("|");
+ const cached=await idbGet("sg|"+key); if(cached){ renderMapSug(loc.concat(cached).filter((x,i,a)=>a.findIndex(y=>(y.osm||y.id||y.name)===(x.osm||x.id||x.name))===i).sort((a,b)=>(a.dist==null?1e12:a.dist)-(b.dist==null?1e12:b.dist)),q); return; }
+ try{
+  const rr=await searchPlaces("photon",q,c||{lat:36.2,lng:138.2,label:"日本"},unl?0:(r||3000));
+  const items=rr.items||[]; await idbSet("sg|"+key,items);
+  const all=loc.concat(items); const seen=new Set();
+  renderMapSug(all.filter(x=>{const k=x.osm||x.id||(x.lat&&x.lat.toFixed(5)+","+x.lng.toFixed(5)); if(seen.has(k)) return false; seen.add(k); return true;}).sort((a,b)=>(a.dist==null?1e12:a.dist)-(b.dist==null?1e12:b.dist)),q);
+ }catch(e){ /* keep local */ }
+}
+function ensureMapSearch(){
+ const w=$("#mapwrap"); if(!w||$("#mapSearch")) return;
+ const box=document.createElement("div"); box.id="mapSearch";
+ box.innerHTML=`<div class="msrow"><input id="mapQ" type="search" enterkeyhint="search" placeholder="搜尋地點（中文也可以）" aria-label="地圖搜尋" autocomplete="off"><select id="mapR" aria-label="範圍"><option value="3000" selected>附近 3 km</option><option value="0">不限範圍</option></select><a class="btn sm" id="mapG" target="_blank" rel="noopener" href="#">在 Google 地圖搜尋</a></div><div id="mapSug" hidden></div>`;
+ w.insertBefore(box,w.firstChild);
+ const inp=$("#mapQ"); bindGmapBtn($("#mapG"),inp,()=>curDay);
+ inp.addEventListener("input",()=>{ clearTimeout(mapSugTimer); const v=inp.value; mapSugTimer=setTimeout(()=>mapTypeahead(v),450); });
+ inp.addEventListener("keydown",e=>{ if(e.key==="Enter"){ e.preventDefault(); clearTimeout(mapSugTimer); mapTypeahead(inp.value); } });
+ $("#mapSug").addEventListener("click",e=>{ const b=e.target.closest("[data-msi]"); if(!b) return; const x=($("#mapSug")._items||[])[+b.dataset.msi]; if(!x) return; const p=enrichPlace({name:x.name,lat:x.lat,lng:x.lng,address:x.address,osm:x.osm,src:x.src||(x.local?"local":"photon"),coord_source:x.src||(x.local?"local":"photon"),kind:x.kind||"other",id:x.id,local:x.local,category:x.category,cat:x.cat}); if(x.local&&x.id){ p.dup={o:SP[x.id]||(RS&&RS[x.id])||x,kind:x.kind,dist:x.dist||0,sim:1}; } showPlaceCard(p); if(map&&p.lat!=null) try{map.setView([p.lat,p.lng],16);}catch(err){} });
+ $("#mapR").addEventListener("change",()=>{ if(inp.value.trim().length>=2) mapTypeahead(inp.value); });
+}
+function bindMapClick(){ if(!map||map._revBound) return; map._revBound=true;
+ map.on("click",ev=>{ if(map.getContainer().style.cursor==="crosshair") return; reverseAt(ev.latlng.lat,ev.latlng.lng); }); }
+shareBoot();
+function gmapsSearchUrl(q,day){return (typeof gmapHref==="function"?gmapHref: (qq,dd)=>SEARCH_ENDPOINTS.gmaps+encodeURIComponent((String(qq||"").trim()+" "+(typeof dayArea==="function"?dayArea(dd):"")).trim()))(q,day);}
 function addPlaceToDay(p,day){ const r=cpUpsert(Object.assign({added_day:day,added_at:nowISO()},p)); addTo("custom",r.place.id,day); renderSpots(); return r.place;}
 function bestDay(lat,lng){ if(lat==null) return null; let best=null; for(const d of D.plan.routes[route].days){ const pts=[]; if(d.start&&d.start.lat!=null) pts.push(d.start);
   (itin(route)[d.day]||[]).forEach(x=>{const o=get(x); if(o&&o.lat!=null) pts.push(o);}); for(const p of pts){ const m=distM(+p.lat,+p.lng,lat,lng); if(!best||m<best.m) best={day:+d.day,m}; } } return best;}
@@ -532,31 +978,31 @@ function srRender(q,cached){ const day=+($("#srDay")&&$("#srDay").value)||SDAY, 
   <li>或用 Google 地圖找到後，<b>複製網址（或長按地點複製座標）貼回下面 ②</b>，就能加入行程。</li></ul>${g}<div class="cnt">② 貼回的位置就在下方 ↓</div></div>`:"";
  $("#srList").innerHTML=zero+SR.map(row).join("")+(SR.length?`<div class="cnt srmore">${cached?"（24 小時內查過，使用快取）｜":""}${osmN?"地圖資料來自 OpenStreetMap，分店可能不齊。":""}找不到想要的？<a target="_blank" rel="noopener" class="gmore" href="${gmapsSearchUrl(q,day)}">在 Google 地圖找「${esc(q)}」</a>，再把網址或座標貼回下方。</div>`:"");
  if(!SR.length){ const box=$("#srPasteBox"); if(box){ $("#srList").after(box); box.classList.add("hot"); } }}
-function openSearch(day,opt){ opt=opt||{}; SDAY=day=+day||curDay; SC=searchCenter(day); SR=[]; const di=dayInfo(route,day);
+function openSearch(day,opt){ opt=opt||{}; SDAY=day=+day||curDay; SC=searchCenter(day); SR=[]; const di=dayInfo(route,day); if(typeof clipArm==="function") clipArm();
  const dsel=`<select id="srDay" aria-label="加入哪一天">${D.plan.routes[route].days.map(d=>`<option value="${d.day}" ${+d.day===day?"selected":""}>Day ${d.day}（${d.date.slice(5).replace("-","/")}）</option>`).join("")}</select>`;
  openModal(`<h2 style="font-size:18px;margin:0 36px 6px 0">🔎 找地點 → 加入 ${dsel}</h2>
  <div class="cnt"><span id="srCenter">以「${esc(SC?SC.label:"（這天沒有中心座標）")}」為中心</span> <button class="btn sm" id="srMapC" type="button">改用目前地圖中心</button></div>
- <div class="srrow"><input id="srQ" type="search" enterkeyhint="search" placeholder="例：駿河屋、道の駅、ラーメン" aria-label="關鍵字"><select id="srR" aria-label="範圍"><option value="1000">1 km</option><option value="3000" selected>3 km</option><option value="10000">10 km</option></select></div>
+ <div class="srrow"><input id="srQ" type="search" enterkeyhint="search" placeholder="例：駿河屋、道の駅、ラーメン" aria-label="關鍵字"><select id="srR" aria-label="範圍"><option value="1000">1 km</option><option value="3000" selected>3 km</option><option value="10000">10 km</option><option value="0">不限範圍（全日本）</option></select></div>
  <div class="srchips" role="group" aria-label="找附近分類">${SCATS.map(c=>`<button class="chip" type="button" data-srcat="${c.k}">${c.l}</button>`).join("")}</div>
- <div class="btns"><button class="btn pri" id="srGo" type="button">搜尋</button><button class="btn" id="srOv" type="button">列出附近分店</button><a class="btn" id="srG" target="_blank" rel="noopener" href="${gmapsSearchUrl("",day)}">在 Google 地圖找</a><button class="btn" id="srPick" type="button">在地圖上點選</button></div>
+ <div class="btns"><button class="btn pri" id="srGo" type="button">搜尋</button><button class="btn" id="srOv" type="button">列出附近分店</button><a class="btn pri" id="srG" target="_blank" rel="noopener" href="${gmapsSearchUrl("",day)}">在 Google 地圖搜尋</a><button class="btn" id="srPick" type="button">在地圖上點選</button></div>
  <div class="cnt srmsg" id="srMsg" role="status"></div><div id="srList"></div>
  <div id="srPasteBox"><h4>② 貼上 Google 地圖網址／座標／住址</h4>
  <div class="cnt">在 Google 地圖點選地點 → 分享或複製網址列（含 /place/…/@緯度,經度），或長按地點複製座標，貼到這裡。</div>
  <input id="srName" class="srin" maxlength="120" placeholder="名稱（例：駿河屋 池袋キャラグッズ館）" aria-label="名稱">
  <input id="srPaste" class="srin" placeholder="35.730957,139.715256 或 https://www.google.com/maps/… 或 住址" aria-label="網址或座標或住址">
- <div class="btns"><button class="btn pri" id="srPasteGo" type="button">帶入並加入 Day ${day}</button></div><div class="cnt srmsg" id="srPMsg" role="status"></div></div>
+ <div class="btns"><button class="btn pri big" id="srClipBtn" type="button">📋 貼上</button><button class="btn pri" id="srPasteGo" type="button">帶入並加入 Day ${day}</button></div><div class="cnt srmsg" id="srPMsg" role="status"></div><label class="clipopt"><input type="checkbox" id="srClipOn" ${clipOn()?"checked":""}> 從 Google 地圖回來時自動偵測剪貼簿</label></div>
  <div class="attrib">© OpenStreetMap contributors｜Search by Photon｜住址檢索：国土地理院｜MapCode 由景點部補查；「マップコード」および「MAPCODE」は(株)デンソーの登録商標です。</div>`);
  const msg=(m,bad)=>{$("#srMsg").textContent=m; $("#srMsg").classList.toggle("bad",!!bad);};
  if(navigator.onLine===false) msg(OFFLINE_MSG,true);
- $("#srQ").addEventListener("input",()=>{$("#srG").href=gmapsSearchUrl($("#srQ").value,day);});
+ $("#srQ").addEventListener("input",()=>{$("#srG").href=gmapsSearchUrl($("#srQ").value,day);}); if($("#srG")) $("#srG").addEventListener("click",()=>{if(typeof clipArm==="function") clipArm();}); if($("#srClipOn")) $("#srClipOn").onchange=()=>clipSet($("#srClipOn").checked); if($("#srClipBtn")) $("#srClipBtn").addEventListener("click",()=>{if(typeof clipTry==="function") clipTry(true);}); if(typeof clipDenied!=="undefined"&&clipDenied){const b=$("#srClipBtn"); if(b) b.classList.add("show");}
  $("#srMapC").addEventListener("click",()=>{ if(!map) return; const c=map.getCenter(); SC={lat:+c.lat.toFixed(6),lng:+c.lng.toFixed(6),label:"目前地圖中心"}; $("#srCenter").textContent=`以「目前地圖中心（${SC.lat.toFixed(4)}, ${SC.lng.toFixed(4)}）」為中心`;});
  const run=async svc=>{ const q=$("#srQ").value.trim(); if(!q){msg("請輸入關鍵字",true); return;} if(searchBusy){msg("請稍候，上一個搜尋還在進行"); return;}
   searchBusy=true; msg(svc==="overpass"?"正在列出附近分店（Overpass，最多約 30 秒）…":"搜尋中…"); $("#srList").innerHTML="";
   const loc=localSearch(q,SC);
-  try{ const r=await searchPlaces(svc,q,SC,+$("#srR").value); SR=loc.concat(r.items); msg(`找到 ${SR.length} 筆（本行程資料 ${loc.length}、${svc==="overpass"?"附近分店":"地圖"} ${r.items.length}，半徑 ${(+$("#srR").value)/1000} km）`); srRender(q,r.cached); }
+  try{ const rv=+$("#srR").value; const r=await searchPlaces(svc,q,SC,rv); SR=loc.concat(r.items); msg(`找到 ${SR.length} 筆（本行程資料 ${loc.length}、${svc==="overpass"?"附近分店":"地圖"} ${r.items.length}，${rv>0?"半徑 "+(rv/1000)+" km":"不限範圍（全日本）"}）`); srRender(q,r.cached); }
   catch(err){ SR=loc; if(loc.length){ msg(`本行程資料找到 ${loc.length} 筆；`+(err.offline?OFFLINE_MSG:FAIL_MSG),true); srRender(q,false); console.warn("搜尋失敗",err); searchBusy=false; return; } msg(err.offline?OFFLINE_MSG:(err.message==="請輸入關鍵字"||/中心座標/.test(err.message)?err.message:FAIL_MSG),true); srRender(q,false); console.warn("搜尋失敗",err); }
   finally{ searchBusy=false; } };
- $("#srGo").addEventListener("click",()=>run("photon")); $("#srOv").addEventListener("click",()=>run("overpass"));
+ runSearch=run; $("#srGo").addEventListener("click",()=>run("photon")); $("#srOv").addEventListener("click",()=>run("overpass"));
  $("#srQ").addEventListener("keydown",e=>{if(e.key==="Enter"){e.preventDefault(); run("photon");}});
  $("#srDay").addEventListener("change",()=>{ day=SDAY=+$("#srDay").value; SC=searchCenter(day)||SC; $("#srCenter").textContent=`以「${SC?SC.label:"（這天沒有中心座標）"}」為中心`; $("#srPasteGo").textContent=`帶入並加入 Day ${day}`; if($("#srList").innerHTML) srRender($("#srQ").value.trim(),false); });
  $("#mbody").querySelector(".srchips").addEventListener("click",async e=>{ const b=e.target.closest("[data-srcat]"); if(!b) return; if(searchBusy){msg("請稍候，上一個搜尋還在進行"); return;}
@@ -574,11 +1020,10 @@ function openSearch(day,opt){ opt=opt||{}; SDAY=day=+day||curDay; SC=searchCente
   if(x.local&&x.kind!=="lodging"){ addTo(x.kind,x.id,day); b.disabled=true; b.textContent="已加入"; window.__lastAdded=x.id; return; }
   const p=addPlaceToDay({name:x.name,lat:x.lat,lng:x.lng,address:x.address,osm:x.osm,coord_source:x.src,kind:"other"},day); b.disabled=true; b.textContent="已加入"; window.__lastAdded=p.id;});
  $("#srPasteGo").addEventListener("click",async()=>{ const pm=(m,bad)=>{$("#srPMsg").textContent=m; $("#srPMsg").classList.toggle("bad",!!bad);};
-  const raw=$("#srPaste").value; const r=parseLocationInput(raw); let name=$("#srName").value.trim();
+  const raw=$("#srPaste").value; if(typeof bringIn==="function"&&raw.trim()){ const r0=parseLocationInput(raw,$("#srName").value.trim()); if(!r0.err&&!r0.needsResolve&&r0.lat!=null){ bringIn(raw,{name:$("#srName").value.trim(),day:day}); return; } }
+  const r=parseLocationInput(raw,$("#srName").value.trim()); let name=$("#srName").value.trim()||r.name||"";
   if(r.err) return pm(r.err,true);
-  if(r.needsResolve){ if(!name) return pm("短網址無法在網頁展開。請填「名稱」後再按一次（會先存成「座標待後台解析」），或改貼座標／完整網址。",true);
-   const p=addPlaceToDay({name,lat:null,lng:null,coord_source:"pending_shortlink",gmaps_input:raw.trim(),kind:"other"},day); window.__lastAdded=p.id;
-   return pm(`已加入「${name}」：短網址無法在網頁展開，座標待後台解析（景點部會補）。建議改貼座標或完整網址，才有導航與地圖點。`); }
+  if(r.needsResolve){ const nm=name||r.name||""; if(nm){ if($("#srQ")) $("#srQ").value=nm; pm(SHORT_MSG+" 已用店名「"+nm+"」改搜尋。",true); run("photon"); return; } return pm(SHORT_MSG,true); }
   let lat=r.lat, lng=r.lng, src=r.source, address="";
   if(r.address){ try{ pm("用國土地理院查住址中…"); const g=await gsiSearch(r.address); if(!g) return pm("查不到這個住址。請改貼座標或 Google 地圖網址。",true); lat=g.lat; lng=g.lng; src="gsi"; address=g.address; }
    catch(err){ return pm(err.offline?OFFLINE_MSG:"住址查詢暫時無法使用，請改貼座標或 Google 地圖網址。",true); } }
@@ -712,8 +1157,12 @@ function mergeFoodOnce(){
 function itin(r){const s=store(); return (s[r]&&typeof s[r]==="object")?s[r]:suggested(r);}
 function saveDay(r,day,arr){const s=store(); if(!s[r]) s[r]=suggested(r); s[r][day]=arr; ls.set(K.it,JSON.stringify(s));}
 function dayInfo(r,day){return D.plan.routes[r].days.find(d=>d.day===+day);}
-function addTo(type,id,day){
- day=+day||curDay; const arr=(itin(route)[day]||[]).slice(); arr.push({type,id}); saveDay(route,day,arr); renderItin();
+function addTo(type,id,day,extra){
+ day=+day||curDay; const it=Object.assign({type,id},extra||{}); const near=!!it.insertNear; delete it.insertNear;
+ const o=get(it)||(SP&&SP[id])||(typeof RS!=="undefined"&&RS[id])||null;
+ if(near&&typeof insertNear==="function"&&o&&o.lat!=null) insertNear(day,it,+o.lat,+o.lng);
+ else { const arr=(itin(route)[day]||[]).slice(); arr.push(it); saveDay(route,day,arr); }
+ renderItin(); if(typeof renderMarkers==="function") renderMarkers();
  const di=dayInfo(route,day); toast("已加入 Day "+day+"（"+di.date.slice(5).replace("-","/")+"）");
 }
 function lodgingOn(r,date){return (D.lodging||[]).find(l=>l.route===r&&l.check_in<=date&&date<l.check_out)||null;}
@@ -755,12 +1204,12 @@ function fillSelects(){
  const rb=routeBases(route); const allb=D.bases.map(b=>b.key);
  const opt=(v,t)=>`<option value="${esc(v)}">${esc(t)}</option>`;
  for(const id of ["#fbase","#rbase"]){const cur=$(id).value; $(id).innerHTML=opt("","全部據點")+allb.map(k=>opt(k,(rb.includes(k)?"★ ":"")+BASEN[k])).join("")+opt("_none","其他區域（非本次路線）"); $(id).value=allb.includes(cur)||cur==="_none"?cur:"";}
- const curc=$("#fcat").value; let cats=[...new Set([].concat(...D.spots.map(catsOf)).filter(Boolean))]; if(D.places_applied) cats=CAT_ORDER.filter(c=>cats.indexOf(c)>=0).concat(cats.filter(c=>CAT_ORDER.indexOf(c)<0)); $("#fcat").innerHTML=opt("","全部類別")+cats.map(c=>opt(c,CAT[c]||c)).join(""); $("#fcat").value=cats.includes(curc)?curc:"";
+ const curc=$("#fcat").value; let cats=[...new Set([].concat(...D.spots.map(catsOf)).filter(Boolean))]; if(D.places_applied) cats=CAT_ORDER.filter(c=>cats.indexOf(c)>=0||c==="anime_game").concat(cats.filter(c=>CAT_ORDER.indexOf(c)<0&&c!=="anime_game")); else if(cats.some(c=>c==="shrine"||c==="popular"||c==="anime_game")&&cats.indexOf("anime_game")<0){ const i=Math.max(0,cats.findIndex(c=>CAT_ORDER.indexOf(c)>CAT_ORDER.indexOf("anime_game"))); cats.splice(i>=0?i:cats.length,0,"anime_game"); } $("#fcat").innerHTML=opt("","全部類別")+cats.map(c=>opt(c,CAT[c]||c)).join(""); $("#fcat").value=cats.includes(curc)?curc:""; if(typeof wireListSearch==="function") wireListSearch();
  const dsel=D.plan.routes[route].days.map(d=>opt(d.day,dayLabel(d))).join("");
  document.querySelectorAll(".dsel").forEach(s=>{s.innerHTML=dsel; s.value=curDay;});
 }
 function spotCard(s,sel){
- if(s.custom) return `<div class="card custom" data-id="${esc(s.id)}"><h3 data-open="custom:${esc(s.id)}">👤 ${esc(s.name)}</h3><div class="tags"><span class="tag cu">👤 自訂</span>${s.prefecture?`<span class="tag">${esc(s.prefecture)}</span>`:""}${s.address?`<span class="tag">${esc(String(s.address).slice(0,30))}</span>`:""}<span class="tag">建議 ${s.stay_minutes} 分</span>${s.lat==null?'<span class="tag todo">座標待後台解析</span>':`<span class="tag">${s.lat}, ${s.lng}</span>`}${s.mapcode?`<span class="tag">MapCode ${esc(s.mapcode)}</span>`:'<span class="tag todo">MapCode 待查</span>'}${s.server_only?'<span class="tag">景點部已補查</span>':""}</div><div class="desc">${esc((s.note||"").slice(0,90))}</div>
+ if(s.custom) return `<div class="card custom" data-id="${esc(s.id)}"><h3 data-open="custom:${esc(s.id)}">👤 ${esc(s.name)}</h3><div class="tags"><span class="tag cu">👤 自訂</span>${s.category&&s.category!=="custom"?`<span class="tag ${s.category==="anime_game"?"ag":""}">${esc(CAT[s.category]||s.category)}</span>`:""}${s.prefecture?`<span class="tag">${esc(s.prefecture)}</span>`:""}${s.address?`<span class="tag">${esc(String(s.address).slice(0,30))}</span>`:""}${s.hours?`<span class="tag">🕒 ${esc(String(s.hours).slice(0,24))}</span>`:(s.field_status&&s.field_status.hours?`<span class="tag todo">營業 ${esc(s.field_status.hours)}</span>`:"")}${s.phone?`<span class="tag">☎ ${esc(s.phone)}</span>`:""}<span class="tag">建議 ${s.stay_minutes} 分</span>${s.lat==null?'<span class="tag todo">座標待後台解析</span>':`<span class="tag">${s.lat}, ${s.lng}</span>`}${s.mapcode?`<span class="tag">MapCode ${esc(s.mapcode)}</span>`:'<span class="tag todo">MapCode 待查</span>'}${(s.parkings&&s.parkings.length)?`<span class="tag">P ${s.parkings.length}</span>`:(s.field_status&&s.field_status.parking?`<span class="tag todo">停車場 ${esc(s.field_status.parking)}</span>`:'<span class="tag todo">停車場待補</span>')}${s.ratings&&s.ratings.some(r=>r.source==="tabelog")?`<span class="tag rate">Tabelog ${s.ratings.find(r=>r.source==="tabelog").score}</span>`:(s.field_status&&s.field_status.ratings?`<span class="tag">評分 ${esc(s.field_status.ratings)}</span>`:'')}${s.google_maps||s.lat!=null?`<a class="tag" target="_blank" rel="noopener" href="${esc(s.google_maps||gmSearch(s.lat,s.lng))}">Google 地圖</a>`:""}${s.server_only?'<span class="tag">景點部已補查</span>':""}</div><div class="desc">${esc((s.note||s.address||"").slice(0,90))}</div>
  <div class="btns"><button class="btn" data-open="custom:${esc(s.id)}">詳情／導航</button><button class="btn pri addbtn" data-add="custom:${esc(s.id)}" data-sel="${sel}">＋加入行程</button>${s.server_only?"":`<button class="btn" data-cuedit="${esc(s.id)}">編輯</button><button class="btn warn" data-cudel="${esc(s.id)}">刪除</button>`}</div></div>`;
  const tags=[`<span class="tag ${s.category==="anime_game"?"ag":""}">${esc(CAT[s.category]||s.category)}</span>`,plSpotTags(s),s.event?`<span class="tag ev">📅 ${esc((s.date_label||"").slice(0,22))}</span>`:"",s.nearest_station?`<span class="tag">🚉 ${esc(s.nearest_station.split("／")[0].slice(0,24))}</span>`:"",s.base?`<span class="tag">${esc((BASEN[s.base]||s.base).split("（")[0])}</span>`:`<span class="tag">${esc(s.region||"")}</span>`,
   Object.keys(SAME).filter(k=>SAME[k]===s.id&&RS[k]).map(k=>`<span class="tag rest">🍴 同一站：${esc(RS[k].name.split("（")[0])}</span>`).join(""), s.rain_ok?'<span class="tag rain">☔ 雨天可</span>':"", s.stay_minutes?`<span class="tag">建議 ${s.stay_minutes} 分</span>`:"", (s.routes||[]).length?`<span class="tag">路線 ${esc(s.routes.join("/"))}</span>`:""].join("");
@@ -773,7 +1222,7 @@ function restCard(r,sel){
   r.cuisine?`<span class="tag">${esc(r.cuisine)}</span>`:"",r.price_range?`<span class="tag">${esc(r.price_range)}</span>`:"",r.meal?`<span class="tag">${esc([].concat(r.meal).map(m=>MEAL[m]||m).join("／"))}</span>`:"",
   r.base_area?`<span class="tag">📍 ${esc(String(r.base_area).split("（")[0])}</span>`:"",SAME[r.id]&&SP[SAME[r.id]]?`<span class="tag rest">🔗 與景點同一站：${esc(SP[SAME[r.id]].name.split("（")[0])}</span>`:"",resvTxt(r.reservation)?`<span class="tag">訂位：${esc(resvTxt(r.reservation).slice(0,30))}</span>`:"",r.closed&&r.pl?`<span class="tag">休 ${esc(String(r.closed).slice(0,20))}</span>`:"",r.mapcode&&r.pl?`<span class="tag">MapCode ${esc(r.mapcode)}</span>`:"",r.checked_date?`<span class="tag">查核 ${esc(r.checked_date)}${r.checked_by?"（"+esc(r.checked_by)+"）":""}</span>`:""].join("");
  return `<div class="card" data-id="${esc(r.id)}"><h3 data-open="restaurant:${esc(r.id)}">🍴 ${esc(r.name)}</h3><div class="tags">${sc}</div><div class="desc">${esc((r.description||"").slice(0,90))}</div>
- <div class="btns"><button class="btn" data-open="restaurant:${esc(r.id)}">詳情／導航</button><button class="btn pri addbtn" data-add="restaurant:${esc(r.id)}" data-sel="${sel}">＋加入行程</button>${TE&&TE.local&&gmUrl(r)?`<a class="btn gmlink" target="_blank" rel="noopener" href="${esc(gmUrl(r))}">Google 地圖</a>`:""}</div></div>`;
+ <div class="btns"><button class="btn" data-open="restaurant:${esc(r.id)}">詳情／導航</button><button class="btn pri addbtn" data-add="restaurant:${esc(r.id)}" data-sel="${sel}">＋加入行程</button>${(gmUrl(r)||r.name)?`<a class="btn gmlink" target="_blank" rel="noopener" href="${esc(gmUrl(r)||(SEARCH_ENDPOINTS.gmaps+encodeURIComponent(r.name)))}">Google 地圖</a>`:""}</div></div>`;
 }
 function filtSpots(){
  const q=$("#q").value.trim().toLowerCase(), b=$("#fbase").value, c=$("#fcat").value, rain=$("#frain").checked, ro=$("#froute").checked;
@@ -784,7 +1233,7 @@ function filtSpots(){
 }
 const LIMIT=80; let sShown=LIMIT, rShown=LIMIT;
 function more(n,shown,kind){return n>shown?`<button class="btn" style="width:100%" data-more="${kind}">再顯示 ${Math.min(LIMIT,n-shown)} 筆（還有 ${n-shown} 筆）</button>`:"";}
-function renderSpots(keep){if(!keep) sShown=LIMIT; const L=filtSpots().sort((a,b)=>(b.custom?1:0)-(a.custom?1:0)); $("#scnt").textContent=`共 ${L.length} 筆（全部 ${D.spots.length} 筆）`; $("#slist").innerHTML=(L.slice(0,sShown).map(s=>spotCard(s,"dsel1")).join("")||'<div class="cnt">沒有符合條件的景點</div>')+more(L.length,sShown,"s"); renderMarkers();}
+function renderSpots(keep){if(!keep) sShown=LIMIT; const L=filtSpots().sort((a,b)=>(b.custom?1:0)-(a.custom?1:0)); const fcv=$("#fcat").value; $("#scnt").textContent=`共 ${L.length} 筆（全部 ${D.spots.length} 筆）`+(fcv&&!L.length?`｜${CAT[fcv]||fcv}：0 筆`:""); $("#slist").innerHTML=(L.slice(0,sShown).map(s=>spotCard(s,"dsel1")).join("")||('<div class="cnt">沒有符合條件的景點'+(fcv?`（${esc(CAT[fcv]||fcv)}：0 筆；可用「搜尋地點」或地圖搜尋加入）`:"")+"</div>"))+more(L.length,sShown,"s"); renderMarkers();}
 function filtRests(){
  const q=$("#rq").value.trim().toLowerCase(), b=$("#rbase").value, m=$("#rmeal").value, ro=$("#rroute").checked;
  return RESTS.filter(r=>{ if(q&&!((r.name+" "+(r.cuisine||"")+" "+(r.description||"")).toLowerCase().includes(q))) return false;
@@ -842,7 +1291,7 @@ function openDetail(type,id){
  const o=type==="restaurant"?RS[id]:SP[id]; if(!o) return;
  const rows=[]; const add=(k,v)=>{if(v!=null&&v!=="") rows.push(`<tr><td>${k}</td><td>${esc(v)}</td></tr>`);};
  if(type==="restaurant"){add("料理",o.cuisine);add("類型",o.category);add("餐別",[].concat(o.meal||[]).map(m=>MEAL[m]||m).join("／"));add("價位",o.price_range);add("訂位",resvTxt(o.reservation));add("所屬據點",o.base?BASEN[o.base]||o.base:"");add("細分區域",o.base_area);add("MapCode 來源",o.mapcode_source?mcSrc(o.mapcode_source):"");add("路線",(o.routes||[]).join("/"));add("地址",o.address);if(o.ratings||o.pl){rows.push(rateRows(o));} else {add("Tabelog",o.tabelog_score);add("Google 評分",o.google_rating);} if(o.pl){add("午餐預算",o.budget_lunch);add("晚餐預算",o.budget_dinner);} add("資料查核日",o.checked_date?o.checked_date+(o.checked_by?"（"+o.checked_by+"）":""):"");}
- else if(o.custom){add("類別","👤 自訂地點"+(o.category&&o.category!=="custom"?"（"+(CAT[o.category]||o.category)+"）":""));add("代號",o.id);add("縣名",o.prefecture);add("地址",o.address);add("座標",o.lat==null?"待後台解析（短網址）":o.lat+", "+o.lng);add("座標來源",{photon:"Photon（OSM）",overpass:"Overpass（OSM）",gsi:"国土地理院 住所検索",gmaps_url:"Google 地圖網址",manual:"手動輸入",pending_shortlink:"短網址（待解析）"}[o.coord_source]||o.coord_source);add("OSM",o.osm);add("MapCode",o.mapcode||"待查");add("建議停留",o.stay_minutes+" 分");add("備註",o.note);add("原始輸入",o.gmaps_input);add("說明",o.server_only?"景點部已補查的自訂地點":"使用者自行新增（只存在本機瀏覽器）；MapCode、停車場、營業時間未經景點部查核");}
+ else if(o.custom){add("類別","👤 自訂地點"+(o.category&&o.category!=="custom"?"（"+(CAT[o.category]||o.category)+"）":""));add("代號",o.id);add("縣名",o.prefecture);add("地址",o.address);add("座標",o.lat==null?"待後台解析（短網址）":o.lat+", "+o.lng);add("座標來源",{photon:"Photon（OSM）",overpass:"Overpass（OSM）",gsi:"国土地理院 住所検索",gmaps_url:"Google 地圖網址",manual:"手動輸入",pending_shortlink:"短網址（待解析）"}[o.coord_source]||o.coord_source);add("OSM",o.osm);add("MapCode",o.mapcode||"待查");add("建議停留",o.stay_minutes+" 分");add("備註",o.note);add("原始輸入",o.gmaps_input);add("電話",o.phone||((o.field_status||{}).phone)||"");add("營業時間",o.hours||((o.field_status||{}).hours)||"");add("公休",o.closed_days||o.closed||"");add("官網",o.website||"");add("評分",(o.ratings&&o.ratings.filter(r=>r.source==="tabelog").map(r=>"Tabelog "+r.score).join("／"))||((o.field_status||{}).ratings)||"未查（先放 Google 地圖連結，不編造分數）");add("停車場",(o.parkings&&o.parkings.length)?o.parkings.map(p=> (p.name||"停車場")+(p.dist!=null?" "+p.dist+" m":"")+(p.fee?" ｜"+p.fee:"")+" ｜MapCode "+(p.mapcode||"待查")).join("；"):((o.field_status||{}).parking||"待補"));add("欄位狀態",o.field_status?Object.keys(o.field_status).map(k=>k+"："+o.field_status[k]).join("、"):"");add("說明",o.server_only?"景點部已補查的自訂地點":"使用者自行新增（只存在本機瀏覽器）；MapCode 需景點部用 Saibara 換算並反查後補，前端不能離線計算。");}
  else{add("類別",catsOf(o).map(c=>CAT[c]||c).join("、"));add("地區",o.region+"（"+(o.prefecture||"")+"）");add("所屬據點",o.base?BASEN[o.base]:"非本次路線");add("路線",(o.routes||[]).join("/"));add("建議停留",o.stay_minutes?o.stay_minutes+" 分":"");}
  if(o.event){add("活動日期",o.date_label);add("日期狀態",{official:"2027 官方公布",estimated:"依往年推估",unconfirmed:"未確認"}[o.date_status]||o.date_status);}add("想買什麼",o.what_to_buy);add("最近車站",o.nearest_station);add("免稅",o.tax_free);add("營業時間",o.hours);add("休日",o.closed);add("門票",o.admission);add("電話",o.phone);add("雨天",o.pl&&o.rain_ok==null?"":(o.rain_ok?"可（室內或雨天也適合）":"不建議"));if(o.pl){add("季節／花季",[o.season_note,Array.isArray(o.season_months)&&o.season_months.length?o.season_months.join("、")+" 月":""].filter(Boolean).join("｜"));if(type!=="restaurant") add("MapCode 來源",o.mapcode&&o.mapcode_source?mcSrc(o.mapcode_source):"");
   const td=(lab,keys,has)=>{ if(!has&&keys.some(k=>plTodo(o,k))&&!rows.some(r=>r.indexOf("<tr><td>"+lab+"</td>")>=0)) rows.push(`<tr><td>${lab}</td><td><span class="todo">待查</span></td></tr>`);};
@@ -861,9 +1310,9 @@ const RCOL={"在地名物":"#b4532a","拉麵":"#e65100","定食":"#6d4c41","燒�
 function initMap(){
  if(map) return;
  if(typeof L==="undefined"){ $("#map").innerHTML='<div style="padding:20px">地圖載入失敗（無法連到 Leaflet CDN）</div>'; return;}
- map=L.map("map",{zoomControl:true}).setView([35.6,139.6],8);
+ map=L.map("map",{zoomControl:true}).setView([35.6,139.6],8); if(typeof ensureMapSearch==="function") ensureMapSearch();
  L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",{maxZoom:18,attribution:'&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'}).addTo(map);
- layer=L.layerGroup().addTo(map); pkLayer=L.layerGroup().addTo(map); window.__map=map; window.__layer=layer;
+ layer=L.layerGroup().addTo(map); pkLayer=L.layerGroup().addTo(map); window.__map=map; window.__layer=layer; if(typeof bindMapClick==="function") bindMapClick(); if(typeof ensureMapSearch==="function") ensureMapSearch();
 }
 function popup(o){const t=o.type; return `<b>${esc(o.name)}</b><br>${esc(t==="restaurant"?(o.cuisine||"餐廳"):(CAT[o.category]||""))}${o.rain_ok?"｜☔雨天可":""}<br><button class="btn sm" data-open="${t}:${esc(o.id)}">詳情／導航</button> <button class="btn sm pri" data-add="${t}:${esc(o.id)}">＋加入 Day ${curDay}</button>`;}
 function pkIcon(p){return L.divIcon({className:"",html:`<div style="background:${p.type==="dedicated"?"#2e7d32":"#1565c0"};color:#fff;font:700 11px sans-serif;width:18px;height:18px;border-radius:4px;text-align:center;line-height:18px">P</div>`,iconSize:[18,18]});}
@@ -991,7 +1440,7 @@ function exportJson(){
  const t=D.meta.trip; const R=D.plan.routes[route]; const unresolved=[];
  const one=(x,o,extra)=>Object.assign({kind:x.type,name:o?o.name:"",name_zh:o&&o.name_zh||null,prefecture:o&&o.prefecture||null,meal:x.type==="restaurant"?(mealOf(x)||null):null,
     time:x.time||null,stay_min:o&&o.stay_minutes||null,lat:o?o.lat:null,lng:o?o.lng:null,gmaps_url:o?gmUrl(o):null,mapcode:o&&o.mapcode||null,
-    note:x.note||null,raw:null,confidence:o?1:0,match:{ref:x.id,status:o?(o.custom?"custom":"matched"):"not_found"}},o&&o.custom?{custom:true,custom_id:o.id,address:o.address||null,coord_source:o.coord_source,osm:o.osm||null,mapcode_status:o.mapcode?(o.mapcode_status||"ok"):"pending",nav_url:o.nav_url||null}:{},extra||{});
+    note:x.note||null,raw:null,confidence:o?1:0,match:{ref:x.id,status:o?(o.custom?"custom":"matched"):"not_found"}},o&&o.custom?{custom:true,custom_id:o.id,address:o.address||null,phone:o.phone||null,hours:o.hours||null,website:o.website||null,parkings:o.parkings||[],ratings:o.ratings||[],field_status:o.field_status||{},category:o.category||null,coord_source:o.coord_source,osm:o.osm||null,mapcode_status:o.mapcode?(o.mapcode_status||"ok"):"pending",nav_url:o.nav_url||null}:{},extra||{});
  const days=routeDaysExport().map(({d,rp,lg,note,items})=>({
   day:d.day,date:d.date,weekday:d.weekday,area:BASEN[d.base]||d.base,base:d.base,mode:d.mode,
   lodging:{name:lg?lg.name:"",candidates:[],meals_included:rp&&rp.dinner_included?["dinner"]:[],status:lg?lg.status:null},
@@ -1012,7 +1461,7 @@ function exportJson(){
 function itemDesc(x,o,att,dayN){
  const a=[]; if(x.type==="restaurant"){a.push("餐廳："+(o.cuisine||o.category||"")); const m=mealOf(x); if(m) a.push("餐別："+(MEAL[m]||m));} else a.push("類別："+(CAT[o.category]||o.category||""));
  if(x.time) a.push("時間："+x.time); if(o.stay_minutes) a.push("建議停留："+o.stay_minutes+" 分");
- if(o.custom) a.push("👤 自訂地點 "+o.id+"（使用者新增，未經景點部查核）"+(o.address?"｜地址："+o.address:"")); a.push("MapCode："+(o.mapcode||(o.custom?"待查（"+CU_TODO+"）":"待查")));
+ if(o.custom) a.push("👤 自訂地點 "+o.id+"（使用者新增）"+(o.address?"｜地址："+o.address:"")+(o.phone?"｜電話："+o.phone:"")+(o.hours?"｜營業："+o.hours:"")+(o.website?"｜官網："+o.website:"")+(o.field_status&&Object.keys(o.field_status).length?"｜待補："+Object.keys(o.field_status).map(k=>k+o.field_status[k]).join("、"):"")); a.push("MapCode："+(o.mapcode||(o.custom?"待查（前端無法離線換算，請景點部補）":"待查")));
  const pks=mergedParkings([].concat(o.parkings||[],...(att||[]).map(z=>z.o&&z.o.parkings||[])));
  const p=pks.find(p=>p.exists!==false&&p.lat!=null); if(p) a.push("停車場："+(p.name||"")+"｜MapCode："+(p.mapcode||"待查")+"｜導航："+navUrl(p.lat,p.lng));
  if(o.hours) a.push("營業："+String(o.hours).slice(0,80)); if(o.phone) a.push("電話："+o.phone);
@@ -1122,7 +1571,7 @@ function buildFinal(notes){
   items.forEach(st=>{ nst++; if(!st.o) warn.push("Day "+d.day+" 有找不到資料的 "+st.x.id); else if(st.x.type==="restaurant") nr++; else ns++; st.att.forEach(a=>{nr++; nmerged++;}); });
   return {day:d.day,date:d.date,weekday:d.weekday,base:d.base,area:BASEN[d.base]||d.base,mode:d.mode,lodging:lg?{name:lg.name,status:lg.status,check_in:lg.check_in,check_out:lg.check_out}:null,note:note||"",
    items:items.map(st=>{const x=st.x,o=st.o; const e={seq:st.seq,type:x.type,id:x.id,name:o?o.name:null,meal:x.type==="restaurant"?(mealOf(x)||null):null,time:x.time||null,note:x.note||null,lat:o?o.lat:null,lng:o?o.lng:null,mapcode:o&&o.mapcode||null};
-    if(o&&o.custom){e.custom=true; e.stay_minutes=o.stay_minutes; e.prefecture=o.prefecture||null; e.address=o.address||null; e.coord_source=o.coord_source; e.osm=o.osm||null; e.nav_url=o.nav_url||null; e.mapcode_status=o.mapcode?(o.mapcode_status||"ok"):"pending";}
+    if(o&&o.custom){e.custom=true; e.stay_minutes=o.stay_minutes; e.prefecture=o.prefecture||null; e.address=o.address||null; e.phone=o.phone||null; e.hours=o.hours||null; e.website=o.website||null; e.parkings=o.parkings||[]; e.ratings=o.ratings||[]; e.field_status=o.field_status||{}; e.category=o.category||null; e.coord_source=o.coord_source; e.osm=o.osm||null; e.nav_url=o.nav_url||null; e.mapcode_status=o.mapcode?(o.mapcode_status||"ok"):"pending";}
     if(st.att.length) e.merged=st.att.map(a=>({type:"restaurant",id:a.x.id,name:a.o?a.o.name:null,meal:mealOf(a.x)||null,time:a.x.time||null,note:a.x.note||null,same_stop_as:x.id,lat:a.o?a.o.lat:null,lng:a.o?a.o.lng:null,mapcode:a.o&&a.o.mapcode||null}));
     if(st.hid.length){e.same_stop_as=st.hid[0].x.id; e.replaces=st.hid.map(h=>h.x.id);}
     return e;})};});
@@ -1937,6 +2386,14 @@ function plApply(d,pl){ if(!d||!pl) return d; try{ const P=pl.places; let ns=0, 
   const mc=plMc(p); if(mc){s.mapcode=mc; s.mapcode_source=String(p.mapcode_source);}
   const pk=plParking(p); if(pk) s.parkings=pk.map(normPk);
   plSources(s,p); setS(s,"info_checked_at",plStr(p.checked_date));});
+ Object.keys(P).forEach(id=>{ const p=P[id]; if(!p||p.kind!=="spot") return; if(d.spots.some(s=>s.id===id)) return;
+  const cs=(Array.isArray(p.categories)?p.categories:[]).map(String).filter(c=>CAT[c]);
+  const s={id,type:"spot",name:p.name||id,lat:p.lat==null?null:+p.lat,lng:p.lng==null?null:+p.lng,address:plStr(p.address)||"",google_maps:plHttps(p.google_maps_url)||"",mapcode:null,description:plStr(p.description)||"",note:"",sources:[],category:cs[0]||"custom",categories:CAT_ORDER.filter(c=>cs.indexOf(c)>=0),category_source:p.category_source||"",base:"",region:plStr(p.area_group)||"",routes:[],parkings:[],stay_minutes:typeof p.stay_minutes==="number"?p.stay_minutes:60,hours:plStr(p.hours)||"",closed:plStr(p.closed_days)||"",admission:plStr(p.admission)||"",rain_ok:typeof p.rain_ok==="boolean"?p.rain_ok:null,phone:plStr(p.phone)||"",what_to_buy:plStr(p.what_to_buy)||"",from_places:true,pl:true,pl_status:p.field_status&&typeof p.field_status==="object"?p.field_status:{}};
+  (p.route_days||[]).forEach(rd=>{ const k=rd&&rd.route; if(!k) return; const rid=/^r_/.test(k)?k:("r_"+String(k).toLowerCase()); if(s.routes.indexOf(rid)<0) s.routes.push(rid); });
+  const mc2=plMc(p); if(mc2){s.mapcode=mc2; s.mapcode_source=String(p.mapcode_source);}
+  const pk2=plParking(p); if(pk2) s.parkings=pk2.map(normPk);
+  plSources(s,p); setS(s,"info_checked_at",plStr(p.checked_date)); setS(s,"season_note",plStr(p.season_note));
+  d.spots.push(s); ns++; });
  d.rests.forEach(r=>{const p=P[r.id]; if(!p||p.kind!=="restaurant") return; nr++; r.pl=true; r.pl_status=p.field_status&&typeof p.field_status==="object"?p.field_status:{}; plClear(r,p,true);
   if(plStr(p.cuisine_group)) r.category=plStr(p.cuisine_group); if(plStr(p.cuisine)) r.cuisine=plStr(p.cuisine); else if(plStr(p.cuisine_group)&&(!r.cuisine||r.category==="後台路線")) r.cuisine=plStr(p.cuisine_group);
   const bl=plStr(p.budget_lunch), bd=plStr(p.budget_dinner); if(bl||bd||r.price_range===""){r.budget_lunch=bl; r.budget_dinner=bd; r.price_range=[bl?"午 "+bl:"",bd?"晚 "+bd:""].filter(Boolean).join("／");}
@@ -2011,7 +2468,7 @@ function rtCtl(){const el=$("#rtCtl"); if(!el) return; const pkg=TE&&TE.local?lt
 document.addEventListener("click",e=>{const t=e.target.closest&&e.target.closest("[data-rt]"); if(!t) return; const k=t.dataset.rt;
  if(k==="apply") rtApply({}); else if(k==="backup") rtApply({backup:true}); else if(k==="mine") rtKeepMine(); else if(k==="revert") rtRevert();
  else if(k==="offer"){ if(D.rt_latest){D.rt_new=D.rt_latest; const ed=rtEdited(); if(ed.length) rtOffer(); else rtApply({});} }});
-window.__app={get AUTO(){return AUTO;},rtFetch,rtNewer,rtApply,rtOffer,rtKeepMine,rtRevert,rtEdited,plClear,plClean,plApply,plFetch,catsOf,restTagN,ltInc,ltAddRoute,ltDelRoute,adoptSet,rShort,ltGet,ltIndex,ltBuild,ltEntry,ltAdopt,cmpRender,cmpFromRs,cmpMetrics,rfClean,rfFetch,slotOf,get CMP(){return CMP;},lgShrink,LG_NMAX,quotaUntil,bkMsg,plQueued,plSched,QF,areaZh,zhText,userNotes,routeName,pickLoad,doneAlert,bkGate,listPoll,bkLoad,bkSave,bkRow,bkDateCell,buildXlsx,bkXlsxDownload,XLSX_COLS,lgOpen,flSplit,flJoin,flText,backendCfg,hashView,get AUTO(){return AUTO;},drLoad,drVisible,reqExport,reqText,readNewForm,selLoad,selectedRoutes,get DRAFT(){return DRAFT;},get INTAKE(){return INTAKE;},DL,BUF,decLoad,decSave,decExport,showMod,pickupDefault,dropoffDefault,get curMod(){return curMod;},bestDay,localNearby,SCATS,photonSearch,queryVariants,qTokens,localSearch,photonMulti,parseLocationInput,cpLoad,cpSave,cpId,sha1hex,searchPlaces,searchCenter,SEARCH_ENDPOINTS,openSearch,get SRVCP(){return SRVCP;},parseLoc,cuLoad,cuText,cuMerge,stopsOf,mergeByMeal,get SAME(){return SAME;},setRoute,openTrip,showTab,addTo,itin,suggested,store,exportJson,buildKml,buildCsv,buildFinal,importText,parseImport,
+window.__app={get AUTO(){return AUTO;},rtFetch,rtNewer,rtApply,rtOffer,rtKeepMine,rtRevert,rtEdited,parseLocationInput,queryVariants,qTokens,gmapsSearchUrl,dayArea,guessCat,classifyAg,findDup,enrichPlace,enrichAsync,searchPlaces,openSearch,bringIn,clipArm,clipTry,clipOn,suggestWhen,showPlaceCard,reverseAt,mapTypeahead,ensureMapSearch,cacheKey,nearbyParking,idbGet,idbSet,extractGmaps,applyBring,STAY_MIN,plClear,plClean,plApply,plFetch,catsOf,restTagN,ltInc,ltAddRoute,ltDelRoute,adoptSet,rShort,ltGet,ltIndex,ltBuild,ltEntry,ltAdopt,cmpRender,cmpFromRs,cmpMetrics,rfClean,rfFetch,slotOf,get CMP(){return CMP;},lgShrink,LG_NMAX,quotaUntil,bkMsg,plQueued,plSched,QF,areaZh,zhText,userNotes,routeName,pickLoad,doneAlert,bkGate,listPoll,bkLoad,bkSave,bkRow,bkDateCell,buildXlsx,bkXlsxDownload,XLSX_COLS,lgOpen,flSplit,flJoin,flText,backendCfg,hashView,get AUTO(){return AUTO;},drLoad,drVisible,reqExport,reqText,readNewForm,selLoad,selectedRoutes,get DRAFT(){return DRAFT;},get INTAKE(){return INTAKE;},DL,BUF,decLoad,decSave,decExport,showMod,pickupDefault,dropoffDefault,get curMod(){return curMod;},bestDay,localNearby,SCATS,photonSearch,queryVariants,qTokens,localSearch,photonMulti,parseLocationInput,cpLoad,cpSave,cpId,sha1hex,searchPlaces,searchCenter,SEARCH_ENDPOINTS,openSearch,get SRVCP(){return SRVCP;},parseLoc,cuLoad,cuText,cuMerge,stopsOf,mergeByMeal,get SAME(){return SAME;},setRoute,openTrip,showTab,addTo,itin,suggested,store,exportJson,buildKml,buildCsv,buildFinal,importText,parseImport,
  get trip(){return TID;},get route(){return route;},get day(){return curDay;},get RS(){return RS;},get SP(){return SP;},get D(){return D;},get RESTS(){return RESTS;},K};
 })();
 </script>
