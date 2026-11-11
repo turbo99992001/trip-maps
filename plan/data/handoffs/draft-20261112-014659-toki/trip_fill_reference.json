@@ -1,0 +1,964 @@
+{
+  "schema": "agency.trip_fill_reference.v1",
+  "request_id": "draft-20261112-014659-toki",
+  "generated_at": "2026-11-12T02:14:12+08:00",
+  "checked_at": "2026-11-12",
+  "disclaimer": "參考，須安宏確認。本檔未寫入 trip.json。未訂房／未訂車；免費取消期限仍待查。機票以現有 trip.json 為準並標待確認。",
+  "lodging": {
+    "disclaimer": "參考，須安宏確認。各據點有舒適／平價候選，須安宏選擇，不要由部門二選一。尚未訂房。",
+    "pending_for_an_hong": [
+      "請選擇預算三版：舒適 NT$288,274／平價 NT$194,577／混搭 NT$220,190（機票口徑待更新）。",
+      "6 據點住宿皆尚未訂房；免費取消期限仍待查。須安宏親自確認後才可訂房。",
+      "租車尚未訂。推薦 Times 羽田；ETC 卡可否租借待確認。",
+      "機票已訂 BR192／BR189，訂位代號、艙等、行李與票款細節待確認。",
+      "選擇舒適版或平價版（或各據點混搭）；確認後才能進入「待安宏親自訂房」流程。",
+      "所有免費取消期限：以上僅為公開方案規則，實際訂單期限一律待查。",
+      "訂房狀態全部未訂，待安宏確認後才可下單。住宿部不會自行訂房或付款。",
+      "覆核 JAL City WEST WING 官網含早免費取消價（先前 ¥84,948／One Harmony ¥80,703，免費取消至 2027-06-24 23:59 JST）。",
+      "2027/6 尚未放房、放房後須重查：熱海金城館、大野屋、千明仁泉亭、福一、あさや、鬼怒川／中禪寺金谷、スーパーホテル池袋、メトロポリタン羽田。",
+      "Dormy Inn 只有 2 張床，3 大人能否接受 2 人同睡。",
+      "萬豪 Basic Stay 是否須 Marriott Bonvoy 會員。",
+      "王子西館 Cottage A 無空調、以及連泊方案實際取消截止日（頁面有 61／22／2 日前三種）。",
+      "福一地下停車場費用（公開資料不一致）。",
+      "きらの里 6/21 能否在 MOA 後 16:30 前抵達（見景點部提問）。",
+      "最後兩晚：堅持「有接駁」則用 JAL City；若接受 T3 屋內直結，Villa Fontaine 可更省。",
+      "一休帳號優惠本次未能查（403）；若要看一休價，需安宏在可開啟 ikyu.com 的環境查或授權瀏覽器登入（登入仍不得代為下單）。"
+    ],
+    "items": [
+      {
+        "ref": "lodging:I:TYO",
+        "trip_name": "東京（池袋／可電車至秋葉原）",
+        "stay": {
+          "check_in": "2027-06-19",
+          "check_out": "2027-06-21",
+          "nights": 2,
+          "party": "大人3名",
+          "mode": "電車（6/19–6/21 不開車；6/21 早上或當日再取車南下熱海）"
+        },
+        "identification_note": "舒適版：陽光城王子 75㎡ 三床含早 ¥285,021。平價版：同館ツインA＋加床素泊 ¥82,791（3 人各有一床）。想要溫泉大浴場可改 Dormy Inn 含早 ¥84,180（但只有 2 床）。",
+        "choice_needed": true,
+        "choice_label": "需安宏選擇舒適／平價／混搭（或各據點混搭），不要由部門二選一。",
+        "disclaimer": "參考，須安宏確認。尚未訂房。",
+        "filled_fields": [
+          "official_name",
+          "official_url",
+          "address",
+          "phone",
+          "coords",
+          "price",
+          "parking"
+        ],
+        "pending_fields": [
+          "mapcode",
+          "check_in_out_time",
+          "free_cancel_until",
+          "booking_status"
+        ],
+        "fields": {
+          "official_name": {
+            "status": "已補",
+            "value": "サンシャインシティプリンスホテル（池袋）",
+            "checked_at": "2026-11-12",
+            "note": "陽光城王子大飯店（池袋） 本據點候選：サンシャインシティプリンスホテル（池袋）（舒適版首推（3 張床、大房；館內無溫泉大浴場））；天然温泉 豊穣の湯 ドーミーイン池袋（平價備選（有黑湯大浴場；2 床需 2 人同睡））；スーパーホテル池袋西口天然温泉（更平價備選（2027/6 尚未放房，僅供參考））"
+          },
+          "official_url": {
+            "status": "已補",
+            "value": "https://www.princehotels.co.jp/sunshine/",
+            "checked_at": "2026-11-12",
+            "source_urls": [
+              "https://www.princehotels.co.jp/sunshine/"
+            ]
+          },
+          "address": {
+            "status": "已補",
+            "value": "東京都豊島区東池袋3-1-5",
+            "checked_at": "2026-11-12"
+          },
+          "phone": {
+            "status": "已補",
+            "value": "03-3988-1111",
+            "checked_at": "2026-11-12"
+          },
+          "coords": {
+            "status": "已補",
+            "value": {
+              "lat": 35.72955762,
+              "lng": 139.7193985,
+              "datum": "WGS84"
+            },
+            "checked_at": "2026-11-12",
+            "note": "既有 lodging.bases TYO（國土地理院／既有查核）；本次未重測"
+          },
+          "mapcode": {
+            "status": "待查",
+            "value": "待查",
+            "checked_at": "2026-11-12"
+          },
+          "check_in_out_time": {
+            "status": "待查",
+            "value": "待查",
+            "checked_at": "2026-11-12",
+            "note": "提案未列各館入住／退房時刻，待確認。"
+          },
+          "price": {
+            "status": "已補",
+            "value": "サンシャインシティプリンスホテル（池袋）：パノラマフロア 33～35F トリプルルーム 75.0㎡，朝食付，¥285,021，NT$59,854（匯率 0.21），實查 2027，適用 comfort／10～24F ツインルームA 29.3㎡＋エキストラベッド，素泊，¥82,791，NT$17,386（匯率 0.21），實查 2027，適用 budget／10～24F ツインルームA 29.3㎡＋エキストラベッド，朝食付，¥99,291，NT$20,851（匯率 0.21），實查 2027 ／ 天然温泉 豊穣の湯 ドーミーイン池袋：ファミリーツイン 約24.2㎡（既有資料；本次頁面未重抓坪數），朝食付，¥84,180，NT$17,678（匯率 0.21），實查 2027／ファミリーツイン，素泊，¥66,930，NT$14,055（匯率 0.21），實查 2027 ／ スーパーホテル池袋西口天然温泉：本館ツイン 12㎡（150cm＋90cm，3 名）等，含早餐（目前開放日期之價目），參考價（非該日期實價）",
+            "checked_at": "2026-11-12",
+            "note": "參考，須安宏確認。2027/6 未放房者為替代日期價。",
+            "source_urls": [
+              "https://hotel.travel.rakuten.co.jp/hotelinfo/plan/18392?f_heya_su=1&f_otona_su=3&f_nen1=2027&f_tuki1=6&f_hi1=19&f_nen2=2027&f_tuki2=6&f_hi2=21&f_sort=min_charge",
+              "https://hotel.travel.rakuten.co.jp/hotelinfo/plan/18392?f_heya_su=1&f_otona_su=3&f_nen1=2027&f_tuki1=6&f_hi1=19&f_nen2=2027&f_tuki2=6&f_hi2=21&f_sort=min_charge",
+              "https://hotel.travel.rakuten.co.jp/hotelinfo/plan/18392?f_heya_su=1&f_otona_su=3&f_nen1=2027&f_tuki1=6&f_hi1=19&f_nen2=2027&f_tuki2=6&f_hi2=21&f_sort=min_charge"
+            ]
+          },
+          "parking": {
+            "status": "已補",
+            "value": "24小時 2,000円/台（本段行程不開車，僅備註）",
+            "checked_at": "2026-11-12"
+          },
+          "free_cancel_until": {
+            "status": "待查",
+            "value": "待查",
+            "checked_at": "2026-11-12",
+            "note": "公開規則可能無法對應到尚未成立的訂單，實際免費取消期限待查。"
+          },
+          "booking_status": {
+            "status": "待查",
+            "value": "待查（尚未訂房）",
+            "checked_at": "2026-11-12",
+            "note": "須安宏親自確認後才可下單。部門未聯絡旅館、未訂房、未付款。"
+          }
+        },
+        "candidates": [
+          {
+            "name": "サンシャインシティプリンスホテル（池袋）",
+            "name_zh": "陽光城王子大飯店（池袋）",
+            "role": "舒適版首推（3 張床、大房；館內無溫泉大浴場）",
+            "url": "https://www.princehotels.co.jp/sunshine/"
+          },
+          {
+            "name": "天然温泉 豊穣の湯 ドーミーイン池袋",
+            "name_zh": "Dormy Inn 池袋（豐穰之湯）",
+            "role": "平價備選（有黑湯大浴場；2 床需 2 人同睡）",
+            "url": "https://dormy-hotels.com/dormyinn/hotels/ikebukuro/"
+          },
+          {
+            "name": "スーパーホテル池袋西口天然温泉",
+            "name_zh": "Super Hotel 池袋西口天然溫泉",
+            "role": "更平價備選（2027/6 尚未放房，僅供參考）",
+            "url": "https://www.superhotel.co.jp/s_hotels/jrikebukuro/"
+          }
+        ]
+      },
+      {
+        "ref": "lodging:I:ATAMI_IZUKOGEN",
+        "trip_name": "熱海／伊豆高原（連住 3 晚）",
+        "stay": {
+          "check_in": "2027-06-21",
+          "check_out": "2027-06-24",
+          "nights": 3,
+          "party": "大人3名",
+          "mode": "自駕"
+        },
+        "identification_note": "舒適版：きらの里本館和洋室 2 食基本方案 ¥222,750（2027/6 實查；位置利於 6/22 大室山）。平價版：金城館 2 食標準方案替代日 ¥100,782（2027/6 未放房，須重查）。若 6/21 想先就近 MOA 再入住，可改大野屋（價位同金城館替代日）。",
+        "choice_needed": true,
+        "choice_label": "需安宏選擇舒適／平價／混搭（或各據點混搭），不要由部門二選一。",
+        "disclaimer": "參考，須安宏確認。尚未訂房。",
+        "filled_fields": [
+          "official_name",
+          "official_url",
+          "address",
+          "phone",
+          "price",
+          "parking"
+        ],
+        "pending_fields": [
+          "coords",
+          "mapcode",
+          "check_in_out_time",
+          "free_cancel_until",
+          "booking_status"
+        ],
+        "fields": {
+          "official_name": {
+            "status": "已補",
+            "value": "杜の湯 きらの里（共立リゾート）",
+            "checked_at": "2026-11-12",
+            "note": "杜之湯 きらの里（伊豆高原・八幡野） 本據點候選：杜の湯 きらの里（共立リゾート）（舒適版首推（伊豆高原、溫泉湯めぐり、2 食、2027/6 已可實查））；熱海温泉 ホテル大野屋（伊東園ホテルズ）（熱海舒適備選（羅馬風呂／貸切風呂；2027/6 尚未放房））；熱海温泉 金城館（伊東園ホテルズ）（平價版熱海（庭園＋溫泉＋2 食；2027/6 尚未放房））"
+          },
+          "official_url": {
+            "status": "已補",
+            "value": "https://dormy-hotels.com/resort/hotels/kiranosato/",
+            "checked_at": "2026-11-12",
+            "source_urls": [
+              "https://dormy-hotels.com/resort/hotels/kiranosato/"
+            ]
+          },
+          "address": {
+            "status": "已補",
+            "value": "〒413-0232 静岡県伊東市八幡野1326-5",
+            "checked_at": "2026-11-12"
+          },
+          "phone": {
+            "status": "已補",
+            "value": "0557-55-3311",
+            "checked_at": "2026-11-12"
+          },
+          "coords": {
+            "status": "待查",
+            "value": "待查",
+            "checked_at": "2026-11-12",
+            "note": "本次 Nominatim 未查得；不編造座標"
+          },
+          "mapcode": {
+            "status": "待查",
+            "value": "待查",
+            "checked_at": "2026-11-12"
+          },
+          "check_in_out_time": {
+            "status": "待查",
+            "value": "待查",
+            "checked_at": "2026-11-12",
+            "note": "提案未列各館入住／退房時刻，待確認。"
+          },
+          "price": {
+            "status": "已補",
+            "value": "杜の湯 きらの里（共立リゾート）：【旅籠八幡野】本館和洋室 35㎡（2025 年翻新），1泊2食，¥222,750，NT$46,778（匯率 0.21），實查 2027，適用 comfort／【旅籠八幡野】本館和洋室 35㎡，1泊2食，¥200,970，NT$42,204（匯率 0.21），實查 2027／【旅籠八幡野】本館和洋室 35㎡，朝食のみ，¥181,170，實查 2027／【旅籠八幡野】本館和洋室 35㎡，素泊，¥138,600，實查 2027 ／ 熱海温泉 ホテル大野屋（伊東園ホテルズ）：和洋室ツイン＋8疊 或 東館和室10疊（3名可），1泊2食（吃到飽＋飲酒放題），¥100,782，NT$21,164（匯率 0.21），替代日期實查 ／ 熱海温泉 金城館（伊東園ホテルズ）：和室 8 疊以上／12 疊／二間（3 名可；建議盡量選 12 疊或二間），1泊2食（自助＋晚餐飲酒），¥100,782，NT$21,164（匯率 0.21），替代日期實查，適用 budget",
+            "checked_at": "2026-11-12",
+            "note": "參考，須安宏確認。2027/6 未放房者為替代日期價。",
+            "source_urls": [
+              "https://hotel.travel.rakuten.co.jp/hotelinfo/plan/52638?f_heya_su=1&f_otona_su=3&f_nen1=2027&f_tuki1=6&f_hi1=21&f_nen2=2027&f_tuki2=6&f_hi2=24&f_sort=min_charge",
+              "https://hotel.travel.rakuten.co.jp/hotelinfo/plan/52638?f_heya_su=1&f_otona_su=3&f_nen1=2027&f_tuki1=6&f_hi1=21&f_nen2=2027&f_tuki2=6&f_hi2=24&f_sort=min_charge",
+              "https://hotel.travel.rakuten.co.jp/hotelinfo/plan/52638?f_heya_su=1&f_otona_su=3&f_nen1=2027&f_tuki1=6&f_hi1=21&f_nen2=2027&f_tuki2=6&f_hi2=24&f_sort=min_charge",
+              "https://hotel.travel.rakuten.co.jp/hotelinfo/plan/52638?f_heya_su=1&f_otona_su=3&f_nen1=2027&f_tuki1=6&f_hi1=21&f_nen2=2027&f_tuki2=6&f_hi2=24&f_sort=min_charge"
+            ]
+          },
+          "parking": {
+            "status": "已補",
+            "value": "免費",
+            "checked_at": "2026-11-12"
+          },
+          "free_cancel_until": {
+            "status": "待查",
+            "value": "待查",
+            "checked_at": "2026-11-12",
+            "note": "公開規則可能無法對應到尚未成立的訂單，實際免費取消期限待查。"
+          },
+          "booking_status": {
+            "status": "待查",
+            "value": "待查（尚未訂房）",
+            "checked_at": "2026-11-12",
+            "note": "須安宏親自確認後才可下單。部門未聯絡旅館、未訂房、未付款。"
+          }
+        },
+        "candidates": [
+          {
+            "name": "杜の湯 きらの里（共立リゾート）",
+            "name_zh": "杜之湯 きらの里（伊豆高原・八幡野）",
+            "role": "舒適版首推（伊豆高原、溫泉湯めぐり、2 食、2027/6 已可實查）",
+            "url": "https://dormy-hotels.com/resort/hotels/kiranosato/"
+          },
+          {
+            "name": "熱海温泉 ホテル大野屋（伊東園ホテルズ）",
+            "name_zh": "熱海 飯店大野屋",
+            "role": "熱海舒適備選（羅馬風呂／貸切風呂；2027/6 尚未放房）",
+            "url": "https://www.itoenhotel.com/atami_ohnoya/"
+          },
+          {
+            "name": "熱海温泉 金城館（伊東園ホテルズ）",
+            "name_zh": "熱海 金城館",
+            "role": "平價版熱海（庭園＋溫泉＋2 食；2027/6 尚未放房）",
+            "url": "https://www.itoenhotel.com/atami_kinjokan/"
+          }
+        ]
+      },
+      {
+        "ref": "lodging:I:KARUIZAWA",
+        "trip_name": "輕井澤",
+        "stay": {
+          "check_in": "2027-06-24",
+          "check_out": "2027-06-27",
+          "nights": 3,
+          "party": "大人3名",
+          "mode": "自駕"
+        },
+        "identification_note": "舒適版：萬豪 主樓高級雙床含早 ¥224,061（有溫泉、近星野）。平價版：王子西館 Cottage A 連泊素泊 ¥151,602（空間最大、Outlet 在門口）；若要含早約 ¥189,402。",
+        "choice_needed": true,
+        "choice_label": "需安宏選擇舒適／平價／混搭（或各據點混搭），不要由部門二選一。",
+        "disclaimer": "參考，須安宏確認。尚未訂房。",
+        "filled_fields": [
+          "official_name",
+          "official_url",
+          "address",
+          "phone",
+          "coords",
+          "mapcode",
+          "price",
+          "parking",
+          "free_cancel_until"
+        ],
+        "pending_fields": [
+          "check_in_out_time",
+          "booking_status"
+        ],
+        "fields": {
+          "official_name": {
+            "status": "已補",
+            "value": "軽井沢マリオットホテル",
+            "checked_at": "2026-11-12",
+            "note": "輕井澤萬豪酒店 本據點候選：軽井沢マリオットホテル（舒適版首推（森林溫泉飯店，2027/6/24 實查））；軽井沢プリンスホテル ウエスト（平價／Outlet 便利首選（2027/6/24 實查））"
+          },
+          "official_url": {
+            "status": "已補",
+            "value": "https://www.karuizawa-marriott.com/",
+            "checked_at": "2026-11-12",
+            "source_urls": [
+              "https://www.karuizawa-marriott.com/"
+            ]
+          },
+          "address": {
+            "status": "已補",
+            "value": "長野県北佐久郡軽井沢町長倉4339（Mapion 停車場條目地址）",
+            "checked_at": "2026-11-12"
+          },
+          "phone": {
+            "status": "已補",
+            "value": "0267-46-6611",
+            "checked_at": "2026-11-12"
+          },
+          "coords": {
+            "status": "已補",
+            "value": {
+              "lat": 36.33961576364663,
+              "lng": 138.57708274966808,
+              "datum": "WGS84"
+            },
+            "checked_at": "2026-11-12",
+            "note": "既有 lodging（路線 B）；停車場 Mapion 座標 36.33982008, 138.57703348"
+          },
+          "mapcode": {
+            "status": "已補",
+            "value": "292 609 378*75",
+            "checked_at": "2026-11-12"
+          },
+          "check_in_out_time": {
+            "status": "待查",
+            "value": "待查",
+            "checked_at": "2026-11-12",
+            "note": "提案未列各館入住／退房時刻，待確認。"
+          },
+          "price": {
+            "status": "已補",
+            "value": "軽井沢マリオットホテル：メインウイング スーペリアツイン（禁煙），朝食付，¥224,061，NT$47,053（匯率 0.21），實查 2027，適用 comfort／メインウイング スーペリアツイン（禁煙），素泊，¥185,946，NT$39,049（匯率 0.21），實查 2027／メインウイング 和洋室（禁煙），朝食付，¥240,192，實查 2027 ／ 軽井沢プリンスホテル ウエスト：ウエストプリンスコテージA（禁煙，4 名定員）47.4㎡，素泊，¥151,602，NT$31,836（匯率 0.21），實查 2027，適用 budget／ウエストプリンスコテージA（禁煙），朝食付，¥189,402，NT$39,774（匯率 0.21），實查 2027／ウエストツインルーム 24㎡（定員 1～3，雙床＋沙發床），素泊，¥159,579，實查 2027",
+            "checked_at": "2026-11-12",
+            "note": "參考，須安宏確認。2027/6 未放房者為替代日期價。",
+            "source_urls": [
+              "https://hotel.travel.rakuten.co.jp/hotelinfo/plan/153419?f_heya_su=1&f_otona_su=3&f_nen1=2027&f_tuki1=6&f_hi1=24&f_nen2=2027&f_tuki2=6&f_hi2=27&f_sort=min_charge",
+              "https://hotel.travel.rakuten.co.jp/hotelinfo/plan/153419?f_heya_su=1&f_otona_su=3&f_nen1=2027&f_tuki1=6&f_hi1=24&f_nen2=2027&f_tuki2=6&f_hi2=27&f_sort=min_charge",
+              "https://hotel.travel.rakuten.co.jp/hotelinfo/plan/153419?f_heya_su=1&f_otona_su=3&f_nen1=2027&f_tuki1=6&f_hi1=24&f_nen2=2027&f_tuki2=6&f_hi2=27&f_sort=min_charge"
+            ]
+          },
+          "parking": {
+            "status": "已補",
+            "value": "待查（本次官網 access 頁 TLS 失敗，楽天飯店頁未在本批抓取；請安宏看官網／方案）",
+            "checked_at": "2026-11-12"
+          },
+          "free_cancel_until": {
+            "status": "已補",
+            "value": "8日前（2027-06-16）23:59 前免費（楽天）",
+            "checked_at": "2026-11-12",
+            "note": "公開規則可能無法對應到尚未成立的訂單，實際免費取消期限待查。"
+          },
+          "booking_status": {
+            "status": "待查",
+            "value": "待查（尚未訂房）",
+            "checked_at": "2026-11-12",
+            "note": "須安宏親自確認後才可下單。部門未聯絡旅館、未訂房、未付款。"
+          }
+        },
+        "candidates": [
+          {
+            "name": "軽井沢マリオットホテル",
+            "name_zh": "輕井澤萬豪酒店",
+            "role": "舒適版首推（森林溫泉飯店，2027/6/24 實查）",
+            "url": "https://www.karuizawa-marriott.com/"
+          },
+          {
+            "name": "軽井沢プリンスホテル ウエスト",
+            "name_zh": "輕井澤王子大飯店 西館",
+            "role": "平價／Outlet 便利首選（2027/6/24 實查）",
+            "url": "https://www.princehotels.co.jp/karuizawa-west/"
+          }
+        ]
+      },
+      {
+        "ref": "lodging:I:IKAHO",
+        "trip_name": "伊香保温泉",
+        "stay": {
+          "check_in": "2027-06-27",
+          "check_out": "2027-06-29",
+          "nights": 2,
+          "party": "大人3名",
+          "mode": "自駕"
+        },
+        "identification_note": "舒適版：千明仁泉亭本館和室 2 食替代日 ¥128,700。平價版：福一含早替代日 ¥91,080（晚餐可在石段街外食，亦符合 6/28 行程「伊香保／石段街晚餐」彈性）。2027/6 兩館都還沒放房，放房後必須重查。",
+        "choice_needed": true,
+        "choice_label": "需安宏選擇舒適／平價／混搭（或各據點混搭），不要由部門二選一。",
+        "disclaimer": "參考，須安宏確認。尚未訂房。",
+        "filled_fields": [
+          "official_name",
+          "official_url",
+          "address",
+          "phone",
+          "coords",
+          "mapcode",
+          "price",
+          "parking"
+        ],
+        "pending_fields": [
+          "check_in_out_time",
+          "free_cancel_until",
+          "booking_status"
+        ],
+        "fields": {
+          "official_name": {
+            "status": "已補",
+            "value": "伊香保温泉 千明仁泉亭",
+            "checked_at": "2026-11-12",
+            "note": "千明仁泉亭 本據點候選：伊香保温泉 千明仁泉亭（舒適版首推（黃金之湯かけ流し、免費貸切風呂；2027/6 未放房））；伊香保温泉 福一（平價／石段街最上段（黃金＋白銀兩湯；2027/6 未放房））"
+          },
+          "official_url": {
+            "status": "已補",
+            "value": "https://jinsentei.com/",
+            "checked_at": "2026-11-12",
+            "source_urls": [
+              "https://jinsentei.com/"
+            ]
+          },
+          "address": {
+            "status": "已補",
+            "value": "〒377-0102 群馬県渋川市伊香保町伊香保45",
+            "checked_at": "2026-11-12"
+          },
+          "phone": {
+            "status": "已補",
+            "value": "0279-72-3355（受付 9:00–18:00）",
+            "checked_at": "2026-11-12"
+          },
+          "coords": {
+            "status": "已補",
+            "value": {
+              "lat": 36.49760333,
+              "lng": 138.91629186,
+              "datum": "WGS84"
+            },
+            "checked_at": "2026-11-12",
+            "note": "Mapion 電話帳頁 n_end_lat/lon（2026-11-12）"
+          },
+          "mapcode": {
+            "status": "已補",
+            "value": "94 875 310*56",
+            "checked_at": "2026-11-12"
+          },
+          "check_in_out_time": {
+            "status": "待查",
+            "value": "待查",
+            "checked_at": "2026-11-12",
+            "note": "提案未列各館入住／退房時刻，待確認。"
+          },
+          "price": {
+            "status": "已補",
+            "value": "伊香保温泉 千明仁泉亭：【本館】白を基調としたモダンな和室 9 疊以上（禁煙），1泊2食，¥128,700，NT$27,027（匯率 0.21），替代日期實查，適用 comfort ／ 伊香保温泉 福一：【和室・洋室おまかせ】1泊朝食，朝食のみ（展望餐廳自助），¥91,080，NT$19,127（匯率 0.21），替代日期實查，適用 budget／千樹館 基本和室 12.5 疊等（含貸切風呂特典之方案），推斷為 1泊2食（方案名未全部解析出餐別，價格較早餐方案明顯為高；下訂前確認），¥126,720，替代日期實查",
+            "checked_at": "2026-11-12",
+            "note": "參考，須安宏確認。2027/6 未放房者為替代日期價。",
+            "source_urls": [
+              "https://hotel.travel.rakuten.co.jp/hotelinfo/plan/147464?f_heya_su=1&f_otona_su=3&f_nen1=2027&f_tuki1=3&f_hi1=28&f_nen2=2027&f_tuki2=3&f_hi2=30&f_sort=min_charge"
+            ]
+          },
+          "parking": {
+            "status": "已補",
+            "value": "免費",
+            "checked_at": "2026-11-12"
+          },
+          "free_cancel_until": {
+            "status": "待查",
+            "value": "待查",
+            "checked_at": "2026-11-12",
+            "note": "公開規則可能無法對應到尚未成立的訂單，實際免費取消期限待查。"
+          },
+          "booking_status": {
+            "status": "待查",
+            "value": "待查（尚未訂房）",
+            "checked_at": "2026-11-12",
+            "note": "須安宏親自確認後才可下單。部門未聯絡旅館、未訂房、未付款。"
+          }
+        },
+        "candidates": [
+          {
+            "name": "伊香保温泉 千明仁泉亭",
+            "name_zh": "千明仁泉亭",
+            "role": "舒適版首推（黃金之湯かけ流し、免費貸切風呂；2027/6 未放房）",
+            "url": "https://jinsentei.com/"
+          },
+          {
+            "name": "伊香保温泉 福一",
+            "name_zh": "福一",
+            "role": "平價／石段街最上段（黃金＋白銀兩湯；2027/6 未放房）",
+            "url": "https://www.fukuichi.jp/"
+          }
+        ]
+      },
+      {
+        "ref": "lodging:I:KINUGAWA",
+        "trip_name": "鬼怒川溫泉（備選：中禪寺湖畔）",
+        "stay": {
+          "check_in": "2027-06-29",
+          "check_out": "2027-07-02",
+          "nights": 3,
+          "party": "大人3名",
+          "mode": "自駕"
+        },
+        "identification_note": "預設住鬼怒川：あさや和室 12 疊 2 食替代日 ¥207,900（舒適／平價暫同一館，待 6 月放房再分級）。金谷為升級但尚無標準房實價。不建議改住中禪寺 3 晚，除非景點部重排。",
+        "choice_needed": true,
+        "choice_label": "需安宏選擇舒適／平價／混搭（或各據點混搭），不要由部門二選一。",
+        "disclaimer": "參考，須安宏確認。尚未訂房。",
+        "filled_fields": [
+          "official_name",
+          "official_url",
+          "address",
+          "phone",
+          "coords",
+          "price",
+          "parking"
+        ],
+        "pending_fields": [
+          "mapcode",
+          "check_in_out_time",
+          "free_cancel_until",
+          "booking_status"
+        ],
+        "fields": {
+          "official_name": {
+            "status": "已補",
+            "value": "鬼怒川温泉 あさや",
+            "checked_at": "2026-11-12",
+            "note": "鬼怒川溫泉 あさや飯店 本據點候選：鬼怒川温泉 あさや（本據點實務首推（3 大人和室、免費大停車場、2 食 buffet；2027/6 未放房））；鬼怒川金谷ホテル（升級備選（溪谷景觀；2027/6 未放房，替代日無標準 3 人價））；中禅寺金谷ホテル（湖畔替代（企畫部不建議拆成 1 晚；若改住湖畔 3 晚須景點部重排 6/30–7/2））"
+          },
+          "official_url": {
+            "status": "已補",
+            "value": "https://www.asaya-hotel.co.jp/",
+            "checked_at": "2026-11-12",
+            "source_urls": [
+              "https://www.asaya-hotel.co.jp/"
+            ]
+          },
+          "address": {
+            "status": "已補",
+            "value": "〒321-2598 栃木県日光市鬼怒川温泉滝813番地",
+            "checked_at": "2026-11-12"
+          },
+          "phone": {
+            "status": "已補",
+            "value": "0288-77-1111（9:00–18:00）",
+            "checked_at": "2026-11-12"
+          },
+          "coords": {
+            "status": "已補",
+            "value": {
+              "lat": 36.8358685,
+              "lng": 139.7196309,
+              "datum": "WGS84"
+            },
+            "checked_at": "2026-11-12",
+            "note": "OpenStreetMap Nominatim（2026-11-12；あさやホテル, 鬼怒川温泉滝）"
+          },
+          "mapcode": {
+            "status": "待查",
+            "value": "待查",
+            "checked_at": "2026-11-12"
+          },
+          "check_in_out_time": {
+            "status": "待查",
+            "value": "待查",
+            "checked_at": "2026-11-12",
+            "note": "提案未列各館入住／退房時刻，待確認。"
+          },
+          "price": {
+            "status": "已補",
+            "value": "鬼怒川温泉 あさや：【禁煙】秀峰館和室街側 12 疊（定員可至 5 名），1泊2食（和洋中自助；方案名為「一番人気の豪華バイキング」），¥207,900，NT$43,659（匯率 0.21），替代日期實查，適用 comfort_and_budget／【禁煙】秀峰館和室渓谷側 12 疊，1泊2食（自助），¥217,800，替代日期實查 ／ 鬼怒川金谷ホテル：スタンダード和洋室 66㎡（既有資料，3 名可），1泊2食（既有參考價區間），參考價（非該日期實價） ／ 中禅寺金谷ホテル：デラックスツイン（3 名）33㎡ 全室中禪寺湖側，1泊2食 或 朝食のみ，替代日期實查（舊查；非路線 I 日期、亦非本次重查成功）",
+            "checked_at": "2026-11-12",
+            "note": "參考，須安宏確認。2027/6 未放房者為替代日期價。",
+            "source_urls": [
+              "https://hotel.travel.rakuten.co.jp/hotelinfo/plan/8643?f_heya_su=1&f_otona_su=3&f_nen1=2027&f_tuki1=4&f_hi1=20&f_nen2=2027&f_tuki2=4&f_hi2=23&f_sort=min_charge",
+              "https://hotel.travel.rakuten.co.jp/hotelinfo/plan/8643?f_heya_su=1&f_otona_su=3&f_nen1=2027&f_tuki1=4&f_hi1=20&f_nen2=2027&f_tuki2=4&f_hi2=23&f_sort=min_charge"
+            ]
+          },
+          "parking": {
+            "status": "已補",
+            "value": "免費",
+            "checked_at": "2026-11-12"
+          },
+          "free_cancel_until": {
+            "status": "待查",
+            "value": "待查",
+            "checked_at": "2026-11-12",
+            "note": "公開規則可能無法對應到尚未成立的訂單，實際免費取消期限待查。"
+          },
+          "booking_status": {
+            "status": "待查",
+            "value": "待查（尚未訂房）",
+            "checked_at": "2026-11-12",
+            "note": "須安宏親自確認後才可下單。部門未聯絡旅館、未訂房、未付款。"
+          }
+        },
+        "candidates": [
+          {
+            "name": "鬼怒川温泉 あさや",
+            "name_zh": "鬼怒川溫泉 あさや飯店",
+            "role": "本據點實務首推（3 大人和室、免費大停車場、2 食 buffet；2027/6 未放房）",
+            "url": "https://www.asaya-hotel.co.jp/"
+          },
+          {
+            "name": "鬼怒川金谷ホテル",
+            "name_zh": "鬼怒川金谷飯店",
+            "role": "升級備選（溪谷景觀；2027/6 未放房，替代日無標準 3 人價）",
+            "url": "https://www.kinugawakanaya.com/"
+          },
+          {
+            "name": "中禅寺金谷ホテル",
+            "name_zh": "中禪寺金谷飯店",
+            "role": "湖畔替代（企畫部不建議拆成 1 晚；若改住湖畔 3 晚須景點部重排 6/30–7/2）",
+            "url": "https://www.kanayahotel.co.jp/ckh/"
+          }
+        ]
+      },
+      {
+        "ref": "lodging:I:HANEDA",
+        "trip_name": "羽田周邊（必須有機場接駁或同等行李動線）",
+        "stay": {
+          "check_in": "2027-07-02",
+          "check_out": "2027-07-04",
+          "nights": 2,
+          "party": "大人3名",
+          "mode": "7/2 還車後入住；7/3 起不留車，接駁／電車"
+        },
+        "identification_note": "預設 JAL City WEST WING：舒適版走官網含早免費取消（先前 ¥84,948，須覆核）；平價版走楽天可免費取消之素泊（SAVER ¥78,540 或 2連泊 ¥73,050）。Metropolitan 7 月未放房且接駁不利大行李。Villa Fontaine 最便宜、有溫泉，但無接駁。",
+        "choice_needed": true,
+        "choice_label": "需安宏選擇舒適／平價／混搭（或各據點混搭），不要由部門二選一。",
+        "disclaimer": "參考，須安宏確認。尚未訂房。",
+        "filled_fields": [
+          "official_name",
+          "official_url",
+          "address",
+          "phone",
+          "coords",
+          "price",
+          "parking",
+          "free_cancel_until"
+        ],
+        "pending_fields": [
+          "mapcode",
+          "check_in_out_time",
+          "booking_status"
+        ],
+        "fields": {
+          "official_name": {
+            "status": "已補",
+            "value": "ホテルJALシティ羽田 東京 ウエストウイング",
+            "checked_at": "2026-11-12",
+            "note": "Hotel JAL City 羽田 WEST WING 本據點候選：ホテルJALシティ羽田 東京 ウエストウイング（首推（免費接駁、3～4 人房、有免費取消方案））；ホテルメトロポリタン羽田（備選（有免費接駁但行李限制；2027/7/2 尚未放房））；ヴィラフォンテーヌグランド羽田空港（比較用（無接駁車，但與 T3 屋內直結；有溫泉））"
+          },
+          "official_url": {
+            "status": "已補",
+            "value": "https://haneda.jalcity.co.jp/",
+            "checked_at": "2026-11-12",
+            "source_urls": [
+              "https://haneda.jalcity.co.jp/"
+            ]
+          },
+          "address": {
+            "status": "已補",
+            "value": "〒144-0042 東京都大田区羽田旭町4-11（本館地址；WEST WING 為同品牌別棟，請以官網地圖為準）",
+            "checked_at": "2026-11-12"
+          },
+          "phone": {
+            "status": "已補",
+            "value": "03-5735-2525",
+            "checked_at": "2026-11-12"
+          },
+          "coords": {
+            "status": "已補",
+            "value": {
+              "lat": 35.55179270426296,
+              "lng": 139.74697958938137,
+              "datum": "WGS84"
+            },
+            "checked_at": "2026-11-12",
+            "note": "既有 lodging.bases HANEDA"
+          },
+          "mapcode": {
+            "status": "待查",
+            "value": "待查",
+            "checked_at": "2026-11-12"
+          },
+          "check_in_out_time": {
+            "status": "待查",
+            "value": "待查",
+            "checked_at": "2026-11-12",
+            "note": "提案未列各館入住／退房時刻，待確認。"
+          },
+          "price": {
+            "status": "已補",
+            "value": "ホテルJALシティ羽田 東京 ウエストウイング：クアッドスタイルルーム 25㎡（最多 4 名；2 張 queen，洗い場與廁所分離），朝食付，¥84,948，NT$17,839（匯率 0.21），官網定價／先前官網實查（本次 2026-11-12 未能再次打開官網訂房頁覆核，請安宏登入官網確認），適用 comfort／クアッドスタイルルーム 25㎡，素泊，¥78,540，實查 2027，適用 budget ／ ホテルメトロポリタン羽田：デラックスツイン リバーサイド 40㎡ 3 名利用（既有官網客房資料）或ジュニアスイート 3 名，視方案，2027/7/2 未放房（本次楽天空室なし）。替代日 2027-04-02～04-04（週五～日）ジュニアスイート素泊早割 ¥155,970／2 泊，適逢櫻花季，明顯偏高，不用來估 7 月。 ／ ヴィラフォンテーヌグランド羽田空港：スーペリアツイン 3 名利用可，素泊，¥65,520，NT$13,759（匯率 0.21），實查 2027／スーペリアツイン 3 名利用可，朝食付，¥93,570，實查 2027",
+            "checked_at": "2026-11-12",
+            "note": "參考，須安宏確認。2027/6 未放房者為替代日期價。",
+            "source_urls": [
+              "https://hotel.travel.rakuten.co.jp/hotelinfo/plan/158324?f_heya_su=1&f_otona_su=3&f_nen1=2027&f_tuki1=7&f_hi1=2&f_nen2=2027&f_tuki2=7&f_hi2=4&f_sort=min_charge"
+            ]
+          },
+          "parking": {
+            "status": "已補",
+            "value": "本館 1泊 1,500 円（既有；7/2 已還車，通常不需要）",
+            "checked_at": "2026-11-12"
+          },
+          "free_cancel_until": {
+            "status": "已補",
+            "value": "先前官網：2027-06-24 23:59（日本時間）前免費取消",
+            "checked_at": "2026-11-12",
+            "note": "公開規則可能無法對應到尚未成立的訂單，實際免費取消期限待查。"
+          },
+          "booking_status": {
+            "status": "待查",
+            "value": "待查（尚未訂房）",
+            "checked_at": "2026-11-12",
+            "note": "須安宏親自確認後才可下單。部門未聯絡旅館、未訂房、未付款。"
+          }
+        },
+        "candidates": [
+          {
+            "name": "ホテルJALシティ羽田 東京 ウエストウイング",
+            "name_zh": "Hotel JAL City 羽田 WEST WING",
+            "role": "首推（免費接駁、3～4 人房、有免費取消方案）",
+            "url": "https://haneda.jalcity.co.jp/"
+          },
+          {
+            "name": "ホテルメトロポリタン羽田",
+            "name_zh": "Hotel Metropolitan 羽田",
+            "role": "備選（有免費接駁但行李限制；2027/7/2 尚未放房）",
+            "url": "https://haneda.metropolitan.jp/"
+          },
+          {
+            "name": "ヴィラフォンテーヌグランド羽田空港",
+            "name_zh": "Villa Fontaine Grand 羽田空港",
+            "role": "比較用（無接駁車，但與 T3 屋內直結；有溫泉）",
+            "url": "https://www.hvf.jp/hanedaairport-grand/"
+          }
+        ]
+      }
+    ]
+  },
+  "flights": {
+    "disclaimer": "參考，須安宏確認。機票欄位以現有 trip.json flights.chosen 為準並標待確認。機票部還在查。",
+    "booking_status": "booked",
+    "booking_note": "安宏已自行訂妥，不需比價。時刻為航班資料網站公布的 2027 夏季班表（2027-03-29 起生效），非訂位紀錄；請以長榮電子機票/訂位紀錄為準，出發前再確認。 訂位代號、艙等、行李額度與已付票款以實際電子機票／訂位紀錄為準。預算先用 3 人稅費合計 NT$16,000；任務若寫「／人」與既有資料衝突，待機票部更新後重算。",
+    "airports": [
+      {
+        "code": "TSA",
+        "name": "臺北松山",
+        "terminal": "T1",
+        "role": "出發／返回"
+      },
+      {
+        "code": "HND",
+        "name": "東京羽田",
+        "terminal": "T3",
+        "role": "抵達／起飛"
+      }
+    ],
+    "outbound": {
+      "flight": "BR192",
+      "airline": "長榮航空 EVA Air",
+      "date": "2027-06-19",
+      "from": "TSA",
+      "from_terminal": "T1",
+      "dep_time": "07:20",
+      "to": "HND",
+      "to_terminal": "T3",
+      "arr_time": "11:30",
+      "aircraft": "Boeing 787-10",
+      "duration": "3h10m",
+      "codeshare": "NH5826",
+      "source_url": "https://www.flight.info/BR192",
+      "checked_at": "2026-10-24",
+      "note": "已訂里程票（trip.json）。時刻為航班資料網站公布的 2027 夏季班表，請以長榮電子機票為準。"
+    },
+    "inbound": {
+      "flight": "BR189",
+      "airline": "長榮航空 EVA Air",
+      "date": "2027-07-04",
+      "from": "HND",
+      "from_terminal": "T3",
+      "dep_time": "10:50",
+      "to": "TSA",
+      "to_terminal": "T1",
+      "arr_time": "13:30",
+      "aircraft": "Boeing 787-10",
+      "duration": "3h40m",
+      "codeshare": "NH5823",
+      "source_url": "https://www.flight.info/BR189",
+      "checked_at": "2026-10-24",
+      "note": "7/4 10:50 起飛，約 8:20 前到 T3。7/3 必須住有羽田接駁的飯店。"
+    },
+    "baggage": {
+      "status": "待查",
+      "note": "trip.json flights.chosen.baggage 為 null，待確認。"
+    },
+    "price": {
+      "cash_twd_reference": 16000,
+      "currency": "TWD",
+      "per": "3人稅費合計（里程票）",
+      "note": "里程票，現金僅稅費；里程數未提供",
+      "booking_status": "已訂里程票，現金稅費為概數，待確認"
+    },
+    "unresolved": [
+      "訂位代號（booking_ref）為 null，待確認",
+      "艙等／票種待確認",
+      "行李額度待查",
+      "機票口徑待更新（先用 3 人合計 NT$16,000，不用 16,000／人）"
+    ],
+    "checked_at": "2026-10-24",
+    "booking_ref": null
+  },
+  "transport": {
+    "disclaimer": "參考，須安宏確認。尚未訂車，部門未聯絡店家、未付款。",
+    "pickup": "タイムズカー羽田店（京急大鳥居西口徒歩約5分；6/21 由東京住宿搭電車直接到店，不必先到航廈櫃台）",
+    "dropoff": "タイムズカー羽田店（同點），2027-07-02 目標 15:00–16:00（週五營業至 20:00、接駁末班 19:30）",
+    "pickup_dropoff_time": "取車 2027-06-21 09:00 前後；還車 2027-07-02 目標 15:00–16:00（週五營業至 20:00、接駁末班 19:30）。不可在航廈臨停還車。",
+    "hours": null,
+    "price": "租金全保（不含未確認 ETC）＋高速中位 ¥18,000＋油費中位 ¥14,500＝¥144,654（NT$30,064）；停車場另列預留 ¥3,000 未加總（多處免費或未查到官方價）。匯率 2026-11-12 JPY_TWD 0.207837。",
+    "reservation_status": "待查（未訂車）",
+    "proposal": {
+      "title": "Times 羽田同點取還（times_haneda_same_shop）報價與 ETC 卡待確認",
+      "shop": "タイムズカー羽田店（京急大鳥居西口徒歩約5分；6/21 由東京住宿搭電車直接到店，不必先到航廈櫃台）",
+      "quote_summary": "租金全保（不含未確認 ETC）＋高速中位 ¥18,000＋油費中位 ¥14,500＝¥144,654（NT$30,064）；停車場另列預留 ¥3,000 未加總（多處免費或未查到官方價）。匯率 2026-11-12 JPY_TWD 0.207837。",
+      "etc": {
+        "general": "Times 羽田 ETC 卡可否租借未確認（日文 FAQ 與英文頁說法矛盾），費用未列入推薦總價。若必須確保 ETC 卡，交通部改推 Nippon さき楽30 或 Toyota 国際線店。",
+        "times": "未確認、未列入"
+      },
+      "expressway_pass": {
+        "status": "不適用故不划算",
+        "note": "JEP 已停售；KEP＝九州、TEP＝東北且須東北取車；無 Tokyo-Nikko 券；ドラ割須日本個人 ETC。"
+      },
+      "alternatives": {
+        "nippon_saki30_twd": 37898,
+        "toyota_list_twd": 42356
+      },
+      "label": "提案，須安宏確認"
+    },
+    "checked_at": "2026-11-12"
+  },
+  "budget": {
+    "disclaimer": "參考，須安宏確認。三版皆在 40 萬上限內。機票仍用 NT$16,000 合計假設，口徑待更新。",
+    "currency": "TWD",
+    "cap": 400000,
+    "flights_pending_update": true,
+    "flights_note": "機票口徑待更新：先用 trip.json flights.chosen 3 人稅費合計 NT$16,000，不以「16,000／人」重算。待機票部更新後重算三版總額。",
+    "variants": {
+      "comfort": {
+        "label": "舒適版（住宿部 recommended_combo.comfort＋Times 羽田推薦方案）",
+        "lodging_jpy": 1153380,
+        "lodging_twd": 242210,
+        "car_twd": 30064,
+        "flights_twd": 16000,
+        "total_twd": 288274,
+        "gap_to_cap": 111726,
+        "within_budget": true,
+        "items": null
+      },
+      "budget": {
+        "label": "平價版（recommended_combo.budget＋Times 羽田推薦方案；熱海改金城館，與預設住きらの里不同）",
+        "lodging_jpy": 707205,
+        "lodging_twd": 148513,
+        "car_twd": 30064,
+        "flights_twd": 16000,
+        "total_twd": 194577,
+        "gap_to_cap": 205423,
+        "within_budget": true,
+        "items": null
+      },
+      "mix": {
+        "label": "混搭版（東京平價＋きらの里舒適＋輕井澤王子西館＋福一＋あさや＋羽田素泊；單價皆出自住宿部，合計由企畫部加總）",
+        "lodging_jpy": 829173,
+        "lodging_twd": 174126,
+        "car_twd": 30064,
+        "flights_twd": 16000,
+        "total_twd": 220190,
+        "gap_to_cap": 179810,
+        "within_budget": true,
+        "items": [
+          {
+            "base": "TYO",
+            "hotel": "サンシャインシティプリンス ツインA＋加床 素泊",
+            "nights": 2,
+            "jpy": 82791,
+            "basis": "實查 2027"
+          },
+          {
+            "base": "ATAMI_IZUKOGEN",
+            "hotel": "杜の湯 きらの里 本館和洋室 1泊2食 基本",
+            "nights": 3,
+            "jpy": 222750,
+            "basis": "實查 2027"
+          },
+          {
+            "base": "KARUIZAWA",
+            "hotel": "軽井沢プリンスウエスト Cottage A 連泊 素泊",
+            "nights": 3,
+            "jpy": 151602,
+            "basis": "實查 2027"
+          },
+          {
+            "base": "IKAHO",
+            "hotel": "福一 おまかせ 1泊朝食",
+            "nights": 2,
+            "jpy": 91080,
+            "basis": "替代日期實查 2027-03-28～30"
+          },
+          {
+            "base": "KINUGAWA",
+            "hotel": "あさや 秀峰館和室街側12疊 1泊2食",
+            "nights": 3,
+            "jpy": 207900,
+            "basis": "替代日期實查 2027-04-20～23"
+          },
+          {
+            "base": "HANEDA",
+            "hotel": "JALシティ WW クアッド 2連泊 素泊（有接駁）",
+            "nights": 2,
+            "jpy": 73050,
+            "basis": "實查 2027"
+          }
+        ]
+      }
+    },
+    "parking_not_included": {
+      "parking_jpy": null,
+      "parking_reserve_jpy": 3000,
+      "note": "交通部預留 ¥3,000 未加進 recommended_total；奥日光縣營停車場每次 500 円等未計。"
+    },
+    "computed_at": "2026-11-12T01:46:59+08:00",
+    "sources": [
+      "proposals/lodging_route_I_20261112.json／.md（旅遊住宿部，2026-11-12）",
+      "trip.json transport.routes.I（租車交通部，2026-11-12）",
+      "trip.json flights.chosen.price.cash_twd_total（機票部 2026-10-24；本輪待更新）",
+      "https://open.er-api.com/v6/latest/JPY（plans 欄 2026-10-24 0.207503；交通部 2026-11-11 08:02 Asia/Taipei 0.207837）",
+      "trip.json meta.budget_type=cap（上限 NT$400,000，3 人，含機票＋住宿＋租車）"
+    ]
+  },
+  "ikaho_ishidangai": {
+    "ref": "s_b6fb015d",
+    "updated_in_trip_json": true,
+    "region_used": "伊香保・榛名",
+    "note": "已用新值（伊香保・榛名，base＝None）"
+  }
+}
