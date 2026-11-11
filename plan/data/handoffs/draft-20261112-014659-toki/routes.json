@@ -1,0 +1,1586 @@
+{
+  "schema": "agency.route_set.v1",
+  "request_id": "draft-20261112-014659-toki",
+  "generated_at": "2026-11-12T01:46:59+08:00",
+  "source": "auto_codex",
+  "qa": "未核對",
+  "routes": [
+    {
+      "route_id": "I",
+      "title": "伊豆熱海·輕井澤·群馬頭文字D·日光 大人系自駕",
+      "title_zh": "伊豆熱海·輕井澤·群馬頭文字D·日光 大人系自駕",
+      "summary": "伊豆熱海·輕井澤·群馬頭文字D·日光 大人系自駕｜池袋2（電車）→きらの里3（預設案A）→輕井澤3→伊香保2→鬼怒川3→羽田2（15晚）。6/21 09:00 Times 羽田取車、7/2 15:00–16:00 同店還。已依住宿／租車／景點／餐廳部 2026-11-12 提案重組；機票仍用 NT$16,000 合計假設（待更新）。",
+      "fit_reasons": [
+        "伊豆熱海·輕井澤·群馬頭文字D·日光 大人系自駕",
+        "3 位大人，2027-06-19～2027-07-04",
+        "池袋2（電車）→きらの里3→輕井澤3→伊香保2→鬼怒川3→羽田2"
+      ],
+      "bases": [
+        {
+          "area": "東京・池袋（サンシャインシティプリンス）",
+          "area_zh": "東京・池袋（サンシャインシティプリンス）",
+          "nights": 2
+        },
+        {
+          "area": "伊豆高原・杜の湯 きらの里（預設，連住 3 晚）",
+          "area_zh": "伊豆高原・杜の湯 きらの里（預設，連住 3 晚）",
+          "nights": 3
+        },
+        {
+          "area": "輕井澤（舒適：萬豪含早／平價：王子西館 Cottage 素泊）",
+          "area_zh": "輕井澤（舒適：萬豪含早／平價：王子西館 Cottage 素泊）",
+          "nights": 3
+        },
+        {
+          "area": "伊香保温泉（渋川市伊香保；舒適：千明仁泉亭 2食／平價：福一含早）",
+          "area_zh": "伊香保温泉（渋川市伊香保；舒適：千明仁泉亭 2食／平價：福一含早）",
+          "nights": 2
+        },
+        {
+          "area": "鬼怒川溫泉・あさや（兩版皆 2食，連住 3 晚；不預設中禪寺 3 晚）",
+          "area_zh": "鬼怒川溫泉・あさや（兩版皆 2食，連住 3 晚；不預設中禪寺 3 晚）",
+          "nights": 3
+        },
+        {
+          "area": "羽田・JALシティ WEST WING（有接駁；舒適含早／平價素泊）",
+          "area_zh": "羽田・JALシティ WEST WING（有接駁；舒適含早／平價素泊）",
+          "nights": 2
+        }
+      ],
+      "days": [
+        {
+          "day": 1,
+          "date": "2027-06-19",
+          "drive_min": 0,
+          "stops": [
+            {
+              "ref": "flights.chosen.outbound",
+              "kind": "spot",
+              "name": "BR192 臺北松山 TSA T1 07:20 → 羽田 HND T3 11:30",
+              "lat": null,
+              "lng": null,
+              "google_maps": "",
+              "mapcode": null,
+              "note": "停留約 190 分；已訂里程票。抵達後以電車／單軌／利木津入市，當日不取車（時差與行李）。來源：trip.json flights.chosen，checked 2026-10-24。；航班"
+            },
+            {
+              "ref": "s_728ceaf0",
+              "kind": "spot",
+              "name": "秋葉原電気街（秋葉原電器街）",
+              "lat": 35.69836,
+              "lng": 139.77313,
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=35.698360,139.773130",
+              "mapcode": "708 364*10",
+              "note": "停留約 150 分；雨天也適合。可順訪 Animate 秋葉原、Mandarake、駿河屋等既有景點（見 spots）。住宿部決定實際飯店。",
+              "source_url": "https://akiba.or.jp/"
+            },
+            {
+              "ref": "s_98f90db6",
+              "kind": "spot",
+              "name": "アニメイト秋葉原（Animate 秋葉原）",
+              "lat": 35.700502,
+              "lng": 139.771723,
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=35.700502,139.771723",
+              "mapcode": "707 629*70",
+              "note": "停留約 90 分；既有景點，沿用。",
+              "source_url": "https://www.animate.co.jp/"
+            },
+            {
+              "ref": "r-tyo-017",
+              "kind": "restaurant",
+              "name": "丸五（炸豬排）",
+              "lat": 35.699147,
+              "lng": 139.769737,
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=%E4%B8%B8%E4%BA%94%20%E6%9D%B1%E4%BA%AC%E9%83%BD%E5%8D%83%E4%BB%A3%E7%94%B0%E5%8C%BA%E5%A4%96%E7%A5%9E%E7%94%B01-8-14",
+              "mapcode": "707 472*64",
+              "note": "停留約 60 分；午餐首選",
+              "source_url": "https://tabelog.com/tokyo/A1310/A131001/13000379/"
+            },
+            {
+              "ref": "r-tyo-018",
+              "kind": "restaurant",
+              "name": "麺処 ほん田 秋葉原本店",
+              "lat": 35.69821,
+              "lng": 139.774214,
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=%E9%BA%BA%E5%87%A6%20%E3%81%BB%E3%82%93%E7%94%B0%20%E7%A7%8B%E8%91%89%E5%8E%9F%E6%9C%AC%E5%BA%97%20%E6%9D%B1%E4%BA%AC%E9%83%BD%E5%8D%83%E4%BB%A3%E7%94%B0%E5%8C%BA%E7%A5%9E%E7%94%B0%E8%8A%B1%E5%B2%A1%E7%94%BA1-19",
+              "mapcode": "708 338*42",
+              "note": "停留約 60 分；午餐備選",
+              "source_url": "https://tabelog.com/tokyo/A1310/A131001/13246285/"
+            },
+            {
+              "ref": "r-tyo-019",
+              "kind": "restaurant",
+              "name": "九州じゃんがららあめん 秋葉原本店",
+              "lat": 35.70079,
+              "lng": 139.770688,
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=%E4%B9%9D%E5%B7%9E%E3%81%98%E3%82%83%E3%82%93%E3%81%8C%E3%82%89%E3%82%89%E3%81%82%E3%82%81%E3%82%93%20%E7%A7%8B%E8%91%89%E5%8E%9F%E6%9C%AC%E5%BA%97%20%E6%9D%B1%E4%BA%AC%E9%83%BD%E5%8D%83%E4%BB%A3%E7%94%B0%E5%8C%BA%E5%A4%96%E7%A5%9E%E7%94%B03-11-6",
+              "mapcode": "707 656*58",
+              "note": "停留約 60 分；晚餐首選；雨天備案",
+              "source_url": "https://tabelog.com/tokyo/A1310/A131001/13000344/"
+            },
+            {
+              "ref": "r-tyo-008",
+              "kind": "restaurant",
+              "name": "永利 池袋本店",
+              "lat": 35.734345,
+              "lng": 139.711769,
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=%E6%B0%B8%E5%88%A9%20%E6%B1%A0%E8%A2%8B%E6%9C%AC%E5%BA%97%20%E6%9D%B1%E4%BA%AC%E9%83%BD%E8%B1%8A%E5%B3%B6%E5%8C%BA%E6%B1%A0%E8%A2%8B1-2-6%20%E3%83%99%E3%83%AB%E3%83%A1%E3%82%BE%E3%83%B3%E6%B1%A0%E8%A2%8B",
+              "mapcode": "820 683*77",
+              "note": "停留約 60 分；晚餐備選",
+              "source_url": "https://tabelog.com/tokyo/A1305/A130501/13005595/"
+            }
+          ]
+        },
+        {
+          "day": 2,
+          "date": "2027-06-20",
+          "drive_min": 0,
+          "stops": [
+            {
+              "ref": "s_464f2257",
+              "kind": "spot",
+              "name": "アニメイト池袋本店（Animate 池袋本店）",
+              "lat": 35.731147,
+              "lng": 139.715449,
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=35.731147,139.715449",
+              "mapcode": "821 307*80",
+              "note": "停留約 150 分；池袋本店。可搭配 Jump Shop 池袋 s_e3310f54。",
+              "source_url": "https://www.animate.co.jp/shop/ikebukuro/"
+            },
+            {
+              "ref": "s_e3310f54",
+              "kind": "spot",
+              "name": "JUMP SHOP 池袋店（池袋PARCO 本館 B2F）（Jump Shop 池袋）",
+              "lat": 35.7308314,
+              "lng": 139.7124039,
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=35.730831,139.712404",
+              "mapcode": "820 296*87",
+              "note": "停留約 60 分",
+              "source_url": "https://ikebukuro.parco.jp/shop/detail/?cd=030637"
+            },
+            {
+              "ref": "r-tyo-009",
+              "kind": "restaurant",
+              "name": "COFFEE VALLEY（若素泊）",
+              "lat": 35.727694,
+              "lng": 139.713081,
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=COFFEE%20VALLEY%20%E6%9D%B1%E4%BA%AC%E9%83%BD%E8%B1%8A%E5%B3%B6%E5%8C%BA%E5%8D%97%E6%B1%A0%E8%A2%8B2-26-3",
+              "mapcode": "790 868*75",
+              "note": "停留約 60 分；早餐首選",
+              "source_url": "https://tabelog.com/tokyo/A1305/A130501/13175074/"
+            },
+            {
+              "ref": "r-tyo-001",
+              "kind": "restaurant",
+              "name": "無敵家（麵創房 無敵家）",
+              "lat": 35.726913,
+              "lng": 139.711665,
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=%E7%84%A1%E6%95%B5%E5%AE%B6%20%E6%9D%B1%E4%BA%AC%E9%83%BD%E8%B1%8A%E5%B3%B6%E5%8C%BA%E5%8D%97%E6%B1%A0%E8%A2%8B1-17-1%20%E5%B4%8E%E6%9C%AC%E3%83%93%E3%83%AB",
+              "mapcode": "790 773*64",
+              "note": "停留約 60 分；午餐首選",
+              "source_url": "https://tabelog.com/tokyo/A1305/A130501/13003927/"
+            },
+            {
+              "ref": "r-tyo-004",
+              "kind": "restaurant",
+              "name": "瞠 池袋本店",
+              "lat": 35.731857,
+              "lng": 139.716575,
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=%E7%9E%A0%20%E6%B1%A0%E8%A2%8B%E6%9C%AC%E5%BA%97%20%E6%9D%B1%E4%BA%AC%E9%83%BD%E8%B1%8A%E5%B3%B6%E5%8C%BA%E6%9D%B1%E6%B1%A0%E8%A2%8B1-31-16%20%E6%9D%B1%E5%95%86%E3%83%93%E3%83%AB%EF%BC%93%20%EF%BC%91%EF%BC%A6",
+              "mapcode": "821 401*57",
+              "note": "停留約 60 分；午餐備選",
+              "source_url": "https://tabelog.com/tokyo/A1305/A130501/13003877/"
+            },
+            {
+              "ref": "r-tyo-005",
+              "kind": "restaurant",
+              "name": "叙々苑 池袋サンシャイン通り店",
+              "lat": 35.730839,
+              "lng": 139.715018,
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=%E5%8F%99%E3%80%85%E8%8B%91%20%E6%B1%A0%E8%A2%8B%E3%82%B5%E3%83%B3%E3%82%B7%E3%83%A3%E3%82%A4%E3%83%B3%E9%80%9A%E3%82%8A%E5%BA%97%20%E6%9D%B1%E4%BA%AC%E9%83%BD%E8%B1%8A%E5%B3%B6%E5%8C%BA%E6%9D%B1%E6%B1%A0%E8%A2%8B1-15-2%20%E9%9F%B3%E7%BE%BD%E3%83%93%E3%83%AB%20%EF%BC%94%EF%BC%A6",
+              "mapcode": "821 275*07",
+              "note": "停留約 60 分；晚餐首選",
+              "source_url": "https://tabelog.com/tokyo/A1305/A130501/13019089/"
+            },
+            {
+              "ref": "r-tyo-008",
+              "kind": "restaurant",
+              "name": "永利 池袋本店",
+              "lat": 35.734345,
+              "lng": 139.711769,
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=%E6%B0%B8%E5%88%A9%20%E6%B1%A0%E8%A2%8B%E6%9C%AC%E5%BA%97%20%E6%9D%B1%E4%BA%AC%E9%83%BD%E8%B1%8A%E5%B3%B6%E5%8C%BA%E6%B1%A0%E8%A2%8B1-2-6%20%E3%83%99%E3%83%AB%E3%83%A1%E3%82%BE%E3%83%B3%E6%B1%A0%E8%A2%8B",
+              "mapcode": "820 683*77",
+              "note": "停留約 60 分；晚餐備選",
+              "source_url": "https://tabelog.com/tokyo/A1305/A130501/13005595/"
+            }
+          ]
+        },
+        {
+          "day": 3,
+          "date": "2027-06-21",
+          "drive_min": 180,
+          "stops": [
+            {
+              "ref": "h_63a0c62373e8",
+              "kind": "spot",
+              "name": "タイムズカー羽田店取車",
+              "lat": null,
+              "lng": null,
+              "google_maps": "",
+              "mapcode": null,
+              "note": "停留約 45 分；京急大鳥居西口徒歩約5分。不要先去航廈櫃台。目標 09:00 前後與 11泊12日報價一致。；取還車",
+              "time": "09:00"
+            },
+            {
+              "ref": "s_6ba3e696",
+              "kind": "spot",
+              "name": "熱海温泉（短散步）＋午餐",
+              "lat": 35.10377,
+              "lng": 139.07876,
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=35.103770,139.078760",
+              "mapcode": "116 684 054*46",
+              "note": "停留約 60 分；取車後估計約 12:00 抵熱海。散步縮為約 60 分（含午餐），以趕上 MOA 13:30。午餐首選でん助茶屋（雨備）。",
+              "source_url": "https://www.ataminews.gr.jp/",
+              "time": "12:00"
+            },
+            {
+              "ref": "s_c5301972",
+              "kind": "spot",
+              "name": "MOA美術館（MOA美術館）",
+              "lat": 35.109262,
+              "lng": 139.075334,
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=35.109262,139.075334",
+              "mapcode": "116 684 642*00",
+              "note": "停留約 100 分；預設案A：13:30–15:10 約 100 分（原 150 分趕不上 16:30 きらの里）。停車場入口 MapCode 116 684 578*04（景點部，Saibara 反查 0.9 m）。離開後估計 78 分抵きらの里。",
+              "source_url": "https://www.moaart.or.jp/",
+              "time": "13:30"
+            },
+            {
+              "ref": "rI-atm_densuke",
+              "kind": "restaurant",
+              "name": "でん助茶屋（海景海鮮）",
+              "lat": 35.100210538060885,
+              "lng": 139.07950127783533,
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=%E3%81%A7%E3%82%93%E5%8A%A9%E8%8C%B6%E5%B1%8B%20%E9%9D%99%E5%B2%A1%E7%9C%8C%E7%86%B1%E6%B5%B7%E5%B8%82%E6%9D%B1%E6%B5%B7%E5%B2%B8%E7%94%BA14-66",
+              "mapcode": "116 654 567*33",
+              "note": "停留約 60 分；午餐首選；雨天備案；電話來源不一致待確認（Tabelog 0557-81-8000）",
+              "source_url": "https://tabelog.com/shizuoka/A2205/A220502/22020829/",
+              "time": "12:00"
+            },
+            {
+              "ref": "rI-atm_kamatsuru",
+              "kind": "restaurant",
+              "name": "海幸楽膳 釜つる",
+              "lat": 35.096686988866885,
+              "lng": 139.07441000896506,
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=%E6%B5%B7%E5%B9%B8%E6%A5%BD%E8%86%B3%20%E9%87%9C%E3%81%A4%E3%82%8B%20%E9%9D%99%E5%B2%A1%E7%9C%8C%E7%86%B1%E6%B5%B7%E5%B8%82%E9%8A%80%E5%BA%A7%E7%94%BA10-11",
+              "mapcode": "116 654 189*53",
+              "note": "停留約 60 分；午餐備選",
+              "source_url": "https://tabelog.com/shizuoka/A2205/A220502/22000010/"
+            },
+            {
+              "ref": "rI-atm_takaratei",
+              "kind": "restaurant",
+              "name": "宝亭（昭和洋食）",
+              "lat": 35.096069698867275,
+              "lng": 139.07440141895887,
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=%E5%AE%9D%E4%BA%AD%20%E9%9D%99%E5%B2%A1%E7%9C%8C%E7%86%B1%E6%B5%B7%E5%B8%82%E9%8A%80%E5%BA%A7%E7%94%BA5-10",
+              "mapcode": "116 654 129*56",
+              "note": "停留約 60 分；午餐備選",
+              "source_url": "https://tabelog.com/shizuoka/A2205/A220502/22000784/"
+            },
+            {
+              "ref": "h_498ba322c1ff",
+              "kind": "restaurant",
+              "name": "杜の湯 きらの里 晚餐（預設 2食）",
+              "lat": null,
+              "lng": null,
+              "google_maps": "",
+              "mapcode": null,
+              "note": "停留約 60 分；晚餐（旅館）；案B 或素泊則改囲炉茶屋 rI-atm_irori",
+              "time": "16:30"
+            }
+          ]
+        },
+        {
+          "day": 4,
+          "date": "2027-06-22",
+          "drive_min": 60,
+          "stops": [
+            {
+              "ref": "s_9d8a1016",
+              "kind": "spot",
+              "name": "大室山（大室山）",
+              "lat": 34.90314,
+              "lng": 139.09476,
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=34.903140,139.094760",
+              "mapcode": "488 521 892*05",
+              "note": "停留約 90 分；停車場入口 MapCode 488 552 451*45（景點部）。若檢修停駛，改山腳眺望，勿排隊等艙椅。",
+              "source_url": "https://omuroyama.com/",
+              "time": "09:30"
+            },
+            {
+              "ref": "s_79706111",
+              "kind": "spot",
+              "name": "城ヶ崎海岸（門脇吊橋）（城崎海岸（門脇吊橋））",
+              "lat": 34.89053,
+              "lng": 139.138749,
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=34.890530,139.138749",
+              "mapcode": "488 497 390*43",
+              "note": "停留約 90 分；正式地名為 城ヶ崎海岸（門脇吊橋），靜岡縣伊東市，非兵庫城崎。大雨大浪不宜。市營門脇駐車場：15 分內免費、之後 1 日 ¥500（既有 spots）。 門脇駐車場入口 488 496 447*15（景點部）。15 分內免費、之後 1 日 500 円。",
+              "source_url": "https://shizuoka-press.com/jogasaki-kaigan-kadowaki-tsuribashi-guide/",
+              "time": "13:00"
+            },
+            {
+              "ref": "s_0faad278",
+              "kind": "spot",
+              "name": "伊豆シャボテン動物公園（纜椅停駛時當日備案）",
+              "lat": 34.907204,
+              "lng": 139.100859,
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=34.907204,139.100859",
+              "mapcode": "488 552 434*65",
+              "note": "停留約 120 分；大室山山腳。平日大人 2,800 円、週末假日 3,000 円。9:30–17:00。；備案／可選",
+              "source_url": "https://izushaboten.com/news/entrance-fee/",
+              "optional": true
+            },
+            {
+              "ref": "s_9b14bbb3",
+              "kind": "spot",
+              "name": "小室山公園（纜椅停駛時當日備案）",
+              "lat": 34.941071,
+              "lng": 139.126512,
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=34.941071,139.126512",
+              "mapcode": "488 675 466*42",
+              "note": "停留約 90 分；備案纜椅展望。MapCode 為既有資料，景點部標非入口精確點。；備案／可選",
+              "source_url": "https://www.youtube.com/watch?v=38Lp8HsgnP8",
+              "optional": true
+            },
+            {
+              "ref": "s_5bd4accf",
+              "kind": "spot",
+              "name": "伊豆テディベア・ミュージアム（雨天備案）",
+              "lat": 34.877822,
+              "lng": 139.11154,
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=34.877822,139.111540",
+              "mapcode": "488 433 862*73",
+              "note": "停留約 90 分；入口 MapCode 待查（景點部：僅景點點位 488 433 862*73）。6/22 非 6 月第 2 個週二＋週三休館窗。；備案／可選",
+              "source_url": "https://www.teddynet.co.jp/izu/info/",
+              "optional": true
+            },
+            {
+              "ref": "rI-izu_omuro",
+              "kind": "restaurant",
+              "name": "おおむろ軽食堂（リフト館 1F）",
+              "lat": 34.90760127899417,
+              "lng": 139.09696915703935,
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=%E3%81%8A%E3%81%8A%E3%82%80%E3%82%8D%E8%BB%BD%E9%A3%9F%E5%A0%82%EF%BC%88%E5%A4%A7%E5%AE%A4%E5%B1%B1%E3%83%AA%E3%83%95%E3%83%88%E9%A4%A8%201F%EF%BC%89%20%E9%9D%99%E5%B2%A1%E7%9C%8C%E4%BC%8A%E6%9D%B1%E5%B8%82%E5%AF%8C%E6%88%B81317-5%20%E5%A4%A7%E5%AE%A4%E5%B1%B1%E3%83%AA%E3%83%95%E3%83%88%E9%A4%A8%201F",
+              "mapcode": "488 552 450*08",
+              "note": "停留約 60 分；午餐首選；檢修時可能休業，改ぼら納屋",
+              "source_url": "https://tabelog.com/shizuoka/A2205/A220503/22025692/"
+            },
+            {
+              "ref": "rI-izu_boranaya",
+              "kind": "restaurant",
+              "name": "ぼら納屋（城崎海岸）",
+              "lat": 34.89424920901526,
+              "lng": 139.1365679568767,
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=%E3%81%BC%E3%82%89%E7%B4%8D%E5%B1%8B%20%E9%9D%99%E5%B2%A1%E7%9C%8C%E4%BC%8A%E6%9D%B1%E5%B8%82%E5%AF%8C%E6%88%B8837",
+              "mapcode": "488 496 832*17",
+              "note": "停留約 60 分；午餐備選",
+              "source_url": "https://tabelog.com/shizuoka/A2205/A220503/22000572/"
+            },
+            {
+              "ref": "r-inatori-003",
+              "kind": "restaurant",
+              "name": "道の駅 伊東マリンタウン",
+              "lat": 34.98536,
+              "lng": 139.094274,
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=%E9%81%93%E3%81%AE%E9%A7%85%20%E4%BC%8A%E6%9D%B1%E3%83%9E%E3%83%AA%E3%83%B3%E3%82%BF%E3%82%A6%E3%83%B3%20%E9%9D%99%E5%B2%A1%E7%9C%8C%E4%BC%8A%E6%9D%B1%E5%B8%82%E6%B9%AF%E5%B7%9D571-19",
+              "mapcode": "116 236 770*15",
+              "note": "停留約 60 分；午餐雨天備案；雨天備案",
+              "source_url": "https://tabelog.com/shizuoka/A2205/A220503/22035138/"
+            },
+            {
+              "ref": "h_057253ef3139",
+              "kind": "restaurant",
+              "name": "きらの里 晚餐（預設 2食）",
+              "lat": null,
+              "lng": null,
+              "google_maps": "",
+              "mapcode": null,
+              "note": "停留約 60 分；晚餐（旅館）；外食首選伊豆高原啤酒 rI-izu_beer（雨備）／まるたか"
+            }
+          ]
+        },
+        {
+          "day": 5,
+          "date": "2027-06-23",
+          "drive_min": 120,
+          "stops": [
+            {
+              "ref": "s_c113130a",
+              "kind": "spot",
+              "name": "修善寺温泉（修禅寺・竹林の小径）（修善寺溫泉（修禪寺・竹林小徑））",
+              "lat": 34.971528,
+              "lng": 138.927573,
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=34.971528,138.927573",
+              "mapcode": "116 186 170*03",
+              "note": "停留約 150 分；由熱海／伊豆高原往返概估約 1–1.5 小時，不當日北上長野。寶物殿 4–9 月 8:30–16:30，原則無休；大人 ¥300。竹林雨天反而有風情。可選修善寺虹之鄉 s_ed8e7512（週二休；本日週三原則開，旺季／夏季時刻出發前查官網）。",
+              "source_url": "https://kanko.city.izu.shizuoka.jp/sightseeing/shuzenji-temple/"
+            },
+            {
+              "ref": "r-shuzenji-002",
+              "kind": "restaurant",
+              "name": "独鈷そば大戸（修善寺）",
+              "lat": 34.971466,
+              "lng": 138.93023,
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=%E7%8B%AC%E9%88%B7%E3%81%9D%E3%81%B0%E5%A4%A7%E6%88%B8%20%E9%9D%99%E5%B2%A1%E7%9C%8C%E4%BC%8A%E8%B1%86%E5%B8%82%E4%BF%AE%E5%96%84%E5%AF%BA765-6",
+              "mapcode": "116 187 150*85",
+              "note": "停留約 60 分；午餐（餐廳部列備選，本日無另列首選，作預設）",
+              "source_url": "https://tabelog.com/shizuoka/A2205/A220504/22000462/"
+            },
+            {
+              "ref": "r-shuzenji-005",
+              "kind": "restaurant",
+              "name": "月ヶ瀬テラスキッチン（道之驛 伊豆月瀨）",
+              "lat": 34.922299,
+              "lng": 138.932077,
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=%E6%9C%88%E3%83%B6%E7%80%AC%E3%83%86%E3%83%A9%E3%82%B9%E3%82%AD%E3%83%83%E3%83%81%E3%83%B3%20%E9%9D%99%E5%B2%A1%E7%9C%8C%E4%BC%8A%E8%B1%86%E5%B8%82%E6%9C%88%E3%82%B1%E7%80%AC78-2%20%E9%81%93%E3%81%AE%E9%A7%85%E4%BC%8A%E8%B1%86%E6%9C%88%E3%83%B6%E7%80%AC",
+              "mapcode": "116 007 246*15",
+              "note": "停留約 60 分；午餐雨天備案；雨天備案",
+              "source_url": "https://tabelog.com/shizuoka/A2205/A220504/22035967/"
+            },
+            {
+              "ref": "r-inatori-008",
+              "kind": "restaurant",
+              "name": "ル・フィヤージュ（伊豆高原甜點）",
+              "lat": 34.884368,
+              "lng": 139.103754,
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=%E3%83%AB%E3%83%BB%E3%83%95%E3%82%A3%E3%83%A4%E3%83%BC%E3%82%B8%E3%83%A5%20%E9%9D%99%E5%B2%A1%E7%9C%8C%E4%BC%8A%E6%9D%B1%E5%B8%82%E5%85%AB%E5%B9%A1%E9%87%8E1305-75",
+              "mapcode": "488 462 654*40",
+              "note": "停留約 60 分；可選下午茶",
+              "source_url": "https://tabelog.com/shizuoka/A2205/A220503/22003252/"
+            },
+            {
+              "ref": "h_d2718785077c",
+              "kind": "restaurant",
+              "name": "きらの里 晚餐（預設 2食，退房日次晨含早）",
+              "lat": null,
+              "lng": null,
+              "google_maps": "",
+              "mapcode": null,
+              "note": "停留約 60 分；晚餐（旅館）"
+            }
+          ]
+        },
+        {
+          "day": 6,
+          "date": "2027-06-24",
+          "drive_min": 270,
+          "stops": [
+            {
+              "ref": "h_cff2f2110192",
+              "kind": "spot",
+              "name": "伊豆／熱海 → 輕井澤（高速公路移動）",
+              "lat": null,
+              "lng": null,
+              "google_maps": "",
+              "mapcode": null,
+              "note": "停留約 300 分；單日車程概估 4–5 小時，超過「每天約 2–3 小時」目標，故設為純移動日：清晨出發、服務區午餐、目標 16:30 前抵輕井澤，不排景點、不走夜間山路。不住佐久平，以免隔日再搬一次；佐久平可作過路休息／超市，不作據點。；移動"
+            },
+            {
+              "ref": "rI-tr_yokokawa_sa",
+              "kind": "restaurant",
+              "name": "横川サービスエリア（下り線）フードコート",
+              "lat": 36.339188276809594,
+              "lng": 138.73912127497138,
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=%E6%A8%AA%E5%B7%9D%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9%E3%82%A8%E3%83%AA%E3%82%A2%EF%BC%88%E4%B8%8B%E3%82%8A%E7%B7%9A%EF%BC%89%E3%83%95%E3%83%BC%E3%83%89%E3%82%B3%E3%83%BC%E3%83%88%20%E7%BE%A4%E9%A6%AC%E7%9C%8C%E5%AE%89%E4%B8%AD%E5%B8%82%E6%9D%BE%E4%BA%95%E7%94%B0%E7%94%BA%E6%A8%AA%E5%B7%9D%E5%AD%97%E5%A4%A7%E6%9E%97917%20%E4%B8%8A%E4%BF%A1%E8%B6%8A%E8%87%AA%E5%8B%95%E8%BB%8A%E9%81%93%20%E6%A8%AA%E5%B7%9D%E4%B8%8B%E3%82%8A%E7%B7%9A%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9%E3%82%A8%E3%83%AA%E3%82%A2",
+              "mapcode": "292 629 272*20",
+              "note": "停留約 60 分；午餐首選；雨天備案；僅走上信越道順路",
+              "source_url": "https://tabelog.com/gunma/A1005/A100503/10001652/"
+            },
+            {
+              "ref": "rI-tr_oginoya",
+              "kind": "restaurant",
+              "name": "峠の釜めし本舗 おぎのや 横川店",
+              "lat": 36.334912777973635,
+              "lng": 138.73893017170747,
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=%E5%B3%A0%E3%81%AE%E9%87%9C%E3%82%81%E3%81%97%E6%9C%AC%E8%88%97%20%E3%81%8A%E3%81%8E%E3%81%AE%E3%82%84%20%E6%A8%AA%E5%B7%9D%E5%BA%97%20%E7%BE%A4%E9%A6%AC%E7%9C%8C%E5%AE%89%E4%B8%AD%E5%B8%82%E6%9D%BE%E4%BA%95%E7%94%B0%E7%94%BA%E6%A8%AA%E5%B7%9D297-1",
+              "mapcode": "292 599 721*06",
+              "note": "停留約 60 分；午餐備選；雨天備案",
+              "source_url": "https://tabelog.com/gunma/A1005/A100503/10000312/"
+            },
+            {
+              "ref": "r-karuizawa-002",
+              "kind": "restaurant",
+              "name": "軽井沢 川上庵 本店",
+              "lat": 36.35627,
+              "lng": 138.633826,
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=%E8%BB%BD%E4%BA%95%E6%B2%A2%20%E5%B7%9D%E4%B8%8A%E5%BA%B5%20%E6%9C%AC%E5%BA%97%20%E9%95%B7%E9%87%8E%E7%9C%8C%E5%8C%97%E4%BD%90%E4%B9%85%E9%83%A1%E8%BB%BD%E4%BA%95%E6%B2%A2%E7%94%BA%E8%BB%BD%E4%BA%95%E6%B2%A26-10",
+              "mapcode": "292 676 343*53",
+              "note": "停留約 60 分；晚餐首選",
+              "source_url": "https://tabelog.com/nagano/A2003/A200301/20000161/"
+            }
+          ]
+        },
+        {
+          "day": 7,
+          "date": "2027-06-25",
+          "drive_min": 30,
+          "stops": [
+            {
+              "ref": "s_d62d724f",
+              "kind": "spot",
+              "name": "軽井沢・プリンスショッピングプラザ（輕井澤王子購物廣場）",
+              "lat": 36.339162,
+              "lng": 138.63311,
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=36.339162,138.633110",
+              "mapcode": "292 616 280*36",
+              "note": "停留約 300 分；平日 Outlet。停車場入口 MapCode 292 616 589*41（景點部）。",
+              "source_url": "https://www.karuizawa-psp.jp/",
+              "time": "10:00"
+            },
+            {
+              "ref": "rI-krz_sakuya",
+              "kind": "restaurant",
+              "name": "出汁と信州ごはん 佐久屋本店（Outlet 內）",
+              "lat": 36.339694184150666,
+              "lng": 138.63513710977492,
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=%E5%87%BA%E6%B1%81%E3%81%A8%E4%BF%A1%E5%B7%9E%E3%81%94%E3%81%AF%E3%82%93%20%E4%BD%90%E4%B9%85%E5%B1%8B%E6%9C%AC%E5%BA%97%20%E9%95%B7%E9%87%8E%E7%9C%8C%E5%8C%97%E4%BD%90%E4%B9%85%E9%83%A1%E8%BB%BD%E4%BA%95%E6%B2%A2%E7%94%BA%E8%BB%BD%E4%BA%95%E6%B2%A2%20%E3%83%97%E3%83%AA%E3%83%B3%E3%82%B9%E3%82%B7%E3%83%A7%E3%83%83%E3%83%94%E3%83%B3%E3%82%B0%E3%83%97%E3%83%A9%E3%82%B6GM12",
+              "mapcode": "292 616 347*13",
+              "note": "停留約 60 分；午餐首選；雨天備案",
+              "source_url": "https://tabelog.com/nagano/A2003/A200301/20020814/",
+              "time": "11:30"
+            },
+            {
+              "ref": "r-karuizawa-007",
+              "kind": "restaurant",
+              "name": "ミカドコーヒー 軽井沢プリンスショッピングプラザ店",
+              "lat": 36.342197,
+              "lng": 138.634246,
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=%E3%83%9F%E3%82%AB%E3%83%89%E3%82%B3%E3%83%BC%E3%83%92%E3%83%BC%20%E8%BB%BD%E4%BA%95%E6%B2%A2%E3%83%97%E3%83%AA%E3%83%B3%E3%82%B9%E3%82%B7%E3%83%A7%E3%83%83%E3%83%94%E3%83%B3%E3%82%B0%E3%83%97%E3%83%A9%E3%82%B6%E5%BA%97%20%E9%95%B7%E9%87%8E%E7%9C%8C%E5%8C%97%E4%BD%90%E4%B9%85%E9%83%A1%E8%BB%BD%E4%BA%95%E6%B2%A2%E7%94%BA%E8%BB%BD%E4%BA%95%E6%B2%A21178-798%20%E8%BB%BD%E4%BA%95%E6%B2%A2%E3%83%97%E3%83%AA%E3%83%B3%E3%82%B9%E3%82%B7%E3%83%A7%E3%83%83%E3%83%94%E3%83%B3%E3%82%B0%E3%83%97%E3%83%A9%E3%82%B6%20%E3%82%BB%E3%83%B3%E3%82%BF%E3%83%BC%E3%83%A2%E3%83%BC%E3%83%AB%E5%86%85",
+              "mapcode": "292 616 614*04",
+              "note": "停留約 60 分；可選下午茶；雨天備案",
+              "source_url": "https://tabelog.com/nagano/A2003/A200301/20001792/"
+            },
+            {
+              "ref": "r-karuizawa-003",
+              "kind": "restaurant",
+              "name": "せきれい橋 川上庵",
+              "lat": 36.359731,
+              "lng": 138.590543,
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=%E3%81%9B%E3%81%8D%E3%82%8C%E3%81%84%E6%A9%8B%20%E5%B7%9D%E4%B8%8A%E5%BA%B5%20%E9%95%B7%E9%87%8E%E7%9C%8C%E5%8C%97%E4%BD%90%E4%B9%85%E9%83%A1%E8%BB%BD%E4%BA%95%E6%B2%A2%E7%94%BA%E9%95%B7%E5%80%89%E5%AD%97%E6%A8%AA%E5%90%B92145-5",
+              "mapcode": "292 671 697*27",
+              "note": "停留約 60 分；晚餐首選",
+              "source_url": "https://tabelog.com/nagano/A2003/A200301/20009457/"
+            }
+          ]
+        },
+        {
+          "day": 8,
+          "date": "2027-06-26",
+          "drive_min": 60,
+          "stops": [
+            {
+              "ref": "s_9d907ccf",
+              "kind": "spot",
+              "name": "雲場池（雲場池）",
+              "lat": 36.35209,
+              "lng": 138.626885,
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=36.352090,138.626885",
+              "mapcode": "292 645 798*53",
+              "note": "停留約 45 分；戶外全天、無專用停車場。10:00 前到。",
+              "source_url": "https://karuizawa-kankokyokai.jp/",
+              "time": "09:30"
+            },
+            {
+              "ref": "s_611cb75c",
+              "kind": "spot",
+              "name": "ハルニレテラス（榆樹街小鎮 Harunire Terrace）",
+              "lat": 36.359387,
+              "lng": 138.590438,
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=36.359387,138.590438",
+              "mapcode": "292 671 666*11",
+              "note": "停留約 90 分；各店約 10:00–18:00。與村民食堂、丸山咖啡同一區。",
+              "source_url": "https://www.hoshino-area.jp/",
+              "time": "10:15"
+            },
+            {
+              "ref": "r-karuizawa-006",
+              "kind": "restaurant",
+              "name": "村民食堂",
+              "lat": 36.362161,
+              "lng": 138.588975,
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=%E6%9D%91%E6%B0%91%E9%A3%9F%E5%A0%82%20%E9%95%B7%E9%87%8E%E7%9C%8C%E5%8C%97%E4%BD%90%E4%B9%85%E9%83%A1%E8%BB%BD%E4%BA%95%E6%B2%A2%E7%94%BA%E9%95%B7%E5%80%892148",
+              "mapcode": "292 701 061*01",
+              "note": "停留約 60 分；午餐首選（原稿指定）；1F 食券不可預約、2F 限預約。11:30–21:30。",
+              "source_url": "https://tabelog.com/nagano/A2003/A200301/20000413/",
+              "time": "11:30"
+            },
+            {
+              "ref": "r-karuizawa-004",
+              "kind": "restaurant",
+              "name": "ベーカリー&レストラン 沢村 軽井沢ハルニレテラス",
+              "lat": 36.358802,
+              "lng": 138.590503,
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=%E3%83%99%E3%83%BC%E3%82%AB%E3%83%AA%E3%83%BC%26%E3%83%AC%E3%82%B9%E3%83%88%E3%83%A9%E3%83%B3%20%E6%B2%A2%E6%9D%91%20%E8%BB%BD%E4%BA%95%E6%B2%A2%E3%83%8F%E3%83%AB%E3%83%8B%E3%83%AC%E3%83%86%E3%83%A9%E3%82%B9%20%E9%95%B7%E9%87%8E%E7%9C%8C%E5%8C%97%E4%BD%90%E4%B9%85%E9%83%A1%E8%BB%BD%E4%BA%95%E6%B2%A2%E7%94%BA%E5%A4%A7%E5%AD%97%E9%95%B7%E5%80%89%E5%AD%97%E6%A8%AA%E5%90%B92145-5%20%E3%83%8F%E3%83%AB%E3%83%8B%E3%83%AC%E3%83%86%E3%83%A9%E3%82%B9%20A%E6%A3%9F",
+              "mapcode": "292 671 607*86",
+              "note": "停留約 60 分；午餐備選／可選早餐",
+              "source_url": "https://tabelog.com/nagano/A2003/A200301/20009296/"
+            },
+            {
+              "ref": "rI-krz_maruyama",
+              "kind": "restaurant",
+              "name": "丸山珈琲 ハルニレテラス店",
+              "lat": 36.35947038791075,
+              "lng": 138.5904504120596,
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=%E4%B8%B8%E5%B1%B1%E7%8F%88%E7%90%B2%20%E3%83%8F%E3%83%AB%E3%83%8B%E3%83%AC%E3%83%86%E3%83%A9%E3%82%B9%E5%BA%97%20%E9%95%B7%E9%87%8E%E7%9C%8C%E5%8C%97%E4%BD%90%E4%B9%85%E9%83%A1%E8%BB%BD%E4%BA%95%E6%B2%A2%E7%94%BA%E9%95%B7%E5%80%89%E6%98%9F%E9%87%8E2145-5%20%E3%83%8F%E3%83%AB%E3%83%8B%E3%83%AC%E3%83%86%E3%83%A9%E3%82%B9%E5%86%85",
+              "mapcode": "292 671 666*41",
+              "note": "停留約 60 分；下午茶（原稿指定）；雨天備案；官網 8:00–19:00 vs Tabelog 至 20:00，兩源不一致。",
+              "source_url": "https://tabelog.com/nagano/A2003/A200301/20009458/"
+            },
+            {
+              "ref": "s_a5ccaf69",
+              "kind": "spot",
+              "name": "星野温泉 トンボの湯（星野溫泉 蜻蜓之湯）",
+              "lat": 36.362729,
+              "lng": 138.588888,
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=36.362729,138.588888",
+              "mapcode": "292 701 121*84",
+              "note": "停留約 90 分；無休（檢修日除外）。星野 P 前 30 分免費、之後 600 円/時，消費 2,000 円以上 2 小時免費。",
+              "source_url": "https://www.hoshino-area.jp/tombo",
+              "time": "17:00"
+            },
+            {
+              "ref": "r-karuizawa-002",
+              "kind": "restaurant",
+              "name": "軽井沢 川上庵 本店",
+              "lat": 36.35627,
+              "lng": 138.633826,
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=%E8%BB%BD%E4%BA%95%E6%B2%A2%20%E5%B7%9D%E4%B8%8A%E5%BA%B5%20%E6%9C%AC%E5%BA%97%20%E9%95%B7%E9%87%8E%E7%9C%8C%E5%8C%97%E4%BD%90%E4%B9%85%E9%83%A1%E8%BB%BD%E4%BA%95%E6%B2%A2%E7%94%BA%E8%BB%BD%E4%BA%95%E6%B2%A26-10",
+              "mapcode": "292 676 343*53",
+              "note": "停留約 60 分；晚餐首選",
+              "source_url": "https://tabelog.com/nagano/A2003/A200301/20000161/"
+            }
+          ]
+        },
+        {
+          "day": 9,
+          "date": "2027-06-27",
+          "drive_min": 120,
+          "stops": [
+            {
+              "ref": "s_da0d3612",
+              "kind": "spot",
+              "name": "白糸の滝（軽井沢）（白絲瀑布（長野輕井澤））",
+              "lat": 36.41039,
+              "lng": 138.59248,
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=36.410390,138.592480",
+              "mapcode": "292 851 794*51",
+              "note": "停留約 60 分；【同名核對】此為長野縣輕井澤町白糸の滝，不是靜岡縣富士宮市白糸の滝（s_09f58f8d）。原稿排在輕井澤之後、伊香保之前，地理上必為輕井澤那座。免費，停車場收費。梅雨季水量較豐。",
+              "source_url": "https://karuizawa-kankokyokai.jp/"
+            },
+            {
+              "ref": "s_b6fb015d",
+              "kind": "spot",
+              "name": "伊香保温泉 石段街（伊香保溫泉 石階街）",
+              "lat": 36.497658,
+              "lng": 138.916388,
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=36.497658,138.916388",
+              "mapcode": "94 875 310*63",
+              "note": "停留約 120 分；輕井澤→伊香保概估 1.5–2 小時。電話（觀光）0279-72-3151。石段雨天濕滑。目標日落前抵達，不走夜間山路。 位於群馬縣渋川市伊香保（非草津）。停車場入口 MapCode 94 875 521*78（景點部）。",
+              "source_url": "https://www.ikaho-kankou.com/"
+            },
+            {
+              "ref": "rI-tr_yamba",
+              "kind": "restaurant",
+              "name": "八ッ場食堂（道の駅 八ッ場ふるさと館）",
+              "lat": 36.5473889378213,
+              "lng": 138.6843845738919,
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=%E5%85%AB%E3%83%83%E5%A0%B4%E9%A3%9F%E5%A0%82%EF%BC%88%E9%81%93%E3%81%AE%E9%A7%85%20%E5%85%AB%E3%83%83%E5%A0%B4%E3%81%B5%E3%82%8B%E3%81%95%E3%81%A8%E9%A4%A8%EF%BC%89%20%E7%BE%A4%E9%A6%AC%E7%9C%8C%E5%90%BE%E5%A6%BB%E9%83%A1%E9%95%B7%E9%87%8E%E5%8E%9F%E7%94%BA%E5%A4%A7%E5%AD%97%E6%9E%971567-4%20%E9%81%93%E3%81%AE%E9%A7%85%20%E5%85%AB%E3%83%83%E5%A0%B4%E3%81%B5%E3%82%8B%E3%81%95%E3%81%A8%E9%A4%A8",
+              "mapcode": "295 457 285*86",
+              "note": "停留約 60 分；午餐首選；雨天備案",
+              "source_url": "https://tabelog.com/gunma/A1004/A100402/10021940/"
+            },
+            {
+              "ref": "rI-ika_ukigumo",
+              "kind": "restaurant",
+              "name": "浮曇（石段街居酒屋）",
+              "lat": 36.49746679792726,
+              "lng": 138.91751213322422,
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=%E6%B5%AE%E6%9B%87%20%E7%BE%A4%E9%A6%AC%E7%9C%8C%E6%B8%8B%E5%B7%9D%E5%B8%82%E4%BC%8A%E9%A6%99%E4%BF%9D%E7%94%BA%E4%BC%8A%E9%A6%99%E4%BF%9D61-6",
+              "mapcode": "94 875 284*03",
+              "note": "停留約 60 分；晚餐首選；舒適版 2食則改旅館晚餐",
+              "source_url": "https://tabelog.com/gunma/A1004/A100401/10022984/"
+            },
+            {
+              "ref": "rI-ika_sakaezushi",
+              "kind": "restaurant",
+              "name": "栄寿し",
+              "lat": 36.502968477928,
+              "lng": 138.93082041327045,
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=%E6%A0%84%E5%AF%BF%E3%81%97%20%E7%BE%A4%E9%A6%AC%E7%9C%8C%E6%B8%8B%E5%B7%9D%E5%B8%82%E4%BC%8A%E9%A6%99%E4%BF%9D%E7%94%BA%E4%BC%8A%E9%A6%99%E4%BF%9D525-134",
+              "mapcode": "94 877 872*08",
+              "note": "停留約 60 分；晚餐備選",
+              "source_url": "https://tabelog.com/gunma/A1004/A100401/10011803/"
+            },
+            {
+              "ref": "rI-ika_shikisai",
+              "kind": "restaurant",
+              "name": "四季彩（石段街 豬排丼）",
+              "lat": 36.49840161792642,
+              "lng": 138.91676374323418,
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=%E5%9B%9B%E5%AD%A3%E5%BD%A9%20%E7%BE%A4%E9%A6%AC%E7%9C%8C%E6%B8%8B%E5%B7%9D%E5%B8%82%E4%BC%8A%E9%A6%99%E4%BF%9D%E7%94%BA%E4%BC%8A%E9%A6%99%E4%BF%9D78",
+              "mapcode": "94 875 401*76",
+              "note": "停留約 60 分；晚餐備選；須 18:00 前入店；19:00 打烊",
+              "source_url": "https://tabelog.com/gunma/A1004/A100401/10001113/"
+            }
+          ]
+        },
+        {
+          "day": 10,
+          "date": "2027-06-28",
+          "drive_min": 90,
+          "stops": [
+            {
+              "ref": "s_6243bc70",
+              "kind": "spot",
+              "name": "榛名山 五連ヘアピン（県道33号 渋川松井田線）",
+              "lat": 36.497941,
+              "lng": 138.904268,
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=36.497941,138.904268",
+              "mapcode": "94 873 356*16",
+              "note": "停留約 60 分；代表點 MapCode 94 873 356*16（景點部，Saibara 1.4 m）。路上禁停。建議停伊香保側停車場再步行或低速通過。",
+              "source_url": "https://cartune.co.jp/magazine/articles/3569"
+            },
+            {
+              "ref": "s_3399ff02",
+              "kind": "spot",
+              "name": "榛名湖",
+              "lat": 36.4763945,
+              "lng": 138.8674138,
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=36.4763945,138.8674138",
+              "mapcode": "295 209 704*26",
+              "note": "停留約 60 分；入口 MapCode 待查，未編造。",
+              "source_url": "https://www.google.com/maps/search/?api=1&query=榛名湖"
+            },
+            {
+              "ref": "rI-ika_osawaya",
+              "kind": "restaurant",
+              "name": "大澤屋 第一店舗（水澤烏龍麵）",
+              "lat": 36.47958303794885,
+              "lng": 138.94963766302106,
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=%E5%A4%A7%E6%BE%A4%E5%B1%8B%20%E7%AC%AC%E4%B8%80%E5%BA%97%E8%88%97%20%E7%BE%A4%E9%A6%AC%E7%9C%8C%E6%B8%8B%E5%B7%9D%E5%B8%82%E4%BC%8A%E9%A6%99%E4%BF%9D%E7%94%BA%E5%A4%A7%E5%AD%97%E6%B0%B4%E6%B2%A2125-1",
+              "mapcode": "94 819 160*53",
+              "note": "停留約 60 分；午餐首選；雨天備案",
+              "source_url": "https://tabelog.com/gunma/A1004/A100401/10001525/"
+            },
+            {
+              "ref": "rI-ika_tamaruya",
+              "kind": "restaurant",
+              "name": "元祖 田丸屋（水澤烏龍麵）",
+              "lat": 36.479546027948025,
+              "lng": 138.94698293302255,
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=%E5%85%83%E7%A5%96%20%E7%94%B0%E4%B8%B8%E5%B1%8B%20%E7%BE%A4%E9%A6%AC%E7%9C%8C%E6%B8%8B%E5%B7%9D%E5%B8%82%E4%BC%8A%E9%A6%99%E4%BF%9D%E7%94%BA%E6%B0%B4%E6%B2%A2206-1",
+              "mapcode": "94 819 150*61",
+              "note": "停留約 60 分；午餐備選",
+              "source_url": "https://tabelog.com/gunma/A1004/A100401/10000215/"
+            },
+            {
+              "ref": "rI-har_suigetsu",
+              "kind": "restaurant",
+              "name": "カフェ水月（榛名湖畔）",
+              "lat": 36.47045448792697,
+              "lng": 138.8627402229898,
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=%E3%82%AB%E3%83%95%E3%82%A7%E6%B0%B4%E6%9C%88%20%E7%BE%A4%E9%A6%AC%E7%9C%8C%E9%AB%98%E5%B4%8E%E5%B8%82%E6%A6%9B%E5%90%8D%E6%B9%96%E7%94%BA847",
+              "mapcode": "295 208 087*87",
+              "note": "停留約 60 分；下午茶首選；不定休，出發前確認",
+              "source_url": "https://tabelog.com/gunma/A1001/A100102/10018273/"
+            },
+            {
+              "ref": "rI-har_resthouse",
+              "kind": "restaurant",
+              "name": "榛名湖 レストハウス",
+              "lat": 36.47031521792722,
+              "lng": 138.863269952988,
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=%E6%A6%9B%E5%90%8D%E6%B9%96%20%E3%83%AC%E3%82%B9%E3%83%88%E3%83%8F%E3%82%A6%E3%82%B9%20%E7%BE%A4%E9%A6%AC%E7%9C%8C%E9%AB%98%E5%B4%8E%E5%B8%82%E6%A6%9B%E5%90%8D%E6%B9%96%E7%94%BA847",
+              "mapcode": "295 208 059*20",
+              "note": "停留約 60 分；下午茶／午餐備選",
+              "source_url": "https://tabelog.com/gunma/A1001/A100102/10021329/"
+            },
+            {
+              "ref": "rI-ika_ukigumo",
+              "kind": "restaurant",
+              "name": "浮曇",
+              "lat": 36.49746679792726,
+              "lng": 138.91751213322422,
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=%E6%B5%AE%E6%9B%87%20%E7%BE%A4%E9%A6%AC%E7%9C%8C%E6%B8%8B%E5%B7%9D%E5%B8%82%E4%BC%8A%E9%A6%99%E4%BF%9D%E7%94%BA%E4%BC%8A%E9%A6%99%E4%BF%9D61-6",
+              "mapcode": "94 875 284*03",
+              "note": "停留約 60 分；晚餐首選；舒適版 2食則在旅館",
+              "source_url": "https://tabelog.com/gunma/A1004/A100401/10022984/"
+            },
+            {
+              "ref": "rI-ika_shikisai",
+              "kind": "restaurant",
+              "name": "四季彩",
+              "lat": 36.49840161792642,
+              "lng": 138.91676374323418,
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=%E5%9B%9B%E5%AD%A3%E5%BD%A9%20%E7%BE%A4%E9%A6%AC%E7%9C%8C%E6%B8%8B%E5%B7%9D%E5%B8%82%E4%BC%8A%E9%A6%99%E4%BF%9D%E7%94%BA%E4%BC%8A%E9%A6%99%E4%BF%9D78",
+              "mapcode": "94 875 401*76",
+              "note": "停留約 60 分；晚餐備選；18:00 前入店",
+              "source_url": "https://tabelog.com/gunma/A1004/A100401/10001113/"
+            }
+          ]
+        },
+        {
+          "day": 11,
+          "date": "2027-06-29",
+          "drive_min": 168,
+          "stops": [
+            {
+              "ref": "s_34a07cae",
+              "kind": "spot",
+              "name": "金精道路（金精峠・金精トンネル）",
+              "lat": 36.8189603,
+              "lng": 139.3949064,
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=36.8200566,139.3955631",
+              "mapcode": "735 227 833*65",
+              "note": "停留約 30 分；停車場入口 MapCode 735 228 544*84（景點部）。噴火警戒≥3 或天候不良則不走，改高速公路備案。",
+              "source_url": "https://www.pref.gunma.jp/page/11074.html"
+            },
+            {
+              "ref": "s_b4dc464d",
+              "kind": "spot",
+              "name": "中禅寺湖（中禪寺湖）",
+              "lat": 36.739198,
+              "lng": 139.492789,
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=36.739198,139.492789",
+              "mapcode": "947 269 285*42",
+              "note": "停留約 90 分；既有景點。梅雨湖霧可能影響視線。獨木舟是否營運依當日天候，未訂位。",
+              "source_url": "https://www.nikko-kankou.org/"
+            },
+            {
+              "ref": "s_06c8ea4b",
+              "kind": "spot",
+              "name": "華厳滝（華嚴瀑布）",
+              "lat": 36.738009,
+              "lng": 139.501968,
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=36.738009,139.501968",
+              "mapcode": "367 240 168*12",
+              "note": "停留約 60 分；觀瀑電梯 3/1–11/30 8:00–17:00，惡劣天候停駛。來回大人 ¥600、小學 ¥400（既有 spots；https://www.kegon.jp/info/）。梅雨水量較大，濃霧時看不清。",
+              "source_url": "https://www.kegon.jp/info/"
+            },
+            {
+              "ref": "s_6d96731f",
+              "kind": "spot",
+              "name": "鬼怒川温泉（鬼怒川溫泉）",
+              "lat": 36.82371,
+              "lng": 139.71689,
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=36.823710,139.716890",
+              "mapcode": "367 566 432*60",
+              "note": "停留約 30 分；白天經伊呂波下山入住，避免夜間山路。既有 parking 為 null，未編造，待住宿／景點部補旅館停車場。",
+              "source_url": "https://www.kinugawa-onsen.com/"
+            },
+            {
+              "ref": "r-nikko-010",
+              "kind": "restaurant",
+              "name": "レストラン メープル（中禪寺湖）",
+              "lat": 36.736354,
+              "lng": 139.495982,
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=%E3%83%AC%E3%82%B9%E3%83%88%E3%83%A9%E3%83%B3%20%E3%83%A1%E3%83%BC%E3%83%97%E3%83%AB%20%E6%A0%83%E6%9C%A8%E7%9C%8C%E6%97%A5%E5%85%89%E5%B8%82%E4%B8%AD%E5%AE%AE%E7%A5%A02482",
+              "mapcode": "947 239 897*26",
+              "note": "停留約 60 分；午餐首選",
+              "source_url": "https://tabelog.com/tochigi/A0903/A090301/9002348/"
+            },
+            {
+              "ref": "rI-tr_katashina",
+              "kind": "restaurant",
+              "name": "かたしな食堂（道の駅 尾瀬かたしな）",
+              "lat": 36.77290393704509,
+              "lng": 139.22567229462862,
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=%E3%81%8B%E3%81%9F%E3%81%97%E3%81%AA%E9%A3%9F%E5%A0%82%EF%BC%88%E9%81%93%E3%81%AE%E9%A7%85%20%E5%B0%BE%E7%80%AC%E3%81%8B%E3%81%9F%E3%81%97%E3%81%AA%EF%BC%89%20%E7%BE%A4%E9%A6%AC%E7%9C%8C%E5%88%A9%E6%A0%B9%E9%83%A1%E7%89%87%E5%93%81%E6%9D%91%E5%A4%A7%E5%AD%97%E9%8E%8C%E7%94%B03967-1%20%E9%81%93%E3%81%AE%E9%A7%85%E5%B0%BE%E7%80%AC%E3%81%8B%E3%81%9F%E3%81%97%E3%81%AA",
+              "mapcode": "540 387 344*52",
+              "note": "停留約 60 分；午餐備選；雨天備案",
+              "source_url": "https://tabelog.com/gunma/A1003/A100302/10019880/"
+            },
+            {
+              "ref": "r-nikko-012",
+              "kind": "restaurant",
+              "name": "龍頭之茶屋（龍頭瀑布）",
+              "lat": 36.757474,
+              "lng": 139.451655,
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=%E9%BE%8D%E9%A0%AD%E4%B9%8B%E8%8C%B6%E5%B1%8B%20%E6%A0%83%E6%9C%A8%E7%9C%8C%E6%97%A5%E5%85%89%E5%B8%82%E4%B8%AD%E5%AE%AE%E7%A5%A02485",
+              "mapcode": "735 024 467*37",
+              "note": "停留約 60 分；午餐備選",
+              "source_url": "https://tabelog.com/tochigi/A0903/A090301/9002349/"
+            },
+            {
+              "ref": "h_741be34af09e",
+              "kind": "restaurant",
+              "name": "あさや 晚餐（兩版皆 2食）",
+              "lat": null,
+              "lng": null,
+              "google_maps": "",
+              "mapcode": null,
+              "note": "停留約 60 分；晚餐（旅館）；外食備案魚登久 r-nikko-007，若晚到可能趕不上"
+            }
+          ]
+        },
+        {
+          "day": 12,
+          "date": "2027-06-30",
+          "drive_min": 90,
+          "stops": [
+            {
+              "ref": "s_ecd75926",
+              "kind": "spot",
+              "name": "いろは坂（第一・第二）（下行通過，途中禁停）",
+              "lat": 36.7331459,
+              "lng": 139.5158615,
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=36.745999,139.5122397",
+              "mapcode": "367 212 548*70",
+              "note": "停留約 30 分；只准一般速度通過拍照，禁止彎中停車或競速。主要停車改東照宮大駐車場。",
+              "source_url": "https://www.google.com/maps/search/?api=1&query=第二いろは坂"
+            },
+            {
+              "ref": "s_72a7ff3e",
+              "kind": "spot",
+              "name": "日光東照宮（日光東照宮）",
+              "lat": 36.757638,
+              "lng": 139.59911,
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=36.757638,139.599110",
+              "mapcode": "367 312 488*63",
+              "note": "停留約 180 分；4–10 月 9:00–17:00（受理至閉門前 30 分），全年無休。大人／高中 ¥1,600、中小學 ¥550（既有 spots；https://www.toshogu.jp/）。電話 0288-54-0560。世界遺產建築多有簷，雨天仍宜。建議早入園避暑期團客。",
+              "source_url": "https://www.nikkotoshogu.com/html/akusesu/haikan.html"
+            },
+            {
+              "ref": "r-nikko-001",
+              "kind": "restaurant",
+              "name": "明治の館",
+              "lat": 36.756759,
+              "lng": 139.602995,
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=%E6%98%8E%E6%B2%BB%E3%81%AE%E9%A4%A8%20%E6%A0%83%E6%9C%A8%E7%9C%8C%E6%97%A5%E5%85%89%E5%B8%82%E5%B1%B1%E5%86%852339-1",
+              "mapcode": "367 312 412*60",
+              "note": "停留約 60 分；午餐首選；雨天備案",
+              "source_url": "https://tabelog.com/tochigi/A0903/A090301/9000107/"
+            },
+            {
+              "ref": "r-nikko-005",
+              "kind": "restaurant",
+              "name": "道の駅日光 日光街道 ニコニコ本陣",
+              "lat": 36.724781,
+              "lng": 139.687764,
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=%E9%81%93%E3%81%AE%E9%A7%85%E6%97%A5%E5%85%89%20%E6%97%A5%E5%85%89%E8%A1%97%E9%81%93%20%E3%83%8B%E3%82%B3%E3%83%8B%E3%82%B3%E6%9C%AC%E9%99%A3%20%E6%A0%83%E6%9C%A8%E7%9C%8C%E6%97%A5%E5%85%89%E5%B8%82%E4%BB%8A%E5%B8%82719-1",
+              "mapcode": "132 787 537*42",
+              "note": "停留約 60 分；午餐雨天備案；雨天備案",
+              "source_url": "https://tabelog.com/tochigi/A0903/A090302/9015082/"
+            },
+            {
+              "ref": "r-nikko-003",
+              "kind": "restaurant",
+              "name": "日光珈琲 御用邸通",
+              "lat": 36.753202,
+              "lng": 139.595307,
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=%E6%97%A5%E5%85%89%E7%8F%88%E7%90%B2%20%E5%BE%A1%E7%94%A8%E9%82%B8%E9%80%9A%20%E6%A0%83%E6%9C%A8%E7%9C%8C%E6%97%A5%E5%85%89%E5%B8%82%E6%9C%AC%E7%94%BA3-13",
+              "mapcode": "367 311 024*73",
+              "note": "停留約 60 分；可選下午茶",
+              "source_url": "https://tabelog.com/tochigi/A0903/A090301/9013679/"
+            },
+            {
+              "ref": "h_b888b3717fdc",
+              "kind": "restaurant",
+              "name": "あさや 晚餐（2食）",
+              "lat": null,
+              "lng": null,
+              "google_maps": "",
+              "mapcode": null,
+              "note": "停留約 60 分；晚餐（旅館）；外食首選牛排よし乃 r-nikko-015／魚登久"
+            }
+          ]
+        },
+        {
+          "day": 13,
+          "date": "2027-07-01",
+          "drive_min": 60,
+          "stops": [
+            {
+              "ref": "s_2b86ea27",
+              "kind": "spot",
+              "name": "鬼怒楯岩大吊橋（鬼怒楯岩大吊橋）",
+              "lat": 36.820694,
+              "lng": 139.708412,
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=36.820694,139.708412",
+              "mapcode": "367 565 102*52",
+              "note": "停留約 60 分；就在鬼怒川，短程。可當雨備或輕鬆日。",
+              "source_url": "https://www.kinugawa-onsen.com/"
+            },
+            {
+              "ref": "s_dbf79561",
+              "kind": "spot",
+              "name": "鬼怒川ライン下り（鬼怒川泛舟（ライン下り））",
+              "lat": 36.826014,
+              "lng": 139.715504,
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=36.826014,139.715504",
+              "mapcode": "367 566 667*01",
+              "note": "停留約 90 分；天候與水位影響營運，未訂位；不去則改泡湯休息。 停航則取消本項，改吊橋或回旅館。",
+              "source_url": "https://linekudari.com/"
+            },
+            {
+              "ref": "r-nikko-013",
+              "kind": "restaurant",
+              "name": "めし処 龍王（鬼怒川）",
+              "lat": 36.860044,
+              "lng": 139.719048,
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=%E3%82%81%E3%81%97%E5%87%A6%20%E9%BE%8D%E7%8E%8B%20%E6%A0%83%E6%9C%A8%E7%9C%8C%E6%97%A5%E5%85%89%E5%B8%82%E8%97%A4%E5%8E%9F1357",
+              "mapcode": "367 686 740*24",
+              "note": "停留約 60 分；午餐首選",
+              "source_url": "https://tabelog.com/tochigi/A0903/A090303/9013649/"
+            },
+            {
+              "ref": "r-nikko-006",
+              "kind": "restaurant",
+              "name": "日光ゆば遊膳",
+              "lat": 36.753287,
+              "lng": 139.601504,
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=%E6%97%A5%E5%85%89%E3%82%86%E3%81%B0%E9%81%8A%E8%86%B3%20%E6%A0%83%E6%9C%A8%E7%9C%8C%E6%97%A5%E5%85%89%E5%B8%82%E5%AE%89%E5%B7%9D%E7%94%BA1-22",
+              "mapcode": "367 312 017*83",
+              "note": "停留約 60 分；午餐備選",
+              "source_url": "https://tabelog.com/tochigi/A0903/A090301/9001549/"
+            },
+            {
+              "ref": "r-nikko-005",
+              "kind": "restaurant",
+              "name": "道の駅日光 ニコニコ本陣",
+              "lat": 36.724781,
+              "lng": 139.687764,
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=%E9%81%93%E3%81%AE%E9%A7%85%E6%97%A5%E5%85%89%20%E6%97%A5%E5%85%89%E8%A1%97%E9%81%93%20%E3%83%8B%E3%82%B3%E3%83%8B%E3%82%B3%E6%9C%AC%E9%99%A3%20%E6%A0%83%E6%9C%A8%E7%9C%8C%E6%97%A5%E5%85%89%E5%B8%82%E4%BB%8A%E5%B8%82719-1",
+              "mapcode": "132 787 537*42",
+              "note": "停留約 60 分；午餐雨天備案；雨天備案",
+              "source_url": "https://tabelog.com/tochigi/A0903/A090302/9015082/"
+            },
+            {
+              "ref": "h_dfc96d5d7c61",
+              "kind": "restaurant",
+              "name": "あさや 晚餐（2食，最後一晚）",
+              "lat": null,
+              "lng": null,
+              "google_maps": "",
+              "mapcode": null,
+              "note": "停留約 60 分；晚餐（旅館）；外食よし乃 r-nikko-015"
+            }
+          ]
+        },
+        {
+          "day": 14,
+          "date": "2027-07-02",
+          "drive_min": 210,
+          "stops": [
+            {
+              "ref": "rI-utm_masashi",
+              "kind": "restaurant",
+              "name": "正嗣 宮島本店",
+              "lat": 36.561644337390106,
+              "lng": 139.88771889203062,
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=%E6%AD%A3%E5%97%A3%20%E5%AE%AE%E5%B3%B6%E6%9C%AC%E5%BA%97%20%E6%A0%83%E6%9C%A8%E7%9C%8C%E5%AE%87%E9%83%BD%E5%AE%AE%E5%B8%82%E9%A6%AC%E5%A0%B4%E9%80%9A%E3%82%8A4-3-1",
+              "mapcode": "39 511 027*03",
+              "note": "停留約 60 分；午餐首選（原稿指定）；11:30 賣完為止；無白飯、約 12 席",
+              "source_url": "https://tabelog.com/tochigi/A0901/A090101/9000046/",
+              "time": "11:30"
+            },
+            {
+              "ref": "rI-utm_kenta",
+              "kind": "restaurant",
+              "name": "宇都宮餃子館 健太餃子 東口店",
+              "lat": 36.55990187820092,
+              "lng": 139.90132599316524,
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=%E5%AE%87%E9%83%BD%E5%AE%AE%E9%A4%83%E5%AD%90%E9%A4%A8%20%E5%81%A5%E5%A4%AA%E9%A4%83%E5%AD%90%20%E6%9D%B1%E5%8F%A3%E5%BA%97%20%E6%A0%83%E6%9C%A8%E7%9C%8C%E5%AE%87%E9%83%BD%E5%AE%AE%E5%B8%82%E6%9D%B1%E5%AE%BF%E9%83%B71-9-1",
+              "mapcode": "39 483 736*06",
+              "note": "停留約 60 分；午餐首選（原稿指定）",
+              "source_url": "https://tabelog.com/tochigi/A0901/A090101/9018495/"
+            },
+            {
+              "ref": "r-nikko-011",
+              "kind": "restaurant",
+              "name": "宇都宮みんみん 本店",
+              "lat": 36.561622,
+              "lng": 139.887377,
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=%E5%AE%87%E9%83%BD%E5%AE%AE%E3%81%BF%E3%82%93%E3%81%BF%E3%82%93%20%E6%9C%AC%E5%BA%97%20%E6%A0%83%E6%9C%A8%E7%9C%8C%E5%AE%87%E9%83%BD%E5%AE%AE%E5%B8%82%E9%A6%AC%E5%A0%B4%E9%80%9A%E3%82%8A4-2-3",
+              "mapcode": "39 511 026*81",
+              "note": "停留約 60 分；排隊過長備案",
+              "source_url": "https://tabelog.com/tochigi/A0901/A090101/9000045/"
+            },
+            {
+              "ref": "rI-utm_ic",
+              "kind": "restaurant",
+              "name": "宇都宮餃子館 宇都宮インター店",
+              "lat": 36.634068008136225,
+              "lng": 139.84611173395314,
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=%E5%AE%87%E9%83%BD%E5%AE%AE%E9%A4%83%E5%AD%90%E9%A4%A8%20%E5%AE%87%E9%83%BD%E5%AE%AE%E3%82%A4%E3%83%B3%E3%82%BF%E3%83%BC%E5%BA%97%20%E6%A0%83%E6%9C%A8%E7%9C%8C%E5%AE%87%E9%83%BD%E5%AE%AE%E5%B8%82%E5%BE%B3%E6%AC%A1%E9%83%8E%E7%94%BA%E9%AB%98%E8%B0%B7%E5%8E%9F21-1",
+              "mapcode": "132 476 657*15",
+              "note": "停留約 60 分；備選（離高速近）；雨天備案",
+              "source_url": "https://tabelog.com/tochigi/A0901/A090101/9002462/"
+            },
+            {
+              "ref": "rI-utm_kirasse",
+              "kind": "restaurant",
+              "name": "来らっせ 本店",
+              "lat": 36.56078010819524,
+              "lng": 139.88525482318542,
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=%E6%9D%A5%E3%82%89%E3%81%A3%E3%81%9B%20%E6%9C%AC%E5%BA%97%20%E6%A0%83%E6%9C%A8%E7%9C%8C%E5%AE%87%E9%83%BD%E5%AE%AE%E5%B8%82%E9%A6%AC%E5%A0%B4%E9%80%9A%E3%82%8A2-3-12%20MEGA%E3%83%89%E3%83%B3%E3%83%BB%E3%82%AD%E3%83%9B%E3%83%BC%E3%83%86%20%E3%83%A9%E3%83%91%E3%83%BC%E3%82%AF%E5%AE%87%E9%83%BD%E5%AE%AE%E5%BA%97%20B1F",
+              "mapcode": "39 481 828*18",
+              "note": "停留約 60 分；雨天備案；雨天備案",
+              "source_url": "https://tabelog.com/tochigi/A0901/A090101/9000221/"
+            },
+            {
+              "ref": "s_fe2e302a",
+              "kind": "spot",
+              "name": "佐野プレミアム・アウトレット",
+              "lat": 36.2930054,
+              "lng": 139.6048892,
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=36.2932232,139.6049237",
+              "mapcode": "64 432 719*87",
+              "note": "停留約 150 分；14:00 前離開。停車場入口 MapCode 64 462 079*14（景點部）。",
+              "source_url": "https://www.premiumoutlets.co.jp/sano/access/"
+            },
+            {
+              "ref": "h_678c08ef4d8d",
+              "kind": "spot",
+              "name": "タイムズカー羽田店還車",
+              "lat": null,
+              "lng": null,
+              "google_maps": "",
+              "mapcode": null,
+              "note": "停留約 45 分；同取車店，目標 15:00–16:00。不可在航廈臨停還車。週五營業至 20:00、接駁至 19:30。；取還車",
+              "time": "15:00"
+            },
+            {
+              "ref": "s_83dfbbfb",
+              "kind": "spot",
+              "name": "羽田空港第3ターミナル 江戸小路（羽田機場第 3 航廈 江戶小路）",
+              "lat": 35.545012,
+              "lng": 139.767039,
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=35.545012,139.767039",
+              "mapcode": "167 012*74",
+              "note": "停留約 45 分；非原稿必去；彈性。",
+              "source_url": "https://www.gotokyo.org/jp/spot/743/index.html"
+            },
+            {
+              "ref": "rI-sano_komeraku",
+              "kind": "restaurant",
+              "name": "こめらく 佐野プレミアム・アウトレット店",
+              "lat": 36.29295985827628,
+              "lng": 139.6055853506762,
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=%E3%81%93%E3%82%81%E3%82%89%E3%81%8F%20%E4%BD%90%E9%87%8E%E3%83%97%E3%83%AC%E3%83%9F%E3%82%A2%E3%83%A0%E3%83%BB%E3%82%A2%E3%82%A6%E3%83%88%E3%83%AC%E3%83%83%E3%83%88%E5%BA%97%20%E6%A0%83%E6%9C%A8%E7%9C%8C%E4%BD%90%E9%87%8E%E5%B8%82%E8%B6%8A%E5%90%8D%E7%94%BA2058",
+              "mapcode": "64 433 691*72",
+              "note": "停留約 60 分；Outlet 內點心／備選；雨天備案",
+              "source_url": "https://tabelog.com/tochigi/A0902/A090202/9022708/"
+            },
+            {
+              "ref": "r-haneda-003",
+              "kind": "restaurant",
+              "name": "六厘舎 羽田空港店",
+              "lat": 35.547538,
+              "lng": 139.768128,
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=%E5%85%AD%E5%8E%98%E8%88%8E%20%E7%BE%BD%E7%94%B0%E7%A9%BA%E6%B8%AF%E5%BA%97%20%E6%9D%B1%E4%BA%AC%E9%83%BD%E5%A4%A7%E7%94%B0%E5%8C%BA%E7%BE%BD%E7%94%B0%E7%A9%BA%E6%B8%AF2-6-5%20%E6%9D%B1%E4%BA%AC%E3%82%B9%E3%82%AB%E3%82%A4%E3%82%AD%E3%83%83%E3%83%81%E3%83%B3%203F",
+              "mapcode": "167 286*16",
+              "note": "停留約 60 分；還車後晚餐首選；雨天備案",
+              "source_url": "https://tabelog.com/tokyo/A1315/A131504/13167738/"
+            },
+            {
+              "ref": "r-haneda-001",
+              "kind": "restaurant",
+              "name": "歓迎 本店（蒲田煎餃）",
+              "lat": 35.559964,
+              "lng": 139.715626,
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=%E6%AD%93%E8%BF%8E%20%E6%9C%AC%E5%BA%97%20%E6%9D%B1%E4%BA%AC%E9%83%BD%E5%A4%A7%E7%94%B0%E5%8C%BA%E8%92%B2%E7%94%B05-13-26%20%E5%A4%A7%E7%94%B0%E5%8C%BA%E7%94%9F%E6%B4%BB%E3%82%BB%E3%83%B3%E3%82%BF%E3%83%BC%20%EF%BC%91%EF%BC%A6",
+              "mapcode": "191 727*70",
+              "note": "停留約 60 分；晚餐備選",
+              "source_url": "https://tabelog.com/tokyo/A1315/A131503/13003304/"
+            }
+          ]
+        },
+        {
+          "day": 15,
+          "date": "2027-07-03",
+          "drive_min": 0,
+          "stops": [
+            {
+              "ref": "s_245be17a",
+              "kind": "spot",
+              "name": "CHARACTER SHOP HAIKARA（羽田空港第3ターミナル 5F）（羽田 T3 角色商品店 HAIKARA）",
+              "lat": 35.5450118,
+              "lng": 139.7670385,
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=35.545012,139.767039",
+              "mapcode": "167 012*74",
+              "note": "停留約 45 分；9:00–21:00，無休（既有 spots）。隔日是早班，勿逛太晚。",
+              "source_url": "https://tokyo-haneda.com/shop_and_dine/detail/tenant_00121.html"
+            },
+            {
+              "ref": "s_a826eccc",
+              "kind": "spot",
+              "name": "羽田イノベーションシティ（足湯スカイデッキ）（羽田創新城（天空甲板足湯））",
+              "lat": 35.547997,
+              "lng": 139.755987,
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=35.547997,139.755987",
+              "mapcode": "166 333*56",
+              "note": "停留約 40 分；若不想再進市區。",
+              "source_url": "https://haneda-innovation-city.com/facility"
+            },
+            {
+              "ref": "r-haneda-004",
+              "kind": "restaurant",
+              "name": "つるとんたん 羽田空港店（T3）",
+              "lat": 35.54545,
+              "lng": 139.769211,
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=%E3%81%A4%E3%82%8B%E3%81%A8%E3%82%93%E3%81%9F%E3%82%93%20%E7%BE%BD%E7%94%B0%E7%A9%BA%E6%B8%AF%E5%BA%97%20%E6%9D%B1%E4%BA%AC%E9%83%BD%E5%A4%A7%E7%94%B0%E5%8C%BA%E7%BE%BD%E7%94%B0%E7%A9%BA%E6%B8%AF2%E4%B8%81%E7%9B%AE6-5%20%E5%9B%BD%E9%9A%9B%E7%B7%9A%E6%97%85%E5%AE%A2%E3%82%BF%E3%83%BC%E3%83%9F%E3%83%8A%E3%83%AB%EF%BC%94F%20%E6%B1%9F%E6%88%B8%E5%B0%8F%E8%B7%AF",
+              "mapcode": "167 050*42",
+              "note": "停留約 60 分；午餐首選；雨天備案",
+              "source_url": "https://tabelog.com/tokyo/A1315/A131504/13117663/"
+            },
+            {
+              "ref": "r-haneda-001",
+              "kind": "restaurant",
+              "name": "歓迎 本店（蒲田煎餃）",
+              "lat": 35.559964,
+              "lng": 139.715626,
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=%E6%AD%93%E8%BF%8E%20%E6%9C%AC%E5%BA%97%20%E6%9D%B1%E4%BA%AC%E9%83%BD%E5%A4%A7%E7%94%B0%E5%8C%BA%E8%92%B2%E7%94%B05-13-26%20%E5%A4%A7%E7%94%B0%E5%8C%BA%E7%94%9F%E6%B4%BB%E3%82%BB%E3%83%B3%E3%82%BF%E3%83%BC%20%EF%BC%91%EF%BC%A6",
+              "mapcode": "191 727*70",
+              "note": "停留約 60 分；午餐備選",
+              "source_url": "https://tabelog.com/tokyo/A1315/A131503/13003304/"
+            },
+            {
+              "ref": "r-haneda-005",
+              "kind": "restaurant",
+              "name": "百膳（日本旬味 百膳 T3）",
+              "lat": 35.545524,
+              "lng": 139.769131,
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=%E7%99%BE%E8%86%B3%20%E6%9D%B1%E4%BA%AC%E9%83%BD%E5%A4%A7%E7%94%B0%E5%8C%BA%E7%BE%BD%E7%94%B0%E7%A9%BA%E6%B8%AF2%E4%B8%81%E7%9B%AE6-5%20%E5%9B%BD%E9%9A%9B%E7%B7%9A%E6%97%85%E5%AE%A2%E3%82%BF%E3%83%BC%E3%83%9F%E3%83%8A%E3%83%AB%EF%BC%94F%20%E6%B1%9F%E6%88%B8%E5%B0%8F%E8%B7%AF",
+              "mapcode": "167 080*60",
+              "note": "停留約 60 分；晚餐首選；雨天備案",
+              "source_url": "https://tabelog.com/tokyo/A1315/A131504/13117664/"
+            },
+            {
+              "ref": "r-haneda-002",
+              "kind": "restaurant",
+              "name": "你好 本店（你好 本店（蒲田煎餃））",
+              "lat": 35.559827,
+              "lng": 139.722124,
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=%E4%BD%A0%E5%A5%BD%20%E6%9C%AC%E5%BA%97%20%E6%9D%B1%E4%BA%AC%E9%83%BD%E5%A4%A7%E7%94%B0%E5%8C%BA%E8%92%B2%E7%94%B04-24-14",
+              "mapcode": "192 691*26",
+              "note": "備選（晚餐）；Google 顯示臨時休業（2026-11-12），不可當預設；用百膳。",
+              "optional": true
+            }
+          ]
+        },
+        {
+          "day": 16,
+          "date": "2027-07-04",
+          "drive_min": 0,
+          "stops": [
+            {
+              "ref": "flights.chosen.inbound",
+              "kind": "spot",
+              "name": "BR189 羽田 HND T3 10:50 → 臺北松山 TSA T1 13:30",
+              "lat": null,
+              "lng": null,
+              "google_maps": "",
+              "mapcode": null,
+              "note": "停留約 220 分；早班。接駁車時刻請住宿部／飯店確認。來源：flights.chosen，checked 2026-10-24。；航班"
+            },
+            {
+              "ref": "r-haneda-003",
+              "kind": "restaurant",
+              "name": "六厘舎 羽田空港店",
+              "lat": 35.547538,
+              "lng": 139.768128,
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=%E5%85%AD%E5%8E%98%E8%88%8E%20%E7%BE%BD%E7%94%B0%E7%A9%BA%E6%B8%AF%E5%BA%97%20%E6%9D%B1%E4%BA%AC%E9%83%BD%E5%A4%A7%E7%94%B0%E5%8C%BA%E7%BE%BD%E7%94%B0%E7%A9%BA%E6%B8%AF2-6-5%20%E6%9D%B1%E4%BA%AC%E3%82%B9%E3%82%AB%E3%82%A4%E3%82%AD%E3%83%83%E3%83%81%E3%83%B3%203F",
+              "mapcode": "167 286*16",
+              "note": "停留約 60 分；早餐首選（若素泊）；雨天備案",
+              "source_url": "https://tabelog.com/tokyo/A1315/A131504/13167738/"
+            },
+            {
+              "ref": "r-haneda-004",
+              "kind": "restaurant",
+              "name": "つるとんたん 羽田空港店",
+              "lat": 35.54545,
+              "lng": 139.769211,
+              "google_maps": "https://www.google.com/maps/search/?api=1&query=%E3%81%A4%E3%82%8B%E3%81%A8%E3%82%93%E3%81%9F%E3%82%93%20%E7%BE%BD%E7%94%B0%E7%A9%BA%E6%B8%AF%E5%BA%97%20%E6%9D%B1%E4%BA%AC%E9%83%BD%E5%A4%A7%E7%94%B0%E5%8C%BA%E7%BE%BD%E7%94%B0%E7%A9%BA%E6%B8%AF2%E4%B8%81%E7%9B%AE6-5%20%E5%9B%BD%E9%9A%9B%E7%B7%9A%E6%97%85%E5%AE%A2%E3%82%BF%E3%83%BC%E3%83%9F%E3%83%8A%E3%83%AB%EF%BC%94F%20%E6%B1%9F%E6%88%B8%E5%B0%8F%E8%B7%AF",
+              "mapcode": "167 050*42",
+              "note": "停留約 60 分；早餐備選；雨天備案",
+              "source_url": "https://tabelog.com/tokyo/A1315/A131504/13117663/"
+            }
+          ]
+        }
+      ],
+      "day_summaries": [
+        {
+          "day": 1,
+          "date": "2027-06-19",
+          "base_zh": "池袋 サンシャインシティプリンス（舒適：75㎡三床含早／平價：ツインA＋加床素泊）",
+          "highlights": [
+            "BR192 臺北松山 TSA T1 07:20 → 羽田 HND T3 11:30",
+            "秋葉原電気街（秋葉原電器街）",
+            "アニメイト秋葉原（Animate 秋葉原）",
+            "丸五（炸豬排）",
+            "麺処 ほん田 秋葉原本店",
+            "九州じゃんがららあめん 秋葉原本店"
+          ],
+          "drive_min": 0,
+          "text": "抵達後以電車逛秋葉原。未取車。 回程 7/4 BR189 10:50 起飛，7/3 必須住羽田附近（機票部 caveat）。 餐：午：丸五（首選）／ほん田（備選）。晚：九州じゃんがら（首選、雨備）／永利池袋（備選）。皆營業。"
+        },
+        {
+          "day": 2,
+          "date": "2027-06-20",
+          "base_zh": "續住 池袋 サンシャインシティプリンス（舒適：75㎡三床含早／平價：ツインA＋加床素泊）",
+          "highlights": [
+            "アニメイト池袋本店（Animate 池袋本店）",
+            "JUMP SHOP 池袋店（池袋PARCO 本館 B2F）（Jump Shop 池袋）",
+            "COFFEE VALLEY（若素泊）",
+            "無敵家（麵創房 無敵家）",
+            "瞠 池袋本店",
+            "叙々苑 池袋サンシャイン通り店"
+          ],
+          "drive_min": 0,
+          "text": "池袋動漫店步行可達（景點部同意住池袋，不改秋葉原）。未取車。 餐：早：COFFEE VALLEY（若旅館素泊）。午：無敵家（首選）／瞠 池袋（備選）。晚：敘敘苑 太陽城通（首選）／永利（備選）。皆營業。舒適版旅館含早則略早餐。"
+        },
+        {
+          "day": 3,
+          "date": "2027-06-21",
+          "base_zh": "伊豆高原 杜の湯 きらの里（預設案A，1泊2食；替代案B：熱海金城館／大野屋）",
+          "highlights": [
+            "タイムズカー羽田店取車",
+            "熱海温泉（短散步）＋午餐",
+            "MOA美術館（MOA美術館）",
+            "でん助茶屋（海景海鮮）",
+            "海幸楽膳 釜つる",
+            "宝亭（昭和洋食）"
+          ],
+          "drive_min": 180,
+          "text": "自駕第 1 天。預設案A：09:00 タイムズカー羽田店取車（大鳥居步行約5分，勿先去航廈），約 12:00 熱海午餐／短散步，13:30–15:10 MOA（約 100 分），16:30 前抵きらの里。案B（改住熱海）可把 MOA 延至約 16:00。 預設案A：最晚 15:10 離開 MOA，否則估到不了 16:30 きらの里。取車延誤則午餐從簡或放棄海濱散步。 羽田取車＋兩段車程緩衝後約 3.8 小時，略超過每日 2–3 小時原則，須準時取車、不繞路。 MOA 2027/6 換展日待查；6/21 週一非公休。最終入館 16:00，案A 不看到閉館。 案B 改住熱海則 6/22 熱海→大室山估計約 62 分（略超 1 小時），不如きらの里 OSRM 9 分近。 餐：午（熱海，MOA 前）：でん助茶屋（首選、雨備）／釜つる／宝亭。預設住きらの里 2食，晚餐在旅館；若改住熱海或素泊，晚餐首選囲炉茶屋。"
+        },
+        {
+          "day": 4,
+          "date": "2027-06-22",
+          "base_zh": "續住 伊豆高原 杜の湯 きらの里（預設案A，1泊2食；替代案B：熱海金城館／大野屋）",
+          "highlights": [
+            "大室山（大室山）",
+            "城ヶ崎海岸（門脇吊橋）（城崎海岸（門脇吊橋））",
+            "伊豆シャボテン動物公園（纜椅停駛時當日備案）",
+            "小室山公園（纜椅停駛時當日備案）",
+            "伊豆テディベア・ミュージアム（雨天備案）",
+            "おおむろ軽食堂（リフト館 1F）"
+          ],
+          "drive_min": 60,
+          "text": "預設：大室山纜椅（3–9 月 9:00–17:00，來回大人 1,000 円）＋城ヶ崎／門脇吊橋。高風險：每年 6 月定期檢修（2026 為 6/15–6/25），2027 待查（官網通常 5 月公告）。 大室山纜椅 6 月檢修高風險（2026：6/15–6/25）。2027 日期待查。 當日備案（纜椅停駛）：山腳眺望＋伊豆シャボテン動物公園（旁，9:30–17:00，平日大人 2,800 円）或小室山公園纜椅。 雨天備案：伊豆泰迪熊博物館（9:30–17:00；6 月第 2 個週二＋週三休，2027/6/22 非該窗口）或道之驛伊東マリンタウン。 備案日：若 2027 檢修窗與 2026 相同，6/22 與 6/23 皆在停駛期，改日無效；僅當官網公告 6/23 已復駛，才可早上改去大室山再赴修善寺。 おおむろ軽食堂在リフト館 1F，檢修時可能同步休業，改ぼら納屋或マリンタウン。 餐：午：おおむろ軽食堂（リフト館 1F 首選；若纜椅檢修可能同步休業，改ぼら納屋）。雨備：道之驛伊東マリンタウン。預設 2食則晚餐在旅館；外食首選伊豆高原啤酒（雨備）／まるたか。"
+        },
+        {
+          "day": 5,
+          "date": "2027-06-23",
+          "base_zh": "續住 伊豆高原 杜の湯 きらの里（預設案A，1泊2食；替代案B：熱海金城館／大野屋）（第 3 晚，當晚不換房）",
+          "highlights": [
+            "修善寺温泉（修禅寺・竹林の小径）（修善寺溫泉（修禪寺・竹林小徑））",
+            "独鈷そば大戸（修善寺）",
+            "月ヶ瀬テラスキッチン（道之驛 伊豆月瀨）",
+            "ル・フィヤージュ（伊豆高原甜點）",
+            "きらの里 晚餐（預設 2食，退房日次晨含早）"
+          ],
+          "drive_min": 120,
+          "text": "修善寺日間往返。若 2027 大室山檢修已於 6/23 結束，可早上補纜椅再赴修善寺（僅在官網公告復駛時）。 勿再附加下田紫陽花（會超過 2–3 小時車程）。 修禪寺寶物殿 4–9 月 8:30–16:30，原則無休。 餐：午：独鈷そば大戸（備選當預設）／雨備月ヶ瀬テラスキッチン。可選下午茶 ル・フィヤージュ。預設 2食晚餐在旅館。"
+        },
+        {
+          "day": 6,
+          "date": "2027-06-24",
+          "base_zh": "輕井澤（舒適：萬豪含早／平價：王子西館 Cottage 素泊）",
+          "highlights": [
+            "伊豆／熱海 → 輕井澤（高速公路移動）",
+            "横川サービスエリア（下り線）フードコート",
+            "峠の釜めし本舗 おぎのや 横川店",
+            "軽井沢 川上庵 本店"
+          ],
+          "drive_min": 270,
+          "text": "純移動日。早發、走高速公路，16:30 前抵輕井澤，不走夜間山路。週四 MOA 公休，本日本來不排美術館。 單日車程 4–5 小時，超過 2–3 小時原則——已標為移動日並早發。 橫川 SA（下行）午餐僅走上信越道時順路；改一般道路則用おぎのや横川店。 餐：移動日午：橫川 SA 下行美食廣場（首選、雨備；僅走上信越道順路）／おぎのや横川店（備選、雨備；若改一般道路用此）。晚：川上庵本店（舒適／平價輕井澤皆素泊或僅早，須外食晚餐）。"
+        },
+        {
+          "day": 7,
+          "date": "2027-06-25",
+          "base_zh": "續住 輕井澤（舒適：萬豪含早／平價：王子西館 Cottage 素泊）",
+          "highlights": [
+            "軽井沢・プリンスショッピングプラザ（輕井澤王子購物廣場）",
+            "出汁と信州ごはん 佐久屋本店（Outlet 內）",
+            "ミカドコーヒー 軽井沢プリンスショッピングプラザ店",
+            "せきれい橋 川上庵"
+          ],
+          "drive_min": 30,
+          "text": "依景點部建議改為平日先逛 Outlet（人少、停車較易）。原 6/25 星野行程移至 6/26。餐亦隨地點對調。 王子購物廣場 2026/6 為 10:00–19:00 每日營業，2027 年待官網公布；前 2 小時免費停車。 餐已從餐廳部 6/26 候選改配本日（Outlet 內佐久屋／MIKADO），避免與星野往返。 餐：本日改排 Outlet（平日），午餐改佐久屋本店（Outlet 內、雨備）／下午茶 MIKADO COFFEE（Outlet、雨備）。晚：せきれい橋 川上庵。原餐廳部 6/25 的村民食堂＋丸山咖啡改到 6/26 星野日，以免往返。舒適版萬豪含早。"
+        },
+        {
+          "day": 8,
+          "date": "2027-06-26",
+          "base_zh": "續住 輕井澤（舒適：萬豪含早／平價：王子西館 Cottage 素泊）",
+          "highlights": [
+            "雲場池（雲場池）",
+            "ハルニレテラス（榆樹街小鎮 Harunire Terrace）",
+            "村民食堂",
+            "ベーカリー&レストラン 沢村 軽井沢ハルニレテラス",
+            "丸山珈琲 ハルニレテラス店",
+            "星野温泉 トンボの湯（星野溫泉 蜻蜓之湯）"
+          ],
+          "drive_min": 60,
+          "text": "週六 10:00 前先雲場池→星野エリア，避開 10–15 時尖峰。傍晚トンボの湯（10:00–22:00，最終入場 21:15，成人 1,550 円）。 6/26（六）星野エリア與王子通易塞；務必 10:00 前抵達。平日 11–14、週末假日 10–15 易滿（https://www.hoshino-area.jp/parking）。 丸山珈琲是獨立店，非村民食堂內，須步行另訪（餐廳部更正）。 湯の丸杜鵑若去，請早去早回，勿晚上山路（不預設）。 餐：午：村民食堂（ハルニレ、原稿指定）／澤村。下午茶：丸山珈琲ハルニレ（雨備；非村民食堂內，須步行另訪）。晚：川上庵本店。週六 10:00 前到雲場池／星野。"
+        },
+        {
+          "day": 9,
+          "date": "2027-06-27",
+          "base_zh": "伊香保温泉（渋川市伊香保；舒適：千明仁泉亭 2食／平價：福一含早）",
+          "highlights": [
+            "白糸の滝（軽井沢）（白絲瀑布（長野輕井澤））",
+            "伊香保温泉 石段街（伊香保溫泉 石階街）",
+            "八ッ場食堂（道の駅 八ッ場ふるさと館）",
+            "浮曇（石段街居酒屋）",
+            "栄寿し",
+            "四季彩（石段街 豬排丼）"
+          ],
+          "drive_min": 120,
+          "text": "上午白糸の滝（長野輕井澤，非富士宮）後北上伊香保。石段街在群馬縣渋川市伊香保，不是草津。 6/27（日）白糸の滝停車易滿（景點部週末塞車風險）。入口 MapCode 待查（僅有標記點／非入口）。 石段 365 階雨天濕滑。伊香保石段街 region 誤寫「草津」在 spots 區塊，本輪未改。 四季彩 19:00 打烊，若外食須 18:00 前入店。舒適版千明 2食則晚餐在旅館。 餐：移動午：八ッ場食堂（道之驛、首選、雨備）。晚：浮曇（石段街首選）／栄寿し／四季彩（須 18:00 前入店）。舒適版千明 2食則晚餐在旅館，本列為平價／外食備案。6/27 白糸停車易滿。"
+        },
+        {
+          "day": 10,
+          "date": "2027-06-28",
+          "base_zh": "續住 伊香保温泉（渋川市伊香保；舒適：千明仁泉亭 2食／平價：福一含早）",
+          "highlights": [
+            "榛名山 五連ヘアピン（県道33号 渋川松井田線）",
+            "榛名湖",
+            "大澤屋 第一店舗（水澤烏龍麵）",
+            "元祖 田丸屋（水澤烏龍麵）",
+            "カフェ水月（榛名湖畔）",
+            "榛名湖 レストハウス"
+          ],
+          "drive_min": 90,
+          "text": "頭文字 D 路段：縣道 33 號五連髮夾彎（實際 4 彎，No.17–13，有減速丘）。路上禁停。 榛名髮夾彎路上禁止停車，只可在合法停車場下車拍照（伊香保側入口 MapCode 94 875 426*87；高根展望台 94 844 662*62；榛名湖側 94 812 659*18）。禁止競速。 榛名湖停車場入口 MapCode 待查（僅有 OSM 點／非入口，mapcode_marker 295 208 591*85 等）。 カフェ水月不定休，出發前確認；開店時間 Tabelog 11:00 vs tabirai 10:00 不一致。 週一不排休館中的館類設施。 餐：午：大澤屋第一（水澤烏龍、雨備）／田丸屋。榛名湖畔咖啡：カフェ水月（不定休、出發前確認）／レストハウス。晚：浮曇／四季彩（18:00 前）。舒適版 2食則晚餐在旅館。"
+        },
+        {
+          "day": 11,
+          "date": "2027-06-29",
+          "base_zh": "鬼怒川 あさや（兩版皆 2食）",
+          "highlights": [
+            "金精道路（金精峠・金精トンネル）",
+            "中禅寺湖（中禪寺湖）",
+            "華厳滝（華嚴瀑布）",
+            "鬼怒川温泉（鬼怒川溫泉）",
+            "レストラン メープル（中禪寺湖）",
+            "かたしな食堂（道の駅 尾瀬かたしな）"
+          ],
+          "drive_min": 168,
+          "text": "早發。金精在開通期內（冬季封閉至 2027-04-23 12:00）。傍晚前抵あさや，不走夜間山路。 本日估計車程約 3.4 小時，超過 2–3 小時原則；須早發、精簡停留，禁止夜間翻峠。 日光白根山噴火警戒≥3 時金精道路全面封閉（2026/2/1 為等級 1）。出發前查 https://www.kendobousai-gunma.jp/kisei/RegulationList.htm 與 https://www.pref.gunma.jp/page/19268.html。備案：關越＋日光宇都宮道路繞行。 奥日光縣營停車場每次 500 円（湖畔第一、華嚴第一等，2024/4/1 起），未計入預算。 華嚴電梯與湖面活動遇濃霧／大雨可能停止。 餐：午：レストラン メープル（中禪寺、首選）／かたしな食堂（道之驛、備選、雨備）／龍頭之茶屋。兩版あさや皆 2食，晚餐在旅館；外食備案魚登久（今市，若抵達太晚恐趕不上）。"
+        },
+        {
+          "day": 12,
+          "date": "2027-06-30",
+          "base_zh": "續住 鬼怒川 あさや（兩版皆 2食）",
+          "highlights": [
+            "いろは坂（第一・第二）（下行通過，途中禁停）",
+            "日光東照宮（日光東照宮）",
+            "明治の館",
+            "道の駅日光 日光街道 ニコニコ本陣",
+            "日光珈琲 御用邸通",
+            "あさや 晚餐（2食）"
+          ],
+          "drive_min": 90,
+          "text": "伊呂波下行僅開車通過，途中禁停。明智平停車場 Google 臨時休業，不以該場為必要停靠，改停東照宮大駐車場（1 日 600 円、約 200 台）。 明智平停車場 Google「臨時休業」（2026-11-12），2027/6 現況待查；第一いろは坂途中禁止停車。 東照宮 4–10 月 9:00–17:00（受理至 16:30），全年無休，大人 1,600 円。 餐：午：明治の館（首選、雨備）／道之驛日光ニコニコ本陣（雨備）。可選日光珈琲御用邸通。2食則晚餐在旅館；外食首選牛排よし乃／魚登久。"
+        },
+        {
+          "day": 13,
+          "date": "2027-07-01",
+          "base_zh": "續住 鬼怒川 あさや（兩版皆 2食）",
+          "highlights": [
+            "鬼怒楯岩大吊橋（鬼怒楯岩大吊橋）",
+            "鬼怒川ライン下り（鬼怒川泛舟（ライン下り））",
+            "めし処 龍王（鬼怒川）",
+            "日光ゆば遊膳",
+            "道の駅日光 ニコニコ本陣",
+            "あさや 晚餐（2食，最後一晚）"
+          ],
+          "drive_min": 60,
+          "text": "ライン下り 09:00–15:45 共 12 班（4 月中旬～11 月下旬），大人 3,500 円。大雨、水位高停航。 7/1 ライン下り遇大雨或水位高即停航（梅雨期高風險）；備案改吊橋或溫泉休息，不必另排遠程。 吊橋亦可能因天候停駛。ライン下り駐車場 500 円、約 150 台，入口 MapCode 367 566 702*58（景點部）。 餐：午：めし処 龍王（首選）／日光ゆば遊膳／ニコニコ本陣（雨備）。ライン下り停航時改在附近用餐。2食晚餐在旅館；外食よし乃。"
+        },
+        {
+          "day": 14,
+          "date": "2027-07-02",
+          "base_zh": "羽田 JALシティ WEST WING（有接駁；舒適含早／平價素泊）",
+          "highlights": [
+            "正嗣 宮島本店",
+            "宇都宮餃子館 健太餃子 東口店",
+            "宇都宮みんみん 本店",
+            "宇都宮餃子館 宇都宮インター店",
+            "来らっせ 本店",
+            "佐野プレミアム・アウトレット"
+          ],
+          "drive_min": 210,
+          "text": "09:00 前離鬼怒川。宇都宮餃子午餐後佐野 Outlet，14:00 前離開，15:00–16:00 タイムズカー羽田店還車（週五至 20:00）。不可航廈臨停還車。 本日車程偏長且含購物；14:00 前離開佐野，15:00–16:00 還車。7/2 為週五，佐野塞車較週末輕，官方仍建議利用佐野 SA スマート IC。 正嗣宮島本店 11:30 開店賣完為止、約 12 席、僅餃子無白飯；停車場官網（無）vs Tabelog（岡川特約）衝突。健太訂位可否兩源衝突。みんみん營業至 20:00（既有 DB 寫 20:30，餐廳部指須更新 DB，本輪未改餐廳區塊）。 ようすけ公休三源不一，僅作佐野午餐替代，出發前再查。 餐：午（宇都宮）：正嗣 宮島本店（原稿指定、11:30 賣完為止、週二週三休今日可）／健太餃子東口（原稿指定）／みんみん本店（備案，Tabelog 至 20:00）／餃子館交流道店（離高速公路近、雨備）／来らっせ（雨備）。若改在佐野用餐：らーめん大金、ようすけ（公休來源不一）、日向屋、やつや。Outlet 點心：万里／こめらく（雨備）。晚（還車後）：六厘舎 T3（雨備）／歓迎 蒲田。"
+        },
+        {
+          "day": 15,
+          "date": "2027-07-03",
+          "base_zh": "續住 羽田 JALシティ WEST WING（有接駁；舒適含早／平價素泊）",
+          "highlights": [
+            "CHARACTER SHOP HAIKARA（羽田空港第3ターミナル 5F）（羽田 T3 角色商品店 HAIKARA）",
+            "羽田イノベーションシティ（足湯スカイデッキ）（羽田創新城（天空甲板足湯））",
+            "つるとんたん 羽田空港店（T3）",
+            "歓迎 本店（蒲田煎餃）",
+            "百膳（日本旬味 百膳 T3）",
+            "你好 本店（你好 本店（蒲田煎餃））"
+          ],
+          "drive_min": 0,
+          "text": "不開車。可短訪羽田創新城或 T3 購物。確認隔日接駁時刻。 7/4 BR189 10:50 起飛，須約 8:20 前到 T3。請確認 JAL City 接駁時刻。 餐廳部晚餐備選「你好本店」Google 顯示臨時休業（2026-11-12），不可當預設；用百膳。 餐：午：つるとんたん T3（首選、雨備）／歓迎。晚：百膳 T3（首選、雨備）。備選「你好本店」Google 顯示臨時休業（2026-11-12，景點部），不可當預設。"
+        },
+        {
+          "day": 16,
+          "date": "2027-07-04",
+          "base_zh": "無（回程）",
+          "highlights": [
+            "BR189 羽田 HND T3 10:50 → 臺北松山 TSA T1 13:30",
+            "六厘舎 羽田空港店",
+            "つるとんたん 羽田空港店"
+          ],
+          "drive_min": 0,
+          "text": "退房、接駁、送機。 預留安檢與航廈步行時間，勿再安排景點。 餐：早（T3，平價素泊或趕飛）：六厘舎（首選、雨備）／つるとんたん。舒適版旅館含早則視接駁時刻決定。"
+        }
+      ],
+      "warnings": [
+        "車程：標「OSRM」者為景點部 router.project-osrm.org 來源值（無即時路況）；「估計」＝OSRM×1.25 緩衝（景點部，非正式導航）。出發前以 Google Maps／NAVITIME 複核。",
+        "關東梅雨約 6 月中旬至 7 月中旬。室內備案：MOA、東照宮、Outlet、溫泉、道之驛。",
+        "6/21 MOA→きらの里：OSRM 62 分／估計 78 分，16:30 前到須最晚約 15:10 離開 MOA。預設案A：MOA 13:30–15:10（約 100 分）仍住きらの里。替代案B：改住熱海（MOA→金城館／大野屋 OSRM 8 分、估計 10 分），MOA 可停至約 16:00。",
+        "MOA 週四休（祝日開館）及換展日休館；6/21（一）非公休，但 2027/6 換展日待查（官網日程僅至 4/2）。",
+        "6/22 大室山纜椅每年 6 月定期檢修（2026 為 6/15–6/25），2027 待查，高風險。當日備案：山腳眺望＋伊豆シャボテン動物公園或小室山公園纜椅。雨天：伊豆泰迪熊博物館、道之驛伊東マリンタウン。若 2027 檢修窗與 2026 相同，6/22 與 6/23 都在停駛期，不能靠換日解救。",
+        "6/24 伊豆→輕井澤單日 4–5 小時，已設為純移動日，早發、16:30 前抵達、不走夜間山路。",
+        "6/25（五）改先逛王子購物廣場（平日較空）；6/26（六）10:00 前雲場池→星野エリア，避開週末 10–15 時尖峰，傍晚トンボの湯。6/26–27 輕井澤週末塞車（Outlet／星野／6/27 白糸の滝停車）。",
+        "金精道路冬季封閉至 2027-04-23 12:00，6/29 在開通期內；日光白根山噴火警戒≥3 時全面封閉（2026/2/1 為等級 1），出發前查群馬縣道路規制。雨霧落石亦可能封閉。禁止夜間翻峠。",
+        "6/29 伊香保→金精→中禪寺／華嚴→鬼怒川：OSRM 合計約 165 分、估計約 206 分（約 3.4 小時，超過 2–3 小時原則），須早發、精簡停留，傍晚前抵あさや。",
+        "明智平停車場 Google 顯示「臨時休業」（2026-11-12），2027/6 現況待查；6/30 不以該停車場為必要停靠，改停東照宮大駐車場（1 日 600 円）。第一いろは坂（下行）途中與榛名髮夾彎路上皆禁停，只可在合法停車場下車。",
+        "7/1 鬼怒川ライン下り遇大雨、水位高停航（梅雨期風險）；備案改吊橋或溫泉休息。吊橋亦可能停駛。",
+        "7/2 為週五，佐野塞車較週末輕；仍須 09:00 前離鬼怒川、14:00 前離 Outlet，15:00–16:00 還車。",
+        "7/4 BR189 10:50 起飛，7/3 必須住有羽田接駁的飯店，約 8:20 前到 T3。",
+        "伊香保石段街位於群馬縣渋川市伊香保（非草津）。trip.json spots.s_b6fb015d 的 region＝「草津」、base＝KUSATSU 為資料錯誤，屬景點部區塊，本輪未改，請總經理轉派。",
+        "未訂票（既有 flights.chosen 除外）、未訂房、未租車、未訂位、未付款，未聯絡店家。須安宏親自確認後才可下單。"
+      ]
+    }
+  ],
+  "unresolved": [
+    "Day 3：案A 縮短 MOA＋住きらの里，或案B 改住熱海讓 MOA 停留更長 待安宏選擇。預設案A，理由見 adjustments。",
+    "Day 3：MOA 2027/6 換展日是否撞上 6/21 出發前查 https://www.moaart.or.jp/calendar/（目前僅公布至 4/2）。",
+    "Day 4：大室山纜椅 2027 年 6 月定期檢修日期 官網通常 5 月公告 https://omuroyama.com/；公布前維持高風險備案。",
+    "住宿舒適／平價／混搭三版皆在 40 萬內 待安宏選版（混搭內容可再調各據點）。確認後才進入「待安宏親自訂房／租車」流程。",
+    "機票現金稅費 先用 NT$16,000 合計假設；任務寫「／人」與既有資料衝突，待機票部更新後重算。",
+    "2027/6 尚未放房之館 金城館、大野屋、千明、福一、あさや等放房後須重查（住宿部 pending）。JAL City 含早價本次未覆核。",
+    "Day 11：金精道路當日通行與噴火警戒 出發當週查群馬縣道路規制與日光白根山警戒等級。",
+    "Day 12：明智平停車場 2027/6 是否仍臨時休業 出發前再查；目前不以該場為必要停靠。",
+    "Day 10：榛名湖停車場入口 MapCode、カフェ水月當日是否營業 入口仍待查（景點部未給入口 MapCode，未編造）。水月不定休。",
+    "Day 9：白糸の滝停車場入口 MapCode 景點部標待查，未編造。",
+    "Times 羽田 ETC 卡可否租借 交通部未確認，費用未列入。",
+    "spots.s_b6fb015d region＝草津、base＝KUSATSU 應為渋川市／伊香保（群馬）。屬景點部區塊，請總經理轉派，本輪未改。"
+  ],
+  "user_notes": [
+    "住宿與租車為參考提案，須安宏確認後才可訂房／租車。",
+    "預算三版（舒適 NT$288,274／平價 NT$194,577／混搭 NT$220,190）含機票 NT$16,000 合計假設，機票口徑待更新。"
+  ]
+}
