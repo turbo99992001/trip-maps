@@ -217,10 +217,36 @@ header{padding-top:calc(8px + var(--sat));}
   #bakSheet .bakbox{border-radius:12px;max-height:90vh;margin:16px}
 }
 </style>
+<style id="v1919">
+/* 1.9.19：行程總覽（依目前行程；清單在地圖外，不被橫幅擋）、地圖分頁路線連線 */
+#ovw{position:fixed;inset:0;z-index:3300;background:#fff;display:flex;flex-direction:column}
+#ovw[hidden]{display:none!important}
+#ovw .ovhd{flex:0 0 auto;display:flex;align-items:center;gap:8px;background:#0d47a1;color:#fff;padding:8px 8px 8px 12px;padding-top:calc(8px + var(--sat,0px))}
+#ovTtl{flex:1 1 auto;min-width:0;font-size:15px;line-height:1.35;overflow-wrap:anywhere}
+#ovw .ovhd .x{flex:0 0 44px;width:44px;height:44px;min-width:44px;min-height:44px;border:0;background:rgba(255,255,255,.18);color:#fff;border-radius:10px;font-size:26px;line-height:1;cursor:pointer;padding:0}
+#ovw .ovbody{flex:1 1 auto;min-height:0;display:flex}
+#ovMap{flex:1 1 auto;min-width:0;min-height:0;position:relative}
+#ovPanel{flex:0 0 340px;order:-1;overflow:auto;border-right:1px solid var(--line);padding:8px 10px;background:#fafbfc;-webkit-overflow-scrolling:touch}
+.ovtools{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin-bottom:6px}.ovtools .btn{min-height:40px}
+.ovr{display:flex;align-items:center;gap:6px;border-top:1px dashed var(--line);padding:2px 0;min-height:48px}
+.ovr label{flex:1 1 auto;min-width:0;display:flex;align-items:center;gap:6px;cursor:pointer;min-height:44px}
+.ovr input{width:22px;height:22px;flex:0 0 22px;margin:0}
+.ovr .cline{flex:0 0 22px;width:22px}.ovr .ovk{flex:0 0 auto;font-size:16px}
+.ovr .ovn{font-size:13px;min-width:0;overflow-wrap:anywhere;line-height:1.3}
+.ovr .btn{flex:0 0 auto;min-height:40px}
+.ovday{color:#fff;border:2px solid #fff;border-radius:11px;width:22px;height:22px;text-align:center;font:700 11px/18px sans-serif;box-shadow:0 1px 3px rgba(0,0,0,.4)}
+body.ovon{overflow:hidden}
+#ovFromMap{margin-top:4px;width:100%}
+@media (max-width:820px){
+ #ovw .ovbody{flex-direction:column}
+ #ovPanel{flex:0 0 auto;order:0;max-height:44vh;border-right:0;border-top:1px solid var(--line);padding-bottom:calc(8px + env(safe-area-inset-bottom,0px))}
+ #ovTtl{font-size:14px}
+}
+</style>
 </head>
 <body>
 <header id="hdr">
- <a class="home" href="../" title="回網站首頁（路線總覽地圖）">🗾</a>
+ <a class="home" href="../" title="目前行程的路線總覽（未選行程時回網站首頁）" aria-label="路線總覽">🗾</a>
  <button type="button" id="bakBtn" class="bakbtn" aria-label="備份與轉移" title="備份與轉移">📦</button>
  <h1 id="ttl">互動行程</h1>
  <select id="tripSel" aria-label="選擇行程"></select>
@@ -292,12 +318,15 @@ header{padding-top:calc(8px + var(--sat));}
    <label><input type="checkbox" id="lrest" checked><span class="dot" style="background:var(--rest)"></span>餐廳</label>
    <label><input type="checkbox" id="llodge" checked><span class="dot" style="background:var(--lodge)"></span>住宿</label>
    <label><input type="checkbox" id="lday"><span class="dot" style="background:#000"></span>只顯示當日行程</label>
+   <label><input type="checkbox" id="lline" checked><span class="cline" style="border-color:#e53935;width:16px"></span>本路線連線</label>
+   <button type="button" class="btn sm" id="ovFromMap">🗾 全部路線總覽</button>
   </details>
  </section>
 </main>
 <nav id="bnav" hidden>
  <button data-t="spots" class="on"><b>📍</b>景點</button><button data-t="rests"><b>🍴</b>餐廳</button><button data-t="itin"><b>🗓</b>行程</button><button data-t="map"><b>🗺</b>地圖</button>
 </nav>
+<div id="ovw" hidden role="dialog" aria-modal="true" aria-labelledby="ovTtl"><div class="ovhd"><b id="ovTtl">路線總覽</b><button type="button" id="ovClose" class="x" aria-label="關閉總覽">×</button></div><div class="ovbody"><div id="ovMap"></div><div id="ovPanel"><div class="ovtools"><button type="button" class="btn sm" id="ovAll">全部勾選</button><button type="button" class="btn sm" id="ovCur">只看目前路線</button></div><div class="cnt">勾選要看的路線（可多選）；按「開啟」切換到那條路線。圓圈數字＝第幾天的終點。</div><div id="ovList"></div></div></div></div>
 <div id="modal"><div class="box"><button class="x" id="mx" aria-label="關閉">×</button><div id="mbody"></div></div></div>
 <div id="bakSheet" hidden><div class="bakmask" id="bakMask"></div><div class="bakbox" role="dialog" aria-modal="true" aria-labelledby="bakTitle"><button class="x" id="bakClose" aria-label="關閉">×</button><div id="bakBody"></div></div></div>
 <input type="file" id="bakFile" accept="application/json,.json" hidden>
@@ -307,7 +336,7 @@ header{padding-top:calc(8px + var(--sat));}
 <script>
 (function(){
 "use strict";
-const APPV="plan-multi-1.9.18";
+const APPV="plan-multi-1.9.19";
 /* 1.8 後台自動排路線（Cloudflare Worker）：網址部署後填入。空字串＝後台未啟用，網頁維持 1.7 行為（匯出 JSON＋複製文字）。site key 是公開值。 */
 const BACKEND_CFG={url:"https://trip-intake.turbo99992001.workers.dev",turnstile_site_key:"0x4AAAAAAFs8wmzPidNkiUBU"};
 const CAT={popular:"熱門",natural:"自然絕景",shrine:"神社寺院",historic:"歷史",onsen:"溫泉",hidden:"私房",food:"美食",experience:"親子／體驗",anime:"動漫",anime_game:"🎮 動漫・遊戲周邊",festival:"活動／花季",custom:"👤 自訂地點",auto:"🤖 後台路線景點",uncat:"🏷 待分類"};
@@ -1110,7 +1139,7 @@ function normRest(r){
  if(!o.id) o.id="r_"+(o.name||Math.random()).toString().slice(0,20);
  return o;
 }
-function get(it){return it.type==="restaurant"?RS[it.id]:SP[it.id];}
+function get(it){const o=it.type==="restaurant"?RS[it.id]:SP[it.id]; return o||(D&&D.rv&&D.rv.any[(it.type==="restaurant"?"restaurant":"spot")+":"+it.id])||o;}
 /* ---------- itinerary ---------- */
 /* ---------- 同一站（same_stop_as）與建議時間／插入位置（restaurant_plan v1.2 選用欄位） ---------- */
 let SAME={}, PLANINFO={};
@@ -1382,6 +1411,10 @@ function renderMarkers(){
   mk(s.lat,s.lng,s.custom?"#00897b":f?"#8e24aa":"#1e88e5",s.custom?9:7,popup(s),s);});
  restsSolo.forEach(r=>mk(r.lat,r.lng,RCOL[r.category]||"#ef6c00",7,popup(r),r));
  if($("#llodge").checked) (D.lodging||[]).filter(l=>l.route===route).forEach(l=>mk(l.lat,l.lng,"#d32f2f",9,`<b>🏨 ${esc(l.name)}</b><br>${esc(l.area)}<br>${esc(l.check_in)}～${esc(l.check_out)}（${l.nights} 晚）${l.status==="top_pick"?"<br><small>住宿部首推（未訂）</small>":""}<br><a class="btn sm pri" target="_blank" rel="noopener" href="${navUrl(l.lat,l.lng)}">▶ 開始導航</a>`));
+ if($("#lline")&&$("#lline").checked&&D.plan.routes[route]){ const it=itin(route), rp=[], ad=(a,b)=>{ if(a==null||b==null||a===""||b==="") return; a=+a; b=+b; if(!isFinite(a)||!isFinite(b)) return; const l=rp[rp.length-1]; if(l&&l[0]===a&&l[1]===b) return; rp.push([a,b]);};
+  (dayOnly?[curDay]:D.plan.routes[route].days.map(x=>x.day)).forEach(dn=>{ const di=dayInfo(route,dn)||{}; if(!dayOnly&&di.start) ad(di.start.lat,di.start.lng); (it[dn]||[]).forEach(x=>{const o=get(x); if(o) ad(o.lat,o.lng);}); if(!dayOnly&&di.end) ad(di.end.lat,di.end.lng); });
+  if(rp.length>1) L.polyline(rp,{color:rCol(route),weight:4,opacity:.8,interactive:true}).bindTooltip("路線 "+rKey(route)+"："+((D.plan.routes[route]||{}).name||""),{sticky:true}).addTo(layer);
+  window.__routeLine={route,pts:rp.length,trip:TID}; } else window.__routeLine={route,pts:0,trip:TID};
  window.__markerCount=pts.length; window.__mergedOnMap=Object.keys(attach).length;
  if(dayOnly&&pts.length) map.fitBounds(pts,{padding:[30,30],maxZoom:13});
 }
@@ -1406,7 +1439,7 @@ function syncUrl(push){
 /* ---------- route / trip switching ---------- */
 function setRoute(r,opt){opt=opt||{};
  if(!D.plan.routes[r]) r=D.meta.recommended_route&&D.plan.routes[D.meta.recommended_route]?D.meta.recommended_route:Object.keys(D.plan.routes)[0];
- route=r; ls.set(K.route,r); const R=D.plan.routes[r];
+ route=r; rvApply(r); ls.set(K.route,r); const R=D.plan.routes[r];
  $("#rsw").innerHTML=Object.keys(D.plan.routes).map(k=>`<button data-r="${esc(k)}" class="${k===r?"on":""}" title="${esc(D.plan.routes[k].name||k)}"><span class="rc" style="background:${rCol(k)}"></span><span class="rk">${esc(rKey(k))}</span>${esc(rShort(k))}</button>`).join("");
  $("#routeSel").innerHTML=Object.keys(D.plan.routes).map(k=>`<option value="${esc(k)}" ${k===r?"selected":""}>${esc(rKey(k))} ${esc(rShort(k))}</option>`).join("");
  const ob=$("#rsw button.on"); if(ob&&ob.scrollIntoView) try{ob.scrollIntoView({block:"nearest",inline:"center"});}catch(e){}
@@ -1436,7 +1469,7 @@ function loadTripData(e){
  return Promise.all([fetchJson(b+"meta.json"+v),fetchJson(b+"spots.json"+v),fetchJson(b+"spot_plan.json"+v),fetchJson(b+"restaurants.json"+v,true),fetchJson(b+"restaurant_plan.json"+v,true),fetchJson(b+"custom_places.json"+v,true)])
  .then(([meta,sp,plan,rs,rp,cpl])=>{const pick=j=>j&&(Array.isArray(j)?j:(j.restaurants||j.items||[]));
   const d={meta,spots:(sp.spots||sp).map(s=>Object.assign(s,{type:"spot"})),plan,bases:meta.bases||[],lodging:meta.lodging||[],rests:(pick(rs)||[]).map(normRest),rplan:rp&&typeof rp==="object"&&!Array.isArray(rp)?rp:null,cplaces:cpl&&Array.isArray(cpl.places)?cpl:null};
-  CACHE[e.id]=d; return d;});
+  return rvExtras(e,d).then(()=>{ if(!d.rv_errors) CACHE[e.id]=d; return d;});});
 }
 function fillTripSel(){
  const lts=ltVisible(), lid=new Set(lts.map(t=>t.id)), ds=drVisible().filter(d=>!lid.has(d.id));
@@ -1448,13 +1481,14 @@ function fillTripSel(){
 let loadSeq=0;
 function openTrip(id,opt){opt=opt||{};
  let e=TRIPS.trips.find(t=>t.id===id);
+ if(!e&&id){const al=rvAlias(id); if(al){opt=Object.assign({},opt,{route:opt.route||al.route}); id=al.trip.id; e=al.trip;}}
  if(!e&&!opt.draft){const lp=ltGet(id); if(lp) e=ltEntry(lp);}
  if(!e){ const dr=id&&drLoad().find(x=>x.id===id); if(dr) return openDraft(dr,opt); if(id) toast("找不到行程「"+id+"」，請從清單選擇",3000); showTripList(!!opt.push); return Promise.resolve(); }
  const seq=++loadSeq; $("#loading").hidden=false; $("#loading").textContent="載入「"+e.title+"」資料中…";
  return loadTripData(e).then(d=>{ if(seq!==loadSeq) return;
   TID=e.id; TE=e; D=d; DRAFT=null; RESTS=d.rests; RPLAN=d.rplan; SP={}; RS={}; BASEN={};
   D.spots=D.spots.filter(s=>!s.custom); D.spots.forEach(s=>SP[s.id]=s); const cum=cuMigrate(); const cpm=cpMigrate(); SRVCP={}; ((D.cplaces&&D.cplaces.places)||[]).forEach(x=>{if(x&&typeof x.id==="string"&&/^u_/.test(x.id)) SRVCP[x.id]=x;}); cuSync(); RESTS.forEach(r=>RS[r.id]=r); D.bases.forEach(b=>BASEN[b.key]=b.area); indexPlan();
-  const mig=migrateLegacy(); const fm=mergeFoodOnce();
+  rvLegacy(e); const mig=migrateLegacy(); const fm=mergeFoodOnce();
   $("#ttl").textContent=e.title; document.title=e.title+"｜互動行程"; fillTripSel(); fillRcat();
   $("#loading").hidden=true; $("#tripList").hidden=true; $("#app").hidden=false; $("#bnav").hidden=false; $("#mods").hidden=false;
   initMap(); setTimeout(()=>map&&map.invalidateSize(),50);
@@ -1462,6 +1496,7 @@ function openTrip(id,opt){opt=opt||{};
   if(opt.route&&!D.plan.routes[opt.route]) toast("此行程沒有路線「"+opt.route+"」，改顯示建議路線",3000);
   curDay=1; setRoute(r,{push:opt.push,day:opt.day}); renderRbook(); showMod(MODS.indexOf(opt.mod)>=0?opt.mod:"spots");
   if(mig||cum) toast("已把舊版瀏覽器存的"+[mig?"行程（"+mig+" 條路線）":"",(cum||cpm)?"自訂地點 "+(cpm||cum)+" 筆":""].filter(Boolean).join("、")+"搬到「"+e.title+"」",3500); else if(fm) toast("已併入餐廳部自訂用餐 "+fm+" 筆");
+  if(D.rv_errors&&D.rv_errors.length) toast("部分路線資料載入失敗："+D.rv_errors.join("；")+"（其他路線不受影響，稍後重新整理）",5000);
   if(TE.local) rtOffer();
   window.__ready=true;
  }).catch(err=>{ if(seq!==loadSeq) return; console.warn(err); $("#loading").hidden=false; $("#loading").innerHTML="資料載入失敗："+esc(err.message)+"<br>（請用 http(s) 開啟，或稍後重新整理）"; });
@@ -1675,7 +1710,7 @@ $("#ilist").addEventListener("change",e=>{const tm=e.target.closest("[data-time]
 $("#daynote").addEventListener("change",e=>{setDayNote(route,curDay,e.target.value.trim()); toast("已存本日備註");});
 ["#q","#fbase","#fcat","#frain","#froute"].forEach(s=>$(s).addEventListener("input",()=>renderSpots()));
 ["#rq","#rbase","#rmeal","#rcat","#rroute"].forEach(s=>$(s).addEventListener("input",()=>renderRests()));
-["#lspot","#lanime","#lcustom","#lfest","#lrest","#llodge","#lday"].forEach(s=>$(s).addEventListener("change",renderMarkers));
+["#lspot","#lanime","#lcustom","#lfest","#lrest","#llodge","#lday","#lline"].forEach(s=>$(s).addEventListener("change",renderMarkers));
 document.querySelectorAll(".dsel").forEach(s=>s.addEventListener("change",()=>{curDay=+s.value; document.querySelectorAll(".dsel").forEach(x=>x.value=curDay); renderItin(); syncUrl(false);}));
 $("#reset").addEventListener("click",()=>{if(!confirm("確定把路線 "+route+" 的每日行程重設為建議行程？（時間、備註也會清除）")) return; const s=store(); delete s[route]; ls.set(K.it,JSON.stringify(s)); const n=notesStore(); delete n[route]; ls.set(K.notes,JSON.stringify(n)); renderItin(); toast("已重設");});
 $("#expJson").addEventListener("click",exportJson);
@@ -1798,7 +1833,7 @@ function intakeQ(id){return ((INTAKE||INTAKE_FALLBACK).questions||[]).find(q=>q.
 function loadIntake(){ if(INTAKE) return Promise.resolve(INTAKE); return fetchJson("data/intake.options.json",true).then(j=>{INTAKE=j&&Array.isArray(j.questions)?j:INTAKE_FALLBACK; return INTAKE;});}
 function drLoad(){try{const j=JSON.parse(ls.get(DRK)||"null"); return j&&Array.isArray(j.drafts)?j.drafts.filter(d=>d&&/^draft-/.test(d.id)):[];}catch(e){return [];}}
 function drSaveAll(a){ls.set(DRK,JSON.stringify({schema:"agency.trip_drafts.v1",drafts:a}));}
-function drPublished(){const s=new Set(); ((TRIPS&&TRIPS.trips)||[]).forEach(t=>{s.add(t.id); if(t.request_id) s.add(t.request_id);}); return s;}
+function drPublished(){const s=new Set(); ((TRIPS&&TRIPS.trips)||[]).forEach(t=>{s.add(t.id); if(t.request_id) s.add(t.request_id); if(t.aliases) Object.keys(t.aliases).forEach(a=>s.add(a)); (Array.isArray(t.extra_routes)?t.extra_routes:[]).forEach(x=>{if(x&&x.request_id) s.add(String(x.request_id));});}); return s;}
 function drVisible(){const p=drPublished(); return drLoad().filter(d=>!p.has(d.id));}
 function drNewId(){const d=new Date(),p=n=>String(n).padStart(2,"0"); return `draft-${d.getFullYear()}${p(d.getMonth()+1)}${p(d.getDate())}-${p(d.getHours())}${p(d.getMinutes())}${p(d.getSeconds())}-${Math.random().toString(16).slice(2,6)}`;}
 function drTitle(r){const reg=(r.region==="__custom"?r.region_custom:r.region)||r.region_custom||"新行程"; const dd=r.dates||{}; return reg+(dd.start?"｜"+dd.start:(dd.days?"｜"+dd.days+" 天":""));}
@@ -2248,7 +2283,7 @@ function cmpFromRs(rs,ids){return ids.map(id=>{const i=(rs.routes||[]).findIndex
  return {id,col:PAL[i%PAL.length],name:routeName(r,i),days:(r.days||[]).map(d=>({day:d.day,date:d.date,drive:typeof d.drive_min==="number"?d.drive_min:null,stops:(d.stops||[]).map(x=>({name:x.name,lat:x.lat,lng:x.lng,type:ltKind(x),id:ltStopId(x),gm:x.google_maps}))})),
   bases:(r.bases||[]).map(b=>({area:b.area_zh||areaZh(b.area),nights:b.nights})),warn:(r.warnings||[]).length};}).filter(Boolean);}
 function cmpFromD(ids){return ids.filter(k=>D&&D.plan.routes[k]).map(k=>{const R=D.plan.routes[k], Lg=(D.lodging||[]).filter(l=>l.route===k);
- return {id:k,col:rCol(k),name:R.name||("路線 "+k),days:R.days.map(d=>({day:d.day,date:d.date,drive:typeof d.total_drive_min==="number"?d.total_drive_min:null,stops:(d.items||[]).map(x=>{const t=x.type==="restaurant"?"restaurant":"spot", o=(t==="restaurant"?RS:SP)[x.id]||x; return {name:o.name||x.name||x.id,lat:o.lat,lng:o.lng,type:t,id:x.id,gm:o.google_maps};})})),
+ return {id:k,col:rCol(k),name:R.name||("路線 "+k),days:R.days.map(d=>({day:d.day,date:d.date,drive:typeof d.total_drive_min==="number"?d.total_drive_min:null,stops:(d.items||[]).map(x=>{const t=x.type==="restaurant"?"restaurant":"spot", o=get({type:t,id:x.id})||x; return {name:o.name||x.name||x.id,lat:o.lat,lng:o.lng,type:t,id:x.id,gm:o.google_maps};})})),
   bases:Lg.length?Lg.map(l=>({area:l.area,nights:l.nights})):[...new Set(R.days.map(d=>BASEN[d.base]||d.base).filter(Boolean))].map(a=>({area:a,nights:null})),warn:Array.isArray(R.warnings)?R.warnings.length:null};});}
 function hm(m){m=Math.round(m); return m>=60?Math.floor(m/60)+" 小時 "+(m%60)+" 分":m+" 分";}
 function cmpMetrics(c){const dr=c.days.map(d=>d.drive), kn=dr.filter(v=>v!=null), sum=kn.reduce((a,b)=>a+b,0), all=dr.length&&kn.length===dr.length;
@@ -2360,7 +2395,7 @@ function rfStatusHtml(){ if(!TE||!TE.local) return ""; const m=D.meta.rest_fill;
   <div class="btns"><label class="btn sm">⬆ 手動匯入餐廳 JSON<input type="file" class="rfImp" accept="application/json,.json" hidden></label></div></div>`;}
 document.addEventListener("change",e=>{ if(e.target.classList&&e.target.classList.contains("rfImp")){rfImport(e.target.files[0]); e.target.value="";}});
 /* ---------- 1.9.9 勾幾套建幾套（included_routes）、頂部中文路線名切換、加減套數、比較頁直接加入 ---------- */
-const PAL=["#e53935","#1e88e5","#2e7d32","#ef6c00","#8e24aa","#00897b","#6d4c41","#d81b60"];
+const PAL=["#e53935","#1e88e5","#2e7d32","#ef6c00","#8e24aa","#00897b","#6d4c41","#d81b60","#f9a825"];
 function ltRs(){const p=TE&&TE.local?ltGet(TID):null; return p?p.route_set:null;}
 function ltInc(pkg){ if(!pkg||!pkg.route_set) return []; const all=(pkg.route_set.routes||[]).map(r=>String(r.route_id)); const a=Array.isArray(pkg.included_routes)?pkg.included_routes.map(String).filter(k=>all.indexOf(k)>=0):[]; return a.length?all.filter(k=>a.indexOf(k)>=0):all;}
 function ltN(id){return ltInc(ltGet(id)).length;}
@@ -2972,6 +3007,89 @@ document.addEventListener("click", function(e){
 });
 var _bakFileEl=$("#bakFile");
 if(_bakFileEl) _bakFileEl.addEventListener("change", function(e){ var f=e.target.files && e.target.files[0]; bakOnFile(f); e.target.value=""; });
+/* ---------- 1.9.19 同一行程多來源路線：trips.json 的 extra_routes（A～H 舊檔＋路線 I 靜態 handoff）
+   A～H 原物件不改；路線 I 專屬的景點／餐廳版本只在選路線 I 時換上（rvApply），切回 A～H 即還原。 ---------- */
+function rvHandoff(e,ex){ const hid=String(ex.request_id||"");
+ return Promise.all([rtFetch(hid),plFetch(hid),rfFetch(hid),refFetch(hid)]).then(([rt,pl,rf,fref])=>{
+  if(!rt) throw new Error("找不到路線 "+(ex.key||"")+" 的靜態資料 "+hid);
+  const want=(Array.isArray(ex.routes)&&ex.routes.length?ex.routes:[ex.key]).filter(Boolean).map(String);
+  const inc=(rt.routes||[]).map(r=>String(r.route_id)).filter(k=>!want.length||want.indexOf(k)>=0);
+  if(!inc.length) throw new Error("靜態資料 "+hid+" 沒有路線 "+want.join("、"));
+  const pkg={trip_id:e.id,title:e.title,route_set:rt,request:{dates:{start:e.start_date,end:e.end_date},travelers:e.travelers||{},region:e.region||""},adopted_route:inc[0],included_routes:inc,start_date:e.start_date,end_date:e.end_date,updated_at:rt.generated_at};
+  if(rf) pkg.rest_fill=rf;
+  const hd=plApply(rfApply(ltBuild(pkg),pkg),pl); hd.fill_ref=fref||null; hd.rt_latest=rt; return hd;});}
+function rvMerge(d,hd,ex){ const keys=Object.keys(hd.plan.routes).filter(k=>!d.plan.routes[k]); if(!keys.length) return d;  // 絕不覆蓋既有 A～H
+ const rv=d.rv||(d.rv={base:{spots:d.spots.slice(),rests:d.rests.slice(),bases:d.bases.slice(),fill_ref:d.fill_ref||null,slots:d.slots||{},places_applied:d.places_applied,places:(d.meta&&d.meta.places)||null},routes:{},any:{},cur:null});
+ const bs={}, br={}, bk=new Set(rv.base.bases.map(b=>b.key)); rv.base.spots.forEach(s=>bs[s.id]=1); rv.base.rests.forEach(r=>br[r.id]=1);
+ if(!Array.isArray(d.lodging)) d.lodging=[];
+ keys.forEach(k=>{ const R=hd.plan.routes[k];
+  const o={key:k,request_id:String(ex.request_id||""),spots:[],rests:[],swapS:{},swapR:{},bases:(hd.bases||[]).filter(b=>!bk.has(b.key)),fill_ref:hd.fill_ref||null,slots:{},places_applied:!!hd.places_applied,places:(hd.meta&&hd.meta.places)||null};
+  if(hd.slots&&hd.slots[k]) o.slots[k]=hd.slots[k];
+  hd.spots.forEach(s=>{ if(bs[s.id]) o.swapS[s.id]=s; else o.spots.push(s); if(!rv.any["spot:"+s.id]) rv.any["spot:"+s.id]=s; });
+  hd.rests.forEach(r=>{ if(br[r.id]) o.swapR[r.id]=r; else o.rests.push(r); if(!rv.any["restaurant:"+r.id]) rv.any["restaurant:"+r.id]=r; });
+  d.plan.routes[k]=R; rv.routes[k]=o;
+  (hd.lodging||[]).filter(l=>l.route===k).forEach(l=>d.lodging.push(l));
+  if(hd.rplan&&hd.rplan[k]){ d.rplan=d.rplan||{}; if(!d.rplan[k]) d.rplan[k]=hd.rplan[k]; }
+  if(d.meta){ const mr=(d.meta.routes||[]).filter(x=>x.key!==k); mr.push({key:k,name:R.name||k,days:(R.days||[]).length,rank:typeof ex.rank==="number"?ex.rank:mr.length+1,source:"handoff",request_id:o.request_id}); d.meta.routes=mr; }
+ });
+ return d;}
+function rvExtras(e,d){ const xs=Array.isArray(e.extra_routes)?e.extra_routes.filter(x=>x&&x.source==="handoff"&&/^draft-[A-Za-z0-9-]+$/.test(String(x.request_id||""))):[]; if(!xs.length) return Promise.resolve(d);
+ return Promise.all(xs.map(x=>rvHandoff(e,x).then(hd=>{rvMerge(d,hd,x);}).catch(err=>{console.warn(err); (d.rv_errors=d.rv_errors||[]).push("路線 "+(x.key||x.request_id)+"（"+err.message+"）");}))).then(()=>d);}
+function rvApply(r){ const rv=D&&D.rv; if(!rv) return false; const o=rv.routes[r]||null, want=o?r:null; if(rv.cur===want) return false; rv.cur=want;
+ const cus=(D.spots||[]).filter(s=>s&&s.custom);
+ D.spots=rv.base.spots.map(s=>(o&&o.swapS[s.id])||s).concat(o?o.spots:[]).concat(cus);
+ D.rests=rv.base.rests.map(x=>(o&&o.swapR[x.id])||x).concat(o?o.rests:[]); RESTS=D.rests;
+ D.bases=rv.base.bases.concat(o?o.bases:[]);
+ D.fill_ref=o?o.fill_ref:rv.base.fill_ref; D.slots=o?o.slots:rv.base.slots; D.places_applied=o?o.places_applied:rv.base.places_applied;
+ if(D.meta){ const pl=o?o.places:rv.base.places; if(pl) D.meta.places=pl; else delete D.meta.places; }
+ SP={}; D.spots.forEach(s=>SP[s.id]=s); RS={}; RESTS.forEach(x=>RS[x.id]=x); BASEN={}; D.bases.forEach(b=>BASEN[b.key]=b.area);
+ indexPlan(); fillRcat(); return true;}
+/* 舊網址／舊本機資料相容：trips.json aliases（例："2027-06-tokyo-I"→路線 I）。只在新行程該路線還沒有修改時，複製舊的每日清單與備註；舊鍵保留不刪。 */
+function rvAlias(id){ const ts=(TRIPS&&TRIPS.trips)||[]; for(const t of ts){ if(t&&t.aliases&&Object.prototype.hasOwnProperty.call(t.aliases,id)) return {trip:t,route:String(t.aliases[id])}; } return null;}
+function rvLegacy(e){ const A=e&&e.aliases; if(!A||!D) return 0; let moved=0;
+ Object.keys(A).forEach(old=>{ const k=String(A[old]); if(!D.plan.routes[k]||old===e.id) return; const flag="itin:"+e.id+":alias_from:"+old; if(ls.get(flag)) return;
+  ["v1","notes:v1"].forEach(suf=>{ let o=null,n={}; try{o=JSON.parse(ls.get("itin:"+old+":"+suf)||"null");}catch(x){o=null;} if(!o||typeof o!=="object"||!o[k]) return;
+   try{n=JSON.parse(ls.get("itin:"+e.id+":"+suf)||"{}")||{};}catch(x){n={};} if(n[k]) return; n[k]=o[k]; ls.set("itin:"+e.id+":"+suf,JSON.stringify(n)); moved++;});
+  ls.set(flag,nowISO());});
+ if(moved) setTimeout(()=>toast("已把舊的獨立「路線 I」本機修改搬到「"+e.title+"」的路線 I",3500),400);
+ return moved;}
+/* ---------- 1.9.19 行程總覽（取代永遠開東京 A～H 的網站首頁；依目前選的行程畫全部路線） ---------- */
+let OVM=null; const OVSEL={};
+function ovSorted(){return D&&D.plan?Object.keys(D.plan.routes).slice().sort((a,b)=>rKey(a).localeCompare(rKey(b))):[];}
+function ovLabel(){const ks=ovSorted().map(rKey), n=ks.length; if(!n) return ""; return (n>2&&/^[A-Z]$/.test(ks[0])&&/^[A-Z]$/.test(ks[n-1])?ks[0]+"～"+ks[n-1]:ks.join("・"))+"（"+n+" 套）";}
+function ovGet(x,k){ const t=x&&x.type==="restaurant"?"restaurant":"spot", rv=D&&D.rv, o=rv&&rv.routes[k];
+ return (o&&(t==="restaurant"?o.swapR[x.id]:o.swapS[x.id]))||(t==="restaurant"?RS[x.id]:SP[x.id])||(rv&&rv.any[t+":"+x.id])||null;}
+function ovPts(k){ const R=D&&D.plan&&D.plan.routes[k]; if(!R) return {pts:[],ends:[]}; let it={}; try{it=itin(k)||{};}catch(e){it={};}
+ const pts=[], ends=[], add=(lat,lng)=>{ if(lat==null||lng==null||lat===""||lng==="") return; lat=+lat; lng=+lng; if(!isFinite(lat)||!isFinite(lng)) return; const l=pts[pts.length-1]; if(l&&l[0]===lat&&l[1]===lng) return; pts.push([lat,lng]);};
+ (R.days||[]).forEach(d=>{ const st=d.start||{}; add(st.lat,st.lng); (it[d.day]||d.items||[]).forEach(x=>{const o=ovGet(x,k)||x; if(o) add(o.lat,o.lng);}); const en=d.end||{}; add(en.lat,en.lng);
+  if(pts.length) ends.push({day:d.day,date:d.date||"",area:d.base_area||(d.end&&d.end.name)||"",ll:pts[pts.length-1]});});
+ return {pts,ends};}
+function ovRec(){return (D&&D.meta&&D.meta.recommended_route)||(TE&&TE.default_route)||"";}
+function ovOpen(){ if(!D||!TID||DRAFT){ location.href="../"; return; }
+ if(typeof L==="undefined"){ toast("地圖元件載入失敗（無法連到 Leaflet CDN）",3000); return; }
+ const ks=ovSorted(); if(!OVSEL[TID]) OVSEL[TID]=[route]; OVSEL[TID]=OVSEL[TID].filter(k=>ks.indexOf(k)>=0); if(!OVSEL[TID].length) OVSEL[TID]=[route];
+ $("#ovTtl").textContent=(TE.local?"🧳 ":"")+(TE.title||"")+"｜路線總覽 "+ovLabel();
+ $("#ovList").innerHTML=ks.map(k=>`<div class="ovr"><label><input type="checkbox" data-ovk="${esc(k)}" ${OVSEL[TID].indexOf(k)>=0?"checked":""}><span class="cline" style="border-color:${rCol(k)}"></span><b class="ovk">${esc(rKey(k))}</b><span class="ovn">${esc(rNameOf(k))}${k===ovRec()?"（推薦）":""}${k===route?"・目前":""}</span></label><button type="button" class="btn sm" data-ovgo="${esc(k)}">開啟</button></div>`).join("");
+ const box=$("#ovw"); box.hidden=false; document.body.classList.add("ovon");
+ if(!OVM){ OVM=L.map("ovMap",{zoomControl:true}).setView([35.6,139.6],7); L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",{maxZoom:18,attribution:'&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'}).addTo(OVM); OVM._g=L.layerGroup().addTo(OVM); window.__ovMap=OVM; }
+ setTimeout(()=>{ if(!OVM) return; OVM.invalidateSize(); ovDraw(true); },60); window.__ovOpen=true;}
+function ovDraw(fit){ if(!OVM||!D) return; OVM._g.clearLayers(); const sel=(OVSEL[TID]||[]).filter(k=>D.plan.routes[k]), all=[], per={};
+ sel.forEach(k=>{ const {pts,ends}=ovPts(k), col=rCol(k); per[k]=pts.length;
+  if(pts.length>1) L.polyline(pts,{color:col,weight:5,opacity:.85}).bindTooltip("路線 "+rKey(k)+"："+rNameOf(k),{sticky:true}).addTo(OVM._g);
+  ends.forEach(x=>{ L.marker(x.ll,{icon:L.divIcon({className:"",html:`<div class="ovday" style="background:${col}">${esc(x.day)}</div>`,iconSize:[22,22],iconAnchor:[11,11]}),title:"路線 "+rKey(k)+" Day "+x.day}).bindPopup(`<b>路線 ${esc(rKey(k))}｜Day ${esc(x.day)}</b><br>${esc(x.date)} ${esc(x.area)}<br><button type="button" class="btn sm" data-ovgo="${esc(k)}" data-ovday="${esc(x.day)}">開啟這天</button>`).addTo(OVM._g);});
+  all.push(...pts);});
+ window.__ovPts=per; window.__ovSel=sel.slice();
+ if(fit){ if(all.length) OVM.fitBounds(all,{padding:[30,30]}); else OVM.setView([35.6,139.6],7);} }
+function ovClose(){ const b=$("#ovw"); if(b) b.hidden=true; document.body.classList.remove("ovon"); window.__ovOpen=false; }
+document.addEventListener("change",e=>{ const c=e.target&&e.target.closest&&e.target.closest("[data-ovk]"); if(!c||!TID) return; const k=c.dataset.ovk; const s=(OVSEL[TID]||[]).filter(x=>x!==k); if(c.checked) s.push(k); OVSEL[TID]=s; ovDraw(true);});
+document.addEventListener("click",e=>{ const t=e.target; if(!t||!t.closest) return;
+ const g=t.closest("[data-ovgo]"); if(g){ e.preventDefault(); const k=g.dataset.ovgo, dy=+g.dataset.ovday||0; ovClose(); if(D&&D.plan.routes[k]){ if(k!==route) setRoute(k,{push:true,day:dy||undefined}); else if(dy&&dayInfo(route,dy)){curDay=dy; fillSelects(); renderItin(); syncUrl(false);} } return; }
+ if(t.closest("#ovAll")){ OVSEL[TID]=ovSorted(); ovOpen(); return; }
+ if(t.closest("#ovCur")){ OVSEL[TID]=[route]; ovOpen(); return; }
+ if(t.closest("#ovClose")){ ovClose(); return; }
+ if(t.closest("#ovFromMap")){ e.preventDefault(); ovOpen(); return; }
+ const h=t.closest("a.home"); if(h&&TID&&D&&!DRAFT){ e.preventDefault(); ovOpen(); }});
+document.addEventListener("keydown",e=>{ if(e.key==="Escape"&&window.__ovOpen) ovClose(); });
 window.__bak={
   SCHEMA:BAK_SCHEMA, collect:bakCollect, included:bakIncluded, excluded:bakExcluded,
   exportPack:bakExportPack, validate:bakValidate, summary:bakSummary,
@@ -2981,6 +3099,7 @@ window.__bak={
 };
 
 window.__app={get AUTO(){return AUTO;},rtFetch,rtNewer,rtApply,rtOffer,rtKeepMine,rtRevert,rtEdited,parseLocationInput,queryVariants,qTokens,gmapsSearchUrl,dayArea,guessCat,classifyAg,findDup,enrichPlace,enrichAsync,searchPlaces,openSearch,bringIn,clipArm,clipTry,clipOn,suggestWhen,showPlaceCard,reverseAt,mapTypeahead,ensureMapSearch,cacheKey,nearbyParking,idbGet,idbSet,extractGmaps,applyBring,STAY_MIN,plClear,plClean,plApply,plAlert,alertTxt,alertHtml,ALERT_LV,plFetch,catsOf,restTagN,ltInc,ltAddRoute,ltDelRoute,adoptSet,rShort,ltGet,ltIndex,ltBuild,ltEntry,ltAdopt,cmpRender,cmpFromRs,cmpMetrics,rfClean,rfFetch,slotOf,get CMP(){return CMP;},lgShrink,LG_NMAX,quotaUntil,bkMsg,plQueued,plSched,QF,areaZh,zhText,userNotes,routeName,pickLoad,doneAlert,bkGate,listPoll,bkLoad,bkSave,bkRow,bkDateCell,buildXlsx,bkXlsxDownload,XLSX_COLS,lgOpen,flSplit,flJoin,flText,backendCfg,hashView,get AUTO(){return AUTO;},drLoad,drVisible,reqExport,reqText,readNewForm,selLoad,selectedRoutes,get DRAFT(){return DRAFT;},get INTAKE(){return INTAKE;},DL,BUF,decLoad,decSave,decExport,showMod,pickupDefault,dropoffDefault,get curMod(){return curMod;},bestDay,localNearby,SCATS,photonSearch,queryVariants,qTokens,localSearch,photonMulti,parseLocationInput,cpLoad,cpSave,cpId,sha1hex,searchPlaces,searchCenter,SEARCH_ENDPOINTS,openSearch,get SRVCP(){return SRVCP;},parseLoc,cuLoad,cuText,cuMerge,stopsOf,mergeByMeal,get SAME(){return SAME;},setRoute,openTrip,showTab,addTo,itin,suggested,store,exportJson,buildKml,buildCsv,buildFinal,importText,parseImport,
+ get TE(){return TE;},rvApply,rvMerge,rvAlias,rvLegacy,ovOpen,ovClose,ovDraw,ovPts,ovLabel,ovSorted,get OVSEL(){return OVSEL;},
  get trip(){return TID;},get route(){return route;},get day(){return curDay;},get RS(){return RS;},get SP(){return SP;},get D(){return D;},get RESTS(){return RESTS;},K};
 })();
 </script>
