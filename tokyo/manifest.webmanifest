@@ -1,0 +1,38 @@
+{
+  "name": "2027 夏 東京進出 自駕（家人版）",
+  "short_name": "東京進出自駕",
+  "description": "2027 夏 東京進出 自駕（路線 A～I）：每日行程、景點、餐廳、住宿與導航。家人分享版，修改只存在自己的裝置。",
+  "lang": "zh-Hant-TW",
+  "dir": "ltr",
+  "id": "/trip-maps/tokyo/",
+  "start_url": "./?source=pwa",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#f6f7f9",
+  "theme_color": "#0d47a1",
+  "categories": [
+    "travel",
+    "navigation"
+  ],
+  "icons": [
+    {
+      "src": "../plan/icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "../plan/icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "../plan/icons/icon-maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}
