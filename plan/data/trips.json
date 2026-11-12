@@ -1,6 +1,6 @@
 {
   "schema": "trip-maps.trips.v1",
-  "generated_at": "2026-11-12T02:14:12+08:00",
+  "generated_at": "2026-11-12T07:21:12+08:00",
   "trips": [
     {
       "id": "2027-06-tokyo",
@@ -62,12 +62,18 @@
           "name": "慢活信州＋箱根：輕井澤3・安曇野3・諏訪2・箱根3（4據點）",
           "days": 16,
           "rank": 5
+        },
+        {
+          "key": "I",
+          "name": "伊豆熱海·輕井澤·群馬頭文字D·日光 大人系自駕",
+          "days": 16,
+          "rank": 9
         }
       ],
       "default_route": "F",
       "counts": {
-        "spots": 264,
-        "restaurants": 179
+        "spots": 274,
+        "restaurants": 208
       },
       "data_version": "1f838ad18c",
       "files": [
@@ -77,41 +83,29 @@
         "restaurants.json",
         "spot_plan.json",
         "spots.json"
-      ]
-    },
-    {
-      "id": "2027-06-tokyo-I",
-      "title": "2027 夏 東京進出・路線 I（伊豆熱海·輕井澤·群馬頭文字D·日光 大人系自駕）",
-      "region": "伊豆・熱海・輕井澤・群馬・日光（羽田進出）",
-      "start_date": "2027-06-19",
-      "end_date": "2027-07-04",
-      "travelers": {
-        "adults": 3,
-        "children": 0
-      },
-      "style": "self-drive",
-      "status_stage": "review",
-      "source": "handoff",
-      "request_id": "draft-20261112-014659-toki",
-      "routes": [
+      ],
+      "extra_routes": [
         {
           "key": "I",
-          "name": "伊豆熱海·輕井澤·群馬頭文字D·日光 大人系自駕",
-          "days": 16,
-          "rank": 1
+          "routes": [
+            "I"
+          ],
+          "source": "handoff",
+          "request_id": "draft-20261112-014659-toki",
+          "rank": 9,
+          "data_version": "573766ee5d",
+          "files": [
+            "routes.json",
+            "places.json",
+            "trip_fill_reference.json"
+          ],
+          "note": "路線 I：企畫部 trip.json plans.I／daily_nav 轉出的靜態 handoff；A～H 仍用 data/2027-06-tokyo/ 舊檔，載入時合併，不覆蓋 A～H。"
         }
       ],
-      "default_route": "I",
-      "counts": {
-        "spots": 42,
-        "restaurants": 59
-      },
-      "data_version": "573766ee5d",
-      "files": [
-        "routes.json",
-        "places.json",
-        "trip_fill_reference.json"
-      ]
+      "aliases": {
+        "2027-06-tokyo-I": "I",
+        "draft-20261112-014659-toki": "I"
+      }
     }
   ]
 }
