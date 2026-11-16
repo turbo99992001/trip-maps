@@ -1,0 +1,355 @@
+{
+ "schema": "agency.lodging_library.region.v1",
+ "region": {
+  "id": "aizu",
+  "name": "會津若松・東山溫泉",
+  "prefecture": "福島県"
+ },
+ "updated_at": "2026-11-16",
+ "hotels": [
+  {
+   "id": "lh_aizu_db052dfe",
+   "name": "会津東山温泉 向瀧",
+   "name_ja": "会津東山温泉 向瀧",
+   "name_zh": null,
+   "type": "onsen_ryokan",
+   "address": null,
+   "lat": 37.47806269,
+   "lng": 139.9608038,
+   "coord_source": null,
+   "google_place_id": "ChIJJ0RUmN5U9V8Rja3H2RHg59o",
+   "google_maps_url": "https://www.google.com/maps/place/?q=place_id:ChIJJ0RUmN5U9V8Rja3H2RHg59o",
+   "official_url": "https://www.mukaitaki.com/",
+   "phone": "0242-27-7501",
+   "mapcode": null,
+   "near_segments": [
+    {
+     "trip_id": "2027-06-tokyo",
+     "route": "D",
+     "base_key": "AIZU",
+     "next_first_stop": null,
+     "drive_min_to_next_first_stop": null,
+     "drive_source": null
+    },
+    {
+     "trip_id": "2027-06-tokyo",
+     "route": "G",
+     "base_key": "AIZU",
+     "next_first_stop": null,
+     "drive_min_to_next_first_stop": null,
+     "drive_source": null
+    }
+   ],
+   "rooms": [
+    {
+     "room_name": "中庭に面した和室10疊（國家登錄有形文化財建築，2～4名）；川向き和室8疊 每人約27,500～29,700",
+     "size_sqm": null,
+     "tatami": null,
+     "max_guests": null,
+     "beds": null,
+     "fits_party": null,
+     "note": "1泊2食（客室食，會津鄉土・鯉料理約16品） 參考價，非該日期實價（2027/6～7 多數尚未開賣；為楽天等目前開放日期之3名1室每人含稅價格範圍，實際依日期/方案變動）"
+    }
+   ],
+   "prices": [
+    {
+     "site": "other",
+     "url": null,
+     "check_in": null,
+     "check_out": null,
+     "nights": null,
+     "adults": 3,
+     "rooms": 1,
+     "room_name": null,
+     "size_sqm": null,
+     "meals": null,
+     "total_jpy": null,
+     "per_night_jpy": null,
+     "price_basis": null,
+     "tax": "included",
+     "tax_note": null,
+     "free_cancel_until": "2027-06-16",
+     "free_cancel_rule_text": "8日前(2027年04月14日) 前免費（2027-04-22 入住方案之規定；目標日期依同規則推算）",
+     "member_price_jpy": null,
+     "coupon": null,
+     "status": "not_found",
+     "checked_at": "2026-10-24",
+     "source_url": null
+    },
+    {
+     "site": "rakuten",
+     "url": "https://hotel.travel.rakuten.co.jp/hotelinfo/plan/67896",
+     "check_in": null,
+     "check_out": null,
+     "nights": null,
+     "adults": 3,
+     "rooms": 1,
+     "room_name": "中庭に面した和室10疊（國家登錄有形文化財建築，2～4名）；川向き和室8疊 每人約27,500～29,700",
+     "size_sqm": null,
+     "meals": "1泊2食（客室食，會津鄉土・鯉料理約16品）",
+     "total_jpy": null,
+     "per_night_jpy": null,
+     "price_basis": "per_night",
+     "tax": "included",
+     "tax_note": null,
+     "free_cancel_until": null,
+     "free_cancel_rule_text": null,
+     "member_price_jpy": null,
+     "coupon": null,
+     "status": "not_found",
+     "checked_at": "2026-10-24",
+     "source_url": "https://hotel.travel.rakuten.co.jp/hotelinfo/plan/67896"
+    }
+   ],
+   "check_in_time": null,
+   "last_check_in": null,
+   "check_out_time": null,
+   "dinner_time": null,
+   "free_cancel_until": null,
+   "booking_opens": {
+    "status": "on_sale",
+    "opens_on": null,
+    "rule": "已開放：官網優先預約受理 2026/06/01～2027/09/30（官網）；楽天方案期間至 2027-10-31",
+    "by_site": [],
+    "checked_at": null
+   },
+   "recommendations": [],
+   "ratings": [
+    {
+     "source": "google",
+     "score": null,
+     "scale": 5,
+     "count": null,
+     "url": "https://www.google.com/maps/place/?q=place_id:ChIJJ0RUmN5U9V8Rja3H2RHg59o",
+     "checked_at": null,
+     "display": null
+    }
+   ],
+   "review_check": null,
+   "drive_check": {
+    "parking": {
+     "available": null,
+     "free": null,
+     "fee": null,
+     "reservation_required": null,
+     "covered": null,
+     "height_limit_m": null,
+     "width_limit_m": null,
+     "distance_to_front": null,
+     "lat": null,
+     "lng": null,
+     "mapcode": null,
+     "mapcode_source": null,
+     "note": "有30台・無料・予約不要（楽天）；入口座標/MapCode 未於 Mapion/NaviCon/官網/じゃらん 取得可核對資料，填 null"
+    },
+    "road": {
+     "mountain_road": null,
+     "night_drive": null,
+     "winter_closure": null,
+     "note": null
+    },
+    "from_prev": null,
+    "closed_days": [],
+    "closed_days_note": null,
+    "dinner_fits": null,
+    "note": null
+   },
+   "operation": {
+    "status": "open",
+    "checked_on": "2026-10-24",
+    "sources": [],
+    "recheck_before_departure": true,
+    "note": "當時可在樂天／じゃらん或官網查到資料；之後若有更新以較新查證為準。"
+   },
+   "screening": {
+    "status": "candidate",
+    "rank": null,
+    "reason": null,
+    "area_unverified": false,
+    "over_1h": null
+   },
+   "stays_feedback": [],
+   "data_gaps": [
+    "MapCode 未從 Mapion／NaviCon 等來源取得，維持 null。",
+    "停車場入口座標未取得。"
+   ],
+   "public_notes": [
+    "全館源泉100%掛け流し，3座貸切家族風呂免費、免預約、不限時；入湯稅另計。",
+    "取消規定：宿泊8日前 23:59 まで免費（7日前10%、3日前30%、前日50%、當日100%）（楽天トラベル施設キャンセルポリシー；方案另有規定時以方案為準）"
+   ],
+   "updated_at": "2026-11-16"
+  },
+  {
+   "id": "lh_aizu_23dcd8eb",
+   "name": "会津東山温泉 庄助の宿 瀧の湯",
+   "name_ja": "会津東山温泉 庄助の宿 瀧の湯",
+   "name_zh": null,
+   "type": "onsen_ryokan",
+   "address": null,
+   "lat": 37.48026519,
+   "lng": 139.9600649,
+   "coord_source": null,
+   "google_place_id": "ChIJ2badUABV9V8RH-_7eszv-ks",
+   "google_maps_url": "https://www.google.com/maps/place/?q=place_id:ChIJ2badUABV9V8RH-_7eszv-ks",
+   "official_url": "https://shousuke.com/",
+   "phone": "0242-29-1000",
+   "mapcode": null,
+   "near_segments": [
+    {
+     "trip_id": "2027-06-tokyo",
+     "route": "D",
+     "base_key": "AIZU",
+     "next_first_stop": null,
+     "drive_min_to_next_first_stop": null,
+     "drive_source": null
+    },
+    {
+     "trip_id": "2027-06-tokyo",
+     "route": "G",
+     "base_key": "AIZU",
+     "next_first_stop": null,
+     "drive_min_to_next_first_stop": null,
+     "drive_source": null
+    }
+   ],
+   "rooms": [
+    {
+     "room_name": "一般和室（夢見亭）～夢想庵等，依方案（3名可）",
+     "size_sqm": null,
+     "tatami": null,
+     "max_guests": null,
+     "beds": null,
+     "fits_party": null,
+     "note": "1泊2食（會津鄉土會席，部分方案客室食） 參考價，非該日期實價（2027/6～7 多數尚未開賣；為楽天等目前開放日期之3名1室每人含稅價格範圍，實際依日期/方案變動）"
+    }
+   ],
+   "prices": [
+    {
+     "site": "other",
+     "url": null,
+     "check_in": null,
+     "check_out": null,
+     "nights": null,
+     "adults": 3,
+     "rooms": 1,
+     "room_name": null,
+     "size_sqm": null,
+     "meals": null,
+     "total_jpy": null,
+     "per_night_jpy": null,
+     "price_basis": null,
+     "tax": "included",
+     "tax_note": null,
+     "free_cancel_until": "2027-06-09",
+     "free_cancel_rule_text": "15日前(2027年06月09日) 前免費（2027-06-24 入住方案之規定；目標日期依同規則推算）",
+     "member_price_jpy": null,
+     "coupon": null,
+     "status": "not_found",
+     "checked_at": "2026-10-24",
+     "source_url": null
+    },
+    {
+     "site": "rakuten",
+     "url": "https://hotel.travel.rakuten.co.jp/hotelinfo/plan/5738",
+     "check_in": null,
+     "check_out": null,
+     "nights": null,
+     "adults": 3,
+     "rooms": 1,
+     "room_name": "一般和室（夢見亭）～夢想庵等，依方案（3名可）",
+     "size_sqm": null,
+     "meals": "1泊2食（會津鄉土會席，部分方案客室食）",
+     "total_jpy": null,
+     "per_night_jpy": null,
+     "price_basis": "per_night",
+     "tax": "included",
+     "tax_note": null,
+     "free_cancel_until": null,
+     "free_cancel_rule_text": null,
+     "member_price_jpy": null,
+     "coupon": null,
+     "status": "not_found",
+     "checked_at": "2026-10-24",
+     "source_url": "https://hotel.travel.rakuten.co.jp/hotelinfo/plan/5738"
+    }
+   ],
+   "check_in_time": null,
+   "last_check_in": null,
+   "check_out_time": null,
+   "dinner_time": null,
+   "free_cancel_until": null,
+   "booking_opens": {
+    "status": "unknown",
+    "opens_on": null,
+    "rule": "楽天部分方案期間至 2027-10-31",
+    "by_site": [],
+    "checked_at": null
+   },
+   "recommendations": [],
+   "ratings": [
+    {
+     "source": "google",
+     "score": null,
+     "scale": 5,
+     "count": null,
+     "url": "https://www.google.com/maps/place/?q=place_id:ChIJ2badUABV9V8RH-_7eszv-ks",
+     "checked_at": null,
+     "display": null
+    }
+   ],
+   "review_check": null,
+   "drive_check": {
+    "parking": {
+     "available": null,
+     "free": null,
+     "fee": null,
+     "reservation_required": null,
+     "covered": null,
+     "height_limit_m": null,
+     "width_limit_m": null,
+     "distance_to_front": null,
+     "lat": null,
+     "lng": null,
+     "mapcode": null,
+     "mapcode_source": null,
+     "note": "無料60台、距館100～300m 多處；1預約限1台（楽天FAQ）；入口座標/MapCode 未於 Mapion/NaviCon/官網/じゃらん 取得可核對資料，填 null"
+    },
+    "road": {
+     "mountain_road": null,
+     "night_drive": null,
+     "winter_closure": null,
+     "note": null
+    },
+    "from_prev": null,
+    "closed_days": [],
+    "closed_days_note": null,
+    "dinner_fits": null,
+    "note": null
+   },
+   "operation": {
+    "status": "open",
+    "checked_on": "2026-10-24",
+    "sources": [],
+    "recheck_before_departure": true,
+    "note": "當時可在樂天／じゃらん或官網查到資料；之後若有更新以較新查證為準。"
+   },
+   "screening": {
+    "status": "candidate",
+    "rank": null,
+    "reason": null,
+    "area_unverified": false,
+    "over_1h": null
+   },
+   "stays_feedback": [],
+   "data_gaps": [
+    "MapCode 未從 Mapion／NaviCon 等來源取得，維持 null。",
+    "停車場入口座標未取得。"
+   ],
+   "public_notes": [
+    "可邊泡湯邊看伏見ヶ滝的溪畔露天＋屋頂貸切『星空の湯』。停車場在館外100～300m，有工作人員接送（14～18時）。",
+    "取消規定：7～14日前10%、4～6日前20%、2～3日前30%、前日50%、當日100% → 實際免費取消至宿泊15日前（楽天トラベル施設キャンセルポリシー；方案另有規定時以方案為準）"
+   ],
+   "updated_at": "2026-11-16"
+  }
+ ]
+}

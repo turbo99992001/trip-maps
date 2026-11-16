@@ -1,0 +1,4348 @@
+{
+ "schema": "agency.lodging_library.region.v1",
+ "region": {
+  "id": "izu",
+  "name": "伊豆（熱海／伊豆高原／伊東／稻取／修善寺／湯ヶ島等）",
+  "prefecture": "静岡県"
+ },
+ "updated_at": "2026-11-16",
+ "hotels": [
+  {
+   "id": "lh_izu_f999621d",
+   "name": "杜の湯 きらの里",
+   "name_ja": "杜の湯 きらの里",
+   "name_zh": "杜之湯 きらの里（伊豆高原・八幡野）",
+   "type": "onsen_ryokan",
+   "address": "〒413-0232 静岡県伊東市八幡野1326-5",
+   "lat": 34.88186,
+   "lng": 139.100593,
+   "coord_source": "本次 Nominatim 未查得；不編造座標",
+   "google_place_id": "ChIJY4_pUyEoil8RI2al5RT92-4",
+   "google_maps_url": "https://www.google.com/maps/place/?q=place_id:ChIJY4_pUyEoil8RI2al5RT92-4",
+   "official_url": "https://dormy-hotels.com/resort/hotels/kiranosato/",
+   "phone": "0557-55-3311",
+   "mapcode": "488 462 403*54",
+   "near_segments": [
+    {
+     "trip_id": "2027-06-tokyo",
+     "route": "I",
+     "base_key": "ATAMI_IZUKOGEN",
+     "next_first_stop": null,
+     "drive_min_to_next_first_stop": null,
+     "drive_source": null
+    }
+   ],
+   "rooms": [
+    {
+     "room_name": "【旅籠八幡野】本館和洋室 35㎡（2025 年翻新）",
+     "size_sqm": 35,
+     "tatami": null,
+     "max_guests": null,
+     "beds": null,
+     "fits_party": null,
+     "note": "1泊2食"
+    },
+    {
+     "room_name": "【旅籠八幡野】本館和洋室 35㎡",
+     "size_sqm": 35,
+     "tatami": null,
+     "max_guests": null,
+     "beds": null,
+     "fits_party": null,
+     "note": "1泊2食 較基本方案便宜；取消／Checkout 條件可能較嚴（ショートステイ Checkout 10:00）。下訂前看方案頁。"
+    },
+    {
+     "room_name": "【旅籠八幡野】本館和洋室35平米",
+     "size_sqm": 35,
+     "tatami": null,
+     "max_guests": 4,
+     "beds": null,
+     "fits_party": null,
+     "note": "素泊（食事なし）"
+    },
+    {
+     "room_name": "【旅籠八幡野】本館和洋室35平米※2025年リニューアル",
+     "size_sqm": 35,
+     "tatami": null,
+     "max_guests": 3,
+     "beds": "和室6疊＋雙床；淋浴廁所（無浴缸）",
+     "fits_party": null,
+     "note": "1泊2食"
+    },
+    {
+     "room_name": "【別邸山の音】和洋室50平米（マッサージチェア+テラス）",
+     "size_sqm": 50,
+     "tatami": null,
+     "max_guests": 3,
+     "beds": null,
+     "fits_party": null,
+     "note": "1泊2食 與本館 35㎡ 同價。基本 2 食方案為 ¥222,750。"
+    },
+    {
+     "room_name": "【離れ竹ぶえ】源泉掛け流し露天風呂付き和室44平米",
+     "size_sqm": 44,
+     "tatami": null,
+     "max_guests": 3,
+     "beds": null,
+     "fits_party": null,
+     "note": "1泊2食"
+    },
+    {
+     "room_name": "本館和洋室 35㎡ 定員1～4名",
+     "size_sqm": 35,
+     "tatami": null,
+     "max_guests": null,
+     "beds": null,
+     "fits_party": null,
+     "note": null
+    }
+   ],
+   "prices": [
+    {
+     "site": "rakuten",
+     "url": "https://hotel.travel.rakuten.co.jp/hotelinfo/plan/52638?f_heya_su=1&f_otona_su=3&f_nen1=2027&f_tuki1=6&f_hi1=21&f_nen2=2027&f_tuki2=6&f_hi2=24&f_sort=min_charge",
+     "check_in": "2027-06-21",
+     "check_out": "2027-06-24",
+     "nights": 3,
+     "adults": 3,
+     "rooms": 1,
+     "room_name": "【旅籠八幡野】本館和洋室 35㎡",
+     "size_sqm": 35,
+     "meals": "素泊",
+     "total_jpy": 138600,
+     "per_night_jpy": null,
+     "price_basis": "total",
+     "tax": "included",
+     "tax_note": null,
+     "free_cancel_until": null,
+     "free_cancel_rule_text": null,
+     "member_price_jpy": null,
+     "coupon": null,
+     "status": "ok",
+     "checked_at": "2026-11-12",
+     "source_url": "https://hotel.travel.rakuten.co.jp/hotelinfo/plan/52638?f_heya_su=1&f_otona_su=3&f_nen1=2027&f_tuki1=6&f_hi1=21&f_nen2=2027&f_tuki2=6&f_hi2=24&f_sort=min_charge"
+    },
+    {
+     "site": "rakuten",
+     "url": "https://hotel.travel.rakuten.co.jp/hotelinfo/plan/52638?f_heya_su=1&f_otona_su=3&f_nen1=2027&f_tuki1=6&f_hi1=21&f_nen2=2027&f_tuki2=6&f_hi2=24&f_sort=min_charge",
+     "check_in": "2027-06-21",
+     "check_out": "2027-06-24",
+     "nights": 3,
+     "adults": 3,
+     "rooms": 1,
+     "room_name": "【旅籠八幡野】本館和洋室 35㎡",
+     "size_sqm": 35,
+     "meals": "朝食のみ",
+     "total_jpy": 181170,
+     "per_night_jpy": null,
+     "price_basis": "total",
+     "tax": "included",
+     "tax_note": null,
+     "free_cancel_until": null,
+     "free_cancel_rule_text": null,
+     "member_price_jpy": null,
+     "coupon": null,
+     "status": "ok",
+     "checked_at": "2026-11-12",
+     "source_url": "https://hotel.travel.rakuten.co.jp/hotelinfo/plan/52638?f_heya_su=1&f_otona_su=3&f_nen1=2027&f_tuki1=6&f_hi1=21&f_nen2=2027&f_tuki2=6&f_hi2=24&f_sort=min_charge"
+    },
+    {
+     "site": "rakuten",
+     "url": "https://hotel.travel.rakuten.co.jp/hotelinfo/plan/52638?f_heya_su=1&f_otona_su=3&f_nen1=2027&f_tuki1=6&f_hi1=21&f_nen2=2027&f_tuki2=6&f_hi2=24&f_sort=min_charge",
+     "check_in": "2027-06-21",
+     "check_out": "2027-06-24",
+     "nights": 3,
+     "adults": 3,
+     "rooms": 1,
+     "room_name": "【旅籠八幡野】本館和洋室 35㎡",
+     "size_sqm": 35,
+     "meals": "1泊2食",
+     "total_jpy": 200970,
+     "per_night_jpy": null,
+     "price_basis": "total",
+     "tax": "included",
+     "tax_note": null,
+     "free_cancel_until": null,
+     "free_cancel_rule_text": null,
+     "member_price_jpy": null,
+     "coupon": null,
+     "status": "ok",
+     "checked_at": "2026-11-12",
+     "source_url": "https://hotel.travel.rakuten.co.jp/hotelinfo/plan/52638?f_heya_su=1&f_otona_su=3&f_nen1=2027&f_tuki1=6&f_hi1=21&f_nen2=2027&f_tuki2=6&f_hi2=24&f_sort=min_charge"
+    },
+    {
+     "site": "rakuten",
+     "url": "https://hotel.travel.rakuten.co.jp/hotelinfo/plan/52638?f_heya_su=1&f_otona_su=3&f_nen1=2027&f_tuki1=6&f_hi1=21&f_nen2=2027&f_tuki2=6&f_hi2=24&f_sort=min_charge",
+     "check_in": "2027-06-21",
+     "check_out": "2027-06-24",
+     "nights": 3,
+     "adults": 3,
+     "rooms": 1,
+     "room_name": "【旅籠八幡野】本館和洋室 35㎡（2025 年翻新）",
+     "size_sqm": 35,
+     "meals": "1泊2食",
+     "total_jpy": 222750,
+     "per_night_jpy": null,
+     "price_basis": "total",
+     "tax": "included",
+     "tax_note": null,
+     "free_cancel_until": null,
+     "free_cancel_rule_text": null,
+     "member_price_jpy": null,
+     "coupon": null,
+     "status": "ok",
+     "checked_at": "2026-11-12",
+     "source_url": "https://hotel.travel.rakuten.co.jp/hotelinfo/plan/52638?f_heya_su=1&f_otona_su=3&f_nen1=2027&f_tuki1=6&f_hi1=21&f_nen2=2027&f_tuki2=6&f_hi2=24&f_sort=min_charge"
+    },
+    {
+     "site": "google_hotels",
+     "url": null,
+     "check_in": "2027-06-21",
+     "check_out": "2027-06-24",
+     "nights": 3,
+     "adults": 3,
+     "rooms": 1,
+     "room_name": "豪華房–附榻榻米區（3 位房客）",
+     "size_sqm": null,
+     "meals": null,
+     "total_jpy": null,
+     "per_night_jpy": 49977,
+     "price_basis": "per_night",
+     "tax": "unknown",
+     "tax_note": "除明確註明外，Google 個別訂房來源價格列未明示含稅與否，故記為未明。",
+     "free_cancel_until": "2027-06-13",
+     "free_cancel_rule_text": "Google 顯示可於 6月13日前免費取消（年份未顯示）",
+     "member_price_jpy": null,
+     "coupon": null,
+     "status": "ok",
+     "checked_at": "2026-11-15",
+     "source_url": null
+    },
+    {
+     "site": "google_hotels",
+     "url": null,
+     "check_in": "2027-06-21",
+     "check_out": "2027-06-24",
+     "nights": 3,
+     "adults": 3,
+     "rooms": 1,
+     "room_name": "3 人房",
+     "size_sqm": null,
+     "meals": null,
+     "total_jpy": null,
+     "per_night_jpy": 45276,
+     "price_basis": "per_night",
+     "tax": "unknown",
+     "tax_note": "除明確註明外，Google 個別訂房來源價格列未明示含稅與否，故記為未明。",
+     "free_cancel_until": "2027-06-13",
+     "free_cancel_rule_text": "Google 顯示可於 6月13日前免費取消（年份未顯示）",
+     "member_price_jpy": null,
+     "coupon": null,
+     "status": "ok",
+     "checked_at": "2026-11-15",
+     "source_url": null
+    },
+    {
+     "site": "google_hotels",
+     "url": null,
+     "check_in": "2027-06-21",
+     "check_out": "2027-06-24",
+     "nights": 3,
+     "adults": 3,
+     "rooms": 1,
+     "room_name": "3 人房",
+     "size_sqm": null,
+     "meals": null,
+     "total_jpy": null,
+     "per_night_jpy": 43890,
+     "price_basis": "per_night",
+     "tax": "unknown",
+     "tax_note": "除明確註明外，Google 個別訂房來源價格列未明示含稅與否，故記為未明。",
+     "free_cancel_until": "2027-06-16",
+     "free_cancel_rule_text": "Google 顯示可於 6月16日前免費取消（年份未顯示）",
+     "member_price_jpy": null,
+     "coupon": null,
+     "status": "ok",
+     "checked_at": "2026-11-15",
+     "source_url": null
+    },
+    {
+     "site": "ikyu",
+     "url": "https://www.ikyu.com/00001175/11279895/10008124/?cid=20270621&cod=20270624&lc=3&ppc=3&rc=1",
+     "check_in": "2027-06-21",
+     "check_out": "2027-06-24",
+     "nights": 3,
+     "adults": 3,
+     "rooms": 1,
+     "room_name": "【旅籠八幡野】本館和洋室35平米",
+     "size_sqm": 35,
+     "meals": "素泊（食事なし）",
+     "total_jpy": 138600,
+     "per_night_jpy": null,
+     "price_basis": "total",
+     "tax": "included",
+     "tax_note": null,
+     "free_cancel_until": "2027-06-13",
+     "free_cancel_rule_text": "2027年6月13日までキャンセル料無料",
+     "member_price_jpy": null,
+     "coupon": null,
+     "status": "ok",
+     "checked_at": "2026-11-15",
+     "source_url": "https://www.ikyu.com/00001175/11279895/10008124/?cid=20270621&cod=20270624&lc=3&ppc=3&rc=1"
+    },
+    {
+     "site": "ikyu",
+     "url": "https://www.ikyu.com/00001175/11279895/10008124/?cid=20270621&cod=20270624&lc=3&ppc=3&rc=1",
+     "check_in": "2027-06-21",
+     "check_out": "2027-06-24",
+     "nights": 3,
+     "adults": 3,
+     "rooms": 1,
+     "room_name": "本館和洋室 35㎡ 定員1～4名",
+     "size_sqm": 35,
+     "meals": "素泊",
+     "total_jpy": 138600,
+     "per_night_jpy": null,
+     "price_basis": "total",
+     "tax": "included",
+     "tax_note": null,
+     "free_cancel_until": "2027-06-13",
+     "free_cancel_rule_text": "2027年6月13日までキャンセル料無料",
+     "member_price_jpy": null,
+     "coupon": null,
+     "status": "ok",
+     "checked_at": "2026-11-15",
+     "source_url": "https://www.ikyu.com/00001175/11279895/10008124/?cid=20270621&cod=20270624&lc=3&ppc=3&rc=1"
+    },
+    {
+     "site": "rakuten",
+     "url": "https://hotel.travel.rakuten.co.jp/hotelinfo/plan/52638?f_heya_su=1&f_otona_su=3&f_nen1=2027&f_tuki1=6&f_hi1=21&f_nen2=2027&f_tuki2=6&f_hi2=24&f_sort=min_charge",
+     "check_in": "2027-06-21",
+     "check_out": "2027-06-24",
+     "nights": 3,
+     "adults": 3,
+     "rooms": 1,
+     "room_name": "【旅籠八幡野】本館和洋室35平米※2025年リニューアル",
+     "size_sqm": 35,
+     "meals": "1泊2食",
+     "total_jpy": 200970,
+     "per_night_jpy": null,
+     "price_basis": "total",
+     "tax": "included",
+     "tax_note": null,
+     "free_cancel_until": "2027-06-13",
+     "free_cancel_rule_text": "楽天：8日前（2027-06-13）23:59 前無料。",
+     "member_price_jpy": null,
+     "coupon": null,
+     "status": "ok",
+     "checked_at": "2026-11-15",
+     "source_url": "https://hotel.travel.rakuten.co.jp/hotelinfo/plan/52638?f_heya_su=1&f_otona_su=3&f_nen1=2027&f_tuki1=6&f_hi1=21&f_nen2=2027&f_tuki2=6&f_hi2=24&f_sort=min_charge"
+    },
+    {
+     "site": "rakuten",
+     "url": "https://hotel.travel.rakuten.co.jp/hotelinfo/plan/52638?f_heya_su=1&f_otona_su=3&f_nen1=2027&f_tuki1=6&f_hi1=21&f_nen2=2027&f_tuki2=6&f_hi2=24&f_sort=min_charge",
+     "check_in": "2027-06-21",
+     "check_out": "2027-06-24",
+     "nights": 3,
+     "adults": 3,
+     "rooms": 1,
+     "room_name": "【離れ竹ぶえ】源泉掛け流し露天風呂付き和室44平米",
+     "size_sqm": 44,
+     "meals": "1泊2食",
+     "total_jpy": 245520,
+     "per_night_jpy": null,
+     "price_basis": "total",
+     "tax": "included",
+     "tax_note": null,
+     "free_cancel_until": "2027-06-13",
+     "free_cancel_rule_text": "楽天：8日前（2027-06-13）23:59 前無料。",
+     "member_price_jpy": null,
+     "coupon": null,
+     "status": "ok",
+     "checked_at": "2026-11-15",
+     "source_url": "https://hotel.travel.rakuten.co.jp/hotelinfo/plan/52638?f_heya_su=1&f_otona_su=3&f_nen1=2027&f_tuki1=6&f_hi1=21&f_nen2=2027&f_tuki2=6&f_hi2=24&f_sort=min_charge"
+    },
+    {
+     "site": "rakuten",
+     "url": "https://hotel.travel.rakuten.co.jp/hotelinfo/plan/52638?f_heya_su=1&f_otona_su=3&f_nen1=2027&f_tuki1=6&f_hi1=21&f_nen2=2027&f_tuki2=6&f_hi2=24&f_sort=min_charge",
+     "check_in": "2027-06-21",
+     "check_out": "2027-06-24",
+     "nights": 3,
+     "adults": 3,
+     "rooms": 1,
+     "room_name": "【別邸山の音】和洋室50平米（マッサージチェア+テラス）",
+     "size_sqm": 50,
+     "meals": "1泊2食",
+     "total_jpy": 200970,
+     "per_night_jpy": null,
+     "price_basis": "total",
+     "tax": "included",
+     "tax_note": null,
+     "free_cancel_until": "2027-06-13",
+     "free_cancel_rule_text": "楽天：8日前（2027-06-13）23:59 前無料。",
+     "member_price_jpy": null,
+     "coupon": null,
+     "status": "ok",
+     "checked_at": "2026-11-15",
+     "source_url": "https://hotel.travel.rakuten.co.jp/hotelinfo/plan/52638?f_heya_su=1&f_otona_su=3&f_nen1=2027&f_tuki1=6&f_hi1=21&f_nen2=2027&f_tuki2=6&f_hi2=24&f_sort=min_charge"
+    },
+    {
+     "site": "rakuten",
+     "url": null,
+     "check_in": "2027-06-21",
+     "check_out": "2027-06-24",
+     "nights": 3,
+     "adults": 3,
+     "rooms": 1,
+     "room_name": "本館和洋室 35㎡ 定員1～4名",
+     "size_sqm": 35,
+     "meals": "1泊2食",
+     "total_jpy": 200970,
+     "per_night_jpy": null,
+     "price_basis": "total",
+     "tax": "included",
+     "tax_note": null,
+     "free_cancel_until": null,
+     "free_cancel_rule_text": null,
+     "member_price_jpy": null,
+     "coupon": null,
+     "status": "ok",
+     "checked_at": "2026-11-15",
+     "source_url": null
+    }
+   ],
+   "check_in_time": null,
+   "last_check_in": null,
+   "check_out_time": null,
+   "dinner_time": "兩部制：1部 17:30～／2部 20:00～（楽天 2食方案）。目前比價的一休素泊方案不含晚餐。",
+   "free_cancel_until": null,
+   "booking_opens": {
+    "status": "unknown",
+    "opens_on": null,
+    "rule": "官網 FAQ：原則上 1 年前之每月 1 日起受理。2027/6 已可在楽天查到可售方案。",
+    "by_site": [],
+    "checked_at": null
+   },
+   "recommendations": [
+    {
+     "kind": "youtube",
+     "title": "[東京近郊] 伊豆爆高CP值溫泉旅館！私人風呂+一泊二食每人只需HKD1300?!｜失敗的賞河津櫻之旅...｜Lilian's Footprints",
+     "author": "Lilian's Footprints",
+     "url": "https://www.youtube.com/watch?v=8crWCsMZKHk",
+     "published_at": "2025-04-26",
+     "points": "說明欄直接放きらの里官網。主打高 CP：一泊二食＋房間私人風呂，影片稱每人約 HKD1,300（當時價格，不能當 2027 報價）。後段為河津櫻行程。",
+     "lang": null
+    },
+    {
+     "kind": "youtube",
+     "title": "【伊豆高原】きらの里 八幡野温泉郷 源泉掛け流し露天風呂付部屋《リタイア夫婦vlog》伊豆近海の海鮮しゃぶしゃぶ",
+     "author": "chaffee's travel channel",
+     "url": "https://www.youtube.com/watch?v=mhUOn_0u4Ok",
+     "published_at": "2026-02-10",
+     "points": "整修重開後的日文夫婦 vlog：入住源泉かけ流し露天風呂付房間，晚餐有伊豆近海海鮮涮涮鍋。",
+     "lang": null
+    },
+    {
+     "kind": "blog",
+     "title": "【2025宿泊記】伊豆高原「きらの里」営業再開後に泊まってきた｜子連れ目線で感じた魅力と注意点",
+     "author": "旅したい主婦の節約ダイアリー",
+     "url": "https://www.kyoukonosetsuyakunikki.com/?p=858",
+     "published_at": null,
+     "points": "作者寫該館因翻新休館半年以上，2025-12-22 再營業；12/25 入住。稱氣氛、房間、餐食、溫泉都穩定，價格不算最高，是少數會重複入住的旅館；文內亦有帶小孩視角的注意點。",
+     "lang": null
+    }
+   ],
+   "ratings": [
+    {
+     "source": "google",
+     "score": null,
+     "scale": 5,
+     "count": null,
+     "url": "https://www.google.com/maps/place/?q=place_id:ChIJY4_pUyEoil8RI2al5RT92-4",
+     "checked_at": "2026-11-15",
+     "display": "4.2（1,138 則，2026-11-15 人工查看）"
+    }
+   ],
+   "review_check": null,
+   "drive_check": {
+    "parking": {
+     "available": true,
+     "free": true,
+     "fee": "免費",
+     "reservation_required": false,
+     "covered": null,
+     "height_limit_m": null,
+     "width_limit_m": null,
+     "distance_to_front": null,
+     "lat": null,
+     "lng": null,
+     "mapcode": null,
+     "mapcode_source": null,
+     "note": "車位 敷地內 50 台 官網 FAQ：免費停車場、敷地內 50 台；楽天 FAQ：有（50台）免費・預約不要。2026-11-16 再查：楽天 rtmap「有り（50台）無料・予約不要」（https://travel.rakuten.co.jp/HOTEL/52638/rtmap.html）。官網與楽天都沒寫停車場在敷地內哪個位置，停車座標與停車 MapCode 維持 null；導航請設旅館本身（見 mapcode）。"
+    },
+    "road": {
+     "mountain_road": null,
+     "night_drive": null,
+     "winter_closure": null,
+     "note": null
+    },
+    "from_prev": null,
+    "closed_days": [],
+    "closed_days_note": null,
+    "dinner_fits": null,
+    "note": "官網座標核過：→大室山 OSRM 約9分；→修善寺 OSRM 約44分、估55分。"
+   },
+   "operation": {
+    "status": "open",
+    "checked_on": "2026-11-16",
+    "sources": [],
+    "recheck_before_departure": true,
+    "note": "官網 200；華語與日文 2025–2026 宿泊記。部落格寫 2025-12-22 結束長期整修後重新營業。"
+   },
+   "screening": {
+    "status": "top_pick",
+    "rank": null,
+    "reason": "路線 I 伊豆段目前首選。",
+    "area_unverified": false,
+    "over_1h": null
+   },
+   "stays_feedback": [],
+   "data_gaps": [
+    "敷地內停車場的入口座標未取得；停車 MapCode 維持 null（旅館本身 MapCode 已取得）。"
+   ],
+   "public_notes": [
+    "Google 電話備註（2026-11-15）：Google shows the reservation number 0557-55-3311 (10:00–19:00 on the official site). Official site also lists main number 0557-55-2400 (24 hours).",
+    "Google 店家頁（2026-11-15）：Google phone is the reservation line, not the 24-hour main line."
+   ],
+   "updated_at": "2026-11-16"
+  },
+  {
+   "id": "lh_izu_939430a8",
+   "name": "いなとり荘",
+   "name_ja": "いなとり荘",
+   "name_zh": "稻取莊／いなとり莊",
+   "type": "onsen_ryokan",
+   "address": null,
+   "lat": 34.76633928,
+   "lng": 139.0394854,
+   "coord_source": null,
+   "google_place_id": "ChIJ1xnWZh5KGmARom5lTMBBqsc",
+   "google_maps_url": "https://www.google.com/maps/place/?q=place_id:ChIJ1xnWZh5KGmARom5lTMBBqsc",
+   "official_url": "https://inatoriso.com/",
+   "phone": "0557-95-1234",
+   "mapcode": null,
+   "near_segments": [
+    {
+     "trip_id": "2027-06-tokyo",
+     "route": "A",
+     "base_key": "INATORI",
+     "next_first_stop": null,
+     "drive_min_to_next_first_stop": null,
+     "drive_source": null
+    },
+    {
+     "trip_id": "2027-06-tokyo",
+     "route": "F",
+     "base_key": "INATORI",
+     "next_first_stop": null,
+     "drive_min_to_next_first_stop": null,
+     "drive_source": null
+    },
+    {
+     "trip_id": "2027-06-tokyo",
+     "route": "F（lodging.bases／當時推薦路線）",
+     "base_key": "INATORI",
+     "next_first_stop": null,
+     "drive_min_to_next_first_stop": null,
+     "drive_source": null
+    },
+    {
+     "trip_id": "2027-06-tokyo",
+     "route": "I",
+     "base_key": "ATAMI_IZUKOGEN",
+     "next_first_stop": null,
+     "drive_min_to_next_first_stop": null,
+     "drive_source": null
+    }
+   ],
+   "rooms": [
+    {
+     "room_name": "クラシック和室10疊（3名，餐廳食）／和モダン和洋室『青波』50.3㎡ 每人約28,050～35,750",
+     "size_sqm": 50.3,
+     "tatami": null,
+     "max_guests": null,
+     "beds": null,
+     "fits_party": null,
+     "note": "1泊2食（漁師町會席：金目鯛姿煮・伊勢海老・鮑） 參考價，非該日期實價（2027/6～7 多數尚未開賣；為楽天等目前開放日期之3名1室每人含稅價格範圍，實際依日期/方案變動）"
+    }
+   ],
+   "prices": [
+    {
+     "site": "other",
+     "url": null,
+     "check_in": null,
+     "check_out": null,
+     "nights": null,
+     "adults": 3,
+     "rooms": 1,
+     "room_name": null,
+     "size_sqm": null,
+     "meals": null,
+     "total_jpy": null,
+     "per_night_jpy": null,
+     "price_basis": null,
+     "tax": "included",
+     "tax_note": null,
+     "free_cancel_until": "2027-06-14",
+     "free_cancel_rule_text": "11日前(2027年04月12日) 前免費（2027-04-23 入住方案之規定；目標日期依同規則推算）",
+     "member_price_jpy": null,
+     "coupon": null,
+     "status": "not_found",
+     "checked_at": "2026-10-24",
+     "source_url": null
+    },
+    {
+     "site": "rakuten",
+     "url": "https://hotel.travel.rakuten.co.jp/hotelinfo/plan/30928",
+     "check_in": null,
+     "check_out": null,
+     "nights": null,
+     "adults": 3,
+     "rooms": 1,
+     "room_name": "クラシック和室10疊（3名，餐廳食）／和モダン和洋室『青波』50.3㎡ 每人約28,050～35,750",
+     "size_sqm": 50.3,
+     "meals": "1泊2食（漁師町會席：金目鯛姿煮・伊勢海老・鮑）",
+     "total_jpy": null,
+     "per_night_jpy": null,
+     "price_basis": "per_night",
+     "tax": "included",
+     "tax_note": null,
+     "free_cancel_until": null,
+     "free_cancel_rule_text": null,
+     "member_price_jpy": null,
+     "coupon": null,
+     "status": "not_found",
+     "checked_at": "2026-10-24",
+     "source_url": "https://hotel.travel.rakuten.co.jp/hotelinfo/plan/30928"
+    }
+   ],
+   "check_in_time": null,
+   "last_check_in": null,
+   "check_out_time": null,
+   "dinner_time": null,
+   "free_cancel_until": null,
+   "booking_opens": {
+    "status": "not_yet",
+    "opens_on": null,
+    "rule": "2027/6 未放房；目前最遠可查約 2027/4 底；開賣日未公布",
+    "by_site": [],
+    "checked_at": null
+   },
+   "recommendations": [
+    {
+     "kind": "youtube",
+     "title": "【伊豆観光1泊2日】ひたすら海鮮が止まらん宿！全室オーシャンビューの温泉天国ホテルに泊まってみた",
+     "author": "くぼたび",
+     "url": "https://www.youtube.com/watch?v=I0Hf3BW_29Q",
+     "published_at": "2025-10-18",
+     "points": "官方提供／PR。全室海景、客房露天風呂、金目鯛等海鮮。旅館官方新聞亦轉載此片。",
+     "lang": null
+    },
+    {
+     "kind": "blog",
+     "title": "旅系YouTuberくぼたびさんがいなとり荘へ！癒しと笑いの絶景ステイ動画公開",
+     "author": "いなとり荘 公式",
+     "url": "https://inatoriso.com/28229-2/",
+     "published_at": "2025-10-19",
+     "points": "旅館官方確認くぼたび入住，並介紹影片中的海景客房露天風呂、金目鯛姿煮等。屬官方轉述，不是第三方評比。",
+     "lang": null
+    }
+   ],
+   "ratings": [
+    {
+     "source": "google",
+     "score": null,
+     "scale": 5,
+     "count": null,
+     "url": "https://www.google.com/maps/place/?q=place_id:ChIJ1xnWZh5KGmARom5lTMBBqsc",
+     "checked_at": null,
+     "display": null
+    }
+   ],
+   "review_check": null,
+   "drive_check": {
+    "parking": {
+     "available": null,
+     "free": null,
+     "fee": null,
+     "reservation_required": null,
+     "covered": null,
+     "height_limit_m": null,
+     "width_limit_m": null,
+     "distance_to_front": null,
+     "lat": null,
+     "lng": null,
+     "mapcode": null,
+     "mapcode_source": null,
+     "note": "50台・無料（楽天）；入口座標/MapCode 未於 Mapion/NaviCon/官網/じゃらん 取得可核對資料，填 null"
+    },
+    "road": {
+     "mountain_road": null,
+     "night_drive": null,
+     "winter_closure": null,
+     "note": null
+    },
+    "from_prev": null,
+    "closed_days": [],
+    "closed_days_note": null,
+    "dinner_fits": null,
+    "note": null
+   },
+   "operation": {
+    "status": "open",
+    "checked_on": "2026-11-16",
+    "sources": [],
+    "recheck_before_departure": true,
+    "note": "官網 200；官方 2025-10-19 發文確認くぼたび入住並公開影片；影片上傳 2025-10-18。"
+   },
+   "screening": {
+    "status": "candidate",
+    "rank": null,
+    "reason": null,
+    "area_unverified": false,
+    "over_1h": null
+   },
+   "stays_feedback": [],
+   "data_gaps": [
+    "MapCode 未從 Mapion／NaviCon 等來源取得，維持 null。",
+    "停車場入口座標未取得。"
+   ],
+   "public_notes": [
+    "全室海景，退房12:00 適合慢活；屋頂貸切露天。",
+    "取消規定：宿泊11日前 23:59 まで免費（10日前10%、6日前30%起）（楽天トラベル施設キャンセルポリシー；方案另有規定時以方案為準）"
+   ],
+   "updated_at": "2026-11-16"
+  },
+  {
+   "id": "lh_izu_c49f34c8",
+   "name": "ソラトニワ熱海伊豆山",
+   "name_ja": "ソラトニワ熱海伊豆山",
+   "name_zh": "Soratoniwa 熱海伊豆山",
+   "type": "onsen_hotel",
+   "address": null,
+   "lat": null,
+   "lng": null,
+   "coord_source": null,
+   "google_place_id": null,
+   "google_maps_url": "https://www.google.com/maps/search/?api=1&query=%E3%82%BD%E3%83%A9%E3%83%88%E3%83%8B%E3%83%AF%E7%86%B1%E6%B5%B7%E4%BC%8A%E8%B1%86%E5%B1%B1",
+   "official_url": "https://soratoniwa-atami.com/room",
+   "phone": "0570-055-666",
+   "mapcode": null,
+   "near_segments": [
+    {
+     "trip_id": "2027-06-tokyo",
+     "route": "I",
+     "base_key": "ATAMI_IZUKOGEN",
+     "next_first_stop": null,
+     "drive_min_to_next_first_stop": null,
+     "drive_source": null
+    }
+   ],
+   "rooms": [
+    {
+     "room_name": "オーシャンビューコンフォート／32平米／3名定員",
+     "size_sqm": 32,
+     "tatami": null,
+     "max_guests": 3,
+     "beds": null,
+     "fits_party": null,
+     "note": "1泊2食"
+    },
+    {
+     "room_name": "【サウナ＋露天風呂付】ジュニアスイート／35平米／3名定員",
+     "size_sqm": 35,
+     "tatami": null,
+     "max_guests": 3,
+     "beds": null,
+     "fits_party": null,
+     "note": "1泊2食"
+    }
+   ],
+   "prices": [
+    {
+     "site": "rakuten",
+     "url": "https://hotel.travel.rakuten.co.jp/hotelinfo/plan/147782?f_heya_su=1&f_otona_su=3&f_nen1=2027&f_tuki1=5&f_hi1=17&f_nen2=2027&f_tuki2=5&f_hi2=20&f_sort=min_charge",
+     "check_in": "2027-06-21",
+     "check_out": "2027-06-24",
+     "nights": 3,
+     "adults": 3,
+     "rooms": 1,
+     "room_name": "オーシャンビューコンフォート／32平米／3名定員",
+     "size_sqm": 32,
+     "meals": "1泊2食",
+     "total_jpy": 175869,
+     "per_night_jpy": null,
+     "price_basis": "total",
+     "tax": "included",
+     "tax_note": null,
+     "free_cancel_until": null,
+     "free_cancel_rule_text": "替代日楽天方案群有 4日前（2027-05-13）23:59 與 8日前（2027-05-09）23:59 兩種；須以實際方案為準。",
+     "member_price_jpy": null,
+     "coupon": null,
+     "status": "ok",
+     "checked_at": "2026-11-15",
+     "source_url": "https://hotel.travel.rakuten.co.jp/hotelinfo/plan/147782?f_heya_su=1&f_otona_su=3&f_nen1=2027&f_tuki1=5&f_hi1=17&f_nen2=2027&f_tuki2=5&f_hi2=20&f_sort=min_charge"
+    },
+    {
+     "site": "rakuten",
+     "url": "https://hotel.travel.rakuten.co.jp/hotelinfo/plan/147782?f_heya_su=1&f_otona_su=3&f_nen1=2027&f_tuki1=5&f_hi1=17&f_nen2=2027&f_tuki2=5&f_hi2=20&f_sort=min_charge",
+     "check_in": "2027-06-21",
+     "check_out": "2027-06-24",
+     "nights": 3,
+     "adults": 3,
+     "rooms": 1,
+     "room_name": "【サウナ＋露天風呂付】ジュニアスイート／35平米／3名定員",
+     "size_sqm": 35,
+     "meals": "1泊2食",
+     "total_jpy": 296208,
+     "per_night_jpy": null,
+     "price_basis": "total",
+     "tax": "included",
+     "tax_note": null,
+     "free_cancel_until": null,
+     "free_cancel_rule_text": "替代日方案群：4日前或 8日前（見上）。",
+     "member_price_jpy": null,
+     "coupon": null,
+     "status": "ok",
+     "checked_at": "2026-11-15",
+     "source_url": "https://hotel.travel.rakuten.co.jp/hotelinfo/plan/147782?f_heya_su=1&f_otona_su=3&f_nen1=2027&f_tuki1=5&f_hi1=17&f_nen2=2027&f_tuki2=5&f_hi2=20&f_sort=min_charge"
+    }
+   ],
+   "check_in_time": null,
+   "last_check_in": null,
+   "check_out_time": null,
+   "dinner_time": null,
+   "free_cancel_until": null,
+   "booking_opens": {
+    "status": "unknown",
+    "opens_on": null,
+    "rule": null,
+    "by_site": [],
+    "checked_at": null
+   },
+   "recommendations": [],
+   "ratings": [
+    {
+     "source": "google",
+     "score": null,
+     "scale": 5,
+     "count": null,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E3%82%BD%E3%83%A9%E3%83%88%E3%83%8B%E3%83%AF%E7%86%B1%E6%B5%B7%E4%BC%8A%E8%B1%86%E5%B1%B1",
+     "checked_at": null,
+     "display": null
+    }
+   ],
+   "review_check": null,
+   "drive_check": {
+    "parking": {
+     "available": null,
+     "free": null,
+     "fee": null,
+     "reservation_required": null,
+     "covered": null,
+     "height_limit_m": null,
+     "width_limit_m": null,
+     "distance_to_front": null,
+     "lat": null,
+     "lng": null,
+     "mapcode": null,
+     "mapcode_source": null,
+     "note": "敷地內免費停車場 30 台，無需預約。來源：楽天基本情報 2026-11-15。"
+    },
+    "road": {
+     "mountain_road": null,
+     "night_drive": null,
+     "winter_closure": null,
+     "note": null
+    },
+    "from_prev": null,
+    "closed_days": [],
+    "closed_days_note": null,
+    "dinner_fits": null,
+    "note": null
+   },
+   "operation": {
+    "status": "unknown",
+    "checked_on": "2026-11-16",
+    "sources": [],
+    "recheck_before_departure": true,
+    "note": "本次僅見於比價或名單，未獨立核對官網／新聞是否仍營業。"
+   },
+   "screening": {
+    "status": "candidate",
+    "rank": null,
+    "reason": null,
+    "area_unverified": false,
+    "over_1h": null
+   },
+   "stays_feedback": [],
+   "data_gaps": [
+    "place_id 未核對（不可臆造）；Google Maps 連結若為座標或館名搜尋，下次應改為店家頁。",
+    "MapCode 未從 Mapion／NaviCon 等來源取得，維持 null。",
+    "停車場入口座標未取得。",
+    "營業狀況待再確認。"
+   ],
+   "public_notes": [],
+   "updated_at": "2026-11-16"
+  },
+  {
+   "id": "lh_izu_b421ac99",
+   "name": "ラビスタ熱海テラス（共立リゾート）",
+   "name_ja": "ラビスタ熱海テラス（共立リゾート）",
+   "name_zh": null,
+   "type": "onsen_hotel",
+   "address": null,
+   "lat": null,
+   "lng": null,
+   "coord_source": null,
+   "google_place_id": null,
+   "google_maps_url": "https://www.google.com/maps/search/?api=1&query=%E3%83%A9%E3%83%93%E3%82%B9%E3%82%BF%E7%86%B1%E6%B5%B7%E3%83%86%E3%83%A9%E3%82%B9%EF%BC%88%E5%85%B1%E7%AB%8B%E3%83%AA%E3%82%BE%E3%83%BC%E3%83%88%EF%BC%89",
+   "official_url": null,
+   "phone": null,
+   "mapcode": null,
+   "near_segments": [
+    {
+     "trip_id": "2027-06-tokyo",
+     "route": "I",
+     "base_key": "ATAMI_IZUKOGEN",
+     "next_first_stop": null,
+     "drive_min_to_next_first_stop": null,
+     "drive_source": null
+    }
+   ],
+   "rooms": [
+    {
+     "room_name": "【露天風呂付（沸かし湯）】フォース※眺望無し",
+     "size_sqm": 51,
+     "tatami": null,
+     "max_guests": 4,
+     "beds": null,
+     "fits_party": null,
+     "note": "素泊（食事なし）"
+    }
+   ],
+   "prices": [
+    {
+     "site": "ikyu",
+     "url": "https://www.ikyu.com/00003369/11744276/10305099/?cid=20270621&cod=20270624&lc=3&ppc=3&rc=1",
+     "check_in": "2027-06-21",
+     "check_out": "2027-06-24",
+     "nights": 3,
+     "adults": 3,
+     "rooms": 1,
+     "room_name": "【露天風呂付（沸かし湯）】フォース※眺望無し",
+     "size_sqm": null,
+     "meals": "素泊（食事なし）",
+     "total_jpy": 188100,
+     "per_night_jpy": null,
+     "price_basis": "total",
+     "tax": "included",
+     "tax_note": null,
+     "free_cancel_until": "2027-06-13",
+     "free_cancel_rule_text": "2027年6月13日までキャンセル料無料",
+     "member_price_jpy": null,
+     "coupon": null,
+     "status": "ok",
+     "checked_at": "2026-11-15",
+     "source_url": "https://www.ikyu.com/00003369/11744276/10305099/?cid=20270621&cod=20270624&lc=3&ppc=3&rc=1"
+    }
+   ],
+   "check_in_time": null,
+   "last_check_in": null,
+   "check_out_time": null,
+   "dinner_time": null,
+   "free_cancel_until": null,
+   "booking_opens": {
+    "status": "unknown",
+    "opens_on": null,
+    "rule": null,
+    "by_site": [],
+    "checked_at": null
+   },
+   "recommendations": [],
+   "ratings": [
+    {
+     "source": "google",
+     "score": null,
+     "scale": 5,
+     "count": null,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E3%83%A9%E3%83%93%E3%82%B9%E3%82%BF%E7%86%B1%E6%B5%B7%E3%83%86%E3%83%A9%E3%82%B9%EF%BC%88%E5%85%B1%E7%AB%8B%E3%83%AA%E3%82%BE%E3%83%BC%E3%83%88%EF%BC%89",
+     "checked_at": null,
+     "display": null
+    }
+   ],
+   "review_check": null,
+   "drive_check": {
+    "parking": {
+     "available": null,
+     "free": null,
+     "fee": null,
+     "reservation_required": null,
+     "covered": null,
+     "height_limit_m": null,
+     "width_limit_m": null,
+     "distance_to_front": null,
+     "lat": null,
+     "lng": null,
+     "mapcode": null,
+     "mapcode_source": null,
+     "note": null
+    },
+    "road": {
+     "mountain_road": null,
+     "night_drive": null,
+     "winter_closure": null,
+     "note": null
+    },
+    "from_prev": null,
+    "closed_days": [],
+    "closed_days_note": null,
+    "dinner_fits": null,
+    "note": null
+   },
+   "operation": {
+    "status": "unknown",
+    "checked_on": "2026-11-16",
+    "sources": [],
+    "recheck_before_departure": true,
+    "note": "本次僅見於比價或名單，未獨立核對官網／新聞是否仍營業。"
+   },
+   "screening": {
+    "status": "candidate",
+    "rank": null,
+    "reason": null,
+    "area_unverified": false,
+    "over_1h": null
+   },
+   "stays_feedback": [],
+   "data_gaps": [
+    "place_id 未核對（不可臆造）；Google Maps 連結若為座標或館名搜尋，下次應改為店家頁。",
+    "MapCode 未從 Mapion／NaviCon 等來源取得，維持 null。",
+    "停車場入口座標未取得。",
+    "營業狀況待再確認。"
+   ],
+   "public_notes": [],
+   "updated_at": "2026-11-16"
+  },
+  {
+   "id": "lh_izu_6e8ec31b",
+   "name": "リゾナーレ熱海",
+   "name_ja": "リゾナーレ熱海",
+   "name_zh": null,
+   "type": "onsen_hotel",
+   "address": null,
+   "lat": null,
+   "lng": null,
+   "coord_source": null,
+   "google_place_id": null,
+   "google_maps_url": "https://www.google.com/maps/search/?api=1&query=%E3%83%AA%E3%82%BE%E3%83%8A%E3%83%BC%E3%83%AC%E7%86%B1%E6%B5%B7",
+   "official_url": null,
+   "phone": null,
+   "mapcode": null,
+   "near_segments": [
+    {
+     "trip_id": "2027-06-tokyo",
+     "route": "I",
+     "base_key": "ATAMI_IZUKOGEN",
+     "next_first_stop": null,
+     "drive_min_to_next_first_stop": null,
+     "drive_source": null
+    }
+   ],
+   "rooms": [
+    {
+     "room_name": null,
+     "size_sqm": 70,
+     "tatami": null,
+     "max_guests": 4,
+     "beds": null,
+     "fits_party": null,
+     "note": "含早（朝食付）"
+    }
+   ],
+   "prices": [
+    {
+     "site": "ikyu",
+     "url": "https://www.ikyu.com/00001791/11664802/10035542/?cid=20270621&cod=20270624&lc=3&ppc=3&rc=1",
+     "check_in": "2027-06-21",
+     "check_out": "2027-06-24",
+     "nights": 3,
+     "adults": 3,
+     "rooms": 1,
+     "room_name": null,
+     "size_sqm": null,
+     "meals": "含早（朝食付）",
+     "total_jpy": 176400,
+     "per_night_jpy": null,
+     "price_basis": "total",
+     "tax": "included",
+     "tax_note": null,
+     "free_cancel_until": null,
+     "free_cancel_rule_text": "予約時よりキャンセル料が發生",
+     "member_price_jpy": null,
+     "coupon": null,
+     "status": "ok",
+     "checked_at": "2026-11-15",
+     "source_url": "https://www.ikyu.com/00001791/11664802/10035542/?cid=20270621&cod=20270624&lc=3&ppc=3&rc=1"
+    }
+   ],
+   "check_in_time": null,
+   "last_check_in": null,
+   "check_out_time": null,
+   "dinner_time": null,
+   "free_cancel_until": null,
+   "booking_opens": {
+    "status": "unknown",
+    "opens_on": null,
+    "rule": null,
+    "by_site": [],
+    "checked_at": null
+   },
+   "recommendations": [],
+   "ratings": [
+    {
+     "source": "google",
+     "score": null,
+     "scale": 5,
+     "count": null,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E3%83%AA%E3%82%BE%E3%83%8A%E3%83%BC%E3%83%AC%E7%86%B1%E6%B5%B7",
+     "checked_at": null,
+     "display": null
+    }
+   ],
+   "review_check": null,
+   "drive_check": {
+    "parking": {
+     "available": null,
+     "free": null,
+     "fee": null,
+     "reservation_required": null,
+     "covered": null,
+     "height_limit_m": null,
+     "width_limit_m": null,
+     "distance_to_front": null,
+     "lat": null,
+     "lng": null,
+     "mapcode": null,
+     "mapcode_source": null,
+     "note": null
+    },
+    "road": {
+     "mountain_road": null,
+     "night_drive": null,
+     "winter_closure": null,
+     "note": null
+    },
+    "from_prev": null,
+    "closed_days": [],
+    "closed_days_note": null,
+    "dinner_fits": null,
+    "note": null
+   },
+   "operation": {
+    "status": "unknown",
+    "checked_on": "2026-11-16",
+    "sources": [],
+    "recheck_before_departure": true,
+    "note": "本次僅見於比價或名單，未獨立核對官網／新聞是否仍營業。"
+   },
+   "screening": {
+    "status": "candidate",
+    "rank": null,
+    "reason": null,
+    "area_unverified": false,
+    "over_1h": null
+   },
+   "stays_feedback": [],
+   "data_gaps": [
+    "place_id 未核對（不可臆造）；Google Maps 連結若為座標或館名搜尋，下次應改為店家頁。",
+    "MapCode 未從 Mapion／NaviCon 等來源取得，維持 null。",
+    "停車場入口座標未取得。",
+    "營業狀況待再確認。"
+   ],
+   "public_notes": [],
+   "updated_at": "2026-11-16"
+  },
+  {
+   "id": "lh_izu_0027b553",
+   "name": "ヴィラージュ伊豆高原",
+   "name_ja": "ヴィラージュ伊豆高原",
+   "name_zh": null,
+   "type": "onsen_hotel",
+   "address": null,
+   "lat": null,
+   "lng": null,
+   "coord_source": null,
+   "google_place_id": null,
+   "google_maps_url": "https://www.google.com/maps/search/?api=1&query=%E3%83%B4%E3%82%A3%E3%83%A9%E3%83%BC%E3%82%B8%E3%83%A5%E4%BC%8A%E8%B1%86%E9%AB%98%E5%8E%9F",
+   "official_url": null,
+   "phone": null,
+   "mapcode": null,
+   "near_segments": [
+    {
+     "trip_id": "2027-06-tokyo",
+     "route": "I",
+     "base_key": "ATAMI_IZUKOGEN",
+     "next_first_stop": null,
+     "drive_min_to_next_first_stop": null,
+     "drive_source": null
+    }
+   ],
+   "rooms": [
+    {
+     "room_name": "スタンダードスイート/78平米※犬同伴不可",
+     "size_sqm": 78,
+     "tatami": null,
+     "max_guests": 5,
+     "beds": null,
+     "fits_party": null,
+     "note": "素泊（食事なし）"
+    }
+   ],
+   "prices": [
+    {
+     "site": "ikyu",
+     "url": "https://www.ikyu.com/00080640/10959926/10028079/?cid=20270621&cod=20270624&lc=3&ppc=3&rc=1",
+     "check_in": "2027-06-21",
+     "check_out": "2027-06-24",
+     "nights": 3,
+     "adults": 3,
+     "rooms": 1,
+     "room_name": "スタンダードスイート/78平米※犬同伴不可",
+     "size_sqm": 78,
+     "meals": "素泊（食事なし）",
+     "total_jpy": 74520,
+     "per_night_jpy": null,
+     "price_basis": "total",
+     "tax": "included",
+     "tax_note": null,
+     "free_cancel_until": "2027-06-13",
+     "free_cancel_rule_text": "2027年6月13日までキャンセル料無料",
+     "member_price_jpy": null,
+     "coupon": null,
+     "status": "ok",
+     "checked_at": "2026-11-15",
+     "source_url": "https://www.ikyu.com/00080640/10959926/10028079/?cid=20270621&cod=20270624&lc=3&ppc=3&rc=1"
+    }
+   ],
+   "check_in_time": null,
+   "last_check_in": null,
+   "check_out_time": null,
+   "dinner_time": null,
+   "free_cancel_until": null,
+   "booking_opens": {
+    "status": "unknown",
+    "opens_on": null,
+    "rule": null,
+    "by_site": [],
+    "checked_at": null
+   },
+   "recommendations": [],
+   "ratings": [
+    {
+     "source": "google",
+     "score": null,
+     "scale": 5,
+     "count": null,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E3%83%B4%E3%82%A3%E3%83%A9%E3%83%BC%E3%82%B8%E3%83%A5%E4%BC%8A%E8%B1%86%E9%AB%98%E5%8E%9F",
+     "checked_at": null,
+     "display": null
+    }
+   ],
+   "review_check": null,
+   "drive_check": {
+    "parking": {
+     "available": null,
+     "free": null,
+     "fee": null,
+     "reservation_required": null,
+     "covered": null,
+     "height_limit_m": null,
+     "width_limit_m": null,
+     "distance_to_front": null,
+     "lat": null,
+     "lng": null,
+     "mapcode": null,
+     "mapcode_source": null,
+     "note": null
+    },
+    "road": {
+     "mountain_road": null,
+     "night_drive": null,
+     "winter_closure": null,
+     "note": null
+    },
+    "from_prev": null,
+    "closed_days": [],
+    "closed_days_note": null,
+    "dinner_fits": null,
+    "note": null
+   },
+   "operation": {
+    "status": "unknown",
+    "checked_on": "2026-11-16",
+    "sources": [],
+    "recheck_before_departure": true,
+    "note": "本次僅見於比價或名單，未獨立核對官網／新聞是否仍營業。"
+   },
+   "screening": {
+    "status": "candidate",
+    "rank": null,
+    "reason": null,
+    "area_unverified": false,
+    "over_1h": null
+   },
+   "stays_feedback": [],
+   "data_gaps": [
+    "place_id 未核對（不可臆造）；Google Maps 連結若為座標或館名搜尋，下次應改為店家頁。",
+    "MapCode 未從 Mapion／NaviCon 等來源取得，維持 null。",
+    "停車場入口座標未取得。",
+    "營業狀況待再確認。"
+   ],
+   "public_notes": [],
+   "updated_at": "2026-11-16"
+  },
+  {
+   "id": "lh_izu_4d0af117",
+   "name": "ヴィラージュ熱海",
+   "name_ja": "ヴィラージュ熱海",
+   "name_zh": null,
+   "type": "onsen_hotel",
+   "address": null,
+   "lat": null,
+   "lng": null,
+   "coord_source": null,
+   "google_place_id": null,
+   "google_maps_url": "https://www.google.com/maps/search/?api=1&query=%E3%83%B4%E3%82%A3%E3%83%A9%E3%83%BC%E3%82%B8%E3%83%A5%E7%86%B1%E6%B5%B7",
+   "official_url": null,
+   "phone": null,
+   "mapcode": null,
+   "near_segments": [
+    {
+     "trip_id": "2027-06-tokyo",
+     "route": "I",
+     "base_key": "ATAMI_IZUKOGEN",
+     "next_first_stop": null,
+     "drive_min_to_next_first_stop": null,
+     "drive_source": null
+    }
+   ],
+   "rooms": [
+    {
+     "room_name": null,
+     "size_sqm": 33,
+     "tatami": null,
+     "max_guests": 3,
+     "beds": null,
+     "fits_party": null,
+     "note": "含早（朝食付）"
+    }
+   ],
+   "prices": [
+    {
+     "site": "ikyu",
+     "url": "https://www.ikyu.com/00003468/11723293/10306120/?cid=20270621&cod=20270624&lc=3&ppc=3&rc=1",
+     "check_in": "2027-06-21",
+     "check_out": "2027-06-24",
+     "nights": 3,
+     "adults": 3,
+     "rooms": 1,
+     "room_name": null,
+     "size_sqm": null,
+     "meals": "含早（朝食付）",
+     "total_jpy": 154503,
+     "per_night_jpy": null,
+     "price_basis": "total",
+     "tax": "included",
+     "tax_note": null,
+     "free_cancel_until": "2027-06-13",
+     "free_cancel_rule_text": "2027年6月13日までキャンセル料無料",
+     "member_price_jpy": null,
+     "coupon": null,
+     "status": "ok",
+     "checked_at": "2026-11-15",
+     "source_url": "https://www.ikyu.com/00003468/11723293/10306120/?cid=20270621&cod=20270624&lc=3&ppc=3&rc=1"
+    }
+   ],
+   "check_in_time": null,
+   "last_check_in": null,
+   "check_out_time": null,
+   "dinner_time": null,
+   "free_cancel_until": null,
+   "booking_opens": {
+    "status": "unknown",
+    "opens_on": null,
+    "rule": null,
+    "by_site": [],
+    "checked_at": null
+   },
+   "recommendations": [],
+   "ratings": [
+    {
+     "source": "google",
+     "score": null,
+     "scale": 5,
+     "count": null,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E3%83%B4%E3%82%A3%E3%83%A9%E3%83%BC%E3%82%B8%E3%83%A5%E7%86%B1%E6%B5%B7",
+     "checked_at": null,
+     "display": null
+    }
+   ],
+   "review_check": null,
+   "drive_check": {
+    "parking": {
+     "available": null,
+     "free": null,
+     "fee": null,
+     "reservation_required": null,
+     "covered": null,
+     "height_limit_m": null,
+     "width_limit_m": null,
+     "distance_to_front": null,
+     "lat": null,
+     "lng": null,
+     "mapcode": null,
+     "mapcode_source": null,
+     "note": null
+    },
+    "road": {
+     "mountain_road": null,
+     "night_drive": null,
+     "winter_closure": null,
+     "note": null
+    },
+    "from_prev": null,
+    "closed_days": [],
+    "closed_days_note": null,
+    "dinner_fits": null,
+    "note": null
+   },
+   "operation": {
+    "status": "unknown",
+    "checked_on": "2026-11-16",
+    "sources": [],
+    "recheck_before_departure": true,
+    "note": "本次僅見於比價或名單，未獨立核對官網／新聞是否仍營業。"
+   },
+   "screening": {
+    "status": "candidate",
+    "rank": null,
+    "reason": null,
+    "area_unverified": false,
+    "over_1h": null
+   },
+   "stays_feedback": [],
+   "data_gaps": [
+    "place_id 未核對（不可臆造）；Google Maps 連結若為座標或館名搜尋，下次應改為店家頁。",
+    "MapCode 未從 Mapion／NaviCon 等來源取得，維持 null。",
+    "停車場入口座標未取得。",
+    "營業狀況待再確認。"
+   ],
+   "public_notes": [],
+   "updated_at": "2026-11-16"
+  },
+  {
+   "id": "lh_izu_6dfd636d",
+   "name": "伊東遊季亭",
+   "name_ja": "伊東遊季亭",
+   "name_zh": "伊東遊季亭",
+   "type": "onsen_ryokan",
+   "address": "静岡県伊東市宝町1-8",
+   "lat": 34.9692622,
+   "lng": 139.0947603,
+   "coord_source": "Photon/OSM「Ito-yukitei Ito」，與伊東市街相符。",
+   "google_place_id": null,
+   "google_maps_url": "https://www.google.com/maps/search/?api=1&query=%E4%BC%8A%E6%9D%B1%E9%81%8A%E5%AD%A3%E4%BA%AD",
+   "official_url": "https://www.ito-yukitei.com/",
+   "phone": "0557-37-0114",
+   "mapcode": null,
+   "near_segments": [
+    {
+     "trip_id": "2027-06-tokyo",
+     "route": "I",
+     "base_key": "ATAMI_IZUKOGEN",
+     "next_first_stop": null,
+     "drive_min_to_next_first_stop": null,
+     "drive_source": null
+    }
+   ],
+   "rooms": [
+    {
+     "room_name": "和モダンルーム 38.0㎡（定員3名）；和室38.0㎡（定員4名）；プレミアムルーム81.5㎡（定員4名，客室檜風呂）",
+     "size_sqm": 38.0,
+     "tatami": null,
+     "max_guests": 4,
+     "beds": null,
+     "fits_party": null,
+     "note": null
+    }
+   ],
+   "prices": [
+    {
+     "site": "agoda",
+     "url": null,
+     "check_in": "2027-06-21",
+     "check_out": "2027-06-24",
+     "nights": 3,
+     "adults": 3,
+     "rooms": 1,
+     "room_name": null,
+     "size_sqm": null,
+     "meals": null,
+     "total_jpy": null,
+     "per_night_jpy": null,
+     "price_basis": null,
+     "tax": "unknown",
+     "tax_note": null,
+     "free_cancel_until": null,
+     "free_cancel_rule_text": null,
+     "member_price_jpy": null,
+     "coupon": null,
+     "status": "not_found",
+     "checked_at": "2026-11-16",
+     "source_url": null
+    },
+    {
+     "site": "google_hotels",
+     "url": null,
+     "check_in": "2027-06-21",
+     "check_out": "2027-06-24",
+     "nights": 3,
+     "adults": 3,
+     "rooms": 1,
+     "room_name": null,
+     "size_sqm": null,
+     "meals": null,
+     "total_jpy": null,
+     "per_night_jpy": null,
+     "price_basis": null,
+     "tax": "unknown",
+     "tax_note": null,
+     "free_cancel_until": null,
+     "free_cancel_rule_text": null,
+     "member_price_jpy": null,
+     "coupon": null,
+     "status": "not_found",
+     "checked_at": "2026-11-16",
+     "source_url": null
+    },
+    {
+     "site": "google_hotels",
+     "url": null,
+     "check_in": "2027-06-21",
+     "check_out": "2027-06-24",
+     "nights": 3,
+     "adults": 3,
+     "rooms": 1,
+     "room_name": null,
+     "size_sqm": null,
+     "meals": null,
+     "total_jpy": null,
+     "per_night_jpy": null,
+     "price_basis": "per_night",
+     "tax": "unknown",
+     "tax_note": null,
+     "free_cancel_until": null,
+     "free_cancel_rule_text": null,
+     "member_price_jpy": null,
+     "coupon": null,
+     "status": "not_on_sale",
+     "checked_at": "2026-11-16",
+     "source_url": null
+    },
+    {
+     "site": "jalan",
+     "url": "https://www.jalan.net/yad323876/plan/?stayYear=2027&stayMonth=6&stayDay=21&stayCount=3&roomCount=1&adultNum=3",
+     "check_in": "2027-06-21",
+     "check_out": "2027-06-24",
+     "nights": 3,
+     "adults": 3,
+     "rooms": 1,
+     "room_name": null,
+     "size_sqm": null,
+     "meals": null,
+     "total_jpy": null,
+     "per_night_jpy": null,
+     "price_basis": null,
+     "tax": "unknown",
+     "tax_note": null,
+     "free_cancel_until": null,
+     "free_cancel_rule_text": null,
+     "member_price_jpy": null,
+     "coupon": null,
+     "status": "not_on_sale",
+     "checked_at": "2026-11-16",
+     "source_url": "https://www.jalan.net/yad323876/plan/?stayYear=2027&stayMonth=6&stayDay=21&stayCount=3&roomCount=1&adultNum=3"
+    },
+    {
+     "site": "ikyu",
+     "url": null,
+     "check_in": "2027-06-21",
+     "check_out": "2027-06-24",
+     "nights": 3,
+     "adults": 3,
+     "rooms": 1,
+     "room_name": null,
+     "size_sqm": null,
+     "meals": null,
+     "total_jpy": null,
+     "per_night_jpy": null,
+     "price_basis": null,
+     "tax": "unknown",
+     "tax_note": null,
+     "free_cancel_until": null,
+     "free_cancel_rule_text": null,
+     "member_price_jpy": null,
+     "coupon": null,
+     "status": "not_found",
+     "checked_at": "2026-11-16",
+     "source_url": null
+    },
+    {
+     "site": "official",
+     "url": "https://www.ito-yukitei.com/",
+     "check_in": "2027-06-21",
+     "check_out": "2027-06-24",
+     "nights": 3,
+     "adults": 3,
+     "rooms": 1,
+     "room_name": null,
+     "size_sqm": null,
+     "meals": null,
+     "total_jpy": null,
+     "per_night_jpy": null,
+     "price_basis": null,
+     "tax": "unknown",
+     "tax_note": null,
+     "free_cancel_until": null,
+     "free_cancel_rule_text": null,
+     "member_price_jpy": null,
+     "coupon": null,
+     "status": "not_found",
+     "checked_at": "2026-11-16",
+     "source_url": "https://www.ito-yukitei.com/"
+    },
+    {
+     "site": "rakuten",
+     "url": "https://hotel.travel.rakuten.co.jp/hotelinfo/plan/72080?f_heya_su=1&f_otona_su=3&f_nen1=2027&f_tuki1=6&f_hi1=21&f_nen2=2027&f_tuki2=6&f_hi2=24&f_sort=min_charge",
+     "check_in": "2027-06-21",
+     "check_out": "2027-06-24",
+     "nights": 3,
+     "adults": 3,
+     "rooms": 1,
+     "room_name": null,
+     "size_sqm": null,
+     "meals": null,
+     "total_jpy": null,
+     "per_night_jpy": null,
+     "price_basis": null,
+     "tax": "unknown",
+     "tax_note": null,
+     "free_cancel_until": null,
+     "free_cancel_rule_text": null,
+     "member_price_jpy": null,
+     "coupon": null,
+     "status": "not_on_sale",
+     "checked_at": "2026-11-16",
+     "source_url": "https://hotel.travel.rakuten.co.jp/hotelinfo/plan/72080?f_heya_su=1&f_otona_su=3&f_nen1=2027&f_tuki1=6&f_hi1=21&f_nen2=2027&f_tuki2=6&f_hi2=24&f_sort=min_charge"
+    }
+   ],
+   "check_in_time": null,
+   "last_check_in": null,
+   "check_out_time": null,
+   "dinner_time": null,
+   "free_cancel_until": null,
+   "booking_opens": {
+    "status": "unknown",
+    "opens_on": null,
+    "rule": null,
+    "by_site": [],
+    "checked_at": null
+   },
+   "recommendations": [],
+   "ratings": [
+    {
+     "source": "google",
+     "score": null,
+     "scale": 5,
+     "count": null,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E4%BC%8A%E6%9D%B1%E9%81%8A%E5%AD%A3%E4%BA%AD",
+     "checked_at": null,
+     "display": null
+    }
+   ],
+   "review_check": null,
+   "drive_check": {
+    "parking": {
+     "available": null,
+     "free": null,
+     "fee": null,
+     "reservation_required": null,
+     "covered": null,
+     "height_limit_m": null,
+     "width_limit_m": null,
+     "distance_to_front": null,
+     "lat": null,
+     "lng": null,
+     "mapcode": null,
+     "mapcode_source": null,
+     "note": null
+    },
+    "road": {
+     "mountain_road": null,
+     "night_drive": null,
+     "winter_closure": null,
+     "note": null
+    },
+    "from_prev": null,
+    "closed_days": [],
+    "closed_days_note": null,
+    "dinner_fits": null,
+    "note": "2027-06-22 大室山：OSRM 18.3 分；2027-06-23 修善寺温泉：OSRM 37.7 分"
+   },
+   "operation": {
+    "status": "open",
+    "checked_on": "2026-11-16",
+    "sources": [],
+    "recheck_before_departure": true,
+    "note": null
+   },
+   "screening": {
+    "status": "candidate",
+    "rank": null,
+    "reason": null,
+    "area_unverified": false,
+    "over_1h": null
+   },
+   "stays_feedback": [],
+   "data_gaps": [
+    "place_id 未核對（不可臆造）；Google Maps 連結若為座標或館名搜尋，下次應改為店家頁。",
+    "MapCode 未從 Mapion／NaviCon 等來源取得，維持 null。",
+    "停車場入口座標未取得。"
+   ],
+   "public_notes": [
+    "晚餐備註：公式有晚餐會席說明，但未標出開始時刻。入住可至19:00（近畿ツーリスト資料）。"
+   ],
+   "updated_at": "2026-11-16"
+  },
+  {
+   "id": "lh_izu_1d773bac",
+   "name": "伊豆マリオットホテル修善寺",
+   "name_ja": "伊豆マリオットホテル修善寺",
+   "name_zh": null,
+   "type": "onsen_hotel",
+   "address": null,
+   "lat": 34.95525713851019,
+   "lng": 138.91905576140744,
+   "coord_source": null,
+   "google_place_id": "ChIJkzJAQSPtGWAROd7ropIu3L8",
+   "google_maps_url": "https://www.google.com/maps/place/?q=place_id:ChIJkzJAQSPtGWAROd7ropIu3L8",
+   "official_url": "https://www.izu-marriott.com/",
+   "phone": "0558-72-1311（代表；官網稱電話預約已終止）",
+   "mapcode": null,
+   "near_segments": [
+    {
+     "trip_id": "2027-06-tokyo",
+     "route": "A",
+     "base_key": "SHUZENJI",
+     "next_first_stop": null,
+     "drive_min_to_next_first_stop": null,
+     "drive_source": null
+    }
+   ],
+   "rooms": [
+    {
+     "room_name": "和室/和洋室 40.5㎡（3名鋪布團）",
+     "size_sqm": 40.5,
+     "tatami": null,
+     "max_guests": null,
+     "beds": null,
+     "fits_party": null,
+     "note": "1泊2食（另有温泉露天風呂付房型 朝食付 3名 18,150～56,910/人） 參考價，非該日期實價（2027/6～7 多數尚未開賣；為楽天等目前開放日期之3名1室每人含稅價格範圍，實際依日期/方案變動）"
+    }
+   ],
+   "prices": [
+    {
+     "site": "other",
+     "url": null,
+     "check_in": null,
+     "check_out": null,
+     "nights": null,
+     "adults": 3,
+     "rooms": 1,
+     "room_name": null,
+     "size_sqm": null,
+     "meals": null,
+     "total_jpy": null,
+     "per_night_jpy": null,
+     "price_basis": null,
+     "tax": "included",
+     "tax_note": null,
+     "free_cancel_until": "2027-06-18",
+     "free_cancel_rule_text": "8日前(2027年06月18日) 前免費（2027-06-26 入住方案之規定；目標日期依同規則推算）",
+     "member_price_jpy": null,
+     "coupon": null,
+     "status": "not_found",
+     "checked_at": "2026-10-24",
+     "source_url": null
+    },
+    {
+     "site": "rakuten",
+     "url": "https://hotel.travel.rakuten.co.jp/hotelinfo/plan/160836",
+     "check_in": null,
+     "check_out": null,
+     "nights": null,
+     "adults": 3,
+     "rooms": 1,
+     "room_name": "和室/和洋室 40.5㎡（3名鋪布團）",
+     "size_sqm": 40.5,
+     "meals": "1泊2食（另有温泉露天風呂付房型 朝食付 3名 18,150～56,910/人）",
+     "total_jpy": null,
+     "per_night_jpy": null,
+     "price_basis": "per_night",
+     "tax": "included",
+     "tax_note": null,
+     "free_cancel_until": null,
+     "free_cancel_rule_text": null,
+     "member_price_jpy": null,
+     "coupon": null,
+     "status": "not_found",
+     "checked_at": "2026-10-24",
+     "source_url": "https://hotel.travel.rakuten.co.jp/hotelinfo/plan/160836"
+    }
+   ],
+   "check_in_time": null,
+   "last_check_in": null,
+   "check_out_time": null,
+   "dinner_time": "Grill & Dining G 17:30～21:00（LO，事前予約制；據搜尋摘要之官網）",
+   "free_cancel_until": null,
+   "booking_opens": {
+    "status": "on_sale",
+    "opens_on": null,
+    "rule": "已開賣：2027/6 實際日期可在楽天・じゃらん查到可售方案（2026-10-24）",
+    "by_site": [],
+    "checked_at": null
+   },
+   "recommendations": [],
+   "ratings": [
+    {
+     "source": "google",
+     "score": null,
+     "scale": 5,
+     "count": null,
+     "url": "https://www.google.com/maps/place/?q=place_id:ChIJkzJAQSPtGWAROd7ropIu3L8",
+     "checked_at": null,
+     "display": null
+    }
+   ],
+   "review_check": null,
+   "drive_check": {
+    "parking": {
+     "available": null,
+     "free": null,
+     "fee": null,
+     "reservation_required": null,
+     "covered": null,
+     "height_limit_m": null,
+     "width_limit_m": null,
+     "distance_to_front": null,
+     "lat": null,
+     "lng": null,
+     "mapcode": null,
+     "mapcode_source": null,
+     "note": "免費159台、免預約（楽天FAQ）；座標/MapCode 未取得"
+    },
+    "road": {
+     "mountain_road": null,
+     "night_drive": null,
+     "winter_closure": null,
+     "note": null
+    },
+    "from_prev": null,
+    "closed_days": [],
+    "closed_days_note": null,
+    "dinner_fits": null,
+    "note": null
+   },
+   "operation": {
+    "status": "open",
+    "checked_on": "2026-10-24",
+    "sources": [],
+    "recheck_before_departure": true,
+    "note": "當時可在樂天／じゃらん或官網查到資料；之後若有更新以較新查證為準。"
+   },
+   "screening": {
+    "status": "candidate",
+    "rank": null,
+    "reason": null,
+    "area_unverified": false,
+    "over_1h": null
+   },
+   "stays_feedback": [],
+   "data_gaps": [
+    "MapCode 未從 Mapion／NaviCon 等來源取得，維持 null。",
+    "停車場入口座標未取得。"
+   ],
+   "public_notes": [
+    "修善寺溫泉水大浴場、可望富士山側房型；房間大。",
+    "取消規定：未取得一般方案規定，null"
+   ],
+   "updated_at": "2026-11-16"
+  },
+  {
+   "id": "lh_izu_1dc13f83",
+   "name": "伊豆高原温泉ホテル 森の泉",
+   "name_ja": "伊豆高原温泉ホテル 森の泉",
+   "name_zh": null,
+   "type": "onsen_hotel",
+   "address": null,
+   "lat": null,
+   "lng": null,
+   "coord_source": null,
+   "google_place_id": null,
+   "google_maps_url": "https://www.google.com/maps/search/?api=1&query=%E4%BC%8A%E8%B1%86%E9%AB%98%E5%8E%9F%E6%B8%A9%E6%B3%89%E3%83%9B%E3%83%86%E3%83%AB%20%E6%A3%AE%E3%81%AE%E6%B3%89",
+   "official_url": null,
+   "phone": null,
+   "mapcode": null,
+   "near_segments": [
+    {
+     "trip_id": "2027-06-tokyo",
+     "route": "I",
+     "base_key": "ATAMI_IZUKOGEN",
+     "next_first_stop": null,
+     "drive_min_to_next_first_stop": null,
+     "drive_source": null
+    }
+   ],
+   "rooms": [
+    {
+     "room_name": "【禁煙】クラシックスーペリアツイン／37平米",
+     "size_sqm": 37,
+     "tatami": null,
+     "max_guests": 3,
+     "beds": null,
+     "fits_party": null,
+     "note": "素泊（食事なし）"
+    }
+   ],
+   "prices": [
+    {
+     "site": "ikyu",
+     "url": "https://www.ikyu.com/00002860/11079599/10196866/?cid=20270621&cod=20270624&lc=3&ppc=3&rc=1",
+     "check_in": "2027-06-21",
+     "check_out": "2027-06-24",
+     "nights": 3,
+     "adults": 3,
+     "rooms": 1,
+     "room_name": "【禁煙】クラシックスーペリアツイン／37平米",
+     "size_sqm": 37,
+     "meals": "素泊（食事なし）",
+     "total_jpy": 99000,
+     "per_night_jpy": null,
+     "price_basis": "total",
+     "tax": "included",
+     "tax_note": null,
+     "free_cancel_until": "2027-06-17",
+     "free_cancel_rule_text": "2027年6月17日までキャンセル料無料",
+     "member_price_jpy": null,
+     "coupon": null,
+     "status": "ok",
+     "checked_at": "2026-11-15",
+     "source_url": "https://www.ikyu.com/00002860/11079599/10196866/?cid=20270621&cod=20270624&lc=3&ppc=3&rc=1"
+    }
+   ],
+   "check_in_time": null,
+   "last_check_in": null,
+   "check_out_time": null,
+   "dinner_time": null,
+   "free_cancel_until": null,
+   "booking_opens": {
+    "status": "unknown",
+    "opens_on": null,
+    "rule": null,
+    "by_site": [],
+    "checked_at": null
+   },
+   "recommendations": [],
+   "ratings": [
+    {
+     "source": "google",
+     "score": null,
+     "scale": 5,
+     "count": null,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E4%BC%8A%E8%B1%86%E9%AB%98%E5%8E%9F%E6%B8%A9%E6%B3%89%E3%83%9B%E3%83%86%E3%83%AB%20%E6%A3%AE%E3%81%AE%E6%B3%89",
+     "checked_at": null,
+     "display": null
+    }
+   ],
+   "review_check": null,
+   "drive_check": {
+    "parking": {
+     "available": null,
+     "free": null,
+     "fee": null,
+     "reservation_required": null,
+     "covered": null,
+     "height_limit_m": null,
+     "width_limit_m": null,
+     "distance_to_front": null,
+     "lat": null,
+     "lng": null,
+     "mapcode": null,
+     "mapcode_source": null,
+     "note": null
+    },
+    "road": {
+     "mountain_road": null,
+     "night_drive": null,
+     "winter_closure": null,
+     "note": null
+    },
+    "from_prev": null,
+    "closed_days": [],
+    "closed_days_note": null,
+    "dinner_fits": null,
+    "note": null
+   },
+   "operation": {
+    "status": "unknown",
+    "checked_on": "2026-11-16",
+    "sources": [],
+    "recheck_before_departure": true,
+    "note": "本次僅見於比價或名單，未獨立核對官網／新聞是否仍營業。"
+   },
+   "screening": {
+    "status": "candidate",
+    "rank": null,
+    "reason": null,
+    "area_unverified": false,
+    "over_1h": null
+   },
+   "stays_feedback": [],
+   "data_gaps": [
+    "place_id 未核對（不可臆造）；Google Maps 連結若為座標或館名搜尋，下次應改為店家頁。",
+    "MapCode 未從 Mapion／NaviCon 等來源取得，維持 null。",
+    "停車場入口座標未取得。",
+    "營業狀況待再確認。"
+   ],
+   "public_notes": [],
+   "updated_at": "2026-11-16"
+  },
+  {
+   "id": "lh_izu_95207ee7",
+   "name": "修善寺温泉 新井旅館",
+   "name_ja": "修善寺温泉 新井旅館",
+   "name_zh": "修善寺 新井旅館（登錄有形文化財）",
+   "type": "onsen_ryokan",
+   "address": null,
+   "lat": null,
+   "lng": null,
+   "coord_source": null,
+   "google_place_id": null,
+   "google_maps_url": "https://www.google.com/maps/search/?api=1&query=%E4%BF%AE%E5%96%84%E5%AF%BA%E6%B8%A9%E6%B3%89%20%E6%96%B0%E4%BA%95%E6%97%85%E9%A4%A8",
+   "official_url": null,
+   "phone": null,
+   "mapcode": null,
+   "near_segments": [
+    {
+     "trip_id": "2027-06-tokyo",
+     "route": "I",
+     "base_key": "ATAMI_IZUKOGEN",
+     "next_first_stop": null,
+     "drive_min_to_next_first_stop": null,
+     "drive_source": null
+    }
+   ],
+   "rooms": [],
+   "prices": [],
+   "check_in_time": null,
+   "last_check_in": null,
+   "check_out_time": null,
+   "dinner_time": null,
+   "free_cancel_until": null,
+   "booking_opens": {
+    "status": "unknown",
+    "opens_on": null,
+    "rule": null,
+    "by_site": [],
+    "checked_at": null
+   },
+   "recommendations": [
+    {
+     "kind": "youtube",
+     "title": "【修善寺♨️新井旅館】文豪が愛した泊まれる文化財！2つの無料貸切風呂&4つの浴場で味わう美肌の湯と絶品わさびご飯",
+     "author": "Top 20% inns",
+     "url": "https://www.youtube.com/watch?v=-Lm5jV-nMkU",
+     "published_at": "2024-07-15",
+     "points": "強調可住進文化財、免費貸切風呂、美肌之湯，以及わさびご飯。",
+     "lang": null
+    },
+    {
+     "kind": "youtube",
+     "title": "【水上に浮かぶ有形文化財と極上温泉】新井旅館 修善寺温泉 / 静岡県 伊豆市",
+     "author": "湯宿手帖 - Documentrip",
+     "url": "https://www.youtube.com/watch?v=wDYP-YuI6mg",
+     "published_at": "2025-03-01",
+     "points": "介紹池上建築群、天平之湯、文豪愛用貸切風呂、2023 新開浴場，以及在室早餐與伊豆懷石。",
+     "lang": null
+    },
+    {
+     "kind": "youtube",
+     "title": "修善寺温泉の旅館＆ホテルのおすすめ10選！伊豆最古の温泉を堪能！",
+     "author": "良い旅ナビ",
+     "url": "https://www.youtube.com/watch?v=RIqX_w_pLHA",
+     "published_at": "2024-07-19",
+     "points": "10 選整理片，同時介紹柳生の庄、金龍、以及文化財新井旅館等。屬彙整而非單一宿泊記。",
+     "lang": null
+    }
+   ],
+   "ratings": [
+    {
+     "source": "google",
+     "score": null,
+     "scale": 5,
+     "count": null,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E4%BF%AE%E5%96%84%E5%AF%BA%E6%B8%A9%E6%B3%89%20%E6%96%B0%E4%BA%95%E6%97%85%E9%A4%A8",
+     "checked_at": null,
+     "display": null
+    }
+   ],
+   "review_check": null,
+   "drive_check": {
+    "parking": {
+     "available": null,
+     "free": null,
+     "fee": null,
+     "reservation_required": null,
+     "covered": null,
+     "height_limit_m": null,
+     "width_limit_m": null,
+     "distance_to_front": null,
+     "lat": null,
+     "lng": null,
+     "mapcode": null,
+     "mapcode_source": null,
+     "note": null
+    },
+    "road": {
+     "mountain_road": null,
+     "night_drive": null,
+     "winter_closure": null,
+     "note": null
+    },
+    "from_prev": null,
+    "closed_days": [],
+    "closed_days_note": null,
+    "dinner_fits": null,
+    "note": null
+   },
+   "operation": {
+    "status": "open",
+    "checked_on": "2026-11-16",
+    "sources": [],
+    "recheck_before_departure": true,
+    "note": "2024–2025 年仍有多家頻道宿泊記。注意：修善寺另有一間較現代風格、名稱相近的「新井旅館／設計旅宿」，勿與文化財本館混淆。"
+   },
+   "screening": {
+    "status": "candidate",
+    "rank": null,
+    "reason": null,
+    "area_unverified": false,
+    "over_1h": null
+   },
+   "stays_feedback": [],
+   "data_gaps": [
+    "place_id 未核對（不可臆造）；Google Maps 連結若為座標或館名搜尋，下次應改為店家頁。",
+    "MapCode 未從 Mapion／NaviCon 等來源取得，維持 null。",
+    "停車場入口座標未取得。"
+   ],
+   "public_notes": [],
+   "updated_at": "2026-11-16"
+  },
+  {
+   "id": "lh_izu_57f97129",
+   "name": "海辺のかくれ湯 清流",
+   "name_ja": "海辺のかくれ湯 清流",
+   "name_zh": "海邊隱湯 清流（西伊豆）",
+   "type": "onsen_ryokan",
+   "address": null,
+   "lat": null,
+   "lng": null,
+   "coord_source": null,
+   "google_place_id": null,
+   "google_maps_url": "https://www.google.com/maps/search/?api=1&query=%E6%B5%B7%E8%BE%BA%E3%81%AE%E3%81%8B%E3%81%8F%E3%82%8C%E6%B9%AF%20%E6%B8%85%E6%B5%81",
+   "official_url": null,
+   "phone": null,
+   "mapcode": null,
+   "near_segments": [
+    {
+     "trip_id": "2027-06-tokyo",
+     "route": "I",
+     "base_key": "ATAMI_IZUKOGEN",
+     "next_first_stop": null,
+     "drive_min_to_next_first_stop": null,
+     "drive_source": null
+    }
+   ],
+   "rooms": [],
+   "prices": [],
+   "check_in_time": null,
+   "last_check_in": null,
+   "check_out_time": null,
+   "dinner_time": null,
+   "free_cancel_until": null,
+   "booking_opens": {
+    "status": "unknown",
+    "opens_on": null,
+    "rule": null,
+    "by_site": [],
+    "checked_at": null
+   },
+   "recommendations": [
+    {
+     "kind": "youtube",
+     "title": "【絶景の隠れ宿】露天風呂と海鮮料理が自慢のコスパ最強温泉旅館！人気の露天風呂付き客室に宿泊♨️静岡県伊豆の絶景巡りとゆるキャンの聖地「海辺のかくれ湯 清流」静岡県",
+     "author": "わた旅",
+     "url": "https://www.youtube.com/watch?v=9bYrMNn2tvM",
+     "published_at": "2026-03-20",
+     "points": "西伊豆海邊隱密溫泉，駿河灣景觀、客房露天風呂、海鮮晚餐與貸切露天風呂。作者定位為高 CP 隱宿。地理上屬西伊豆，離路線 I 伊豆高原基地較遠，僅作區域參考。",
+     "lang": null
+    }
+   ],
+   "ratings": [
+    {
+     "source": "google",
+     "score": null,
+     "scale": 5,
+     "count": null,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E6%B5%B7%E8%BE%BA%E3%81%AE%E3%81%8B%E3%81%8F%E3%82%8C%E6%B9%AF%20%E6%B8%85%E6%B5%81",
+     "checked_at": null,
+     "display": null
+    }
+   ],
+   "review_check": null,
+   "drive_check": {
+    "parking": {
+     "available": null,
+     "free": null,
+     "fee": null,
+     "reservation_required": null,
+     "covered": null,
+     "height_limit_m": null,
+     "width_limit_m": null,
+     "distance_to_front": null,
+     "lat": null,
+     "lng": null,
+     "mapcode": null,
+     "mapcode_source": null,
+     "note": null
+    },
+    "road": {
+     "mountain_road": null,
+     "night_drive": null,
+     "winter_closure": null,
+     "note": null
+    },
+    "from_prev": null,
+    "closed_days": [],
+    "closed_days_note": null,
+    "dinner_fits": null,
+    "note": null
+   },
+   "operation": {
+    "status": "open",
+    "checked_on": "2026-11-16",
+    "sources": [],
+    "recheck_before_departure": true,
+    "note": "官網 200；わた旅 2026-03 宿泊片。"
+   },
+   "screening": {
+    "status": "candidate",
+    "rank": null,
+    "reason": null,
+    "area_unverified": false,
+    "over_1h": null
+   },
+   "stays_feedback": [],
+   "data_gaps": [
+    "place_id 未核對（不可臆造）；Google Maps 連結若為座標或館名搜尋，下次應改為店家頁。",
+    "MapCode 未從 Mapion／NaviCon 等來源取得，維持 null。",
+    "停車場入口座標未取得。"
+   ],
+   "public_notes": [],
+   "updated_at": "2026-11-16"
+  },
+  {
+   "id": "lh_izu_e34c1948",
+   "name": "湯回廊 菊屋（共立リゾート）",
+   "name_ja": "湯回廊 菊屋（共立リゾート）",
+   "name_zh": null,
+   "type": "onsen_ryokan",
+   "address": null,
+   "lat": 34.97143204415102,
+   "lng": 138.9299015343586,
+   "coord_source": null,
+   "google_place_id": "ChIJ58KkBtDsGWARWoNjTa1Qqs8",
+   "google_maps_url": "https://www.google.com/maps/place/?q=place_id:ChIJ58KkBtDsGWARWoNjTa1Qqs8",
+   "official_url": "https://dormy-hotels.com/resort/hotels/kikuya/",
+   "phone": "0558-72-2000（予約）／0558-72-2130（代表）",
+   "mapcode": null,
+   "near_segments": [
+    {
+     "trip_id": "2027-06-tokyo",
+     "route": "A",
+     "base_key": "SHUZENJI",
+     "next_first_stop": null,
+     "drive_min_to_next_first_stop": null,
+     "drive_source": null
+    }
+   ],
+   "rooms": [
+    {
+     "room_name": "本館/別邸/離れ 各房型（3名可）",
+     "size_sqm": null,
+     "tatami": null,
+     "max_guests": null,
+     "beds": null,
+     "fits_party": null,
+     "note": "1泊2食 參考價，非該日期實價（2027/6～7 多數尚未開賣；為楽天等目前開放日期之3名1室每人含稅價格範圍，實際依日期/方案變動）"
+    }
+   ],
+   "prices": [
+    {
+     "site": "other",
+     "url": null,
+     "check_in": null,
+     "check_out": null,
+     "nights": null,
+     "adults": 3,
+     "rooms": 1,
+     "room_name": null,
+     "size_sqm": null,
+     "meals": null,
+     "total_jpy": null,
+     "per_night_jpy": null,
+     "price_basis": null,
+     "tax": "included",
+     "tax_note": null,
+     "free_cancel_until": "2027-06-18",
+     "free_cancel_rule_text": "8日前(2027年03月19日) 前免費（2027-03-27 入住方案之規定；目標日期依同規則推算）",
+     "member_price_jpy": null,
+     "coupon": null,
+     "status": "not_found",
+     "checked_at": "2026-10-24",
+     "source_url": null
+    },
+    {
+     "site": "rakuten",
+     "url": "https://hotel.travel.rakuten.co.jp/hotelinfo/plan/7491",
+     "check_in": null,
+     "check_out": null,
+     "nights": null,
+     "adults": 3,
+     "rooms": 1,
+     "room_name": "本館/別邸/離れ 各房型（3名可）",
+     "size_sqm": null,
+     "meals": "1泊2食",
+     "total_jpy": null,
+     "per_night_jpy": null,
+     "price_basis": "per_night",
+     "tax": "included",
+     "tax_note": null,
+     "free_cancel_until": null,
+     "free_cancel_rule_text": null,
+     "member_price_jpy": null,
+     "coupon": null,
+     "status": "not_found",
+     "checked_at": "2026-10-24",
+     "source_url": "https://hotel.travel.rakuten.co.jp/hotelinfo/plan/7491"
+    }
+   ],
+   "check_in_time": null,
+   "last_check_in": null,
+   "check_out_time": null,
+   "dinner_time": "依日期兩部制 ①17:30～ ②19:45～（楽天方案說明）",
+   "free_cancel_until": null,
+   "booking_opens": {
+    "status": "not_yet",
+    "opens_on": null,
+    "rule": "2027/6 未放房；目前最遠可查約 2027/3 底（共立リゾート約 3 個月前陸續放房，推估 2027/3 前後開賣，未公布）",
+    "by_site": [],
+    "checked_at": null
+   },
+   "recommendations": [],
+   "ratings": [
+    {
+     "source": "google",
+     "score": null,
+     "scale": 5,
+     "count": null,
+     "url": "https://www.google.com/maps/place/?q=place_id:ChIJ58KkBtDsGWARWoNjTa1Qqs8",
+     "checked_at": null,
+     "display": null
+    }
+   ],
+   "review_check": null,
+   "drive_check": {
+    "parking": {
+     "available": null,
+     "free": null,
+     "fee": null,
+     "reservation_required": null,
+     "covered": null,
+     "height_limit_m": null,
+     "width_limit_m": null,
+     "distance_to_front": null,
+     "lat": null,
+     "lng": null,
+     "mapcode": null,
+     "mapcode_source": null,
+     "note": "免費65台，距館步行2～3分（楽天FAQ）；座標/MapCode 未取得"
+    },
+    "road": {
+     "mountain_road": null,
+     "night_drive": null,
+     "winter_closure": null,
+     "note": null
+    },
+    "from_prev": null,
+    "closed_days": [],
+    "closed_days_note": null,
+    "dinner_fits": null,
+    "note": null
+   },
+   "operation": {
+    "status": "open",
+    "checked_on": "2026-10-24",
+    "sources": [],
+    "recheck_before_departure": true,
+    "note": "當時可在樂天／じゃらん或官網查到資料；之後若有更新以較新查證為準。"
+   },
+   "screening": {
+    "status": "candidate",
+    "rank": null,
+    "reason": null,
+    "area_unverified": false,
+    "over_1h": null
+   },
+   "stays_feedback": [],
+   "data_gaps": [
+    "MapCode 未從 Mapion／NaviCon 等來源取得，維持 null。",
+    "停車場入口座標未取得。"
+   ],
+   "public_notes": [
+    "修善寺溫泉街中心，夏目漱石住過的老舖，貸切風呂免費。共立系宵夜拉麵。",
+    "取消規定：宿泊8日前まで免費（7～5日前10%、4～3日前20%、2日前～前日50%、當日80%、無聯絡100%；官網FAQ）"
+   ],
+   "updated_at": "2026-11-16"
+  },
+  {
+   "id": "lh_izu_8e95452b",
+   "name": "熱川温泉 吉祥亭",
+   "name_ja": "熱川温泉 吉祥亭",
+   "name_zh": "熱川 吉祥亭",
+   "type": "onsen_ryokan",
+   "address": null,
+   "lat": null,
+   "lng": null,
+   "coord_source": null,
+   "google_place_id": null,
+   "google_maps_url": "https://www.google.com/maps/search/?api=1&query=%E7%86%B1%E5%B7%9D%E6%B8%A9%E6%B3%89%20%E5%90%89%E7%A5%A5%E4%BA%AD",
+   "official_url": null,
+   "phone": null,
+   "mapcode": null,
+   "near_segments": [
+    {
+     "trip_id": "2027-06-tokyo",
+     "route": "I",
+     "base_key": "ATAMI_IZUKOGEN",
+     "next_first_stop": null,
+     "drive_min_to_next_first_stop": null,
+     "drive_source": null
+    }
+   ],
+   "rooms": [],
+   "prices": [],
+   "check_in_time": null,
+   "last_check_in": null,
+   "check_out_time": null,
+   "dinner_time": null,
+   "free_cancel_until": null,
+   "booking_opens": {
+    "status": "unknown",
+    "opens_on": null,
+    "rule": null,
+    "by_site": [],
+    "checked_at": null
+   },
+   "recommendations": [
+    {
+     "kind": "youtube",
+     "title": "激抵伊豆一泊兩食❗️｜赤身享受太平洋溫泉♨️｜專享美味懷石料理🤤｜伊豆高CP值住宿實試｜伊豆半島【東京自由行 Ep6】",
+     "author": "Ivan Siu 蕭文諾",
+     "url": "https://www.youtube.com/watch?v=piEmlvtphz0",
+     "published_at": "2025-05-04",
+     "points": "伊豆急熱川站接駁。作者拿它和較貴的望水比較，稱可看同一片太平洋、當時官網一泊二食約港幣 2,000 元左右（當時價）。可免費用附近黑根岩風呂（海边岩風呂）；館內有需預約的私人風呂，可邊泡邊望海。無電梯，行李由員工送到房間。懷石含金目鯛。",
+     "lang": null
+    }
+   ],
+   "ratings": [
+    {
+     "source": "google",
+     "score": null,
+     "scale": 5,
+     "count": null,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E7%86%B1%E5%B7%9D%E6%B8%A9%E6%B3%89%20%E5%90%89%E7%A5%A5%E4%BA%AD",
+     "checked_at": null,
+     "display": null
+    }
+   ],
+   "review_check": null,
+   "drive_check": {
+    "parking": {
+     "available": null,
+     "free": null,
+     "fee": null,
+     "reservation_required": null,
+     "covered": null,
+     "height_limit_m": null,
+     "width_limit_m": null,
+     "distance_to_front": null,
+     "lat": null,
+     "lng": null,
+     "mapcode": null,
+     "mapcode_source": null,
+     "note": null
+    },
+    "road": {
+     "mountain_road": null,
+     "night_drive": null,
+     "winter_closure": null,
+     "note": null
+    },
+    "from_prev": null,
+    "closed_days": [],
+    "closed_days_note": null,
+    "dinner_fits": null,
+    "note": null
+   },
+   "operation": {
+    "status": "open",
+    "checked_on": "2026-11-16",
+    "sources": [],
+    "recheck_before_departure": true,
+    "note": "Ivan Siu 蕭文諾 2025-05 實際入住開箱。"
+   },
+   "screening": {
+    "status": "candidate",
+    "rank": null,
+    "reason": null,
+    "area_unverified": false,
+    "over_1h": null
+   },
+   "stays_feedback": [],
+   "data_gaps": [
+    "place_id 未核對（不可臆造）；Google Maps 連結若為座標或館名搜尋，下次應改為店家頁。",
+    "MapCode 未從 Mapion／NaviCon 等來源取得，維持 null。",
+    "停車場入口座標未取得。"
+   ],
+   "public_notes": [],
+   "updated_at": "2026-11-16"
+  },
+  {
+   "id": "lh_izu_eb33158e",
+   "name": "熱海後楽園ホテル",
+   "name_ja": "熱海後楽園ホテル",
+   "name_zh": null,
+   "type": "onsen_hotel",
+   "address": null,
+   "lat": null,
+   "lng": null,
+   "coord_source": null,
+   "google_place_id": null,
+   "google_maps_url": "https://www.google.com/maps/search/?api=1&query=%E7%86%B1%E6%B5%B7%E5%BE%8C%E6%A5%BD%E5%9C%92%E3%83%9B%E3%83%86%E3%83%AB",
+   "official_url": null,
+   "phone": null,
+   "mapcode": null,
+   "near_segments": [
+    {
+     "trip_id": "2027-06-tokyo",
+     "route": "I",
+     "base_key": "ATAMI_IZUKOGEN",
+     "next_first_stop": null,
+     "drive_min_to_next_first_stop": null,
+     "drive_source": null
+    }
+   ],
+   "rooms": [
+    {
+     "room_name": "【禁煙】AQUA SQUARE オーシャンビュールーム",
+     "size_sqm": 40,
+     "tatami": null,
+     "max_guests": 4,
+     "beds": null,
+     "fits_party": null,
+     "note": "含早（朝食付）"
+    }
+   ],
+   "prices": [
+    {
+     "site": "ikyu",
+     "url": "https://www.ikyu.com/00001018/11649592/10151056/?cid=20270621&cod=20270624&lc=3&ppc=3&rc=1",
+     "check_in": "2027-06-21",
+     "check_out": "2027-06-24",
+     "nights": 3,
+     "adults": 3,
+     "rooms": 1,
+     "room_name": "【禁煙】AQUA SQUARE オーシャンビュールーム",
+     "size_sqm": null,
+     "meals": "含早（朝食付）",
+     "total_jpy": 165330,
+     "per_night_jpy": null,
+     "price_basis": "total",
+     "tax": "included",
+     "tax_note": null,
+     "free_cancel_until": "2027-06-13",
+     "free_cancel_rule_text": "2027年6月13日までキャンセル料無料",
+     "member_price_jpy": null,
+     "coupon": null,
+     "status": "ok",
+     "checked_at": "2026-11-15",
+     "source_url": "https://www.ikyu.com/00001018/11649592/10151056/?cid=20270621&cod=20270624&lc=3&ppc=3&rc=1"
+    }
+   ],
+   "check_in_time": null,
+   "last_check_in": null,
+   "check_out_time": null,
+   "dinner_time": null,
+   "free_cancel_until": null,
+   "booking_opens": {
+    "status": "unknown",
+    "opens_on": null,
+    "rule": null,
+    "by_site": [],
+    "checked_at": null
+   },
+   "recommendations": [],
+   "ratings": [
+    {
+     "source": "google",
+     "score": null,
+     "scale": 5,
+     "count": null,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E7%86%B1%E6%B5%B7%E5%BE%8C%E6%A5%BD%E5%9C%92%E3%83%9B%E3%83%86%E3%83%AB",
+     "checked_at": null,
+     "display": null
+    }
+   ],
+   "review_check": null,
+   "drive_check": {
+    "parking": {
+     "available": null,
+     "free": null,
+     "fee": null,
+     "reservation_required": null,
+     "covered": null,
+     "height_limit_m": null,
+     "width_limit_m": null,
+     "distance_to_front": null,
+     "lat": null,
+     "lng": null,
+     "mapcode": null,
+     "mapcode_source": null,
+     "note": null
+    },
+    "road": {
+     "mountain_road": null,
+     "night_drive": null,
+     "winter_closure": null,
+     "note": null
+    },
+    "from_prev": null,
+    "closed_days": [],
+    "closed_days_note": null,
+    "dinner_fits": null,
+    "note": null
+   },
+   "operation": {
+    "status": "unknown",
+    "checked_on": "2026-11-16",
+    "sources": [],
+    "recheck_before_departure": true,
+    "note": "本次僅見於比價或名單，未獨立核對官網／新聞是否仍營業。"
+   },
+   "screening": {
+    "status": "candidate",
+    "rank": null,
+    "reason": null,
+    "area_unverified": false,
+    "over_1h": null
+   },
+   "stays_feedback": [],
+   "data_gaps": [
+    "place_id 未核對（不可臆造）；Google Maps 連結若為座標或館名搜尋，下次應改為店家頁。",
+    "MapCode 未從 Mapion／NaviCon 等來源取得，維持 null。",
+    "停車場入口座標未取得。",
+    "營業狀況待再確認。"
+   ],
+   "public_notes": [],
+   "updated_at": "2026-11-16"
+  },
+  {
+   "id": "lh_izu_c3918460",
+   "name": "熱海温泉 ホテル大野屋",
+   "name_ja": "熱海温泉 ホテル大野屋",
+   "name_zh": "熱海 飯店大野屋",
+   "type": "onsen_hotel",
+   "address": "〒413-0023 静岡県熱海市和田浜南町3-9",
+   "lat": 35.0909046,
+   "lng": 139.0729133,
+   "coord_source": "OpenStreetMap Nominatim（2026-11-12；display_name 大野屋, 国道135号, 熱海市）",
+   "google_place_id": null,
+   "google_maps_url": "https://www.google.com/maps/search/?api=1&query=35.0909046,139.0729133",
+   "official_url": "https://www.itoenhotel.com/atami_ohnoya/",
+   "phone": "0570-024-780（楽天頁予約；代表號本次未在官網成功開啟頁面核對，官網曾回 503）",
+   "mapcode": null,
+   "near_segments": [
+    {
+     "trip_id": "2027-06-tokyo",
+     "route": "I",
+     "base_key": "ATAMI_IZUKOGEN",
+     "next_first_stop": null,
+     "drive_min_to_next_first_stop": null,
+     "drive_source": null
+    }
+   ],
+   "rooms": [
+    {
+     "room_name": "和洋室ツイン＋8疊 或 東館和室10疊（3名可）",
+     "size_sqm": null,
+     "tatami": null,
+     "max_guests": null,
+     "beds": null,
+     "fits_party": null,
+     "note": "1泊2食（吃到飽＋飲酒放題）"
+    }
+   ],
+   "prices": [
+    {
+     "site": "rakuten",
+     "url": "https://hotel.travel.rakuten.co.jp/hotelinfo/plan/54209?f_heya_su=1&f_otona_su=3&f_nen1=2027&f_tuki1=5&f_hi1=17&f_nen2=2027&f_tuki2=5&f_hi2=20&f_sort=min_charge",
+     "check_in": "2027-06-21",
+     "check_out": "2027-06-24",
+     "nights": 3,
+     "adults": 3,
+     "rooms": 1,
+     "room_name": "和洋室ツイン＋8疊 或 東館和室10疊（3名可）",
+     "size_sqm": null,
+     "meals": "1泊2食（吃到飽＋飲酒放題）",
+     "total_jpy": 100782,
+     "per_night_jpy": null,
+     "price_basis": "total",
+     "tax": "included",
+     "tax_note": null,
+     "free_cancel_until": null,
+     "free_cancel_rule_text": null,
+     "member_price_jpy": null,
+     "coupon": null,
+     "status": "ok",
+     "checked_at": "2026-11-12",
+     "source_url": "https://hotel.travel.rakuten.co.jp/hotelinfo/plan/54209?f_heya_su=1&f_otona_su=3&f_nen1=2027&f_tuki1=5&f_hi1=17&f_nen2=2027&f_tuki2=5&f_hi2=20&f_sort=min_charge"
+    },
+    {
+     "site": "rakuten",
+     "url": "https://hotel.travel.rakuten.co.jp/hotelinfo/plan/54209?f_heya_su=1&f_otona_su=3&f_nen1=2027&f_tuki1=5&f_hi1=17&f_nen2=2027&f_tuki2=5&f_hi2=20&f_sort=min_charge",
+     "check_in": null,
+     "check_out": null,
+     "nights": null,
+     "adults": 3,
+     "rooms": 1,
+     "room_name": null,
+     "size_sqm": null,
+     "meals": null,
+     "total_jpy": null,
+     "per_night_jpy": null,
+     "price_basis": null,
+     "tax": "included",
+     "tax_note": null,
+     "free_cancel_until": null,
+     "free_cancel_rule_text": null,
+     "member_price_jpy": null,
+     "coupon": null,
+     "status": "not_on_sale",
+     "checked_at": "2026-11-15",
+     "source_url": "https://hotel.travel.rakuten.co.jp/hotelinfo/plan/54209?f_heya_su=1&f_otona_su=3&f_nen1=2027&f_tuki1=5&f_hi1=17&f_nen2=2027&f_tuki2=5&f_hi2=20&f_sort=min_charge"
+    }
+   ],
+   "check_in_time": null,
+   "last_check_in": null,
+   "check_out_time": null,
+   "dinner_time": "待查（方案為一泊二食吃到飽＋飲酒放題；開餐時間未在本次公開頁寫明）",
+   "free_cancel_until": null,
+   "booking_opens": {
+    "status": "not_yet",
+    "opens_on": null,
+    "rule": "待查（2027/6 尚未放房）",
+    "by_site": [],
+    "checked_at": null
+   },
+   "recommendations": [],
+   "ratings": [
+    {
+     "source": "google",
+     "score": null,
+     "scale": 5,
+     "count": null,
+     "url": "https://www.google.com/maps/search/?api=1&query=35.0909046,139.0729133",
+     "checked_at": null,
+     "display": null
+    }
+   ],
+   "review_check": null,
+   "drive_check": {
+    "parking": {
+     "available": true,
+     "free": true,
+     "fee": "免費",
+     "reservation_required": false,
+     "covered": null,
+     "height_limit_m": null,
+     "width_limit_m": null,
+     "distance_to_front": null,
+     "lat": null,
+     "lng": null,
+     "mapcode": null,
+     "mapcode_source": null,
+     "note": "車位 100 台 楽天 FAQ：100 台免費、先着順、鑰匙寄放、有縱列；特殊／大型車請事先聯絡（本次未聯絡）。"
+    },
+    "road": {
+     "mountain_road": null,
+     "night_drive": null,
+     "winter_closure": null,
+     "note": null
+    },
+    "from_prev": null,
+    "closed_days": [],
+    "closed_days_note": null,
+    "dinner_fits": null,
+    "note": null
+   },
+   "operation": {
+    "status": "unknown",
+    "checked_on": "2026-11-16",
+    "sources": [],
+    "recheck_before_departure": true,
+    "note": "本次僅見於比價或名單，未獨立核對官網／新聞是否仍營業。"
+   },
+   "screening": {
+    "status": "candidate",
+    "rank": null,
+    "reason": null,
+    "area_unverified": false,
+    "over_1h": null
+   },
+   "stays_feedback": [],
+   "data_gaps": [
+    "面積只見疊數、未標㎡，不能列為符合 25㎡。",
+    "place_id 未核對（不可臆造）；Google Maps 連結若為座標或館名搜尋，下次應改為店家頁。",
+    "MapCode 未從 Mapion／NaviCon 等來源取得，維持 null。",
+    "停車場入口座標未取得。",
+    "營業狀況待再確認。"
+   ],
+   "public_notes": [
+    "面積未核（2026-11-15）：楽天與官網房間一覽多只寫疊數（如和洋室ツイン+8／12／17疊），未標㎡，無法確認是否達 25㎡，不列入符合名單。"
+   ],
+   "updated_at": "2026-11-16"
+  },
+  {
+   "id": "lh_izu_f9527d89",
+   "name": "熱海温泉 湯宿一番地",
+   "name_ja": "熱海温泉 湯宿一番地",
+   "name_zh": "湯宿一番地",
+   "type": "onsen_ryokan",
+   "address": "静岡県熱海市春日町1-2",
+   "lat": null,
+   "lng": null,
+   "coord_source": null,
+   "google_place_id": null,
+   "google_maps_url": "https://www.google.com/maps/search/?api=1&query=%E7%86%B1%E6%B5%B7%E6%B8%A9%E6%B3%89%20%E6%B9%AF%E5%AE%BF%E4%B8%80%E7%95%AA%E5%9C%B0",
+   "official_url": "https://www.yuyado-ichibanchi.jp/room/index.html",
+   "phone": "0557-81-3651",
+   "mapcode": null,
+   "near_segments": [
+    {
+     "trip_id": "2027-06-tokyo",
+     "route": "I",
+     "base_key": "ATAMI_IZUKOGEN",
+     "next_first_stop": null,
+     "drive_min_to_next_first_stop": null,
+     "drive_source": null
+    }
+   ],
+   "rooms": [
+    {
+     "room_name": "【露天付セミスイート】1ルームタイプ（2名〜4名）＜禁煙＞",
+     "size_sqm": 54,
+     "tatami": null,
+     "max_guests": 4,
+     "beds": null,
+     "fits_party": null,
+     "note": "素泊 本次該日樂天頁只抽出素泊方案；1泊2食價未在該次頁面出現。"
+    }
+   ],
+   "prices": [
+    {
+     "site": "rakuten",
+     "url": "https://hotel.travel.rakuten.co.jp/hotelinfo/plan/7646?f_heya_su=1&f_otona_su=3&f_nen1=2027&f_tuki1=6&f_hi1=21&f_nen2=2027&f_tuki2=6&f_hi2=24&f_sort=min_charge",
+     "check_in": "2027-06-21",
+     "check_out": "2027-06-24",
+     "nights": 3,
+     "adults": 3,
+     "rooms": 1,
+     "room_name": "【露天付セミスイート】1ルームタイプ（2名〜4名）＜禁煙＞",
+     "size_sqm": null,
+     "meals": "素泊",
+     "total_jpy": 247500,
+     "per_night_jpy": null,
+     "price_basis": "total",
+     "tax": "included",
+     "tax_note": null,
+     "free_cancel_until": "2027-06-15",
+     "free_cancel_rule_text": "楽天：6日前（2027-06-15）23:59 前無料。",
+     "member_price_jpy": null,
+     "coupon": null,
+     "status": "ok",
+     "checked_at": "2026-11-15",
+     "source_url": "https://hotel.travel.rakuten.co.jp/hotelinfo/plan/7646?f_heya_su=1&f_otona_su=3&f_nen1=2027&f_tuki1=6&f_hi1=21&f_nen2=2027&f_tuki2=6&f_hi2=24&f_sort=min_charge"
+    }
+   ],
+   "check_in_time": null,
+   "last_check_in": null,
+   "check_out_time": null,
+   "dinner_time": null,
+   "free_cancel_until": null,
+   "booking_opens": {
+    "status": "unknown",
+    "opens_on": null,
+    "rule": null,
+    "by_site": [],
+    "checked_at": null
+   },
+   "recommendations": [],
+   "ratings": [
+    {
+     "source": "google",
+     "score": null,
+     "scale": 5,
+     "count": null,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E7%86%B1%E6%B5%B7%E6%B8%A9%E6%B3%89%20%E6%B9%AF%E5%AE%BF%E4%B8%80%E7%95%AA%E5%9C%B0",
+     "checked_at": null,
+     "display": null
+    }
+   ],
+   "review_check": null,
+   "drive_check": {
+    "parking": {
+     "available": null,
+     "free": null,
+     "fee": null,
+     "reservation_required": null,
+     "covered": null,
+     "height_limit_m": null,
+     "width_limit_m": null,
+     "distance_to_front": null,
+     "lat": null,
+     "lng": null,
+     "mapcode": null,
+     "mapcode_source": null,
+     "note": "完全預約制，1台1泊 1,500円。來源：楽天基本情報 2026-11-15。本次未聯絡旅館。"
+    },
+    "road": {
+     "mountain_road": null,
+     "night_drive": null,
+     "winter_closure": null,
+     "note": null
+    },
+    "from_prev": null,
+    "closed_days": [],
+    "closed_days_note": null,
+    "dinner_fits": null,
+    "note": null
+   },
+   "operation": {
+    "status": "unknown",
+    "checked_on": "2026-11-16",
+    "sources": [],
+    "recheck_before_departure": true,
+    "note": "本次僅見於比價或名單，未獨立核對官網／新聞是否仍營業。"
+   },
+   "screening": {
+    "status": "candidate",
+    "rank": null,
+    "reason": null,
+    "area_unverified": false,
+    "over_1h": null
+   },
+   "stays_feedback": [],
+   "data_gaps": [
+    "place_id 未核對（不可臆造）；Google Maps 連結若為座標或館名搜尋，下次應改為店家頁。",
+    "MapCode 未從 Mapion／NaviCon 等來源取得，維持 null。",
+    "停車場入口座標未取得。",
+    "營業狀況待再確認。"
+   ],
+   "public_notes": [
+    "晚餐備註（じゃらん／楽天 2026-11-15）：本次打開的客房／基本情報頁未寫固定開餐時刻。"
+   ],
+   "updated_at": "2026-11-16"
+  },
+  {
+   "id": "lh_izu_51e63797",
+   "name": "熱海温泉 金城館",
+   "name_ja": "熱海温泉 金城館",
+   "name_zh": "熱海 金城館",
+   "type": "onsen_ryokan",
+   "address": "〒413-0022 静岡県熱海市昭和町10-33",
+   "lat": null,
+   "lng": null,
+   "coord_source": "Nominatim 未查得；不編造",
+   "google_place_id": null,
+   "google_maps_url": "https://www.google.com/maps/search/?api=1&query=%E7%86%B1%E6%B5%B7%E9%87%91%E5%9F%8E%E9%A4%A8%20%E6%98%AD%E5%92%8C%E7%94%BA10-33",
+   "official_url": "https://www.itoenhotel.com/atami_kinjokan/",
+   "phone": "0570-023-780（予約受付 10:00–17:00；官網本次 503，電話取自先前公開頁／楽天）",
+   "mapcode": null,
+   "near_segments": [
+    {
+     "trip_id": "2027-06-tokyo",
+     "route": "I",
+     "base_key": "ATAMI_IZUKOGEN",
+     "next_first_stop": null,
+     "drive_min_to_next_first_stop": null,
+     "drive_source": null
+    }
+   ],
+   "rooms": [
+    {
+     "room_name": "和室 8 疊以上／12 疊／二間（3 名可；建議盡量選 12 疊或二間）",
+     "size_sqm": null,
+     "tatami": null,
+     "max_guests": null,
+     "beds": null,
+     "fits_party": null,
+     "note": "1泊2食（自助＋晚餐飲酒）"
+    }
+   ],
+   "prices": [
+    {
+     "site": "rakuten",
+     "url": "https://hotel.travel.rakuten.co.jp/hotelinfo/plan/9557?f_heya_su=1&f_otona_su=3&f_nen1=2027&f_tuki1=5&f_hi1=17&f_nen2=2027&f_tuki2=5&f_hi2=20&f_sort=min_charge",
+     "check_in": "2027-06-21",
+     "check_out": "2027-06-24",
+     "nights": 3,
+     "adults": 3,
+     "rooms": 1,
+     "room_name": "和室 8 疊以上／12 疊／二間（3 名可；建議盡量選 12 疊或二間）",
+     "size_sqm": null,
+     "meals": "1泊2食（自助＋晚餐飲酒）",
+     "total_jpy": 100782,
+     "per_night_jpy": null,
+     "price_basis": "total",
+     "tax": "included",
+     "tax_note": null,
+     "free_cancel_until": null,
+     "free_cancel_rule_text": null,
+     "member_price_jpy": null,
+     "coupon": null,
+     "status": "ok",
+     "checked_at": "2026-11-12",
+     "source_url": "https://hotel.travel.rakuten.co.jp/hotelinfo/plan/9557?f_heya_su=1&f_otona_su=3&f_nen1=2027&f_tuki1=5&f_hi1=17&f_nen2=2027&f_tuki2=5&f_hi2=20&f_sort=min_charge"
+    },
+    {
+     "site": "rakuten",
+     "url": "https://hotel.travel.rakuten.co.jp/hotelinfo/plan/54209?f_heya_su=1&f_otona_su=3&f_nen1=2027&f_tuki1=5&f_hi1=17&f_nen2=2027&f_tuki2=5&f_hi2=20&f_sort=min_charge",
+     "check_in": null,
+     "check_out": null,
+     "nights": null,
+     "adults": 3,
+     "rooms": 1,
+     "room_name": null,
+     "size_sqm": null,
+     "meals": null,
+     "total_jpy": null,
+     "per_night_jpy": null,
+     "price_basis": null,
+     "tax": "included",
+     "tax_note": null,
+     "free_cancel_until": null,
+     "free_cancel_rule_text": null,
+     "member_price_jpy": null,
+     "coupon": null,
+     "status": "not_on_sale",
+     "checked_at": "2026-11-15",
+     "source_url": "https://hotel.travel.rakuten.co.jp/hotelinfo/plan/54209?f_heya_su=1&f_otona_su=3&f_nen1=2027&f_tuki1=5&f_hi1=17&f_nen2=2027&f_tuki2=5&f_hi2=20&f_sort=min_charge"
+    }
+   ],
+   "check_in_time": null,
+   "last_check_in": null,
+   "check_out_time": null,
+   "dinner_time": "待查（晚餐為和洋中自助約 70 品＋飲酒；開餐時間未取得）",
+   "free_cancel_until": null,
+   "booking_opens": {
+    "status": "not_yet",
+    "opens_on": null,
+    "rule": "待查（2027/6 尚未放房）",
+    "by_site": [],
+    "checked_at": null
+   },
+   "recommendations": [],
+   "ratings": [
+    {
+     "source": "google",
+     "score": null,
+     "scale": 5,
+     "count": null,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E7%86%B1%E6%B5%B7%E9%87%91%E5%9F%8E%E9%A4%A8%20%E6%98%AD%E5%92%8C%E7%94%BA10-33",
+     "checked_at": null,
+     "display": null
+    }
+   ],
+   "review_check": null,
+   "drive_check": {
+    "parking": {
+     "available": true,
+     "free": true,
+     "fee": "免費（普通車）",
+     "reservation_required": null,
+     "covered": null,
+     "height_limit_m": null,
+     "width_limit_m": null,
+     "distance_to_front": null,
+     "lat": null,
+     "lng": null,
+     "mapcode": null,
+     "mapcode_source": null,
+     "note": "車位 約 50 台 利用時間 13:00～退房日 11:00；中型／微巴士另收費。楽天 FAQ：50 台免費。"
+    },
+    "road": {
+     "mountain_road": null,
+     "night_drive": null,
+     "winter_closure": null,
+     "note": null
+    },
+    "from_prev": null,
+    "closed_days": [],
+    "closed_days_note": null,
+    "dinner_fits": null,
+    "note": null
+   },
+   "operation": {
+    "status": "unknown",
+    "checked_on": "2026-11-16",
+    "sources": [],
+    "recheck_before_departure": true,
+    "note": "本次僅見於比價或名單，未獨立核對官網／新聞是否仍營業。"
+   },
+   "screening": {
+    "status": "candidate",
+    "rank": null,
+    "reason": null,
+    "area_unverified": false,
+    "over_1h": null
+   },
+   "stays_feedback": [],
+   "data_gaps": [
+    "面積只見疊數、未標㎡，不能列為符合 25㎡。",
+    "place_id 未核對（不可臆造）；Google Maps 連結若為座標或館名搜尋，下次應改為店家頁。",
+    "MapCode 未從 Mapion／NaviCon 等來源取得，維持 null。",
+    "停車場入口座標未取得。",
+    "營業狀況待再確認。"
+   ],
+   "public_notes": [
+    "面積未核（2026-11-15）：楽天與官網房間一覽多只寫疊數（如和洋室ツイン+8／12／17疊），未標㎡，無法確認是否達 25㎡，不列入符合名單。"
+   ],
+   "updated_at": "2026-11-16"
+  },
+  {
+   "id": "lh_izu_eda36d24",
+   "name": "熱海風雅",
+   "name_ja": "熱海風雅",
+   "name_zh": "熱海風雅",
+   "type": "onsen_hotel",
+   "address": "静岡県熱海市梅園町16-8",
+   "lat": null,
+   "lng": null,
+   "coord_source": null,
+   "google_place_id": null,
+   "google_maps_url": "https://www.google.com/maps/search/?api=1&query=%E7%86%B1%E6%B5%B7%E9%A2%A8%E9%9B%85",
+   "official_url": "https://www.atami-fuga.com/room",
+   "phone": "0570-003-141",
+   "mapcode": null,
+   "near_segments": [
+    {
+     "trip_id": "2027-06-tokyo",
+     "route": "I",
+     "base_key": "ATAMI_IZUKOGEN",
+     "next_first_stop": null,
+     "drive_min_to_next_first_stop": null,
+     "drive_source": null
+    }
+   ],
+   "rooms": [
+    {
+     "room_name": "和室ツイン／25平米／禁煙",
+     "size_sqm": 25,
+     "tatami": null,
+     "max_guests": 3,
+     "beds": null,
+     "fits_party": null,
+     "note": "1泊2食"
+    },
+    {
+     "room_name": "【新設】シアタールーム付トリプル／46平米／禁煙",
+     "size_sqm": 46,
+     "tatami": null,
+     "max_guests": 3,
+     "beds": null,
+     "fits_party": null,
+     "note": "1泊2食"
+    },
+    {
+     "room_name": "和洋室ツイン／40平米／禁煙",
+     "size_sqm": 40,
+     "tatami": null,
+     "max_guests": 3,
+     "beds": null,
+     "fits_party": null,
+     "note": "1泊2食"
+    }
+   ],
+   "prices": [
+    {
+     "site": "rakuten",
+     "url": "https://hotel.travel.rakuten.co.jp/hotelinfo/plan/167693?f_heya_su=1&f_otona_su=3&f_nen1=2027&f_tuki1=5&f_hi1=17&f_nen2=2027&f_tuki2=5&f_hi2=20&f_sort=min_charge",
+     "check_in": "2027-06-21",
+     "check_out": "2027-06-24",
+     "nights": 3,
+     "adults": 3,
+     "rooms": 1,
+     "room_name": "和室ツイン／25平米／禁煙",
+     "size_sqm": 25,
+     "meals": "1泊2食",
+     "total_jpy": 138600,
+     "per_night_jpy": null,
+     "price_basis": "total",
+     "tax": "included",
+     "tax_note": null,
+     "free_cancel_until": "2027-06-17",
+     "free_cancel_rule_text": "替代日楽天：4日前（2027-05-13）23:59 前無料。對應 6 月入住須重查。",
+     "member_price_jpy": null,
+     "coupon": null,
+     "status": "ok",
+     "checked_at": "2026-11-15",
+     "source_url": "https://hotel.travel.rakuten.co.jp/hotelinfo/plan/167693?f_heya_su=1&f_otona_su=3&f_nen1=2027&f_tuki1=5&f_hi1=17&f_nen2=2027&f_tuki2=5&f_hi2=20&f_sort=min_charge"
+    },
+    {
+     "site": "rakuten",
+     "url": "https://hotel.travel.rakuten.co.jp/hotelinfo/plan/167693?f_heya_su=1&f_otona_su=3&f_nen1=2027&f_tuki1=5&f_hi1=17&f_nen2=2027&f_tuki2=5&f_hi2=20&f_sort=min_charge",
+     "check_in": "2027-06-21",
+     "check_out": "2027-06-24",
+     "nights": 3,
+     "adults": 3,
+     "rooms": 1,
+     "room_name": "和洋室ツイン／40平米／禁煙",
+     "size_sqm": 40,
+     "meals": "1泊2食",
+     "total_jpy": 148500,
+     "per_night_jpy": null,
+     "price_basis": "total",
+     "tax": "included",
+     "tax_note": null,
+     "free_cancel_until": "2027-06-17",
+     "free_cancel_rule_text": "替代日：4日前（2027-05-13）23:59 前無料。",
+     "member_price_jpy": null,
+     "coupon": null,
+     "status": "ok",
+     "checked_at": "2026-11-15",
+     "source_url": "https://hotel.travel.rakuten.co.jp/hotelinfo/plan/167693?f_heya_su=1&f_otona_su=3&f_nen1=2027&f_tuki1=5&f_hi1=17&f_nen2=2027&f_tuki2=5&f_hi2=20&f_sort=min_charge"
+    },
+    {
+     "site": "rakuten",
+     "url": "https://hotel.travel.rakuten.co.jp/hotelinfo/plan/167693?f_heya_su=1&f_otona_su=3&f_nen1=2027&f_tuki1=5&f_hi1=17&f_nen2=2027&f_tuki2=5&f_hi2=20&f_sort=min_charge",
+     "check_in": "2027-06-21",
+     "check_out": "2027-06-24",
+     "nights": 3,
+     "adults": 3,
+     "rooms": 1,
+     "room_name": "【新設】シアタールーム付トリプル／46平米／禁煙",
+     "size_sqm": 46,
+     "meals": "1泊2食",
+     "total_jpy": 158400,
+     "per_night_jpy": null,
+     "price_basis": "total",
+     "tax": "included",
+     "tax_note": null,
+     "free_cancel_until": "2027-06-17",
+     "free_cancel_rule_text": "替代日：4日前（2027-05-13）23:59 前無料。",
+     "member_price_jpy": null,
+     "coupon": null,
+     "status": "ok",
+     "checked_at": "2026-11-15",
+     "source_url": "https://hotel.travel.rakuten.co.jp/hotelinfo/plan/167693?f_heya_su=1&f_otona_su=3&f_nen1=2027&f_tuki1=5&f_hi1=17&f_nen2=2027&f_tuki2=5&f_hi2=20&f_sort=min_charge"
+    }
+   ],
+   "check_in_time": null,
+   "last_check_in": null,
+   "check_out_time": null,
+   "dinner_time": null,
+   "free_cancel_until": null,
+   "booking_opens": {
+    "status": "unknown",
+    "opens_on": null,
+    "rule": null,
+    "by_site": [],
+    "checked_at": null
+   },
+   "recommendations": [],
+   "ratings": [
+    {
+     "source": "google",
+     "score": null,
+     "scale": 5,
+     "count": null,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E7%86%B1%E6%B5%B7%E9%A2%A8%E9%9B%85",
+     "checked_at": null,
+     "display": null
+    }
+   ],
+   "review_check": null,
+   "drive_check": {
+    "parking": {
+     "available": null,
+     "free": null,
+     "fee": null,
+     "reservation_required": null,
+     "covered": null,
+     "height_limit_m": null,
+     "width_limit_m": null,
+     "distance_to_front": null,
+     "lat": null,
+     "lng": null,
+     "mapcode": null,
+     "mapcode_source": null,
+     "note": "免費／全 20 台／先著。來源：楽天基本情報 2026-11-15。"
+    },
+    "road": {
+     "mountain_road": null,
+     "night_drive": null,
+     "winter_closure": null,
+     "note": null
+    },
+    "from_prev": null,
+    "closed_days": [],
+    "closed_days_note": null,
+    "dinner_fits": null,
+    "note": null
+   },
+   "operation": {
+    "status": "unknown",
+    "checked_on": "2026-11-16",
+    "sources": [],
+    "recheck_before_departure": true,
+    "note": "本次僅見於比價或名單，未獨立核對官網／新聞是否仍營業。"
+   },
+   "screening": {
+    "status": "candidate",
+    "rank": null,
+    "reason": null,
+    "area_unverified": false,
+    "over_1h": null
+   },
+   "stays_feedback": [],
+   "data_gaps": [
+    "place_id 未核對（不可臆造）；Google Maps 連結若為座標或館名搜尋，下次應改為店家頁。",
+    "MapCode 未從 Mapion／NaviCon 等來源取得，維持 null。",
+    "停車場入口座標未取得。",
+    "營業狀況待再確認。"
+   ],
+   "public_notes": [
+    "晚餐備註（じゃらん／楽天 2026-11-15）：本次官網客房頁未寫固定開餐時刻。"
+   ],
+   "updated_at": "2026-11-16"
+  },
+  {
+   "id": "lh_izu_8f22570d",
+   "name": "稲取銀水荘",
+   "name_ja": "稲取銀水荘",
+   "name_zh": "稻取銀水莊",
+   "type": "onsen_ryokan",
+   "address": "静岡県賀茂郡東伊豆町稲取1624-1",
+   "lat": 34.76690577,
+   "lng": 139.0349525,
+   "coord_source": null,
+   "google_place_id": "ChIJ9X4HA4fgGWARiC3MYkjM58o",
+   "google_maps_url": "https://www.google.com/maps/place/?q=place_id:ChIJ9X4HA4fgGWARiC3MYkjM58o",
+   "official_url": "https://www.inatori-ginsuiso.jp/",
+   "phone": "0557-95-2211",
+   "mapcode": null,
+   "near_segments": [
+    {
+     "trip_id": "2027-06-tokyo",
+     "route": "A",
+     "base_key": "INATORI",
+     "next_first_stop": null,
+     "drive_min_to_next_first_stop": null,
+     "drive_source": null
+    },
+    {
+     "trip_id": "2027-06-tokyo",
+     "route": "F",
+     "base_key": "INATORI",
+     "next_first_stop": null,
+     "drive_min_to_next_first_stop": null,
+     "drive_source": null
+    },
+    {
+     "trip_id": "2027-06-tokyo",
+     "route": "F（lodging.bases／當時推薦路線）",
+     "base_key": "INATORI",
+     "next_first_stop": null,
+     "drive_min_to_next_first_stop": null,
+     "drive_source": null
+    },
+    {
+     "trip_id": "2027-06-tokyo",
+     "route": "I",
+     "base_key": "ATAMI_IZUKOGEN",
+     "next_first_stop": null,
+     "drive_min_to_next_first_stop": null,
+     "drive_source": null
+    }
+   ],
+   "rooms": [
+    {
+     "room_name": "海側和室（標準方案）；升級：アップグレード和室 海側45㎡ 每人約27,500～53,350／次の間付和室77㎡ 28,600～54,450",
+     "size_sqm": 45,
+     "tatami": null,
+     "max_guests": null,
+     "beds": null,
+     "fits_party": null,
+     "note": "1泊2食（和食會席或餐廳，依方案） 參考價，非該日期實價（2027/6～7 多數尚未開賣；為楽天等目前開放日期之3名1室每人含稅價格範圍，實際依日期/方案變動）"
+    },
+    {
+     "room_name": "多數房型符合：スタンダード和室A 約45㎡（1～4名）、和室B 約52㎡（2～7名）、ラグジュアリースイート しぶき／みそら 72.4–73㎡（2～3名）等",
+     "size_sqm": 45,
+     "tatami": null,
+     "max_guests": 7,
+     "beds": null,
+     "fits_party": null,
+     "note": null
+    }
+   ],
+   "prices": [
+    {
+     "site": "other",
+     "url": null,
+     "check_in": null,
+     "check_out": null,
+     "nights": null,
+     "adults": 3,
+     "rooms": 1,
+     "room_name": null,
+     "size_sqm": null,
+     "meals": null,
+     "total_jpy": null,
+     "per_night_jpy": null,
+     "price_basis": null,
+     "tax": "included",
+     "tax_note": null,
+     "free_cancel_until": "2027-06-17",
+     "free_cancel_rule_text": "8日前(2027年04月15日) 前免費（2027-04-23 入住方案之規定；目標日期依同規則推算）",
+     "member_price_jpy": null,
+     "coupon": null,
+     "status": "not_found",
+     "checked_at": "2026-10-24",
+     "source_url": null
+    },
+    {
+     "site": "rakuten",
+     "url": "https://hotel.travel.rakuten.co.jp/hotelinfo/plan/8711",
+     "check_in": null,
+     "check_out": null,
+     "nights": null,
+     "adults": 3,
+     "rooms": 1,
+     "room_name": "海側和室（標準方案）；升級：アップグレード和室 海側45㎡ 每人約27,500～53,350／次の間付和室77㎡ 28,600～54,450",
+     "size_sqm": null,
+     "meals": "1泊2食（和食會席或餐廳，依方案）",
+     "total_jpy": null,
+     "per_night_jpy": null,
+     "price_basis": "per_night",
+     "tax": "included",
+     "tax_note": null,
+     "free_cancel_until": null,
+     "free_cancel_rule_text": null,
+     "member_price_jpy": null,
+     "coupon": null,
+     "status": "not_found",
+     "checked_at": "2026-10-24",
+     "source_url": "https://hotel.travel.rakuten.co.jp/hotelinfo/plan/8711"
+    },
+    {
+     "site": "agoda",
+     "url": null,
+     "check_in": "2027-06-21",
+     "check_out": "2027-06-24",
+     "nights": 3,
+     "adults": 3,
+     "rooms": 1,
+     "room_name": null,
+     "size_sqm": null,
+     "meals": null,
+     "total_jpy": null,
+     "per_night_jpy": null,
+     "price_basis": null,
+     "tax": "unknown",
+     "tax_note": null,
+     "free_cancel_until": null,
+     "free_cancel_rule_text": null,
+     "member_price_jpy": null,
+     "coupon": null,
+     "status": "not_found",
+     "checked_at": "2026-11-16",
+     "source_url": null
+    },
+    {
+     "site": "google_hotels",
+     "url": null,
+     "check_in": "2027-06-21",
+     "check_out": "2027-06-24",
+     "nights": 3,
+     "adults": 3,
+     "rooms": 1,
+     "room_name": null,
+     "size_sqm": null,
+     "meals": null,
+     "total_jpy": null,
+     "per_night_jpy": null,
+     "price_basis": null,
+     "tax": "unknown",
+     "tax_note": null,
+     "free_cancel_until": null,
+     "free_cancel_rule_text": null,
+     "member_price_jpy": null,
+     "coupon": null,
+     "status": "not_found",
+     "checked_at": "2026-11-16",
+     "source_url": null
+    },
+    {
+     "site": "jalan",
+     "url": "https://www.jalan.net/yad327397/plan/?stayYear=2027&stayMonth=6&stayDay=21&stayCount=3&roomCount=1&adultNum=3",
+     "check_in": "2027-06-21",
+     "check_out": "2027-06-24",
+     "nights": 3,
+     "adults": 3,
+     "rooms": 1,
+     "room_name": null,
+     "size_sqm": null,
+     "meals": null,
+     "total_jpy": null,
+     "per_night_jpy": null,
+     "price_basis": null,
+     "tax": "unknown",
+     "tax_note": null,
+     "free_cancel_until": null,
+     "free_cancel_rule_text": null,
+     "member_price_jpy": null,
+     "coupon": null,
+     "status": "not_on_sale",
+     "checked_at": "2026-11-16",
+     "source_url": "https://www.jalan.net/yad327397/plan/?stayYear=2027&stayMonth=6&stayDay=21&stayCount=3&roomCount=1&adultNum=3"
+    },
+    {
+     "site": "ikyu",
+     "url": null,
+     "check_in": "2027-06-21",
+     "check_out": "2027-06-24",
+     "nights": 3,
+     "adults": 3,
+     "rooms": 1,
+     "room_name": null,
+     "size_sqm": null,
+     "meals": null,
+     "total_jpy": null,
+     "per_night_jpy": null,
+     "price_basis": null,
+     "tax": "unknown",
+     "tax_note": null,
+     "free_cancel_until": null,
+     "free_cancel_rule_text": null,
+     "member_price_jpy": null,
+     "coupon": null,
+     "status": "not_found",
+     "checked_at": "2026-11-16",
+     "source_url": null
+    },
+    {
+     "site": "official",
+     "url": "https://www.inatori-ginsuiso.jp/",
+     "check_in": "2027-06-21",
+     "check_out": "2027-06-24",
+     "nights": 3,
+     "adults": 3,
+     "rooms": 1,
+     "room_name": null,
+     "size_sqm": null,
+     "meals": null,
+     "total_jpy": null,
+     "per_night_jpy": null,
+     "price_basis": null,
+     "tax": "unknown",
+     "tax_note": null,
+     "free_cancel_until": null,
+     "free_cancel_rule_text": null,
+     "member_price_jpy": null,
+     "coupon": null,
+     "status": "not_found",
+     "checked_at": "2026-11-16",
+     "source_url": "https://www.inatori-ginsuiso.jp/"
+    },
+    {
+     "site": "rakuten",
+     "url": "https://hotel.travel.rakuten.co.jp/hotelinfo/plan/8711?f_heya_su=1&f_otona_su=3&f_nen1=2027&f_tuki1=6&f_hi1=21&f_nen2=2027&f_tuki2=6&f_hi2=24&f_sort=min_charge",
+     "check_in": "2027-06-21",
+     "check_out": "2027-06-24",
+     "nights": 3,
+     "adults": 3,
+     "rooms": 1,
+     "room_name": null,
+     "size_sqm": null,
+     "meals": null,
+     "total_jpy": null,
+     "per_night_jpy": null,
+     "price_basis": null,
+     "tax": "unknown",
+     "tax_note": null,
+     "free_cancel_until": null,
+     "free_cancel_rule_text": null,
+     "member_price_jpy": null,
+     "coupon": null,
+     "status": "not_on_sale",
+     "checked_at": "2026-11-16",
+     "source_url": "https://hotel.travel.rakuten.co.jp/hotelinfo/plan/8711?f_heya_su=1&f_otona_su=3&f_nen1=2027&f_tuki1=6&f_hi1=21&f_nen2=2027&f_tuki2=6&f_hi2=24&f_sort=min_charge"
+    }
+   ],
+   "check_in_time": null,
+   "last_check_in": null,
+   "check_out_time": null,
+   "dinner_time": "餐廳「銀の海」17:30／18:30／19:30 擇一（check-in 時選；楽天方案說明）",
+   "free_cancel_until": null,
+   "booking_opens": {
+    "status": "not_yet",
+    "opens_on": null,
+    "rule": "樂天方案期間多至 2027/4/30、じゃらん方案受付期間至 2027/1/31；2027/6 未放房，開賣日未公布（最遠可訂日約 2027/4 底）",
+    "by_site": [],
+    "checked_at": null
+   },
+   "recommendations": [
+    {
+     "kind": "fb_group",
+     "title": null,
+     "author": null,
+     "url": "https://www.facebook.com/groups/tokyotravelbackpacker/posts/1505167626819711",
+     "published_at": null,
+     "points": "日本プロ旅館排名（『プロが選ぶ日本のホテル・旅館100選』目前綜合頁為銀水荘綜合5–6位）。",
+     "lang": null
+    },
+    {
+     "kind": "youtube",
+     "title": "【伊豆1泊2日】21時間サービスの神ホテル！海鮮好きが理性を失ってしまう温泉宿に泊まってきた",
+     "author": "くぼたび",
+     "url": "https://www.youtube.com/watch?v=dO67HcLacyk",
+     "published_at": "2026-07-18",
+     "points": "說明欄寫明入住稲取銀水荘。強調約 21 小時的迎賓／lounge 服務、雞尾酒與麥酒類供應、海鮮晚餐與早餐吃到飽、還可追加巨型螺類。屬於服務與餐食型推薦。",
+     "lang": null
+    },
+    {
+     "kind": "youtube",
+     "title": "Japan’s Oceanfront Hot Spring Inn with 24 Hour Free Drinks and Snacks | Inatori Ginsuiso",
+     "author": "It's Time to Travel / 旅する時間",
+     "url": "https://www.youtube.com/watch?v=eLp_GCYlLzw",
+     "published_at": "2025-05-17",
+     "points": "英語／日英字幕海景溫泉開箱，經旅館許可拍攝。重點：海景、24 小時免費飲料與零食、lounge、大浴場、晚餐與早餐自助。說明欄舉豪華套房「山吹」當時參考價（會隨季節變動，不能當 2027 報價）。",
+     "lang": null
+    }
+   ],
+   "ratings": [
+    {
+     "source": "google",
+     "score": null,
+     "scale": 5,
+     "count": null,
+     "url": "https://www.google.com/maps/place/?q=place_id:ChIJ9X4HA4fgGWARiC3MYkjM58o",
+     "checked_at": null,
+     "display": null
+    }
+   ],
+   "review_check": null,
+   "drive_check": {
+    "parking": {
+     "available": null,
+     "free": null,
+     "fee": null,
+     "reservation_required": null,
+     "covered": null,
+     "height_limit_m": null,
+     "width_limit_m": null,
+     "distance_to_front": null,
+     "lat": null,
+     "lng": null,
+     "mapcode": null,
+     "mapcode_source": null,
+     "note": "約80台・無料（楽天）；入口座標/MapCode 未於 Mapion/NaviCon/官網/じゃらん 取得可核對資料，填 null"
+    },
+    "road": {
+     "mountain_road": null,
+     "night_drive": null,
+     "winter_closure": null,
+     "note": null
+    },
+    "from_prev": null,
+    "closed_days": [],
+    "closed_days_note": null,
+    "dinner_fits": null,
+    "note": "2027-06-22 大室山：OSRM 32.4 分；2027-06-23 修善寺温泉：OSRM 69.1 分（超過1小時）；2027-06-24 伊豆→輕井澤高速公路移動（本來就是長程移動日，與現案相同，不另估。）（超過1小時）"
+   },
+   "operation": {
+    "status": "open",
+    "checked_on": "2026-11-16",
+    "sources": [],
+    "recheck_before_departure": true,
+    "note": "官網 200；くぼたび 2026-07 住宿影片、It's Time to Travel 2025-05 住宿影片。"
+   },
+   "screening": {
+    "status": "candidate",
+    "rank": null,
+    "reason": null,
+    "area_unverified": false,
+    "over_1h": null
+   },
+   "stays_feedback": [],
+   "data_gaps": [
+    "MapCode 未從 Mapion／NaviCon 等來源取得，維持 null。",
+    "停車場入口座標未取得。"
+   ],
+   "public_notes": [
+    "東伊豆代表性大型老舗，自家源泉海景露天＋全日酒水輕食 lounge；下田公園約35分（OSRM）。部分方案限住2泊（連泊需選可3泊以上方案或分訂）。",
+    "取消規定：宿泊8日前 23:59 まで免費（7日前10%、3日前30%起）（楽天トラベル施設キャンセルポリシー；方案另有規定時以方案為準）",
+    "予約電話：0557-95-2215（9:30–17:00）",
+    "晚餐備註：楽天基本資訊最終入住 17:00；晚餐確切開始時刻本次未在公式用餐頁抽出。"
+   ],
+   "updated_at": "2026-11-16"
+  },
+  {
+   "id": "lh_izu_c28cee65",
+   "name": "谷川の湯 あせびの",
+   "name_ja": "谷川の湯 あせびの",
+   "name_zh": "谷川之湯 馬醉木／あせびの（湯ヶ島）",
+   "type": "onsen_ryokan",
+   "address": null,
+   "lat": null,
+   "lng": null,
+   "coord_source": null,
+   "google_place_id": null,
+   "google_maps_url": "https://www.google.com/maps/search/?api=1&query=%E8%B0%B7%E5%B7%9D%E3%81%AE%E6%B9%AF%20%E3%81%82%E3%81%9B%E3%81%B3%E3%81%AE",
+   "official_url": null,
+   "phone": null,
+   "mapcode": null,
+   "near_segments": [
+    {
+     "trip_id": "2027-06-tokyo",
+     "route": "I",
+     "base_key": "ATAMI_IZUKOGEN",
+     "next_first_stop": null,
+     "drive_min_to_next_first_stop": null,
+     "drive_source": null
+    }
+   ],
+   "rooms": [],
+   "prices": [
+    {
+     "site": "google_hotels",
+     "url": null,
+     "check_in": "2027-06-21",
+     "check_out": "2027-06-24",
+     "nights": 3,
+     "adults": 3,
+     "rooms": 1,
+     "room_name": null,
+     "size_sqm": null,
+     "meals": null,
+     "total_jpy": null,
+     "per_night_jpy": null,
+     "price_basis": "per_night",
+     "tax": "unknown",
+     "tax_note": null,
+     "free_cancel_until": null,
+     "free_cancel_rule_text": null,
+     "member_price_jpy": null,
+     "coupon": null,
+     "status": "not_on_sale",
+     "checked_at": "2026-11-16",
+     "source_url": null
+    }
+   ],
+   "check_in_time": null,
+   "last_check_in": null,
+   "check_out_time": null,
+   "dinner_time": null,
+   "free_cancel_until": null,
+   "booking_opens": {
+    "status": "unknown",
+    "opens_on": null,
+    "rule": null,
+    "by_site": [],
+    "checked_at": null
+   },
+   "recommendations": [
+    {
+     "kind": "youtube",
+     "title": "【全室露天風呂付き客室】伊豆で超おすすめの温泉旅館♨️最強コスパ宿公開します！",
+     "author": "EATRIP* Pyon Chan",
+     "url": "https://www.youtube.com/watch?v=iaWT0jCRxwg",
+     "published_at": "2025-03-29",
+     "points": "說明欄地址：靜岡縣伊豆市湯ヶ島1931-1。全室露天風呂付、有大浴場與多處貸切風呂（川の湯、山の湯、寝湯等），作者認為以該價位設備很強。屬路線 I 伊豆高原／修善寺周邊的新候選，非既有名單。",
+     "lang": null
+    }
+   ],
+   "ratings": [
+    {
+     "source": "google",
+     "score": null,
+     "scale": 5,
+     "count": null,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E8%B0%B7%E5%B7%9D%E3%81%AE%E6%B9%AF%20%E3%81%82%E3%81%9B%E3%81%B3%E3%81%AE",
+     "checked_at": null,
+     "display": null
+    }
+   ],
+   "review_check": null,
+   "drive_check": {
+    "parking": {
+     "available": null,
+     "free": null,
+     "fee": null,
+     "reservation_required": null,
+     "covered": null,
+     "height_limit_m": null,
+     "width_limit_m": null,
+     "distance_to_front": null,
+     "lat": null,
+     "lng": null,
+     "mapcode": null,
+     "mapcode_source": null,
+     "note": null
+    },
+    "road": {
+     "mountain_road": null,
+     "night_drive": null,
+     "winter_closure": null,
+     "note": null
+    },
+    "from_prev": null,
+    "closed_days": [],
+    "closed_days_note": null,
+    "dinner_fits": null,
+    "note": null
+   },
+   "operation": {
+    "status": "open",
+    "checked_on": "2026-11-16",
+    "sources": [],
+    "recheck_before_departure": true,
+    "note": "EATRIP* Pyon Chan 2025-03 實際住宿開箱（全室露天風呂付）。"
+   },
+   "screening": {
+    "status": "candidate",
+    "rank": null,
+    "reason": null,
+    "area_unverified": false,
+    "over_1h": null
+   },
+   "stays_feedback": [],
+   "data_gaps": [
+    "place_id 未核對（不可臆造）；Google Maps 連結若為座標或館名搜尋，下次應改為店家頁。",
+    "MapCode 未從 Mapion／NaviCon 等來源取得，維持 null。",
+    "停車場入口座標未取得。"
+   ],
+   "public_notes": [],
+   "updated_at": "2026-11-16"
+  },
+  {
+   "id": "lh_izu_75abf8e1",
+   "name": "食べるお宿 浜の湯",
+   "name_ja": "食べるお宿 浜の湯",
+   "name_zh": "吃飯的宿／濱之湯（稻取）",
+   "type": "onsen_ryokan",
+   "address": null,
+   "lat": 34.76991132,
+   "lng": 139.0477901,
+   "coord_source": null,
+   "google_place_id": "ChIJkfYWOtPfGWARPlO9Wig9Dvw",
+   "google_maps_url": "https://www.google.com/maps/place/?q=place_id:ChIJkfYWOtPfGWARPlO9Wig9Dvw",
+   "official_url": "https://www.izu-hamanoyu.co.jp/",
+   "phone": "0557-95-2151",
+   "mapcode": null,
+   "near_segments": [
+    {
+     "trip_id": "2027-06-tokyo",
+     "route": "A",
+     "base_key": "INATORI",
+     "next_first_stop": null,
+     "drive_min_to_next_first_stop": null,
+     "drive_source": null
+    },
+    {
+     "trip_id": "2027-06-tokyo",
+     "route": "F",
+     "base_key": "INATORI",
+     "next_first_stop": null,
+     "drive_min_to_next_first_stop": null,
+     "drive_source": null
+    },
+    {
+     "trip_id": "2027-06-tokyo",
+     "route": "F（lodging.bases／當時推薦路線）",
+     "base_key": "INATORI",
+     "next_first_stop": null,
+     "drive_min_to_next_first_stop": null,
+     "drive_source": null
+    },
+    {
+     "trip_id": "2027-06-tokyo",
+     "route": "I",
+     "base_key": "ATAMI_IZUKOGEN",
+     "next_first_stop": null,
+     "drive_min_to_next_first_stop": null,
+     "drive_source": null
+    }
+   ],
+   "rooms": [
+    {
+     "room_name": "海側和室 50㎡（12.5疊＋廣緣，2～5名）；露天風呂付客室 H 型 每人約37,950～56,100",
+     "size_sqm": 50,
+     "tatami": null,
+     "max_guests": null,
+     "beds": null,
+     "fits_party": null,
+     "note": "1泊2食（金目鯛姿煮、鮑，客室食為主） 參考價，非該日期實價（2027/6～7 多數尚未開賣；為楽天等目前開放日期之3名1室每人含稅價格範圍，實際依日期/方案變動）"
+    }
+   ],
+   "prices": [
+    {
+     "site": "other",
+     "url": null,
+     "check_in": null,
+     "check_out": null,
+     "nights": null,
+     "adults": 3,
+     "rooms": 1,
+     "room_name": null,
+     "size_sqm": null,
+     "meals": null,
+     "total_jpy": null,
+     "per_night_jpy": null,
+     "price_basis": null,
+     "tax": "included",
+     "tax_note": null,
+     "free_cancel_until": "2027-06-17",
+     "free_cancel_rule_text": "8日前(2027年05月20日) 前免費（2027-05-28 入住方案之規定；目標日期依同規則推算）",
+     "member_price_jpy": null,
+     "coupon": null,
+     "status": "not_found",
+     "checked_at": "2026-10-24",
+     "source_url": null
+    },
+    {
+     "site": "rakuten",
+     "url": "https://hotel.travel.rakuten.co.jp/hotelinfo/plan/14503",
+     "check_in": null,
+     "check_out": null,
+     "nights": null,
+     "adults": 3,
+     "rooms": 1,
+     "room_name": "海側和室 50㎡（12.5疊＋廣緣，2～5名）；露天風呂付客室 H 型 每人約37,950～56,100",
+     "size_sqm": 50,
+     "meals": "1泊2食（金目鯛姿煮、鮑，客室食為主）",
+     "total_jpy": null,
+     "per_night_jpy": null,
+     "price_basis": "per_night",
+     "tax": "included",
+     "tax_note": null,
+     "free_cancel_until": null,
+     "free_cancel_rule_text": null,
+     "member_price_jpy": null,
+     "coupon": null,
+     "status": "not_found",
+     "checked_at": "2026-10-24",
+     "source_url": "https://hotel.travel.rakuten.co.jp/hotelinfo/plan/14503"
+    }
+   ],
+   "check_in_time": null,
+   "last_check_in": null,
+   "check_out_time": null,
+   "dinner_time": null,
+   "free_cancel_until": null,
+   "booking_opens": {
+    "status": "not_yet",
+    "opens_on": null,
+    "rule": "2027/6 未放房；目前最遠可查約 2027/5 底；開賣日未公布",
+    "by_site": [],
+    "checked_at": null
+   },
+   "recommendations": [
+    {
+     "kind": "youtube",
+     "title": "【東伊豆】海鮮が美味すぎる極上宿！伊豆稲取・食べるお宿浜の湯",
+     "author": "ゆめたび全国版",
+     "url": "https://www.youtube.com/watch?v=5oBOyQ6CZVc",
+     "published_at": "2023-11-06",
+     "points": "強調天空露天風呂與當地漁獲海鮮料理。",
+     "lang": null
+    },
+    {
+     "kind": "blog",
+     "title": "【伊豆 稲取温泉】《食べるお宿 浜の湯》お部屋編：露天風呂付きスイートルーム「風音」",
+     "author": "えりお（Ameba）",
+     "url": "https://ameblo.jp/korilakkuma0714/entry-12726596289.html",
+     "published_at": null,
+     "points": "再訪約 15 年後入住露天風呂付スイート「風音」的房間篇。",
+     "lang": null
+    }
+   ],
+   "ratings": [
+    {
+     "source": "google",
+     "score": null,
+     "scale": 5,
+     "count": null,
+     "url": "https://www.google.com/maps/place/?q=place_id:ChIJkfYWOtPfGWARPlO9Wig9Dvw",
+     "checked_at": null,
+     "display": null
+    }
+   ],
+   "review_check": null,
+   "drive_check": {
+    "parking": {
+     "available": null,
+     "free": null,
+     "fee": null,
+     "reservation_required": null,
+     "covered": null,
+     "height_limit_m": null,
+     "width_limit_m": null,
+     "distance_to_front": null,
+     "lat": null,
+     "lng": null,
+     "mapcode": null,
+     "mapcode_source": null,
+     "note": "40台・無料・先着順（楽天FAQ）；入口座標/MapCode 未於 Mapion/NaviCon/官網/じゃらん 取得可核對資料，填 null"
+    },
+    "road": {
+     "mountain_road": null,
+     "night_drive": null,
+     "winter_closure": null,
+     "note": null
+    },
+    "from_prev": null,
+    "closed_days": [],
+    "closed_days_note": null,
+    "dinner_fits": null,
+    "note": null
+   },
+   "operation": {
+    "status": "open",
+    "checked_on": "2026-11-16",
+    "sources": [],
+    "recheck_before_departure": true,
+    "note": "2023 年日文宿泊片仍在；該館亦列於 trip.json 東伊豆候選。本次未再單獨查 2026 空房，但無找到停業消息。"
+   },
+   "screening": {
+    "status": "candidate",
+    "rank": null,
+    "reason": null,
+    "area_unverified": false,
+    "over_1h": null
+   },
+   "stays_feedback": [],
+   "data_gaps": [
+    "MapCode 未從 Mapion／NaviCon 等來源取得，維持 null。",
+    "停車場入口座標未取得。"
+   ],
+   "public_notes": [
+    "『食べるお宿』海鮮份量出名，270度海景大露天『望洋大浴場』。",
+    "取消規定：宿泊8日前 23:59 まで免費（7日前10%、3日前30%起）（楽天トラベル施設キャンセルポリシー；方案另有規定時以方案為準）"
+   ],
+   "updated_at": "2026-11-16"
+  },
+  {
+   "id": "lh_izu_b7d95e6b",
+   "name": "伊豆三津浜温泉 松濤館",
+   "name_ja": "伊豆三津浜温泉 松濤館",
+   "name_zh": null,
+   "type": "onsen_ryokan",
+   "address": "静岡県沼津市内浦三津7",
+   "lat": null,
+   "lng": null,
+   "coord_source": null,
+   "google_place_id": null,
+   "google_maps_url": "https://www.google.com/maps/search/?api=1&query=%E4%BC%8A%E8%B1%86%E4%B8%89%E6%B4%A5%E6%B5%9C%E6%B8%A9%E6%B3%89%20%E6%9D%BE%E6%BF%A4%E9%A4%A8",
+   "official_url": "https://www.shoutoukan.com/",
+   "phone": "055-943-2311",
+   "mapcode": null,
+   "near_segments": [
+    {
+     "trip_id": "2027-06-tokyo",
+     "route": "I",
+     "base_key": "ATAMI_IZUKOGEN",
+     "next_first_stop": null,
+     "drive_min_to_next_first_stop": null,
+     "drive_source": null
+    }
+   ],
+   "rooms": [],
+   "prices": [
+    {
+     "site": "agoda",
+     "url": null,
+     "check_in": "2027-06-21",
+     "check_out": "2027-06-24",
+     "nights": 3,
+     "adults": 3,
+     "rooms": 1,
+     "room_name": null,
+     "size_sqm": null,
+     "meals": null,
+     "total_jpy": null,
+     "per_night_jpy": null,
+     "price_basis": null,
+     "tax": "unknown",
+     "tax_note": null,
+     "free_cancel_until": null,
+     "free_cancel_rule_text": null,
+     "member_price_jpy": null,
+     "coupon": null,
+     "status": "not_found",
+     "checked_at": "2026-11-16",
+     "source_url": null
+    },
+    {
+     "site": "google_hotels",
+     "url": null,
+     "check_in": "2027-06-21",
+     "check_out": "2027-06-24",
+     "nights": 3,
+     "adults": 3,
+     "rooms": 1,
+     "room_name": null,
+     "size_sqm": null,
+     "meals": null,
+     "total_jpy": null,
+     "per_night_jpy": null,
+     "price_basis": null,
+     "tax": "unknown",
+     "tax_note": null,
+     "free_cancel_until": null,
+     "free_cancel_rule_text": null,
+     "member_price_jpy": null,
+     "coupon": null,
+     "status": "not_found",
+     "checked_at": "2026-11-16",
+     "source_url": null
+    },
+    {
+     "site": "jalan",
+     "url": "https://www.jalan.net/yad317031/plan/?stayYear=2027&stayMonth=6&stayDay=21&stayCount=3&roomCount=1&adultNum=3",
+     "check_in": "2027-06-21",
+     "check_out": "2027-06-24",
+     "nights": 3,
+     "adults": 3,
+     "rooms": 1,
+     "room_name": null,
+     "size_sqm": null,
+     "meals": null,
+     "total_jpy": null,
+     "per_night_jpy": null,
+     "price_basis": null,
+     "tax": "unknown",
+     "tax_note": null,
+     "free_cancel_until": null,
+     "free_cancel_rule_text": null,
+     "member_price_jpy": null,
+     "coupon": null,
+     "status": "not_on_sale",
+     "checked_at": "2026-11-16",
+     "source_url": "https://www.jalan.net/yad317031/plan/?stayYear=2027&stayMonth=6&stayDay=21&stayCount=3&roomCount=1&adultNum=3"
+    },
+    {
+     "site": "ikyu",
+     "url": null,
+     "check_in": "2027-06-21",
+     "check_out": "2027-06-24",
+     "nights": 3,
+     "adults": 3,
+     "rooms": 1,
+     "room_name": null,
+     "size_sqm": null,
+     "meals": null,
+     "total_jpy": null,
+     "per_night_jpy": null,
+     "price_basis": null,
+     "tax": "unknown",
+     "tax_note": null,
+     "free_cancel_until": null,
+     "free_cancel_rule_text": null,
+     "member_price_jpy": null,
+     "coupon": null,
+     "status": "not_found",
+     "checked_at": "2026-11-16",
+     "source_url": null
+    },
+    {
+     "site": "official",
+     "url": "https://www.shoutoukan.com/",
+     "check_in": "2027-06-21",
+     "check_out": "2027-06-24",
+     "nights": 3,
+     "adults": 3,
+     "rooms": 1,
+     "room_name": null,
+     "size_sqm": null,
+     "meals": null,
+     "total_jpy": null,
+     "per_night_jpy": null,
+     "price_basis": null,
+     "tax": "unknown",
+     "tax_note": null,
+     "free_cancel_until": null,
+     "free_cancel_rule_text": null,
+     "member_price_jpy": null,
+     "coupon": null,
+     "status": "not_found",
+     "checked_at": "2026-11-16",
+     "source_url": "https://www.shoutoukan.com/"
+    },
+    {
+     "site": "rakuten",
+     "url": "https://hotel.travel.rakuten.co.jp/hotelinfo/plan/7673?f_heya_su=1&f_otona_su=3&f_nen1=2027&f_tuki1=6&f_hi1=21&f_nen2=2027&f_tuki2=6&f_hi2=24&f_sort=min_charge",
+     "check_in": "2027-06-21",
+     "check_out": "2027-06-24",
+     "nights": 3,
+     "adults": 3,
+     "rooms": 1,
+     "room_name": null,
+     "size_sqm": null,
+     "meals": null,
+     "total_jpy": null,
+     "per_night_jpy": null,
+     "price_basis": null,
+     "tax": "unknown",
+     "tax_note": null,
+     "free_cancel_until": null,
+     "free_cancel_rule_text": null,
+     "member_price_jpy": null,
+     "coupon": null,
+     "status": "not_on_sale",
+     "checked_at": "2026-11-16",
+     "source_url": "https://hotel.travel.rakuten.co.jp/hotelinfo/plan/7673?f_heya_su=1&f_otona_su=3&f_nen1=2027&f_tuki1=6&f_hi1=21&f_nen2=2027&f_tuki2=6&f_hi2=24&f_sort=min_charge"
+    }
+   ],
+   "check_in_time": null,
+   "last_check_in": null,
+   "check_out_time": null,
+   "dinner_time": null,
+   "free_cancel_until": null,
+   "booking_opens": {
+    "status": "unknown",
+    "opens_on": null,
+    "rule": null,
+    "by_site": [],
+    "checked_at": null
+   },
+   "recommendations": [],
+   "ratings": [
+    {
+     "source": "google",
+     "score": null,
+     "scale": 5,
+     "count": null,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E4%BC%8A%E8%B1%86%E4%B8%89%E6%B4%A5%E6%B5%9C%E6%B8%A9%E6%B3%89%20%E6%9D%BE%E6%BF%A4%E9%A4%A8",
+     "checked_at": null,
+     "display": null
+    }
+   ],
+   "review_check": null,
+   "drive_check": {
+    "parking": {
+     "available": null,
+     "free": null,
+     "fee": null,
+     "reservation_required": null,
+     "covered": null,
+     "height_limit_m": null,
+     "width_limit_m": null,
+     "distance_to_front": null,
+     "lat": null,
+     "lng": null,
+     "mapcode": null,
+     "mapcode_source": null,
+     "note": null
+    },
+    "road": {
+     "mountain_road": null,
+     "night_drive": null,
+     "winter_closure": null,
+     "note": null
+    },
+    "from_prev": null,
+    "closed_days": [],
+    "closed_days_note": null,
+    "dinner_fits": null,
+    "note": "2027-06-22 大室山：OSRM 45.8 分；2027-06-23 修善寺温泉：OSRM 15.7 分"
+   },
+   "operation": {
+    "status": "open",
+    "checked_on": "2026-11-16",
+    "sources": [],
+    "recheck_before_departure": true,
+    "note": "公式寫令和8年（2026）修繕後已於7月11日重新開業。"
+   },
+   "screening": {
+    "status": "candidate",
+    "rank": null,
+    "reason": "面積未核（只標疊數、未標㎡），依規則不列入符合 25㎡。補上㎡後再審。",
+    "area_unverified": false,
+    "over_1h": null
+   },
+   "stays_feedback": [],
+   "data_gaps": [
+    "place_id 未核對（不可臆造）；Google Maps 連結若為座標或館名搜尋，下次應改為店家頁。",
+    "MapCode 未從 Mapion／NaviCon 等來源取得，維持 null。",
+    "停車場入口座標未取得。"
+   ],
+   "public_notes": [
+    "不符合 25㎡／3大人規則：公式與じゃらん客房頁只標10～12疊／和洋室構成，沒有標㎡。依面積規則，只標疊數者不列入符合25㎡，不自行換算。"
+   ],
+   "updated_at": "2026-11-16"
+  }
+ ]
+}

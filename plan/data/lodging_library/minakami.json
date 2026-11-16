@@ -1,0 +1,228 @@
+{
+ "schema": "agency.lodging_library.region.v1",
+ "region": {
+  "id": "minakami",
+  "name": "水上溫泉",
+  "prefecture": "群馬県"
+ },
+ "updated_at": "2026-11-16",
+ "hotels": [
+  {
+   "id": "lh_minakami_24fdb262",
+   "name": "あらたし みなかみ",
+   "name_ja": "あらたし みなかみ",
+   "name_zh": "あらたし 水上",
+   "type": "onsen_hotel",
+   "address": null,
+   "lat": null,
+   "lng": null,
+   "coord_source": null,
+   "google_place_id": null,
+   "google_maps_url": "https://www.google.com/maps/search/?api=1&query=%E3%81%82%E3%82%89%E3%81%9F%E3%81%97%20%E3%81%BF%E3%81%AA%E3%81%8B%E3%81%BF",
+   "official_url": null,
+   "phone": null,
+   "mapcode": null,
+   "near_segments": [],
+   "rooms": [],
+   "prices": [],
+   "check_in_time": null,
+   "last_check_in": null,
+   "check_out_time": null,
+   "dinner_time": null,
+   "free_cancel_until": null,
+   "booking_opens": {
+    "status": "unknown",
+    "opens_on": null,
+    "rule": null,
+    "by_site": [],
+    "checked_at": null
+   },
+   "recommendations": [
+    {
+     "kind": "blog",
+     "title": "【宿泊記】あらたし みなかみ｜全室露天風呂付き！大人の水上温泉",
+     "author": "旅兵衛の『大人の車旅』設計圖",
+     "url": "https://tabibei.com/aratashi-minakami-review/",
+     "published_at": "2026-03-12",
+     "points": "2026-04-02 更新。2025 秋入住：全 42 室皆利根川景觀＋溫泉露天風呂，另有大浴場與自動洛呂桑拿；晚餐偏法式技法的洋食課程；強調清潔、床墊舒適與 CP。",
+     "lang": null
+    },
+    {
+     "kind": "blog",
+     "title": "子連れにもおすすめの穴場宿！【水上温泉　あらたし　みなかみに泊まってみた！】宿泊レポ",
+     "author": "こちゃるの部屋",
+     "url": "https://kurashinoblog.net/2023/08/13/aratashi-minakami/",
+     "published_at": "2023-08-13",
+     "points": "家庭 4 人盆假入住，稱可帶小孩餐、有兒童椅，全室露天風呂但當時價格被作者覺得划算。",
+     "lang": null
+    }
+   ],
+   "ratings": [
+    {
+     "source": "google",
+     "score": null,
+     "scale": 5,
+     "count": null,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E3%81%82%E3%82%89%E3%81%9F%E3%81%97%20%E3%81%BF%E3%81%AA%E3%81%8B%E3%81%BF",
+     "checked_at": null,
+     "display": null
+    }
+   ],
+   "review_check": null,
+   "drive_check": {
+    "parking": {
+     "available": null,
+     "free": null,
+     "fee": null,
+     "reservation_required": null,
+     "covered": null,
+     "height_limit_m": null,
+     "width_limit_m": null,
+     "distance_to_front": null,
+     "lat": null,
+     "lng": null,
+     "mapcode": null,
+     "mapcode_source": null,
+     "note": null
+    },
+    "road": {
+     "mountain_road": null,
+     "night_drive": null,
+     "winter_closure": null,
+     "note": null
+    },
+    "from_prev": null,
+    "closed_days": [],
+    "closed_days_note": null,
+    "dinner_fits": null,
+    "note": null
+   },
+   "operation": {
+    "status": "open",
+    "checked_on": "2026-11-16",
+    "sources": [],
+    "recheck_before_departure": true,
+    "note": "2022 開業；2025 秋宿泊記部落格於 2026 刊出。"
+   },
+   "screening": {
+    "status": "candidate",
+    "rank": null,
+    "reason": null,
+    "area_unverified": false,
+    "over_1h": null
+   },
+   "stays_feedback": [],
+   "data_gaps": [
+    "place_id 未核對（不可臆造）；Google Maps 連結若為座標或館名搜尋，下次應改為店家頁。",
+    "MapCode 未從 Mapion／NaviCon 等來源取得，維持 null。",
+    "停車場入口座標未取得。"
+   ],
+   "public_notes": [],
+   "updated_at": "2026-11-16"
+  },
+  {
+   "id": "lh_minakami_85ddaa7b",
+   "name": "坐山 みなかみ",
+   "name_ja": "坐山 みなかみ",
+   "name_zh": "坐山 水上（舊名宮上閣）",
+   "type": "onsen_hotel",
+   "address": null,
+   "lat": null,
+   "lng": null,
+   "coord_source": null,
+   "google_place_id": null,
+   "google_maps_url": "https://www.google.com/maps/search/?api=1&query=%E5%9D%90%E5%B1%B1%20%E3%81%BF%E3%81%AA%E3%81%8B%E3%81%BF",
+   "official_url": null,
+   "phone": null,
+   "mapcode": null,
+   "near_segments": [],
+   "rooms": [],
+   "prices": [],
+   "check_in_time": null,
+   "last_check_in": null,
+   "check_out_time": null,
+   "dinner_time": null,
+   "free_cancel_until": null,
+   "booking_opens": {
+    "status": "unknown",
+    "opens_on": null,
+    "rule": null,
+    "by_site": [],
+    "checked_at": null
+   },
+   "recommendations": [
+    {
+     "kind": "youtube",
+     "title": "【日帰り】温泉偽装解消!?水上温泉!坐山みなかみ＆ホテルロモサ 等 来訪記!",
+     "author": "東京凡人 / 温泉探訪 一人旅",
+     "url": "https://www.youtube.com/watch?v=_fgdBVCi0gs",
+     "published_at": "2025-09-21",
+     "points": "巡訪松葉屋、坐山みなかみ、天野屋、ホテルロモサ。影片回顧水上過去「溫泉標示問題」，並以實際泡湯體感說明各館現況。坐山被形容為較大型度假溫泉，湯偏循環消毒、適合結伴而非極端湯控。若考慮水上，建議另外再查各館目前的泉質標示與宿泊計畫。",
+     "lang": null
+    }
+   ],
+   "ratings": [
+    {
+     "source": "google",
+     "score": null,
+     "scale": 5,
+     "count": null,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E5%9D%90%E5%B1%B1%20%E3%81%BF%E3%81%AA%E3%81%8B%E3%81%BF",
+     "checked_at": null,
+     "display": null
+    }
+   ],
+   "review_check": null,
+   "drive_check": {
+    "parking": {
+     "available": null,
+     "free": null,
+     "fee": null,
+     "reservation_required": null,
+     "covered": null,
+     "height_limit_m": null,
+     "width_limit_m": null,
+     "distance_to_front": null,
+     "lat": null,
+     "lng": null,
+     "mapcode": null,
+     "mapcode_source": null,
+     "note": null
+    },
+    "road": {
+     "mountain_road": null,
+     "night_drive": null,
+     "winter_closure": null,
+     "note": null
+    },
+    "from_prev": null,
+    "closed_days": [],
+    "closed_days_note": null,
+    "dinner_fits": null,
+    "note": null
+   },
+   "operation": {
+    "status": "open",
+    "checked_on": "2026-11-16",
+    "sources": [],
+    "recheck_before_departure": true,
+    "note": "東京凡人 2025-09 到訪（當日為巡湯，不全是住宿開箱）。"
+   },
+   "screening": {
+    "status": "candidate",
+    "rank": null,
+    "reason": null,
+    "area_unverified": false,
+    "over_1h": null
+   },
+   "stays_feedback": [],
+   "data_gaps": [
+    "place_id 未核對（不可臆造）；Google Maps 連結若為座標或館名搜尋，下次應改為店家頁。",
+    "MapCode 未從 Mapion／NaviCon 等來源取得，維持 null。",
+    "停車場入口座標未取得。"
+   ],
+   "public_notes": [],
+   "updated_at": "2026-11-16"
+  }
+ ]
+}

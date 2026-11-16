@@ -1,0 +1,1308 @@
+{
+ "schema": "agency.lodging_library.region.v1",
+ "region": {
+  "id": "kusatsu",
+  "name": "草津溫泉",
+  "prefecture": "群馬県"
+ },
+ "updated_at": "2026-11-16",
+ "hotels": [
+  {
+   "id": "lh_kusatsu_86af97ab",
+   "name": "ラビスタ草津ヒルズ",
+   "name_ja": "ラビスタ草津ヒルズ",
+   "name_zh": "La Vista 草津 Hills",
+   "type": "onsen_hotel",
+   "address": null,
+   "lat": null,
+   "lng": null,
+   "coord_source": null,
+   "google_place_id": null,
+   "google_maps_url": "https://www.google.com/maps/search/?api=1&query=%E3%83%A9%E3%83%93%E3%82%B9%E3%82%BF%E8%8D%89%E6%B4%A5%E3%83%92%E3%83%AB%E3%82%BA",
+   "official_url": null,
+   "phone": null,
+   "mapcode": null,
+   "near_segments": [],
+   "rooms": [],
+   "prices": [],
+   "check_in_time": null,
+   "last_check_in": null,
+   "check_out_time": null,
+   "dinner_time": null,
+   "free_cancel_until": null,
+   "booking_opens": {
+    "status": "unknown",
+    "opens_on": null,
+    "rule": null,
+    "by_site": [],
+    "checked_at": null
+   },
+   "recommendations": [
+    {
+     "kind": "youtube",
+     "title": "【草津温泉・群馬県】ホテル・旅館おすすめ3選を現地リポート｜奈良屋｜ホテル櫻井｜ラビスタ草津ヒルズ",
+     "author": "じゃらん",
+     "url": "https://www.youtube.com/watch?v=U-Okm5xUEPw",
+     "published_at": "2023-09-28",
+     "points": "共立リゾート系統，與木之葉同集團風格的高地度假飯店，常被當成草津「景觀＋溫泉」選項。",
+     "lang": null
+    }
+   ],
+   "ratings": [
+    {
+     "source": "google",
+     "score": null,
+     "scale": 5,
+     "count": null,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E3%83%A9%E3%83%93%E3%82%B9%E3%82%BF%E8%8D%89%E6%B4%A5%E3%83%92%E3%83%AB%E3%82%BA",
+     "checked_at": null,
+     "display": null
+    }
+   ],
+   "review_check": null,
+   "drive_check": {
+    "parking": {
+     "available": null,
+     "free": null,
+     "fee": null,
+     "reservation_required": null,
+     "covered": null,
+     "height_limit_m": null,
+     "width_limit_m": null,
+     "distance_to_front": null,
+     "lat": null,
+     "lng": null,
+     "mapcode": null,
+     "mapcode_source": null,
+     "note": null
+    },
+    "road": {
+     "mountain_road": null,
+     "night_drive": null,
+     "winter_closure": null,
+     "note": null
+    },
+    "from_prev": null,
+    "closed_days": [],
+    "closed_days_note": null,
+    "dinner_fits": null,
+    "note": null
+   },
+   "operation": {
+    "status": "open",
+    "checked_on": "2026-11-16",
+    "sources": [],
+    "recheck_before_departure": true,
+    "note": "じゃらん 2023 3 選之一。"
+   },
+   "screening": {
+    "status": "candidate",
+    "rank": null,
+    "reason": null,
+    "area_unverified": false,
+    "over_1h": null
+   },
+   "stays_feedback": [],
+   "data_gaps": [
+    "place_id 未核對（不可臆造）；Google Maps 連結若為座標或館名搜尋，下次應改為店家頁。",
+    "MapCode 未從 Mapion／NaviCon 等來源取得，維持 null。",
+    "停車場入口座標未取得。"
+   ],
+   "public_notes": [],
+   "updated_at": "2026-11-16"
+  },
+  {
+   "id": "lh_kusatsu_afaf0263",
+   "name": "中村屋旅館（草津）",
+   "name_ja": "中村屋旅館（草津）",
+   "name_zh": "中村屋旅館（貓旅館）",
+   "type": "onsen_ryokan",
+   "address": null,
+   "lat": null,
+   "lng": null,
+   "coord_source": null,
+   "google_place_id": null,
+   "google_maps_url": "https://www.google.com/maps/search/?api=1&query=%E4%B8%AD%E6%9D%91%E5%B1%8B%E6%97%85%E9%A4%A8%EF%BC%88%E8%8D%89%E6%B4%A5%EF%BC%89",
+   "official_url": null,
+   "phone": null,
+   "mapcode": null,
+   "near_segments": [],
+   "rooms": [],
+   "prices": [],
+   "check_in_time": null,
+   "last_check_in": null,
+   "check_out_time": null,
+   "dinner_time": null,
+   "free_cancel_until": null,
+   "booking_opens": {
+    "status": "unknown",
+    "opens_on": null,
+    "rule": null,
+    "by_site": [],
+    "checked_at": null
+   },
+   "recommendations": [
+    {
+     "kind": "youtube",
+     "title": "【草津温泉の猫旅館】9匹の貓と24時間過ごせる予約困難な猫旅館が幸せすぎた｜日本一の名湯♨️中村屋旅館源泉掛け流し貸切風呂",
+     "author": "ITSUKA JAPAN",
+     "url": "https://www.youtube.com/watch?v=2DOSxxSuZ2Y",
+     "published_at": "2026-01-31",
+     "points": "約 130 年歷史的草津旅館，館內有多隻貓（影片稱 9 隻）可互動，但貓不可進客房；有湯畑源泉かけ流し貸切風呂（45 分）。定位特殊，適合愛貓旅人，不是典型三人家庭溫泉飯店。",
+     "lang": null
+    }
+   ],
+   "ratings": [
+    {
+     "source": "google",
+     "score": null,
+     "scale": 5,
+     "count": null,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E4%B8%AD%E6%9D%91%E5%B1%8B%E6%97%85%E9%A4%A8%EF%BC%88%E8%8D%89%E6%B4%A5%EF%BC%89",
+     "checked_at": null,
+     "display": null
+    }
+   ],
+   "review_check": null,
+   "drive_check": {
+    "parking": {
+     "available": null,
+     "free": null,
+     "fee": null,
+     "reservation_required": null,
+     "covered": null,
+     "height_limit_m": null,
+     "width_limit_m": null,
+     "distance_to_front": null,
+     "lat": null,
+     "lng": null,
+     "mapcode": null,
+     "mapcode_source": null,
+     "note": null
+    },
+    "road": {
+     "mountain_road": null,
+     "night_drive": null,
+     "winter_closure": null,
+     "note": null
+    },
+    "from_prev": null,
+    "closed_days": [],
+    "closed_days_note": null,
+    "dinner_fits": null,
+    "note": null
+   },
+   "operation": {
+    "status": "open",
+    "checked_on": "2026-11-16",
+    "sources": [],
+    "recheck_before_departure": true,
+    "note": "ITSUKA JAPAN 2026-01 宿泊片。"
+   },
+   "screening": {
+    "status": "candidate",
+    "rank": null,
+    "reason": null,
+    "area_unverified": false,
+    "over_1h": null
+   },
+   "stays_feedback": [],
+   "data_gaps": [
+    "place_id 未核對（不可臆造）；Google Maps 連結若為座標或館名搜尋，下次應改為店家頁。",
+    "MapCode 未從 Mapion／NaviCon 等來源取得，維持 null。",
+    "停車場入口座標未取得。"
+   ],
+   "public_notes": [],
+   "updated_at": "2026-11-16"
+  },
+  {
+   "id": "lh_kusatsu_d638886e",
+   "name": "草津温泉 奈良屋",
+   "name_ja": "草津温泉 奈良屋",
+   "name_zh": "草津 奈良屋",
+   "type": "onsen_ryokan",
+   "address": null,
+   "lat": 36.62342333,
+   "lng": 138.5960642,
+   "coord_source": null,
+   "google_place_id": "ChIJFxY0_1TmHWARP4K8T56kmC0",
+   "google_maps_url": "https://www.google.com/maps/place/?q=place_id:ChIJFxY0_1TmHWARP4K8T56kmC0",
+   "official_url": "https://www.kusatsu-naraya.co.jp/",
+   "phone": "0279-88-2311",
+   "mapcode": "341 446 623*48",
+   "near_segments": [
+    {
+     "trip_id": "2027-06-tokyo",
+     "route": "B",
+     "base_key": "KUSATSU",
+     "next_first_stop": null,
+     "drive_min_to_next_first_stop": null,
+     "drive_source": null
+    },
+    {
+     "trip_id": "2027-06-tokyo",
+     "route": "C",
+     "base_key": "KUSATSU",
+     "next_first_stop": null,
+     "drive_min_to_next_first_stop": null,
+     "drive_source": null
+    }
+   ],
+   "rooms": [
+    {
+     "room_name": "泉游亭 各房型/最上階和室（3名可，2026年8月翻新）",
+     "size_sqm": null,
+     "tatami": null,
+     "max_guests": null,
+     "beds": null,
+     "fits_party": null,
+     "note": "1泊2食（和會席） 參考價，非該日期實價（2027/6～7 多數尚未開賣；為楽天等目前開放日期之3名1室每人含稅價格範圍，實際依日期/方案變動）"
+    }
+   ],
+   "prices": [
+    {
+     "site": "other",
+     "url": null,
+     "check_in": null,
+     "check_out": null,
+     "nights": null,
+     "adults": 3,
+     "rooms": 1,
+     "room_name": null,
+     "size_sqm": null,
+     "meals": null,
+     "total_jpy": null,
+     "per_night_jpy": null,
+     "price_basis": null,
+     "tax": "included",
+     "tax_note": null,
+     "free_cancel_until": "2027-06-20",
+     "free_cancel_rule_text": "4日前(2027年06月20日) 前免費（2027-06-24 入住方案之規定；目標日期依同規則推算）",
+     "member_price_jpy": null,
+     "coupon": null,
+     "status": "not_found",
+     "checked_at": "2026-10-24",
+     "source_url": null
+    },
+    {
+     "site": "rakuten",
+     "url": "https://hotel.travel.rakuten.co.jp/hotelinfo/plan/70807",
+     "check_in": null,
+     "check_out": null,
+     "nights": null,
+     "adults": 3,
+     "rooms": 1,
+     "room_name": "泉游亭 各房型/最上階和室（3名可，2026年8月翻新）",
+     "size_sqm": null,
+     "meals": "1泊2食（和會席）",
+     "total_jpy": null,
+     "per_night_jpy": null,
+     "price_basis": "per_night",
+     "tax": "included",
+     "tax_note": null,
+     "free_cancel_until": null,
+     "free_cancel_rule_text": null,
+     "member_price_jpy": null,
+     "coupon": null,
+     "status": "not_found",
+     "checked_at": "2026-10-24",
+     "source_url": "https://hotel.travel.rakuten.co.jp/hotelinfo/plan/70807"
+    }
+   ],
+   "check_in_time": null,
+   "last_check_in": null,
+   "check_out_time": null,
+   "dinner_time": "晚餐最晚 20:00 開始（楽天方案說明）",
+   "free_cancel_until": null,
+   "booking_opens": {
+    "status": "on_sale",
+    "opens_on": null,
+    "rule": "已開賣：2027/6 實際日期可在楽天・じゃらん查到可售方案（2026-10-24）",
+    "by_site": [],
+    "checked_at": null
+   },
+   "recommendations": [
+    {
+     "kind": "youtube",
+     "title": "【草津温泉・群馬県】ホテル・旅館おすすめ3選を現地リポート｜奈良屋｜ホテル櫻井｜ラビスタ草津ヒルズ｜温泉旅行｜国内旅行",
+     "author": "じゃらん",
+     "url": "https://www.youtube.com/watch?v=U-Okm5xUEPw",
+     "published_at": "2023-09-28",
+     "points": "訂房網站じゃらん的現地 3 選，奈良屋、ホテル櫻井、ラビスタ草津ヒルズ並列。",
+     "lang": null
+    },
+    {
+     "kind": "blog",
+     "title": "【群馬県】草津温泉は旅館がたくさん ♨＂ホテル櫻井＂と＂奈良屋＂どっちがおすすめ？",
+     "author": "もちのかんづめ",
+     "url": "https://mochi-mochi00.com/kusatsu-hotspring/",
+     "published_at": null,
+     "points": "作者兩次旅行分別住過櫻井與奈良屋，認為都滿意，但依同行人數與需求有不同適合度。",
+     "lang": null
+    },
+    {
+     "kind": "blog",
+     "title": "＜草津溫泉住宿推薦＞奈良屋│服務品質5顆星",
+     "author": "哈日杏子（痞客邦）",
+     "url": "https://kyoko1200.pixnet.net/blog/posts/12192702223",
+     "published_at": "2016-03-01",
+     "points": "較早的台灣入住文，稱讚服務。僅作歷史補充。",
+     "lang": null
+    }
+   ],
+   "ratings": [
+    {
+     "source": "google",
+     "score": null,
+     "scale": 5,
+     "count": null,
+     "url": "https://www.google.com/maps/place/?q=place_id:ChIJFxY0_1TmHWARP4K8T56kmC0",
+     "checked_at": null,
+     "display": null
+    }
+   ],
+   "review_check": null,
+   "drive_check": {
+    "parking": {
+     "available": null,
+     "free": null,
+     "fee": null,
+     "reservation_required": null,
+     "covered": null,
+     "height_limit_m": null,
+     "width_limit_m": null,
+     "distance_to_front": null,
+     "lat": null,
+     "lng": null,
+     "mapcode": "341 446 623*48",
+     "mapcode_source": "https://www.jalan.net/yad362465/",
+     "note": "館內無停車場；停西の河原公園有料駐車場（奈良屋住客免費）。MapCode 為旅館於じゃらん回答提供之『カーナビ設定用』；停車場座標未取得、未能以座標核對"
+    },
+    "road": {
+     "mountain_road": null,
+     "night_drive": null,
+     "winter_closure": null,
+     "note": null
+    },
+    "from_prev": null,
+    "closed_days": [],
+    "closed_days_note": null,
+    "dinner_fits": null,
+    "note": null
+   },
+   "operation": {
+    "status": "open",
+    "checked_on": "2026-11-16",
+    "sources": [],
+    "recheck_before_departure": true,
+    "note": "じゃらん官方現地報導 2023；較早台灣痞客邦入住文仍在。無找到停業消息。"
+   },
+   "screening": {
+    "status": "candidate",
+    "rank": null,
+    "reason": null,
+    "area_unverified": false,
+    "over_1h": null
+   },
+   "stays_feedback": [],
+   "data_gaps": [
+    "停車場入口座標未取得。"
+   ],
+   "public_notes": [
+    "湯畑旁老舖，自家源泉「白旗源泉」系；草津=じゃらん人氣溫泉地第1。",
+    "取消規定：宿泊4日前 23:59 まで免費（3日前30%、前日50%、當日100%；楽天）"
+   ],
+   "updated_at": "2026-11-16"
+  },
+  {
+   "id": "lh_kusatsu_8da22b52",
+   "name": "草津温泉 望雲",
+   "name_ja": "草津温泉 望雲",
+   "name_zh": null,
+   "type": "onsen_ryokan",
+   "address": null,
+   "lat": 36.62301223,
+   "lng": 138.5946615,
+   "coord_source": null,
+   "google_place_id": "ChIJhSOEelTmHWARE6-9i2kVdNQ",
+   "google_maps_url": "https://www.google.com/maps/place/?q=place_id:ChIJhSOEelTmHWARE6-9i2kVdNQ",
+   "official_url": "https://www.hotelboun.com/",
+   "phone": "0279-88-3251",
+   "mapcode": null,
+   "near_segments": [
+    {
+     "trip_id": "2027-06-tokyo",
+     "route": "B",
+     "base_key": "KUSATSU",
+     "next_first_stop": null,
+     "drive_min_to_next_first_stop": null,
+     "drive_source": null
+    },
+    {
+     "trip_id": "2027-06-tokyo",
+     "route": "C",
+     "base_key": "KUSATSU",
+     "next_first_stop": null,
+     "drive_min_to_next_first_stop": null,
+     "drive_source": null
+    }
+   ],
+   "rooms": [
+    {
+     "room_name": "雲松庵和室・本館温泉内風呂付和洋室",
+     "size_sqm": null,
+     "tatami": null,
+     "max_guests": null,
+     "beds": null,
+     "fits_party": null,
+     "note": "1泊2食 參考價，非該日期實價（2027/6～7 多數尚未開賣；為楽天等目前開放日期之3名1室每人含稅價格範圍，實際依日期/方案變動）（じゃらん 大人3名最低價）"
+    }
+   ],
+   "prices": [
+    {
+     "site": "other",
+     "url": null,
+     "check_in": null,
+     "check_out": null,
+     "nights": null,
+     "adults": 3,
+     "rooms": 1,
+     "room_name": null,
+     "size_sqm": null,
+     "meals": null,
+     "total_jpy": null,
+     "per_night_jpy": null,
+     "price_basis": null,
+     "tax": "included",
+     "tax_note": null,
+     "free_cancel_until": null,
+     "free_cancel_rule_text": null,
+     "member_price_jpy": null,
+     "coupon": null,
+     "status": "not_found",
+     "checked_at": "2026-10-24",
+     "source_url": null
+    },
+    {
+     "site": "jalan",
+     "url": "https://www.jalan.net/yad316594/plan/",
+     "check_in": null,
+     "check_out": null,
+     "nights": null,
+     "adults": 3,
+     "rooms": 1,
+     "room_name": "雲松庵和室・本館温泉内風呂付和洋室",
+     "size_sqm": null,
+     "meals": "1泊2食",
+     "total_jpy": null,
+     "per_night_jpy": null,
+     "price_basis": "per_night",
+     "tax": "included",
+     "tax_note": null,
+     "free_cancel_until": null,
+     "free_cancel_rule_text": null,
+     "member_price_jpy": null,
+     "coupon": null,
+     "status": "not_found",
+     "checked_at": "2026-10-24",
+     "source_url": "https://www.jalan.net/yad316594/plan/"
+    }
+   ],
+   "check_in_time": null,
+   "last_check_in": null,
+   "check_out_time": null,
+   "dinner_time": "18:00／18:30／19:00 可選（一休方案）",
+   "free_cancel_until": null,
+   "booking_opens": {
+    "status": "on_sale",
+    "opens_on": null,
+    "rule": "已開賣：2027/6 實際日期可在楽天・じゃらん查到可售方案（2026-10-24）",
+    "by_site": [],
+    "checked_at": null
+   },
+   "recommendations": [],
+   "ratings": [
+    {
+     "source": "google",
+     "score": null,
+     "scale": 5,
+     "count": null,
+     "url": "https://www.google.com/maps/place/?q=place_id:ChIJhSOEelTmHWARE6-9i2kVdNQ",
+     "checked_at": null,
+     "display": null
+    }
+   ],
+   "review_check": null,
+   "drive_check": {
+    "parking": {
+     "available": null,
+     "free": null,
+     "fee": null,
+     "reservation_required": null,
+     "covered": null,
+     "height_limit_m": null,
+     "width_limit_m": null,
+     "distance_to_front": null,
+     "lat": null,
+     "lng": null,
+     "mapcode": null,
+     "mapcode_source": null,
+     "note": "免費50台（楽天FAQ）；座標/MapCode 未取得"
+    },
+    "road": {
+     "mountain_road": null,
+     "night_drive": null,
+     "winter_closure": null,
+     "note": null
+    },
+    "from_prev": null,
+    "closed_days": [],
+    "closed_days_note": null,
+    "dinner_fits": null,
+    "note": null
+   },
+   "operation": {
+    "status": "open",
+    "checked_on": "2026-10-24",
+    "sources": [],
+    "recheck_before_departure": true,
+    "note": "當時可在樂天／じゃらん或官網查到資料；之後若有更新以較新查證為準。"
+   },
+   "screening": {
+    "status": "candidate",
+    "rank": null,
+    "reason": null,
+    "area_unverified": false,
+    "over_1h": null
+   },
+   "stays_feedback": [],
+   "data_gaps": [
+    "MapCode 未從 Mapion／NaviCon 等來源取得，維持 null。",
+    "停車場入口座標未取得。"
+   ],
+   "public_notes": [
+    "湯畑步行圈、源泉放流。",
+    "取消規定：宿泊6日前まで免費（5日前20%、2日前30%、前日50%、當日100%；一休）"
+   ],
+   "updated_at": "2026-11-16"
+  },
+  {
+   "id": "lh_kusatsu_7811d358",
+   "name": "草津温泉 木の葉",
+   "name_ja": "草津温泉 木の葉",
+   "name_zh": "草津溫泉 木之葉",
+   "type": "onsen_ryokan",
+   "address": null,
+   "lat": null,
+   "lng": null,
+   "coord_source": null,
+   "google_place_id": null,
+   "google_maps_url": "https://www.google.com/maps/search/?api=1&query=%E8%8D%89%E6%B4%A5%E6%B8%A9%E6%B3%89%20%E6%9C%A8%E3%81%AE%E8%91%89",
+   "official_url": null,
+   "phone": null,
+   "mapcode": null,
+   "near_segments": [],
+   "rooms": [],
+   "prices": [],
+   "check_in_time": null,
+   "last_check_in": null,
+   "check_out_time": null,
+   "dinner_time": null,
+   "free_cancel_until": null,
+   "booking_opens": {
+    "status": "unknown",
+    "opens_on": null,
+    "rule": null,
+    "by_site": [],
+    "checked_at": null
+   },
+   "recommendations": [
+    {
+     "kind": "youtube",
+     "title": "[草津溫泉 🇯🇵] CP值超高「木之葉」溫泉旅館 ♨️ | 開箱系列 ❄️",
+     "author": "Maison CF・澳洲老華僑CF",
+     "url": "https://www.youtube.com/watch?v=Qugh1polX08",
+     "published_at": "2025-01-30",
+     "points": "作者住兩晚。重點：非旺季時一泊二食約 22,000 日圓／人（2025-01 當時價）；可預約輕井澤南口（Outlet 一帶）免費接駁，車程約 1 小時 10 分；兩個泉源、共 23 個浴池；3 個免費貸切風呂；免費拉麵宵夜。",
+     "lang": null
+    }
+   ],
+   "ratings": [
+    {
+     "source": "google",
+     "score": null,
+     "scale": 5,
+     "count": null,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E8%8D%89%E6%B4%A5%E6%B8%A9%E6%B3%89%20%E6%9C%A8%E3%81%AE%E8%91%89",
+     "checked_at": null,
+     "display": null
+    }
+   ],
+   "review_check": null,
+   "drive_check": {
+    "parking": {
+     "available": null,
+     "free": null,
+     "fee": null,
+     "reservation_required": null,
+     "covered": null,
+     "height_limit_m": null,
+     "width_limit_m": null,
+     "distance_to_front": null,
+     "lat": null,
+     "lng": null,
+     "mapcode": null,
+     "mapcode_source": null,
+     "note": null
+    },
+    "road": {
+     "mountain_road": null,
+     "night_drive": null,
+     "winter_closure": null,
+     "note": null
+    },
+    "from_prev": null,
+    "closed_days": [],
+    "closed_days_note": null,
+    "dinner_fits": null,
+    "note": null
+   },
+   "operation": {
+    "status": "open",
+    "checked_on": "2026-11-16",
+    "sources": [],
+    "recheck_before_departure": true,
+    "note": "Maison CF 2025-01 兩晚開箱；Dormy／共立旗下，官網連結見影片說明。"
+   },
+   "screening": {
+    "status": "candidate",
+    "rank": null,
+    "reason": null,
+    "area_unverified": false,
+    "over_1h": null
+   },
+   "stays_feedback": [],
+   "data_gaps": [
+    "place_id 未核對（不可臆造）；Google Maps 連結若為座標或館名搜尋，下次應改為店家頁。",
+    "MapCode 未從 Mapion／NaviCon 等來源取得，維持 null。",
+    "停車場入口座標未取得。"
+   ],
+   "public_notes": [],
+   "updated_at": "2026-11-16"
+  },
+  {
+   "id": "lh_kusatsu_294f0e0a",
+   "name": "草津温泉 炯（kei）",
+   "name_ja": "草津温泉 炯（kei）",
+   "name_zh": "草津 炯 kei",
+   "type": "onsen_ryokan",
+   "address": null,
+   "lat": null,
+   "lng": null,
+   "coord_source": null,
+   "google_place_id": null,
+   "google_maps_url": "https://www.google.com/maps/search/?api=1&query=%E8%8D%89%E6%B4%A5%E6%B8%A9%E6%B3%89%20%E7%82%AF%EF%BC%88kei%EF%BC%89",
+   "official_url": null,
+   "phone": null,
+   "mapcode": null,
+   "near_segments": [],
+   "rooms": [],
+   "prices": [],
+   "check_in_time": null,
+   "last_check_in": null,
+   "check_out_time": null,
+   "dinner_time": null,
+   "free_cancel_until": null,
+   "booking_opens": {
+    "status": "unknown",
+    "opens_on": null,
+    "rule": null,
+    "by_site": [],
+    "checked_at": null
+   },
+   "recommendations": [
+    {
+     "kind": "youtube",
+     "title": "【草津温泉イチの高級宿 -炯 kei-】全室スイートルーム！露天風呂付客室宿泊レポ！温泉オーベルジュやばすぎた…",
+     "author": "Yuruku OL Life",
+     "url": "https://www.youtube.com/watch?v=5Tq1sBYI-qY",
+     "published_at": "2023-05-04",
+     "points": "全室スイート、部分為露天風呂付客房的高級オーベルジュ宿泊レポ。",
+     "lang": null
+    },
+    {
+     "kind": "youtube",
+     "title": "【草津温泉】おすすめ旅館＆ホテル10選！",
+     "author": "Travel consultant Tiger & Mayo",
+     "url": "https://www.youtube.com/watch?v=tlLOQi7GCJs",
+     "published_at": "2021-03-21",
+     "points": "介紹 2019-08 開業、全 7 室、皆 70㎡ 以上、其中 3 室為露天風呂付；有設計感貸切風呂；為老舖「鐘の湯 みどり」姊妹館；湯畑步行約 3 分。面積條件對 3 大人 25㎡ 門檻有利，但屬高價少數室。",
+     "lang": null
+    }
+   ],
+   "ratings": [
+    {
+     "source": "google",
+     "score": null,
+     "scale": 5,
+     "count": null,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E8%8D%89%E6%B4%A5%E6%B8%A9%E6%B3%89%20%E7%82%AF%EF%BC%88kei%EF%BC%89",
+     "checked_at": null,
+     "display": null
+    }
+   ],
+   "review_check": null,
+   "drive_check": {
+    "parking": {
+     "available": null,
+     "free": null,
+     "fee": null,
+     "reservation_required": null,
+     "covered": null,
+     "height_limit_m": null,
+     "width_limit_m": null,
+     "distance_to_front": null,
+     "lat": null,
+     "lng": null,
+     "mapcode": null,
+     "mapcode_source": null,
+     "note": null
+    },
+    "road": {
+     "mountain_road": null,
+     "night_drive": null,
+     "winter_closure": null,
+     "note": null
+    },
+    "from_prev": null,
+    "closed_days": [],
+    "closed_days_note": null,
+    "dinner_fits": null,
+    "note": null
+   },
+   "operation": {
+    "status": "open",
+    "checked_on": "2026-11-16",
+    "sources": [],
+    "recheck_before_departure": true,
+    "note": "2019 開業；2023 宿泊レポ與 10 選影片仍將其列為高級代表。本次未找到停業消息。"
+   },
+   "screening": {
+    "status": "candidate",
+    "rank": null,
+    "reason": null,
+    "area_unverified": false,
+    "over_1h": null
+   },
+   "stays_feedback": [],
+   "data_gaps": [
+    "place_id 未核對（不可臆造）；Google Maps 連結若為座標或館名搜尋，下次應改為店家頁。",
+    "MapCode 未從 Mapion／NaviCon 等來源取得，維持 null。",
+    "停車場入口座標未取得。"
+   ],
+   "public_notes": [],
+   "updated_at": "2026-11-16"
+  },
+  {
+   "id": "lh_kusatsu_c0f7b796",
+   "name": "ホテル櫻井",
+   "name_ja": "ホテル櫻井",
+   "name_zh": "飯店櫻井／ホテル櫻井（草津）",
+   "type": "onsen_hotel",
+   "address": "群馬県吾妻郡草津町465-4",
+   "lat": null,
+   "lng": null,
+   "coord_source": null,
+   "google_place_id": null,
+   "google_maps_url": "https://www.google.com/maps/search/?api=1&query=%E3%83%9B%E3%83%86%E3%83%AB%E6%AB%BB%E4%BA%95",
+   "official_url": "https://www.hotel-sakurai.co.jp/",
+   "phone": "0279-88-1111／代表 0279-88-3211",
+   "mapcode": null,
+   "near_segments": [],
+   "rooms": [],
+   "prices": [
+    {
+     "site": "agoda",
+     "url": null,
+     "check_in": "2027-06-27",
+     "check_out": "2027-06-29",
+     "nights": 2,
+     "adults": 3,
+     "rooms": 1,
+     "room_name": null,
+     "size_sqm": null,
+     "meals": null,
+     "total_jpy": null,
+     "per_night_jpy": null,
+     "price_basis": null,
+     "tax": "unknown",
+     "tax_note": null,
+     "free_cancel_until": null,
+     "free_cancel_rule_text": null,
+     "member_price_jpy": null,
+     "coupon": null,
+     "status": "not_found",
+     "checked_at": "2026-11-16",
+     "source_url": null
+    },
+    {
+     "site": "google_hotels",
+     "url": null,
+     "check_in": "2027-06-27",
+     "check_out": "2027-06-29",
+     "nights": 2,
+     "adults": 3,
+     "rooms": 1,
+     "room_name": null,
+     "size_sqm": null,
+     "meals": null,
+     "total_jpy": null,
+     "per_night_jpy": null,
+     "price_basis": null,
+     "tax": "unknown",
+     "tax_note": null,
+     "free_cancel_until": null,
+     "free_cancel_rule_text": null,
+     "member_price_jpy": null,
+     "coupon": null,
+     "status": "not_found",
+     "checked_at": "2026-11-16",
+     "source_url": null
+    },
+    {
+     "site": "jalan",
+     "url": "https://www.jalan.net/yad310401/plan/?stayYear=2027&stayMonth=6&stayDay=27&stayCount=2&roomCount=1&adultNum=3",
+     "check_in": "2027-06-27",
+     "check_out": "2027-06-29",
+     "nights": 2,
+     "adults": 3,
+     "rooms": 1,
+     "room_name": null,
+     "size_sqm": null,
+     "meals": null,
+     "total_jpy": null,
+     "per_night_jpy": null,
+     "price_basis": null,
+     "tax": "unknown",
+     "tax_note": null,
+     "free_cancel_until": null,
+     "free_cancel_rule_text": null,
+     "member_price_jpy": null,
+     "coupon": null,
+     "status": "not_on_sale",
+     "checked_at": "2026-11-16",
+     "source_url": "https://www.jalan.net/yad310401/plan/?stayYear=2027&stayMonth=6&stayDay=27&stayCount=2&roomCount=1&adultNum=3"
+    },
+    {
+     "site": "ikyu",
+     "url": null,
+     "check_in": "2027-06-27",
+     "check_out": "2027-06-29",
+     "nights": 2,
+     "adults": 3,
+     "rooms": 1,
+     "room_name": null,
+     "size_sqm": null,
+     "meals": null,
+     "total_jpy": null,
+     "per_night_jpy": null,
+     "price_basis": null,
+     "tax": "unknown",
+     "tax_note": null,
+     "free_cancel_until": null,
+     "free_cancel_rule_text": null,
+     "member_price_jpy": null,
+     "coupon": null,
+     "status": "not_found",
+     "checked_at": "2026-11-16",
+     "source_url": null
+    },
+    {
+     "site": "official",
+     "url": null,
+     "check_in": "2027-06-27",
+     "check_out": "2027-06-29",
+     "nights": 2,
+     "adults": 3,
+     "rooms": 1,
+     "room_name": null,
+     "size_sqm": null,
+     "meals": null,
+     "total_jpy": null,
+     "per_night_jpy": null,
+     "price_basis": null,
+     "tax": "unknown",
+     "tax_note": null,
+     "free_cancel_until": null,
+     "free_cancel_rule_text": null,
+     "member_price_jpy": null,
+     "coupon": null,
+     "status": "not_found",
+     "checked_at": "2026-11-16",
+     "source_url": null
+    },
+    {
+     "site": "rakuten",
+     "url": null,
+     "check_in": "2027-06-27",
+     "check_out": "2027-06-29",
+     "nights": 2,
+     "adults": 3,
+     "rooms": 1,
+     "room_name": null,
+     "size_sqm": null,
+     "meals": null,
+     "total_jpy": null,
+     "per_night_jpy": null,
+     "price_basis": null,
+     "tax": "unknown",
+     "tax_note": null,
+     "free_cancel_until": null,
+     "free_cancel_rule_text": null,
+     "member_price_jpy": null,
+     "coupon": null,
+     "status": "not_found",
+     "checked_at": "2026-11-16",
+     "source_url": null
+    }
+   ],
+   "check_in_time": null,
+   "last_check_in": null,
+   "check_out_time": null,
+   "dinner_time": null,
+   "free_cancel_until": null,
+   "booking_opens": {
+    "status": "unknown",
+    "opens_on": null,
+    "rule": null,
+    "by_site": [],
+    "checked_at": null
+   },
+   "recommendations": [
+    {
+     "kind": "youtube",
+     "title": "【草津温泉・群馬県】ホテル・旅館おすすめ3選を現地リポート｜奈良屋｜ホテル櫻井｜ラビスタ草津ヒルズ",
+     "author": "じゃらん",
+     "url": "https://www.youtube.com/watch?v=U-Okm5xUEPw",
+     "published_at": "2023-09-28",
+     "points": "現地報導 3 選之一。",
+     "lang": null
+    },
+    {
+     "kind": "youtube",
+     "title": "【草津温泉】おすすめ旅館＆ホテル10選！群馬県の草津旅行前に必見！プロが設備重視の宿泊施設を選びました♪",
+     "author": "Travel consultant Tiger & Mayo",
+     "url": "https://www.youtube.com/watch?v=tlLOQi7GCJs",
+     "published_at": "2021-03-21",
+     "points": "設備導向 10 選：大型館、約 180 室、長約 20 公尺男湯、庭園、湯もみ／太鼓表演、館內活動多，有湯畑免費接送。影片較早。",
+     "lang": null
+    }
+   ],
+   "ratings": [
+    {
+     "source": "google",
+     "score": null,
+     "scale": 5,
+     "count": null,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E3%83%9B%E3%83%86%E3%83%AB%E6%AB%BB%E4%BA%95",
+     "checked_at": null,
+     "display": null
+    }
+   ],
+   "review_check": null,
+   "drive_check": {
+    "parking": {
+     "available": null,
+     "free": null,
+     "fee": null,
+     "reservation_required": null,
+     "covered": null,
+     "height_limit_m": null,
+     "width_limit_m": null,
+     "distance_to_front": null,
+     "lat": null,
+     "lng": null,
+     "mapcode": null,
+     "mapcode_source": null,
+     "note": null
+    },
+    "road": {
+     "mountain_road": null,
+     "night_drive": null,
+     "winter_closure": null,
+     "note": null
+    },
+    "from_prev": null,
+    "closed_days": [],
+    "closed_days_note": null,
+    "dinner_fits": null,
+    "note": "2027-06-28 榛名山 五連ヘアピン：OSRM 70.3 分（超過1小時）；2027-06-29 金精道路：OSRM 115.6 分（超過1小時）"
+   },
+   "operation": {
+    "status": "open",
+    "checked_on": "2026-11-16",
+    "sources": [],
+    "recheck_before_departure": true,
+    "note": "與奈良屋同列じゃらん 2023 現地 3 選；日本比較文仍將其列為大型綜合旅館代表。"
+   },
+   "screening": {
+    "status": "candidate",
+    "rank": null,
+    "reason": "面積未核（只見疊數、未標㎡），依規則不列入符合 25㎡。且位於草津，不在路線 I 伊香保兩晚動線上。",
+    "area_unverified": false,
+    "over_1h": null
+   },
+   "stays_feedback": [],
+   "data_gaps": [
+    "place_id 未核對（不可臆造）；Google Maps 連結若為座標或館名搜尋，下次應改為店家頁。",
+    "MapCode 未從 Mapion／NaviCon 等來源取得，維持 null。",
+    "停車場入口座標未取得。"
+   ],
+   "public_notes": [
+    "不符合 25㎡／3大人規則：公式與じゃらん客房頁可看到定員2–5／2–6的和洋室、次の間付等，但面積只見疊數（7.5～32疊），未標㎡。依規則不列入符合25㎡。"
+   ],
+   "updated_at": "2026-11-16"
+  },
+  {
+   "id": "lh_kusatsu_5727e153",
+   "name": "草津温泉 湯畑草菴",
+   "name_ja": "草津温泉 湯畑草菴",
+   "name_zh": null,
+   "type": "onsen_ryokan",
+   "address": "群馬県吾妻郡草津町118-1",
+   "lat": 36.6229392,
+   "lng": 138.5967297,
+   "coord_source": "Photon／湯畑座標，旅館在湯畑眼前。",
+   "google_place_id": null,
+   "google_maps_url": "https://www.google.com/maps/search/?api=1&query=%E8%8D%89%E6%B4%A5%E6%B8%A9%E6%B3%89%20%E6%B9%AF%E7%95%91%E8%8D%89%E8%8F%B4",
+   "official_url": "https://www.kusatsu-souan.co.jp/",
+   "phone": "0279-89-1011",
+   "mapcode": null,
+   "near_segments": [],
+   "rooms": [],
+   "prices": [
+    {
+     "site": "agoda",
+     "url": null,
+     "check_in": "2027-06-27",
+     "check_out": "2027-06-29",
+     "nights": 2,
+     "adults": 3,
+     "rooms": 1,
+     "room_name": null,
+     "size_sqm": null,
+     "meals": null,
+     "total_jpy": null,
+     "per_night_jpy": null,
+     "price_basis": null,
+     "tax": "unknown",
+     "tax_note": null,
+     "free_cancel_until": null,
+     "free_cancel_rule_text": null,
+     "member_price_jpy": null,
+     "coupon": null,
+     "status": "not_found",
+     "checked_at": "2026-11-16",
+     "source_url": null
+    },
+    {
+     "site": "google_hotels",
+     "url": null,
+     "check_in": "2027-06-27",
+     "check_out": "2027-06-29",
+     "nights": 2,
+     "adults": 3,
+     "rooms": 1,
+     "room_name": null,
+     "size_sqm": null,
+     "meals": null,
+     "total_jpy": null,
+     "per_night_jpy": null,
+     "price_basis": null,
+     "tax": "unknown",
+     "tax_note": null,
+     "free_cancel_until": null,
+     "free_cancel_rule_text": null,
+     "member_price_jpy": null,
+     "coupon": null,
+     "status": "not_found",
+     "checked_at": "2026-11-16",
+     "source_url": null
+    },
+    {
+     "site": "jalan",
+     "url": null,
+     "check_in": "2027-06-27",
+     "check_out": "2027-06-29",
+     "nights": 2,
+     "adults": 3,
+     "rooms": 1,
+     "room_name": null,
+     "size_sqm": null,
+     "meals": null,
+     "total_jpy": null,
+     "per_night_jpy": null,
+     "price_basis": null,
+     "tax": "unknown",
+     "tax_note": null,
+     "free_cancel_until": null,
+     "free_cancel_rule_text": null,
+     "member_price_jpy": null,
+     "coupon": null,
+     "status": "not_found",
+     "checked_at": "2026-11-16",
+     "source_url": null
+    },
+    {
+     "site": "ikyu",
+     "url": null,
+     "check_in": "2027-06-27",
+     "check_out": "2027-06-29",
+     "nights": 2,
+     "adults": 3,
+     "rooms": 1,
+     "room_name": null,
+     "size_sqm": null,
+     "meals": null,
+     "total_jpy": null,
+     "per_night_jpy": null,
+     "price_basis": null,
+     "tax": "unknown",
+     "tax_note": null,
+     "free_cancel_until": null,
+     "free_cancel_rule_text": null,
+     "member_price_jpy": null,
+     "coupon": null,
+     "status": "not_found",
+     "checked_at": "2026-11-16",
+     "source_url": null
+    },
+    {
+     "site": "official",
+     "url": null,
+     "check_in": "2027-06-27",
+     "check_out": "2027-06-29",
+     "nights": 2,
+     "adults": 3,
+     "rooms": 1,
+     "room_name": null,
+     "size_sqm": null,
+     "meals": null,
+     "total_jpy": null,
+     "per_night_jpy": null,
+     "price_basis": null,
+     "tax": "unknown",
+     "tax_note": null,
+     "free_cancel_until": null,
+     "free_cancel_rule_text": null,
+     "member_price_jpy": null,
+     "coupon": null,
+     "status": "not_found",
+     "checked_at": "2026-11-16",
+     "source_url": null
+    },
+    {
+     "site": "rakuten",
+     "url": null,
+     "check_in": "2027-06-27",
+     "check_out": "2027-06-29",
+     "nights": 2,
+     "adults": 3,
+     "rooms": 1,
+     "room_name": null,
+     "size_sqm": null,
+     "meals": null,
+     "total_jpy": null,
+     "per_night_jpy": null,
+     "price_basis": null,
+     "tax": "unknown",
+     "tax_note": null,
+     "free_cancel_until": null,
+     "free_cancel_rule_text": null,
+     "member_price_jpy": null,
+     "coupon": null,
+     "status": "not_found",
+     "checked_at": "2026-11-16",
+     "source_url": null
+    }
+   ],
+   "check_in_time": null,
+   "last_check_in": null,
+   "check_out_time": null,
+   "dinner_time": null,
+   "free_cancel_until": null,
+   "booking_opens": {
+    "status": "unknown",
+    "opens_on": null,
+    "rule": null,
+    "by_site": [],
+    "checked_at": null
+   },
+   "recommendations": [],
+   "ratings": [
+    {
+     "source": "google",
+     "score": null,
+     "scale": 5,
+     "count": null,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E8%8D%89%E6%B4%A5%E6%B8%A9%E6%B3%89%20%E6%B9%AF%E7%95%91%E8%8D%89%E8%8F%B4",
+     "checked_at": null,
+     "display": null
+    }
+   ],
+   "review_check": null,
+   "drive_check": {
+    "parking": {
+     "available": null,
+     "free": null,
+     "fee": null,
+     "reservation_required": null,
+     "covered": null,
+     "height_limit_m": null,
+     "width_limit_m": null,
+     "distance_to_front": null,
+     "lat": null,
+     "lng": null,
+     "mapcode": null,
+     "mapcode_source": null,
+     "note": null
+    },
+    "road": {
+     "mountain_road": null,
+     "night_drive": null,
+     "winter_closure": null,
+     "note": null
+    },
+    "from_prev": null,
+    "closed_days": [],
+    "closed_days_note": null,
+    "dinner_fits": null,
+    "note": "2027-06-28 榛名山 五連ヘアピン：OSRM 70.3 分（超過1小時）；2027-06-29 金精道路：OSRM 115.6 分（超過1小時）"
+   },
+   "operation": {
+    "status": "open",
+    "checked_on": "2026-11-16",
+    "sources": [],
+    "recheck_before_departure": true,
+    "note": null
+   },
+   "screening": {
+    "status": "rejected",
+    "rank": null,
+    "reason": "公式客房：14–19㎡定員2；湯畑ビュー14–17㎡定員3（沙發床）；16–20㎡定員2；8–10㎡定員2。全部低於25㎡。",
+    "area_unverified": false,
+    "over_1h": null
+   },
+   "stays_feedback": [],
+   "data_gaps": [
+    "place_id 未核對（不可臆造）；Google Maps 連結若為座標或館名搜尋，下次應改為店家頁。",
+    "MapCode 未從 Mapion／NaviCon 等來源取得，維持 null。",
+    "停車場入口座標未取得。"
+   ],
+   "public_notes": [
+    "不符合 25㎡／3大人規則：公式客房：14–19㎡定員2；湯畑ビュー14–17㎡定員3（沙發床）；16–20㎡定員2；8–10㎡定員2。全部低於25㎡。"
+   ],
+   "updated_at": "2026-11-16"
+  }
+ ]
+}

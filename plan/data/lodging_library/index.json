@@ -1,0 +1,423 @@
+{
+ "schema": "agency.lodging_library.index.v1",
+ "status": "ready",
+ "maintainer": "住宿部",
+ "updated_at": "2026-11-16",
+ "regions": [
+  {
+   "id": "tokyo",
+   "name": "東京（不含羽田）",
+   "prefecture": "東京都",
+   "file": "tokyo.json",
+   "data_version": "e9f6d77017",
+   "hotel_count": 17,
+   "updated_at": "2026-11-16",
+   "match": {
+    "base_keys": [
+     "TYO"
+    ],
+    "area_keywords": [
+     "東京"
+    ],
+    "bbox": [
+     35.666,
+     139.675,
+     35.762,
+     139.804
+    ]
+   }
+  },
+  {
+   "id": "haneda",
+   "name": "羽田機場周邊",
+   "prefecture": "東京都",
+   "file": "haneda.json",
+   "data_version": "f1acd66ccc",
+   "hotel_count": 6,
+   "updated_at": "2026-11-16",
+   "match": {
+    "base_keys": [
+     "HANEDA"
+    ],
+    "area_keywords": [
+     "羽田機場周邊",
+     "羽田"
+    ],
+    "bbox": [
+     35.514,
+     139.717,
+     35.582,
+     139.795
+    ]
+   }
+  },
+  {
+   "id": "izu",
+   "name": "伊豆（熱海／伊豆高原／伊東／稻取／修善寺／湯ヶ島等）",
+   "prefecture": "静岡県",
+   "file": "izu.json",
+   "data_version": "1fd4f1d7e1",
+   "hotel_count": 23,
+   "updated_at": "2026-11-16",
+   "match": {
+    "base_keys": [
+     "INATORI",
+     "SHUZENJI",
+     "ATAMI_IZUKOGEN"
+    ],
+    "area_keywords": [
+     "伊豆",
+     "熱海",
+     "伊豆高原",
+     "伊東",
+     "稻取",
+     "修善寺",
+     "湯ヶ島"
+    ],
+    "bbox": [
+     34.736,
+     138.889,
+     35.121,
+     139.131
+    ]
+   }
+  },
+  {
+   "id": "karuizawa",
+   "name": "輕井澤",
+   "prefecture": "長野県",
+   "file": "karuizawa.json",
+   "data_version": "bce4ba2bc6",
+   "hotel_count": 8,
+   "updated_at": "2026-11-16",
+   "match": {
+    "base_keys": [
+     "KARUIZAWA"
+    ],
+    "area_keywords": [
+     "輕井澤",
+     "軽井沢"
+    ],
+    "bbox": [
+     36.307,
+     138.547,
+     36.388,
+     138.664
+    ]
+   }
+  },
+  {
+   "id": "gunma_ikaho",
+   "name": "群馬・伊香保",
+   "prefecture": "群馬県",
+   "file": "gunma_ikaho.json",
+   "data_version": "d41a74fffd",
+   "hotel_count": 6,
+   "updated_at": "2026-11-16",
+   "match": {
+    "base_keys": [
+     "IKAHO"
+    ],
+    "area_keywords": [
+     "群馬",
+     "伊香保",
+     "伊香保温泉"
+    ],
+    "bbox": [
+     36.468,
+     138.886,
+     36.532,
+     138.952
+    ]
+   }
+  },
+  {
+   "id": "kusatsu",
+   "name": "草津溫泉",
+   "prefecture": "群馬県",
+   "file": "kusatsu.json",
+   "data_version": "a2ba9a0e13",
+   "hotel_count": 8,
+   "updated_at": "2026-11-16",
+   "match": {
+    "base_keys": [
+     "KUSATSU"
+    ],
+    "area_keywords": [
+     "草津溫泉",
+     "草津温泉"
+    ],
+    "bbox": [
+     36.593,
+     138.565,
+     36.653,
+     138.627
+    ]
+   }
+  },
+  {
+   "id": "shima",
+   "name": "四萬溫泉",
+   "prefecture": "群馬県",
+   "file": "shima.json",
+   "data_version": "f878100af1",
+   "hotel_count": 2,
+   "updated_at": "2026-11-16",
+   "match": {
+    "base_keys": [],
+    "area_keywords": [
+     "四萬溫泉",
+     "四万温泉"
+    ],
+    "bbox": null
+   }
+  },
+  {
+   "id": "minakami",
+   "name": "水上溫泉",
+   "prefecture": "群馬県",
+   "file": "minakami.json",
+   "data_version": "ac3ec1bffc",
+   "hotel_count": 2,
+   "updated_at": "2026-11-16",
+   "match": {
+    "base_keys": [],
+    "area_keywords": [
+     "水上溫泉",
+     "みなかみ"
+    ],
+    "bbox": null
+   }
+  },
+  {
+   "id": "nikko_kinugawa",
+   "name": "日光／鬼怒川（含中禪寺湖、霧降）",
+   "prefecture": "栃木県",
+   "file": "nikko_kinugawa.json",
+   "data_version": "51bd0a1216",
+   "hotel_count": 16,
+   "updated_at": "2026-11-16",
+   "match": {
+    "base_keys": [
+     "NIKKO",
+     "KINUGAWA"
+    ],
+    "area_keywords": [
+     "日光",
+     "鬼怒川",
+     "霧降"
+    ],
+    "bbox": [
+     36.722,
+     139.434,
+     36.866,
+     139.75
+    ]
+   }
+  },
+  {
+   "id": "hakone",
+   "name": "箱根",
+   "prefecture": "神奈川県",
+   "file": "hakone.json",
+   "data_version": "c4a7b4d52a",
+   "hotel_count": 4,
+   "updated_at": "2026-11-16",
+   "match": {
+    "base_keys": [
+     "HAKONE"
+    ],
+    "area_keywords": [
+     "箱根"
+    ],
+    "bbox": [
+     35.209,
+     139.014,
+     35.274,
+     139.093
+    ]
+   }
+  },
+  {
+   "id": "kawaguchiko",
+   "name": "富士五湖・河口湖",
+   "prefecture": "山梨県",
+   "file": "kawaguchiko.json",
+   "data_version": "5e03547741",
+   "hotel_count": 2,
+   "updated_at": "2026-11-16",
+   "match": {
+    "base_keys": [
+     "KAWAGUCHIKO"
+    ],
+    "area_keywords": [
+     "富士五湖",
+     "河口湖"
+    ],
+    "bbox": [
+     35.483,
+     138.732,
+     35.555,
+     138.801
+    ]
+   }
+  },
+  {
+   "id": "kamogawa",
+   "name": "千葉房總・鴨川溫泉",
+   "prefecture": "千葉県",
+   "file": "kamogawa.json",
+   "data_version": "7bd97cbe8f",
+   "hotel_count": 2,
+   "updated_at": "2026-11-16",
+   "match": {
+    "base_keys": [
+     "KAMOGAWA"
+    ],
+    "area_keywords": [
+     "千葉房總",
+     "鴨川溫泉",
+     "鴨川温泉"
+    ],
+    "bbox": [
+     35.082,
+     140.083,
+     35.148,
+     140.152
+    ]
+   }
+  },
+  {
+   "id": "nasu",
+   "name": "那須高原・那須溫泉",
+   "prefecture": "栃木県",
+   "file": "nasu.json",
+   "data_version": "e25c5e9b7e",
+   "hotel_count": 2,
+   "updated_at": "2026-11-16",
+   "match": {
+    "base_keys": [
+     "NASU"
+    ],
+    "area_keywords": [
+     "那須高原",
+     "那須溫泉",
+     "那須"
+    ],
+    "bbox": [
+     37.02,
+     139.977,
+     37.119,
+     140.054
+    ]
+   }
+  },
+  {
+   "id": "aizu",
+   "name": "會津若松・東山溫泉",
+   "prefecture": "福島県",
+   "file": "aizu.json",
+   "data_version": "e6d074d8ca",
+   "hotel_count": 2,
+   "updated_at": "2026-11-16",
+   "match": {
+    "base_keys": [
+     "AIZU"
+    ],
+    "area_keywords": [
+     "會津若松",
+     "東山溫泉",
+     "会津東山温泉"
+    ],
+    "bbox": [
+     37.448,
+     139.93,
+     37.51,
+     139.991
+    ]
+   }
+  },
+  {
+   "id": "oarai",
+   "name": "茨城 大洗・磯崎",
+   "prefecture": "茨城県",
+   "file": "oarai.json",
+   "data_version": "22b5f0983d",
+   "hotel_count": 3,
+   "updated_at": "2026-11-16",
+   "match": {
+    "base_keys": [
+     "OARAI"
+    ],
+    "area_keywords": [
+     "茨城",
+     "大洗",
+     "磯崎"
+    ],
+    "bbox": [
+     36.283,
+     140.556,
+     36.411,
+     140.655
+    ]
+   }
+  },
+  {
+   "id": "azumino",
+   "name": "信州 安曇野・穗高（含白骨溫泉）",
+   "prefecture": "長野県",
+   "file": "azumino.json",
+   "data_version": "ff409a14ea",
+   "hotel_count": 3,
+   "updated_at": "2026-11-16",
+   "match": {
+    "base_keys": [
+     "AZUMINO"
+    ],
+    "area_keywords": [
+     "信州",
+     "安曇野",
+     "穗高",
+     "穂高",
+     "白骨"
+    ],
+    "bbox": [
+     36.116,
+     137.594,
+     36.379,
+     137.867
+    ]
+   }
+  },
+  {
+   "id": "suwa",
+   "name": "信州 上諏訪溫泉",
+   "prefecture": "長野県",
+   "file": "suwa.json",
+   "data_version": "8628edcb8c",
+   "hotel_count": 2,
+   "updated_at": "2026-11-16",
+   "match": {
+    "base_keys": [
+     "SUWA"
+    ],
+    "area_keywords": [
+     "信州",
+     "上諏訪溫泉",
+     "上諏訪温泉"
+    ],
+    "bbox": [
+     36.019,
+     138.083,
+     36.079,
+     138.144
+    ]
+   }
+  }
+ ],
+ "deals_calendar": {
+  "file": "deals_calendar.json",
+  "data_version": "0315c3c56e",
+  "updated_at": "2026-11-16"
+ }
+}

@@ -1,0 +1,291 @@
+{
+ "schema": "agency.lodging_library.region.v1",
+ "region": {
+  "id": "suwa",
+  "name": "信州 上諏訪溫泉",
+  "prefecture": "長野県"
+ },
+ "updated_at": "2026-11-16",
+ "hotels": [
+  {
+   "id": "lh_suwa_9a7edc62",
+   "name": "上諏訪温泉 ぬのはん",
+   "name_ja": "上諏訪温泉 ぬのはん",
+   "name_zh": null,
+   "type": "onsen_ryokan",
+   "address": null,
+   "lat": 36.0493429,
+   "lng": 138.1133125,
+   "coord_source": null,
+   "google_place_id": "ChIJMXNwRa5VHGAR2DScZ6UX4sg",
+   "google_maps_url": "https://www.google.com/maps/place/?q=place_id:ChIJMXNwRa5VHGAR2DScZ6UX4sg",
+   "official_url": "https://www.nunohan.co.jp/",
+   "phone": "0266-52-5500",
+   "mapcode": null,
+   "near_segments": [
+    {
+     "trip_id": "2027-06-tokyo",
+     "route": "H",
+     "base_key": "SUWA",
+     "next_first_stop": null,
+     "drive_min_to_next_first_stop": null,
+     "drive_source": null
+    }
+   ],
+   "rooms": [
+    {
+     "room_name": "湖側本館 2～3F 10疊和室（3名）；街側別邸 10疊和モダン 每人約22,550～44,550",
+     "size_sqm": null,
+     "tatami": null,
+     "max_guests": null,
+     "beds": null,
+     "fits_party": null,
+     "note": "1泊2食（創作會席，廣間或個室） 參考價，非該日期實價（2027/6～7 多數尚未開賣；為楽天等目前開放日期之3名1室每人含稅價格範圍，實際依日期/方案變動）"
+    }
+   ],
+   "prices": [
+    {
+     "site": "rakuten",
+     "url": "https://hotel.travel.rakuten.co.jp/hotelinfo/plan/7071",
+     "check_in": null,
+     "check_out": null,
+     "nights": null,
+     "adults": 3,
+     "rooms": 1,
+     "room_name": "湖側本館 2～3F 10疊和室（3名）；街側別邸 10疊和モダン 每人約22,550～44,550",
+     "size_sqm": null,
+     "meals": "1泊2食（創作會席，廣間或個室）",
+     "total_jpy": null,
+     "per_night_jpy": null,
+     "price_basis": "per_night",
+     "tax": "included",
+     "tax_note": null,
+     "free_cancel_until": null,
+     "free_cancel_rule_text": null,
+     "member_price_jpy": null,
+     "coupon": null,
+     "status": "not_found",
+     "checked_at": "2026-10-24",
+     "source_url": "https://hotel.travel.rakuten.co.jp/hotelinfo/plan/7071"
+    }
+   ],
+   "check_in_time": null,
+   "last_check_in": null,
+   "check_out_time": null,
+   "dinner_time": "18:00 或 18:30（check-in 時選擇；楽天方案說明）",
+   "free_cancel_until": null,
+   "booking_opens": {
+    "status": "unknown",
+    "opens_on": null,
+    "rule": null,
+    "by_site": [],
+    "checked_at": null
+   },
+   "recommendations": [],
+   "ratings": [
+    {
+     "source": "google",
+     "score": null,
+     "scale": 5,
+     "count": null,
+     "url": "https://www.google.com/maps/place/?q=place_id:ChIJMXNwRa5VHGAR2DScZ6UX4sg",
+     "checked_at": null,
+     "display": null
+    }
+   ],
+   "review_check": null,
+   "drive_check": {
+    "parking": {
+     "available": null,
+     "free": null,
+     "fee": null,
+     "reservation_required": null,
+     "covered": null,
+     "height_limit_m": null,
+     "width_limit_m": null,
+     "distance_to_front": null,
+     "lat": null,
+     "lng": null,
+     "mapcode": null,
+     "mapcode_source": null,
+     "note": "60台（楽天FAQ）；入口座標/MapCode 未於 Mapion/NaviCon/官網/じゃらん 取得可核對資料，填 null"
+    },
+    "road": {
+     "mountain_road": null,
+     "night_drive": null,
+     "winter_closure": null,
+     "note": null
+    },
+    "from_prev": null,
+    "closed_days": [],
+    "closed_days_note": null,
+    "dinner_fits": null,
+    "note": null
+   },
+   "operation": {
+    "status": "open",
+    "checked_on": "2026-10-24",
+    "sources": [],
+    "recheck_before_departure": true,
+    "note": "當時可在樂天／じゃらん或官網查到資料；之後若有更新以較新查證為準。"
+   },
+   "screening": {
+    "status": "candidate",
+    "rank": null,
+    "reason": null,
+    "area_unverified": false,
+    "over_1h": null
+   },
+   "stays_feedback": [],
+   "data_gaps": [
+    "MapCode 未從 Mapion／NaviCon 等來源取得，維持 null。",
+    "停車場入口座標未取得。"
+   ],
+   "public_notes": [
+    "諏訪湖畔、料理評價高（楽天4.55）；片倉館步行圈、諏訪大社下社秋宮約5分（OSRM）。",
+    "取消規定：宿泊4日前 23:59 まで免費（3日前30%、前日起更高）（楽天トラベル施設キャンセルポリシー；方案另有規定時以方案為準）"
+   ],
+   "updated_at": "2026-11-16"
+  },
+  {
+   "id": "lh_suwa_dc3a1aa0",
+   "name": "上諏訪温泉 ホテル鷺乃湯",
+   "name_ja": "上諏訪温泉 ホテル鷺乃湯",
+   "name_zh": null,
+   "type": "onsen_ryokan",
+   "address": null,
+   "lat": 36.04928181,
+   "lng": 138.113743,
+   "coord_source": null,
+   "google_place_id": "ChIJTeo5SK5VHGARsaWMMereoKA",
+   "google_maps_url": "https://www.google.com/maps/place/?q=place_id:ChIJTeo5SK5VHGARsaWMMereoKA",
+   "official_url": "https://www.saginoyu.com/",
+   "phone": "0266-52-0480",
+   "mapcode": null,
+   "near_segments": [
+    {
+     "trip_id": "2027-06-tokyo",
+     "route": "H",
+     "base_key": "SUWA",
+     "next_first_stop": null,
+     "drive_min_to_next_first_stop": null,
+     "drive_source": null
+    }
+   ],
+   "rooms": [
+    {
+     "room_name": "白鷺亭10疊（4名定員）／秀芦閣レイクビュー和室；露天風呂付客室 每人約25,410～35,090",
+     "size_sqm": null,
+     "tatami": null,
+     "max_guests": null,
+     "beds": null,
+     "fits_party": null,
+     "note": "1泊2食（信州會席） 參考價，非該日期實價（2027/6～7 多數尚未開賣；為楽天等目前開放日期之3名1室每人含稅價格範圍，實際依日期/方案變動）"
+    }
+   ],
+   "prices": [
+    {
+     "site": "rakuten",
+     "url": "https://hotel.travel.rakuten.co.jp/hotelinfo/plan/5209",
+     "check_in": null,
+     "check_out": null,
+     "nights": null,
+     "adults": 3,
+     "rooms": 1,
+     "room_name": "白鷺亭10疊（4名定員）／秀芦閣レイクビュー和室；露天風呂付客室 每人約25,410～35,090",
+     "size_sqm": null,
+     "meals": "1泊2食（信州會席）",
+     "total_jpy": null,
+     "per_night_jpy": null,
+     "price_basis": "per_night",
+     "tax": "included",
+     "tax_note": null,
+     "free_cancel_until": null,
+     "free_cancel_rule_text": null,
+     "member_price_jpy": null,
+     "coupon": null,
+     "status": "not_found",
+     "checked_at": "2026-10-24",
+     "source_url": "https://hotel.travel.rakuten.co.jp/hotelinfo/plan/5209"
+    }
+   ],
+   "check_in_time": null,
+   "last_check_in": null,
+   "check_out_time": null,
+   "dinner_time": null,
+   "free_cancel_until": null,
+   "booking_opens": {
+    "status": "unknown",
+    "opens_on": null,
+    "rule": null,
+    "by_site": [],
+    "checked_at": null
+   },
+   "recommendations": [],
+   "ratings": [
+    {
+     "source": "google",
+     "score": null,
+     "scale": 5,
+     "count": null,
+     "url": "https://www.google.com/maps/place/?q=place_id:ChIJTeo5SK5VHGARsaWMMereoKA",
+     "checked_at": null,
+     "display": null
+    }
+   ],
+   "review_check": null,
+   "drive_check": {
+    "parking": {
+     "available": null,
+     "free": null,
+     "fee": null,
+     "reservation_required": null,
+     "covered": null,
+     "height_limit_m": null,
+     "width_limit_m": null,
+     "distance_to_front": null,
+     "lat": null,
+     "lng": null,
+     "mapcode": null,
+     "mapcode_source": null,
+     "note": "50台・無料（楽天FAQ）；入口座標/MapCode 未於 Mapion/NaviCon/官網/じゃらん 取得可核對資料，填 null"
+    },
+    "road": {
+     "mountain_road": null,
+     "night_drive": null,
+     "winter_closure": null,
+     "note": null
+    },
+    "from_prev": null,
+    "closed_days": [],
+    "closed_days_note": null,
+    "dinner_fits": null,
+    "note": null
+   },
+   "operation": {
+    "status": "open",
+    "checked_on": "2026-10-24",
+    "sources": [],
+    "recheck_before_departure": true,
+    "note": "當時可在樂天／じゃらん或官網查到資料；之後若有更新以較新查證為準。"
+   },
+   "screening": {
+    "status": "candidate",
+    "rank": null,
+    "reason": null,
+    "area_unverified": false,
+    "over_1h": null
+   },
+   "stays_feedback": [],
+   "data_gaps": [
+    "MapCode 未從 Mapion／NaviCon 等來源取得，維持 null。",
+    "停車場入口座標未取得。"
+   ],
+   "public_notes": [
+    "自家源泉100%掛け流し琥珀色溫泉，大浴場各有2座露天；上諏訪五酒藏步行圈。",
+    "取消規定：宿泊4日前 23:59 まで免費（3日前30%起）（楽天トラベル施設キャンセルポリシー；方案另有規定時以方案為準）"
+   ],
+   "updated_at": "2026-11-16"
+  }
+ ]
+}

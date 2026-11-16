@@ -1,0 +1,3626 @@
+{
+ "schema": "agency.lodging_library.region.v1",
+ "region": {
+  "id": "tokyo",
+  "name": "東京（不含羽田）",
+  "prefecture": "東京都"
+ },
+ "updated_at": "2026-11-16",
+ "hotels": [
+  {
+   "id": "lh_tokyo_582aed9f",
+   "name": "サンシャインシティプリンスホテル",
+   "name_ja": "サンシャインシティプリンスホテル",
+   "name_zh": "陽光城王子大飯店（池袋）",
+   "type": "hotel",
+   "address": "東京都豊島区東池袋3-1-5",
+   "lat": 35.72955762,
+   "lng": 139.7193985,
+   "coord_source": "既有 lodging.bases TYO（國土地理院／既有查核）；本次未重測",
+   "google_place_id": "ChIJq9y3qW-NGGARDKwO8EL9BX4",
+   "google_maps_url": "https://www.google.com/maps/place/?q=place_id:ChIJq9y3qW-NGGARDKwO8EL9BX4",
+   "official_url": "https://www.princehotels.co.jp/sunshine/",
+   "phone": "03-3988-1111",
+   "mapcode": null,
+   "near_segments": [
+    {
+     "trip_id": "2027-06-tokyo",
+     "route": "A",
+     "base_key": "TYO",
+     "next_first_stop": null,
+     "drive_min_to_next_first_stop": null,
+     "drive_source": null
+    },
+    {
+     "trip_id": "2027-06-tokyo",
+     "route": "B",
+     "base_key": "TYO",
+     "next_first_stop": null,
+     "drive_min_to_next_first_stop": null,
+     "drive_source": null
+    },
+    {
+     "trip_id": "2027-06-tokyo",
+     "route": "C",
+     "base_key": "TYO",
+     "next_first_stop": null,
+     "drive_min_to_next_first_stop": null,
+     "drive_source": null
+    },
+    {
+     "trip_id": "2027-06-tokyo",
+     "route": "D",
+     "base_key": "TYO",
+     "next_first_stop": null,
+     "drive_min_to_next_first_stop": null,
+     "drive_source": null
+    },
+    {
+     "trip_id": "2027-06-tokyo",
+     "route": "E",
+     "base_key": "TYO",
+     "next_first_stop": null,
+     "drive_min_to_next_first_stop": null,
+     "drive_source": null
+    },
+    {
+     "trip_id": "2027-06-tokyo",
+     "route": "F",
+     "base_key": "TYO",
+     "next_first_stop": null,
+     "drive_min_to_next_first_stop": null,
+     "drive_source": null
+    },
+    {
+     "trip_id": "2027-06-tokyo",
+     "route": "G",
+     "base_key": "TYO",
+     "next_first_stop": null,
+     "drive_min_to_next_first_stop": null,
+     "drive_source": null
+    },
+    {
+     "trip_id": "2027-06-tokyo",
+     "route": "H",
+     "base_key": "TYO",
+     "next_first_stop": null,
+     "drive_min_to_next_first_stop": null,
+     "drive_source": null
+    },
+    {
+     "trip_id": "2027-06-tokyo",
+     "route": "F（lodging.bases／當時推薦路線）",
+     "base_key": "TYO",
+     "next_first_stop": null,
+     "drive_min_to_next_first_stop": null,
+     "drive_source": null
+    },
+    {
+     "trip_id": "2027-06-tokyo",
+     "route": "I",
+     "base_key": "TYO",
+     "next_first_stop": null,
+     "drive_min_to_next_first_stop": null,
+     "drive_source": null
+    }
+   ],
+   "rooms": [
+    {
+     "room_name": "パノラマフロア 33～35F トリプルルーム 75㎡（120cm床×3）",
+     "size_sqm": 75,
+     "tatami": null,
+     "max_guests": null,
+     "beds": null,
+     "fits_party": null,
+     "note": "朝食付（バリューレート＜朝食付き＞） 2027-06-19～06-21（2泊）大人3名1室，含稅總額（實際日期查詢）"
+    },
+    {
+     "room_name": "パノラマフロア 33～35F トリプルルーム 75.0㎡",
+     "size_sqm": 75.0,
+     "tatami": null,
+     "max_guests": null,
+     "beds": null,
+     "fits_party": null,
+     "note": "朝食付"
+    },
+    {
+     "room_name": "10～24F ツインルームA 29.3㎡＋エキストラベッド",
+     "size_sqm": 29.3,
+     "tatami": null,
+     "max_guests": null,
+     "beds": null,
+     "fits_party": null,
+     "note": "素泊"
+    },
+    {
+     "room_name": "10階～24階 ツインルームA 禁煙",
+     "size_sqm": 29.3,
+     "tatami": null,
+     "max_guests": 3,
+     "beds": null,
+     "fits_party": null,
+     "note": "素泊（食事なし）"
+    },
+    {
+     "room_name": "10階〜24階 ツインルームA 禁煙 29.3平米（雙床＋加床，定員3）",
+     "size_sqm": 29.3,
+     "tatami": null,
+     "max_guests": 3,
+     "beds": "官網：110cm×206cm×2＋エキストラベッド 110cm×188cm×1",
+     "fits_party": null,
+     "note": "素泊 同條件楽天「バリューレート(室料のみ)」為 ¥82,791，じゃらん早割30較低。楽天免費取消：2日前（2027-06-17）23:59 前（バリュー／ベーシック方案群）。"
+    },
+    {
+     "room_name": "10階〜24階 ツインルームA 禁煙 29.3平米",
+     "size_sqm": 29.3,
+     "tatami": null,
+     "max_guests": 3,
+     "beds": "110cm×2＋加床",
+     "fits_party": null,
+     "note": "素泊"
+    },
+    {
+     "room_name": "10階〜24階 ツインルームA 禁煙 29.3平米",
+     "size_sqm": 29.3,
+     "tatami": null,
+     "max_guests": 3,
+     "beds": "110cm×2＋加床",
+     "fits_party": null,
+     "note": "朝食付"
+    },
+    {
+     "room_name": "パノラマフロア 33〜35階 トリプルルーム 禁煙 75.0平米",
+     "size_sqm": 75.0,
+     "tatami": null,
+     "max_guests": 4,
+     "beds": "官網：120cm×206cm×3（可再加床至4名）",
+     "fits_party": null,
+     "note": "朝食付 3張獨立床。同日楽天「PREMIUM ナイトビュー(朝食付き)」為 ¥352,152。じゃらん本次首頁未列出此 75㎡ トリプル方案。"
+    },
+    {
+     "room_name": "10階～24階 ツインルームA 禁煙 29.3㎡（ツイン＋加床、定員3）",
+     "size_sqm": 29.3,
+     "tatami": null,
+     "max_guests": null,
+     "beds": null,
+     "fits_party": null,
+     "note": null
+    }
+   ],
+   "prices": [
+    {
+     "site": "other",
+     "url": null,
+     "check_in": "2027-06-19",
+     "check_out": "2027-06-21",
+     "nights": 2,
+     "adults": 3,
+     "rooms": 1,
+     "room_name": "パノラマフロア 33～35F トリプルルーム 75㎡（120cm床×3）",
+     "size_sqm": 75,
+     "meals": "朝食付（バリューレート＜朝食付き＞）",
+     "total_jpy": 285021,
+     "per_night_jpy": null,
+     "price_basis": "total",
+     "tax": "included",
+     "tax_note": null,
+     "free_cancel_until": null,
+     "free_cancel_rule_text": null,
+     "member_price_jpy": null,
+     "coupon": null,
+     "status": "ok",
+     "checked_at": "2026-10-24",
+     "source_url": null
+    },
+    {
+     "site": "rakuten",
+     "url": "https://hotel.travel.rakuten.co.jp/hotelinfo/plan/18392?f_teikei=&f_heya_su=1&f_otona_su=3&f_nen1=2027&f_tuki1=6&f_hi1=19&f_nen2=2027&f_tuki2=6&f_hi2=21&f_sort=min_charge",
+     "check_in": "2027-06-19",
+     "check_out": "2027-06-21",
+     "nights": 2,
+     "adults": 3,
+     "rooms": 1,
+     "room_name": "パノラマフロア 33～35F トリプルルーム 75㎡（120cm床×3）",
+     "size_sqm": 75,
+     "meals": "朝食付（バリューレート＜朝食付き＞）",
+     "total_jpy": null,
+     "per_night_jpy": null,
+     "price_basis": "per_night",
+     "tax": "included",
+     "tax_note": null,
+     "free_cancel_until": null,
+     "free_cancel_rule_text": null,
+     "member_price_jpy": null,
+     "coupon": null,
+     "status": "not_found",
+     "checked_at": "2026-10-24",
+     "source_url": "https://hotel.travel.rakuten.co.jp/hotelinfo/plan/18392?f_teikei=&f_heya_su=1&f_otona_su=3&f_nen1=2027&f_tuki1=6&f_hi1=19&f_nen2=2027&f_tuki2=6&f_hi2=21&f_sort=min_charge"
+    },
+    {
+     "site": "rakuten",
+     "url": "https://hotel.travel.rakuten.co.jp/hotelinfo/plan/18392?f_heya_su=1&f_otona_su=3&f_nen1=2027&f_tuki1=6&f_hi1=19&f_nen2=2027&f_tuki2=6&f_hi2=21&f_sort=min_charge",
+     "check_in": "2027-06-19",
+     "check_out": "2027-06-21",
+     "nights": 2,
+     "adults": 3,
+     "rooms": 1,
+     "room_name": "10～24F ツインルームA 29.3㎡＋エキストラベッド",
+     "size_sqm": 29.3,
+     "meals": "素泊",
+     "total_jpy": 82791,
+     "per_night_jpy": null,
+     "price_basis": "total",
+     "tax": "included",
+     "tax_note": null,
+     "free_cancel_until": null,
+     "free_cancel_rule_text": null,
+     "member_price_jpy": null,
+     "coupon": null,
+     "status": "ok",
+     "checked_at": "2026-11-12",
+     "source_url": "https://hotel.travel.rakuten.co.jp/hotelinfo/plan/18392?f_heya_su=1&f_otona_su=3&f_nen1=2027&f_tuki1=6&f_hi1=19&f_nen2=2027&f_tuki2=6&f_hi2=21&f_sort=min_charge"
+    },
+    {
+     "site": "rakuten",
+     "url": "https://hotel.travel.rakuten.co.jp/hotelinfo/plan/18392?f_heya_su=1&f_otona_su=3&f_nen1=2027&f_tuki1=6&f_hi1=19&f_nen2=2027&f_tuki2=6&f_hi2=21&f_sort=min_charge",
+     "check_in": "2027-06-19",
+     "check_out": "2027-06-21",
+     "nights": 2,
+     "adults": 3,
+     "rooms": 1,
+     "room_name": "10～24F ツインルームA 29.3㎡＋エキストラベッド",
+     "size_sqm": 29.3,
+     "meals": "朝食付",
+     "total_jpy": 99291,
+     "per_night_jpy": null,
+     "price_basis": "total",
+     "tax": "included",
+     "tax_note": null,
+     "free_cancel_until": null,
+     "free_cancel_rule_text": null,
+     "member_price_jpy": null,
+     "coupon": null,
+     "status": "ok",
+     "checked_at": "2026-11-12",
+     "source_url": "https://hotel.travel.rakuten.co.jp/hotelinfo/plan/18392?f_heya_su=1&f_otona_su=3&f_nen1=2027&f_tuki1=6&f_hi1=19&f_nen2=2027&f_tuki2=6&f_hi2=21&f_sort=min_charge"
+    },
+    {
+     "site": "rakuten",
+     "url": "https://hotel.travel.rakuten.co.jp/hotelinfo/plan/18392?f_heya_su=1&f_otona_su=3&f_nen1=2027&f_tuki1=6&f_hi1=19&f_nen2=2027&f_tuki2=6&f_hi2=21&f_sort=min_charge",
+     "check_in": "2027-06-19",
+     "check_out": "2027-06-21",
+     "nights": 2,
+     "adults": 3,
+     "rooms": 1,
+     "room_name": "パノラマフロア 33～35F トリプルルーム 75.0㎡",
+     "size_sqm": 75,
+     "meals": "朝食付",
+     "total_jpy": 285021,
+     "per_night_jpy": null,
+     "price_basis": "total",
+     "tax": "included",
+     "tax_note": null,
+     "free_cancel_until": null,
+     "free_cancel_rule_text": null,
+     "member_price_jpy": null,
+     "coupon": null,
+     "status": "ok",
+     "checked_at": "2026-11-12",
+     "source_url": "https://hotel.travel.rakuten.co.jp/hotelinfo/plan/18392?f_heya_su=1&f_otona_su=3&f_nen1=2027&f_tuki1=6&f_hi1=19&f_nen2=2027&f_tuki2=6&f_hi2=21&f_sort=min_charge"
+    },
+    {
+     "site": "google_hotels",
+     "url": null,
+     "check_in": "2027-06-19",
+     "check_out": "2027-06-21",
+     "nights": 2,
+     "adults": 3,
+     "rooms": 1,
+     "room_name": "3 人房",
+     "size_sqm": null,
+     "meals": null,
+     "total_jpy": null,
+     "per_night_jpy": 28754,
+     "price_basis": "per_night",
+     "tax": "included",
+     "tax_note": "Google 價格資訊同時顯示 2 晚總價 ¥57,508（含稅金和相關費用）",
+     "free_cancel_until": "2027-06-13",
+     "free_cancel_rule_text": "Google 顯示可於 6月13日前免費取消（年份未顯示）",
+     "member_price_jpy": null,
+     "coupon": null,
+     "status": "ok",
+     "checked_at": "2026-11-15",
+     "source_url": null
+    },
+    {
+     "site": "google_hotels",
+     "url": null,
+     "check_in": "2027-06-19",
+     "check_out": "2027-06-21",
+     "nights": 2,
+     "adults": 3,
+     "rooms": 1,
+     "room_name": "3 人房",
+     "size_sqm": null,
+     "meals": null,
+     "total_jpy": null,
+     "per_night_jpy": 23944,
+     "price_basis": "per_night",
+     "tax": "unknown",
+     "tax_note": "除明確註明外，Google 個別訂房來源價格列未明示含稅與否，故記為未明。",
+     "free_cancel_until": "2027-06-16",
+     "free_cancel_rule_text": "Google 顯示可於 6月16日前免費取消（年份未顯示）",
+     "member_price_jpy": null,
+     "coupon": null,
+     "status": "ok",
+     "checked_at": "2026-11-15",
+     "source_url": null
+    },
+    {
+     "site": "google_hotels",
+     "url": null,
+     "check_in": "2027-06-19",
+     "check_out": "2027-06-21",
+     "nights": 2,
+     "adults": 3,
+     "rooms": 1,
+     "room_name": "3 人房",
+     "size_sqm": null,
+     "meals": null,
+     "total_jpy": null,
+     "per_night_jpy": 29466,
+     "price_basis": "per_night",
+     "tax": "unknown",
+     "tax_note": "除明確註明外，Google 個別訂房來源價格列未明示含稅與否，故記為未明。",
+     "free_cancel_until": "2027-06-16",
+     "free_cancel_rule_text": "Google 顯示可於 6月16日前免費取消（年份未顯示）",
+     "member_price_jpy": null,
+     "coupon": null,
+     "status": "ok",
+     "checked_at": "2026-11-15",
+     "source_url": null
+    },
+    {
+     "site": "google_hotels",
+     "url": null,
+     "check_in": "2027-06-19",
+     "check_out": "2027-06-21",
+     "nights": 2,
+     "adults": 3,
+     "rooms": 1,
+     "room_name": "3 人房",
+     "size_sqm": null,
+     "meals": null,
+     "total_jpy": null,
+     "per_night_jpy": 29202,
+     "price_basis": "per_night",
+     "tax": "unknown",
+     "tax_note": "除明確註明外，Google 個別訂房來源價格列未明示含稅與否，故記為未明。",
+     "free_cancel_until": "2027-06-12",
+     "free_cancel_rule_text": "Google 顯示可於 6月12日前免費取消（年份未顯示）",
+     "member_price_jpy": null,
+     "coupon": null,
+     "status": "ok",
+     "checked_at": "2026-11-15",
+     "source_url": null
+    },
+    {
+     "site": "google_hotels",
+     "url": null,
+     "check_in": "2027-06-19",
+     "check_out": "2027-06-21",
+     "nights": 2,
+     "adults": 3,
+     "rooms": 1,
+     "room_name": "3 位房客；房型名稱未顯示",
+     "size_sqm": null,
+     "meals": null,
+     "total_jpy": null,
+     "per_night_jpy": 24503,
+     "price_basis": "per_night",
+     "tax": "unknown",
+     "tax_note": "除明確註明外，Google 個別訂房來源價格列未明示含稅與否，故記為未明。",
+     "free_cancel_until": "2027-06-14",
+     "free_cancel_rule_text": "Google 顯示可於 6月14日前免費取消（年份未顯示）；另顯示免費 Wi-Fi",
+     "member_price_jpy": null,
+     "coupon": null,
+     "status": "ok",
+     "checked_at": "2026-11-15",
+     "source_url": null
+    },
+    {
+     "site": "jalan",
+     "url": "https://www.jalan.net/yad371478/plan/?stayYear=2027&stayMonth=6&stayDay=19&stayCount=2&roomCount=1&adultNum=3",
+     "check_in": "2027-06-19",
+     "check_out": "2027-06-21",
+     "nights": 2,
+     "adults": 3,
+     "rooms": 1,
+     "room_name": "10階〜24階 ツインルームA 禁煙 29.3平米（雙床＋加床，定員3）",
+     "size_sqm": 29.3,
+     "meals": "素泊",
+     "total_jpy": 73344,
+     "per_night_jpy": null,
+     "price_basis": "total",
+     "tax": "included",
+     "tax_note": null,
+     "free_cancel_until": null,
+     "free_cancel_rule_text": "待查（じゃらん該方案本次未抽出取消期限原文）",
+     "member_price_jpy": null,
+     "coupon": null,
+     "status": "ok",
+     "checked_at": "2026-11-15",
+     "source_url": "https://www.jalan.net/yad371478/plan/?stayYear=2027&stayMonth=6&stayDay=19&stayCount=2&roomCount=1&adultNum=3"
+    },
+    {
+     "site": "jalan",
+     "url": null,
+     "check_in": "2027-06-19",
+     "check_out": "2027-06-21",
+     "nights": 2,
+     "adults": 3,
+     "rooms": 1,
+     "room_name": "10階～24階 ツインルームA 禁煙 29.3㎡（ツイン＋加床、定員3）",
+     "size_sqm": 29.3,
+     "meals": "素泊",
+     "total_jpy": 73344,
+     "per_night_jpy": null,
+     "price_basis": "total",
+     "tax": "included",
+     "tax_note": null,
+     "free_cancel_until": null,
+     "free_cancel_rule_text": null,
+     "member_price_jpy": null,
+     "coupon": null,
+     "status": "ok",
+     "checked_at": "2026-11-15",
+     "source_url": null
+    },
+    {
+     "site": "ikyu",
+     "url": "https://www.ikyu.com/00000637/11712537/10063725/?cid=20270619&cod=20270621&lc=2&ppc=3&rc=1",
+     "check_in": "2027-06-19",
+     "check_out": "2027-06-21",
+     "nights": 2,
+     "adults": 3,
+     "rooms": 1,
+     "room_name": "10階～24階 ツインルームA 禁煙",
+     "size_sqm": null,
+     "meals": "素泊（食事なし）",
+     "total_jpy": 63897,
+     "per_night_jpy": null,
+     "price_basis": "total",
+     "tax": "included",
+     "tax_note": null,
+     "free_cancel_until": "2027-06-13",
+     "free_cancel_rule_text": "2027年6月13日までキャンセル料無料",
+     "member_price_jpy": null,
+     "coupon": null,
+     "status": "ok",
+     "checked_at": "2026-11-15",
+     "source_url": "https://www.ikyu.com/00000637/11712537/10063725/?cid=20270619&cod=20270621&lc=2&ppc=3&rc=1"
+    },
+    {
+     "site": "ikyu",
+     "url": "https://www.ikyu.com/00000637/11712537/10063725/?cid=20270619&cod=20270621&lc=2&ppc=3&rc=1",
+     "check_in": "2027-06-19",
+     "check_out": "2027-06-21",
+     "nights": 2,
+     "adults": 3,
+     "rooms": 1,
+     "room_name": "10階～24階 ツインルームA 禁煙 29.3㎡（ツイン＋加床、定員3）",
+     "size_sqm": 29.3,
+     "meals": "素泊",
+     "total_jpy": 63897,
+     "per_night_jpy": null,
+     "price_basis": "total",
+     "tax": "included",
+     "tax_note": null,
+     "free_cancel_until": "2027-06-13",
+     "free_cancel_rule_text": "2027年6月13日までキャンセル料無料",
+     "member_price_jpy": null,
+     "coupon": null,
+     "status": "ok",
+     "checked_at": "2026-11-15",
+     "source_url": "https://www.ikyu.com/00000637/11712537/10063725/?cid=20270619&cod=20270621&lc=2&ppc=3&rc=1"
+    },
+    {
+     "site": "rakuten",
+     "url": "https://hotel.travel.rakuten.co.jp/hotelinfo/plan/18392?f_heya_su=1&f_otona_su=3&f_nen1=2027&f_tuki1=6&f_hi1=19&f_nen2=2027&f_tuki2=6&f_hi2=21&f_sort=min_charge",
+     "check_in": "2027-06-19",
+     "check_out": "2027-06-21",
+     "nights": 2,
+     "adults": 3,
+     "rooms": 1,
+     "room_name": "10階〜24階 ツインルームA 禁煙 29.3平米",
+     "size_sqm": 29.3,
+     "meals": "素泊",
+     "total_jpy": 82791,
+     "per_night_jpy": null,
+     "price_basis": "total",
+     "tax": "included",
+     "tax_note": null,
+     "free_cancel_until": "2027-06-17",
+     "free_cancel_rule_text": "楽天：2日前（2027-06-17）23:59 前無料。",
+     "member_price_jpy": null,
+     "coupon": null,
+     "status": "ok",
+     "checked_at": "2026-11-15",
+     "source_url": "https://hotel.travel.rakuten.co.jp/hotelinfo/plan/18392?f_heya_su=1&f_otona_su=3&f_nen1=2027&f_tuki1=6&f_hi1=19&f_nen2=2027&f_tuki2=6&f_hi2=21&f_sort=min_charge"
+    },
+    {
+     "site": "rakuten",
+     "url": null,
+     "check_in": "2027-06-19",
+     "check_out": "2027-06-21",
+     "nights": 2,
+     "adults": 3,
+     "rooms": 1,
+     "room_name": "10階～24階 ツインルームA 禁煙 29.3㎡（ツイン＋加床、定員3）",
+     "size_sqm": 29.3,
+     "meals": "素泊",
+     "total_jpy": 82791,
+     "per_night_jpy": null,
+     "price_basis": "total",
+     "tax": "included",
+     "tax_note": null,
+     "free_cancel_until": null,
+     "free_cancel_rule_text": null,
+     "member_price_jpy": null,
+     "coupon": null,
+     "status": "ok",
+     "checked_at": "2026-11-15",
+     "source_url": null
+    },
+    {
+     "site": "rakuten",
+     "url": "https://hotel.travel.rakuten.co.jp/hotelinfo/plan/18392?f_heya_su=1&f_otona_su=3&f_nen1=2027&f_tuki1=6&f_hi1=19&f_nen2=2027&f_tuki2=6&f_hi2=21&f_sort=min_charge",
+     "check_in": "2027-06-19",
+     "check_out": "2027-06-21",
+     "nights": 2,
+     "adults": 3,
+     "rooms": 1,
+     "room_name": "パノラマフロア 33〜35階 トリプルルーム 禁煙 75.0平米",
+     "size_sqm": 75,
+     "meals": "朝食付",
+     "total_jpy": 285021,
+     "per_night_jpy": null,
+     "price_basis": "total",
+     "tax": "included",
+     "tax_note": null,
+     "free_cancel_until": "2027-06-17",
+     "free_cancel_rule_text": "楽天：2日前（2027-06-17）23:59 前無料。",
+     "member_price_jpy": null,
+     "coupon": null,
+     "status": "ok",
+     "checked_at": "2026-11-15",
+     "source_url": "https://hotel.travel.rakuten.co.jp/hotelinfo/plan/18392?f_heya_su=1&f_otona_su=3&f_nen1=2027&f_tuki1=6&f_hi1=19&f_nen2=2027&f_tuki2=6&f_hi2=21&f_sort=min_charge"
+    },
+    {
+     "site": "rakuten",
+     "url": "https://hotel.travel.rakuten.co.jp/hotelinfo/plan/18392?f_heya_su=1&f_otona_su=3&f_nen1=2027&f_tuki1=6&f_hi1=19&f_nen2=2027&f_tuki2=6&f_hi2=21&f_sort=min_charge",
+     "check_in": "2027-06-19",
+     "check_out": "2027-06-21",
+     "nights": 2,
+     "adults": 3,
+     "rooms": 1,
+     "room_name": "10階〜24階 ツインルームA 禁煙 29.3平米",
+     "size_sqm": 29.3,
+     "meals": "朝食付",
+     "total_jpy": 99291,
+     "per_night_jpy": null,
+     "price_basis": "total",
+     "tax": "included",
+     "tax_note": null,
+     "free_cancel_until": "2027-06-17",
+     "free_cancel_rule_text": "楽天：2日前（2027-06-17）23:59 前無料。",
+     "member_price_jpy": null,
+     "coupon": null,
+     "status": "ok",
+     "checked_at": "2026-11-15",
+     "source_url": "https://hotel.travel.rakuten.co.jp/hotelinfo/plan/18392?f_heya_su=1&f_otona_su=3&f_nen1=2027&f_tuki1=6&f_hi1=19&f_nen2=2027&f_tuki2=6&f_hi2=21&f_sort=min_charge"
+    }
+   ],
+   "check_in_time": null,
+   "last_check_in": null,
+   "check_out_time": null,
+   "dinner_time": null,
+   "free_cancel_until": null,
+   "booking_opens": {
+    "status": "on_sale",
+    "opens_on": null,
+    "rule": "已開賣：楽天方案期間至 2027-10-31，2027/6/19 已可查到空房（トリプル楽天顯示殘 3 室）",
+    "by_site": [],
+    "checked_at": null
+   },
+   "recommendations": [
+    {
+     "kind": "blog",
+     "title": "【日本】池袋太陽城王子大飯店︱直通太陽城商場，動漫購物住宿首選",
+     "author": "企鵝吃喝玩樂（pengu777）",
+     "url": "https://pengu777.com/sunshine-city-prince-hotel-ikebukuro/",
+     "published_at": "2026-06-08",
+     "points": "作者認為是池袋機能型首選：直通 Sunshine City，寶可夢中心與動漫店、美食都在商場內，亦有機場巴士。",
+     "lang": null
+    },
+    {
+     "kind": "blog",
+     "title": "【東京住宿推薦】池袋太陽城王子飯店聽說是猛鬼酒店?地點在Sunshine City購物中心內",
+     "author": "Tisshuang",
+     "url": "https://tisshuang.com/blog/post/princehotels",
+     "published_at": "2025-11-17",
+     "points": "提到網傳猛鬼傳聞，作者住 19 樓無不適；利木津可到門口，樓下即太陽城與陽光水族館，地點與價格被列為優點。",
+     "lang": null
+    },
+    {
+     "kind": "blog",
+     "title": "遊記｜《太陽城王子大飯店》— 走進陽光城，住進池袋最熱鬧的一角",
+     "author": "Simon（Simon's 娛樂隨筆／vocus）",
+     "url": "https://vocus.cc/article/6a7c803bfd8978000155e670",
+     "published_at": "2026-08-13",
+     "points": "臨時延住入住最高 37 樓，強調窗外池袋城市景觀，以及可用同集團點數續住。",
+     "lang": null
+    },
+    {
+     "kind": "blog",
+     "title": "東京池袋飯店｜池袋太陽城王子大飯店,樓下就是池袋太陽城,美食購物水族館通通都有",
+     "author": "小V（跟著小V吃喝玩樂）",
+     "url": "https://venuslin.tw/sunshine-city-prince-hotel-ikebukuro/",
+     "published_at": "2019-08-13",
+     "points": "較早的入住心得：有單人至四床等房型，推薦帶小孩或長輩；門口利木津往返成田／羽田。日期較舊，僅作補充。",
+     "lang": null
+    }
+   ],
+   "ratings": [
+    {
+     "source": "google",
+     "score": null,
+     "scale": 5,
+     "count": null,
+     "url": "https://www.google.com/maps/place/?q=place_id:ChIJq9y3qW-NGGARDKwO8EL9BX4",
+     "checked_at": "2026-11-15",
+     "display": "4.1（5,729 則，2026-11-15 人工查看）"
+    }
+   ],
+   "review_check": null,
+   "drive_check": {
+    "parking": {
+     "available": true,
+     "free": false,
+     "fee": "24小時 2,000円/台（本段行程不開車，僅備註）",
+     "reservation_required": false,
+     "covered": null,
+     "height_limit_m": null,
+     "width_limit_m": null,
+     "distance_to_front": null,
+     "lat": null,
+     "lng": null,
+     "mapcode": null,
+     "mapcode_source": null,
+     "note": "館內停車 24小時 2,000円/台，不可預約（楽天FAQ）；入口座標/MapCode 未取得 ｜ 楽天FAQ：不可預約。本據點 6/19–6/21 不開車。"
+    },
+    "road": {
+     "mountain_road": null,
+     "night_drive": null,
+     "winter_closure": null,
+     "note": null
+    },
+    "from_prev": null,
+    "closed_days": [],
+    "closed_days_note": null,
+    "dinner_fits": null,
+    "note": null
+   },
+   "operation": {
+    "status": "open",
+    "checked_on": "2026-11-16",
+    "sources": [],
+    "recheck_before_departure": true,
+    "note": "多篇 2025–2026 台灣部落客入住心得；亦為路線 I 池袋據點既有候選。"
+   },
+   "screening": {
+    "status": "top_pick",
+    "rank": null,
+    "reason": "路線 I 東京段目前首選（25㎡以上・3大人比價後維持）。",
+    "area_unverified": false,
+    "over_1h": null
+   },
+   "stays_feedback": [],
+   "data_gaps": [
+    "MapCode 未從 Mapion／NaviCon 等來源取得，維持 null。",
+    "停車場入口座標未取得。"
+   ],
+   "public_notes": [
+    "取消規定：2027-06-17 23:59 前免費（楽天該日期方案顯示：2日前23:59前免費；前日起依方案 20% 或 100%、當日 80～100%、不泊 100%）。下訂前以方案頁為準。",
+    "晚餐備註（じゃらん／楽天 2026-11-15）：一般飯店無固定晚餐；本段不開車、無溫泉。"
+   ],
+   "updated_at": "2026-11-16"
+  },
+  {
+   "id": "lh_tokyo_82970143",
+   "name": "JR東日本ホテルメッツ 駒込",
+   "name_ja": "JR東日本ホテルメッツ 駒込",
+   "name_zh": "駒込 JR 東日本 METS 飯店",
+   "type": "hotel",
+   "address": null,
+   "lat": null,
+   "lng": null,
+   "coord_source": null,
+   "google_place_id": null,
+   "google_maps_url": "https://www.google.com/maps/search/?api=1&query=JR%E6%9D%B1%E6%97%A5%E6%9C%AC%E3%83%9B%E3%83%86%E3%83%AB%E3%83%A1%E3%83%83%E3%83%84%20%E9%A7%92%E8%BE%BC",
+   "official_url": null,
+   "phone": null,
+   "mapcode": null,
+   "near_segments": [
+    {
+     "trip_id": "2027-06-tokyo",
+     "route": "I",
+     "base_key": "TYO",
+     "next_first_stop": null,
+     "drive_min_to_next_first_stop": null,
+     "drive_source": null
+    }
+   ],
+   "rooms": [],
+   "prices": [],
+   "check_in_time": null,
+   "last_check_in": null,
+   "check_out_time": null,
+   "dinner_time": null,
+   "free_cancel_until": null,
+   "booking_opens": {
+    "status": "unknown",
+    "opens_on": null,
+    "rule": null,
+    "by_site": [],
+    "checked_at": null
+   },
+   "recommendations": [
+    {
+     "kind": "youtube",
+     "title": "東京 住宿！精選4間飯店一次開箱！……｜波妞食境秀",
+     "author": "波妞食境秀",
+     "url": "https://www.youtube.com/watch?v=zPsCMyHG8Fo",
+     "published_at": "2025-03-18",
+     "points": "駒込站南口步行約兩分鐘，山手線與南北線方便。優點：部分房型有浴缸與浴鹽、房內微波爐、大廳 24 小時咖啡、會員可延遲退房。缺點：附近購物與藥妝少。未強調三人房或 25㎡。",
+     "lang": null
+    }
+   ],
+   "ratings": [
+    {
+     "source": "google",
+     "score": null,
+     "scale": 5,
+     "count": null,
+     "url": "https://www.google.com/maps/search/?api=1&query=JR%E6%9D%B1%E6%97%A5%E6%9C%AC%E3%83%9B%E3%83%86%E3%83%AB%E3%83%A1%E3%83%83%E3%83%84%20%E9%A7%92%E8%BE%BC",
+     "checked_at": null,
+     "display": null
+    }
+   ],
+   "review_check": null,
+   "drive_check": {
+    "parking": {
+     "available": null,
+     "free": null,
+     "fee": null,
+     "reservation_required": null,
+     "covered": null,
+     "height_limit_m": null,
+     "width_limit_m": null,
+     "distance_to_front": null,
+     "lat": null,
+     "lng": null,
+     "mapcode": null,
+     "mapcode_source": null,
+     "note": null
+    },
+    "road": {
+     "mountain_road": null,
+     "night_drive": null,
+     "winter_closure": null,
+     "note": null
+    },
+    "from_prev": null,
+    "closed_days": [],
+    "closed_days_note": null,
+    "dinner_fits": null,
+    "note": null
+   },
+   "operation": {
+    "status": "open",
+    "checked_on": "2026-11-16",
+    "sources": [],
+    "recheck_before_departure": true,
+    "note": "波妞 2025-03 開箱。"
+   },
+   "screening": {
+    "status": "candidate",
+    "rank": null,
+    "reason": null,
+    "area_unverified": false,
+    "over_1h": null
+   },
+   "stays_feedback": [],
+   "data_gaps": [
+    "place_id 未核對（不可臆造）；Google Maps 連結若為座標或館名搜尋，下次應改為店家頁。",
+    "MapCode 未從 Mapion／NaviCon 等來源取得，維持 null。",
+    "停車場入口座標未取得。"
+   ],
+   "public_notes": [],
+   "updated_at": "2026-11-16"
+  },
+  {
+   "id": "lh_tokyo_3bd94630",
+   "name": "KOKO HOTEL 池袋",
+   "name_ja": "KOKO HOTEL 池袋",
+   "name_zh": null,
+   "type": "hotel",
+   "address": null,
+   "lat": null,
+   "lng": null,
+   "coord_source": null,
+   "google_place_id": null,
+   "google_maps_url": "https://www.google.com/maps/search/?api=1&query=KOKO%20HOTEL%20%E6%B1%A0%E8%A2%8B",
+   "official_url": null,
+   "phone": null,
+   "mapcode": null,
+   "near_segments": [
+    {
+     "trip_id": "2027-06-tokyo",
+     "route": "I",
+     "base_key": "TYO",
+     "next_first_stop": null,
+     "drive_min_to_next_first_stop": null,
+     "drive_source": null
+    }
+   ],
+   "rooms": [
+    {
+     "room_name": "【全室禁煙】トリプルルーム／25平米",
+     "size_sqm": 25,
+     "tatami": null,
+     "max_guests": 3,
+     "beds": null,
+     "fits_party": null,
+     "note": "素泊（食事なし）"
+    }
+   ],
+   "prices": [
+    {
+     "site": "ikyu",
+     "url": "https://www.ikyu.com/00081811/11755340/10256805/?cid=20270619&cod=20270621&lc=2&ppc=3&rc=1",
+     "check_in": "2027-06-19",
+     "check_out": "2027-06-21",
+     "nights": 2,
+     "adults": 3,
+     "rooms": 1,
+     "room_name": "【全室禁煙】トリプルルーム／25平米",
+     "size_sqm": 25,
+     "meals": "素泊（食事なし）",
+     "total_jpy": 80136,
+     "per_night_jpy": null,
+     "price_basis": "total",
+     "tax": "included",
+     "tax_note": null,
+     "free_cancel_until": "2027-04-21",
+     "free_cancel_rule_text": "2027年4月21日01:00までキャンセル料無料",
+     "member_price_jpy": null,
+     "coupon": null,
+     "status": "ok",
+     "checked_at": "2026-11-15",
+     "source_url": "https://www.ikyu.com/00081811/11755340/10256805/?cid=20270619&cod=20270621&lc=2&ppc=3&rc=1"
+    }
+   ],
+   "check_in_time": null,
+   "last_check_in": null,
+   "check_out_time": null,
+   "dinner_time": null,
+   "free_cancel_until": null,
+   "booking_opens": {
+    "status": "unknown",
+    "opens_on": null,
+    "rule": null,
+    "by_site": [],
+    "checked_at": null
+   },
+   "recommendations": [],
+   "ratings": [
+    {
+     "source": "google",
+     "score": null,
+     "scale": 5,
+     "count": null,
+     "url": "https://www.google.com/maps/search/?api=1&query=KOKO%20HOTEL%20%E6%B1%A0%E8%A2%8B",
+     "checked_at": null,
+     "display": null
+    }
+   ],
+   "review_check": null,
+   "drive_check": {
+    "parking": {
+     "available": null,
+     "free": null,
+     "fee": null,
+     "reservation_required": null,
+     "covered": null,
+     "height_limit_m": null,
+     "width_limit_m": null,
+     "distance_to_front": null,
+     "lat": null,
+     "lng": null,
+     "mapcode": null,
+     "mapcode_source": null,
+     "note": null
+    },
+    "road": {
+     "mountain_road": null,
+     "night_drive": null,
+     "winter_closure": null,
+     "note": null
+    },
+    "from_prev": null,
+    "closed_days": [],
+    "closed_days_note": null,
+    "dinner_fits": null,
+    "note": null
+   },
+   "operation": {
+    "status": "unknown",
+    "checked_on": "2026-11-16",
+    "sources": [],
+    "recheck_before_departure": true,
+    "note": "本次僅見於比價或名單，未獨立核對官網／新聞是否仍營業。"
+   },
+   "screening": {
+    "status": "candidate",
+    "rank": null,
+    "reason": null,
+    "area_unverified": false,
+    "over_1h": null
+   },
+   "stays_feedback": [],
+   "data_gaps": [
+    "place_id 未核對（不可臆造）；Google Maps 連結若為座標或館名搜尋，下次應改為店家頁。",
+    "MapCode 未從 Mapion／NaviCon 等來源取得，維持 null。",
+    "停車場入口座標未取得。",
+    "營業狀況待再確認。"
+   ],
+   "public_notes": [],
+   "updated_at": "2026-11-16"
+  },
+  {
+   "id": "lh_tokyo_83d4811f",
+   "name": "OMO3 東京赤坂 by 星野リゾート",
+   "name_ja": "OMO3 東京赤坂 by 星野リゾート",
+   "name_zh": "星野集團 OMO3 東京赤坂",
+   "type": "hotel",
+   "address": null,
+   "lat": null,
+   "lng": null,
+   "coord_source": null,
+   "google_place_id": null,
+   "google_maps_url": "https://www.google.com/maps/search/?api=1&query=OMO3%20%E6%9D%B1%E4%BA%AC%E8%B5%A4%E5%9D%82%20by%20%E6%98%9F%E9%87%8E%E3%83%AA%E3%82%BE%E3%83%BC%E3%83%88",
+   "official_url": null,
+   "phone": null,
+   "mapcode": null,
+   "near_segments": [
+    {
+     "trip_id": "2027-06-tokyo",
+     "route": "I",
+     "base_key": "TYO",
+     "next_first_stop": null,
+     "drive_min_to_next_first_stop": null,
+     "drive_source": null
+    }
+   ],
+   "rooms": [],
+   "prices": [],
+   "check_in_time": null,
+   "last_check_in": null,
+   "check_out_time": null,
+   "dinner_time": null,
+   "free_cancel_until": null,
+   "booking_opens": {
+    "status": "unknown",
+    "opens_on": null,
+    "rule": null,
+    "by_site": [],
+    "checked_at": null
+   },
+   "recommendations": [
+    {
+     "kind": "youtube",
+     "title": "東京新飯店！開箱星野集團平價OMO 3赤阪Hotel！與OMO5、OMO7差別？［2023日本住宿推薦］",
+     "author": "3cTim",
+     "url": "https://www.youtube.com/watch?v=n2JGo9H55TA",
+     "published_at": "2023-05-28",
+     "points": "比較 OMO3／OMO5／OMO7 定位，定位為星野集團相對平價的都市飯店。影片較早，房型與價格須以現況為準。",
+     "lang": null
+    }
+   ],
+   "ratings": [
+    {
+     "source": "google",
+     "score": null,
+     "scale": 5,
+     "count": null,
+     "url": "https://www.google.com/maps/search/?api=1&query=OMO3%20%E6%9D%B1%E4%BA%AC%E8%B5%A4%E5%9D%82%20by%20%E6%98%9F%E9%87%8E%E3%83%AA%E3%82%BE%E3%83%BC%E3%83%88",
+     "checked_at": null,
+     "display": null
+    }
+   ],
+   "review_check": null,
+   "drive_check": {
+    "parking": {
+     "available": null,
+     "free": null,
+     "fee": null,
+     "reservation_required": null,
+     "covered": null,
+     "height_limit_m": null,
+     "width_limit_m": null,
+     "distance_to_front": null,
+     "lat": null,
+     "lng": null,
+     "mapcode": null,
+     "mapcode_source": null,
+     "note": null
+    },
+    "road": {
+     "mountain_road": null,
+     "night_drive": null,
+     "winter_closure": null,
+     "note": null
+    },
+    "from_prev": null,
+    "closed_days": [],
+    "closed_days_note": null,
+    "dinner_fits": null,
+    "note": null
+   },
+   "operation": {
+    "status": "open",
+    "checked_on": "2026-11-16",
+    "sources": [],
+    "recheck_before_departure": true,
+    "note": "台灣頻道 3cTim 2023 開箱（開業初期）。"
+   },
+   "screening": {
+    "status": "candidate",
+    "rank": null,
+    "reason": null,
+    "area_unverified": false,
+    "over_1h": null
+   },
+   "stays_feedback": [],
+   "data_gaps": [
+    "place_id 未核對（不可臆造）；Google Maps 連結若為座標或館名搜尋，下次應改為店家頁。",
+    "MapCode 未從 Mapion／NaviCon 等來源取得，維持 null。",
+    "停車場入口座標未取得。"
+   ],
+   "public_notes": [],
+   "updated_at": "2026-11-16"
+  },
+  {
+   "id": "lh_tokyo_878c716d",
+   "name": "VIA INN PRIME 日本橋人形町",
+   "name_ja": "VIA INN PRIME 日本橋人形町",
+   "name_zh": "VIA INN PRIME 日本橋人形町",
+   "type": "hotel",
+   "address": null,
+   "lat": null,
+   "lng": null,
+   "coord_source": null,
+   "google_place_id": null,
+   "google_maps_url": "https://www.google.com/maps/search/?api=1&query=VIA%20INN%20PRIME%20%E6%97%A5%E6%9C%AC%E6%A9%8B%E4%BA%BA%E5%BD%A2%E7%94%BA",
+   "official_url": null,
+   "phone": null,
+   "mapcode": null,
+   "near_segments": [
+    {
+     "trip_id": "2027-06-tokyo",
+     "route": "I",
+     "base_key": "TYO",
+     "next_first_stop": null,
+     "drive_min_to_next_first_stop": null,
+     "drive_source": null
+    }
+   ],
+   "rooms": [],
+   "prices": [],
+   "check_in_time": null,
+   "last_check_in": null,
+   "check_out_time": null,
+   "dinner_time": null,
+   "free_cancel_until": null,
+   "booking_opens": {
+    "status": "unknown",
+    "opens_on": null,
+    "rule": null,
+    "by_site": [],
+    "checked_at": null
+   },
+   "recommendations": [
+    {
+     "kind": "youtube",
+     "title": "東京 住宿！精選4間飯店一次開箱！雙人房一晚不用台幣2500？海鮮丼自助任你吃到飽？兩點入住下午一點才退房？美食名店都在附近？便宜入住超美奢華度假飯店？這些低調又便宜的飯店你不能不知道！｜波妞食境秀",
+     "author": "波妞食境秀",
+     "url": "https://www.youtube.com/watch?v=zPsCMyHG8Fo",
+     "published_at": "2025-03-18",
+     "points": "說明欄寫明「有三人房可以選擇」；人形町／日本橋／水天宮附近，往銀座、築地、秋葉原、上野、淺草方便。優點含插座多、格局方正、可放行李、電視可播 Netflix／Disney+。缺點：房內無瓶裝水、隔音普通、退房 10:00 較早。未寫房間坪數。",
+     "lang": null
+    }
+   ],
+   "ratings": [
+    {
+     "source": "google",
+     "score": null,
+     "scale": 5,
+     "count": null,
+     "url": "https://www.google.com/maps/search/?api=1&query=VIA%20INN%20PRIME%20%E6%97%A5%E6%9C%AC%E6%A9%8B%E4%BA%BA%E5%BD%A2%E7%94%BA",
+     "checked_at": null,
+     "display": null
+    }
+   ],
+   "review_check": null,
+   "drive_check": {
+    "parking": {
+     "available": null,
+     "free": null,
+     "fee": null,
+     "reservation_required": null,
+     "covered": null,
+     "height_limit_m": null,
+     "width_limit_m": null,
+     "distance_to_front": null,
+     "lat": null,
+     "lng": null,
+     "mapcode": null,
+     "mapcode_source": null,
+     "note": null
+    },
+    "road": {
+     "mountain_road": null,
+     "night_drive": null,
+     "winter_closure": null,
+     "note": null
+    },
+    "from_prev": null,
+    "closed_days": [],
+    "closed_days_note": null,
+    "dinner_fits": null,
+    "note": null
+   },
+   "operation": {
+    "status": "open",
+    "checked_on": "2026-11-16",
+    "sources": [],
+    "recheck_before_departure": true,
+    "note": "台灣 YouTuber 波妞食境秀 2025-03 實際開箱。"
+   },
+   "screening": {
+    "status": "candidate",
+    "rank": null,
+    "reason": null,
+    "area_unverified": false,
+    "over_1h": null
+   },
+   "stays_feedback": [],
+   "data_gaps": [
+    "place_id 未核對（不可臆造）；Google Maps 連結若為座標或館名搜尋，下次應改為店家頁。",
+    "MapCode 未從 Mapion／NaviCon 等來源取得，維持 null。",
+    "停車場入口座標未取得。"
+   ],
+   "public_notes": [],
+   "updated_at": "2026-11-16"
+  },
+  {
+   "id": "lh_tokyo_af099f8d",
+   "name": "hotel hisoca ikebukuro",
+   "name_ja": "hotel hisoca ikebukuro",
+   "name_zh": "Hotel Hisoca 池袋",
+   "type": "hotel",
+   "address": "東京都豊島区西池袋1-10-4",
+   "lat": null,
+   "lng": null,
+   "coord_source": null,
+   "google_place_id": null,
+   "google_maps_url": "https://www.google.com/maps/search/?api=1&query=hotel%20hisoca%20ikebukuro",
+   "official_url": "https://hotelhisoca.com/room/",
+   "phone": null,
+   "mapcode": null,
+   "near_segments": [
+    {
+     "trip_id": "2027-06-tokyo",
+     "route": "I",
+     "base_key": "TYO",
+     "next_first_stop": null,
+     "drive_min_to_next_first_stop": null,
+     "drive_source": null
+    }
+   ],
+   "rooms": [],
+   "prices": [],
+   "check_in_time": null,
+   "last_check_in": null,
+   "check_out_time": null,
+   "dinner_time": null,
+   "free_cancel_until": null,
+   "booking_opens": {
+    "status": "unknown",
+    "opens_on": null,
+    "rule": null,
+    "by_site": [],
+    "checked_at": null
+   },
+   "recommendations": [],
+   "ratings": [
+    {
+     "source": "google",
+     "score": null,
+     "scale": 5,
+     "count": null,
+     "url": "https://www.google.com/maps/search/?api=1&query=hotel%20hisoca%20ikebukuro",
+     "checked_at": null,
+     "display": null
+    }
+   ],
+   "review_check": null,
+   "drive_check": {
+    "parking": {
+     "available": null,
+     "free": null,
+     "fee": null,
+     "reservation_required": null,
+     "covered": null,
+     "height_limit_m": null,
+     "width_limit_m": null,
+     "distance_to_front": null,
+     "lat": null,
+     "lng": null,
+     "mapcode": null,
+     "mapcode_source": null,
+     "note": null
+    },
+    "road": {
+     "mountain_road": null,
+     "night_drive": null,
+     "winter_closure": null,
+     "note": null
+    },
+    "from_prev": null,
+    "closed_days": [],
+    "closed_days_note": null,
+    "dinner_fits": null,
+    "note": null
+   },
+   "operation": {
+    "status": "unknown",
+    "checked_on": "2026-11-16",
+    "sources": [],
+    "recheck_before_departure": true,
+    "note": "本次僅見於比價或名單，未獨立核對官網／新聞是否仍營業。"
+   },
+   "screening": {
+    "status": "candidate",
+    "rank": null,
+    "reason": null,
+    "area_unverified": false,
+    "over_1h": null
+   },
+   "stays_feedback": [],
+   "data_gaps": [
+    "place_id 未核對（不可臆造）；Google Maps 連結若為座標或館名搜尋，下次應改為店家頁。",
+    "MapCode 未從 Mapion／NaviCon 等來源取得，維持 null。",
+    "停車場入口座標未取得。",
+    "營業狀況待再確認。"
+   ],
+   "public_notes": [],
+   "updated_at": "2026-11-16"
+  },
+  {
+   "id": "lh_tokyo_aced4811",
+   "name": "the b お茶の水",
+   "name_ja": "the b お茶の水",
+   "name_zh": null,
+   "type": "hotel",
+   "address": null,
+   "lat": 35.6956988,
+   "lng": 139.7666292,
+   "coord_source": null,
+   "google_place_id": "ChIJDRPVNxuMGGARLaSyI5dsxGQ",
+   "google_maps_url": "https://www.google.com/maps/place/?q=place_id:ChIJDRPVNxuMGGARLaSyI5dsxGQ",
+   "official_url": "https://www.theb-hotels.com/theb/ochanomizu",
+   "phone": "03-3254-2888",
+   "mapcode": null,
+   "near_segments": [
+    {
+     "trip_id": "2027-06-tokyo",
+     "route": "A",
+     "base_key": "TYO",
+     "next_first_stop": null,
+     "drive_min_to_next_first_stop": null,
+     "drive_source": null
+    },
+    {
+     "trip_id": "2027-06-tokyo",
+     "route": "B",
+     "base_key": "TYO",
+     "next_first_stop": null,
+     "drive_min_to_next_first_stop": null,
+     "drive_source": null
+    },
+    {
+     "trip_id": "2027-06-tokyo",
+     "route": "C",
+     "base_key": "TYO",
+     "next_first_stop": null,
+     "drive_min_to_next_first_stop": null,
+     "drive_source": null
+    },
+    {
+     "trip_id": "2027-06-tokyo",
+     "route": "D",
+     "base_key": "TYO",
+     "next_first_stop": null,
+     "drive_min_to_next_first_stop": null,
+     "drive_source": null
+    },
+    {
+     "trip_id": "2027-06-tokyo",
+     "route": "E",
+     "base_key": "TYO",
+     "next_first_stop": null,
+     "drive_min_to_next_first_stop": null,
+     "drive_source": null
+    },
+    {
+     "trip_id": "2027-06-tokyo",
+     "route": "F",
+     "base_key": "TYO",
+     "next_first_stop": null,
+     "drive_min_to_next_first_stop": null,
+     "drive_source": null
+    },
+    {
+     "trip_id": "2027-06-tokyo",
+     "route": "G",
+     "base_key": "TYO",
+     "next_first_stop": null,
+     "drive_min_to_next_first_stop": null,
+     "drive_source": null
+    },
+    {
+     "trip_id": "2027-06-tokyo",
+     "route": "H",
+     "base_key": "TYO",
+     "next_first_stop": null,
+     "drive_min_to_next_first_stop": null,
+     "drive_source": null
+    },
+    {
+     "trip_id": "2027-06-tokyo",
+     "route": "F（lodging.bases／當時推薦路線）",
+     "base_key": "TYO",
+     "next_first_stop": null,
+     "drive_min_to_next_first_stop": null,
+     "drive_source": null
+    }
+   ],
+   "rooms": [
+    {
+     "room_name": "トリプル 25㎡（90cm床×3）",
+     "size_sqm": 25,
+     "tatami": null,
+     "max_guests": null,
+     "beds": null,
+     "fits_party": null,
+     "note": "素泊 參考價，非該日期實價（2027/6～7 多數尚未開賣；為楽天等目前開放日期之3名1室每人含稅價格範圍，實際依日期/方案變動）"
+    }
+   ],
+   "prices": [
+    {
+     "site": "rakuten",
+     "url": "https://hotel.travel.rakuten.co.jp/hotelinfo/plan/18748",
+     "check_in": null,
+     "check_out": null,
+     "nights": null,
+     "adults": 3,
+     "rooms": 1,
+     "room_name": "トリプル 25㎡（90cm床×3）",
+     "size_sqm": 25,
+     "meals": "素泊",
+     "total_jpy": null,
+     "per_night_jpy": null,
+     "price_basis": "per_night",
+     "tax": "included",
+     "tax_note": null,
+     "free_cancel_until": null,
+     "free_cancel_rule_text": null,
+     "member_price_jpy": null,
+     "coupon": null,
+     "status": "not_found",
+     "checked_at": "2026-10-24",
+     "source_url": "https://hotel.travel.rakuten.co.jp/hotelinfo/plan/18748"
+    }
+   ],
+   "check_in_time": null,
+   "last_check_in": null,
+   "check_out_time": null,
+   "dinner_time": null,
+   "free_cancel_until": null,
+   "booking_opens": {
+    "status": "unknown",
+    "opens_on": null,
+    "rule": null,
+    "by_site": [],
+    "checked_at": null
+   },
+   "recommendations": [],
+   "ratings": [
+    {
+     "source": "google",
+     "score": null,
+     "scale": 5,
+     "count": null,
+     "url": "https://www.google.com/maps/place/?q=place_id:ChIJDRPVNxuMGGARLaSyI5dsxGQ",
+     "checked_at": null,
+     "display": null
+    }
+   ],
+   "review_check": null,
+   "drive_check": {
+    "parking": {
+     "available": null,
+     "free": null,
+     "fee": null,
+     "reservation_required": null,
+     "covered": null,
+     "height_limit_m": null,
+     "width_limit_m": null,
+     "distance_to_front": null,
+     "lat": null,
+     "lng": null,
+     "mapcode": null,
+     "mapcode_source": null,
+     "note": "併設停車場僅2台、不可預約（楽天FAQ）；座標/MapCode 未取得"
+    },
+    "road": {
+     "mountain_road": null,
+     "night_drive": null,
+     "winter_closure": null,
+     "note": null
+    },
+    "from_prev": null,
+    "closed_days": [],
+    "closed_days_note": null,
+    "dinner_fits": null,
+    "note": null
+   },
+   "operation": {
+    "status": "open",
+    "checked_on": "2026-10-24",
+    "sources": [],
+    "recheck_before_departure": true,
+    "note": "當時可在樂天／じゃらん或官網查到資料；之後若有更新以較新查證為準。"
+   },
+   "screening": {
+    "status": "candidate",
+    "rank": null,
+    "reason": null,
+    "area_unverified": false,
+    "over_1h": null
+   },
+   "stays_feedback": [],
+   "data_gaps": [
+    "MapCode 未從 Mapion／NaviCon 等來源取得，維持 null。",
+    "停車場入口座標未取得。"
+   ],
+   "public_notes": [
+    "淡路町站1分，步行可到秋葉原；有大浴場。",
+    "取消規定：宿泊2日前まで免費（前日20%、當日/不到100%；官網FAQ https://www.theb-hotels.com/faq ）"
+   ],
+   "updated_at": "2026-11-16"
+  },
+  {
+   "id": "lh_tokyo_8eda8458",
+   "name": "アルモントホテル日暮里",
+   "name_ja": "アルモントホテル日暮里",
+   "name_zh": null,
+   "type": "hotel",
+   "address": "東京都荒川区東日暮里5-47-1",
+   "lat": 35.7282704,
+   "lng": 139.7739761,
+   "coord_source": "Photon/OSM「Almont Hotel Nippori Tokyo」，與日暮里東口一帶相符；非正式大門實測。",
+   "google_place_id": null,
+   "google_maps_url": "https://www.google.com/maps/search/?api=1&query=%E3%82%A2%E3%83%AB%E3%83%A2%E3%83%B3%E3%83%88%E3%83%9B%E3%83%86%E3%83%AB%E6%97%A5%E6%9A%AE%E9%87%8C",
+   "official_url": "https://www.almont.jp/nippori/",
+   "phone": "03-5615-3431",
+   "mapcode": null,
+   "near_segments": [
+    {
+     "trip_id": "2027-06-tokyo",
+     "route": "I",
+     "base_key": "TYO",
+     "next_first_stop": null,
+     "drive_min_to_next_first_stop": null,
+     "drive_source": null
+    }
+   ],
+   "rooms": [
+    {
+     "room_name": "トリプル（公式：セミダブルベッド3台）",
+     "size_sqm": 29,
+     "tatami": null,
+     "max_guests": 6,
+     "beds": "120cm セミダブル×3",
+     "fits_party": null,
+     "note": null
+    }
+   ],
+   "prices": [
+    {
+     "site": "agoda",
+     "url": null,
+     "check_in": "2027-06-19",
+     "check_out": "2027-06-21",
+     "nights": 2,
+     "adults": 3,
+     "rooms": 1,
+     "room_name": null,
+     "size_sqm": null,
+     "meals": null,
+     "total_jpy": null,
+     "per_night_jpy": null,
+     "price_basis": null,
+     "tax": "unknown",
+     "tax_note": null,
+     "free_cancel_until": null,
+     "free_cancel_rule_text": null,
+     "member_price_jpy": null,
+     "coupon": null,
+     "status": "not_found",
+     "checked_at": "2026-11-16",
+     "source_url": null
+    },
+    {
+     "site": "google_hotels",
+     "url": null,
+     "check_in": "2027-06-19",
+     "check_out": "2027-06-21",
+     "nights": 2,
+     "adults": 3,
+     "rooms": 1,
+     "room_name": null,
+     "size_sqm": null,
+     "meals": null,
+     "total_jpy": null,
+     "per_night_jpy": null,
+     "price_basis": null,
+     "tax": "unknown",
+     "tax_note": null,
+     "free_cancel_until": null,
+     "free_cancel_rule_text": null,
+     "member_price_jpy": null,
+     "coupon": null,
+     "status": "not_found",
+     "checked_at": "2026-11-16",
+     "source_url": null
+    },
+    {
+     "site": "jalan",
+     "url": "https://www.jalan.net/yad380132/plan/?stayYear=2027&stayMonth=6&stayDay=19&stayCount=2&roomCount=1&adultNum=3",
+     "check_in": "2027-06-19",
+     "check_out": "2027-06-21",
+     "nights": 2,
+     "adults": 3,
+     "rooms": 1,
+     "room_name": "トリプル【全室禁煙】（公式29㎡）",
+     "size_sqm": 29,
+     "meals": "素泊",
+     "total_jpy": 148200,
+     "per_night_jpy": null,
+     "price_basis": "total",
+     "tax": "included",
+     "tax_note": null,
+     "free_cancel_until": null,
+     "free_cancel_rule_text": null,
+     "member_price_jpy": null,
+     "coupon": null,
+     "status": "ok",
+     "checked_at": "2026-11-16",
+     "source_url": "https://www.jalan.net/yad380132/plan/?stayYear=2027&stayMonth=6&stayDay=19&stayCount=2&roomCount=1&adultNum=3"
+    },
+    {
+     "site": "ikyu",
+     "url": "https://www.ikyu.com/00082254/?cid=20270619&cod=20270621&lc=2&ppc=3&rc=1",
+     "check_in": "2027-06-19",
+     "check_out": "2027-06-21",
+     "nights": 2,
+     "adults": 3,
+     "rooms": 1,
+     "room_name": "トリプル 29平米",
+     "size_sqm": 29,
+     "meals": "素泊",
+     "total_jpy": 145200,
+     "per_night_jpy": null,
+     "price_basis": "total",
+     "tax": "included",
+     "tax_note": null,
+     "free_cancel_until": null,
+     "free_cancel_rule_text": null,
+     "member_price_jpy": null,
+     "coupon": null,
+     "status": "ok",
+     "checked_at": "2026-11-16",
+     "source_url": "https://www.ikyu.com/00082254/?cid=20270619&cod=20270621&lc=2&ppc=3&rc=1"
+    },
+    {
+     "site": "ikyu",
+     "url": "https://www.ikyu.com/00082254/?cid=20270619&cod=20270621&lc=2&ppc=3&rc=1",
+     "check_in": "2027-06-19",
+     "check_out": "2027-06-21",
+     "nights": 2,
+     "adults": 3,
+     "rooms": 1,
+     "room_name": "トリプル 29平米",
+     "size_sqm": 29,
+     "meals": "朝食付",
+     "total_jpy": 157080,
+     "per_night_jpy": null,
+     "price_basis": "total",
+     "tax": "included",
+     "tax_note": null,
+     "free_cancel_until": null,
+     "free_cancel_rule_text": null,
+     "member_price_jpy": null,
+     "coupon": null,
+     "status": "ok",
+     "checked_at": "2026-11-16",
+     "source_url": "https://www.ikyu.com/00082254/?cid=20270619&cod=20270621&lc=2&ppc=3&rc=1"
+    },
+    {
+     "site": "official",
+     "url": "https://www.almont.jp/nippori/",
+     "check_in": "2027-06-19",
+     "check_out": "2027-06-21",
+     "nights": 2,
+     "adults": 3,
+     "rooms": 1,
+     "room_name": null,
+     "size_sqm": null,
+     "meals": null,
+     "total_jpy": null,
+     "per_night_jpy": null,
+     "price_basis": null,
+     "tax": "unknown",
+     "tax_note": null,
+     "free_cancel_until": null,
+     "free_cancel_rule_text": null,
+     "member_price_jpy": null,
+     "coupon": null,
+     "status": "not_found",
+     "checked_at": "2026-11-16",
+     "source_url": "https://www.almont.jp/nippori/"
+    },
+    {
+     "site": "rakuten",
+     "url": "https://hotel.travel.rakuten.co.jp/hotelinfo/plan/182417?f_heya_su=1&f_otona_su=3&f_nen1=2027&f_tuki1=6&f_hi1=19&f_nen2=2027&f_tuki2=6&f_hi2=21&f_sort=min_charge",
+     "check_in": "2027-06-19",
+     "check_out": "2027-06-21",
+     "nights": 2,
+     "adults": 3,
+     "rooms": 1,
+     "room_name": null,
+     "size_sqm": null,
+     "meals": null,
+     "total_jpy": null,
+     "per_night_jpy": null,
+     "price_basis": null,
+     "tax": "unknown",
+     "tax_note": null,
+     "free_cancel_until": null,
+     "free_cancel_rule_text": null,
+     "member_price_jpy": null,
+     "coupon": null,
+     "status": "sold_out",
+     "checked_at": "2026-11-16",
+     "source_url": "https://hotel.travel.rakuten.co.jp/hotelinfo/plan/182417?f_heya_su=1&f_otona_su=3&f_nen1=2027&f_tuki1=6&f_hi1=19&f_nen2=2027&f_tuki2=6&f_hi2=21&f_sort=min_charge"
+    }
+   ],
+   "check_in_time": null,
+   "last_check_in": null,
+   "check_out_time": null,
+   "dinner_time": null,
+   "free_cancel_until": null,
+   "booking_opens": {
+    "status": "unknown",
+    "opens_on": null,
+    "rule": null,
+    "by_site": [],
+    "checked_at": null
+   },
+   "recommendations": [
+    {
+     "kind": "fb_group",
+     "title": null,
+     "author": null,
+     "url": "https://www.facebook.com/groups/1081683926072577/permalink/1306761620231472/",
+     "published_at": null,
+     "points": "符合 29㎡ 三人房，且有大浴場；但一休憩泊合計 ¥145,200，比池袋王子一休素泊 ¥63,897 貴約 ¥81,000，且 6/20 池袋動漫行程與 6/21 羽田取車都比較繞。",
+     "lang": null
+    }
+   ],
+   "ratings": [
+    {
+     "source": "google",
+     "score": null,
+     "scale": 5,
+     "count": null,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E3%82%A2%E3%83%AB%E3%83%A2%E3%83%B3%E3%83%88%E3%83%9B%E3%83%86%E3%83%AB%E6%97%A5%E6%9A%AE%E9%87%8C",
+     "checked_at": null,
+     "display": null
+    }
+   ],
+   "review_check": null,
+   "drive_check": {
+    "parking": {
+     "available": null,
+     "free": null,
+     "fee": null,
+     "reservation_required": null,
+     "covered": null,
+     "height_limit_m": null,
+     "width_limit_m": null,
+     "distance_to_front": null,
+     "lat": null,
+     "lng": null,
+     "mapcode": null,
+     "mapcode_source": null,
+     "note": null
+    },
+    "road": {
+     "mountain_road": null,
+     "night_drive": null,
+     "winter_closure": null,
+     "note": null
+    },
+    "from_prev": null,
+    "closed_days": [],
+    "closed_days_note": null,
+    "dinner_fits": null,
+    "note": "2027-06-20 アニメイト池袋本店（本段未取車。日暮里→池袋可搭山手線，步行＋電車通常約20–30分，非正式導航。）；2027-06-21 タイムズカー羽田店取車 09:00（須先以電車／單軌至羽田取車，再開車去伊豆。取車點座標本次未核對，車程不估。）"
+   },
+   "operation": {
+    "status": "open",
+    "checked_on": "2026-11-16",
+    "sources": [],
+    "recheck_before_departure": true,
+    "note": "公式・一休・じゃらん均在營運，2027/6/19–21 有空房。"
+   },
+   "screening": {
+    "status": "candidate",
+    "rank": null,
+    "reason": null,
+    "area_unverified": false,
+    "over_1h": null
+   },
+   "stays_feedback": [],
+   "data_gaps": [
+    "place_id 未核對（不可臆造）；Google Maps 連結若為座標或館名搜尋，下次應改為店家頁。",
+    "MapCode 未從 Mapion／NaviCon 等來源取得，維持 null。",
+    "停車場入口座標未取得。"
+   ],
+   "public_notes": [],
+   "updated_at": "2026-11-16"
+  },
+  {
+   "id": "lh_tokyo_a8097d18",
+   "name": "ベッセルイン高田馬場駅前",
+   "name_ja": "ベッセルイン高田馬場駅前",
+   "name_zh": "Vessel Inn 高田馬場站前",
+   "type": "hotel",
+   "address": null,
+   "lat": null,
+   "lng": null,
+   "coord_source": null,
+   "google_place_id": null,
+   "google_maps_url": "https://www.google.com/maps/search/?api=1&query=%E3%83%99%E3%83%83%E3%82%BB%E3%83%AB%E3%82%A4%E3%83%B3%E9%AB%98%E7%94%B0%E9%A6%AC%E5%A0%B4%E9%A7%85%E5%89%8D",
+   "official_url": null,
+   "phone": null,
+   "mapcode": null,
+   "near_segments": [
+    {
+     "trip_id": "2027-06-tokyo",
+     "route": "I",
+     "base_key": "TYO",
+     "next_first_stop": null,
+     "drive_min_to_next_first_stop": null,
+     "drive_source": null
+    }
+   ],
+   "rooms": [],
+   "prices": [],
+   "check_in_time": null,
+   "last_check_in": null,
+   "check_out_time": null,
+   "dinner_time": null,
+   "free_cancel_until": null,
+   "booking_opens": {
+    "status": "unknown",
+    "opens_on": null,
+    "rule": null,
+    "by_site": [],
+    "checked_at": null
+   },
+   "recommendations": [
+    {
+     "kind": "youtube",
+     "title": "東京 住宿！精選4間飯店一次開箱！……｜波妞食境秀",
+     "author": "波妞食境秀",
+     "url": "https://www.youtube.com/watch?v=zPsCMyHG8Fo",
+     "published_at": "2025-03-18",
+     "points": "出站過馬路即到，近新宿。早餐有海鮮丼被大力推薦；會員可延遲退房；有洗衣房。缺點：冷氣很吵。未強調三人房或 25㎡。",
+     "lang": null
+    }
+   ],
+   "ratings": [
+    {
+     "source": "google",
+     "score": null,
+     "scale": 5,
+     "count": null,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E3%83%99%E3%83%83%E3%82%BB%E3%83%AB%E3%82%A4%E3%83%B3%E9%AB%98%E7%94%B0%E9%A6%AC%E5%A0%B4%E9%A7%85%E5%89%8D",
+     "checked_at": null,
+     "display": null
+    }
+   ],
+   "review_check": null,
+   "drive_check": {
+    "parking": {
+     "available": null,
+     "free": null,
+     "fee": null,
+     "reservation_required": null,
+     "covered": null,
+     "height_limit_m": null,
+     "width_limit_m": null,
+     "distance_to_front": null,
+     "lat": null,
+     "lng": null,
+     "mapcode": null,
+     "mapcode_source": null,
+     "note": null
+    },
+    "road": {
+     "mountain_road": null,
+     "night_drive": null,
+     "winter_closure": null,
+     "note": null
+    },
+    "from_prev": null,
+    "closed_days": [],
+    "closed_days_note": null,
+    "dinner_fits": null,
+    "note": null
+   },
+   "operation": {
+    "status": "open",
+    "checked_on": "2026-11-16",
+    "sources": [],
+    "recheck_before_departure": true,
+    "note": "波妞 2025-03 開箱。"
+   },
+   "screening": {
+    "status": "candidate",
+    "rank": null,
+    "reason": null,
+    "area_unverified": false,
+    "over_1h": null
+   },
+   "stays_feedback": [],
+   "data_gaps": [
+    "place_id 未核對（不可臆造）；Google Maps 連結若為座標或館名搜尋，下次應改為店家頁。",
+    "MapCode 未從 Mapion／NaviCon 等來源取得，維持 null。",
+    "停車場入口座標未取得。"
+   ],
+   "public_notes": [],
+   "updated_at": "2026-11-16"
+  },
+  {
+   "id": "lh_tokyo_749fa4f7",
+   "name": "ホテルメトロポリタン（池袋）",
+   "name_ja": "ホテルメトロポリタン（池袋）",
+   "name_zh": "池袋大都會飯店",
+   "type": "hotel",
+   "address": "東京都豊島区西池袋1-6-1",
+   "lat": null,
+   "lng": null,
+   "coord_source": null,
+   "google_place_id": null,
+   "google_maps_url": "https://www.google.com/maps/search/?api=1&query=%E3%83%9B%E3%83%86%E3%83%AB%E3%83%A1%E3%83%88%E3%83%AD%E3%83%9D%E3%83%AA%E3%82%BF%E3%83%B3%EF%BC%88%E6%B1%A0%E8%A2%8B%EF%BC%89",
+   "official_url": "https://ikebukuro.metropolitan.jp/",
+   "phone": "03-3980-1111",
+   "mapcode": null,
+   "near_segments": [
+    {
+     "trip_id": "2027-06-tokyo",
+     "route": "I",
+     "base_key": "TYO",
+     "next_first_stop": null,
+     "drive_min_to_next_first_stop": null,
+     "drive_source": null
+    }
+   ],
+   "rooms": [
+    {
+     "room_name": "【禁煙】スタンダードツイン+エキストラベッド SP",
+     "size_sqm": 27,
+     "tatami": null,
+     "max_guests": 3,
+     "beds": null,
+     "fits_party": null,
+     "note": "素泊（食事なし）"
+    },
+    {
+     "room_name": "【禁煙】スタンダードツイン+エキストラベッド SP 27㎡",
+     "size_sqm": 27,
+     "tatami": null,
+     "max_guests": 3,
+     "beds": "公開介紹：110cm×200cm×2＋エキストラベッド 97cm×200cm×1",
+     "fits_party": null,
+     "note": "素泊"
+    },
+    {
+     "room_name": "【禁煙】スタンダードツイン+エキストラベッド SP 27㎡",
+     "size_sqm": 27,
+     "tatami": null,
+     "max_guests": 3,
+     "beds": "110cm×2＋加床",
+     "fits_party": null,
+     "note": "朝食付"
+    },
+    {
+     "room_name": "【最大5名】ジャパニーズスイート禁煙 45㎡",
+     "size_sqm": 45,
+     "tatami": null,
+     "max_guests": 5,
+     "beds": "官網：120cm×200cm×2，3名以上為加床／和室布団",
+     "fits_party": null,
+     "note": "素泊"
+    }
+   ],
+   "prices": [
+    {
+     "site": "ikyu",
+     "url": "https://www.ikyu.com/00000131/11749348/10248190/?cid=20270619&cod=20270621&lc=2&ppc=3&rc=1",
+     "check_in": "2027-06-19",
+     "check_out": "2027-06-21",
+     "nights": 2,
+     "adults": 3,
+     "rooms": 1,
+     "room_name": "【禁煙】スタンダードツイン+エキストラベッド SP",
+     "size_sqm": null,
+     "meals": "素泊（食事なし）",
+     "total_jpy": 87600,
+     "per_night_jpy": null,
+     "price_basis": "total",
+     "tax": "included",
+     "tax_note": null,
+     "free_cancel_until": "2027-06-17",
+     "free_cancel_rule_text": "2027年6月17日までキャンセル料無料",
+     "member_price_jpy": null,
+     "coupon": null,
+     "status": "ok",
+     "checked_at": "2026-11-15",
+     "source_url": "https://www.ikyu.com/00000131/11749348/10248190/?cid=20270619&cod=20270621&lc=2&ppc=3&rc=1"
+    },
+    {
+     "site": "rakuten",
+     "url": "https://hotel.travel.rakuten.co.jp/hotelinfo/plan/388?f_heya_su=1&f_otona_su=3&f_nen1=2027&f_tuki1=6&f_hi1=19&f_nen2=2027&f_tuki2=6&f_hi2=21&f_sort=min_charge",
+     "check_in": "2027-06-19",
+     "check_out": "2027-06-21",
+     "nights": 2,
+     "adults": 3,
+     "rooms": 1,
+     "room_name": "【禁煙】スタンダードツイン+エキストラベッド SP 27㎡",
+     "size_sqm": 27,
+     "meals": "朝食付",
+     "total_jpy": 105600,
+     "per_night_jpy": null,
+     "price_basis": "total",
+     "tax": "included",
+     "tax_note": null,
+     "free_cancel_until": "2027-06-17",
+     "free_cancel_rule_text": "楽天：2日前（2027-06-17）23:59 前無料（方案群）；早割事前決済條件待查。",
+     "member_price_jpy": null,
+     "coupon": null,
+     "status": "ok",
+     "checked_at": "2026-11-15",
+     "source_url": "https://hotel.travel.rakuten.co.jp/hotelinfo/plan/388?f_heya_su=1&f_otona_su=3&f_nen1=2027&f_tuki1=6&f_hi1=19&f_nen2=2027&f_tuki2=6&f_hi2=21&f_sort=min_charge"
+    },
+    {
+     "site": "rakuten",
+     "url": "https://hotel.travel.rakuten.co.jp/hotelinfo/plan/388?f_heya_su=1&f_otona_su=3&f_nen1=2027&f_tuki1=6&f_hi1=19&f_nen2=2027&f_tuki2=6&f_hi2=21&f_sort=min_charge",
+     "check_in": "2027-06-19",
+     "check_out": "2027-06-21",
+     "nights": 2,
+     "adults": 3,
+     "rooms": 1,
+     "room_name": "【最大5名】ジャパニーズスイート禁煙 45㎡",
+     "size_sqm": 45,
+     "meals": "素泊",
+     "total_jpy": 196800,
+     "per_night_jpy": null,
+     "price_basis": "total",
+     "tax": "included",
+     "tax_note": null,
+     "free_cancel_until": "2027-06-17",
+     "free_cancel_rule_text": "楽天：2日前（2027-06-17）23:59 前無料（方案群）；早割事前決済條件待查。",
+     "member_price_jpy": null,
+     "coupon": null,
+     "status": "ok",
+     "checked_at": "2026-11-15",
+     "source_url": "https://hotel.travel.rakuten.co.jp/hotelinfo/plan/388?f_heya_su=1&f_otona_su=3&f_nen1=2027&f_tuki1=6&f_hi1=19&f_nen2=2027&f_tuki2=6&f_hi2=21&f_sort=min_charge"
+    },
+    {
+     "site": "rakuten",
+     "url": "https://hotel.travel.rakuten.co.jp/hotelinfo/plan/388?f_heya_su=1&f_otona_su=3&f_nen1=2027&f_tuki1=6&f_hi1=19&f_nen2=2027&f_tuki2=6&f_hi2=21&f_sort=min_charge",
+     "check_in": "2027-06-19",
+     "check_out": "2027-06-21",
+     "nights": 2,
+     "adults": 3,
+     "rooms": 1,
+     "room_name": "【禁煙】スタンダードツイン+エキストラベッド SP 27㎡",
+     "size_sqm": 27,
+     "meals": "素泊",
+     "total_jpy": 87600,
+     "per_night_jpy": null,
+     "price_basis": "total",
+     "tax": "included",
+     "tax_note": null,
+     "free_cancel_until": "2027-06-17",
+     "free_cancel_rule_text": "楽天該日方案群顯示：2日前（2027-06-17）23:59 前無料。早割為事前決済限定，實際能否免費取消待查。",
+     "member_price_jpy": null,
+     "coupon": null,
+     "status": "ok",
+     "checked_at": "2026-11-15",
+     "source_url": "https://hotel.travel.rakuten.co.jp/hotelinfo/plan/388?f_heya_su=1&f_otona_su=3&f_nen1=2027&f_tuki1=6&f_hi1=19&f_nen2=2027&f_tuki2=6&f_hi2=21&f_sort=min_charge"
+    }
+   ],
+   "check_in_time": null,
+   "last_check_in": null,
+   "check_out_time": null,
+   "dinner_time": null,
+   "free_cancel_until": null,
+   "booking_opens": {
+    "status": "unknown",
+    "opens_on": null,
+    "rule": null,
+    "by_site": [],
+    "checked_at": null
+   },
+   "recommendations": [],
+   "ratings": [
+    {
+     "source": "google",
+     "score": null,
+     "scale": 5,
+     "count": null,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E3%83%9B%E3%83%86%E3%83%AB%E3%83%A1%E3%83%88%E3%83%AD%E3%83%9D%E3%83%AA%E3%82%BF%E3%83%B3%EF%BC%88%E6%B1%A0%E8%A2%8B%EF%BC%89",
+     "checked_at": null,
+     "display": null
+    }
+   ],
+   "review_check": null,
+   "drive_check": {
+    "parking": {
+     "available": null,
+     "free": null,
+     "fee": null,
+     "reservation_required": null,
+     "covered": null,
+     "height_limit_m": null,
+     "width_limit_m": null,
+     "distance_to_front": null,
+     "lat": null,
+     "lng": null,
+     "mapcode": null,
+     "mapcode_source": null,
+     "note": "有；1泊1台 3,000円。來源：楽天基本情報 2026-11-15。本段不開車。"
+    },
+    "road": {
+     "mountain_road": null,
+     "night_drive": null,
+     "winter_closure": null,
+     "note": null
+    },
+    "from_prev": null,
+    "closed_days": [],
+    "closed_days_note": null,
+    "dinner_fits": null,
+    "note": null
+   },
+   "operation": {
+    "status": "unknown",
+    "checked_on": "2026-11-16",
+    "sources": [],
+    "recheck_before_departure": true,
+    "note": "本次僅見於比價或名單，未獨立核對官網／新聞是否仍營業。"
+   },
+   "screening": {
+    "status": "candidate",
+    "rank": null,
+    "reason": null,
+    "area_unverified": false,
+    "over_1h": null
+   },
+   "stays_feedback": [],
+   "data_gaps": [
+    "place_id 未核對（不可臆造）；Google Maps 連結若為座標或館名搜尋，下次應改為店家頁。",
+    "MapCode 未從 Mapion／NaviCon 等來源取得，維持 null。",
+    "停車場入口座標未取得。",
+    "營業狀況待再確認。"
+   ],
+   "public_notes": [],
+   "updated_at": "2026-11-16"
+  },
+  {
+   "id": "lh_tokyo_7437ee60",
+   "name": "ラビスタ東京ベイ",
+   "name_ja": "ラビスタ東京ベイ",
+   "name_zh": "東京灣 La Vista／拉維斯塔東京灣",
+   "type": "onsen_hotel",
+   "address": null,
+   "lat": null,
+   "lng": null,
+   "coord_source": null,
+   "google_place_id": null,
+   "google_maps_url": "https://www.google.com/maps/search/?api=1&query=%E3%83%A9%E3%83%93%E3%82%B9%E3%82%BF%E6%9D%B1%E4%BA%AC%E3%83%99%E3%82%A4",
+   "official_url": null,
+   "phone": null,
+   "mapcode": null,
+   "near_segments": [
+    {
+     "trip_id": "2027-06-tokyo",
+     "route": "I",
+     "base_key": "TYO",
+     "next_first_stop": null,
+     "drive_min_to_next_first_stop": null,
+     "drive_source": null
+    }
+   ],
+   "rooms": [],
+   "prices": [],
+   "check_in_time": null,
+   "last_check_in": null,
+   "check_out_time": null,
+   "dinner_time": null,
+   "free_cancel_until": null,
+   "booking_opens": {
+    "status": "unknown",
+    "opens_on": null,
+    "rule": null,
+    "by_site": [],
+    "checked_at": null
+   },
+   "recommendations": [
+    {
+     "kind": "youtube",
+     "title": "東京 住宿！精選4間飯店一次開箱！……｜波妞食境秀",
+     "author": "波妞食境秀",
+     "url": "https://www.youtube.com/watch?v=zPsCMyHG8Fo",
+     "published_at": "2025-03-18",
+     "points": "豐洲市場前站，共立リゾート系統。說明欄優點：女湯有洗衣房、晚上 22–23 時免費拉麵宵夜、泡湯區可看夜景並有躺式泡法、湯後有免費冰品。適合作為「東京也想泡湯」的備選，但離池袋據點較遠。",
+     "lang": null
+    }
+   ],
+   "ratings": [
+    {
+     "source": "google",
+     "score": null,
+     "scale": 5,
+     "count": null,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E3%83%A9%E3%83%93%E3%82%B9%E3%82%BF%E6%9D%B1%E4%BA%AC%E3%83%99%E3%82%A4",
+     "checked_at": null,
+     "display": null
+    }
+   ],
+   "review_check": null,
+   "drive_check": {
+    "parking": {
+     "available": null,
+     "free": null,
+     "fee": null,
+     "reservation_required": null,
+     "covered": null,
+     "height_limit_m": null,
+     "width_limit_m": null,
+     "distance_to_front": null,
+     "lat": null,
+     "lng": null,
+     "mapcode": null,
+     "mapcode_source": null,
+     "note": null
+    },
+    "road": {
+     "mountain_road": null,
+     "night_drive": null,
+     "winter_closure": null,
+     "note": null
+    },
+    "from_prev": null,
+    "closed_days": [],
+    "closed_days_note": null,
+    "dinner_fits": null,
+    "note": null
+   },
+   "operation": {
+    "status": "open",
+    "checked_on": "2026-11-16",
+    "sources": [],
+    "recheck_before_departure": true,
+    "note": "同一支 2025-03 波妞開箱影片實際入住。"
+   },
+   "screening": {
+    "status": "candidate",
+    "rank": null,
+    "reason": null,
+    "area_unverified": false,
+    "over_1h": null
+   },
+   "stays_feedback": [],
+   "data_gaps": [
+    "place_id 未核對（不可臆造）；Google Maps 連結若為座標或館名搜尋，下次應改為店家頁。",
+    "MapCode 未從 Mapion／NaviCon 等來源取得，維持 null。",
+    "停車場入口座標未取得。"
+   ],
+   "public_notes": [],
+   "updated_at": "2026-11-16"
+  },
+  {
+   "id": "lh_tokyo_095b2fcb",
+   "name": "リッチモンドホテル東京目白",
+   "name_ja": "リッチモンドホテル東京目白",
+   "name_zh": null,
+   "type": "hotel",
+   "address": null,
+   "lat": null,
+   "lng": null,
+   "coord_source": null,
+   "google_place_id": null,
+   "google_maps_url": "https://www.google.com/maps/search/?api=1&query=%E3%83%AA%E3%83%83%E3%83%81%E3%83%A2%E3%83%B3%E3%83%89%E3%83%9B%E3%83%86%E3%83%AB%E6%9D%B1%E4%BA%AC%E7%9B%AE%E7%99%BD",
+   "official_url": null,
+   "phone": null,
+   "mapcode": null,
+   "near_segments": [
+    {
+     "trip_id": "2027-06-tokyo",
+     "route": "I",
+     "base_key": "TYO",
+     "next_first_stop": null,
+     "drive_min_to_next_first_stop": null,
+     "drive_source": null
+    }
+   ],
+   "rooms": [
+    {
+     "room_name": "【禁煙】ツイン（3名利用）",
+     "size_sqm": 25,
+     "tatami": null,
+     "max_guests": 6,
+     "beds": null,
+     "fits_party": null,
+     "note": "素泊（食事なし）"
+    }
+   ],
+   "prices": [
+    {
+     "site": "ikyu",
+     "url": "https://www.ikyu.com/00080034/11282979/10034330/?cid=20270619&cod=20270621&lc=2&ppc=3&rc=1",
+     "check_in": "2027-06-19",
+     "check_out": "2027-06-21",
+     "nights": 2,
+     "adults": 3,
+     "rooms": 1,
+     "room_name": "【禁煙】ツイン（3名利用）",
+     "size_sqm": null,
+     "meals": "素泊（食事なし）",
+     "total_jpy": 48300,
+     "per_night_jpy": null,
+     "price_basis": "total",
+     "tax": "included",
+     "tax_note": null,
+     "free_cancel_until": "2027-06-19",
+     "free_cancel_rule_text": "2027年6月19日18:00までキャンセル料無料",
+     "member_price_jpy": null,
+     "coupon": null,
+     "status": "ok",
+     "checked_at": "2026-11-15",
+     "source_url": "https://www.ikyu.com/00080034/11282979/10034330/?cid=20270619&cod=20270621&lc=2&ppc=3&rc=1"
+    }
+   ],
+   "check_in_time": null,
+   "last_check_in": null,
+   "check_out_time": null,
+   "dinner_time": null,
+   "free_cancel_until": null,
+   "booking_opens": {
+    "status": "unknown",
+    "opens_on": null,
+    "rule": null,
+    "by_site": [],
+    "checked_at": null
+   },
+   "recommendations": [],
+   "ratings": [
+    {
+     "source": "google",
+     "score": null,
+     "scale": 5,
+     "count": null,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E3%83%AA%E3%83%83%E3%83%81%E3%83%A2%E3%83%B3%E3%83%89%E3%83%9B%E3%83%86%E3%83%AB%E6%9D%B1%E4%BA%AC%E7%9B%AE%E7%99%BD",
+     "checked_at": null,
+     "display": null
+    }
+   ],
+   "review_check": null,
+   "drive_check": {
+    "parking": {
+     "available": null,
+     "free": null,
+     "fee": null,
+     "reservation_required": null,
+     "covered": null,
+     "height_limit_m": null,
+     "width_limit_m": null,
+     "distance_to_front": null,
+     "lat": null,
+     "lng": null,
+     "mapcode": null,
+     "mapcode_source": null,
+     "note": null
+    },
+    "road": {
+     "mountain_road": null,
+     "night_drive": null,
+     "winter_closure": null,
+     "note": null
+    },
+    "from_prev": null,
+    "closed_days": [],
+    "closed_days_note": null,
+    "dinner_fits": null,
+    "note": null
+   },
+   "operation": {
+    "status": "unknown",
+    "checked_on": "2026-11-16",
+    "sources": [],
+    "recheck_before_departure": true,
+    "note": "本次僅見於比價或名單，未獨立核對官網／新聞是否仍營業。"
+   },
+   "screening": {
+    "status": "candidate",
+    "rank": null,
+    "reason": null,
+    "area_unverified": false,
+    "over_1h": null
+   },
+   "stays_feedback": [],
+   "data_gaps": [
+    "place_id 未核對（不可臆造）；Google Maps 連結若為座標或館名搜尋，下次應改為店家頁。",
+    "MapCode 未從 Mapion／NaviCon 等來源取得，維持 null。",
+    "停車場入口座標未取得。",
+    "營業狀況待再確認。"
+   ],
+   "public_notes": [],
+   "updated_at": "2026-11-16"
+  },
+  {
+   "id": "lh_tokyo_60390bed",
+   "name": "JR東日本ホテルメッツ プレミア 五反田",
+   "name_ja": "JR東日本ホテルメッツ プレミア 五反田",
+   "name_zh": null,
+   "type": "hotel",
+   "address": "東京都品川区東五反田1-26-3",
+   "lat": null,
+   "lng": null,
+   "coord_source": null,
+   "google_place_id": null,
+   "google_maps_url": "https://www.google.com/maps/search/?api=1&query=JR%E6%9D%B1%E6%97%A5%E6%9C%AC%E3%83%9B%E3%83%86%E3%83%AB%E3%83%A1%E3%83%83%E3%83%84%20%E3%83%97%E3%83%AC%E3%83%9F%E3%82%A2%20%E4%BA%94%E5%8F%8D%E7%94%B0",
+   "official_url": "https://www.hotelmets.jp/gotanda/",
+   "phone": "03-6408-0011",
+   "mapcode": null,
+   "near_segments": [
+    {
+     "trip_id": "2027-06-tokyo",
+     "route": "I",
+     "base_key": "TYO",
+     "next_first_stop": null,
+     "drive_min_to_next_first_stop": null,
+     "drive_source": null
+    }
+   ],
+   "rooms": [],
+   "prices": [
+    {
+     "site": "agoda",
+     "url": null,
+     "check_in": "2027-06-19",
+     "check_out": "2027-06-21",
+     "nights": 2,
+     "adults": 3,
+     "rooms": 1,
+     "room_name": null,
+     "size_sqm": null,
+     "meals": null,
+     "total_jpy": null,
+     "per_night_jpy": null,
+     "price_basis": null,
+     "tax": "unknown",
+     "tax_note": null,
+     "free_cancel_until": null,
+     "free_cancel_rule_text": null,
+     "member_price_jpy": null,
+     "coupon": null,
+     "status": "not_found",
+     "checked_at": "2026-11-16",
+     "source_url": null
+    },
+    {
+     "site": "google_hotels",
+     "url": null,
+     "check_in": "2027-06-19",
+     "check_out": "2027-06-21",
+     "nights": 2,
+     "adults": 3,
+     "rooms": 1,
+     "room_name": null,
+     "size_sqm": null,
+     "meals": null,
+     "total_jpy": null,
+     "per_night_jpy": null,
+     "price_basis": null,
+     "tax": "unknown",
+     "tax_note": null,
+     "free_cancel_until": null,
+     "free_cancel_rule_text": null,
+     "member_price_jpy": null,
+     "coupon": null,
+     "status": "not_found",
+     "checked_at": "2026-11-16",
+     "source_url": null
+    },
+    {
+     "site": "jalan",
+     "url": "https://www.jalan.net/yad375059/plan/?stayYear=2027&stayMonth=6&stayDay=19&stayCount=2&roomCount=1&adultNum=3",
+     "check_in": "2027-06-19",
+     "check_out": "2027-06-21",
+     "nights": 2,
+     "adults": 3,
+     "rooms": 1,
+     "room_name": null,
+     "size_sqm": null,
+     "meals": null,
+     "total_jpy": null,
+     "per_night_jpy": null,
+     "price_basis": null,
+     "tax": "unknown",
+     "tax_note": null,
+     "free_cancel_until": null,
+     "free_cancel_rule_text": null,
+     "member_price_jpy": null,
+     "coupon": null,
+     "status": "not_on_sale",
+     "checked_at": "2026-11-16",
+     "source_url": "https://www.jalan.net/yad375059/plan/?stayYear=2027&stayMonth=6&stayDay=19&stayCount=2&roomCount=1&adultNum=3"
+    },
+    {
+     "site": "ikyu",
+     "url": null,
+     "check_in": "2027-06-19",
+     "check_out": "2027-06-21",
+     "nights": 2,
+     "adults": 3,
+     "rooms": 1,
+     "room_name": null,
+     "size_sqm": null,
+     "meals": null,
+     "total_jpy": null,
+     "per_night_jpy": null,
+     "price_basis": null,
+     "tax": "unknown",
+     "tax_note": null,
+     "free_cancel_until": null,
+     "free_cancel_rule_text": null,
+     "member_price_jpy": null,
+     "coupon": null,
+     "status": "not_found",
+     "checked_at": "2026-11-16",
+     "source_url": null
+    },
+    {
+     "site": "official",
+     "url": null,
+     "check_in": "2027-06-19",
+     "check_out": "2027-06-21",
+     "nights": 2,
+     "adults": 3,
+     "rooms": 1,
+     "room_name": null,
+     "size_sqm": null,
+     "meals": null,
+     "total_jpy": null,
+     "per_night_jpy": null,
+     "price_basis": null,
+     "tax": "unknown",
+     "tax_note": null,
+     "free_cancel_until": null,
+     "free_cancel_rule_text": null,
+     "member_price_jpy": null,
+     "coupon": null,
+     "status": "not_found",
+     "checked_at": "2026-11-16",
+     "source_url": null
+    },
+    {
+     "site": "rakuten",
+     "url": null,
+     "check_in": "2027-06-19",
+     "check_out": "2027-06-21",
+     "nights": 2,
+     "adults": 3,
+     "rooms": 1,
+     "room_name": null,
+     "size_sqm": null,
+     "meals": null,
+     "total_jpy": null,
+     "per_night_jpy": null,
+     "price_basis": null,
+     "tax": "unknown",
+     "tax_note": null,
+     "free_cancel_until": null,
+     "free_cancel_rule_text": null,
+     "member_price_jpy": null,
+     "coupon": null,
+     "status": "not_found",
+     "checked_at": "2026-11-16",
+     "source_url": null
+    }
+   ],
+   "check_in_time": null,
+   "last_check_in": null,
+   "check_out_time": null,
+   "dinner_time": null,
+   "free_cancel_until": null,
+   "booking_opens": {
+    "status": "unknown",
+    "opens_on": null,
+    "rule": null,
+    "by_site": [],
+    "checked_at": null
+   },
+   "recommendations": [
+    {
+     "kind": "fb_group",
+     "title": null,
+     "author": null,
+     "url": "https://www.facebook.com/groups/1081683926072577/permalink/1306761620231472/",
+     "published_at": null,
+     "points": "沒有同時 ≥25㎡ 且可3大人的房間。",
+     "lang": null
+    }
+   ],
+   "ratings": [
+    {
+     "source": "google",
+     "score": null,
+     "scale": 5,
+     "count": null,
+     "url": "https://www.google.com/maps/search/?api=1&query=JR%E6%9D%B1%E6%97%A5%E6%9C%AC%E3%83%9B%E3%83%86%E3%83%AB%E3%83%A1%E3%83%83%E3%83%84%20%E3%83%97%E3%83%AC%E3%83%9F%E3%82%A2%20%E4%BA%94%E5%8F%8D%E7%94%B0",
+     "checked_at": null,
+     "display": null
+    }
+   ],
+   "review_check": null,
+   "drive_check": {
+    "parking": {
+     "available": null,
+     "free": null,
+     "fee": null,
+     "reservation_required": null,
+     "covered": null,
+     "height_limit_m": null,
+     "width_limit_m": null,
+     "distance_to_front": null,
+     "lat": null,
+     "lng": null,
+     "mapcode": null,
+     "mapcode_source": null,
+     "note": null
+    },
+    "road": {
+     "mountain_road": null,
+     "night_drive": null,
+     "winter_closure": null,
+     "note": null
+    },
+    "from_prev": null,
+    "closed_days": [],
+    "closed_days_note": null,
+    "dinner_fits": null,
+    "note": "2027-06-20 アニメイト池袋本店（五反田離池袋較遠，山手線約20–25分，仍屬電車範圍。）"
+   },
+   "operation": {
+    "status": "open",
+    "checked_on": "2026-11-16",
+    "sources": [],
+    "recheck_before_departure": true,
+    "note": null
+   },
+   "screening": {
+    "status": "rejected",
+    "rank": null,
+    "reason": "可3名的スーペリアシングル17㎡、スーペリアツイン20㎡、デラックスツイン24㎡均低於25㎡。唯一30㎡的デラックスラージツイン／ユニバーサル定員僅1～2名，不可加床。",
+    "area_unverified": false,
+    "over_1h": null
+   },
+   "stays_feedback": [],
+   "data_gaps": [
+    "place_id 未核對（不可臆造）；Google Maps 連結若為座標或館名搜尋，下次應改為店家頁。",
+    "MapCode 未從 Mapion／NaviCon 等來源取得，維持 null。",
+    "停車場入口座標未取得。"
+   ],
+   "public_notes": [
+    "不符合 25㎡／3大人規則：可3名的スーペリアシングル17㎡、スーペリアツイン20㎡、デラックスツイン24㎡均低於25㎡。唯一30㎡的デラックスラージツイン／ユニバーサル定員僅1～2名，不可加床。",
+    "名稱對應：官方現名為 JR東日本ホテルメッツ プレミア 五反田。 來源：None"
+   ],
+   "updated_at": "2026-11-16"
+  },
+  {
+   "id": "lh_tokyo_ab22956d",
+   "name": "スーパーホテル池袋西口天然温泉",
+   "name_ja": "スーパーホテル池袋西口天然温泉",
+   "name_zh": "Super Hotel 池袋西口天然溫泉",
+   "type": "hotel",
+   "address": null,
+   "lat": 35.731934,
+   "lng": 139.706879,
+   "coord_source": "既有 lodging.bases TYO",
+   "google_place_id": "ChIJq6qmt16NGGARz3bH8IXW4ro",
+   "google_maps_url": "https://www.google.com/maps/place/?q=place_id:ChIJq6qmt16NGGARz3bH8IXW4ro",
+   "official_url": "https://www.superhotel.co.jp/s_hotels/jrikebukuro/",
+   "phone": "03-5911-9000",
+   "mapcode": null,
+   "near_segments": [
+    {
+     "trip_id": "2027-06-tokyo",
+     "route": "A",
+     "base_key": "TYO",
+     "next_first_stop": null,
+     "drive_min_to_next_first_stop": null,
+     "drive_source": null
+    },
+    {
+     "trip_id": "2027-06-tokyo",
+     "route": "B",
+     "base_key": "TYO",
+     "next_first_stop": null,
+     "drive_min_to_next_first_stop": null,
+     "drive_source": null
+    },
+    {
+     "trip_id": "2027-06-tokyo",
+     "route": "C",
+     "base_key": "TYO",
+     "next_first_stop": null,
+     "drive_min_to_next_first_stop": null,
+     "drive_source": null
+    },
+    {
+     "trip_id": "2027-06-tokyo",
+     "route": "D",
+     "base_key": "TYO",
+     "next_first_stop": null,
+     "drive_min_to_next_first_stop": null,
+     "drive_source": null
+    },
+    {
+     "trip_id": "2027-06-tokyo",
+     "route": "E",
+     "base_key": "TYO",
+     "next_first_stop": null,
+     "drive_min_to_next_first_stop": null,
+     "drive_source": null
+    },
+    {
+     "trip_id": "2027-06-tokyo",
+     "route": "F",
+     "base_key": "TYO",
+     "next_first_stop": null,
+     "drive_min_to_next_first_stop": null,
+     "drive_source": null
+    },
+    {
+     "trip_id": "2027-06-tokyo",
+     "route": "G",
+     "base_key": "TYO",
+     "next_first_stop": null,
+     "drive_min_to_next_first_stop": null,
+     "drive_source": null
+    },
+    {
+     "trip_id": "2027-06-tokyo",
+     "route": "H",
+     "base_key": "TYO",
+     "next_first_stop": null,
+     "drive_min_to_next_first_stop": null,
+     "drive_source": null
+    },
+    {
+     "trip_id": "2027-06-tokyo",
+     "route": "F（lodging.bases／當時推薦路線）",
+     "base_key": "TYO",
+     "next_first_stop": null,
+     "drive_min_to_next_first_stop": null,
+     "drive_source": null
+    },
+    {
+     "trip_id": "2027-06-tokyo",
+     "route": "I",
+     "base_key": "TYO",
+     "next_first_stop": null,
+     "drive_min_to_next_first_stop": null,
+     "drive_source": null
+    }
+   ],
+   "rooms": [
+    {
+     "room_name": "本館ツイン 12㎡（150cm＋90cm，3 名）等",
+     "size_sqm": 12,
+     "tatami": null,
+     "max_guests": null,
+     "beds": null,
+     "fits_party": null,
+     "note": "含早餐（目前開放日期之價目）"
+    },
+    {
+     "room_name": "本館ツイン 12㎡、新館ファミリー 18㎡、コネクティング 24㎡",
+     "size_sqm": 12,
+     "tatami": null,
+     "max_guests": null,
+     "beds": null,
+     "fits_party": null,
+     "note": "低於 25㎡，依當時規則剔除。"
+    }
+   ],
+   "prices": [
+    {
+     "site": "rakuten",
+     "url": "https://hotel.travel.rakuten.co.jp/hotelinfo/plan/80513",
+     "check_in": null,
+     "check_out": null,
+     "nights": 2,
+     "adults": 3,
+     "rooms": 1,
+     "room_name": null,
+     "size_sqm": null,
+     "meals": "含早餐（自助，烤麵包）；17:00～21:00 免費 welcome bar",
+     "total_jpy": null,
+     "per_night_jpy": null,
+     "price_basis": "total",
+     "tax": "included",
+     "tax_note": null,
+     "free_cancel_until": null,
+     "free_cancel_rule_text": null,
+     "member_price_jpy": null,
+     "coupon": null,
+     "status": "not_found",
+     "checked_at": "2026-10-24",
+     "source_url": "https://hotel.travel.rakuten.co.jp/hotelinfo/plan/80513"
+    },
+    {
+     "site": "rakuten",
+     "url": "https://hotel.travel.rakuten.co.jp/hotelinfo/plan/80513?f_heya_su=1&f_otona_su=3&f_nen1=2027&f_tuki1=6&f_hi1=19&f_nen2=2027&f_tuki2=6&f_hi2=21&f_sort=min_charge",
+     "check_in": null,
+     "check_out": null,
+     "nights": null,
+     "adults": null,
+     "rooms": null,
+     "room_name": "本館ツイン 12㎡、新館ファミリー 18㎡、コネクティング 24㎡",
+     "size_sqm": null,
+     "meals": null,
+     "total_jpy": null,
+     "per_night_jpy": null,
+     "price_basis": null,
+     "tax": "included",
+     "tax_note": null,
+     "free_cancel_until": null,
+     "free_cancel_rule_text": null,
+     "member_price_jpy": null,
+     "coupon": null,
+     "status": "not_found",
+     "checked_at": "2026-11-15",
+     "source_url": "https://hotel.travel.rakuten.co.jp/hotelinfo/plan/80513?f_heya_su=1&f_otona_su=3&f_nen1=2027&f_tuki1=6&f_hi1=19&f_nen2=2027&f_tuki2=6&f_hi2=21&f_sort=min_charge"
+    }
+   ],
+   "check_in_time": null,
+   "last_check_in": null,
+   "check_out_time": null,
+   "dinner_time": null,
+   "free_cancel_until": null,
+   "booking_opens": {
+    "status": "unknown",
+    "opens_on": null,
+    "rule": "楽天方案期間至 2027-12-31，但 2027/6/19 目前查無空房，需 2027 年春再查",
+    "by_site": [],
+    "checked_at": null
+   },
+   "recommendations": [],
+   "ratings": [
+    {
+     "source": "google",
+     "score": null,
+     "scale": 5,
+     "count": null,
+     "url": "https://www.google.com/maps/place/?q=place_id:ChIJq6qmt16NGGARz3bH8IXW4ro",
+     "checked_at": null,
+     "display": null
+    }
+   ],
+   "review_check": null,
+   "drive_check": {
+    "parking": {
+     "available": true,
+     "free": false,
+     "fee": "3 台 3,000円、要預約（本段不開車）",
+     "reservation_required": true,
+     "covered": null,
+     "height_limit_m": null,
+     "width_limit_m": null,
+     "distance_to_front": null,
+     "lat": null,
+     "lng": null,
+     "mapcode": null,
+     "mapcode_source": null,
+     "note": "東京 6/19～6/21 不開車，停車場與 MapCode 不需要（館方 3 台 3,000円 要預約）"
+    },
+    "road": {
+     "mountain_road": null,
+     "night_drive": null,
+     "winter_closure": null,
+     "note": null
+    },
+    "from_prev": null,
+    "closed_days": [],
+    "closed_days_note": null,
+    "dinner_fits": null,
+    "note": null
+   },
+   "operation": {
+    "status": "open",
+    "checked_on": "2026-10-24",
+    "sources": [],
+    "recheck_before_departure": true,
+    "note": "當時可在樂天／じゃらん或官網查到資料；之後若有更新以較新查證為準。"
+   },
+   "screening": {
+    "status": "rejected",
+    "rank": null,
+    "reason": "單室均低於 25㎡。「同フロア３室お任せ 36㎡」為 3 間房合計，不是 1 室 ≥25㎡。2027-06-19～21 全部空室なし。",
+    "area_unverified": false,
+    "over_1h": null
+   },
+   "stays_feedback": [],
+   "data_gaps": [
+    "MapCode 未從 Mapion／NaviCon 等來源取得，維持 null。",
+    "停車場入口座標未取得。"
+   ],
+   "public_notes": [
+    "取消規定：前日まで免費（楽天方案：前日まで無料、當日・不泊 100%；24:00 後未入住視同取消）"
+   ],
+   "updated_at": "2026-11-16"
+  },
+  {
+   "id": "lh_tokyo_340ebf82",
+   "name": "天然温泉 豊穣の湯 ドーミーイン池袋",
+   "name_ja": "天然温泉 豊穣の湯 ドーミーイン池袋",
+   "name_zh": "Dormy Inn 池袋（豐穰之湯）",
+   "type": "hotel",
+   "address": "東京都豊島区東池袋1-23-8（官網；本次未再核對門牌）",
+   "lat": 35.731922,
+   "lng": 139.719162,
+   "coord_source": "既有 lodging.bases TYO",
+   "google_place_id": "ChIJQ_3YBx2NGGARl7pBJPflvLU",
+   "google_maps_url": "https://www.google.com/maps/place/?q=place_id:ChIJQ_3YBx2NGGARl7pBJPflvLU",
+   "official_url": "https://dormy-hotels.com/dormyinn/hotels/ikebukuro/",
+   "phone": "03-5956-5489",
+   "mapcode": null,
+   "near_segments": [
+    {
+     "trip_id": "2027-06-tokyo",
+     "route": "A",
+     "base_key": "TYO",
+     "next_first_stop": null,
+     "drive_min_to_next_first_stop": null,
+     "drive_source": null
+    },
+    {
+     "trip_id": "2027-06-tokyo",
+     "route": "B",
+     "base_key": "TYO",
+     "next_first_stop": null,
+     "drive_min_to_next_first_stop": null,
+     "drive_source": null
+    },
+    {
+     "trip_id": "2027-06-tokyo",
+     "route": "C",
+     "base_key": "TYO",
+     "next_first_stop": null,
+     "drive_min_to_next_first_stop": null,
+     "drive_source": null
+    },
+    {
+     "trip_id": "2027-06-tokyo",
+     "route": "D",
+     "base_key": "TYO",
+     "next_first_stop": null,
+     "drive_min_to_next_first_stop": null,
+     "drive_source": null
+    },
+    {
+     "trip_id": "2027-06-tokyo",
+     "route": "E",
+     "base_key": "TYO",
+     "next_first_stop": null,
+     "drive_min_to_next_first_stop": null,
+     "drive_source": null
+    },
+    {
+     "trip_id": "2027-06-tokyo",
+     "route": "F",
+     "base_key": "TYO",
+     "next_first_stop": null,
+     "drive_min_to_next_first_stop": null,
+     "drive_source": null
+    },
+    {
+     "trip_id": "2027-06-tokyo",
+     "route": "G",
+     "base_key": "TYO",
+     "next_first_stop": null,
+     "drive_min_to_next_first_stop": null,
+     "drive_source": null
+    },
+    {
+     "trip_id": "2027-06-tokyo",
+     "route": "H",
+     "base_key": "TYO",
+     "next_first_stop": null,
+     "drive_min_to_next_first_stop": null,
+     "drive_source": null
+    },
+    {
+     "trip_id": "2027-06-tokyo",
+     "route": "F（lodging.bases／當時推薦路線）",
+     "base_key": "TYO",
+     "next_first_stop": null,
+     "drive_min_to_next_first_stop": null,
+     "drive_source": null
+    },
+    {
+     "trip_id": "2027-06-tokyo",
+     "route": "I",
+     "base_key": "TYO",
+     "next_first_stop": null,
+     "drive_min_to_next_first_stop": null,
+     "drive_source": null
+    }
+   ],
+   "rooms": [
+    {
+     "room_name": "ファミリーツイン 約24.2㎡（既有資料；本次頁面未重抓坪數）",
+     "size_sqm": 24.2,
+     "tatami": null,
+     "max_guests": null,
+     "beds": null,
+     "fits_party": null,
+     "note": "朝食付"
+    },
+    {
+     "room_name": "ファミリーツイン",
+     "size_sqm": null,
+     "tatami": null,
+     "max_guests": null,
+     "beds": null,
+     "fits_party": null,
+     "note": "素泊"
+    },
+    {
+     "room_name": "ファミリーツイン／レディースラージツイン",
+     "size_sqm": 24.2,
+     "tatami": null,
+     "max_guests": null,
+     "beds": null,
+     "fits_party": null,
+     "note": "低於 25㎡，依當時規則剔除。"
+    }
+   ],
+   "prices": [
+    {
+     "site": "jalan",
+     "url": "https://www.jalan.net/yad316836/plan/?stayYear=2027&stayMonth=6&stayDay=19&stayCount=2&roomCount=1&adultNum=3",
+     "check_in": "2027-06-19",
+     "check_out": "2027-06-21",
+     "nights": 2,
+     "adults": 3,
+     "rooms": 1,
+     "room_name": null,
+     "size_sqm": null,
+     "meals": "素泊或朝食付（朝食自助 2,500円/人；21:30～23:00 免費夜鳴きそば）",
+     "total_jpy": null,
+     "per_night_jpy": null,
+     "price_basis": "total",
+     "tax": "included",
+     "tax_note": null,
+     "free_cancel_until": null,
+     "free_cancel_rule_text": null,
+     "member_price_jpy": null,
+     "coupon": null,
+     "status": "not_found",
+     "checked_at": "2026-10-24",
+     "source_url": "https://www.jalan.net/yad316836/plan/?stayYear=2027&stayMonth=6&stayDay=19&stayCount=2&roomCount=1&adultNum=3"
+    },
+    {
+     "site": "rakuten",
+     "url": "https://hotel.travel.rakuten.co.jp/hotelinfo/plan/179856?f_heya_su=1&f_otona_su=3&f_nen1=2027&f_tuki1=6&f_hi1=19&f_nen2=2027&f_tuki2=6&f_hi2=21&f_sort=min_charge",
+     "check_in": "2027-06-19",
+     "check_out": "2027-06-21",
+     "nights": 2,
+     "adults": 3,
+     "rooms": 1,
+     "room_name": "ファミリーツイン",
+     "size_sqm": null,
+     "meals": "素泊",
+     "total_jpy": 66930,
+     "per_night_jpy": null,
+     "price_basis": "total",
+     "tax": "included",
+     "tax_note": null,
+     "free_cancel_until": null,
+     "free_cancel_rule_text": null,
+     "member_price_jpy": null,
+     "coupon": null,
+     "status": "ok",
+     "checked_at": "2026-11-12",
+     "source_url": "https://hotel.travel.rakuten.co.jp/hotelinfo/plan/179856?f_heya_su=1&f_otona_su=3&f_nen1=2027&f_tuki1=6&f_hi1=19&f_nen2=2027&f_tuki2=6&f_hi2=21&f_sort=min_charge"
+    },
+    {
+     "site": "rakuten",
+     "url": "https://hotel.travel.rakuten.co.jp/hotelinfo/plan/179856?f_heya_su=1&f_otona_su=3&f_nen1=2027&f_tuki1=6&f_hi1=19&f_nen2=2027&f_tuki2=6&f_hi2=21&f_sort=min_charge",
+     "check_in": "2027-06-19",
+     "check_out": "2027-06-21",
+     "nights": 2,
+     "adults": 3,
+     "rooms": 1,
+     "room_name": "ファミリーツイン 約24.2㎡（既有資料；本次頁面未重抓坪數）",
+     "size_sqm": 24.2,
+     "meals": "朝食付",
+     "total_jpy": 84180,
+     "per_night_jpy": null,
+     "price_basis": "total",
+     "tax": "included",
+     "tax_note": null,
+     "free_cancel_until": null,
+     "free_cancel_rule_text": null,
+     "member_price_jpy": null,
+     "coupon": null,
+     "status": "ok",
+     "checked_at": "2026-11-12",
+     "source_url": "https://hotel.travel.rakuten.co.jp/hotelinfo/plan/179856?f_heya_su=1&f_otona_su=3&f_nen1=2027&f_tuki1=6&f_hi1=19&f_nen2=2027&f_tuki2=6&f_hi2=21&f_sort=min_charge"
+    },
+    {
+     "site": "rakuten",
+     "url": "https://hotel.travel.rakuten.co.jp/hotelinfo/plan/179856?f_heya_su=1&f_otona_su=3&f_nen1=2027&f_tuki1=6&f_hi1=19&f_nen2=2027&f_tuki2=6&f_hi2=21&f_sort=min_charge",
+     "check_in": null,
+     "check_out": null,
+     "nights": null,
+     "adults": null,
+     "rooms": null,
+     "room_name": "ファミリーツイン／レディースラージツイン",
+     "size_sqm": null,
+     "meals": null,
+     "total_jpy": null,
+     "per_night_jpy": null,
+     "price_basis": null,
+     "tax": "included",
+     "tax_note": null,
+     "free_cancel_until": null,
+     "free_cancel_rule_text": null,
+     "member_price_jpy": null,
+     "coupon": null,
+     "status": "not_found",
+     "checked_at": "2026-11-15",
+     "source_url": "https://hotel.travel.rakuten.co.jp/hotelinfo/plan/179856?f_heya_su=1&f_otona_su=3&f_nen1=2027&f_tuki1=6&f_hi1=19&f_nen2=2027&f_tuki2=6&f_hi2=21&f_sort=min_charge"
+    }
+   ],
+   "check_in_time": null,
+   "last_check_in": null,
+   "check_out_time": null,
+   "dinner_time": null,
+   "free_cancel_until": null,
+   "booking_opens": {
+    "status": "on_sale",
+    "opens_on": null,
+    "rule": "已開賣（楽天方案期間至 2027-07-31）",
+    "by_site": [],
+    "checked_at": null
+   },
+   "recommendations": [],
+   "ratings": [
+    {
+     "source": "google",
+     "score": null,
+     "scale": 5,
+     "count": null,
+     "url": "https://www.google.com/maps/place/?q=place_id:ChIJQ_3YBx2NGGARl7pBJPflvLU",
+     "checked_at": null,
+     "display": null
+    }
+   ],
+   "review_check": null,
+   "drive_check": {
+    "parking": {
+     "available": true,
+     "free": false,
+     "fee": "平面 4 台 5,000円/泊（完全預約制；本段不開車）",
+     "reservation_required": true,
+     "covered": null,
+     "height_limit_m": null,
+     "width_limit_m": null,
+     "distance_to_front": null,
+     "lat": null,
+     "lng": null,
+     "mapcode": null,
+     "mapcode_source": null,
+     "note": "東京 6/19～6/21 不開車，停車場與 MapCode 不需要（館方平面 4 台 5,000円/泊 完全預約制）"
+    },
+    "road": {
+     "mountain_road": null,
+     "night_drive": null,
+     "winter_closure": null,
+     "note": null
+    },
+    "from_prev": null,
+    "closed_days": [],
+    "closed_days_note": null,
+    "dinner_fits": null,
+    "note": null
+   },
+   "operation": {
+    "status": "open",
+    "checked_on": "2026-10-24",
+    "sources": [],
+    "recheck_before_departure": true,
+    "note": "當時可在樂天／じゃらん或官網查到資料；之後若有更新以較新查證為準。"
+   },
+   "screening": {
+    "status": "rejected",
+    "rank": null,
+    "reason": "楽天頁標 24.2㎡，低於 25。2027-06-19～21 有價（朝食付最低約 ¥83,214／素泊約 ¥66,012），僅註記剔除。",
+    "area_unverified": false,
+    "over_1h": null
+   },
+   "stays_feedback": [],
+   "data_gaps": [
+    "MapCode 未從 Mapion／NaviCon 等來源取得，維持 null。",
+    "停車場入口座標未取得。"
+   ],
+   "public_notes": [
+    "取消規定：2027-06-17 23:59 前免費（楽天：2日前まで無料、前日 50%、當日・不泊 100%）"
+   ],
+   "updated_at": "2026-11-16"
+  },
+  {
+   "id": "lh_tokyo_addc1cdb",
+   "name": "相鉄グランドフレッサ高田馬場",
+   "name_ja": "相鉄グランドフレッサ高田馬場",
+   "name_zh": null,
+   "type": "hotel",
+   "address": "東京都新宿区高田馬場1-27-7",
+   "lat": 35.7125875,
+   "lng": 139.7048803,
+   "coord_source": "Photon/OSM「sotetsu GrandFresa Takadababa」，與高田馬場相符。",
+   "google_place_id": null,
+   "google_maps_url": "https://www.google.com/maps/search/?api=1&query=%E7%9B%B8%E9%89%84%E3%82%B0%E3%83%A9%E3%83%B3%E3%83%89%E3%83%95%E3%83%AC%E3%83%83%E3%82%B5%E9%AB%98%E7%94%B0%E9%A6%AC%E5%A0%B4",
+   "official_url": "https://www.sotetsu-hotels.com/grand-fresa/takadanobaba/",
+   "phone": "03-5291-8203",
+   "mapcode": null,
+   "near_segments": [
+    {
+     "trip_id": "2027-06-tokyo",
+     "route": "I",
+     "base_key": "TYO",
+     "next_first_stop": null,
+     "drive_min_to_next_first_stop": null,
+     "drive_source": null
+    }
+   ],
+   "rooms": [],
+   "prices": [
+    {
+     "site": "agoda",
+     "url": null,
+     "check_in": "2027-06-19",
+     "check_out": "2027-06-21",
+     "nights": 2,
+     "adults": 3,
+     "rooms": 1,
+     "room_name": null,
+     "size_sqm": null,
+     "meals": null,
+     "total_jpy": null,
+     "per_night_jpy": null,
+     "price_basis": null,
+     "tax": "unknown",
+     "tax_note": null,
+     "free_cancel_until": null,
+     "free_cancel_rule_text": null,
+     "member_price_jpy": null,
+     "coupon": null,
+     "status": "not_found",
+     "checked_at": "2026-11-16",
+     "source_url": null
+    },
+    {
+     "site": "google_hotels",
+     "url": null,
+     "check_in": "2027-06-19",
+     "check_out": "2027-06-21",
+     "nights": 2,
+     "adults": 3,
+     "rooms": 1,
+     "room_name": null,
+     "size_sqm": null,
+     "meals": null,
+     "total_jpy": null,
+     "per_night_jpy": null,
+     "price_basis": null,
+     "tax": "unknown",
+     "tax_note": null,
+     "free_cancel_until": null,
+     "free_cancel_rule_text": null,
+     "member_price_jpy": null,
+     "coupon": null,
+     "status": "not_found",
+     "checked_at": "2026-11-16",
+     "source_url": null
+    },
+    {
+     "site": "jalan",
+     "url": null,
+     "check_in": "2027-06-19",
+     "check_out": "2027-06-21",
+     "nights": 2,
+     "adults": 3,
+     "rooms": 1,
+     "room_name": null,
+     "size_sqm": null,
+     "meals": null,
+     "total_jpy": null,
+     "per_night_jpy": null,
+     "price_basis": null,
+     "tax": "unknown",
+     "tax_note": null,
+     "free_cancel_until": null,
+     "free_cancel_rule_text": null,
+     "member_price_jpy": null,
+     "coupon": null,
+     "status": "not_found",
+     "checked_at": "2026-11-16",
+     "source_url": null
+    },
+    {
+     "site": "ikyu",
+     "url": null,
+     "check_in": "2027-06-19",
+     "check_out": "2027-06-21",
+     "nights": 2,
+     "adults": 3,
+     "rooms": 1,
+     "room_name": null,
+     "size_sqm": null,
+     "meals": null,
+     "total_jpy": null,
+     "per_night_jpy": null,
+     "price_basis": null,
+     "tax": "unknown",
+     "tax_note": null,
+     "free_cancel_until": null,
+     "free_cancel_rule_text": null,
+     "member_price_jpy": null,
+     "coupon": null,
+     "status": "not_found",
+     "checked_at": "2026-11-16",
+     "source_url": null
+    },
+    {
+     "site": "official",
+     "url": null,
+     "check_in": "2027-06-19",
+     "check_out": "2027-06-21",
+     "nights": 2,
+     "adults": 3,
+     "rooms": 1,
+     "room_name": null,
+     "size_sqm": null,
+     "meals": null,
+     "total_jpy": null,
+     "per_night_jpy": null,
+     "price_basis": null,
+     "tax": "unknown",
+     "tax_note": null,
+     "free_cancel_until": null,
+     "free_cancel_rule_text": null,
+     "member_price_jpy": null,
+     "coupon": null,
+     "status": "not_found",
+     "checked_at": "2026-11-16",
+     "source_url": null
+    },
+    {
+     "site": "rakuten",
+     "url": null,
+     "check_in": "2027-06-19",
+     "check_out": "2027-06-21",
+     "nights": 2,
+     "adults": 3,
+     "rooms": 1,
+     "room_name": null,
+     "size_sqm": null,
+     "meals": null,
+     "total_jpy": null,
+     "per_night_jpy": null,
+     "price_basis": null,
+     "tax": "unknown",
+     "tax_note": null,
+     "free_cancel_until": null,
+     "free_cancel_rule_text": null,
+     "member_price_jpy": null,
+     "coupon": null,
+     "status": "not_found",
+     "checked_at": "2026-11-16",
+     "source_url": null
+    }
+   ],
+   "check_in_time": null,
+   "last_check_in": null,
+   "check_out_time": null,
+   "dinner_time": null,
+   "free_cancel_until": null,
+   "booking_opens": {
+    "status": "unknown",
+    "opens_on": null,
+    "rule": null,
+    "by_site": [],
+    "checked_at": null
+   },
+   "recommendations": [
+    {
+     "kind": "fb_group",
+     "title": null,
+     "author": null,
+     "url": "https://www.facebook.com/groups/1081683926072577/permalink/1306761620231472/",
+     "published_at": null,
+     "points": "區位近池袋，但沒有頁面同時標示 ≥25㎡ 且可3大人的單室。",
+     "lang": null
+    }
+   ],
+   "ratings": [
+    {
+     "source": "google",
+     "score": null,
+     "scale": 5,
+     "count": null,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E7%9B%B8%E9%89%84%E3%82%B0%E3%83%A9%E3%83%B3%E3%83%89%E3%83%95%E3%83%AC%E3%83%83%E3%82%B5%E9%AB%98%E7%94%B0%E9%A6%AC%E5%A0%B4",
+     "checked_at": null,
+     "display": null
+    }
+   ],
+   "review_check": null,
+   "drive_check": {
+    "parking": {
+     "available": null,
+     "free": null,
+     "fee": null,
+     "reservation_required": null,
+     "covered": null,
+     "height_limit_m": null,
+     "width_limit_m": null,
+     "distance_to_front": null,
+     "lat": null,
+     "lng": null,
+     "mapcode": null,
+     "mapcode_source": null,
+     "note": null
+    },
+    "road": {
+     "mountain_road": null,
+     "night_drive": null,
+     "winter_closure": null,
+     "note": null
+    },
+    "from_prev": null,
+    "closed_days": [],
+    "closed_days_note": null,
+    "dinner_fits": null,
+    "note": "2027-06-20 アニメイト池袋本店（高田馬場與池袋相鄰，山手線約1站。）"
+   },
+   "operation": {
+    "status": "open",
+    "checked_on": "2026-11-16",
+    "sources": [],
+    "recheck_before_departure": true,
+    "note": null
+   },
+   "screening": {
+    "status": "rejected",
+    "rank": null,
+    "reason": "官方明確可3名的是スーペリアツイン／スーペリアトリプル 23.9㎡（加床），低於25㎡。デラックスツイン 25.3–28.1㎡、ユニバーサルツイン 28.1㎡在公式客房頁未寫可3名；じゃらん／楽天2027/6/19–21三人可訂房型也只有23.9㎡トリプル，或コネクティング兩室（不算1室）。",
+    "area_unverified": false,
+    "over_1h": null
+   },
+   "stays_feedback": [],
+   "data_gaps": [
+    "place_id 未核對（不可臆造）；Google Maps 連結若為座標或館名搜尋，下次應改為店家頁。",
+    "MapCode 未從 Mapion／NaviCon 等來源取得，維持 null。",
+    "停車場入口座標未取得。"
+   ],
+   "public_notes": [
+    "不符合 25㎡／3大人規則：官方明確可3名的是スーペリアツイン／スーペリアトリプル 23.9㎡（加床），低於25㎡。デラックスツイン 25.3–28.1㎡、ユニバーサルツイン 28.1㎡在公式客房頁未寫可3名；じゃらん／楽天2027/6/19–21三人可訂房型也只有23.9㎡トリプル，或コネクティング兩室（不算1室）。"
+   ],
+   "updated_at": "2026-11-16"
+  },
+  {
+   "id": "lh_tokyo_0623132f",
+   "name": "第一イン池袋",
+   "name_ja": "第一イン池袋",
+   "name_zh": null,
+   "type": "hotel",
+   "address": null,
+   "lat": null,
+   "lng": null,
+   "coord_source": null,
+   "google_place_id": null,
+   "google_maps_url": "https://www.google.com/maps/search/?api=1&query=%E7%AC%AC%E4%B8%80%E3%82%A4%E3%83%B3%E6%B1%A0%E8%A2%8B",
+   "official_url": null,
+   "phone": null,
+   "mapcode": null,
+   "near_segments": [
+    {
+     "trip_id": "2027-06-tokyo",
+     "route": "I",
+     "base_key": "TYO",
+     "next_first_stop": null,
+     "drive_min_to_next_first_stop": null,
+     "drive_source": null
+    }
+   ],
+   "rooms": [
+    {
+     "room_name": "スタジオトリプル",
+     "size_sqm": 24,
+     "tatami": null,
+     "max_guests": null,
+     "beds": null,
+     "fits_party": null,
+     "note": "低於 25㎡，依當時規則剔除。"
+    }
+   ],
+   "prices": [
+    {
+     "site": "rakuten",
+     "url": "https://www.hankyu-hotel.com/hotel/dh/ikebukuro/accommodation/studio-triple",
+     "check_in": null,
+     "check_out": null,
+     "nights": null,
+     "adults": null,
+     "rooms": null,
+     "room_name": "スタジオトリプル",
+     "size_sqm": null,
+     "meals": null,
+     "total_jpy": null,
+     "per_night_jpy": null,
+     "price_basis": null,
+     "tax": "included",
+     "tax_note": null,
+     "free_cancel_until": null,
+     "free_cancel_rule_text": null,
+     "member_price_jpy": null,
+     "coupon": null,
+     "status": "not_found",
+     "checked_at": "2026-11-15",
+     "source_url": "https://www.hankyu-hotel.com/hotel/dh/ikebukuro/accommodation/studio-triple"
+    }
+   ],
+   "check_in_time": null,
+   "last_check_in": null,
+   "check_out_time": null,
+   "dinner_time": null,
+   "free_cancel_until": null,
+   "booking_opens": {
+    "status": "unknown",
+    "opens_on": null,
+    "rule": null,
+    "by_site": [],
+    "checked_at": null
+   },
+   "recommendations": [],
+   "ratings": [
+    {
+     "source": "google",
+     "score": null,
+     "scale": 5,
+     "count": null,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E7%AC%AC%E4%B8%80%E3%82%A4%E3%83%B3%E6%B1%A0%E8%A2%8B",
+     "checked_at": null,
+     "display": null
+    }
+   ],
+   "review_check": null,
+   "drive_check": {
+    "parking": {
+     "available": null,
+     "free": null,
+     "fee": null,
+     "reservation_required": null,
+     "covered": null,
+     "height_limit_m": null,
+     "width_limit_m": null,
+     "distance_to_front": null,
+     "lat": null,
+     "lng": null,
+     "mapcode": null,
+     "mapcode_source": null,
+     "note": null
+    },
+    "road": {
+     "mountain_road": null,
+     "night_drive": null,
+     "winter_closure": null,
+     "note": null
+    },
+    "from_prev": null,
+    "closed_days": [],
+    "closed_days_note": null,
+    "dinner_fits": null,
+    "note": null
+   },
+   "operation": {
+    "status": "unknown",
+    "checked_on": "2026-11-16",
+    "sources": [],
+    "recheck_before_departure": true,
+    "note": "本次僅見於比價或名單，未獨立核對官網／新聞是否仍營業。"
+   },
+   "screening": {
+    "status": "rejected",
+    "rank": null,
+    "reason": "官網／集團頁標 24㎡，低於 25。本次未再查價。",
+    "area_unverified": false,
+    "over_1h": null
+   },
+   "stays_feedback": [],
+   "data_gaps": [
+    "place_id 未核對（不可臆造）；Google Maps 連結若為座標或館名搜尋，下次應改為店家頁。",
+    "MapCode 未從 Mapion／NaviCon 等來源取得，維持 null。",
+    "停車場入口座標未取得。",
+    "營業狀況待再確認。"
+   ],
+   "public_notes": [],
+   "updated_at": "2026-11-16"
+  }
+ ]
+}

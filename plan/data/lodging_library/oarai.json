@@ -1,0 +1,455 @@
+{
+ "schema": "agency.lodging_library.region.v1",
+ "region": {
+  "id": "oarai",
+  "name": "茨城 大洗・磯崎",
+  "prefecture": "茨城県"
+ },
+ "updated_at": "2026-11-16",
+ "hotels": [
+  {
+   "id": "lh_oarai_533b288e",
+   "name": "いそざき温泉 ホテルニュー白亜紀",
+   "name_ja": "いそざき温泉 ホテルニュー白亜紀",
+   "name_zh": null,
+   "type": "onsen_hotel",
+   "address": null,
+   "lat": 36.38126455,
+   "lng": 140.6253419,
+   "coord_source": null,
+   "google_place_id": "ChIJS7nY324yImARdpnCdhzT5JY",
+   "google_maps_url": "https://www.google.com/maps/place/?q=place_id:ChIJS7nY324yImARdpnCdhzT5JY",
+   "official_url": "https://hakuaki.com/",
+   "phone": "029-265-7185",
+   "mapcode": null,
+   "near_segments": [
+    {
+     "trip_id": "2027-06-tokyo",
+     "route": "D",
+     "base_key": "OARAI",
+     "next_first_stop": null,
+     "drive_min_to_next_first_stop": null,
+     "drive_source": null
+    },
+    {
+     "trip_id": "2027-06-tokyo",
+     "route": "E",
+     "base_key": "OARAI",
+     "next_first_stop": null,
+     "drive_min_to_next_first_stop": null,
+     "drive_source": null
+    }
+   ],
+   "rooms": [
+    {
+     "room_name": "3階 海側和室12.5疊（3名可）；街側和洋室52㎡ 每人約18,779～27,460",
+     "size_sqm": 52,
+     "tatami": null,
+     "max_guests": null,
+     "beds": null,
+     "fits_party": null,
+     "note": "1泊2食（和會席，餐廳） 參考價，非該日期實價（2027/6～7 多數尚未開賣；為楽天等目前開放日期之3名1室每人含稅價格範圍，實際依日期/方案變動）"
+    }
+   ],
+   "prices": [
+    {
+     "site": "rakuten",
+     "url": "https://hotel.travel.rakuten.co.jp/hotelinfo/plan/68487",
+     "check_in": null,
+     "check_out": null,
+     "nights": null,
+     "adults": 3,
+     "rooms": 1,
+     "room_name": "3階 海側和室12.5疊（3名可）；街側和洋室52㎡ 每人約18,779～27,460",
+     "size_sqm": 52,
+     "meals": "1泊2食（和會席，餐廳）",
+     "total_jpy": null,
+     "per_night_jpy": null,
+     "price_basis": "per_night",
+     "tax": "included",
+     "tax_note": null,
+     "free_cancel_until": null,
+     "free_cancel_rule_text": null,
+     "member_price_jpy": null,
+     "coupon": null,
+     "status": "not_found",
+     "checked_at": "2026-10-24",
+     "source_url": "https://hotel.travel.rakuten.co.jp/hotelinfo/plan/68487"
+    }
+   ],
+   "check_in_time": null,
+   "last_check_in": null,
+   "check_out_time": null,
+   "dinner_time": "18:00 或 18:30（和會席，楽天方案說明）",
+   "free_cancel_until": null,
+   "booking_opens": {
+    "status": "unknown",
+    "opens_on": null,
+    "rule": "楽天『予約可能狀況』顯示已開放至 2027/6（2026-10-24 查），2027/7 未開；正式開賣規則未公布",
+    "by_site": [],
+    "checked_at": null
+   },
+   "recommendations": [],
+   "ratings": [
+    {
+     "source": "google",
+     "score": null,
+     "scale": 5,
+     "count": null,
+     "url": "https://www.google.com/maps/place/?q=place_id:ChIJS7nY324yImARdpnCdhzT5JY",
+     "checked_at": null,
+     "display": null
+    }
+   ],
+   "review_check": null,
+   "drive_check": {
+    "parking": {
+     "available": null,
+     "free": null,
+     "fee": null,
+     "reservation_required": null,
+     "covered": null,
+     "height_limit_m": null,
+     "width_limit_m": null,
+     "distance_to_front": null,
+     "lat": null,
+     "lng": null,
+     "mapcode": null,
+     "mapcode_source": null,
+     "note": "有94台（含第二停車場）・無料・予約不要（楽天FAQ）；入口座標/MapCode 未於 Mapion/NaviCon/官網/じゃらん 取得可核對資料，填 null"
+    },
+    "road": {
+     "mountain_road": null,
+     "night_drive": null,
+     "winter_closure": null,
+     "note": null
+    },
+    "from_prev": null,
+    "closed_days": [],
+    "closed_days_note": null,
+    "dinner_fits": null,
+    "note": null
+   },
+   "operation": {
+    "status": "open",
+    "checked_on": "2026-10-24",
+    "sources": [],
+    "recheck_before_departure": true,
+    "note": "當時可在樂天／じゃらん或官網查到資料；之後若有更新以較新查證為準。"
+   },
+   "screening": {
+    "status": "candidate",
+    "rank": null,
+    "reason": null,
+    "area_unverified": false,
+    "over_1h": null
+   },
+   "stays_feedback": [],
+   "data_gaps": [
+    "MapCode 未從 Mapion／NaviCon 等來源取得，維持 null。",
+    "停車場入口座標未取得。"
+   ],
+   "public_notes": [
+    "全21室小型溫泉飯店，面太平洋露天風呂；酒列磯前神社步行圈，常陸海濱公園約15分。",
+    "取消規定：宿泊8日前 23:59 まで免費（7日前20%起）（楽天トラベル施設キャンセルポリシー；方案另有規定時以方案為準）"
+   ],
+   "updated_at": "2026-11-16"
+  },
+  {
+   "id": "lh_oarai_3f8caba6",
+   "name": "大洗ホテル",
+   "name_ja": "大洗ホテル",
+   "name_zh": null,
+   "type": "hotel",
+   "address": null,
+   "lat": 36.31325725,
+   "lng": 140.5862342,
+   "coord_source": null,
+   "google_place_id": "ChIJ_56vZUcxImARYI7iOgZAxSs",
+   "google_maps_url": "https://www.google.com/maps/place/?q=place_id:ChIJ_56vZUcxImARYI7iOgZAxSs",
+   "official_url": "https://www.oarai-hotel.co.jp/",
+   "phone": "0570-200-418",
+   "mapcode": null,
+   "near_segments": [
+    {
+     "trip_id": "2027-06-tokyo",
+     "route": "D",
+     "base_key": "OARAI",
+     "next_first_stop": null,
+     "drive_min_to_next_first_stop": null,
+     "drive_source": null
+    },
+    {
+     "trip_id": "2027-06-tokyo",
+     "route": "E",
+     "base_key": "OARAI",
+     "next_first_stop": null,
+     "drive_min_to_next_first_stop": null,
+     "drive_source": null
+    }
+   ],
+   "rooms": [
+    {
+     "room_name": "西館プレミアム 夕凪 和洋室 52㎡（和室6疊＋雙床）",
+     "size_sqm": 52,
+     "tatami": null,
+     "max_guests": null,
+     "beds": null,
+     "fits_party": null,
+     "note": "1泊2食（和洋自助餐） 參考價，非該日期實價（2027/6～7 多數尚未開賣；為楽天等目前開放日期之3名1室每人含稅價格範圍，實際依日期/方案變動）"
+    }
+   ],
+   "prices": [
+    {
+     "site": "rakuten",
+     "url": "https://hotel.travel.rakuten.co.jp/hotelinfo/plan/5950",
+     "check_in": null,
+     "check_out": null,
+     "nights": null,
+     "adults": 3,
+     "rooms": 1,
+     "room_name": "西館プレミアム 夕凪 和洋室 52㎡（和室6疊＋雙床）",
+     "size_sqm": 52,
+     "meals": "1泊2食（和洋自助餐）",
+     "total_jpy": null,
+     "per_night_jpy": null,
+     "price_basis": "per_night",
+     "tax": "included",
+     "tax_note": null,
+     "free_cancel_until": null,
+     "free_cancel_rule_text": null,
+     "member_price_jpy": null,
+     "coupon": null,
+     "status": "not_found",
+     "checked_at": "2026-10-24",
+     "source_url": "https://hotel.travel.rakuten.co.jp/hotelinfo/plan/5950"
+    }
+   ],
+   "check_in_time": null,
+   "last_check_in": null,
+   "check_out_time": null,
+   "dinner_time": "自助餐入場 17:30～19:30（21:00 結束；楽天方案說明）",
+   "free_cancel_until": null,
+   "booking_opens": {
+    "status": "unknown",
+    "opens_on": null,
+    "rule": null,
+    "by_site": [],
+    "checked_at": null
+   },
+   "recommendations": [],
+   "ratings": [
+    {
+     "source": "google",
+     "score": null,
+     "scale": 5,
+     "count": null,
+     "url": "https://www.google.com/maps/place/?q=place_id:ChIJ_56vZUcxImARYI7iOgZAxSs",
+     "checked_at": null,
+     "display": null
+    }
+   ],
+   "review_check": null,
+   "drive_check": {
+    "parking": {
+     "available": null,
+     "free": null,
+     "fee": null,
+     "reservation_required": null,
+     "covered": null,
+     "height_limit_m": null,
+     "width_limit_m": null,
+     "distance_to_front": null,
+     "lat": null,
+     "lng": null,
+     "mapcode": null,
+     "mapcode_source": null,
+     "note": "有150台・無料（楽天FAQ）；入口座標/MapCode 未於 Mapion/NaviCon/官網/じゃらん 取得可核對資料，填 null"
+    },
+    "road": {
+     "mountain_road": null,
+     "night_drive": null,
+     "winter_closure": null,
+     "note": null
+    },
+    "from_prev": null,
+    "closed_days": [],
+    "closed_days_note": null,
+    "dinner_fits": null,
+    "note": null
+   },
+   "operation": {
+    "status": "open",
+    "checked_on": "2026-10-24",
+    "sources": [],
+    "recheck_before_departure": true,
+    "note": "當時可在樂天／じゃらん或官網查到資料；之後若有更新以較新查證為準。"
+   },
+   "screening": {
+    "status": "candidate",
+    "rank": null,
+    "reason": null,
+    "area_unverified": false,
+    "over_1h": null
+   },
+   "stays_feedback": [],
+   "data_gaps": [
+    "MapCode 未從 Mapion／NaviCon 等來源取得，維持 null。",
+    "停車場入口座標未取得。"
+   ],
+   "public_notes": [
+    "神磯鳥居正對面海景飯店，部分房型附半露天風呂；是否為天然溫泉本次未確認。電話為IHS集團預約中心。",
+    "取消規定：宿泊4日前 23:59 まで免費（3日前30%、前日50%、當日100%）（楽天トラベル施設キャンセルポリシー；方案另有規定時以方案為準）"
+   ],
+   "updated_at": "2026-11-16"
+  },
+  {
+   "id": "lh_oarai_d047d35e",
+   "name": "里海邸 金波楼本邸",
+   "name_ja": "里海邸 金波楼本邸",
+   "name_zh": null,
+   "type": "onsen_ryokan",
+   "address": null,
+   "lat": 36.3147627,
+   "lng": 140.5885423,
+   "coord_source": null,
+   "google_place_id": "ChIJQXy6fVAxImAREqXeOCrFf7g",
+   "google_maps_url": "https://www.google.com/maps/place/?q=place_id:ChIJQXy6fVAxImAREqXeOCrFf7g",
+   "official_url": "https://www.satoumitei.jp/",
+   "phone": "029-267-2101",
+   "mapcode": null,
+   "near_segments": [
+    {
+     "trip_id": "2027-06-tokyo",
+     "route": "D",
+     "base_key": "OARAI",
+     "next_first_stop": null,
+     "drive_min_to_next_first_stop": null,
+     "drive_source": null
+    },
+    {
+     "trip_id": "2027-06-tokyo",
+     "route": "E",
+     "base_key": "OARAI",
+     "next_first_stop": null,
+     "drive_min_to_next_first_stop": null,
+     "drive_source": null
+    }
+   ],
+   "rooms": [
+    {
+     "room_name": "『夏海』海辺テラス＋半露天風呂付和室 61㎡",
+     "size_sqm": 61,
+     "tatami": null,
+     "max_guests": null,
+     "beds": null,
+     "fits_party": null,
+     "note": "1泊2食 參考價，非該日期實價（2027/6～7 多數尚未開賣；為楽天等目前開放日期之3名1室每人含稅價格範圍，實際依日期/方案變動）"
+    }
+   ],
+   "prices": [
+    {
+     "site": "rakuten",
+     "url": "https://hotel.travel.rakuten.co.jp/hotelinfo/plan/136101",
+     "check_in": null,
+     "check_out": null,
+     "nights": null,
+     "adults": 3,
+     "rooms": 1,
+     "room_name": "『夏海』海辺テラス＋半露天風呂付和室 61㎡",
+     "size_sqm": 61,
+     "meals": "1泊2食",
+     "total_jpy": null,
+     "per_night_jpy": null,
+     "price_basis": "per_night",
+     "tax": "included",
+     "tax_note": null,
+     "free_cancel_until": null,
+     "free_cancel_rule_text": null,
+     "member_price_jpy": null,
+     "coupon": null,
+     "status": "not_found",
+     "checked_at": "2026-10-24",
+     "source_url": "https://hotel.travel.rakuten.co.jp/hotelinfo/plan/136101"
+    }
+   ],
+   "check_in_time": null,
+   "last_check_in": null,
+   "check_out_time": null,
+   "dinner_time": null,
+   "free_cancel_until": null,
+   "booking_opens": {
+    "status": "unknown",
+    "opens_on": null,
+    "rule": null,
+    "by_site": [],
+    "checked_at": null
+   },
+   "recommendations": [],
+   "ratings": [
+    {
+     "source": "google",
+     "score": null,
+     "scale": 5,
+     "count": null,
+     "url": "https://www.google.com/maps/place/?q=place_id:ChIJQXy6fVAxImAREqXeOCrFf7g",
+     "checked_at": null,
+     "display": null
+    }
+   ],
+   "review_check": null,
+   "drive_check": {
+    "parking": {
+     "available": null,
+     "free": null,
+     "fee": null,
+     "reservation_required": null,
+     "covered": null,
+     "height_limit_m": null,
+     "width_limit_m": null,
+     "distance_to_front": null,
+     "lat": null,
+     "lng": null,
+     "mapcode": null,
+     "mapcode_source": null,
+     "note": "有20台・無料・予約不要（楽天FAQ）；入口座標/MapCode 未於 Mapion/NaviCon/官網/じゃらん 取得可核對資料，填 null"
+    },
+    "road": {
+     "mountain_road": null,
+     "night_drive": null,
+     "winter_closure": null,
+     "note": null
+    },
+    "from_prev": null,
+    "closed_days": [],
+    "closed_days_note": null,
+    "dinner_fits": null,
+    "note": null
+   },
+   "operation": {
+    "status": "open",
+    "checked_on": "2026-10-24",
+    "sources": [],
+    "recheck_before_departure": true,
+    "note": "當時可在樂天／じゃらん或官網查到資料；之後若有更新以較新查證為準。"
+   },
+   "screening": {
+    "status": "candidate",
+    "rank": null,
+    "reason": null,
+    "area_unverified": false,
+    "over_1h": null
+   },
+   "stays_feedback": [],
+   "data_gaps": [
+    "MapCode 未從 Mapion／NaviCon 等來源取得，維持 null。",
+    "停車場入口座標未取得。"
+   ],
+   "public_notes": [
+    "全8室臨海奢華宿，客室皆有海邊露台＋半露天；大洗磯前神社『神磯鳥居』步行圈。溫泉泉源與否本次未於來源確認（官網稱『海辺の大浴場』）。",
+    "取消規定：宿泊8日前 23:59 まで免費（7日前10%、4日前20%、2日前50%）（楽天トラベル施設キャンセルポリシー；方案另有規定時以方案為準）"
+   ],
+   "updated_at": "2026-11-16"
+  }
+ ]
+}

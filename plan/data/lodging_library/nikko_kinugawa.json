@@ -1,0 +1,3389 @@
+{
+ "schema": "agency.lodging_library.region.v1",
+ "region": {
+  "id": "nikko_kinugawa",
+  "name": "日光／鬼怒川（含中禪寺湖、霧降）",
+  "prefecture": "栃木県"
+ },
+ "updated_at": "2026-11-16",
+ "hotels": [
+  {
+   "id": "lh_nikko_kinugawa_259603a1",
+   "name": "ホテル栂の季",
+   "name_ja": "ホテル栂の季",
+   "name_zh": "飯店栂之季／つがのき",
+   "type": "onsen_ryokan",
+   "address": "〒321-2522 栃木県日光市鬼怒川温泉大原１４３８−１",
+   "lat": 36.8196486,
+   "lng": 139.7097224,
+   "coord_source": "RP95+VV 日光市、栃木県",
+   "google_place_id": "ChIJhbPcukefH2AR3NSEj5JPS60",
+   "google_maps_url": "https://www.google.com/maps/place/?q=place_id:ChIJhbPcukefH2AR3NSEj5JPS60",
+   "official_url": "https://tsuganoki.com/",
+   "phone": "0120-240-003",
+   "mapcode": "367 535 887*82",
+   "near_segments": [
+    {
+     "trip_id": "2027-06-tokyo",
+     "route": "I",
+     "base_key": "KINUGAWA",
+     "next_first_stop": null,
+     "drive_min_to_next_first_stop": null,
+     "drive_source": null
+    }
+   ],
+   "rooms": [
+    {
+     "room_name": "スタンダード和室「和ったりルーム」",
+     "size_sqm": 40,
+     "tatami": null,
+     "max_guests": 8,
+     "beds": null,
+     "fits_party": null,
+     "note": null
+    }
+   ],
+   "prices": [
+    {
+     "site": "google_hotels",
+     "url": null,
+     "check_in": "2027-06-29",
+     "check_out": "2027-07-02",
+     "nights": 3,
+     "adults": 3,
+     "rooms": 1,
+     "room_name": "主要選項顯示 3 位房客；所有選項列為 3 人房",
+     "size_sqm": null,
+     "meals": null,
+     "total_jpy": null,
+     "per_night_jpy": 40860,
+     "price_basis": "per_night",
+     "tax": "unknown",
+     "tax_note": "除明確註明外，Google 個別訂房來源價格列未明示含稅與否，故記為未明。",
+     "free_cancel_until": "2027-06-21",
+     "free_cancel_rule_text": "Google 顯示可於 6月21日前免費取消（年份未顯示）；另顯示免費 Wi-Fi",
+     "member_price_jpy": null,
+     "coupon": null,
+     "status": "ok",
+     "checked_at": "2026-11-15",
+     "source_url": null
+    },
+    {
+     "site": "google_hotels",
+     "url": null,
+     "check_in": "2027-06-29",
+     "check_out": "2027-07-02",
+     "nights": 3,
+     "adults": 3,
+     "rooms": 1,
+     "room_name": "3 人房",
+     "size_sqm": null,
+     "meals": null,
+     "total_jpy": null,
+     "per_night_jpy": 41280,
+     "price_basis": "per_night",
+     "tax": "unknown",
+     "tax_note": "除明確註明外，Google 個別訂房來源價格列未明示含稅與否，故記為未明。",
+     "free_cancel_until": null,
+     "free_cancel_rule_text": "Google 該價格列未顯示",
+     "member_price_jpy": null,
+     "coupon": null,
+     "status": "ok",
+     "checked_at": "2026-11-15",
+     "source_url": null
+    },
+    {
+     "site": "google_hotels",
+     "url": null,
+     "check_in": "2027-06-29",
+     "check_out": "2027-07-02",
+     "nights": 3,
+     "adults": 3,
+     "rooms": 1,
+     "room_name": "3 人房",
+     "size_sqm": null,
+     "meals": null,
+     "total_jpy": null,
+     "per_night_jpy": 40425,
+     "price_basis": "per_night",
+     "tax": "unknown",
+     "tax_note": "除明確註明外，Google 個別訂房來源價格列未明示含稅與否，故記為未明。",
+     "free_cancel_until": "2027-06-21",
+     "free_cancel_rule_text": "Google 顯示可於 6月21日前免費取消（年份未顯示）",
+     "member_price_jpy": null,
+     "coupon": null,
+     "status": "ok",
+     "checked_at": "2026-11-15",
+     "source_url": null
+    },
+    {
+     "site": "google_hotels",
+     "url": null,
+     "check_in": "2027-06-29",
+     "check_out": "2027-07-02",
+     "nights": 3,
+     "adults": 3,
+     "rooms": 1,
+     "room_name": "3 人房",
+     "size_sqm": null,
+     "meals": null,
+     "total_jpy": null,
+     "per_night_jpy": 40425,
+     "price_basis": "per_night",
+     "tax": "unknown",
+     "tax_note": "除明確註明外，Google 個別訂房來源價格列未明示含稅與否，故記為未明。",
+     "free_cancel_until": "2027-06-21",
+     "free_cancel_rule_text": "Google 顯示可於 6月21日前免費取消（年份未顯示）",
+     "member_price_jpy": null,
+     "coupon": null,
+     "status": "ok",
+     "checked_at": "2026-11-15",
+     "source_url": null
+    },
+    {
+     "site": "google_hotels",
+     "url": null,
+     "check_in": "2027-06-29",
+     "check_out": "2027-07-02",
+     "nights": 3,
+     "adults": 3,
+     "rooms": 1,
+     "room_name": "3 人房",
+     "size_sqm": null,
+     "meals": null,
+     "total_jpy": null,
+     "per_night_jpy": 41250,
+     "price_basis": "per_night",
+     "tax": "unknown",
+     "tax_note": "除明確註明外，Google 個別訂房來源價格列未明示含稅與否，故記為未明。",
+     "free_cancel_until": "2027-06-22",
+     "free_cancel_rule_text": "Google 顯示可於 6月22日前免費取消（年份未顯示）",
+     "member_price_jpy": null,
+     "coupon": null,
+     "status": "ok",
+     "checked_at": "2026-11-15",
+     "source_url": null
+    },
+    {
+     "site": "ikyu",
+     "url": "https://www.ikyu.com/00002157/10841467/10056042/?cid=20270629&cod=20270702&lc=3&ppc=3&rc=1",
+     "check_in": "2027-06-29",
+     "check_out": "2027-07-02",
+     "nights": 3,
+     "adults": 3,
+     "rooms": 1,
+     "room_name": "スタンダード和室「和ったりルーム」",
+     "size_sqm": null,
+     "meals": "素泊（食事なし）",
+     "total_jpy": 123750,
+     "per_night_jpy": null,
+     "price_basis": "total",
+     "tax": "included",
+     "tax_note": null,
+     "free_cancel_until": "2027-06-21",
+     "free_cancel_rule_text": "2027年6月21日までキャンセル料無料",
+     "member_price_jpy": null,
+     "coupon": null,
+     "status": "ok",
+     "checked_at": "2026-11-15",
+     "source_url": "https://www.ikyu.com/00002157/10841467/10056042/?cid=20270629&cod=20270702&lc=3&ppc=3&rc=1"
+    },
+    {
+     "site": "ikyu",
+     "url": "https://www.ikyu.com/00002157/10841467/10056042/?cid=20270629&cod=20270702&lc=3&ppc=3&rc=1",
+     "check_in": "2027-06-29",
+     "check_out": "2027-07-02",
+     "nights": 3,
+     "adults": 3,
+     "rooms": 1,
+     "room_name": "スタンダード和室「和ったりルーム」",
+     "size_sqm": null,
+     "meals": "素泊",
+     "total_jpy": 123750,
+     "per_night_jpy": null,
+     "price_basis": "total",
+     "tax": "included",
+     "tax_note": null,
+     "free_cancel_until": "2027-06-21",
+     "free_cancel_rule_text": "2027年6月21日までキャンセル料無料",
+     "member_price_jpy": null,
+     "coupon": null,
+     "status": "ok",
+     "checked_at": "2026-11-15",
+     "source_url": "https://www.ikyu.com/00002157/10841467/10056042/?cid=20270629&cod=20270702&lc=3&ppc=3&rc=1"
+    }
+   ],
+   "check_in_time": null,
+   "last_check_in": null,
+   "check_out_time": null,
+   "dinner_time": "夕食通常 18:00～ 或 18:30～（楽天 基本プラン）；朝食 8:00～ 或 8:30～。目前比價的一休素泊方案不含晚餐。",
+   "free_cancel_until": null,
+   "booking_opens": {
+    "status": "unknown",
+    "opens_on": null,
+    "rule": null,
+    "by_site": [],
+    "checked_at": null
+   },
+   "recommendations": [
+    {
+     "kind": "blog",
+     "title": "【ホテル栂の季】館內・お部屋編【鬼怒川】",
+     "author": "タコと大魔王",
+     "url": "https://takomaruichiba.com/tsuganoki1/",
+     "published_at": "2022-03-21",
+     "points": "2022-10-04 更新。2022-03 再訪（約 3 年一次）：選擇客室露天風呂，預算當時約 20,000–25,000 日圓／人，並寫因疫情想避開擁擠。另有晚餐、早餐篇。",
+     "lang": null
+    },
+    {
+     "kind": "blog",
+     "title": "【栂の季（つがのき）】①建物＆部屋編＊自然のなかにある静かな宿、観光名所にも近い｜鬼怒川温泉",
+     "author": "すきなものとたち",
+     "url": "https://www.sukinamonotachi.com/entry/kinugawa-tsuganoki-1/",
+     "published_at": "2021-06-17",
+     "points": "一人旅：離溫泉街喧囂稍遠、安靜、近景點。作者提醒內容以造訪時為準。",
+     "lang": null
+    }
+   ],
+   "ratings": [
+    {
+     "source": "google",
+     "score": null,
+     "scale": 5,
+     "count": null,
+     "url": "https://www.google.com/maps/place/?q=place_id:ChIJhbPcukefH2AR3NSEj5JPS60",
+     "checked_at": "2026-11-15",
+     "display": "4.0（253 則，2026-11-15 人工查看）"
+    }
+   ],
+   "review_check": null,
+   "drive_check": {
+    "parking": {
+     "available": true,
+     "free": true,
+     "fee": "免費",
+     "reservation_required": false,
+     "covered": null,
+     "height_limit_m": null,
+     "width_limit_m": null,
+     "distance_to_front": null,
+     "lat": null,
+     "lng": null,
+     "mapcode": null,
+     "mapcode_source": null,
+     "note": "車位 館前 2 台＋姉妹館ホテルサンシャイン鬼怒川的停車場（台數未載） 姉妹館ホテルサンシャイン鬼怒川停車場：官網寫在「ホテル正面の道路反対側」，免費（https://www.sunshine-kinugawa.co.jp/access/、https://www.sunshine-kinugawa.co.jp/faq/）。停車場入口座標與 MapCode：官網、一休、じゃらん、楽天、JTB、Mapion 都查不到，維持 null（不以建物點代替）。各站說法不一致：栂の季官網／一休＝用姉妹館停車場（一休：徒歩1分）；楽天＝建物前2台＋本館駐車場；じゃらん＝滿車時才用姉妹館停車場。サンシャイン停車場台數：JTB 125台（乘用車100台，標予約要）、じゃらん観光 100台、ゆこゆこ 80台。 先開到栂の季館前由員工帶路。"
+    },
+    "road": {
+     "mountain_road": null,
+     "night_drive": null,
+     "winter_closure": null,
+     "note": null
+    },
+    "from_prev": null,
+    "closed_days": [],
+    "closed_days_note": null,
+    "dinner_fits": null,
+    "note": null
+   },
+   "operation": {
+    "status": "open",
+    "checked_on": "2026-11-16",
+    "sources": [],
+    "recheck_before_departure": true,
+    "note": "官網 200；路線 I 一休／楽天查價時 2027 年仍有方案可查。公開宿泊記多為 2021–2022，未找到 2025–2026 熱門 YouTube 長片。"
+   },
+   "screening": {
+    "status": "top_pick",
+    "rank": null,
+    "reason": "路線 I 鬼怒川段目前首選。和ったりルーム 40㎡（2026-11-16 以官方預約系統、じゃらん、一休核對；楽天只標 18畳）。",
+    "area_unverified": false,
+    "over_1h": null
+   },
+   "stays_feedback": [],
+   "data_gaps": [
+    "停車場（姉妹館サンシャイン鬼怒川）的確切位置與入口座標官方未載；停車 MapCode 維持 null（旅館本身 MapCode 已取得）。"
+   ],
+   "public_notes": [
+    "Google 電話備註（2026-11-15）：Google shows the reservation toll-free number 0120-240-003. Official site also lists 0288-77-0002 (8:00–18:00).",
+    "Google 店家頁（2026-11-15）：Google phone is the reservation 0120 number, not the 0288-77-0002 main number.",
+    "和ったりルーム 40㎡（官方預約系統、じゃらん）；定員 1～4 名。停車使用姉妹館ホテルサンシャイン鬼怒川的停車場，免費、免預約，先開到館前由員工帶路。"
+   ],
+   "updated_at": "2026-11-16"
+  },
+  {
+   "id": "lh_nikko_kinugawa_e66c439d",
+   "name": "SHELTER GARDEN NIKKO",
+   "name_ja": "SHELTER GARDEN NIKKO",
+   "name_zh": null,
+   "type": "hotel",
+   "address": "栃木県日光市日光2441-15",
+   "lat": null,
+   "lng": null,
+   "coord_source": null,
+   "google_place_id": null,
+   "google_maps_url": "https://www.google.com/maps/search/?api=1&query=SHELTER%20GARDEN%20NIKKO",
+   "official_url": "https://www.sheltergarden.jp/",
+   "phone": "0288-25-5555",
+   "mapcode": null,
+   "near_segments": [
+    {
+     "trip_id": "2027-06-tokyo",
+     "route": "I",
+     "base_key": "KINUGAWA",
+     "next_first_stop": null,
+     "drive_min_to_next_first_stop": null,
+     "drive_source": null
+    }
+   ],
+   "rooms": [
+    {
+     "room_name": "リバービュー 43平米 定員1～3名；リバービューグランド 62平米 定員1～5名。リバービュースイート75平米與マウントビュー32平米定員僅1–2名，3大人不可選。",
+     "size_sqm": 43,
+     "tatami": null,
+     "max_guests": 5,
+     "beds": null,
+     "fits_party": null,
+     "note": null
+    }
+   ],
+   "prices": [
+    {
+     "site": "agoda",
+     "url": null,
+     "check_in": "2027-06-29",
+     "check_out": "2027-07-02",
+     "nights": 3,
+     "adults": 3,
+     "rooms": 1,
+     "room_name": null,
+     "size_sqm": null,
+     "meals": null,
+     "total_jpy": null,
+     "per_night_jpy": null,
+     "price_basis": null,
+     "tax": "unknown",
+     "tax_note": null,
+     "free_cancel_until": null,
+     "free_cancel_rule_text": null,
+     "member_price_jpy": null,
+     "coupon": null,
+     "status": "not_found",
+     "checked_at": "2026-11-16",
+     "source_url": null
+    },
+    {
+     "site": "google_hotels",
+     "url": null,
+     "check_in": "2027-06-29",
+     "check_out": "2027-07-02",
+     "nights": 3,
+     "adults": 3,
+     "rooms": 1,
+     "room_name": null,
+     "size_sqm": null,
+     "meals": null,
+     "total_jpy": null,
+     "per_night_jpy": null,
+     "price_basis": null,
+     "tax": "unknown",
+     "tax_note": null,
+     "free_cancel_until": null,
+     "free_cancel_rule_text": null,
+     "member_price_jpy": null,
+     "coupon": null,
+     "status": "not_found",
+     "checked_at": "2026-11-16",
+     "source_url": null
+    },
+    {
+     "site": "jalan",
+     "url": null,
+     "check_in": "2027-06-29",
+     "check_out": "2027-07-02",
+     "nights": 3,
+     "adults": 3,
+     "rooms": 1,
+     "room_name": null,
+     "size_sqm": null,
+     "meals": null,
+     "total_jpy": null,
+     "per_night_jpy": null,
+     "price_basis": null,
+     "tax": "unknown",
+     "tax_note": null,
+     "free_cancel_until": null,
+     "free_cancel_rule_text": null,
+     "member_price_jpy": null,
+     "coupon": null,
+     "status": "not_found",
+     "checked_at": "2026-11-16",
+     "source_url": null
+    },
+    {
+     "site": "ikyu",
+     "url": null,
+     "check_in": "2027-06-29",
+     "check_out": "2027-07-02",
+     "nights": 3,
+     "adults": 3,
+     "rooms": 1,
+     "room_name": null,
+     "size_sqm": null,
+     "meals": null,
+     "total_jpy": null,
+     "per_night_jpy": null,
+     "price_basis": null,
+     "tax": "unknown",
+     "tax_note": null,
+     "free_cancel_until": null,
+     "free_cancel_rule_text": null,
+     "member_price_jpy": null,
+     "coupon": null,
+     "status": "not_found",
+     "checked_at": "2026-11-16",
+     "source_url": null
+    },
+    {
+     "site": "official",
+     "url": "https://www.sheltergarden.jp/",
+     "check_in": "2027-06-29",
+     "check_out": "2027-07-02",
+     "nights": 3,
+     "adults": 3,
+     "rooms": 1,
+     "room_name": null,
+     "size_sqm": null,
+     "meals": null,
+     "total_jpy": null,
+     "per_night_jpy": null,
+     "price_basis": null,
+     "tax": "unknown",
+     "tax_note": null,
+     "free_cancel_until": null,
+     "free_cancel_rule_text": null,
+     "member_price_jpy": null,
+     "coupon": null,
+     "status": "not_found",
+     "checked_at": "2026-11-16",
+     "source_url": "https://www.sheltergarden.jp/"
+    },
+    {
+     "site": "rakuten",
+     "url": "https://hotel.travel.rakuten.co.jp/hotelinfo/plan/183792?f_heya_su=1&f_otona_su=3&f_nen1=2027&f_tuki1=6&f_hi1=29&f_nen2=2027&f_tuki2=7&f_hi2=2&f_sort=min_charge",
+     "check_in": "2027-06-29",
+     "check_out": "2027-07-02",
+     "nights": 3,
+     "adults": 3,
+     "rooms": 1,
+     "room_name": null,
+     "size_sqm": null,
+     "meals": null,
+     "total_jpy": null,
+     "per_night_jpy": null,
+     "price_basis": null,
+     "tax": "unknown",
+     "tax_note": null,
+     "free_cancel_until": null,
+     "free_cancel_rule_text": null,
+     "member_price_jpy": null,
+     "coupon": null,
+     "status": "not_on_sale",
+     "checked_at": "2026-11-16",
+     "source_url": "https://hotel.travel.rakuten.co.jp/hotelinfo/plan/183792?f_heya_su=1&f_otona_su=3&f_nen1=2027&f_tuki1=6&f_hi1=29&f_nen2=2027&f_tuki2=7&f_hi2=2&f_sort=min_charge"
+    }
+   ],
+   "check_in_time": null,
+   "last_check_in": null,
+   "check_out_time": null,
+   "dinner_time": null,
+   "free_cancel_until": null,
+   "booking_opens": {
+    "status": "unknown",
+    "opens_on": null,
+    "rule": null,
+    "by_site": [],
+    "checked_at": null
+   },
+   "recommendations": [
+    {
+     "kind": "fb_group",
+     "title": null,
+     "author": null,
+     "url": "https://www.facebook.com/groups/1081683926072577/posts/2142604676647158",
+     "published_at": null,
+     "points": "有43㎡／62㎡可住3人的房間，區位偏日光社寺、對6/30東照宮有利，但離7/1鬼怒川彈性日較遠；2027指定日期尚未查出總價。另需確認6/29（週二）是否可入住。",
+     "lang": null
+    }
+   ],
+   "ratings": [
+    {
+     "source": "google",
+     "score": null,
+     "scale": 5,
+     "count": null,
+     "url": "https://www.google.com/maps/search/?api=1&query=SHELTER%20GARDEN%20NIKKO",
+     "checked_at": null,
+     "display": null
+    }
+   ],
+   "review_check": null,
+   "drive_check": {
+    "parking": {
+     "available": null,
+     "free": null,
+     "fee": null,
+     "reservation_required": null,
+     "covered": null,
+     "height_limit_m": null,
+     "width_limit_m": null,
+     "distance_to_front": null,
+     "lat": null,
+     "lng": null,
+     "mapcode": null,
+     "mapcode_source": null,
+     "note": null
+    },
+    "road": {
+     "mountain_road": null,
+     "night_drive": null,
+     "winter_closure": null,
+     "note": null
+    },
+    "from_prev": null,
+    "closed_days": [],
+    "closed_days_note": null,
+    "dinner_fits": null,
+    "note": "2027-06-30 いろは坂 → 日光東照宮（旅館在日光市街／世界遺產車程約5分（官方）。6/30 東照宮應很近；伊呂波在中禪寺一側，可能要先上山，預期仍可在1小時量級，但本次無核對大門座標，不寫精確分鐘。）；2027-07-01 鬼怒楯岩大吊橋（從日光市街到鬼怒川，預期約40–60分，未以核對座標計算，暫不旗標。）；2027-07-02 正嗣 宮島本店（宇都宮）再往佐野、羽田還車（退房日本來就是長程移動，各日光／鬼怒川旅館都會超過1小時。）（超過1小時）"
+   },
+   "operation": {
+    "status": "open",
+    "checked_on": "2026-11-16",
+    "sources": [],
+    "recheck_before_departure": true,
+    "note": "2022年開業，全16室。洽詢頁寫電話 10:00–18:00、火曜日は休館日——較像預約櫃台休息，是否整館週二不接待未在客房頁寫明。2027/6/29 是星期二（入住日），若之後確認整館休館須避開。"
+   },
+   "screening": {
+    "status": "candidate",
+    "rank": null,
+    "reason": null,
+    "area_unverified": false,
+    "over_1h": null
+   },
+   "stays_feedback": [],
+   "data_gaps": [
+    "place_id 未核對（不可臆造）；Google Maps 連結若為座標或館名搜尋，下次應改為店家頁。",
+    "MapCode 未從 Mapion／NaviCon 等來源取得，維持 null。",
+    "停車場入口座標未取得。"
+   ],
+   "public_notes": [],
+   "updated_at": "2026-11-16"
+  },
+  {
+   "id": "lh_nikko_kinugawa_564266c0",
+   "name": "TAOYA日光霧降",
+   "name_ja": "TAOYA日光霧降",
+   "name_zh": null,
+   "type": "onsen_ryokan",
+   "address": "栃木県日光市所野1535-1",
+   "lat": null,
+   "lng": null,
+   "coord_source": null,
+   "google_place_id": null,
+   "google_maps_url": "https://www.google.com/maps/search/?api=1&query=TAOYA%E6%97%A5%E5%85%89%E9%9C%A7%E9%99%8D",
+   "official_url": "https://www.ooedoonsen.jp/taoya-nikkokirifuri/",
+   "phone": "050-3615-3456",
+   "mapcode": null,
+   "near_segments": [
+    {
+     "trip_id": "2027-06-tokyo",
+     "route": "I",
+     "base_key": "KINUGAWA",
+     "next_first_stop": null,
+     "drive_min_to_next_first_stop": null,
+     "drive_source": null
+    }
+   ],
+   "rooms": [
+    {
+     "room_name": "2026年7月新客室「スーペリアツイン3名定員」34.30㎡ 最大3名；スイート半露天風呂付フォース 83.03㎡ 最大4名。另有エコノミー和洋室ツイン 55㎡ 定員至6（住宿記）。",
+     "size_sqm": 34.3,
+     "tatami": null,
+     "max_guests": null,
+     "beds": null,
+     "fits_party": null,
+     "note": null
+    }
+   ],
+   "prices": [
+    {
+     "site": "agoda",
+     "url": null,
+     "check_in": "2027-06-29",
+     "check_out": "2027-07-02",
+     "nights": 3,
+     "adults": 3,
+     "rooms": 1,
+     "room_name": null,
+     "size_sqm": null,
+     "meals": null,
+     "total_jpy": null,
+     "per_night_jpy": null,
+     "price_basis": null,
+     "tax": "unknown",
+     "tax_note": null,
+     "free_cancel_until": null,
+     "free_cancel_rule_text": null,
+     "member_price_jpy": null,
+     "coupon": null,
+     "status": "not_found",
+     "checked_at": "2026-11-16",
+     "source_url": null
+    },
+    {
+     "site": "google_hotels",
+     "url": null,
+     "check_in": "2027-06-29",
+     "check_out": "2027-07-02",
+     "nights": 3,
+     "adults": 3,
+     "rooms": 1,
+     "room_name": null,
+     "size_sqm": null,
+     "meals": null,
+     "total_jpy": null,
+     "per_night_jpy": null,
+     "price_basis": null,
+     "tax": "unknown",
+     "tax_note": null,
+     "free_cancel_until": null,
+     "free_cancel_rule_text": null,
+     "member_price_jpy": null,
+     "coupon": null,
+     "status": "not_found",
+     "checked_at": "2026-11-16",
+     "source_url": null
+    },
+    {
+     "site": "google_hotels",
+     "url": null,
+     "check_in": "2027-06-29",
+     "check_out": "2027-07-02",
+     "nights": 3,
+     "adults": 3,
+     "rooms": 1,
+     "room_name": null,
+     "size_sqm": null,
+     "meals": null,
+     "total_jpy": null,
+     "per_night_jpy": null,
+     "price_basis": "per_night",
+     "tax": "unknown",
+     "tax_note": null,
+     "free_cancel_until": null,
+     "free_cancel_rule_text": null,
+     "member_price_jpy": null,
+     "coupon": null,
+     "status": "not_on_sale",
+     "checked_at": "2026-11-16",
+     "source_url": null
+    },
+    {
+     "site": "jalan",
+     "url": "https://www.jalan.net/yad376230/plan/?stayYear=2027&stayMonth=6&stayDay=29&stayCount=3&roomCount=1&adultNum=3",
+     "check_in": "2027-06-29",
+     "check_out": "2027-07-02",
+     "nights": 3,
+     "adults": 3,
+     "rooms": 1,
+     "room_name": null,
+     "size_sqm": null,
+     "meals": null,
+     "total_jpy": null,
+     "per_night_jpy": null,
+     "price_basis": null,
+     "tax": "unknown",
+     "tax_note": null,
+     "free_cancel_until": null,
+     "free_cancel_rule_text": null,
+     "member_price_jpy": null,
+     "coupon": null,
+     "status": "not_on_sale",
+     "checked_at": "2026-11-16",
+     "source_url": "https://www.jalan.net/yad376230/plan/?stayYear=2027&stayMonth=6&stayDay=29&stayCount=3&roomCount=1&adultNum=3"
+    },
+    {
+     "site": "ikyu",
+     "url": null,
+     "check_in": "2027-06-29",
+     "check_out": "2027-07-02",
+     "nights": 3,
+     "adults": 3,
+     "rooms": 1,
+     "room_name": null,
+     "size_sqm": null,
+     "meals": null,
+     "total_jpy": null,
+     "per_night_jpy": null,
+     "price_basis": null,
+     "tax": "unknown",
+     "tax_note": null,
+     "free_cancel_until": null,
+     "free_cancel_rule_text": null,
+     "member_price_jpy": null,
+     "coupon": null,
+     "status": "not_found",
+     "checked_at": "2026-11-16",
+     "source_url": null
+    },
+    {
+     "site": "official",
+     "url": "https://www.ooedoonsen.jp/taoya-nikkokirifuri/",
+     "check_in": "2027-06-29",
+     "check_out": "2027-07-02",
+     "nights": 3,
+     "adults": 3,
+     "rooms": 1,
+     "room_name": null,
+     "size_sqm": null,
+     "meals": null,
+     "total_jpy": null,
+     "per_night_jpy": null,
+     "price_basis": null,
+     "tax": "unknown",
+     "tax_note": null,
+     "free_cancel_until": null,
+     "free_cancel_rule_text": null,
+     "member_price_jpy": null,
+     "coupon": null,
+     "status": "not_found",
+     "checked_at": "2026-11-16",
+     "source_url": "https://www.ooedoonsen.jp/taoya-nikkokirifuri/"
+    },
+    {
+     "site": "rakuten",
+     "url": null,
+     "check_in": "2027-06-29",
+     "check_out": "2027-07-02",
+     "nights": 3,
+     "adults": 3,
+     "rooms": 1,
+     "room_name": null,
+     "size_sqm": null,
+     "meals": null,
+     "total_jpy": null,
+     "per_night_jpy": null,
+     "price_basis": null,
+     "tax": "unknown",
+     "tax_note": null,
+     "free_cancel_until": null,
+     "free_cancel_rule_text": null,
+     "member_price_jpy": null,
+     "coupon": null,
+     "status": "not_found",
+     "checked_at": "2026-11-16",
+     "source_url": null
+    }
+   ],
+   "check_in_time": null,
+   "last_check_in": null,
+   "check_out_time": null,
+   "dinner_time": null,
+   "free_cancel_until": null,
+   "booking_opens": {
+    "status": "unknown",
+    "opens_on": null,
+    "rule": null,
+    "by_site": [],
+    "checked_at": null
+   },
+   "recommendations": [],
+   "ratings": [
+    {
+     "source": "google",
+     "score": null,
+     "scale": 5,
+     "count": null,
+     "url": "https://www.google.com/maps/search/?api=1&query=TAOYA%E6%97%A5%E5%85%89%E9%9C%A7%E9%99%8D",
+     "checked_at": null,
+     "display": null
+    }
+   ],
+   "review_check": null,
+   "drive_check": {
+    "parking": {
+     "available": null,
+     "free": null,
+     "fee": null,
+     "reservation_required": null,
+     "covered": null,
+     "height_limit_m": null,
+     "width_limit_m": null,
+     "distance_to_front": null,
+     "lat": null,
+     "lng": null,
+     "mapcode": null,
+     "mapcode_source": null,
+     "note": null
+    },
+    "road": {
+     "mountain_road": null,
+     "night_drive": null,
+     "winter_closure": null,
+     "note": null
+    },
+    "from_prev": null,
+    "closed_days": [],
+    "closed_days_note": null,
+    "dinner_fits": null,
+    "note": "2027-06-30 いろは坂：OSRM 28.9 分；2027-07-01 鬼怒楯岩大吊橋：OSRM 20.3 分"
+   },
+   "operation": {
+    "status": "open",
+    "checked_on": "2026-11-16",
+    "sources": [],
+    "recheck_before_departure": true,
+    "note": null
+   },
+   "screening": {
+    "status": "candidate",
+    "rank": null,
+    "reason": null,
+    "area_unverified": false,
+    "over_1h": null
+   },
+   "stays_feedback": [],
+   "data_gaps": [
+    "place_id 未核對（不可臆造）；Google Maps 連結若為座標或館名搜尋，下次應改為店家頁。",
+    "MapCode 未從 Mapion／NaviCon 等來源取得，維持 null。",
+    "停車場入口座標未取得。"
+   ],
+   "public_notes": [
+    "晚餐備註：日歸晚餐自助標 17:00–21:30；住宿晚餐時段本次未在官網首頁抽出，待補。"
+   ],
+   "updated_at": "2026-11-16"
+  },
+  {
+   "id": "lh_nikko_kinugawa_36615636",
+   "name": "ザ・リッツ・カールトン日光",
+   "name_ja": "ザ・リッツ・カールトン日光",
+   "name_zh": "日光麗思卡爾頓飯店",
+   "type": "onsen_hotel",
+   "address": null,
+   "lat": null,
+   "lng": null,
+   "coord_source": null,
+   "google_place_id": null,
+   "google_maps_url": "https://www.google.com/maps/search/?api=1&query=%E3%82%B6%E3%83%BB%E3%83%AA%E3%83%83%E3%83%84%E3%83%BB%E3%82%AB%E3%83%BC%E3%83%AB%E3%83%88%E3%83%B3%E6%97%A5%E5%85%89",
+   "official_url": null,
+   "phone": null,
+   "mapcode": null,
+   "near_segments": [
+    {
+     "trip_id": "2027-06-tokyo",
+     "route": "I",
+     "base_key": "KINUGAWA",
+     "next_first_stop": null,
+     "drive_min_to_next_first_stop": null,
+     "drive_source": null
+    }
+   ],
+   "rooms": [],
+   "prices": [],
+   "check_in_time": null,
+   "last_check_in": null,
+   "check_out_time": null,
+   "dinner_time": null,
+   "free_cancel_until": null,
+   "booking_opens": {
+    "status": "unknown",
+    "opens_on": null,
+    "rule": null,
+    "by_site": [],
+    "checked_at": null
+   },
+   "recommendations": [
+    {
+     "kind": "blog",
+     "title": "【宿泊記】リッツカールトン日光｜中禅寺湖ビューの極上スイートを満喫！｜リッツ日光のスイート・アフタヌーンティー・バー・朝食を徹底レポート！",
+     "author": "ENOHARU HOTEL REPORTS",
+     "url": "https://enoharus-hotel-reports.com/post/ritzcarltonnikko-chuzenjikosuite/",
+     "published_at": "2026-10-28",
+     "points": "入住中禪寺湖景スイート約 115㎡：陽台可看男體山到湖面、浴室也是湖景、大浴場含露天與桑拿（湯元之湯）。屬頂級預算，不是 3 人 25㎡ 的平價比較對象。",
+     "lang": null
+    }
+   ],
+   "ratings": [
+    {
+     "source": "google",
+     "score": null,
+     "scale": 5,
+     "count": null,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E3%82%B6%E3%83%BB%E3%83%AA%E3%83%83%E3%83%84%E3%83%BB%E3%82%AB%E3%83%BC%E3%83%AB%E3%83%88%E3%83%B3%E6%97%A5%E5%85%89",
+     "checked_at": null,
+     "display": null
+    }
+   ],
+   "review_check": null,
+   "drive_check": {
+    "parking": {
+     "available": null,
+     "free": null,
+     "fee": null,
+     "reservation_required": null,
+     "covered": null,
+     "height_limit_m": null,
+     "width_limit_m": null,
+     "distance_to_front": null,
+     "lat": null,
+     "lng": null,
+     "mapcode": null,
+     "mapcode_source": null,
+     "note": null
+    },
+    "road": {
+     "mountain_road": null,
+     "night_drive": null,
+     "winter_closure": null,
+     "note": null
+    },
+    "from_prev": null,
+    "closed_days": [],
+    "closed_days_note": null,
+    "dinner_fits": null,
+    "note": null
+   },
+   "operation": {
+    "status": "open",
+    "checked_on": "2026-11-16",
+    "sources": [],
+    "recheck_before_departure": true,
+    "note": "ENOHARU HOTEL REPORTS 2026-10 宿泊記（作者寫會重複入住）。"
+   },
+   "screening": {
+    "status": "candidate",
+    "rank": null,
+    "reason": null,
+    "area_unverified": false,
+    "over_1h": null
+   },
+   "stays_feedback": [],
+   "data_gaps": [
+    "place_id 未核對（不可臆造）；Google Maps 連結若為座標或館名搜尋，下次應改為店家頁。",
+    "MapCode 未從 Mapion／NaviCon 等來源取得，維持 null。",
+    "停車場入口座標未取得。"
+   ],
+   "public_notes": [],
+   "updated_at": "2026-11-16"
+  },
+  {
+   "id": "lh_nikko_kinugawa_41e50037",
+   "name": "ホテル花庵",
+   "name_ja": "ホテル花庵",
+   "name_zh": null,
+   "type": "onsen_hotel",
+   "address": "栃木県日光市中宮祠2480",
+   "lat": null,
+   "lng": null,
+   "coord_source": null,
+   "google_place_id": null,
+   "google_maps_url": "https://www.google.com/maps/search/?api=1&query=%E3%83%9B%E3%83%86%E3%83%AB%E8%8A%B1%E5%BA%B5",
+   "official_url": "https://www.hana-an.jp/",
+   "phone": "0288-51-0105",
+   "mapcode": null,
+   "near_segments": [
+    {
+     "trip_id": "2027-06-tokyo",
+     "route": "I",
+     "base_key": "KINUGAWA",
+     "next_first_stop": null,
+     "drive_min_to_next_first_stop": null,
+     "drive_source": null
+    }
+   ],
+   "rooms": [
+    {
+     "room_name": "展望風呂付エグゼクティブツイン「うつしみ」46㎡ 定員4；半露天プレミアムツイン「ささなみ」42㎡ 定員3；和モダンルーム 33–36㎡ 定員3；デラックスツイン 42㎡ 定員3。スタンダード26.8㎡與多數スーペリア／モデレート為定員2，不可選。",
+     "size_sqm": 42,
+     "tatami": null,
+     "max_guests": 4,
+     "beds": null,
+     "fits_party": null,
+     "note": null
+    }
+   ],
+   "prices": [
+    {
+     "site": "agoda",
+     "url": null,
+     "check_in": "2027-06-29",
+     "check_out": "2027-07-02",
+     "nights": 3,
+     "adults": 3,
+     "rooms": 1,
+     "room_name": null,
+     "size_sqm": null,
+     "meals": null,
+     "total_jpy": null,
+     "per_night_jpy": null,
+     "price_basis": null,
+     "tax": "unknown",
+     "tax_note": null,
+     "free_cancel_until": null,
+     "free_cancel_rule_text": null,
+     "member_price_jpy": null,
+     "coupon": null,
+     "status": "not_found",
+     "checked_at": "2026-11-16",
+     "source_url": null
+    },
+    {
+     "site": "google_hotels",
+     "url": null,
+     "check_in": "2027-06-29",
+     "check_out": "2027-07-02",
+     "nights": 3,
+     "adults": 3,
+     "rooms": 1,
+     "room_name": null,
+     "size_sqm": null,
+     "meals": null,
+     "total_jpy": null,
+     "per_night_jpy": null,
+     "price_basis": null,
+     "tax": "unknown",
+     "tax_note": null,
+     "free_cancel_until": null,
+     "free_cancel_rule_text": null,
+     "member_price_jpy": null,
+     "coupon": null,
+     "status": "not_found",
+     "checked_at": "2026-11-16",
+     "source_url": null
+    },
+    {
+     "site": "jalan",
+     "url": "https://www.jalan.net/yad318487/plan/?stayYear=2027&stayMonth=6&stayDay=29&stayCount=3&roomCount=1&adultNum=3",
+     "check_in": "2027-06-29",
+     "check_out": "2027-07-02",
+     "nights": 3,
+     "adults": 3,
+     "rooms": 1,
+     "room_name": null,
+     "size_sqm": null,
+     "meals": null,
+     "total_jpy": null,
+     "per_night_jpy": null,
+     "price_basis": null,
+     "tax": "unknown",
+     "tax_note": null,
+     "free_cancel_until": null,
+     "free_cancel_rule_text": null,
+     "member_price_jpy": null,
+     "coupon": null,
+     "status": "not_on_sale",
+     "checked_at": "2026-11-16",
+     "source_url": "https://www.jalan.net/yad318487/plan/?stayYear=2027&stayMonth=6&stayDay=29&stayCount=3&roomCount=1&adultNum=3"
+    },
+    {
+     "site": "ikyu",
+     "url": null,
+     "check_in": "2027-06-29",
+     "check_out": "2027-07-02",
+     "nights": 3,
+     "adults": 3,
+     "rooms": 1,
+     "room_name": null,
+     "size_sqm": null,
+     "meals": null,
+     "total_jpy": null,
+     "per_night_jpy": null,
+     "price_basis": null,
+     "tax": "unknown",
+     "tax_note": null,
+     "free_cancel_until": null,
+     "free_cancel_rule_text": null,
+     "member_price_jpy": null,
+     "coupon": null,
+     "status": "not_found",
+     "checked_at": "2026-11-16",
+     "source_url": null
+    },
+    {
+     "site": "official",
+     "url": "https://www.hana-an.jp/",
+     "check_in": "2027-06-29",
+     "check_out": "2027-07-02",
+     "nights": 3,
+     "adults": 3,
+     "rooms": 1,
+     "room_name": null,
+     "size_sqm": null,
+     "meals": null,
+     "total_jpy": null,
+     "per_night_jpy": null,
+     "price_basis": null,
+     "tax": "unknown",
+     "tax_note": null,
+     "free_cancel_until": null,
+     "free_cancel_rule_text": null,
+     "member_price_jpy": null,
+     "coupon": null,
+     "status": "not_found",
+     "checked_at": "2026-11-16",
+     "source_url": "https://www.hana-an.jp/"
+    },
+    {
+     "site": "rakuten",
+     "url": null,
+     "check_in": "2027-06-29",
+     "check_out": "2027-07-02",
+     "nights": 3,
+     "adults": 3,
+     "rooms": 1,
+     "room_name": null,
+     "size_sqm": null,
+     "meals": null,
+     "total_jpy": null,
+     "per_night_jpy": null,
+     "price_basis": null,
+     "tax": "unknown",
+     "tax_note": null,
+     "free_cancel_until": null,
+     "free_cancel_rule_text": null,
+     "member_price_jpy": null,
+     "coupon": null,
+     "status": "not_found",
+     "checked_at": "2026-11-16",
+     "source_url": null
+    }
+   ],
+   "check_in_time": null,
+   "last_check_in": null,
+   "check_out_time": null,
+   "dinner_time": null,
+   "free_cancel_until": null,
+   "booking_opens": {
+    "status": "unknown",
+    "opens_on": null,
+    "rule": null,
+    "by_site": [],
+    "checked_at": null
+   },
+   "recommendations": [
+    {
+     "kind": "fb_group",
+     "title": null,
+     "author": null,
+     "url": "https://www.facebook.com/groups/404126001591897/permalink/1170669804937509/",
+     "published_at": null,
+     "points": "房間條件很好，白日車程也可壓在1小時內；但住中禪寺3晚，意味著6/30逛完東照宮後要再上山回湖畔，正好是行程特別避免的夜間山路。現案改住鬼怒川就是為了這點。",
+     "lang": null
+    }
+   ],
+   "ratings": [
+    {
+     "source": "google",
+     "score": null,
+     "scale": 5,
+     "count": null,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E3%83%9B%E3%83%86%E3%83%AB%E8%8A%B1%E5%BA%B5",
+     "checked_at": null,
+     "display": null
+    }
+   ],
+   "review_check": null,
+   "drive_check": {
+    "parking": {
+     "available": null,
+     "free": null,
+     "fee": null,
+     "reservation_required": null,
+     "covered": null,
+     "height_limit_m": null,
+     "width_limit_m": null,
+     "distance_to_front": null,
+     "lat": null,
+     "lng": null,
+     "mapcode": null,
+     "mapcode_source": null,
+     "note": null
+    },
+    "road": {
+     "mountain_road": null,
+     "night_drive": null,
+     "winter_closure": null,
+     "note": null
+    },
+    "from_prev": null,
+    "closed_days": [],
+    "closed_days_note": null,
+    "dinner_fits": null,
+    "note": "2027-06-30 いろは坂（下行）→日光東照宮：OSRM 31.1 分；2027-07-01 鬼怒楯岩大吊橋：OSRM 46.3 分"
+   },
+   "operation": {
+    "status": "open",
+    "checked_on": "2026-11-16",
+    "sources": [],
+    "recheck_before_departure": true,
+    "note": null
+   },
+   "screening": {
+    "status": "candidate",
+    "rank": null,
+    "reason": null,
+    "area_unverified": false,
+    "over_1h": null
+   },
+   "stays_feedback": [],
+   "data_gaps": [
+    "place_id 未核對（不可臆造）；Google Maps 連結若為座標或館名搜尋，下次應改為店家頁。",
+    "MapCode 未從 Mapion／NaviCon 等來源取得，維持 null。",
+    "停車場入口座標未取得。"
+   ],
+   "public_notes": [],
+   "updated_at": "2026-11-16"
+  },
+  {
+   "id": "lh_nikko_kinugawa_5a93a06e",
+   "name": "中禅寺金谷ホテル",
+   "name_ja": "中禅寺金谷ホテル",
+   "name_zh": "中禪寺金谷飯店",
+   "type": "onsen_hotel",
+   "address": null,
+   "lat": 36.7517867,
+   "lng": 139.46372139999994,
+   "coord_source": "既有 lodging.route_options B",
+   "google_place_id": null,
+   "google_maps_url": "https://www.google.com/maps/place/%E4%B8%AD%E7%A6%85%E5%AF%BA%E9%87%91%E8%B0%B7%E3%83%9B%E3%83%86%E3%83%AB/@36.751569,139.463474,17z/data=!4m6!3m5!1s0x601faed1502e329d:0x9de6d97328203d86!8m2!3d36.751569!4d139.463474!16s%2Fg%2F1ptyhz3gn",
+   "official_url": "https://www.kanayahotel.co.jp/ckh/",
+   "phone": "0288-54-0007（金谷ホテル予約センター 9:00～17:00）",
+   "mapcode": null,
+   "near_segments": [
+    {
+     "trip_id": "2027-06-tokyo",
+     "route": "B",
+     "base_key": "NIKKO",
+     "next_first_stop": null,
+     "drive_min_to_next_first_stop": null,
+     "drive_source": null
+    },
+    {
+     "trip_id": "2027-06-tokyo",
+     "route": "C",
+     "base_key": "NIKKO",
+     "next_first_stop": null,
+     "drive_min_to_next_first_stop": null,
+     "drive_source": null
+    },
+    {
+     "trip_id": "2027-06-tokyo",
+     "route": "D",
+     "base_key": "NIKKO",
+     "next_first_stop": null,
+     "drive_min_to_next_first_stop": null,
+     "drive_source": null
+    },
+    {
+     "trip_id": "2027-06-tokyo",
+     "route": "E",
+     "base_key": "NIKKO",
+     "next_first_stop": null,
+     "drive_min_to_next_first_stop": null,
+     "drive_source": null
+    },
+    {
+     "trip_id": "2027-06-tokyo",
+     "route": "G",
+     "base_key": "NIKKO",
+     "next_first_stop": null,
+     "drive_min_to_next_first_stop": null,
+     "drive_source": null
+    },
+    {
+     "trip_id": "2027-06-tokyo",
+     "route": "I",
+     "base_key": "KINUGAWA",
+     "next_first_stop": null,
+     "drive_min_to_next_first_stop": null,
+     "drive_source": null
+    }
+   ],
+   "rooms": [
+    {
+     "room_name": "デラックスツイン（3名）33㎡ 全室中禪寺湖側",
+     "size_sqm": 33,
+     "tatami": null,
+     "max_guests": null,
+     "beds": null,
+     "fits_party": null,
+     "note": "1泊2食（低價端可能為輕食晚餐方案） 參考價，非該日期實價（2027/6～7 多數尚未開賣；為楽天等目前開放日期之3名1室每人含稅價格範圍，實際依日期/方案變動）"
+    },
+    {
+     "room_name": "デラックスツイン（3 名）33㎡ 全室中禪寺湖側",
+     "size_sqm": 33,
+     "tatami": null,
+     "max_guests": null,
+     "beds": null,
+     "fits_party": null,
+     "note": "1泊2食 或 朝食のみ"
+    },
+    {
+     "room_name": "デラックスツイン（3名様）全室が中禅寺湖側 33㎡",
+     "size_sqm": 33,
+     "tatami": null,
+     "max_guests": 3,
+     "beds": null,
+     "fits_party": null,
+     "note": "1泊2食"
+    }
+   ],
+   "prices": [
+    {
+     "site": "other",
+     "url": null,
+     "check_in": null,
+     "check_out": null,
+     "nights": null,
+     "adults": 3,
+     "rooms": 1,
+     "room_name": null,
+     "size_sqm": null,
+     "meals": null,
+     "total_jpy": null,
+     "per_night_jpy": null,
+     "price_basis": null,
+     "tax": "included",
+     "tax_note": null,
+     "free_cancel_until": "2027-06-23",
+     "free_cancel_rule_text": "3日前(2027年04月14日) 前免費（2027-04-17 入住方案之規定；目標日期依同規則推算）",
+     "member_price_jpy": null,
+     "coupon": null,
+     "status": "not_found",
+     "checked_at": "2026-10-24",
+     "source_url": null
+    },
+    {
+     "site": "rakuten",
+     "url": "https://hotel.travel.rakuten.co.jp/hotelinfo/plan/28759",
+     "check_in": null,
+     "check_out": null,
+     "nights": null,
+     "adults": 3,
+     "rooms": 1,
+     "room_name": "デラックスツイン（3名）33㎡ 全室中禪寺湖側",
+     "size_sqm": 33,
+     "meals": "1泊2食（低價端可能為輕食晚餐方案）",
+     "total_jpy": null,
+     "per_night_jpy": null,
+     "price_basis": "per_night",
+     "tax": "included",
+     "tax_note": null,
+     "free_cancel_until": null,
+     "free_cancel_rule_text": null,
+     "member_price_jpy": null,
+     "coupon": null,
+     "status": "not_found",
+     "checked_at": "2026-10-24",
+     "source_url": "https://hotel.travel.rakuten.co.jp/hotelinfo/plan/28759"
+    },
+    {
+     "site": "rakuten",
+     "url": "https://hotel.travel.rakuten.co.jp/hotelinfo/plan/28759?f_heya_su=1&f_otona_su=3&f_nen1=2027&f_tuki1=4&f_hi1=20&f_nen2=2027&f_tuki2=4&f_hi2=23&f_sort=min_charge",
+     "check_in": "2027-06-29",
+     "check_out": "2027-07-02",
+     "nights": 3,
+     "adults": 3,
+     "rooms": 1,
+     "room_name": "デラックスツイン（3名様）全室が中禅寺湖側 33㎡",
+     "size_sqm": 33,
+     "meals": "1泊2食",
+     "total_jpy": null,
+     "per_night_jpy": null,
+     "price_basis": "total",
+     "tax": "included",
+     "tax_note": null,
+     "free_cancel_until": null,
+     "free_cancel_rule_text": null,
+     "member_price_jpy": null,
+     "coupon": null,
+     "status": "not_found",
+     "checked_at": "2026-11-15",
+     "source_url": "https://hotel.travel.rakuten.co.jp/hotelinfo/plan/28759?f_heya_su=1&f_otona_su=3&f_nen1=2027&f_tuki1=4&f_hi1=20&f_nen2=2027&f_tuki2=4&f_hi2=23&f_sort=min_charge"
+    }
+   ],
+   "check_in_time": null,
+   "last_check_in": null,
+   "check_out_time": null,
+   "dinner_time": "追加晚餐需 20:00 前入店（楽天方案說明）；餐廳 18:00～20:00 LO",
+   "free_cancel_until": null,
+   "booking_opens": {
+    "status": "not_yet",
+    "opens_on": null,
+    "rule": "2027/6 未放房；目前最遠可查約 2027/4 底（4/19 起僅高價房）；開賣日未公布",
+    "by_site": [],
+    "checked_at": null
+   },
+   "recommendations": [
+    {
+     "kind": "youtube",
+     "title": "【宿泊記】中禅寺金谷ホテル｜伝統のフレンチと森の露天風呂に癒される大人の休日♪［栃木の旅］",
+     "author": "ひよことりっぷ",
+     "url": "https://www.youtube.com/watch?v=1eMZQiP7feI",
+     "published_at": "2025-07-02",
+     "points": "傳統法餐與森林露天風呂的宿泊記。",
+     "lang": null
+    },
+    {
+     "kind": "blog",
+     "title": "中禅寺金谷ホテル ブログ宿泊記！中禅寺湖ビューのデラックスルームをレポート！送迎バスもあってアクセス便利",
+     "author": "陸マイラー ピピノブ",
+     "url": "https://www.pipinobu.com/entry/chuzenji-kanaya-blog-room",
+     "published_at": "2022-04-20",
+     "points": "2023-08-17 更新。デラックスルーム湖景、東武日光站送迎巴士約 50 分、經典法餐與「空ぶろ」溫泉棟。作者喜歡經典木質氛圍，也提到建物非全新。",
+     "lang": null
+    },
+    {
+     "kind": "blog",
+     "title": "中禅寺金谷ホテル 宿泊記 栃木県産食材たっぷりのフレンチフルコースと極上の硫黄泉を楽しめる湖畔の宿に一人泊",
+     "author": "山と温泉のきろく",
+     "url": "https://www.yamaonsen.com/entry/kanayahotel",
+     "published_at": "2023-03-21",
+     "points": "多次一人入住：湯元引湯的硫磺泉、法餐、有一人房。作者認為在リッツ、界日光等更高價選項出現後，相對更好住。",
+     "lang": null
+    }
+   ],
+   "ratings": [
+    {
+     "source": "google",
+     "score": null,
+     "scale": 5,
+     "count": null,
+     "url": "https://www.google.com/maps/place/%E4%B8%AD%E7%A6%85%E5%AF%BA%E9%87%91%E8%B0%B7%E3%83%9B%E3%83%86%E3%83%AB/@36.751569,139.463474,17z/data=!4m6!3m5!1s0x601faed1502e329d:0x9de6d97328203d86!8m2!3d36.751569!4d139.463474!16s%2Fg%2F1ptyhz3gn",
+     "checked_at": null,
+     "display": null
+    }
+   ],
+   "review_check": null,
+   "drive_check": {
+    "parking": {
+     "available": true,
+     "free": true,
+     "fee": "免費（既有：楽天 FAQ 50 台免預約）",
+     "reservation_required": false,
+     "covered": null,
+     "height_limit_m": null,
+     "width_limit_m": null,
+     "distance_to_front": null,
+     "lat": null,
+     "lng": null,
+     "mapcode": null,
+     "mapcode_source": null,
+     "note": "車位 50 免費50台免預約（楽天FAQ）；座標/MapCode 未取得"
+    },
+    "road": {
+     "mountain_road": null,
+     "night_drive": null,
+     "winter_closure": null,
+     "note": null
+    },
+    "from_prev": null,
+    "closed_days": [],
+    "closed_days_note": null,
+    "dinner_fits": null,
+    "note": null
+   },
+   "operation": {
+    "status": "open",
+    "checked_on": "2026-11-16",
+    "sources": [],
+    "recheck_before_departure": true,
+    "note": "ひよことりっぷ 2025-07 宿泊記；為路線 I 湖畔替代候選。"
+   },
+   "screening": {
+    "status": "candidate",
+    "rank": null,
+    "reason": null,
+    "area_unverified": false,
+    "over_1h": null
+   },
+   "stays_feedback": [],
+   "data_gaps": [
+    "place_id 未核對（不可臆造）；Google Maps 連結若為座標或館名搜尋，下次應改為店家頁。",
+    "MapCode 未從 Mapion／NaviCon 等來源取得，維持 null。",
+    "停車場入口座標未取得。"
+   ],
+   "public_notes": [
+    "中禪寺湖畔森林中的溫泉飯店，離華嚴瀑布、龍頭瀑布、戰場之原近。",
+    "取消規定：宿泊3日前まで免費（2日前20%、前日30%、當日80%；據搜尋摘要之官網）",
+    "晚餐備註（じゃらん／楽天 2026-11-15）：本次未重開官網餐廳頁。"
+   ],
+   "updated_at": "2026-11-16"
+  },
+  {
+   "id": "lh_nikko_kinugawa_4dc6fc73",
+   "name": "日光 星の宿",
+   "name_ja": "日光 星の宿",
+   "name_zh": null,
+   "type": "onsen_ryokan",
+   "address": null,
+   "lat": 36.7523192,
+   "lng": 139.6049604,
+   "coord_source": null,
+   "google_place_id": "ChIJ08Rd79WmH2AR_qgiz5HTc_s",
+   "google_maps_url": "https://www.google.com/maps/place/?q=place_id:ChIJ08Rd79WmH2AR_qgiz5HTc_s",
+   "official_url": "https://www.hoshinoyado.com/",
+   "phone": "0288-54-1105",
+   "mapcode": null,
+   "near_segments": [
+    {
+     "trip_id": "2027-06-tokyo",
+     "route": "B",
+     "base_key": "NIKKO",
+     "next_first_stop": null,
+     "drive_min_to_next_first_stop": null,
+     "drive_source": null
+    },
+    {
+     "trip_id": "2027-06-tokyo",
+     "route": "C",
+     "base_key": "NIKKO",
+     "next_first_stop": null,
+     "drive_min_to_next_first_stop": null,
+     "drive_source": null
+    },
+    {
+     "trip_id": "2027-06-tokyo",
+     "route": "D",
+     "base_key": "NIKKO",
+     "next_first_stop": null,
+     "drive_min_to_next_first_stop": null,
+     "drive_source": null
+    },
+    {
+     "trip_id": "2027-06-tokyo",
+     "route": "E",
+     "base_key": "NIKKO",
+     "next_first_stop": null,
+     "drive_min_to_next_first_stop": null,
+     "drive_source": null
+    },
+    {
+     "trip_id": "2027-06-tokyo",
+     "route": "G",
+     "base_key": "NIKKO",
+     "next_first_stop": null,
+     "drive_min_to_next_first_stop": null,
+     "drive_source": null
+    }
+   ],
+   "rooms": [
+    {
+     "room_name": "和室/特別室（3名可）",
+     "size_sqm": null,
+     "tatami": null,
+     "max_guests": null,
+     "beds": null,
+     "fits_party": null,
+     "note": "1泊2食（會席） 參考價，非該日期實價（2027/6～7 多數尚未開賣；為楽天等目前開放日期之3名1室每人含稅價格範圍，實際依日期/方案變動）"
+    }
+   ],
+   "prices": [
+    {
+     "site": "other",
+     "url": null,
+     "check_in": null,
+     "check_out": null,
+     "nights": null,
+     "adults": 3,
+     "rooms": 1,
+     "room_name": null,
+     "size_sqm": null,
+     "meals": null,
+     "total_jpy": null,
+     "per_night_jpy": null,
+     "price_basis": null,
+     "tax": "included",
+     "tax_note": null,
+     "free_cancel_until": "2027-06-11",
+     "free_cancel_rule_text": "15日前(2027年03月12日) 前免費（2027-03-27 入住方案之規定；目標日期依同規則推算）",
+     "member_price_jpy": null,
+     "coupon": null,
+     "status": "not_found",
+     "checked_at": "2026-10-24",
+     "source_url": null
+    },
+    {
+     "site": "rakuten",
+     "url": "https://hotel.travel.rakuten.co.jp/hotelinfo/plan/41725",
+     "check_in": null,
+     "check_out": null,
+     "nights": null,
+     "adults": 3,
+     "rooms": 1,
+     "room_name": "和室/特別室（3名可）",
+     "size_sqm": null,
+     "meals": "1泊2食（會席）",
+     "total_jpy": null,
+     "per_night_jpy": null,
+     "price_basis": "per_night",
+     "tax": "included",
+     "tax_note": null,
+     "free_cancel_until": null,
+     "free_cancel_rule_text": null,
+     "member_price_jpy": null,
+     "coupon": null,
+     "status": "not_found",
+     "checked_at": "2026-10-24",
+     "source_url": "https://hotel.travel.rakuten.co.jp/hotelinfo/plan/41725"
+    }
+   ],
+   "check_in_time": null,
+   "last_check_in": null,
+   "check_out_time": null,
+   "dinner_time": "需18:00前抵達，19:30以後不供餐（楽天方案說明）；確切開始時段未取得",
+   "free_cancel_until": null,
+   "booking_opens": {
+    "status": "not_yet",
+    "opens_on": null,
+    "rule": "2027/6 未放房；目前最遠可查約 2027/3 底；開賣日未公布",
+    "by_site": [],
+    "checked_at": null
+   },
+   "recommendations": [],
+   "ratings": [
+    {
+     "source": "google",
+     "score": null,
+     "scale": 5,
+     "count": null,
+     "url": "https://www.google.com/maps/place/?q=place_id:ChIJ08Rd79WmH2AR_qgiz5HTc_s",
+     "checked_at": null,
+     "display": null
+    }
+   ],
+   "review_check": null,
+   "drive_check": {
+    "parking": {
+     "available": null,
+     "free": null,
+     "fee": null,
+     "reservation_required": null,
+     "covered": null,
+     "height_limit_m": null,
+     "width_limit_m": null,
+     "distance_to_front": null,
+     "lat": null,
+     "lng": null,
+     "mapcode": null,
+     "mapcode_source": null,
+     "note": "免費12台（楽天）；座標/MapCode 未取得"
+    },
+    "road": {
+     "mountain_road": null,
+     "night_drive": null,
+     "winter_closure": null,
+     "note": null
+    },
+    "from_prev": null,
+    "closed_days": [],
+    "closed_days_note": null,
+    "dinner_fits": null,
+    "note": null
+   },
+   "operation": {
+    "status": "open",
+    "checked_on": "2026-10-24",
+    "sources": [],
+    "recheck_before_departure": true,
+    "note": "當時可在樂天／じゃらん或官網查到資料；之後若有更新以較新查證為準。"
+   },
+   "screening": {
+    "status": "candidate",
+    "rank": null,
+    "reason": null,
+    "area_unverified": false,
+    "over_1h": null
+   },
+   "stays_feedback": [],
+   "data_gaps": [
+    "MapCode 未從 Mapion／NaviCon 等來源取得，維持 null。",
+    "停車場入口座標未取得。"
+   ],
+   "public_notes": [
+    "日光市區高台，神橋步行3分，去東照宮最近；與星野集團無關。",
+    "取消規定：宿泊4日前 23:59 まで免費（3日前30%、前日50%、當日100%；楽天）"
+   ],
+   "updated_at": "2026-11-16"
+  },
+  {
+   "id": "lh_nikko_kinugawa_9bb9a37b",
+   "name": "日光アストリアホテル",
+   "name_ja": "日光アストリアホテル",
+   "name_zh": "日光 ASTRAEA／阿斯特利亞飯店",
+   "type": "onsen_hotel",
+   "address": null,
+   "lat": null,
+   "lng": null,
+   "coord_source": null,
+   "google_place_id": null,
+   "google_maps_url": "https://www.google.com/maps/search/?api=1&query=%E6%97%A5%E5%85%89%E3%82%A2%E3%82%B9%E3%83%88%E3%83%AA%E3%82%A2%E3%83%9B%E3%83%86%E3%83%AB",
+   "official_url": null,
+   "phone": null,
+   "mapcode": null,
+   "near_segments": [
+    {
+     "trip_id": "2027-06-tokyo",
+     "route": "I",
+     "base_key": "KINUGAWA",
+     "next_first_stop": null,
+     "drive_min_to_next_first_stop": null,
+     "drive_source": null
+    }
+   ],
+   "rooms": [],
+   "prices": [],
+   "check_in_time": null,
+   "last_check_in": null,
+   "check_out_time": null,
+   "dinner_time": null,
+   "free_cancel_until": null,
+   "booking_opens": {
+    "status": "unknown",
+    "opens_on": null,
+    "rule": null,
+    "by_site": [],
+    "checked_at": null
+   },
+   "recommendations": [
+    {
+     "kind": "youtube",
+     "title": "【日光の温泉宿】１泊２日で日光を満喫♡中禅寺湖散策＆絶品グルメも登場！！",
+     "author": "KAHO's Hiking Diary",
+     "url": "https://www.youtube.com/watch?v=2zW9B9paADs",
+     "published_at": "2023-07-22",
+     "points": "說明欄放日光アストリアホテル官網，拍攝日 2023-04-25～26。內容含溫泉宿與奧日光、中禪寺湖散步。影片有東武鐵道提供標示。",
+     "lang": null
+    }
+   ],
+   "ratings": [
+    {
+     "source": "google",
+     "score": null,
+     "scale": 5,
+     "count": null,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E6%97%A5%E5%85%89%E3%82%A2%E3%82%B9%E3%83%88%E3%83%AA%E3%82%A2%E3%83%9B%E3%83%86%E3%83%AB",
+     "checked_at": null,
+     "display": null
+    }
+   ],
+   "review_check": null,
+   "drive_check": {
+    "parking": {
+     "available": null,
+     "free": null,
+     "fee": null,
+     "reservation_required": null,
+     "covered": null,
+     "height_limit_m": null,
+     "width_limit_m": null,
+     "distance_to_front": null,
+     "lat": null,
+     "lng": null,
+     "mapcode": null,
+     "mapcode_source": null,
+     "note": null
+    },
+    "road": {
+     "mountain_road": null,
+     "night_drive": null,
+     "winter_closure": null,
+     "note": null
+    },
+    "from_prev": null,
+    "closed_days": [],
+    "closed_days_note": null,
+    "dinner_fits": null,
+    "note": null
+   },
+   "operation": {
+    "status": "unknown",
+    "checked_on": "2026-11-16",
+    "sources": [],
+    "recheck_before_departure": true,
+    "note": "KAHO 2023-04 入住、2023-07 上傳；本次未再查 2026 營業細節。"
+   },
+   "screening": {
+    "status": "candidate",
+    "rank": null,
+    "reason": null,
+    "area_unverified": false,
+    "over_1h": null
+   },
+   "stays_feedback": [],
+   "data_gaps": [
+    "place_id 未核對（不可臆造）；Google Maps 連結若為座標或館名搜尋，下次應改為店家頁。",
+    "MapCode 未從 Mapion／NaviCon 等來源取得，維持 null。",
+    "停車場入口座標未取得。",
+    "營業狀況待再確認。"
+   ],
+   "public_notes": [],
+   "updated_at": "2026-11-16"
+  },
+  {
+   "id": "lh_nikko_kinugawa_ee3f72c1",
+   "name": "界 日光",
+   "name_ja": "界 日光",
+   "name_zh": "界 日光（星野集團）",
+   "type": "onsen_ryokan",
+   "address": null,
+   "lat": null,
+   "lng": null,
+   "coord_source": null,
+   "google_place_id": null,
+   "google_maps_url": "https://www.google.com/maps/search/?api=1&query=%E7%95%8C%20%E6%97%A5%E5%85%89",
+   "official_url": null,
+   "phone": null,
+   "mapcode": null,
+   "near_segments": [
+    {
+     "trip_id": "2027-06-tokyo",
+     "route": "I",
+     "base_key": "KINUGAWA",
+     "next_first_stop": null,
+     "drive_min_to_next_first_stop": null,
+     "drive_source": null
+    }
+   ],
+   "rooms": [],
+   "prices": [
+    {
+     "site": "google_hotels",
+     "url": null,
+     "check_in": "2027-06-29",
+     "check_out": "2027-07-02",
+     "nights": 3,
+     "adults": 3,
+     "rooms": 1,
+     "room_name": null,
+     "size_sqm": null,
+     "meals": null,
+     "total_jpy": null,
+     "per_night_jpy": null,
+     "price_basis": "per_night",
+     "tax": "unknown",
+     "tax_note": null,
+     "free_cancel_until": null,
+     "free_cancel_rule_text": null,
+     "member_price_jpy": null,
+     "coupon": null,
+     "status": "not_on_sale",
+     "checked_at": "2026-11-16",
+     "source_url": null
+    }
+   ],
+   "check_in_time": null,
+   "last_check_in": null,
+   "check_out_time": null,
+   "dinner_time": null,
+   "free_cancel_until": null,
+   "booking_opens": {
+    "status": "unknown",
+    "opens_on": null,
+    "rule": null,
+    "by_site": [],
+    "checked_at": null
+   },
+   "recommendations": [
+    {
+     "kind": "blog",
+     "title": "【界 日光 宿泊レポ】中禅寺湖レイクビューと貸切露天風呂！3000坪の贅沢温泉旅館",
+     "author": "つきとほし",
+     "url": "https://tukitohoshi.com/kainikkorepo/",
+     "published_at": "2026-04-16",
+     "points": "2026-05-02 更新。約 3000 坪僅 33 室；中禪寺湖與男體山景；鹼性單純泉，有貸切檜造露天；晚餐半個室會席，土鍋鰻魚飯被點名。文內亦提到可看他們的 YouTube。",
+     "lang": null
+    },
+    {
+     "kind": "youtube",
+     "title": "【レイクビューに貸切露天風呂！】東京ドームと同じ広さ！星野リゾート 界 日光【コスパ最高◎宿泊費用も公開！】",
+     "author": "つきとほし",
+     "url": "https://www.youtube.com/watch?v=D0qmjtc4LJM",
+     "published_at": "2022-01-20",
+     "points": "較早的影片版開箱，重點同樣是湖景與貸切露天。設施細節請以 2026 部落格為準。",
+     "lang": null
+    }
+   ],
+   "ratings": [
+    {
+     "source": "google",
+     "score": null,
+     "scale": 5,
+     "count": null,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E7%95%8C%20%E6%97%A5%E5%85%89",
+     "checked_at": null,
+     "display": null
+    }
+   ],
+   "review_check": null,
+   "drive_check": {
+    "parking": {
+     "available": null,
+     "free": null,
+     "fee": null,
+     "reservation_required": null,
+     "covered": null,
+     "height_limit_m": null,
+     "width_limit_m": null,
+     "distance_to_front": null,
+     "lat": null,
+     "lng": null,
+     "mapcode": null,
+     "mapcode_source": null,
+     "note": null
+    },
+    "road": {
+     "mountain_road": null,
+     "night_drive": null,
+     "winter_closure": null,
+     "note": null
+    },
+    "from_prev": null,
+    "closed_days": [],
+    "closed_days_note": null,
+    "dinner_fits": null,
+    "note": null
+   },
+   "operation": {
+    "status": "open",
+    "checked_on": "2026-11-16",
+    "sources": [],
+    "recheck_before_departure": true,
+    "note": "つきとほし部落格 2026-04 宿泊レポ（同頻道亦有較早 YouTube）。"
+   },
+   "screening": {
+    "status": "candidate",
+    "rank": null,
+    "reason": null,
+    "area_unverified": false,
+    "over_1h": null
+   },
+   "stays_feedback": [],
+   "data_gaps": [
+    "place_id 未核對（不可臆造）；Google Maps 連結若為座標或館名搜尋，下次應改為店家頁。",
+    "MapCode 未從 Mapion／NaviCon 等來源取得，維持 null。",
+    "停車場入口座標未取得。"
+   ],
+   "public_notes": [],
+   "updated_at": "2026-11-16"
+  },
+  {
+   "id": "lh_nikko_kinugawa_86748dc7",
+   "name": "界 鬼怒川",
+   "name_ja": "界 鬼怒川",
+   "name_zh": "星野集團 界 鬼怒川",
+   "type": "onsen_ryokan",
+   "address": "栃木県日光市鬼怒川温泉滝308",
+   "lat": null,
+   "lng": null,
+   "coord_source": null,
+   "google_place_id": null,
+   "google_maps_url": "https://www.google.com/maps/search/?api=1&query=%E7%95%8C%20%E9%AC%BC%E6%80%92%E5%B7%9D",
+   "official_url": "https://hoshinoresorts.com/ja/hotels/kaikinugawa/",
+   "phone": "050-3134-8092",
+   "mapcode": null,
+   "near_segments": [
+    {
+     "trip_id": "2027-06-tokyo",
+     "route": "I",
+     "base_key": "KINUGAWA",
+     "next_first_stop": null,
+     "drive_min_to_next_first_stop": null,
+     "drive_source": null
+    }
+   ],
+   "rooms": [
+    {
+     "room_name": "とちぎ民藝の間（和室，定員1～3）。たびらい／JTB 標示露天風呂付和室 40平米 定員1～3。公式首頁本次未抽出㎡，面積引用二次來源。",
+     "size_sqm": 40,
+     "tatami": null,
+     "max_guests": 3,
+     "beds": null,
+     "fits_party": null,
+     "note": null
+    }
+   ],
+   "prices": [
+    {
+     "site": "agoda",
+     "url": null,
+     "check_in": "2027-06-29",
+     "check_out": "2027-07-02",
+     "nights": 3,
+     "adults": 3,
+     "rooms": 1,
+     "room_name": null,
+     "size_sqm": null,
+     "meals": null,
+     "total_jpy": null,
+     "per_night_jpy": null,
+     "price_basis": null,
+     "tax": "unknown",
+     "tax_note": null,
+     "free_cancel_until": null,
+     "free_cancel_rule_text": null,
+     "member_price_jpy": null,
+     "coupon": null,
+     "status": "not_found",
+     "checked_at": "2026-11-16",
+     "source_url": null
+    },
+    {
+     "site": "google_hotels",
+     "url": null,
+     "check_in": "2027-06-29",
+     "check_out": "2027-07-02",
+     "nights": 3,
+     "adults": 3,
+     "rooms": 1,
+     "room_name": null,
+     "size_sqm": null,
+     "meals": null,
+     "total_jpy": null,
+     "per_night_jpy": null,
+     "price_basis": null,
+     "tax": "unknown",
+     "tax_note": null,
+     "free_cancel_until": null,
+     "free_cancel_rule_text": null,
+     "member_price_jpy": null,
+     "coupon": null,
+     "status": "not_found",
+     "checked_at": "2026-11-16",
+     "source_url": null
+    },
+    {
+     "site": "google_hotels",
+     "url": null,
+     "check_in": "2027-06-29",
+     "check_out": "2027-07-02",
+     "nights": 3,
+     "adults": 3,
+     "rooms": 1,
+     "room_name": "和室定員3，含兩食",
+     "size_sqm": null,
+     "meals": "兩食",
+     "total_jpy": null,
+     "per_night_jpy": 83610,
+     "price_basis": "per_night",
+     "tax": "unknown",
+     "tax_note": null,
+     "free_cancel_until": "2027-05-19",
+     "free_cancel_rule_text": "Google 顯示：5/19 前免費取消（年份與稅別以訂房網為準）",
+     "member_price_jpy": null,
+     "coupon": null,
+     "status": "ok",
+     "checked_at": "2026-11-16",
+     "source_url": null
+    },
+    {
+     "site": "google_hotels",
+     "url": null,
+     "check_in": "2027-06-29",
+     "check_out": "2027-07-02",
+     "nights": 3,
+     "adults": 3,
+     "rooms": 1,
+     "room_name": "露天風呂付き和室，含兩食",
+     "size_sqm": null,
+     "meals": "兩食",
+     "total_jpy": null,
+     "per_night_jpy": 110340,
+     "price_basis": "per_night",
+     "tax": "unknown",
+     "tax_note": null,
+     "free_cancel_until": "2027-05-19",
+     "free_cancel_rule_text": "Google 顯示：5/19 前免費取消（年份與稅別以訂房網為準）",
+     "member_price_jpy": null,
+     "coupon": null,
+     "status": "ok",
+     "checked_at": "2026-11-16",
+     "source_url": null
+    },
+    {
+     "site": "google_hotels",
+     "url": null,
+     "check_in": "2027-06-29",
+     "check_out": "2027-07-02",
+     "nights": 3,
+     "adults": 3,
+     "rooms": 1,
+     "room_name": "含兩食",
+     "size_sqm": null,
+     "meals": "兩食",
+     "total_jpy": null,
+     "per_night_jpy": 84495,
+     "price_basis": "per_night",
+     "tax": "unknown",
+     "tax_note": null,
+     "free_cancel_until": "2027-05-19",
+     "free_cancel_rule_text": "Google 顯示：5/19 前免費取消（年份與稅別以訂房網為準）",
+     "member_price_jpy": null,
+     "coupon": null,
+     "status": "ok",
+     "checked_at": "2026-11-16",
+     "source_url": null
+    },
+    {
+     "site": "jalan",
+     "url": "https://www.jalan.net/yad398193/plan/?stayYear=2027&stayMonth=6&stayDay=29&stayCount=3&roomCount=1&adultNum=3",
+     "check_in": "2027-06-29",
+     "check_out": "2027-07-02",
+     "nights": 3,
+     "adults": 3,
+     "rooms": 1,
+     "room_name": null,
+     "size_sqm": null,
+     "meals": null,
+     "total_jpy": null,
+     "per_night_jpy": null,
+     "price_basis": null,
+     "tax": "unknown",
+     "tax_note": null,
+     "free_cancel_until": null,
+     "free_cancel_rule_text": null,
+     "member_price_jpy": null,
+     "coupon": null,
+     "status": "not_on_sale",
+     "checked_at": "2026-11-16",
+     "source_url": "https://www.jalan.net/yad398193/plan/?stayYear=2027&stayMonth=6&stayDay=29&stayCount=3&roomCount=1&adultNum=3"
+    },
+    {
+     "site": "ikyu",
+     "url": null,
+     "check_in": "2027-06-29",
+     "check_out": "2027-07-02",
+     "nights": 3,
+     "adults": 3,
+     "rooms": 1,
+     "room_name": null,
+     "size_sqm": null,
+     "meals": null,
+     "total_jpy": null,
+     "per_night_jpy": null,
+     "price_basis": null,
+     "tax": "unknown",
+     "tax_note": null,
+     "free_cancel_until": null,
+     "free_cancel_rule_text": null,
+     "member_price_jpy": null,
+     "coupon": null,
+     "status": "not_found",
+     "checked_at": "2026-11-16",
+     "source_url": null
+    },
+    {
+     "site": "official",
+     "url": "https://hoshinoresorts.com/ja/hotels/kaikinugawa/",
+     "check_in": "2027-06-29",
+     "check_out": "2027-07-02",
+     "nights": 3,
+     "adults": 3,
+     "rooms": 1,
+     "room_name": null,
+     "size_sqm": null,
+     "meals": null,
+     "total_jpy": null,
+     "per_night_jpy": null,
+     "price_basis": null,
+     "tax": "unknown",
+     "tax_note": null,
+     "free_cancel_until": null,
+     "free_cancel_rule_text": null,
+     "member_price_jpy": null,
+     "coupon": null,
+     "status": "not_found",
+     "checked_at": "2026-11-16",
+     "source_url": "https://hoshinoresorts.com/ja/hotels/kaikinugawa/"
+    },
+    {
+     "site": "rakuten",
+     "url": null,
+     "check_in": "2027-06-29",
+     "check_out": "2027-07-02",
+     "nights": 3,
+     "adults": 3,
+     "rooms": 1,
+     "room_name": null,
+     "size_sqm": null,
+     "meals": null,
+     "total_jpy": null,
+     "per_night_jpy": null,
+     "price_basis": null,
+     "tax": "unknown",
+     "tax_note": null,
+     "free_cancel_until": null,
+     "free_cancel_rule_text": null,
+     "member_price_jpy": null,
+     "coupon": null,
+     "status": "not_found",
+     "checked_at": "2026-11-16",
+     "source_url": null
+    }
+   ],
+   "check_in_time": null,
+   "last_check_in": null,
+   "check_out_time": null,
+   "dinner_time": "17:30 或 19:30",
+   "free_cancel_until": null,
+   "booking_opens": {
+    "status": "unknown",
+    "opens_on": null,
+    "rule": null,
+    "by_site": [],
+    "checked_at": null
+   },
+   "recommendations": [],
+   "ratings": [
+    {
+     "source": "google",
+     "score": null,
+     "scale": 5,
+     "count": null,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E7%95%8C%20%E9%AC%BC%E6%80%92%E5%B7%9D",
+     "checked_at": null,
+     "display": null
+    }
+   ],
+   "review_check": null,
+   "drive_check": {
+    "parking": {
+     "available": null,
+     "free": null,
+     "fee": null,
+     "reservation_required": null,
+     "covered": null,
+     "height_limit_m": null,
+     "width_limit_m": null,
+     "distance_to_front": null,
+     "lat": null,
+     "lng": null,
+     "mapcode": null,
+     "mapcode_source": null,
+     "note": null
+    },
+    "road": {
+     "mountain_road": null,
+     "night_drive": null,
+     "winter_closure": null,
+     "note": null
+    },
+    "from_prev": null,
+    "closed_days": [],
+    "closed_days_note": null,
+    "dinner_fits": null,
+    "note": "2027-06-30 いろは坂：OSRM 45.5 分；2027-07-01 鬼怒楯岩大吊橋：OSRM 0.6 分"
+   },
+   "operation": {
+    "status": "open",
+    "checked_on": "2026-11-16",
+    "sources": [],
+    "recheck_before_departure": true,
+    "note": null
+   },
+   "screening": {
+    "status": "candidate",
+    "rank": null,
+    "reason": null,
+    "area_unverified": false,
+    "over_1h": null
+   },
+   "stays_feedback": [],
+   "data_gaps": [
+    "place_id 未核對（不可臆造）；Google Maps 連結若為座標或館名搜尋，下次應改為店家頁。",
+    "MapCode 未從 Mapion／NaviCon 等來源取得，維持 null。",
+    "停車場入口座標未取得。"
+   ],
+   "public_notes": [],
+   "updated_at": "2026-11-16"
+  },
+  {
+   "id": "lh_nikko_kinugawa_895397b9",
+   "name": "若竹の庄 別邸笹音",
+   "name_ja": "若竹の庄 別邸笹音",
+   "name_zh": "若竹之庄 別邸笹音",
+   "type": "onsen_ryokan",
+   "address": null,
+   "lat": null,
+   "lng": null,
+   "coord_source": null,
+   "google_place_id": null,
+   "google_maps_url": "https://www.google.com/maps/search/?api=1&query=%E8%8B%A5%E7%AB%B9%E3%81%AE%E5%BA%84%20%E5%88%A5%E9%82%B8%E7%AC%B9%E9%9F%B3",
+   "official_url": null,
+   "phone": null,
+   "mapcode": null,
+   "near_segments": [
+    {
+     "trip_id": "2027-06-tokyo",
+     "route": "I",
+     "base_key": "KINUGAWA",
+     "next_first_stop": null,
+     "drive_min_to_next_first_stop": null,
+     "drive_source": null
+    }
+   ],
+   "rooms": [],
+   "prices": [],
+   "check_in_time": null,
+   "last_check_in": null,
+   "check_out_time": null,
+   "dinner_time": null,
+   "free_cancel_until": null,
+   "booking_opens": {
+    "status": "unknown",
+    "opens_on": null,
+    "rule": null,
+    "by_site": [],
+    "checked_at": null
+   },
+   "recommendations": [
+    {
+     "kind": "youtube",
+     "title": "日光 鬼怒川【 旅 Vlog 】全16室の半露天風呂付きの宿、若竹の庄 「別邸笹音」 | 温泉旅行 | SUB | ONSEN TRIP",
+     "author": "ETO VLOG / San Francisco",
+     "url": "https://www.youtube.com/watch?v=iHGBxU3X5Pw",
+     "published_at": "2021-07-16",
+     "points": "全 16 室半露天風呂付的小型宿 vlog。影片較早，列入時請先查是否仍營業與是否改裝／改名。",
+     "lang": null
+    }
+   ],
+   "ratings": [
+    {
+     "source": "google",
+     "score": null,
+     "scale": 5,
+     "count": null,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E8%8B%A5%E7%AB%B9%E3%81%AE%E5%BA%84%20%E5%88%A5%E9%82%B8%E7%AC%B9%E9%9F%B3",
+     "checked_at": null,
+     "display": null
+    }
+   ],
+   "review_check": null,
+   "drive_check": {
+    "parking": {
+     "available": null,
+     "free": null,
+     "fee": null,
+     "reservation_required": null,
+     "covered": null,
+     "height_limit_m": null,
+     "width_limit_m": null,
+     "distance_to_front": null,
+     "lat": null,
+     "lng": null,
+     "mapcode": null,
+     "mapcode_source": null,
+     "note": null
+    },
+    "road": {
+     "mountain_road": null,
+     "night_drive": null,
+     "winter_closure": null,
+     "note": null
+    },
+    "from_prev": null,
+    "closed_days": [],
+    "closed_days_note": null,
+    "dinner_fits": null,
+    "note": null
+   },
+   "operation": {
+    "status": "unknown",
+    "checked_on": "2026-11-16",
+    "sources": [],
+    "recheck_before_departure": true,
+    "note": "僅找到 2021 年旅遊 vlog，本次未獨立確認 2026 年是否仍以同名稱營業。"
+   },
+   "screening": {
+    "status": "candidate",
+    "rank": null,
+    "reason": null,
+    "area_unverified": false,
+    "over_1h": null
+   },
+   "stays_feedback": [],
+   "data_gaps": [
+    "place_id 未核對（不可臆造）；Google Maps 連結若為座標或館名搜尋，下次應改為店家頁。",
+    "MapCode 未從 Mapion／NaviCon 等來源取得，維持 null。",
+    "停車場入口座標未取得。",
+    "營業狀況待再確認。"
+   ],
+   "public_notes": [],
+   "updated_at": "2026-11-16"
+  },
+  {
+   "id": "lh_nikko_kinugawa_0111e7c3",
+   "name": "鬼怒川温泉 あさや",
+   "name_ja": "鬼怒川温泉 あさや",
+   "name_zh": "鬼怒川溫泉 あさや飯店",
+   "type": "onsen_hotel",
+   "address": "〒321-2598 栃木県日光市鬼怒川温泉滝813番地",
+   "lat": 36.8358685,
+   "lng": 139.7196309,
+   "coord_source": "OpenStreetMap Nominatim（2026-11-12；あさやホテル, 鬼怒川温泉滝）",
+   "google_place_id": null,
+   "google_maps_url": "https://www.google.com/maps/search/?api=1&query=36.8358685,139.7196309",
+   "official_url": "https://www.asaya-hotel.co.jp/",
+   "phone": "0288-77-1111（9:00–18:00）",
+   "mapcode": null,
+   "near_segments": [
+    {
+     "trip_id": "2027-06-tokyo",
+     "route": "I",
+     "base_key": "KINUGAWA",
+     "next_first_stop": null,
+     "drive_min_to_next_first_stop": null,
+     "drive_source": null
+    }
+   ],
+   "rooms": [
+    {
+     "room_name": "【禁煙】秀峰館和室街側 12 疊（定員可至 5 名）",
+     "size_sqm": null,
+     "tatami": null,
+     "max_guests": null,
+     "beds": null,
+     "fits_party": null,
+     "note": "1泊2食（和洋中自助；方案名為「一番人気の豪華バイキング」）"
+    },
+    {
+     "room_name": "【禁煙】秀峰館和室渓谷側 12 疊",
+     "size_sqm": null,
+     "tatami": null,
+     "max_guests": null,
+     "beds": null,
+     "fits_party": null,
+     "note": "1泊2食（自助）"
+    },
+    {
+     "room_name": "【禁煙】秀峰館■眺望風呂付■リラックス和洋室 52㎡",
+     "size_sqm": 52,
+     "tatami": null,
+     "max_guests": 3,
+     "beds": null,
+     "fits_party": null,
+     "note": "1泊2食（和洋中自助） 同方案「街側12疊」和室 ¥207,900，但頁面未標㎡，未列入符合 25㎡。"
+    },
+    {
+     "room_name": "【禁煙】八番館ベッド付和室（10畳+ベッド）57㎡",
+     "size_sqm": 57,
+     "tatami": null,
+     "max_guests": 3,
+     "beds": "10疊＋床",
+     "fits_party": null,
+     "note": "1泊2食（自助）"
+    }
+   ],
+   "prices": [
+    {
+     "site": "rakuten",
+     "url": "https://hotel.travel.rakuten.co.jp/hotelinfo/plan/8643?f_heya_su=1&f_otona_su=3&f_nen1=2027&f_tuki1=4&f_hi1=20&f_nen2=2027&f_tuki2=4&f_hi2=23&f_sort=min_charge",
+     "check_in": "2027-06-29",
+     "check_out": "2027-07-02",
+     "nights": 3,
+     "adults": 3,
+     "rooms": 1,
+     "room_name": "【禁煙】秀峰館和室街側 12 疊（定員可至 5 名）",
+     "size_sqm": null,
+     "meals": "1泊2食（和洋中自助；方案名為「一番人気の豪華バイキング」）",
+     "total_jpy": 207900,
+     "per_night_jpy": null,
+     "price_basis": "total",
+     "tax": "included",
+     "tax_note": null,
+     "free_cancel_until": null,
+     "free_cancel_rule_text": null,
+     "member_price_jpy": null,
+     "coupon": null,
+     "status": "ok",
+     "checked_at": "2026-11-12",
+     "source_url": "https://hotel.travel.rakuten.co.jp/hotelinfo/plan/8643?f_heya_su=1&f_otona_su=3&f_nen1=2027&f_tuki1=4&f_hi1=20&f_nen2=2027&f_tuki2=4&f_hi2=23&f_sort=min_charge"
+    },
+    {
+     "site": "rakuten",
+     "url": "https://hotel.travel.rakuten.co.jp/hotelinfo/plan/8643?f_heya_su=1&f_otona_su=3&f_nen1=2027&f_tuki1=4&f_hi1=20&f_nen2=2027&f_tuki2=4&f_hi2=23&f_sort=min_charge",
+     "check_in": "2027-06-29",
+     "check_out": "2027-07-02",
+     "nights": 3,
+     "adults": 3,
+     "rooms": 1,
+     "room_name": "【禁煙】秀峰館和室渓谷側 12 疊",
+     "size_sqm": null,
+     "meals": "1泊2食（自助）",
+     "total_jpy": 217800,
+     "per_night_jpy": null,
+     "price_basis": "total",
+     "tax": "included",
+     "tax_note": null,
+     "free_cancel_until": null,
+     "free_cancel_rule_text": null,
+     "member_price_jpy": null,
+     "coupon": null,
+     "status": "ok",
+     "checked_at": "2026-11-12",
+     "source_url": "https://hotel.travel.rakuten.co.jp/hotelinfo/plan/8643?f_heya_su=1&f_otona_su=3&f_nen1=2027&f_tuki1=4&f_hi1=20&f_nen2=2027&f_tuki2=4&f_hi2=23&f_sort=min_charge"
+    },
+    {
+     "site": "rakuten",
+     "url": "https://hotel.travel.rakuten.co.jp/hotelinfo/plan/8643?f_heya_su=1&f_otona_su=3&f_nen1=2027&f_tuki1=4&f_hi1=20&f_nen2=2027&f_tuki2=4&f_hi2=23&f_sort=min_charge",
+     "check_in": "2027-06-29",
+     "check_out": "2027-07-02",
+     "nights": 3,
+     "adults": 3,
+     "rooms": 1,
+     "room_name": "【禁煙】八番館ベッド付和室（10畳+ベッド）57㎡",
+     "size_sqm": 57,
+     "meals": "1泊2食（自助）",
+     "total_jpy": 247500,
+     "per_night_jpy": null,
+     "price_basis": "total",
+     "tax": "included",
+     "tax_note": null,
+     "free_cancel_until": "2027-06-18",
+     "free_cancel_rule_text": "替代日：11日前（2027-04-09）23:59 前無料。",
+     "member_price_jpy": null,
+     "coupon": null,
+     "status": "ok",
+     "checked_at": "2026-11-15",
+     "source_url": "https://hotel.travel.rakuten.co.jp/hotelinfo/plan/8643?f_heya_su=1&f_otona_su=3&f_nen1=2027&f_tuki1=4&f_hi1=20&f_nen2=2027&f_tuki2=4&f_hi2=23&f_sort=min_charge"
+    },
+    {
+     "site": "rakuten",
+     "url": "https://hotel.travel.rakuten.co.jp/hotelinfo/plan/8643?f_heya_su=1&f_otona_su=3&f_nen1=2027&f_tuki1=4&f_hi1=20&f_nen2=2027&f_tuki2=4&f_hi2=23&f_sort=min_charge",
+     "check_in": "2027-06-29",
+     "check_out": "2027-07-02",
+     "nights": 3,
+     "adults": 3,
+     "rooms": 1,
+     "room_name": "【禁煙】秀峰館■眺望風呂付■リラックス和洋室 52㎡",
+     "size_sqm": 52,
+     "meals": "1泊2食（和洋中自助）",
+     "total_jpy": 277200,
+     "per_night_jpy": null,
+     "price_basis": "total",
+     "tax": "included",
+     "tax_note": null,
+     "free_cancel_until": "2027-06-18",
+     "free_cancel_rule_text": "替代日：11日前（2027-04-09）23:59 前無料。對應 6 月須重查。",
+     "member_price_jpy": null,
+     "coupon": null,
+     "status": "ok",
+     "checked_at": "2026-11-15",
+     "source_url": "https://hotel.travel.rakuten.co.jp/hotelinfo/plan/8643?f_heya_su=1&f_otona_su=3&f_nen1=2027&f_tuki1=4&f_hi1=20&f_nen2=2027&f_tuki2=4&f_hi2=23&f_sort=min_charge"
+    }
+   ],
+   "check_in_time": null,
+   "last_check_in": null,
+   "check_out_time": null,
+   "dinner_time": "待查（方案為和洋中約 100 種自助；開餐時間未取得）",
+   "free_cancel_until": null,
+   "booking_opens": {
+    "status": "not_yet",
+    "opens_on": null,
+    "rule": "待查（2027/6 尚未放房）",
+    "by_site": [],
+    "checked_at": null
+   },
+   "recommendations": [
+    {
+     "kind": "youtube",
+     "title": "【食べ放題の楽園】海鮮も充実の超豪華食べ放題ビュッフェ＆極上の露天風呂が楽しめる大人気旅館 / 栃木県 鬼怒川温泉 / あさやホテル",
+     "author": "旅まる 【宿・ホテル・旅館】",
+     "url": "https://www.youtube.com/watch?v=XmPj5g52vHk",
+     "published_at": "2026-10-17",
+     "points": "近期日文開箱：強調自助餐（含海鮮）與露天風呂。",
+     "lang": null
+    },
+    {
+     "kind": "youtube",
+     "title": "豪華100種類以上の食べ放題ビュッフェバイキングはコスパもクオリティも最高すぎた！老舗・鬼怒川温泉あさやホテル",
+     "author": "ナベトラベル",
+     "url": "https://www.youtube.com/watch?v=WBLabB1kclM",
+     "published_at": "2025-07-05",
+     "points": "強調百種以上自助餐的份量與 CP。",
+     "lang": null
+    },
+    {
+     "kind": "blog",
+     "title": "【宿泊記】鬼怒川温泉あさやホテルに泊まってみた！客室・温泉・食事・混雑状況を徹底レビュー",
+     "author": "シギマル夫婦の旅ガイド",
+     "url": "https://kazumaru-room.com/asaya-hotel-review/",
+     "published_at": "2026-10-24",
+     "points": "2026-06-27～28 入住秀峰館最上階デラックスツイン約 42㎡，有按摩椅與溪谷景。13 樓「昇龍の湯」空中庭園露天被列為最大賣點；館內設施多，適合家庭／團體。6 月底館內不算擁擠。",
+     "lang": null
+    }
+   ],
+   "ratings": [
+    {
+     "source": "google",
+     "score": null,
+     "scale": 5,
+     "count": null,
+     "url": "https://www.google.com/maps/search/?api=1&query=36.8358685,139.7196309",
+     "checked_at": null,
+     "display": null
+    }
+   ],
+   "review_check": null,
+   "drive_check": {
+    "parking": {
+     "available": true,
+     "free": true,
+     "fee": "免費",
+     "reservation_required": false,
+     "covered": null,
+     "height_limit_m": null,
+     "width_limit_m": null,
+     "distance_to_front": null,
+     "lat": null,
+     "lng": null,
+     "mapcode": null,
+     "mapcode_source": null,
+     "note": "車位 400 台 楽天 FAQ：400 台，免費、先着順"
+    },
+    "road": {
+     "mountain_road": null,
+     "night_drive": null,
+     "winter_closure": null,
+     "note": null
+    },
+    "from_prev": null,
+    "closed_days": [],
+    "closed_days_note": null,
+    "dinner_fits": null,
+    "note": null
+   },
+   "operation": {
+    "status": "open",
+    "checked_on": "2026-11-16",
+    "sources": [],
+    "recheck_before_departure": true,
+    "note": "官網 200；2025–2026 多則 YouTube 與部落格宿泊記（含 2026-06 入住）。"
+   },
+   "screening": {
+    "status": "candidate",
+    "rank": null,
+    "reason": null,
+    "area_unverified": false,
+    "over_1h": null
+   },
+   "stays_feedback": [],
+   "data_gaps": [
+    "place_id 未核對（不可臆造）；Google Maps 連結若為座標或館名搜尋，下次應改為店家頁。",
+    "MapCode 未從 Mapion／NaviCon 等來源取得，維持 null。",
+    "停車場入口座標未取得。"
+   ],
+   "public_notes": [],
+   "updated_at": "2026-11-16"
+  },
+  {
+   "id": "lh_nikko_kinugawa_c8378d47",
+   "name": "鬼怒川温泉 日光きぬ川ホテル三日月",
+   "name_ja": "鬼怒川温泉 日光きぬ川ホテル三日月",
+   "name_zh": "日光鬼怒川飯店三日月",
+   "type": "onsen_hotel",
+   "address": null,
+   "lat": null,
+   "lng": null,
+   "coord_source": null,
+   "google_place_id": null,
+   "google_maps_url": "https://www.google.com/maps/search/?api=1&query=%E9%AC%BC%E6%80%92%E5%B7%9D%E6%B8%A9%E6%B3%89%20%E6%97%A5%E5%85%89%E3%81%8D%E3%81%AC%E5%B7%9D%E3%83%9B%E3%83%86%E3%83%AB%E4%B8%89%E6%97%A5%E6%9C%88",
+   "official_url": "https://www.mikazuki.co.jp/kinugawa/",
+   "phone": "0288-77-2611",
+   "mapcode": null,
+   "near_segments": [
+    {
+     "trip_id": "2027-06-tokyo",
+     "route": "I",
+     "base_key": "KINUGAWA",
+     "next_first_stop": null,
+     "drive_min_to_next_first_stop": null,
+     "drive_source": null
+    }
+   ],
+   "rooms": [
+    {
+     "room_name": "さくら亭6畳+2ベット 45㎡",
+     "size_sqm": 45,
+     "tatami": null,
+     "max_guests": 3,
+     "beds": "6疊＋2床",
+     "fits_party": null,
+     "note": "1泊2食（自助） 「つばき亭又はさくら亭」おまかせ和洋室替代日 ¥201,366，但該房型名未標㎡，未列入符合。"
+    },
+    {
+     "room_name": "【貴賓室】さくら亭最上階スイートルーム 75㎡",
+     "size_sqm": 75,
+     "tatami": null,
+     "max_guests": 3,
+     "beds": null,
+     "fits_party": null,
+     "note": "1泊2食"
+    }
+   ],
+   "prices": [
+    {
+     "site": "rakuten",
+     "url": "https://hotel.travel.rakuten.co.jp/hotelinfo/plan/9086?f_heya_su=1&f_otona_su=3&f_nen1=2027&f_tuki1=4&f_hi1=20&f_nen2=2027&f_tuki2=4&f_hi2=23&f_sort=min_charge",
+     "check_in": "2027-06-29",
+     "check_out": "2027-07-02",
+     "nights": 3,
+     "adults": 3,
+     "rooms": 1,
+     "room_name": "さくら亭6畳+2ベット 45㎡",
+     "size_sqm": 45,
+     "meals": "1泊2食（自助）",
+     "total_jpy": 178992,
+     "per_night_jpy": null,
+     "price_basis": "total",
+     "tax": "included",
+     "tax_note": null,
+     "free_cancel_until": "2027-06-25",
+     "free_cancel_rule_text": "替代日：4日前（2027-04-16）23:59 前無料。對應 6 月須重查。",
+     "member_price_jpy": null,
+     "coupon": null,
+     "status": "ok",
+     "checked_at": "2026-11-15",
+     "source_url": "https://hotel.travel.rakuten.co.jp/hotelinfo/plan/9086?f_heya_su=1&f_otona_su=3&f_nen1=2027&f_tuki1=4&f_hi1=20&f_nen2=2027&f_tuki2=4&f_hi2=23&f_sort=min_charge"
+    },
+    {
+     "site": "rakuten",
+     "url": "https://hotel.travel.rakuten.co.jp/hotelinfo/plan/9086?f_heya_su=1&f_otona_su=3&f_nen1=2027&f_tuki1=4&f_hi1=20&f_nen2=2027&f_tuki2=4&f_hi2=23&f_sort=min_charge",
+     "check_in": "2027-06-29",
+     "check_out": "2027-07-02",
+     "nights": 3,
+     "adults": 3,
+     "rooms": 1,
+     "room_name": "【貴賓室】さくら亭最上階スイートルーム 75㎡",
+     "size_sqm": 75,
+     "meals": "1泊2食",
+     "total_jpy": 324423,
+     "per_night_jpy": null,
+     "price_basis": "total",
+     "tax": "included",
+     "tax_note": null,
+     "free_cancel_until": "2027-06-25",
+     "free_cancel_rule_text": "替代日：4日前（2027-04-16）23:59 前無料。",
+     "member_price_jpy": null,
+     "coupon": null,
+     "status": "ok",
+     "checked_at": "2026-11-15",
+     "source_url": "https://hotel.travel.rakuten.co.jp/hotelinfo/plan/9086?f_heya_su=1&f_otona_su=3&f_nen1=2027&f_tuki1=4&f_hi1=20&f_nen2=2027&f_tuki2=4&f_hi2=23&f_sort=min_charge"
+    }
+   ],
+   "check_in_time": null,
+   "last_check_in": null,
+   "check_out_time": null,
+   "dinner_time": null,
+   "free_cancel_until": null,
+   "booking_opens": {
+    "status": "unknown",
+    "opens_on": null,
+    "rule": null,
+    "by_site": [],
+    "checked_at": null
+   },
+   "recommendations": [],
+   "ratings": [
+    {
+     "source": "google",
+     "score": null,
+     "scale": 5,
+     "count": null,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E9%AC%BC%E6%80%92%E5%B7%9D%E6%B8%A9%E6%B3%89%20%E6%97%A5%E5%85%89%E3%81%8D%E3%81%AC%E5%B7%9D%E3%83%9B%E3%83%86%E3%83%AB%E4%B8%89%E6%97%A5%E6%9C%88",
+     "checked_at": null,
+     "display": null
+    }
+   ],
+   "review_check": null,
+   "drive_check": {
+    "parking": {
+     "available": null,
+     "free": null,
+     "fee": null,
+     "reservation_required": null,
+     "covered": null,
+     "height_limit_m": null,
+     "width_limit_m": null,
+     "distance_to_front": null,
+     "lat": null,
+     "lng": null,
+     "mapcode": null,
+     "mapcode_source": null,
+     "note": "300 台、免費。來源：楽天基本情報 2026-11-15。"
+    },
+    "road": {
+     "mountain_road": null,
+     "night_drive": null,
+     "winter_closure": null,
+     "note": null
+    },
+    "from_prev": null,
+    "closed_days": [],
+    "closed_days_note": null,
+    "dinner_fits": null,
+    "note": null
+   },
+   "operation": {
+    "status": "unknown",
+    "checked_on": "2026-11-16",
+    "sources": [],
+    "recheck_before_departure": true,
+    "note": "本次僅見於比價或名單，未獨立核對官網／新聞是否仍營業。"
+   },
+   "screening": {
+    "status": "candidate",
+    "rank": null,
+    "reason": null,
+    "area_unverified": false,
+    "over_1h": null
+   },
+   "stays_feedback": [],
+   "data_gaps": [
+    "place_id 未核對（不可臆造）；Google Maps 連結若為座標或館名搜尋，下次應改為店家頁。",
+    "MapCode 未從 Mapion／NaviCon 等來源取得，維持 null。",
+    "停車場入口座標未取得。",
+    "營業狀況待再確認。"
+   ],
+   "public_notes": [],
+   "updated_at": "2026-11-16"
+  },
+  {
+   "id": "lh_nikko_kinugawa_60911bfd",
+   "name": "鬼怒川金谷ホテル",
+   "name_ja": "鬼怒川金谷ホテル",
+   "name_zh": "鬼怒川金谷飯店",
+   "type": "onsen_hotel",
+   "address": null,
+   "lat": 36.82572223,
+   "lng": 139.7163811,
+   "coord_source": "既有 lodging.route_options B",
+   "google_place_id": "ChIJRRRmLjefH2ARDoZloX3YB0s",
+   "google_maps_url": "https://www.google.com/maps/place/?q=place_id:ChIJRRRmLjefH2ARDoZloX3YB0s",
+   "official_url": "https://www.kinugawakanaya.com/",
+   "phone": "0288-76-0001",
+   "mapcode": null,
+   "near_segments": [
+    {
+     "trip_id": "2027-06-tokyo",
+     "route": "B",
+     "base_key": "NIKKO",
+     "next_first_stop": null,
+     "drive_min_to_next_first_stop": null,
+     "drive_source": null
+    },
+    {
+     "trip_id": "2027-06-tokyo",
+     "route": "C",
+     "base_key": "NIKKO",
+     "next_first_stop": null,
+     "drive_min_to_next_first_stop": null,
+     "drive_source": null
+    },
+    {
+     "trip_id": "2027-06-tokyo",
+     "route": "D",
+     "base_key": "NIKKO",
+     "next_first_stop": null,
+     "drive_min_to_next_first_stop": null,
+     "drive_source": null
+    },
+    {
+     "trip_id": "2027-06-tokyo",
+     "route": "E",
+     "base_key": "NIKKO",
+     "next_first_stop": null,
+     "drive_min_to_next_first_stop": null,
+     "drive_source": null
+    },
+    {
+     "trip_id": "2027-06-tokyo",
+     "route": "G",
+     "base_key": "NIKKO",
+     "next_first_stop": null,
+     "drive_min_to_next_first_stop": null,
+     "drive_source": null
+    },
+    {
+     "trip_id": "2027-06-tokyo",
+     "route": "I",
+     "base_key": "KINUGAWA",
+     "next_first_stop": null,
+     "drive_min_to_next_first_stop": null,
+     "drive_source": null
+    }
+   ],
+   "rooms": [
+    {
+     "room_name": "スタンダード和洋室 66㎡（3名可）",
+     "size_sqm": 66,
+     "tatami": null,
+     "max_guests": null,
+     "beds": null,
+     "fits_party": null,
+     "note": "1泊2食（ダイニング「JOHN KANAYA」） 參考價，非該日期實價（2027/6～7 多數尚未開賣；為楽天等目前開放日期之3名1室每人含稅價格範圍，實際依日期/方案變動）"
+    },
+    {
+     "room_name": "スタンダード和洋室 66㎡（既有資料，3 名可）",
+     "size_sqm": 66,
+     "tatami": null,
+     "max_guests": null,
+     "beds": null,
+     "fits_party": null,
+     "note": "1泊2食（既有參考價區間）"
+    },
+    {
+     "room_name": "スタンダード和洋室 66㎡",
+     "size_sqm": 66,
+     "tatami": null,
+     "max_guests": 3,
+     "beds": null,
+     "fits_party": null,
+     "note": "1泊2食"
+    }
+   ],
+   "prices": [
+    {
+     "site": "other",
+     "url": null,
+     "check_in": null,
+     "check_out": null,
+     "nights": null,
+     "adults": 3,
+     "rooms": 1,
+     "room_name": null,
+     "size_sqm": null,
+     "meals": null,
+     "total_jpy": null,
+     "per_night_jpy": null,
+     "price_basis": null,
+     "tax": "included",
+     "tax_note": null,
+     "free_cancel_until": "2027-06-22",
+     "free_cancel_rule_text": "6日前(2026年12月15日) 前免費（2026-12-21 入住方案之規定；目標日期依同規則推算）",
+     "member_price_jpy": null,
+     "coupon": null,
+     "status": "not_found",
+     "checked_at": "2026-10-24",
+     "source_url": null
+    },
+    {
+     "site": "rakuten",
+     "url": "https://hotel.travel.rakuten.co.jp/hotelinfo/plan/28440",
+     "check_in": null,
+     "check_out": null,
+     "nights": null,
+     "adults": 3,
+     "rooms": 1,
+     "room_name": "スタンダード和洋室 66㎡（3名可）",
+     "size_sqm": 66,
+     "meals": "1泊2食（ダイニング「JOHN KANAYA」）",
+     "total_jpy": null,
+     "per_night_jpy": null,
+     "price_basis": "per_night",
+     "tax": "included",
+     "tax_note": null,
+     "free_cancel_until": null,
+     "free_cancel_rule_text": null,
+     "member_price_jpy": null,
+     "coupon": null,
+     "status": "not_found",
+     "checked_at": "2026-10-24",
+     "source_url": "https://hotel.travel.rakuten.co.jp/hotelinfo/plan/28440"
+    },
+    {
+     "site": "rakuten",
+     "url": "https://hotel.travel.rakuten.co.jp/hotelinfo/plan/28440?f_heya_su=1&f_otona_su=3&f_nen1=2027&f_tuki1=4&f_hi1=20&f_nen2=2027&f_tuki2=4&f_hi2=23&f_sort=min_charge",
+     "check_in": "2027-06-29",
+     "check_out": "2027-07-02",
+     "nights": 3,
+     "adults": 3,
+     "rooms": 1,
+     "room_name": "スタンダード和洋室 66㎡",
+     "size_sqm": 66,
+     "meals": "1泊2食",
+     "total_jpy": null,
+     "per_night_jpy": null,
+     "price_basis": "total",
+     "tax": "included",
+     "tax_note": null,
+     "free_cancel_until": null,
+     "free_cancel_rule_text": null,
+     "member_price_jpy": null,
+     "coupon": null,
+     "status": "not_found",
+     "checked_at": "2026-11-15",
+     "source_url": "https://hotel.travel.rakuten.co.jp/hotelinfo/plan/28440?f_heya_su=1&f_otona_su=3&f_nen1=2027&f_tuki1=4&f_hi1=20&f_nen2=2027&f_tuki2=4&f_hi2=23&f_sort=min_charge"
+    }
+   ],
+   "check_in_time": null,
+   "last_check_in": null,
+   "check_out_time": null,
+   "dinner_time": "待查（餐廳 JOHN KANAYA）",
+   "free_cancel_until": null,
+   "booking_opens": {
+    "status": "not_yet",
+    "opens_on": null,
+    "rule": "2027/6 未放房；目前 3 名可訂之最遠日期僅 2026/12 且只剩最高價套房；開賣日未公布",
+    "by_site": [],
+    "checked_at": null
+   },
+   "recommendations": [
+    {
+     "kind": "youtube",
+     "title": "【温泉旅館宿泊記】日光旅行で鬼怒川金谷ホテルに宿泊したので詳細レビューします 【高級旅館/Japan】",
+     "author": "大人の休日CH / Luxury Holidays",
+     "url": "https://www.youtube.com/watch?v=lDgQRSOj9no",
+     "published_at": "2022-09-10",
+     "points": "較完整的高級旅館宿泊レビュー（溪谷景觀路線）。",
+     "lang": null
+    },
+    {
+     "kind": "blog",
+     "title": "鬼怒川金谷ホテルの宿泊動画・ルームツアー（6本）",
+     "author": "STAYLOG",
+     "url": "https://luxury-hotel-db.com/hotels/kinugawa-kanaya-hotel/videos",
+     "published_at": "2026-09-27",
+     "points": "彙整多支公開 YouTube 宿泊／客房巡禮（含 2024、2026 上傳者），可作延伸觀看清單。本列只把這頁當目錄，不把未逐一用 yt-dlp 核對的影片再拆成獨立來源。",
+     "lang": null
+    }
+   ],
+   "ratings": [
+    {
+     "source": "google",
+     "score": null,
+     "scale": 5,
+     "count": null,
+     "url": "https://www.google.com/maps/place/?q=place_id:ChIJRRRmLjefH2ARDoZloX3YB0s",
+     "checked_at": null,
+     "display": null
+    }
+   ],
+   "review_check": null,
+   "drive_check": {
+    "parking": {
+     "available": null,
+     "free": null,
+     "fee": "待查",
+     "reservation_required": null,
+     "covered": null,
+     "height_limit_m": null,
+     "width_limit_m": null,
+     "distance_to_front": null,
+     "lat": null,
+     "lng": null,
+     "mapcode": null,
+     "mapcode_source": null,
+     "note": "待查（既有資料未取得入口座標／費用／MapCode） 停車場入口座標與MapCode未取得（未於 Mapion/NaviCon/官網/じゃらん 找到可核對資料），填 null"
+    },
+    "road": {
+     "mountain_road": null,
+     "night_drive": null,
+     "winter_closure": null,
+     "note": null
+    },
+    "from_prev": null,
+    "closed_days": [],
+    "closed_days_note": null,
+    "dinner_fits": null,
+    "note": null
+   },
+   "operation": {
+    "status": "open",
+    "checked_on": "2026-11-16",
+    "sources": [],
+    "recheck_before_departure": true,
+    "note": "2022 詳細宿泊片；公開目錄尚列出 2024–2026 年其他宿泊影片。無停業消息。"
+   },
+   "screening": {
+    "status": "candidate",
+    "rank": null,
+    "reason": null,
+    "area_unverified": false,
+    "over_1h": null
+   },
+   "stays_feedback": [],
+   "data_gaps": [
+    "MapCode 未從 Mapion／NaviCon 等來源取得，維持 null。",
+    "停車場入口座標未取得。"
+   ],
+   "public_notes": [
+    "全室面溪谷，溫泉；鬼怒川溫泉站步行3分。",
+    "取消規定：未取得，null"
+   ],
+   "updated_at": "2026-11-16"
+  },
+  {
+   "id": "lh_nikko_kinugawa_ee843bfe",
+   "name": "ものぐさの宿 花千郷",
+   "name_ja": "ものぐさの宿 花千郷",
+   "name_zh": "花千鄉（鬼怒川）",
+   "type": "onsen_ryokan",
+   "address": null,
+   "lat": null,
+   "lng": null,
+   "coord_source": null,
+   "google_place_id": null,
+   "google_maps_url": "https://www.google.com/maps/search/?api=1&query=%E3%82%82%E3%81%AE%E3%81%90%E3%81%95%E3%81%AE%E5%AE%BF%20%E8%8A%B1%E5%8D%83%E9%83%B7",
+   "official_url": null,
+   "phone": null,
+   "mapcode": null,
+   "near_segments": [
+    {
+     "trip_id": "2027-06-tokyo",
+     "route": "I",
+     "base_key": "KINUGAWA",
+     "next_first_stop": null,
+     "drive_min_to_next_first_stop": null,
+     "drive_source": null
+    }
+   ],
+   "rooms": [],
+   "prices": [],
+   "check_in_time": null,
+   "last_check_in": null,
+   "check_out_time": null,
+   "dinner_time": null,
+   "free_cancel_until": null,
+   "booking_opens": {
+    "status": "unknown",
+    "opens_on": null,
+    "rule": null,
+    "by_site": [],
+    "checked_at": null
+   },
+   "recommendations": [
+    {
+     "kind": "other",
+     "title": "鬼怒川温泉の旅館「花千郷」、事業を停止（帝国データバンク調べ）",
+     "author": "旅行新聞新社",
+     "url": "https://www.ryoko-net.co.jp/?p=163277",
+     "published_at": "2026-03-13",
+     "points": "報導 2026-02-28 事業停止、負債約 6.92 億日圓，準備自破產。",
+     "lang": null
+    },
+    {
+     "kind": "other",
+     "title": null,
+     "author": null,
+     "url": "https://www.ryoko-net.co.jp/?p=163277",
+     "published_at": null,
+     "points": "帝國數據銀行／旅行新聞：2026-02-28 事業停止；宇都宮地裁後續進入破產程序。官報公告合同會社花千郷サービス破產手續開始決定日 2026-09-10。",
+     "lang": null
+    },
+    {
+     "kind": "other",
+     "title": null,
+     "author": null,
+     "url": "https://n-seikei.jp/2026/03/post-117696.html",
+     "published_at": null,
+     "points": "帝國數據銀行／旅行新聞：2026-02-28 事業停止；宇都宮地裁後續進入破產程序。官報公告合同會社花千郷サービス破產手續開始決定日 2026-09-10。",
+     "lang": null
+    }
+   ],
+   "ratings": [
+    {
+     "source": "google",
+     "score": null,
+     "scale": 5,
+     "count": null,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E3%82%82%E3%81%AE%E3%81%90%E3%81%95%E3%81%AE%E5%AE%BF%20%E8%8A%B1%E5%8D%83%E9%83%B7",
+     "checked_at": null,
+     "display": null
+    }
+   ],
+   "review_check": null,
+   "drive_check": {
+    "parking": {
+     "available": null,
+     "free": null,
+     "fee": null,
+     "reservation_required": null,
+     "covered": null,
+     "height_limit_m": null,
+     "width_limit_m": null,
+     "distance_to_front": null,
+     "lat": null,
+     "lng": null,
+     "mapcode": null,
+     "mapcode_source": null,
+     "note": null
+    },
+    "road": {
+     "mountain_road": null,
+     "night_drive": null,
+     "winter_closure": null,
+     "note": null
+    },
+    "from_prev": null,
+    "closed_days": [],
+    "closed_days_note": null,
+    "dinner_fits": null,
+    "note": null
+   },
+   "operation": {
+    "status": "closed",
+    "checked_on": "2026-11-16",
+    "sources": [
+     {
+      "url": "https://www.ryoko-net.co.jp/?p=163277",
+      "title": null,
+      "checked_at": null
+     },
+     {
+      "url": "https://n-seikei.jp/2026/03/post-117696.html",
+      "title": null,
+      "checked_at": null
+     }
+    ],
+    "recheck_before_departure": true,
+    "note": "帝國數據銀行／旅行新聞：2026-02-28 事業停止；宇都宮地裁後續進入破產程序。官報公告合同會社花千郷サービス破產手續開始決定日 2026-09-10。"
+   },
+   "screening": {
+    "status": "rejected",
+    "rank": null,
+    "reason": "已停業／破產程序中",
+    "area_unverified": false,
+    "over_1h": null
+   },
+   "stays_feedback": [],
+   "data_gaps": [
+    "place_id 未核對（不可臆造）；Google Maps 連結若為座標或館名搜尋，下次應改為店家頁。",
+    "MapCode 未從 Mapion／NaviCon 等來源取得，維持 null。",
+    "停車場入口座標未取得。"
+   ],
+   "public_notes": [
+    "已停業（2026-02-28 事業停止，後續進入破產程序），舊遊記中的資訊不可再當成可訂。"
+   ],
+   "updated_at": "2026-11-16"
+  },
+  {
+   "id": "lh_nikko_kinugawa_2b86d098",
+   "name": "ファミリーロッジ旅籠屋 日光鬼怒川店",
+   "name_ja": "ファミリーロッジ旅籠屋 日光鬼怒川店",
+   "name_zh": "旅籠屋 日光鬼怒川店",
+   "type": "hotel",
+   "address": null,
+   "lat": null,
+   "lng": null,
+   "coord_source": null,
+   "google_place_id": null,
+   "google_maps_url": "https://www.google.com/maps/search/?api=1&query=%E3%83%95%E3%82%A1%E3%83%9F%E3%83%AA%E3%83%BC%E3%83%AD%E3%83%83%E3%82%B8%E6%97%85%E7%B1%A0%E5%B1%8B%20%E6%97%A5%E5%85%89%E9%AC%BC%E6%80%92%E5%B7%9D%E5%BA%97",
+   "official_url": null,
+   "phone": null,
+   "mapcode": null,
+   "near_segments": [
+    {
+     "trip_id": "2027-06-tokyo",
+     "route": "I",
+     "base_key": "KINUGAWA",
+     "next_first_stop": null,
+     "drive_min_to_next_first_stop": null,
+     "drive_source": null
+    }
+   ],
+   "rooms": [],
+   "prices": [],
+   "check_in_time": null,
+   "last_check_in": null,
+   "check_out_time": null,
+   "dinner_time": null,
+   "free_cancel_until": null,
+   "booking_opens": {
+    "status": "unknown",
+    "opens_on": null,
+    "rule": null,
+    "by_site": [],
+    "checked_at": null
+   },
+   "recommendations": [
+    {
+     "kind": "other",
+     "title": null,
+     "author": null,
+     "url": "https://hatagoya.co.jp/news250428-2-4-21/",
+     "published_at": null,
+     "points": "官方公告因設施老化閉店（官方新聞頁載 2023-11-14）。",
+     "lang": null
+    }
+   ],
+   "ratings": [
+    {
+     "source": "google",
+     "score": null,
+     "scale": 5,
+     "count": null,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E3%83%95%E3%82%A1%E3%83%9F%E3%83%AA%E3%83%BC%E3%83%AD%E3%83%83%E3%82%B8%E6%97%85%E7%B1%A0%E5%B1%8B%20%E6%97%A5%E5%85%89%E9%AC%BC%E6%80%92%E5%B7%9D%E5%BA%97",
+     "checked_at": null,
+     "display": null
+    }
+   ],
+   "review_check": null,
+   "drive_check": {
+    "parking": {
+     "available": null,
+     "free": null,
+     "fee": null,
+     "reservation_required": null,
+     "covered": null,
+     "height_limit_m": null,
+     "width_limit_m": null,
+     "distance_to_front": null,
+     "lat": null,
+     "lng": null,
+     "mapcode": null,
+     "mapcode_source": null,
+     "note": null
+    },
+    "road": {
+     "mountain_road": null,
+     "night_drive": null,
+     "winter_closure": null,
+     "note": null
+    },
+    "from_prev": null,
+    "closed_days": [],
+    "closed_days_note": null,
+    "dinner_fits": null,
+    "note": null
+   },
+   "operation": {
+    "status": "closed",
+    "checked_on": "2026-11-16",
+    "sources": [
+     {
+      "url": "https://hatagoya.co.jp/news250428-2-4-21/",
+      "title": null,
+      "checked_at": null
+     }
+    ],
+    "recheck_before_departure": true,
+    "note": "官方公告因設施老化閉店（官方新聞頁載 2023-11-14）。"
+   },
+   "screening": {
+    "status": "rejected",
+    "rank": null,
+    "reason": "已閉店",
+    "area_unverified": false,
+    "over_1h": null
+   },
+   "stays_feedback": [],
+   "data_gaps": [
+    "place_id 未核對（不可臆造）；Google Maps 連結若為座標或館名搜尋，下次應改為店家頁。",
+    "MapCode 未從 Mapion／NaviCon 等來源取得，維持 null。",
+    "停車場入口座標未取得。"
+   ],
+   "public_notes": [],
+   "updated_at": "2026-11-16"
+  }
+ ]
+}

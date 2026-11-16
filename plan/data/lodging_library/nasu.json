@@ -1,0 +1,387 @@
+{
+ "schema": "agency.lodging_library.region.v1",
+ "region": {
+  "id": "nasu",
+  "name": "那須高原・那須溫泉",
+  "prefecture": "栃木県"
+ },
+ "updated_at": "2026-11-16",
+ "hotels": [
+  {
+   "id": "lh_nasu_b7c62a84",
+   "name": "ホテルエピナール那須",
+   "name_ja": "ホテルエピナール那須",
+   "name_zh": null,
+   "type": "hotel",
+   "address": null,
+   "lat": 37.04950521,
+   "lng": 140.0238117,
+   "coord_source": null,
+   "google_place_id": "ChIJ86h5fosnIGARt2TtV8ETMRk",
+   "google_maps_url": "https://www.google.com/maps/place/?q=place_id:ChIJ86h5fosnIGARt2TtV8ETMRk",
+   "official_url": "https://www.epinard.jp/",
+   "phone": "0287-78-6000",
+   "mapcode": null,
+   "near_segments": [
+    {
+     "trip_id": "2027-06-tokyo",
+     "route": "B",
+     "base_key": "NASU",
+     "next_first_stop": null,
+     "drive_min_to_next_first_stop": null,
+     "drive_source": null
+    },
+    {
+     "trip_id": "2027-06-tokyo",
+     "route": "D",
+     "base_key": "NASU",
+     "next_first_stop": null,
+     "drive_min_to_next_first_stop": null,
+     "drive_source": null
+    },
+    {
+     "trip_id": "2027-06-tokyo",
+     "route": "E",
+     "base_key": "NASU",
+     "next_first_stop": null,
+     "drive_min_to_next_first_stop": null,
+     "drive_source": null
+    },
+    {
+     "trip_id": "2027-06-tokyo",
+     "route": "G",
+     "base_key": "NASU",
+     "next_first_stop": null,
+     "drive_min_to_next_first_stop": null,
+     "drive_source": null
+    }
+   ],
+   "rooms": [
+    {
+     "room_name": "メインタワー デラックス トリプル 53㎡（附陽台）",
+     "size_sqm": 53,
+     "tatami": null,
+     "max_guests": null,
+     "beds": null,
+     "fits_party": null,
+     "note": "1泊2食（和洋中自助餐） 參考價，非該日期實價（2027/6～7 多數尚未開賣；為楽天等目前開放日期之3名1室每人含稅價格範圍，實際依日期/方案變動）"
+    }
+   ],
+   "prices": [
+    {
+     "site": "other",
+     "url": null,
+     "check_in": null,
+     "check_out": null,
+     "nights": null,
+     "adults": 3,
+     "rooms": 1,
+     "room_name": null,
+     "size_sqm": null,
+     "meals": null,
+     "total_jpy": null,
+     "per_night_jpy": null,
+     "price_basis": null,
+     "tax": "included",
+     "tax_note": null,
+     "free_cancel_until": "2027-06-18",
+     "free_cancel_rule_text": "11日前(2027年04月09日) 前免費（2027-04-20 入住方案之規定；目標日期依同規則推算）",
+     "member_price_jpy": null,
+     "coupon": null,
+     "status": "not_found",
+     "checked_at": "2026-10-24",
+     "source_url": null
+    },
+    {
+     "site": "rakuten",
+     "url": "https://hotel.travel.rakuten.co.jp/hotelinfo/plan/7335",
+     "check_in": null,
+     "check_out": null,
+     "nights": null,
+     "adults": 3,
+     "rooms": 1,
+     "room_name": "メインタワー デラックス トリプル 53㎡（附陽台）",
+     "size_sqm": 53,
+     "meals": "1泊2食（和洋中自助餐）",
+     "total_jpy": null,
+     "per_night_jpy": null,
+     "price_basis": "per_night",
+     "tax": "included",
+     "tax_note": null,
+     "free_cancel_until": null,
+     "free_cancel_rule_text": null,
+     "member_price_jpy": null,
+     "coupon": null,
+     "status": "not_found",
+     "checked_at": "2026-10-24",
+     "source_url": "https://hotel.travel.rakuten.co.jp/hotelinfo/plan/7335"
+    }
+   ],
+   "check_in_time": null,
+   "last_check_in": null,
+   "check_out_time": null,
+   "dinner_time": "17:00 或 19:30 擇一（備考欄指定；楽天方案說明）／じゃらん方案記 19:00",
+   "free_cancel_until": null,
+   "booking_opens": {
+    "status": "not_yet",
+    "opens_on": null,
+    "rule": "2027/6 未放房；目前最遠可查約 2027/4 底；開賣日未公布",
+    "by_site": [],
+    "checked_at": null
+   },
+   "recommendations": [],
+   "ratings": [
+    {
+     "source": "google",
+     "score": null,
+     "scale": 5,
+     "count": null,
+     "url": "https://www.google.com/maps/place/?q=place_id:ChIJ86h5fosnIGARt2TtV8ETMRk",
+     "checked_at": null,
+     "display": null
+    }
+   ],
+   "review_check": null,
+   "drive_check": {
+    "parking": {
+     "available": null,
+     "free": null,
+     "fee": null,
+     "reservation_required": null,
+     "covered": null,
+     "height_limit_m": null,
+     "width_limit_m": null,
+     "distance_to_front": null,
+     "lat": null,
+     "lng": null,
+     "mapcode": null,
+     "mapcode_source": null,
+     "note": "400台・無料・先着順（楽天FAQ）；入口座標/MapCode 未於 Mapion/NaviCon/官網/じゃらん 取得可核對資料，填 null"
+    },
+    "road": {
+     "mountain_road": null,
+     "night_drive": null,
+     "winter_closure": null,
+     "note": null
+    },
+    "from_prev": null,
+    "closed_days": [],
+    "closed_days_note": null,
+    "dinner_fits": null,
+    "note": null
+   },
+   "operation": {
+    "status": "open",
+    "checked_on": "2026-10-24",
+    "sources": [],
+    "recheck_before_departure": true,
+    "note": "當時可在樂天／じゃらん或官網查到資料；之後若有更新以較新查證為準。"
+   },
+   "screening": {
+    "status": "candidate",
+    "rank": null,
+    "reason": null,
+    "area_unverified": false,
+    "over_1h": null
+   },
+   "stays_feedback": [],
+   "data_gaps": [
+    "MapCode 未從 Mapion／NaviCon 等來源取得，維持 null。",
+    "停車場入口座標未取得。"
+   ],
+   "public_notes": [
+    "大型度假飯店，自助餐評價高、房間大。",
+    "取消規定：宿泊11日前 23:59 まで免費（10日前20%、3日前50%、當日80%）（楽天トラベル施設キャンセルポリシー；方案另有規定時以方案為準）"
+   ],
+   "updated_at": "2026-11-16"
+  },
+  {
+   "id": "lh_nasu_480f6342",
+   "name": "那須温泉 山楽",
+   "name_ja": "那須温泉 山楽",
+   "name_zh": null,
+   "type": "onsen_ryokan",
+   "address": null,
+   "lat": 37.08946261516611,
+   "lng": 140.00726268095093,
+   "coord_source": null,
+   "google_place_id": "ChIJhUtKivCJH2AR9RncWc12cFA",
+   "google_maps_url": "https://www.google.com/maps/place/?q=place_id:ChIJhUtKivCJH2AR9RncWc12cFA",
+   "official_url": "https://sanraku.kenhotels.com/nasu/",
+   "phone": "0287-76-3010",
+   "mapcode": null,
+   "near_segments": [
+    {
+     "trip_id": "2027-06-tokyo",
+     "route": "B",
+     "base_key": "NASU",
+     "next_first_stop": null,
+     "drive_min_to_next_first_stop": null,
+     "drive_source": null
+    },
+    {
+     "trip_id": "2027-06-tokyo",
+     "route": "D",
+     "base_key": "NASU",
+     "next_first_stop": null,
+     "drive_min_to_next_first_stop": null,
+     "drive_source": null
+    },
+    {
+     "trip_id": "2027-06-tokyo",
+     "route": "E",
+     "base_key": "NASU",
+     "next_first_stop": null,
+     "drive_min_to_next_first_stop": null,
+     "drive_source": null
+    },
+    {
+     "trip_id": "2027-06-tokyo",
+     "route": "G",
+     "base_key": "NASU",
+     "next_first_stop": null,
+     "drive_min_to_next_first_stop": null,
+     "drive_source": null
+    }
+   ],
+   "rooms": [
+    {
+     "room_name": "標準和室（西館 10疊＋廣緣4疊 44.3㎡）；數寄屋上級和室60㎡ 每人約37,950～68,200",
+     "size_sqm": 44.3,
+     "tatami": null,
+     "max_guests": null,
+     "beds": null,
+     "fits_party": null,
+     "note": "1泊2食（客室或個室料理茶屋『山翠亭』） 參考價，非該日期實價（2027/6～7 多數尚未開賣；為楽天等目前開放日期之3名1室每人含稅價格範圍，實際依日期/方案變動）"
+    }
+   ],
+   "prices": [
+    {
+     "site": "other",
+     "url": null,
+     "check_in": null,
+     "check_out": null,
+     "nights": null,
+     "adults": 3,
+     "rooms": 1,
+     "room_name": null,
+     "size_sqm": null,
+     "meals": null,
+     "total_jpy": null,
+     "per_night_jpy": null,
+     "price_basis": null,
+     "tax": "included",
+     "tax_note": null,
+     "free_cancel_until": "2027-06-18",
+     "free_cancel_rule_text": "11日前(2027年04月09日) 前免費（2027-04-20 入住方案之規定；目標日期依同規則推算）",
+     "member_price_jpy": null,
+     "coupon": null,
+     "status": "not_found",
+     "checked_at": "2026-10-24",
+     "source_url": null
+    },
+    {
+     "site": "rakuten",
+     "url": "https://hotel.travel.rakuten.co.jp/hotelinfo/plan/56935",
+     "check_in": null,
+     "check_out": null,
+     "nights": null,
+     "adults": 3,
+     "rooms": 1,
+     "room_name": "標準和室（西館 10疊＋廣緣4疊 44.3㎡）；數寄屋上級和室60㎡ 每人約37,950～68,200",
+     "size_sqm": null,
+     "meals": "1泊2食（客室或個室料理茶屋『山翠亭』）",
+     "total_jpy": null,
+     "per_night_jpy": null,
+     "price_basis": "per_night",
+     "tax": "included",
+     "tax_note": null,
+     "free_cancel_until": null,
+     "free_cancel_rule_text": null,
+     "member_price_jpy": null,
+     "coupon": null,
+     "status": "not_found",
+     "checked_at": "2026-10-24",
+     "source_url": "https://hotel.travel.rakuten.co.jp/hotelinfo/plan/56935"
+    }
+   ],
+   "check_in_time": null,
+   "last_check_in": null,
+   "check_out_time": null,
+   "dinner_time": null,
+   "free_cancel_until": null,
+   "booking_opens": {
+    "status": "not_yet",
+    "opens_on": null,
+    "rule": "2027/6 未放房；目前最遠可查約 2027/4 底；開賣日未公布",
+    "by_site": [],
+    "checked_at": null
+   },
+   "recommendations": [],
+   "ratings": [
+    {
+     "source": "google",
+     "score": null,
+     "scale": 5,
+     "count": null,
+     "url": "https://www.google.com/maps/place/?q=place_id:ChIJhUtKivCJH2AR9RncWc12cFA",
+     "checked_at": null,
+     "display": null
+    }
+   ],
+   "review_check": null,
+   "drive_check": {
+    "parking": {
+     "available": null,
+     "free": null,
+     "fee": null,
+     "reservation_required": null,
+     "covered": null,
+     "height_limit_m": null,
+     "width_limit_m": null,
+     "distance_to_front": null,
+     "lat": null,
+     "lng": null,
+     "mapcode": null,
+     "mapcode_source": null,
+     "note": "50台・無料・予約不要（楽天FAQ）；入口座標/MapCode 未於 Mapion/NaviCon/官網/じゃらん 取得可核對資料，填 null"
+    },
+    "road": {
+     "mountain_road": null,
+     "night_drive": null,
+     "winter_closure": null,
+     "note": null
+    },
+    "from_prev": null,
+    "closed_days": [],
+    "closed_days_note": null,
+    "dinner_fits": null,
+    "note": null
+   },
+   "operation": {
+    "status": "open",
+    "checked_on": "2026-10-24",
+    "sources": [],
+    "recheck_before_departure": true,
+    "note": "當時可在樂天／じゃらん或官網查到資料；之後若有更新以較新查證為準。"
+   },
+   "screening": {
+    "status": "candidate",
+    "rank": null,
+    "reason": null,
+    "area_unverified": false,
+    "over_1h": null
+   },
+   "stays_feedback": [],
+   "data_gaps": [
+    "MapCode 未從 Mapion／NaviCon 等來源取得，維持 null。",
+    "停車場入口座標未取得。"
+   ],
+   "public_notes": [
+    "1923年創業，源泉掛け流し溪流露天；殺生石、那須纜車皆10～15分。",
+    "取消規定：宿泊11日前 23:59 まで免費（10日前30%、5日前50%、前日70%）（楽天トラベル施設キャンセルポリシー；方案另有規定時以方案為準）"
+   ],
+   "updated_at": "2026-11-16"
+  }
+ ]
+}

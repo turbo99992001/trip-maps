@@ -1,0 +1,237 @@
+{
+ "schema": "agency.lodging_library.region.v1",
+ "region": {
+  "id": "shima",
+  "name": "四萬溫泉",
+  "prefecture": "群馬県"
+ },
+ "updated_at": "2026-11-16",
+ "hotels": [
+  {
+   "id": "lh_shima_47aceaa0",
+   "name": "四万たむら",
+   "name_ja": "四万たむら",
+   "name_zh": "四萬田村／四万たむら",
+   "type": "onsen_ryokan",
+   "address": null,
+   "lat": null,
+   "lng": null,
+   "coord_source": null,
+   "google_place_id": null,
+   "google_maps_url": "https://www.google.com/maps/search/?api=1&query=%E5%9B%9B%E4%B8%87%E3%81%9F%E3%82%80%E3%82%89",
+   "official_url": null,
+   "phone": null,
+   "mapcode": null,
+   "near_segments": [],
+   "rooms": [],
+   "prices": [],
+   "check_in_time": null,
+   "last_check_in": null,
+   "check_out_time": null,
+   "dinner_time": null,
+   "free_cancel_until": null,
+   "booking_opens": {
+    "status": "unknown",
+    "opens_on": null,
+    "rule": null,
+    "by_site": [],
+    "checked_at": null
+   },
+   "recommendations": [
+    {
+     "kind": "youtube",
+     "title": "[ 群馬 2泊3日の旅 ]　#4 【 四万たむら 】に宿泊　信長や信玄の時代に創業した四万温泉で最も歴史ある宿",
+     "author": "旅するPorco",
+     "url": "https://www.youtube.com/watch?v=LGS4aoQVNgY",
+     "published_at": "2026-03-07",
+     "points": "介紹創業悠久、館內多處浴場可湯巡、作者住檜風呂付デザイナーズルーム，晚餐個室會席。",
+     "lang": null
+    }
+   ],
+   "ratings": [
+    {
+     "source": "google",
+     "score": null,
+     "scale": 5,
+     "count": null,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E5%9B%9B%E4%B8%87%E3%81%9F%E3%82%80%E3%82%89",
+     "checked_at": null,
+     "display": null
+    }
+   ],
+   "review_check": null,
+   "drive_check": {
+    "parking": {
+     "available": null,
+     "free": null,
+     "fee": null,
+     "reservation_required": null,
+     "covered": null,
+     "height_limit_m": null,
+     "width_limit_m": null,
+     "distance_to_front": null,
+     "lat": null,
+     "lng": null,
+     "mapcode": null,
+     "mapcode_source": null,
+     "note": null
+    },
+    "road": {
+     "mountain_road": null,
+     "night_drive": null,
+     "winter_closure": null,
+     "note": null
+    },
+    "from_prev": null,
+    "closed_days": [],
+    "closed_days_note": null,
+    "dinner_fits": null,
+    "note": null
+   },
+   "operation": {
+    "status": "open",
+    "checked_on": "2026-11-16",
+    "sources": [],
+    "recheck_before_departure": true,
+    "note": "旅するPorco 2026-03 宿泊記影片。"
+   },
+   "screening": {
+    "status": "candidate",
+    "rank": null,
+    "reason": null,
+    "area_unverified": false,
+    "over_1h": null
+   },
+   "stays_feedback": [],
+   "data_gaps": [
+    "place_id 未核對（不可臆造）；Google Maps 連結若為座標或館名搜尋，下次應改為店家頁。",
+    "MapCode 未從 Mapion／NaviCon 等來源取得，維持 null。",
+    "停車場入口座標未取得。"
+   ],
+   "public_notes": [],
+   "updated_at": "2026-11-16"
+  },
+  {
+   "id": "lh_shima_5e15c4aa",
+   "name": "四万温泉 積善館",
+   "name_ja": "四万温泉 積善館",
+   "name_zh": "四萬溫泉 積善館（本館／佳松亭・山莊）",
+   "type": "onsen_ryokan",
+   "address": null,
+   "lat": null,
+   "lng": null,
+   "coord_source": null,
+   "google_place_id": null,
+   "google_maps_url": "https://www.google.com/maps/search/?api=1&query=%E5%9B%9B%E4%B8%87%E6%B8%A9%E6%B3%89%20%E7%A9%8D%E5%96%84%E9%A4%A8",
+   "official_url": null,
+   "phone": null,
+   "mapcode": null,
+   "near_segments": [],
+   "rooms": [],
+   "prices": [],
+   "check_in_time": null,
+   "last_check_in": null,
+   "check_out_time": null,
+   "dinner_time": null,
+   "free_cancel_until": null,
+   "booking_opens": {
+    "status": "unknown",
+    "opens_on": null,
+    "rule": null,
+    "by_site": [],
+    "checked_at": null
+   },
+   "recommendations": [
+    {
+     "kind": "youtube",
+     "title": "【豪華】四万温泉「積善館山荘」に宿泊！日本最古の湯宿建築と会席料理＆掛け流し温泉を堪能する1泊2日。千と千尋の神隠しのモデル宿で有名。",
+     "author": "旅人やす",
+     "url": "https://www.youtube.com/watch?v=9XshzFmJGeI",
+     "published_at": "2026-09-21",
+     "points": "入住山荘，強調最古湯宿建築、會席與かけ流し溫泉。",
+     "lang": null
+    },
+    {
+     "kind": "youtube",
+     "title": "まるで千と千尋…ジブリ感溢れる宿に泊まってきた！！#ジブリ #千と千尋の神隠し #vlog",
+     "author": "HAACHAMA Ch 赤井はあと",
+     "url": "https://www.youtube.com/watch?v=xIvq8CDUkZk",
+     "published_at": "2025-05-16",
+     "points": "VTuber 實際入住積善館的 vlog，片中表示還想再來。屬人氣曝光，不是專業訂房評比。",
+     "lang": null
+    },
+    {
+     "kind": "blog",
+     "title": "四万温泉郷🍁♨️積善館 佳松亭 〜 大正ロマンと“ドラゴンドラ”の絶景に触れて 〜",
+     "author": "Aoinotori-あおいのとり-（note）",
+     "url": "https://note.com/aoinotori_style/n/nb60c367e7400",
+     "published_at": "2026-02-06",
+     "points": "2025-11 入住佳松亭概念客房「波」，有源泉かけ流し露天風呂；介紹本館（大正浪漫）、山荘、佳松亭三種棟，可內部相通。",
+     "lang": null
+    }
+   ],
+   "ratings": [
+    {
+     "source": "google",
+     "score": null,
+     "scale": 5,
+     "count": null,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E5%9B%9B%E4%B8%87%E6%B8%A9%E6%B3%89%20%E7%A9%8D%E5%96%84%E9%A4%A8",
+     "checked_at": null,
+     "display": null
+    }
+   ],
+   "review_check": null,
+   "drive_check": {
+    "parking": {
+     "available": null,
+     "free": null,
+     "fee": null,
+     "reservation_required": null,
+     "covered": null,
+     "height_limit_m": null,
+     "width_limit_m": null,
+     "distance_to_front": null,
+     "lat": null,
+     "lng": null,
+     "mapcode": null,
+     "mapcode_source": null,
+     "note": null
+    },
+    "road": {
+     "mountain_road": null,
+     "night_drive": null,
+     "winter_closure": null,
+     "note": null
+    },
+    "from_prev": null,
+    "closed_days": [],
+    "closed_days_note": null,
+    "dinner_fits": null,
+    "note": null
+   },
+   "operation": {
+    "status": "open",
+    "checked_on": "2026-11-16",
+    "sources": [],
+    "recheck_before_departure": true,
+    "note": "2025–2026 年仍有 YouTube 與 note 宿泊記；常被稱「千與千尋模型之一」。"
+   },
+   "screening": {
+    "status": "candidate",
+    "rank": null,
+    "reason": null,
+    "area_unverified": false,
+    "over_1h": null
+   },
+   "stays_feedback": [],
+   "data_gaps": [
+    "place_id 未核對（不可臆造）；Google Maps 連結若為座標或館名搜尋，下次應改為店家頁。",
+    "MapCode 未從 Mapion／NaviCon 等來源取得，維持 null。",
+    "停車場入口座標未取得。"
+   ],
+   "public_notes": [],
+   "updated_at": "2026-11-16"
+  }
+ ]
+}

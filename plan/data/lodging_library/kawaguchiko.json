@@ -1,0 +1,386 @@
+{
+ "schema": "agency.lodging_library.region.v1",
+ "region": {
+  "id": "kawaguchiko",
+  "name": "富士五湖・河口湖",
+  "prefecture": "山梨県"
+ },
+ "updated_at": "2026-11-16",
+ "hotels": [
+  {
+   "id": "lh_kawaguchiko_5165fb24",
+   "name": "富士河口湖温泉 秀峰閣 湖月",
+   "name_ja": "富士河口湖温泉 秀峰閣 湖月",
+   "name_zh": null,
+   "type": "onsen_ryokan",
+   "address": null,
+   "lat": 35.52531085,
+   "lng": 138.7618715,
+   "coord_source": null,
+   "google_place_id": "ChIJD785-FJeGWARQw_4R2priQM",
+   "google_maps_url": "https://www.google.com/maps/place/?q=place_id:ChIJD785-FJeGWARQw_4R2priQM",
+   "official_url": "https://www.kogetu.com/",
+   "phone": "0555-76-8888",
+   "mapcode": "161 361 593",
+   "near_segments": [
+    {
+     "trip_id": "2027-06-tokyo",
+     "route": "A",
+     "base_key": "KAWAGUCHIKO",
+     "next_first_stop": null,
+     "drive_min_to_next_first_stop": null,
+     "drive_source": null
+    },
+    {
+     "trip_id": "2027-06-tokyo",
+     "route": "C",
+     "base_key": "KAWAGUCHIKO",
+     "next_first_stop": null,
+     "drive_min_to_next_first_stop": null,
+     "drive_source": null
+    },
+    {
+     "trip_id": "2027-06-tokyo",
+     "route": "F",
+     "base_key": "KAWAGUCHIKO",
+     "next_first_stop": null,
+     "drive_min_to_next_first_stop": null,
+     "drive_source": null
+    },
+    {
+     "trip_id": "2027-06-tokyo",
+     "route": "F（lodging.bases／當時推薦路線）",
+     "base_key": "KAWAGUCHIKO",
+     "next_first_stop": null,
+     "drive_min_to_next_first_stop": null,
+     "drive_source": null
+    }
+   ],
+   "rooms": [
+    {
+     "room_name": "和室12.5畳 湖畔側（富士山眺望）",
+     "size_sqm": null,
+     "tatami": null,
+     "max_guests": null,
+     "beds": null,
+     "fits_party": null,
+     "note": "1泊2食（客室食；露天風呂付房型 44,000～51,700/人） 參考價，非該日期實價（2027/6～7 多數尚未開賣；為楽天等目前開放日期之3名1室每人含稅價格範圍，實際依日期/方案變動）"
+    }
+   ],
+   "prices": [
+    {
+     "site": "other",
+     "url": null,
+     "check_in": null,
+     "check_out": null,
+     "nights": null,
+     "adults": 3,
+     "rooms": 1,
+     "room_name": null,
+     "size_sqm": null,
+     "meals": null,
+     "total_jpy": null,
+     "per_night_jpy": null,
+     "price_basis": null,
+     "tax": "included",
+     "tax_note": null,
+     "free_cancel_until": null,
+     "free_cancel_rule_text": null,
+     "member_price_jpy": null,
+     "coupon": null,
+     "status": "not_found",
+     "checked_at": "2026-10-24",
+     "source_url": null
+    },
+    {
+     "site": "rakuten",
+     "url": "https://hotel.travel.rakuten.co.jp/hotelinfo/plan/43939",
+     "check_in": null,
+     "check_out": null,
+     "nights": null,
+     "adults": 3,
+     "rooms": 1,
+     "room_name": "和室12.5畳 湖畔側（富士山眺望）",
+     "size_sqm": null,
+     "meals": "1泊2食（客室食；露天風呂付房型 44,000～51,700/人）",
+     "total_jpy": null,
+     "per_night_jpy": null,
+     "price_basis": "per_night",
+     "tax": "included",
+     "tax_note": null,
+     "free_cancel_until": null,
+     "free_cancel_rule_text": null,
+     "member_price_jpy": null,
+     "coupon": null,
+     "status": "not_found",
+     "checked_at": "2026-10-24",
+     "source_url": "https://hotel.travel.rakuten.co.jp/hotelinfo/plan/43939"
+    }
+   ],
+   "check_in_time": null,
+   "last_check_in": null,
+   "check_out_time": null,
+   "dinner_time": "客室用餐，最晚19:00開始（官網FAQ／搜尋摘要）",
+   "free_cancel_until": null,
+   "booking_opens": {
+    "status": "not_yet",
+    "opens_on": null,
+    "rule": "未知（OTA 停售／未放房）；同うぶや：楽天・じゃらん 2026/11～2027/7 抽查皆無可售方案；需官網/電話詢價",
+    "by_site": [],
+    "checked_at": null
+   },
+   "recommendations": [],
+   "ratings": [
+    {
+     "source": "google",
+     "score": null,
+     "scale": 5,
+     "count": null,
+     "url": "https://www.google.com/maps/place/?q=place_id:ChIJD785-FJeGWARQw_4R2priQM",
+     "checked_at": null,
+     "display": null
+    }
+   ],
+   "review_check": null,
+   "drive_check": {
+    "parking": {
+     "available": null,
+     "free": null,
+     "fee": null,
+     "reservation_required": null,
+     "covered": null,
+     "height_limit_m": null,
+     "width_limit_m": null,
+     "distance_to_front": null,
+     "lat": null,
+     "lng": null,
+     "mapcode": "161 361 593",
+     "mapcode_source": "https://travel.rakuten.co.jp/HOTEL/43939/CUSTOM/GW43939250718145849.html",
+     "note": "MapCode 為旅館於楽天自家頁面提供；無法以座標自動反查核對，出發前請在車機輸入後確認落點在 35.5253,138.7619 附近。停車約50台免費（官網FAQ）"
+    },
+    "road": {
+     "mountain_road": null,
+     "night_drive": null,
+     "winter_closure": null,
+     "note": null
+    },
+    "from_prev": null,
+    "closed_days": [],
+    "closed_days_note": null,
+    "dinner_fits": null,
+    "note": null
+   },
+   "operation": {
+    "status": "open",
+    "checked_on": "2026-10-24",
+    "sources": [],
+    "recheck_before_departure": true,
+    "note": "當時可在樂天／じゃらん或官網查到資料；之後若有更新以較新查證為準。"
+   },
+   "screening": {
+    "status": "candidate",
+    "rank": null,
+    "reason": null,
+    "area_unverified": false,
+    "over_1h": null
+   },
+   "stays_feedback": [],
+   "data_gaps": [
+    "停車場入口座標未取得。"
+   ],
+   "public_notes": [
+    "全室看得到富士山與河口湖，露天/足湯皆溫泉。食事處改裝至2027/4/7（晚餐本就客室用）。",
+    "取消規定：宿泊22日前まで免費（21日前10%、14日前20%、7日前30%、前日50%、當日100%；楽天/官網FAQ）"
+   ],
+   "updated_at": "2026-11-16"
+  },
+  {
+   "id": "lh_kawaguchiko_7ebd9534",
+   "name": "湖山亭 うぶや",
+   "name_ja": "湖山亭 うぶや",
+   "name_zh": null,
+   "type": "onsen_ryokan",
+   "address": null,
+   "lat": 35.51336243,
+   "lng": 138.7707046,
+   "coord_source": null,
+   "google_place_id": "ChIJK4evUjdeGWARU3gkvo_nU_4",
+   "google_maps_url": "https://www.google.com/maps/place/?q=place_id:ChIJK4evUjdeGWARU3gkvo_nU_4",
+   "official_url": "https://www.ubuya.co.jp/",
+   "phone": "0555-72-1145（食べログ店舗資訊）",
+   "mapcode": null,
+   "near_segments": [
+    {
+     "trip_id": "2027-06-tokyo",
+     "route": "A",
+     "base_key": "KAWAGUCHIKO",
+     "next_first_stop": null,
+     "drive_min_to_next_first_stop": null,
+     "drive_source": null
+    },
+    {
+     "trip_id": "2027-06-tokyo",
+     "route": "C",
+     "base_key": "KAWAGUCHIKO",
+     "next_first_stop": null,
+     "drive_min_to_next_first_stop": null,
+     "drive_source": null
+    },
+    {
+     "trip_id": "2027-06-tokyo",
+     "route": "F",
+     "base_key": "KAWAGUCHIKO",
+     "next_first_stop": null,
+     "drive_min_to_next_first_stop": null,
+     "drive_source": null
+    },
+    {
+     "trip_id": "2027-06-tokyo",
+     "route": "F（lodging.bases／當時推薦路線）",
+     "base_key": "KAWAGUCHIKO",
+     "next_first_stop": null,
+     "drive_min_to_next_first_stop": null,
+     "drive_source": null
+    }
+   ],
+   "rooms": [
+    {
+     "room_name": "和室ベッド 次の間付き 56㎡（富士山眺望）",
+     "size_sqm": 56,
+     "tatami": null,
+     "max_guests": null,
+     "beds": null,
+     "fits_party": null,
+     "note": "1泊2食（季節ビュッフェ；另有露天風呂付59㎡ 49,500～56,100/人） 參考價，非該日期實價（2027/6～7 多數尚未開賣；為楽天等目前開放日期之3名1室每人含稅價格範圍，實際依日期/方案變動）"
+    }
+   ],
+   "prices": [
+    {
+     "site": "other",
+     "url": null,
+     "check_in": null,
+     "check_out": null,
+     "nights": null,
+     "adults": 3,
+     "rooms": 1,
+     "room_name": null,
+     "size_sqm": null,
+     "meals": null,
+     "total_jpy": null,
+     "per_night_jpy": null,
+     "price_basis": null,
+     "tax": "included",
+     "tax_note": null,
+     "free_cancel_until": null,
+     "free_cancel_rule_text": null,
+     "member_price_jpy": null,
+     "coupon": null,
+     "status": "not_found",
+     "checked_at": "2026-10-24",
+     "source_url": null
+    },
+    {
+     "site": "rakuten",
+     "url": "https://hotel.travel.rakuten.co.jp/hotelinfo/plan/8053",
+     "check_in": null,
+     "check_out": null,
+     "nights": null,
+     "adults": 3,
+     "rooms": 1,
+     "room_name": "和室ベッド 次の間付き 56㎡（富士山眺望）",
+     "size_sqm": 56,
+     "meals": "1泊2食（季節ビュッフェ；另有露天風呂付59㎡ 49,500～56,100/人）",
+     "total_jpy": null,
+     "per_night_jpy": null,
+     "price_basis": "per_night",
+     "tax": "included",
+     "tax_note": null,
+     "free_cancel_until": null,
+     "free_cancel_rule_text": null,
+     "member_price_jpy": null,
+     "coupon": null,
+     "status": "not_found",
+     "checked_at": "2026-10-24",
+     "source_url": "https://hotel.travel.rakuten.co.jp/hotelinfo/plan/8053"
+    }
+   ],
+   "check_in_time": null,
+   "last_check_in": null,
+   "check_out_time": null,
+   "dinner_time": "18:00 或 19:00 兩部制（先到先選，最晚19:00；JTB 施設通知）",
+   "free_cancel_until": null,
+   "booking_opens": {
+    "status": "not_yet",
+    "opens_on": null,
+    "rule": "未知（OTA 停售／未放房）；楽天・じゃらん 2026/11～2027/7 抽查（3 名與 2 名）皆無可售方案，じゃらん顯示「無可用方案或暫停受理預約」；官網 Q&A 記 22日前免費取消。需官網/電話詢價",
+    "by_site": [],
+    "checked_at": null
+   },
+   "recommendations": [],
+   "ratings": [
+    {
+     "source": "google",
+     "score": null,
+     "scale": 5,
+     "count": null,
+     "url": "https://www.google.com/maps/place/?q=place_id:ChIJK4evUjdeGWARU3gkvo_nU_4",
+     "checked_at": null,
+     "display": null
+    }
+   ],
+   "review_check": null,
+   "drive_check": {
+    "parking": {
+     "available": null,
+     "free": null,
+     "fee": null,
+     "reservation_required": null,
+     "covered": null,
+     "height_limit_m": null,
+     "width_limit_m": null,
+     "distance_to_front": null,
+     "lat": null,
+     "lng": null,
+     "mapcode": null,
+     "mapcode_source": null,
+     "note": "免費50台先到先停（楽天FAQ）；座標/MapCode 未取得"
+    },
+    "road": {
+     "mountain_road": null,
+     "night_drive": null,
+     "winter_closure": null,
+     "note": null
+    },
+    "from_prev": null,
+    "closed_days": [],
+    "closed_days_note": null,
+    "dinner_fits": null,
+    "note": null
+   },
+   "operation": {
+    "status": "open",
+    "checked_on": "2026-10-24",
+    "sources": [],
+    "recheck_before_departure": true,
+    "note": "當時可在樂天／じゃらん或官網查到資料；之後若有更新以較新查證為準。"
+   },
+   "screening": {
+    "status": "candidate",
+    "rank": null,
+    "reason": null,
+    "area_unverified": false,
+    "over_1h": null
+   },
+   "stays_feedback": [],
+   "data_gaps": [
+    "MapCode 未從 Mapion／NaviCon 等來源取得，維持 null。",
+    "停車場入口座標未取得。"
+   ],
+   "public_notes": [
+    "全室正對富士山與河口湖，河口湖最難訂的旅館之一。客室風呂非溫泉，僅大浴場「富士のゆ」為溫泉。",
+    "取消規定：宿泊22日前まで免費（21～4日前10%、3日前～100%；官網Q&A）"
+   ],
+   "updated_at": "2026-11-16"
+  }
+ ]
+}

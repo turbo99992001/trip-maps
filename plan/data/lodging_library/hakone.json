@@ -1,0 +1,809 @@
+{
+ "schema": "agency.lodging_library.region.v1",
+ "region": {
+  "id": "hakone",
+  "name": "箱根",
+  "prefecture": "神奈川県"
+ },
+ "updated_at": "2026-11-16",
+ "hotels": [
+  {
+   "id": "lh_hakone_90286fec",
+   "name": "富士屋ホテル",
+   "name_ja": "富士屋ホテル",
+   "name_zh": null,
+   "type": "onsen_hotel",
+   "address": null,
+   "lat": 35.24445019,
+   "lng": 139.058946,
+   "coord_source": null,
+   "google_place_id": "ChIJ_avYLBiiGWARTV12tPp4pRU",
+   "google_maps_url": "https://www.google.com/maps/place/?q=place_id:ChIJ_avYLBiiGWARTV12tPp4pRU",
+   "official_url": "https://www.fujiyahotel.jp/",
+   "phone": "0460-82-2211",
+   "mapcode": null,
+   "near_segments": [
+    {
+     "trip_id": "2027-06-tokyo",
+     "route": "A",
+     "base_key": "HAKONE",
+     "next_first_stop": null,
+     "drive_min_to_next_first_stop": null,
+     "drive_source": null
+    },
+    {
+     "trip_id": "2027-06-tokyo",
+     "route": "C",
+     "base_key": "HAKONE",
+     "next_first_stop": null,
+     "drive_min_to_next_first_stop": null,
+     "drive_source": null
+    },
+    {
+     "trip_id": "2027-06-tokyo",
+     "route": "F",
+     "base_key": "HAKONE",
+     "next_first_stop": null,
+     "drive_min_to_next_first_stop": null,
+     "drive_source": null
+    },
+    {
+     "trip_id": "2027-06-tokyo",
+     "route": "H",
+     "base_key": "HAKONE",
+     "next_first_stop": null,
+     "drive_min_to_next_first_stop": null,
+     "drive_source": null
+    },
+    {
+     "trip_id": "2027-06-tokyo",
+     "route": "F（lodging.bases／當時推薦路線）",
+     "base_key": "HAKONE",
+     "next_first_stop": null,
+     "drive_min_to_next_first_stop": null,
+     "drive_source": null
+    }
+   ],
+   "rooms": [
+    {
+     "room_name": "フォレスト・ウイング ツインガーデンサイド/花御殿 ヒストリックJr.スイート等（3名可）",
+     "size_sqm": null,
+     "tatami": null,
+     "max_guests": null,
+     "beds": null,
+     "fits_party": null,
+     "note": "依方案含早餐或早晚餐 參考價，非該日期實價（2027/6～7 多數尚未開賣；為楽天等目前開放日期之3名1室每人含稅價格範圍，實際依日期/方案變動）"
+    }
+   ],
+   "prices": [
+    {
+     "site": "other",
+     "url": null,
+     "check_in": null,
+     "check_out": null,
+     "nights": null,
+     "adults": 3,
+     "rooms": 1,
+     "room_name": null,
+     "size_sqm": null,
+     "meals": null,
+     "total_jpy": null,
+     "per_night_jpy": null,
+     "price_basis": null,
+     "tax": "included",
+     "tax_note": null,
+     "free_cancel_until": "2027-06-17",
+     "free_cancel_rule_text": "4日前(2027年06月17日) 前免費（2027-06-21 入住方案之規定；目標日期依同規則推算）",
+     "member_price_jpy": null,
+     "coupon": null,
+     "status": "not_found",
+     "checked_at": "2026-10-24",
+     "source_url": null
+    },
+    {
+     "site": "rakuten",
+     "url": "https://hotel.travel.rakuten.co.jp/hotelinfo/plan/1727",
+     "check_in": null,
+     "check_out": null,
+     "nights": null,
+     "adults": 3,
+     "rooms": 1,
+     "room_name": "フォレスト・ウイング ツインガーデンサイド/花御殿 ヒストリックJr.スイート等（3名可）",
+     "size_sqm": null,
+     "meals": "依方案含早餐或早晚餐",
+     "total_jpy": null,
+     "per_night_jpy": null,
+     "price_basis": "per_night",
+     "tax": "included",
+     "tax_note": null,
+     "free_cancel_until": null,
+     "free_cancel_rule_text": null,
+     "member_price_jpy": null,
+     "coupon": null,
+     "status": "not_found",
+     "checked_at": "2026-10-24",
+     "source_url": "https://hotel.travel.rakuten.co.jp/hotelinfo/plan/1727"
+    }
+   ],
+   "check_in_time": null,
+   "last_check_in": null,
+   "check_out_time": null,
+   "dinner_time": "主餐廳 The Fujiya 17:30～20:30（LO 19:30，據搜尋摘要之官網餐廳頁）",
+   "free_cancel_until": null,
+   "booking_opens": {
+    "status": "on_sale",
+    "opens_on": null,
+    "rule": "已開賣：2027/6 實際日期可在楽天・じゃらん查到可售方案（2026-10-24）",
+    "by_site": [],
+    "checked_at": null
+   },
+   "recommendations": [],
+   "ratings": [
+    {
+     "source": "google",
+     "score": null,
+     "scale": 5,
+     "count": null,
+     "url": "https://www.google.com/maps/place/?q=place_id:ChIJ_avYLBiiGWARTV12tPp4pRU",
+     "checked_at": null,
+     "display": null
+    }
+   ],
+   "review_check": null,
+   "drive_check": {
+    "parking": {
+     "available": null,
+     "free": null,
+     "fee": null,
+     "reservation_required": null,
+     "covered": null,
+     "height_limit_m": null,
+     "width_limit_m": null,
+     "distance_to_front": null,
+     "lat": null,
+     "lng": null,
+     "mapcode": null,
+     "mapcode_source": null,
+     "note": "停車場入口座標與MapCode未取得（未於 Mapion/NaviCon/官網/じゃらん 找到可核對資料），填 null"
+    },
+    "road": {
+     "mountain_road": null,
+     "night_drive": null,
+     "winter_closure": null,
+     "note": null
+    },
+    "from_prev": null,
+    "closed_days": [],
+    "closed_days_note": null,
+    "dinner_fits": null,
+    "note": null
+   },
+   "operation": {
+    "status": "open",
+    "checked_on": "2026-10-24",
+    "sources": [],
+    "recheck_before_departure": true,
+    "note": "當時可在樂天／じゃらん或官網查到資料；之後若有更新以較新查證為準。"
+   },
+   "screening": {
+    "status": "candidate",
+    "rank": null,
+    "reason": null,
+    "area_unverified": false,
+    "over_1h": null
+   },
+   "stays_feedback": [],
+   "data_gaps": [
+    "MapCode 未從 Mapion／NaviCon 等來源取得，維持 null。",
+    "停車場入口座標未取得。"
+   ],
+   "public_notes": [
+    "1878年創業的經典溫泉飯店，歷史建築＋溫泉。",
+    "取消規定：宿泊4日前まで免費（3日前30%、前日50%、當日100%；じゃらんQA https://www.jalan.net/yad325862/qa/0005548363.html ）"
+   ],
+   "updated_at": "2026-11-16"
+  },
+  {
+   "id": "lh_hakone_8f6a6c70",
+   "name": "箱根吟遊",
+   "name_ja": "箱根吟遊",
+   "name_zh": null,
+   "type": "onsen_ryokan",
+   "address": null,
+   "lat": 35.24314488,
+   "lng": 139.0627846,
+   "coord_source": null,
+   "google_place_id": "ChIJJ_8rdT2iGWARZCqx5v3zsfg",
+   "google_maps_url": "https://www.google.com/maps/place/?q=place_id:ChIJJ_8rdT2iGWARZCqx5v3zsfg",
+   "official_url": "https://www.hakoneginyu.co.jp/",
+   "phone": "0460-82-3355",
+   "mapcode": null,
+   "near_segments": [
+    {
+     "trip_id": "2027-06-tokyo",
+     "route": "A",
+     "base_key": "HAKONE",
+     "next_first_stop": null,
+     "drive_min_to_next_first_stop": null,
+     "drive_source": null
+    },
+    {
+     "trip_id": "2027-06-tokyo",
+     "route": "C",
+     "base_key": "HAKONE",
+     "next_first_stop": null,
+     "drive_min_to_next_first_stop": null,
+     "drive_source": null
+    },
+    {
+     "trip_id": "2027-06-tokyo",
+     "route": "F",
+     "base_key": "HAKONE",
+     "next_first_stop": null,
+     "drive_min_to_next_first_stop": null,
+     "drive_source": null
+    },
+    {
+     "trip_id": "2027-06-tokyo",
+     "route": "H",
+     "base_key": "HAKONE",
+     "next_first_stop": null,
+     "drive_min_to_next_first_stop": null,
+     "drive_source": null
+    },
+    {
+     "trip_id": "2027-06-tokyo",
+     "route": "F（lodging.bases／當時推薦路線）",
+     "base_key": "HAKONE",
+     "next_first_stop": null,
+     "drive_min_to_next_first_stop": null,
+     "drive_source": null
+    }
+   ],
+   "rooms": [
+    {
+     "room_name": "空(SORA) 和室/洋室（最便宜）；月(TSUKI) 1F",
+     "size_sqm": null,
+     "tatami": null,
+     "max_guests": null,
+     "beds": null,
+     "fits_party": null,
+     "note": "1泊2食（客室食） 官網公布之2027年度正式房價表（非參考價）：1泊2食、含服務費・消費稅・入湯稅，每人價格；季節 A～E 依官網2027日曆"
+    }
+   ],
+   "prices": [],
+   "check_in_time": null,
+   "last_check_in": null,
+   "check_out_time": null,
+   "dinner_time": "約18:00起（客室用餐；據官網料理頁之搜尋摘要，官網頁面當日逾時未能直接確認）",
+   "free_cancel_until": null,
+   "booking_opens": {
+    "status": "unknown",
+    "opens_on": null,
+    "rule": "宿泊日1年前同日 AM9:00 起電話預約（官網）→ 2027/6 已開放，熱門須立即搶",
+    "by_site": [],
+    "checked_at": null
+   },
+   "recommendations": [],
+   "ratings": [
+    {
+     "source": "google",
+     "score": null,
+     "scale": 5,
+     "count": null,
+     "url": "https://www.google.com/maps/place/?q=place_id:ChIJJ_8rdT2iGWARZCqx5v3zsfg",
+     "checked_at": null,
+     "display": null
+    }
+   ],
+   "review_check": null,
+   "drive_check": {
+    "parking": {
+     "available": null,
+     "free": null,
+     "fee": null,
+     "reservation_required": null,
+     "covered": null,
+     "height_limit_m": null,
+     "width_limit_m": null,
+     "distance_to_front": null,
+     "lat": null,
+     "lng": null,
+     "mapcode": null,
+     "mapcode_source": null,
+     "note": "停車場入口座標與MapCode未取得（未於 Mapion/NaviCon/官網/じゃらん 找到可核對資料），填 null"
+    },
+    "road": {
+     "mountain_road": null,
+     "night_drive": null,
+     "winter_closure": null,
+     "note": null
+    },
+    "from_prev": null,
+    "closed_days": [],
+    "closed_days_note": null,
+    "dinner_fits": null,
+    "note": null
+   },
+   "operation": {
+    "status": "open",
+    "checked_on": "2026-10-24",
+    "sources": [],
+    "recheck_before_departure": true,
+    "note": "當時可在樂天／じゃらん或官網查到資料；之後若有更新以較新查證為準。"
+   },
+   "screening": {
+    "status": "candidate",
+    "rank": null,
+    "reason": null,
+    "area_unverified": false,
+    "over_1h": null
+   },
+   "stays_feedback": [],
+   "data_gaps": [
+    "MapCode 未從 Mapion／NaviCon 等來源取得，維持 null。",
+    "停車場入口座標未取得。"
+   ],
+   "public_notes": [
+    "只接受電話預約（楽天目前無可訂方案）。2027/6/23(三) 為休館日。溪谷絕景、全室露天風呂。",
+    "取消規定：宿泊4日前まで免費（3～2日前30%、前日50%、當日100%）"
+   ],
+   "updated_at": "2026-11-16"
+  },
+  {
+   "id": "lh_hakone_6c33a870",
+   "name": "箱根小涌園 天悠",
+   "name_ja": "箱根小涌園 天悠",
+   "name_zh": null,
+   "type": "onsen_ryokan",
+   "address": null,
+   "lat": 35.23883913998505,
+   "lng": 139.0439097013275,
+   "coord_source": null,
+   "google_place_id": "ChIJhfCwMAaiGWARW2IZmApNjZU",
+   "google_maps_url": "https://www.google.com/maps/place/?q=place_id:ChIJhfCwMAaiGWARW2IZmApNjZU",
+   "official_url": "https://www.ten-yu.com/",
+   "phone": "0460-82-5111",
+   "mapcode": null,
+   "near_segments": [
+    {
+     "trip_id": "2027-06-tokyo",
+     "route": "A",
+     "base_key": "HAKONE",
+     "next_first_stop": null,
+     "drive_min_to_next_first_stop": null,
+     "drive_source": null
+    },
+    {
+     "trip_id": "2027-06-tokyo",
+     "route": "C",
+     "base_key": "HAKONE",
+     "next_first_stop": null,
+     "drive_min_to_next_first_stop": null,
+     "drive_source": null
+    },
+    {
+     "trip_id": "2027-06-tokyo",
+     "route": "F",
+     "base_key": "HAKONE",
+     "next_first_stop": null,
+     "drive_min_to_next_first_stop": null,
+     "drive_source": null
+    },
+    {
+     "trip_id": "2027-06-tokyo",
+     "route": "H",
+     "base_key": "HAKONE",
+     "next_first_stop": null,
+     "drive_min_to_next_first_stop": null,
+     "drive_source": null
+    },
+    {
+     "trip_id": "2027-06-tokyo",
+     "route": "F（lodging.bases／當時推薦路線）",
+     "base_key": "HAKONE",
+     "next_first_stop": null,
+     "drive_min_to_next_first_stop": null,
+     "drive_source": null
+    }
+   ],
+   "rooms": [
+    {
+     "room_name": "露天風呂付客室 和室35㎡（定員4）",
+     "size_sqm": 35,
+     "tatami": null,
+     "max_guests": null,
+     "beds": null,
+     "fits_party": null,
+     "note": "1泊2食（ディナービュッフェ） 參考價，非該日期實價（2027/6～7 多數尚未開賣；為楽天等目前開放日期之3名1室每人含稅價格範圍，實際依日期/方案變動）"
+    }
+   ],
+   "prices": [
+    {
+     "site": "other",
+     "url": null,
+     "check_in": null,
+     "check_out": null,
+     "nights": null,
+     "adults": 3,
+     "rooms": 1,
+     "room_name": null,
+     "size_sqm": null,
+     "meals": null,
+     "total_jpy": null,
+     "per_night_jpy": null,
+     "price_basis": null,
+     "tax": "included",
+     "tax_note": null,
+     "free_cancel_until": "2027-06-13",
+     "free_cancel_rule_text": "8日前(2027年06月13日) 前免費（2027-06-21 入住方案之規定；目標日期依同規則推算）",
+     "member_price_jpy": null,
+     "coupon": null,
+     "status": "not_found",
+     "checked_at": "2026-10-24",
+     "source_url": null
+    },
+    {
+     "site": "rakuten",
+     "url": "https://hotel.travel.rakuten.co.jp/hotelinfo/plan/158501",
+     "check_in": null,
+     "check_out": null,
+     "nights": null,
+     "adults": 3,
+     "rooms": 1,
+     "room_name": "露天風呂付客室 和室35㎡（定員4）",
+     "size_sqm": 35,
+     "meals": "1泊2食（ディナービュッフェ）",
+     "total_jpy": null,
+     "per_night_jpy": null,
+     "price_basis": "per_night",
+     "tax": "included",
+     "tax_note": null,
+     "free_cancel_until": null,
+     "free_cancel_rule_text": null,
+     "member_price_jpy": null,
+     "coupon": null,
+     "status": "not_found",
+     "checked_at": "2026-10-24",
+     "source_url": "https://hotel.travel.rakuten.co.jp/hotelinfo/plan/158501"
+    }
+   ],
+   "check_in_time": null,
+   "last_check_in": null,
+   "check_out_time": null,
+   "dinner_time": "夕食ビュッフェ 前半 17:00～17:30／後半 19:00～20:00 入座（旅館指定；楽天 2027/6 方案說明）",
+   "free_cancel_until": null,
+   "booking_opens": {
+    "status": "on_sale",
+    "opens_on": null,
+    "rule": "已開賣：2027/6 實際日期可在楽天・じゃらん查到可售方案（2026-10-24）",
+    "by_site": [],
+    "checked_at": null
+   },
+   "recommendations": [],
+   "ratings": [
+    {
+     "source": "google",
+     "score": null,
+     "scale": 5,
+     "count": null,
+     "url": "https://www.google.com/maps/place/?q=place_id:ChIJhfCwMAaiGWARW2IZmApNjZU",
+     "checked_at": null,
+     "display": null
+    }
+   ],
+   "review_check": null,
+   "drive_check": {
+    "parking": {
+     "available": null,
+     "free": null,
+     "fee": null,
+     "reservation_required": null,
+     "covered": null,
+     "height_limit_m": null,
+     "width_limit_m": null,
+     "distance_to_front": null,
+     "lat": null,
+     "lng": null,
+     "mapcode": null,
+     "mapcode_source": null,
+     "note": "免費75台（楽天FAQ）；入口座標/MapCode 未取得"
+    },
+    "road": {
+     "mountain_road": null,
+     "night_drive": null,
+     "winter_closure": null,
+     "note": null
+    },
+    "from_prev": null,
+    "closed_days": [],
+    "closed_days_note": null,
+    "dinner_fits": null,
+    "note": null
+   },
+   "operation": {
+    "status": "open",
+    "checked_on": "2026-10-24",
+    "sources": [],
+    "recheck_before_departure": true,
+    "note": "當時可在樂天／じゃらん或官網查到資料；之後若有更新以較新查證為準。"
+   },
+   "screening": {
+    "status": "candidate",
+    "rank": null,
+    "reason": null,
+    "area_unverified": false,
+    "over_1h": null
+   },
+   "stays_feedback": [],
+   "data_gaps": [
+    "MapCode 未從 Mapion／NaviCon 等來源取得，維持 null。",
+    "停車場入口座標未取得。"
+   ],
+   "public_notes": [
+    "全150室皆有信樂燒溫泉露天風呂，含 Yunessun 入場。注意：OZmall 記載 2027/6/8～6/10 Yunessun 休館（不影響6/19後）。",
+    "取消規定：宿泊8日前まで免費（7日前20%、3日前30%、前日50%、當日100%；官網FAQ）"
+   ],
+   "updated_at": "2026-11-16"
+  },
+  {
+   "id": "lh_hakone_e567c796",
+   "name": "箱根芦之湯温泉 松坂屋本店",
+   "name_ja": "箱根芦之湯温泉 松坂屋本店",
+   "name_zh": null,
+   "type": "onsen_ryokan",
+   "address": "神奈川県足柄下郡箱根町芦之湯57",
+   "lat": null,
+   "lng": null,
+   "coord_source": null,
+   "google_place_id": null,
+   "google_maps_url": "https://www.google.com/maps/search/?api=1&query=%E7%AE%B1%E6%A0%B9%E8%8A%A6%E4%B9%8B%E6%B9%AF%E6%B8%A9%E6%B3%89%20%E6%9D%BE%E5%9D%82%E5%B1%8B%E6%9C%AC%E5%BA%97",
+   "official_url": "https://kinnotake-resorts.com/matsuzakayahonten/",
+   "phone": "0460-83-6511",
+   "mapcode": null,
+   "near_segments": [],
+   "rooms": [
+    {
+     "room_name": "春風荘等定員4名客房（公式空室検索有標㎡）；例如鶴鳴館43–58㎡但定員2名，須選定員含3名的館",
+     "size_sqm": 43,
+     "tatami": null,
+     "max_guests": 4,
+     "beds": null,
+     "fits_party": null,
+     "note": "本次因指定日期無空室，未能鎖定一間確定的 ≥25㎡、定員3的可訂房型與總價。"
+    }
+   ],
+   "prices": [
+    {
+     "site": "agoda",
+     "url": null,
+     "check_in": "2027-06-21",
+     "check_out": "2027-06-24",
+     "nights": 3,
+     "adults": 3,
+     "rooms": 1,
+     "room_name": null,
+     "size_sqm": null,
+     "meals": null,
+     "total_jpy": null,
+     "per_night_jpy": null,
+     "price_basis": null,
+     "tax": "unknown",
+     "tax_note": null,
+     "free_cancel_until": null,
+     "free_cancel_rule_text": null,
+     "member_price_jpy": null,
+     "coupon": null,
+     "status": "not_found",
+     "checked_at": "2026-11-16",
+     "source_url": null
+    },
+    {
+     "site": "google_hotels",
+     "url": null,
+     "check_in": "2027-06-21",
+     "check_out": "2027-06-24",
+     "nights": 3,
+     "adults": 3,
+     "rooms": 1,
+     "room_name": null,
+     "size_sqm": null,
+     "meals": null,
+     "total_jpy": null,
+     "per_night_jpy": null,
+     "price_basis": null,
+     "tax": "unknown",
+     "tax_note": null,
+     "free_cancel_until": null,
+     "free_cancel_rule_text": null,
+     "member_price_jpy": null,
+     "coupon": null,
+     "status": "not_found",
+     "checked_at": "2026-11-16",
+     "source_url": null
+    },
+    {
+     "site": "jalan",
+     "url": "https://www.jalan.net/yad350368/plan/?stayYear=2027&stayMonth=6&stayDay=21&stayCount=3&roomCount=1&adultNum=3",
+     "check_in": "2027-06-21",
+     "check_out": "2027-06-24",
+     "nights": 3,
+     "adults": 3,
+     "rooms": 1,
+     "room_name": null,
+     "size_sqm": null,
+     "meals": null,
+     "total_jpy": null,
+     "per_night_jpy": null,
+     "price_basis": null,
+     "tax": "unknown",
+     "tax_note": null,
+     "free_cancel_until": null,
+     "free_cancel_rule_text": null,
+     "member_price_jpy": null,
+     "coupon": null,
+     "status": "not_on_sale",
+     "checked_at": "2026-11-16",
+     "source_url": "https://www.jalan.net/yad350368/plan/?stayYear=2027&stayMonth=6&stayDay=21&stayCount=3&roomCount=1&adultNum=3"
+    },
+    {
+     "site": "ikyu",
+     "url": "https://www.ikyu.com/00002389/?cid=20270621&cod=20270624&lc=3&ppc=3&rc=1",
+     "check_in": "2027-06-21",
+     "check_out": "2027-06-24",
+     "nights": 3,
+     "adults": 3,
+     "rooms": 1,
+     "room_name": null,
+     "size_sqm": null,
+     "meals": null,
+     "total_jpy": null,
+     "per_night_jpy": null,
+     "price_basis": null,
+     "tax": "unknown",
+     "tax_note": null,
+     "free_cancel_until": null,
+     "free_cancel_rule_text": null,
+     "member_price_jpy": null,
+     "coupon": null,
+     "status": "not_on_sale",
+     "checked_at": "2026-11-16",
+     "source_url": "https://www.ikyu.com/00002389/?cid=20270621&cod=20270624&lc=3&ppc=3&rc=1"
+    },
+    {
+     "site": "official",
+     "url": "https://kinnotake-resorts.com/matsuzakayahonten/plan_d_search/",
+     "check_in": "2027-06-21",
+     "check_out": "2027-06-24",
+     "nights": 3,
+     "adults": 3,
+     "rooms": 1,
+     "room_name": null,
+     "size_sqm": null,
+     "meals": null,
+     "total_jpy": null,
+     "per_night_jpy": null,
+     "price_basis": null,
+     "tax": "unknown",
+     "tax_note": null,
+     "free_cancel_until": null,
+     "free_cancel_rule_text": null,
+     "member_price_jpy": null,
+     "coupon": null,
+     "status": "not_found",
+     "checked_at": "2026-11-16",
+     "source_url": "https://kinnotake-resorts.com/matsuzakayahonten/plan_d_search/"
+    },
+    {
+     "site": "rakuten",
+     "url": null,
+     "check_in": "2027-06-21",
+     "check_out": "2027-06-24",
+     "nights": 3,
+     "adults": 3,
+     "rooms": 1,
+     "room_name": null,
+     "size_sqm": null,
+     "meals": null,
+     "total_jpy": null,
+     "per_night_jpy": null,
+     "price_basis": null,
+     "tax": "unknown",
+     "tax_note": null,
+     "free_cancel_until": null,
+     "free_cancel_rule_text": null,
+     "member_price_jpy": null,
+     "coupon": null,
+     "status": "not_found",
+     "checked_at": "2026-11-16",
+     "source_url": null
+    }
+   ],
+   "check_in_time": null,
+   "last_check_in": null,
+   "check_out_time": null,
+   "dinner_time": null,
+   "free_cancel_until": null,
+   "booking_opens": {
+    "status": "unknown",
+    "opens_on": null,
+    "rule": null,
+    "by_site": [],
+    "checked_at": null
+   },
+   "recommendations": [
+    {
+     "kind": "fb_group",
+     "title": null,
+     "author": null,
+     "url": "https://www.facebook.com/letsgojp/posts/pfbid02Dviy2uu2NnVJ8U3XgKx2r6New3TwVUyxmAk4wEXMnSWfcPnuWgqygG7EJhrfsYrEl",
+     "published_at": null,
+     "points": "名湯且有大房，但在箱根不是伊豆，兩天日間景點都超過1小時，且2027指定日期一休／じゃらん無空室。",
+     "lang": null
+    }
+   ],
+   "ratings": [
+    {
+     "source": "google",
+     "score": null,
+     "scale": 5,
+     "count": null,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E7%AE%B1%E6%A0%B9%E8%8A%A6%E4%B9%8B%E6%B9%AF%E6%B8%A9%E6%B3%89%20%E6%9D%BE%E5%9D%82%E5%B1%8B%E6%9C%AC%E5%BA%97",
+     "checked_at": null,
+     "display": null
+    }
+   ],
+   "review_check": null,
+   "drive_check": {
+    "parking": {
+     "available": null,
+     "free": null,
+     "fee": null,
+     "reservation_required": null,
+     "covered": null,
+     "height_limit_m": null,
+     "width_limit_m": null,
+     "distance_to_front": null,
+     "lat": null,
+     "lng": null,
+     "mapcode": null,
+     "mapcode_source": null,
+     "note": null
+    },
+    "road": {
+     "mountain_road": null,
+     "night_drive": null,
+     "winter_closure": null,
+     "note": null
+    },
+    "from_prev": null,
+    "closed_days": [],
+    "closed_days_note": null,
+    "dinner_fits": null,
+    "note": "2027-06-22 大室山：OSRM 86.1 分（超過1小時）；2027-06-23 修善寺温泉：OSRM 56.5 分（超過1小時）"
+   },
+   "operation": {
+    "status": "open",
+    "checked_on": "2026-11-16",
+    "sources": [],
+    "recheck_before_departure": true,
+    "note": null
+   },
+   "screening": {
+    "status": "candidate",
+    "rank": null,
+    "reason": null,
+    "area_unverified": false,
+    "over_1h": null
+   },
+   "stays_feedback": [],
+   "data_gaps": [
+    "place_id 未核對（不可臆造）；Google Maps 連結若為座標或館名搜尋，下次應改為店家頁。",
+    "MapCode 未從 Mapion／NaviCon 等來源取得，維持 null。",
+    "停車場入口座標未取得。"
+   ],
+   "public_notes": [],
+   "updated_at": "2026-11-16"
+  }
+ ]
+}
