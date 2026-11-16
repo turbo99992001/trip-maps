@@ -1,0 +1,842 @@
+{
+  "schema": "agency.trip_fill_reference.v1",
+  "request_id": "draft-20261116-152700-tokj",
+  "generated_at": "2026-11-16T15:50:21+08:00",
+  "checked_at": "2026-11-16",
+  "disclaimer": "參考，須安宏確認。本檔未寫入 trip.json。住宿為主選＋備案（住宿部 2026-11-16），未訂車；機票以現有 trip.json 為準並標待確認。",
+  "lodging": {
+    "disclaimer": "參考，須安宏確認。各據點主選＋備案（trip.json lodging.route_options[J]）；下訂前以訂房網為準。",
+    "pending_for_an_hong": [
+      "河口湖續等うぶや，備案（湖月／ラビスタ富士／大池）全部保留，之後一起決定，本輪不替換。",
+      "熱海續等大野屋開賣（2026-12-01／2027-01-01），備案リゾナーレ／ラビスタ熱海保留。",
+      "菊屋晚餐預設 17:30，最晚 17:00 到；19:45 僅延誤備案。"
+    ],
+    "items": [
+      {
+        "ref": "lodging:J:TYO",
+        "trip_name": "東京・池袋",
+        "stay": {
+          "check_in": "2027-06-19",
+          "check_out": "2027-06-21",
+          "nights": 2,
+          "party": "大人3名",
+          "mode": null
+        },
+        "identification_note": "主選：サンシャインシティプリンスホテル（陽光城王子大飯店（池袋））；備案：KOKO HOTEL 池袋、アルモントホテル日暮里、ホテルメトロポリタン（池袋）、リッチモンドホテル東京目白",
+        "choice_needed": false,
+        "choice_label": null,
+        "disclaimer": "參考，須安宏確認。主選＝首選，備案保留；下訂前以訂房網為準。",
+        "filled_fields": [
+          "official_name",
+          "official_url",
+          "address",
+          "phone",
+          "coords",
+          "price",
+          "parking",
+          "free_cancel_until",
+          "booking_status"
+        ],
+        "pending_fields": [
+          "mapcode",
+          "check_in_out_time"
+        ],
+        "fields": {
+          "official_name": {
+            "status": "已補",
+            "value": "サンシャインシティプリンスホテル",
+            "checked_at": "2026-11-16",
+            "note": "陽光城王子大飯店（池袋）"
+          },
+          "official_url": {
+            "status": "已補",
+            "value": "https://www.princehotels.co.jp/sunshine/",
+            "checked_at": "2026-11-16",
+            "source_urls": [
+              "https://www.princehotels.co.jp/sunshine/"
+            ]
+          },
+          "address": {
+            "status": "已補",
+            "value": "東京都豊島区東池袋3-1-5",
+            "checked_at": "2026-11-16"
+          },
+          "phone": {
+            "status": "已補",
+            "value": "03-3988-1111",
+            "checked_at": "2026-11-16"
+          },
+          "coords": {
+            "status": "已補",
+            "value": {
+              "lat": 35.72955762,
+              "lng": 139.7193985,
+              "datum": "WGS84"
+            },
+            "checked_at": "2026-11-16"
+          },
+          "mapcode": {
+            "status": "待查",
+            "value": "待查",
+            "checked_at": "2026-11-16"
+          },
+          "check_in_out_time": {
+            "status": "待查",
+            "value": "待查",
+            "checked_at": "2026-11-16",
+            "note": "入住／退房時刻見備註或待確認。"
+          },
+          "price": {
+            "status": "已補",
+            "value": "10階～24階 ツインルームA 禁煙，素泊（食事なし），¥63,897，一休 2026-11-15 查詢之連泊總價；非報價，下訂前重查",
+            "checked_at": "2026-11-16",
+            "note": "住宿部實查連泊總價，非報價；下訂前重查。"
+          },
+          "parking": {
+            "status": "已補",
+            "value": "館內停車 24小時 2,000円/台，不可預約（楽天FAQ）；入口座標/MapCode 未取得 ｜ 楽天FAQ：不可預約。本據點 6/19–6/21 不開車。",
+            "checked_at": "2026-11-16"
+          },
+          "free_cancel_until": {
+            "status": "已補",
+            "value": "2027-06-13",
+            "checked_at": "2026-11-16",
+            "note": "2027年6月13日までキャンセル料無料"
+          },
+          "booking_status": {
+            "status": "已補",
+            "value": "首選（下訂前請安宏親自確認）",
+            "checked_at": "2026-11-16",
+            "note": "部門未聯絡旅館、未付款。"
+          }
+        },
+        "candidates": [
+          {
+            "name": "サンシャインシティプリンスホテル",
+            "name_zh": "陽光城王子大飯店（池袋）",
+            "role": "主選",
+            "url": "https://www.princehotels.co.jp/sunshine/"
+          },
+          {
+            "name": "KOKO HOTEL 池袋",
+            "name_zh": null,
+            "role": "備案",
+            "url": null
+          },
+          {
+            "name": "アルモントホテル日暮里",
+            "name_zh": null,
+            "role": "備案",
+            "url": "https://www.almont.jp/nippori/"
+          },
+          {
+            "name": "ホテルメトロポリタン（池袋）",
+            "name_zh": "池袋大都會飯店",
+            "role": "備案",
+            "url": "https://ikebukuro.metropolitan.jp/"
+          },
+          {
+            "name": "リッチモンドホテル東京目白",
+            "name_zh": null,
+            "role": "備案",
+            "url": null
+          }
+        ]
+      },
+      {
+        "ref": "lodging:J:KAWAGUCHIKO",
+        "trip_name": "河口湖",
+        "stay": {
+          "check_in": "2027-06-21",
+          "check_out": "2027-06-24",
+          "nights": 3,
+          "party": "大人3名",
+          "mode": null
+        },
+        "identification_note": "主選：湖山亭 うぶや（湖山亭 產屋（河口湖））；備案：富士河口湖温泉 秀峰閣 湖月",
+        "choice_needed": false,
+        "choice_label": null,
+        "disclaimer": "參考，須安宏確認。主選＝首選，備案保留；下訂前以訂房網為準。",
+        "filled_fields": [
+          "official_name",
+          "official_url",
+          "address",
+          "phone",
+          "coords",
+          "mapcode",
+          "price",
+          "parking",
+          "booking_status"
+        ],
+        "pending_fields": [
+          "check_in_out_time",
+          "free_cancel_until"
+        ],
+        "fields": {
+          "official_name": {
+            "status": "已補",
+            "value": "湖山亭 うぶや",
+            "checked_at": "2026-11-16",
+            "note": "湖山亭 產屋（河口湖）"
+          },
+          "official_url": {
+            "status": "已補",
+            "value": "https://www.ubuya.co.jp/",
+            "checked_at": "2026-11-16",
+            "source_urls": [
+              "https://www.ubuya.co.jp/"
+            ]
+          },
+          "address": {
+            "status": "已補",
+            "value": "〒401-0303 山梨県南都留郡富士河口湖町浅川10",
+            "checked_at": "2026-11-16"
+          },
+          "phone": {
+            "status": "已補",
+            "value": "0555-72-1145",
+            "checked_at": "2026-11-16"
+          },
+          "coords": {
+            "status": "已補",
+            "value": {
+              "lat": 35.51336243,
+              "lng": 138.7707046,
+              "datum": "WGS84"
+            },
+            "checked_at": "2026-11-16"
+          },
+          "mapcode": {
+            "status": "已補",
+            "value": "161 332 205*10",
+            "checked_at": "2026-11-16"
+          },
+          "check_in_out_time": {
+            "status": "待查",
+            "value": "待查",
+            "checked_at": "2026-11-16",
+            "note": "入住／退房時刻見備註或待確認。"
+          },
+          "price": {
+            "status": "已補",
+            "value": "參考：46㎡ 客室（楽天一般方案），1泊2食（參考），6/21–24 三平台皆無法訂：一休「空室なし」、じゃらん「予約受付を停止中」、楽天無空房且方案期間只到 2027-03-31。total_jpy=null。參考價（楽天一般方案、非本日期）：3名1室 1泊2食 每人每晚 ¥35,200～38,500（含稅）。",
+            "checked_at": "2026-11-16",
+            "note": "住宿部實查連泊總價，非報價；下訂前重查。"
+          },
+          "parking": {
+            "status": "已補",
+            "value": "免費 50 台先到先停（楽天；一休寫 40 台）。停車場入口座標未取得",
+            "checked_at": "2026-11-16"
+          },
+          "free_cancel_until": {
+            "status": "待查",
+            "value": "待查",
+            "checked_at": "2026-11-16",
+            "note": "官網規定：21～4日前 10%、3日前起 100% → 依規則 22 日前（2027-05-30）前免費；實際依方案"
+          },
+          "booking_status": {
+            "status": "已補",
+            "value": "首選（下訂前請安宏親自確認）",
+            "checked_at": "2026-11-16",
+            "note": "部門未聯絡旅館、未付款。"
+          }
+        },
+        "candidates": [
+          {
+            "name": "湖山亭 うぶや",
+            "name_zh": "湖山亭 產屋（河口湖）",
+            "role": "主選",
+            "url": "https://www.ubuya.co.jp/"
+          },
+          {
+            "name": "富士河口湖温泉 秀峰閣 湖月",
+            "name_zh": "秀峰閣 湖月（河口湖）",
+            "role": "備案",
+            "url": "https://www.kogetu.com/"
+          }
+        ]
+      },
+      {
+        "ref": "lodging:J:SHUZENJI",
+        "trip_name": "修善寺／中伊豆",
+        "stay": {
+          "check_in": "2027-06-24",
+          "check_out": "2027-06-27",
+          "nights": 3,
+          "party": "大人3名",
+          "mode": null
+        },
+        "identification_note": "主選：湯回廊 菊屋（共立リゾート）（湯回廊 菊屋（修善寺））；備案：伊豆マリオットホテル修善寺",
+        "choice_needed": false,
+        "choice_label": null,
+        "disclaimer": "參考，須安宏確認。主選＝首選，備案保留；下訂前以訂房網為準。",
+        "filled_fields": [
+          "official_name",
+          "official_url",
+          "address",
+          "phone",
+          "coords",
+          "mapcode",
+          "price",
+          "parking",
+          "free_cancel_until",
+          "booking_status"
+        ],
+        "pending_fields": [
+          "check_in_out_time"
+        ],
+        "fields": {
+          "official_name": {
+            "status": "已補",
+            "value": "湯回廊 菊屋（共立リゾート）",
+            "checked_at": "2026-11-16",
+            "note": "湯回廊 菊屋（修善寺）"
+          },
+          "official_url": {
+            "status": "已補",
+            "value": "https://dormy-hotels.com/resort/hotels/kikuya/",
+            "checked_at": "2026-11-16",
+            "source_urls": [
+              "https://dormy-hotels.com/resort/hotels/kikuya/"
+            ]
+          },
+          "address": {
+            "status": "已補",
+            "value": "〒410-2416 静岡県伊豆市修善寺874-1",
+            "checked_at": "2026-11-16"
+          },
+          "phone": {
+            "status": "已補",
+            "value": "0558-72-2000（予約）／0558-72-2130（代表）",
+            "checked_at": "2026-11-16"
+          },
+          "coords": {
+            "status": "已補",
+            "value": {
+              "lat": 34.97143204,
+              "lng": 138.9299015,
+              "datum": "WGS84"
+            },
+            "checked_at": "2026-11-16"
+          },
+          "mapcode": {
+            "status": "已補",
+            "value": "116 186 178*73",
+            "checked_at": "2026-11-16"
+          },
+          "check_in_out_time": {
+            "status": "待查",
+            "value": "待查",
+            "checked_at": "2026-11-16",
+            "note": "入住／退房時刻見備註或待確認。"
+          },
+          "price": {
+            "status": "已補",
+            "value": "【早期割60】別邸「水の語り部」川側ツイン 35㎡ 半露天溫泉，1泊2食（3泊×2食），¥307,800，じゃらん 2026-11-16 查詢 3泊總價（含稅；早期割60＝60 日前以前預約 10% off，殘 3 室）。非報價，下訂前重查。",
+            "checked_at": "2026-11-16",
+            "note": "住宿部實查連泊總價，非報價；下訂前重查。"
+          },
+          "parking": {
+            "status": "已補",
+            "value": "免費 65 台，距館步行 2～3 分（楽天）；一休寫 35 台、有時用步行 4 分之停車場。停車場入口座標未取得",
+            "checked_at": "2026-11-16"
+          },
+          "free_cancel_until": {
+            "status": "已補",
+            "value": "2027-06-16",
+            "checked_at": "2026-11-16",
+            "note": "じゃらん：キャンセル料無料（2027-06-16まで）；7～5日前 10%、4～3日前 20%、2～1日前 50%、當日 80%"
+          },
+          "booking_status": {
+            "status": "已補",
+            "value": "首選（下訂前請安宏親自確認）",
+            "checked_at": "2026-11-16",
+            "note": "部門未聯絡旅館、未付款。"
+          }
+        },
+        "candidates": [
+          {
+            "name": "湯回廊 菊屋（共立リゾート）",
+            "name_zh": "湯回廊 菊屋（修善寺）",
+            "role": "主選",
+            "url": "https://dormy-hotels.com/resort/hotels/kikuya/"
+          },
+          {
+            "name": "伊豆マリオットホテル修善寺",
+            "name_zh": "伊豆萬豪酒店修善寺",
+            "role": "備案",
+            "url": "https://www.marriott.com/ja/hotels/fsziz-izu-marriott-hotel-shuzenji/overview/"
+          }
+        ]
+      },
+      {
+        "ref": "lodging:J:HAKONE",
+        "trip_name": "箱根",
+        "stay": {
+          "check_in": "2027-06-27",
+          "check_out": "2027-06-30",
+          "nights": 3,
+          "party": "大人3名",
+          "mode": null
+        },
+        "identification_note": "主選：箱根小涌園 天悠（箱根小涌園 天悠）；備案：箱根吟遊",
+        "choice_needed": false,
+        "choice_label": null,
+        "disclaimer": "參考，須安宏確認。主選＝首選，備案保留；下訂前以訂房網為準。",
+        "filled_fields": [
+          "official_name",
+          "official_url",
+          "address",
+          "phone",
+          "coords",
+          "mapcode",
+          "price",
+          "parking",
+          "free_cancel_until",
+          "booking_status"
+        ],
+        "pending_fields": [
+          "check_in_out_time"
+        ],
+        "fields": {
+          "official_name": {
+            "status": "已補",
+            "value": "箱根小涌園 天悠",
+            "checked_at": "2026-11-16",
+            "note": "箱根小涌園 天悠"
+          },
+          "official_url": {
+            "status": "已補",
+            "value": "https://www.hakone-tenyu.jp/",
+            "checked_at": "2026-11-16",
+            "source_urls": [
+              "https://www.hakone-tenyu.jp/"
+            ]
+          },
+          "address": {
+            "status": "已補",
+            "value": "〒250-0407 神奈川県足柄下郡箱根町二ノ平1297",
+            "checked_at": "2026-11-16"
+          },
+          "phone": {
+            "status": "已補",
+            "value": "0465-20-0260（一休所載）；library 舊值 0460-82-5111 不一致待確認",
+            "checked_at": "2026-11-16"
+          },
+          "coords": {
+            "status": "已補",
+            "value": {
+              "lat": 35.23883914,
+              "lng": 139.0439097,
+              "datum": "WGS84"
+            },
+            "checked_at": "2026-11-16"
+          },
+          "mapcode": {
+            "status": "已補",
+            "value": "57 245 259*65",
+            "checked_at": "2026-11-16"
+          },
+          "check_in_out_time": {
+            "status": "待查",
+            "value": "待查",
+            "checked_at": "2026-11-16",
+            "note": "入住／退房時刻見備註或待確認。"
+          },
+          "price": {
+            "status": "已補",
+            "value": "露天風呂付客室 35㎡，1泊2食（夕食ビュッフェ 前半／後半），¥369,600，一休 2026-11-16 查詢 3泊總價（含稅；點數後 ¥332,640）。同條件 楽天／じゃらん ¥462,000，一休明顯便宜。非報價。",
+            "checked_at": "2026-11-16",
+            "note": "住宿部實查連泊總價，非報價；下訂前重查。"
+          },
+          "parking": {
+            "status": "已補",
+            "value": "免費 75 台。OSM 有一未命名停車場（way/712660673，35.239828,139.044319，距飯店點 116 m，換算 MapCode 57 245 350*13、反查 0.6 m）但無法確認屬天悠，故不填入",
+            "checked_at": "2026-11-16"
+          },
+          "free_cancel_until": {
+            "status": "已補",
+            "value": "2027-06-19",
+            "checked_at": "2026-11-16",
+            "note": "じゃらん：7～4日前 20% → 2027-06-19 前免費（楽天同）；一休方案條款未逐一核對"
+          },
+          "booking_status": {
+            "status": "已補",
+            "value": "首選（下訂前請安宏親自確認）",
+            "checked_at": "2026-11-16",
+            "note": "部門未聯絡旅館、未付款。"
+          }
+        },
+        "candidates": [
+          {
+            "name": "箱根小涌園 天悠",
+            "name_zh": "箱根小涌園 天悠",
+            "role": "主選",
+            "url": "https://www.hakone-tenyu.jp/"
+          },
+          {
+            "name": "箱根吟遊",
+            "name_zh": "箱根吟遊",
+            "role": "備案",
+            "url": "https://www.hakoneginyu.co.jp/"
+          }
+        ]
+      },
+      {
+        "ref": "lodging:J:ATAMI",
+        "trip_name": "熱海",
+        "stay": {
+          "check_in": "2027-06-30",
+          "check_out": "2027-07-02",
+          "nights": 2,
+          "party": "大人3名",
+          "mode": null
+        },
+        "identification_note": "主選：熱海温泉 ホテル大野屋（伊東園ホテルズ）（熱海 大野屋）；備案：リゾナーレ熱海、ラビスタ熱海テラス（共立リゾート）",
+        "choice_needed": false,
+        "choice_label": null,
+        "disclaimer": "參考，須安宏確認。主選＝首選，備案保留；下訂前以訂房網為準。",
+        "filled_fields": [
+          "official_name",
+          "official_url",
+          "address",
+          "phone",
+          "coords",
+          "mapcode",
+          "price",
+          "parking",
+          "booking_status"
+        ],
+        "pending_fields": [
+          "check_in_out_time",
+          "free_cancel_until"
+        ],
+        "fields": {
+          "official_name": {
+            "status": "已補",
+            "value": "熱海温泉 ホテル大野屋（伊東園ホテルズ）",
+            "checked_at": "2026-11-16",
+            "note": "熱海 大野屋"
+          },
+          "official_url": {
+            "status": "已補",
+            "value": "https://www.itoenhotel.com/hoteloonoya/",
+            "checked_at": "2026-11-16",
+            "source_urls": [
+              "https://www.itoenhotel.com/hoteloonoya/"
+            ]
+          },
+          "address": {
+            "status": "已補",
+            "value": "〒413-0023 静岡県熱海市和田浜南町3-9",
+            "checked_at": "2026-11-16"
+          },
+          "phone": {
+            "status": "已補",
+            "value": "0570-024-780（予約 10:00～17:00）",
+            "checked_at": "2026-11-16"
+          },
+          "coords": {
+            "status": "已補",
+            "value": {
+              "lat": 35.0909046,
+              "lng": 139.0729133,
+              "datum": "WGS84"
+            },
+            "checked_at": "2026-11-16"
+          },
+          "mapcode": {
+            "status": "已補",
+            "value": "116 624 453*16",
+            "checked_at": "2026-11-16"
+          },
+          "check_in_out_time": {
+            "status": "待查",
+            "value": "待查",
+            "checked_at": "2026-11-16",
+            "note": "入住／退房時刻見備註或待確認。"
+          },
+          "price": {
+            "status": "已補",
+            "value": "1泊2食（バイキング＋飲み放題，參考），6/30–7/2 未開賣（楽天、じゃらん售到 2027-05-31；不上一休）。total_jpy=null。參考：楽天 5/20、5/31 3名1泊最低 ¥26,994（餐食未確認）；路線 I 6/21 3泊 2食 ¥100,782。",
+            "checked_at": "2026-11-16",
+            "note": "住宿部實查連泊總價，非報價；下訂前重查。"
+          },
+          "parking": {
+            "status": "已補",
+            "value": "免費 100 台、先到先停、交鑰匙、有縱列停車（楽天）。停車場入口座標未取得",
+            "checked_at": "2026-11-16"
+          },
+          "free_cancel_until": {
+            "status": "待查",
+            "value": "待查",
+            "checked_at": "2026-11-16",
+            "note": "以方案頁為準。"
+          },
+          "booking_status": {
+            "status": "已補",
+            "value": "首選（下訂前請安宏親自確認）",
+            "checked_at": "2026-11-16",
+            "note": "部門未聯絡旅館、未付款。"
+          }
+        },
+        "candidates": [
+          {
+            "name": "熱海温泉 ホテル大野屋（伊東園ホテルズ）",
+            "name_zh": "熱海 大野屋",
+            "role": "主選",
+            "url": "https://www.itoenhotel.com/hoteloonoya/"
+          },
+          {
+            "name": "リゾナーレ熱海",
+            "name_zh": "星野 RISONARE 熱海",
+            "role": "備案",
+            "url": "https://hoshinoresorts.com/ja/hotels/risonareatami/"
+          },
+          {
+            "name": "ラビスタ熱海テラス（共立リゾート）",
+            "name_zh": "La Vista 熱海 Terrace",
+            "role": "備案",
+            "url": "https://dormy-hotels.com/resort/hotels/la_atami/"
+          }
+        ]
+      },
+      {
+        "ref": "lodging:J:HANEDA",
+        "trip_name": "羽田機場周邊（接駁飯店）",
+        "stay": {
+          "check_in": "2027-07-02",
+          "check_out": "2027-07-04",
+          "nights": 2,
+          "party": "大人3名",
+          "mode": null
+        },
+        "identification_note": "主選：ホテルJALシティ羽田 東京 ウエストウイング（Hotel JAL City 羽田 WEST WING）；無備案",
+        "choice_needed": false,
+        "choice_label": null,
+        "disclaimer": "參考，須安宏確認。主選＝首選，備案保留；下訂前以訂房網為準。",
+        "filled_fields": [
+          "official_name",
+          "official_url",
+          "address",
+          "phone",
+          "coords",
+          "price",
+          "parking",
+          "free_cancel_until",
+          "booking_status"
+        ],
+        "pending_fields": [
+          "mapcode",
+          "check_in_out_time"
+        ],
+        "fields": {
+          "official_name": {
+            "status": "已補",
+            "value": "ホテルJALシティ羽田 東京 ウエストウイング",
+            "checked_at": "2026-11-16",
+            "note": "Hotel JAL City 羽田 WEST WING"
+          },
+          "official_url": {
+            "status": "已補",
+            "value": "https://haneda.jalcity.co.jp/",
+            "checked_at": "2026-11-16",
+            "source_urls": [
+              "https://haneda.jalcity.co.jp/"
+            ]
+          },
+          "address": {
+            "status": "已補",
+            "value": "〒144-0042 東京都大田区羽田旭町4-16",
+            "checked_at": "2026-11-16"
+          },
+          "phone": {
+            "status": "已補",
+            "value": "03-5735-2525",
+            "checked_at": "2026-11-16"
+          },
+          "coords": {
+            "status": "已補",
+            "value": {
+              "lat": 35.55179270426296,
+              "lng": 139.74697958938137,
+              "datum": "WGS84"
+            },
+            "checked_at": "2026-11-16"
+          },
+          "mapcode": {
+            "status": "待查",
+            "value": "待查",
+            "checked_at": "2026-11-16"
+          },
+          "check_in_out_time": {
+            "status": "待查",
+            "value": "待查",
+            "checked_at": "2026-11-16",
+            "note": "入住／退房時刻見備註或待確認。"
+          },
+          "price": {
+            "status": "已補",
+            "value": "クアッドスタイルルーム/25平米，素泊（首選，價格不顯示）",
+            "checked_at": "2026-11-16"
+          },
+          "parking": {
+            "status": "已補",
+            "value": "WEST WING 沒有停車場（オークラ官方頁：「ウエスト ウイングに駐車場はございません。近くのパーキングをご利用くださいませ」；じゃらん：パーキング 無し）。本館敷地內 6 台 14:00～翌11:00 完全預約制 1泊1,500円（官網）。座標/MapCode 未取得",
+            "checked_at": "2026-11-16"
+          },
+          "free_cancel_until": {
+            "status": "已補",
+            "value": "不顯示（首選）",
+            "checked_at": "2026-11-16"
+          },
+          "booking_status": {
+            "status": "已補",
+            "value": "首選（下訂前請安宏親自確認）",
+            "checked_at": "2026-11-16",
+            "note": "部門未聯絡旅館、未付款。"
+          }
+        },
+        "candidates": [
+          {
+            "name": "ホテルJALシティ羽田 東京 ウエストウイング",
+            "name_zh": "Hotel JAL City 羽田 WEST WING",
+            "role": "主選",
+            "url": "https://haneda.jalcity.co.jp/"
+          }
+        ]
+      }
+    ]
+  },
+  "flights": {
+    "disclaimer": "參考，須安宏確認。機票欄位以現有 trip.json flights.chosen 為準並標待確認。機票部還在查。",
+    "booking_status": "booked",
+    "booking_note": "安宏已自行以長榮里程票訂妥 BR192／BR189，路線 J、K（與其他東京進出路線）共用此已訂航班，不需改班或改買現金票。時刻已於 2026-11-16 以公開班表覆核，仍非訂位紀錄；請以長榮電子機票／訂位紀錄為準，出發前再確認。預算機票 NT$16,000 為 3 人稅費合計概數（安宏告知），不是每人、也不是現金票價。 訂位代號、艙等、行李額度與已付票款以實際電子機票／訂位紀錄為準。預算先用 3 人稅費合計 NT$16,000；任務若寫「／人」與既有資料衝突，待機票部更新後重算。",
+    "airports": [
+      {
+        "code": "TSA",
+        "name": "臺北松山",
+        "terminal": "T1",
+        "role": "出發／返回"
+      },
+      {
+        "code": "HND",
+        "name": "東京羽田",
+        "terminal": "T3",
+        "role": "抵達／起飛"
+      }
+    ],
+    "outbound": {
+      "flight": "BR192",
+      "airline": "長榮航空 EVA Air",
+      "date": "2027-06-19",
+      "from": "TSA",
+      "from_terminal": "T1",
+      "dep_time": "07:20",
+      "to": "HND",
+      "to_terminal": "T3",
+      "arr_time": "11:30",
+      "aircraft": "Boeing 787-10",
+      "duration": "3h10m",
+      "codeshare": "NH5826",
+      "source_url": "https://exa.ai/library/flights/flight/BR192?date=2027-06-19",
+      "checked_at": "2026-11-16",
+      "note": "已訂里程票（trip.json）。時刻為航班資料網站公布的 2027 夏季班表，請以長榮電子機票為準。"
+    },
+    "inbound": {
+      "flight": "BR189",
+      "airline": "長榮航空 EVA Air",
+      "date": "2027-07-04",
+      "from": "HND",
+      "from_terminal": "T3",
+      "dep_time": "10:50",
+      "to": "TSA",
+      "to_terminal": "T1",
+      "arr_time": "13:30",
+      "aircraft": "Boeing 787-10",
+      "duration": "3h40m",
+      "codeshare": "NH5823",
+      "source_url": "https://exa.ai/library/flights/flight/BR189?date=2027-07-04",
+      "checked_at": "2026-11-16",
+      "note": "7/4 10:50 起飛，約 8:20 前到 T3。7/3 必須住有羽田接駁的飯店。"
+    },
+    "baggage": {
+      "status": "官方酬賓規則已查；本行程已訂票之實際額度待電子機票確認",
+      "note": "訂位艙等與會員等級未提供，不能確認本行程實際件數。請以電子機票為準。",
+      "source_url": "https://www.evaair.com/zh-tw/infinity-mileagelands/mileage-award-program/mileage-redemption/award-ticket/eva-uni-air/"
+    },
+    "price": {
+      "cash_twd_reference": 16000,
+      "currency": "TWD",
+      "per": "3人稅費合計（里程票）",
+      "note": "里程票，現金僅稅費；實際已扣哩程數未提供。2026-11-16 覆核檔案與 status.log：此數為 3 人合計，不是每人。若誤當成每人會變成 NT$48,000，與既有紀錄衝突，不採用。",
+      "booking_status": "已訂里程票，現金稅費為概數，待確認"
+    },
+    "unresolved": [
+      "訂位代號（booking_ref）為 null，待確認",
+      "艙等／票種待確認",
+      "行李額度待查",
+      "機票口徑待更新（先用 3 人合計 NT$16,000，不用 16,000／人）"
+    ],
+    "checked_at": "2026-11-16"
+  },
+  "transport": {
+    "disclaimer": "參考，須安宏確認。尚未訂車，部門未聯絡店家、未付款。",
+    "pickup": "取車：トヨタレンタカー 八王子駅前店（八王子市横山町2-8）2027-06-21 09:00",
+    "dropoff": "還車：トヨタレンタカー 羽田空港（国内線）店（大田区羽田1-2-7）2027-07-02 13:30–14:00（店家預約條件仍為 15:00 前；本計畫採緩衝窗口）",
+    "pickup_dropoff_time": "",
+    "hours": "8:00～20:00",
+    "price": "租車 c2 ¥147,024＋高速／收費道路＋油費（低/中/高）；停車另計。匯率 臺灣銀行 https://rate.bot.com.tw/xrt/quote/ltm/JPY?Lang=zh-TW 2026-11-16 即期賣出 0.2085（現金賣出 0.21；查詢 2026-11-16 14:30 前後 Asia/Taipei）",
+    "reservation_status": "待查（未訂車）",
+    "proposal": {
+      "title": "交通部 J 線推薦方案 c2",
+      "label": "提案，須安宏確認"
+    },
+    "checked_at": "2026-11-16"
+  },
+  "budget": {
+    "disclaimer": "參考，須安宏確認。尚缺うぶや、大野屋兩段，無法給完整首選總額；以下為已開賣備案情境（trip.json plans.J.budget）。3 人上限 NT$400,000。已開賣備案情境中位約 NT$305,802～322,472，皆在上限內。若天悠改楽天／じゃらん價 ¥462,000（多 ¥92,400≒NT$19,404），上述高標再加約 NT$19,404 仍低於上限。うぶや／大野屋實價未出，須開賣後重算。",
+    "currency": "TWD",
+    "cap": 400000,
+    "flights_pending_update": false,
+    "flights_note": "flights.chosen.price.cash_twd_total＝NT$16,000，為 3 人合計里程票現金稅費，不要乘 3。不含哩程本身現金價值。2026-11-16 機票部覆核。",
+    "variants": {
+      "comfort": {
+        "label": "已知項＋大池ホテル ¥224,550＋ラビスタ熱海テラス ¥179,400（皆 2食、已開賣）",
+        "lodging_jpy": 1218297,
+        "lodging_twd": 255842,
+        "car_twd": 33960,
+        "flights_twd": 16000,
+        "total_twd": 305802,
+        "gap_to_cap": 94198,
+        "within_budget": true,
+        "items": null
+      },
+      "budget": {
+        "label": "已知項＋ラビスタ富士河口湖 ¥303,930＋ラビスタ熱海テラス ¥179,400",
+        "lodging_jpy": 1297677,
+        "lodging_twd": 272512,
+        "car_twd": 33960,
+        "flights_twd": 16000,
+        "total_twd": 322472,
+        "gap_to_cap": 77528,
+        "within_budget": true,
+        "items": null
+      },
+      "mix": {
+        "label": "已知項＋ラビスタ富士 ¥303,930＋リゾナーレ熱海 ¥117,600（含早不含晚）",
+        "lodging_jpy": 1235877,
+        "lodging_twd": 259534,
+        "car_twd": 33960,
+        "flights_twd": 16000,
+        "total_twd": 309494,
+        "gap_to_cap": 90506,
+        "within_budget": true,
+        "items": null
+      }
+    },
+    "parking_not_included": true,
+    "computed_at": "2026-11-16 15:26 (UTC+8)",
+    "sources": null
+  }
+}
