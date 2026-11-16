@@ -1,5 +1,5 @@
 /* 家人分享版（只有東京）service worker：scope＝/trip-maps/tokyo/，快取名 famtokyo-*（不碰主 PWA 的 plan-*）。由 build_tokyo_family.py 產生，勿手改。 */
-const VERSION = "a50bb9630f";
+const VERSION = "471c18abca";
 const SHELL = "famtokyo-shell-" + VERSION;
 const DATA = "famtokyo-data-v1";          // 行程資料：stale-while-revalidate（跨版本保留，舊 ?v= 會被修剪）
 const TILES = "famtokyo-tiles-v1";        // 地圖圖磚：使用者開啟才快取，上限 TILE_MAX

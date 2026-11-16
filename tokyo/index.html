@@ -242,6 +242,31 @@ body.ovon{overflow:hidden}
  #ovPanel{flex:0 0 auto;order:0;max-height:44vh;border-right:0;border-top:1px solid var(--line);padding-bottom:calc(8px + env(safe-area-inset-bottom,0px))}
  #ovTtl{font-size:14px}
 }
+/* 1.9.20 住宿 SOP */
+#llStatus[data-state=building],#llStatus[data-state=error]{border-left:4px solid #ef6c00}#llStatus[data-state=ready]{border-left:4px solid #2e7d32}
+.llsample{background:#c62828;color:#fff;font-weight:700;border-radius:6px;padding:6px 8px;margin:6px 0}
+#lpPrefs>summary,.llib>summary,.llrej>summary{min-height:44px;display:flex;align-items:center;cursor:pointer;font-weight:600;gap:6px}
+.lpf{display:flex;flex-wrap:wrap;gap:8px;margin-top:6px}.lpf label{display:flex;flex-direction:column;font-size:13px;gap:2px;flex:1 1 100px}
+.lpf input,.lpf select,.lwf input,.lwf select{font-size:16px;min-height:44px;padding:6px 8px;border:1px solid var(--line);border-radius:8px;max-width:100%;box-sizing:border-box}
+.lpf fieldset{flex:1 1 100%;border:1px solid var(--line);border-radius:8px;padding:6px;margin:0;display:flex;flex-wrap:wrap;gap:4px 10px;min-width:0}
+.lpf fieldset legend{font-size:12px;color:var(--mut)}.lpf .lpck{flex:0 0 auto;flex-direction:row;align-items:center;min-height:44px;font-size:14px;gap:6px}
+.lpf input[type=checkbox],.llcmpl input{width:22px;height:22px;min-height:0}
+.lwf{display:flex;flex-direction:column;gap:8px}.lwf label{display:flex;flex-direction:column;font-size:13px;gap:2px}
+.llib{border-top:1px dashed var(--line);margin-top:8px;padding-top:4px}.llbody{min-width:0}
+.llc{border:1px solid var(--line);border-radius:8px;padding:8px;margin:6px 0;background:#fff;min-width:0;overflow-wrap:anywhere}
+.llc[data-status=top_pick]{border-left:4px solid #2e7d32}.llc[data-status=rejected]{opacity:.85;background:#fafafa}
+.llst.top_pick{background:#e8f5e9;color:#1b5e20;font-weight:700}.llst.rejected{background:#eceff1;color:#546e7a}
+.llop.ok,.llsale.ok{background:#e8f5e9;color:#1b5e20}.llop.bad{background:#c62828;color:#fff;font-weight:700}
+.llfb{background:#fce4ec;color:#ad1457}.llnear{background:#e3f2fd;color:#0d47a1}.llbad{background:#ffebee;color:#c62828;font-weight:700}
+.llp,.llrev{font-size:13px;margin:4px 0}.llstale{color:#c62828;font-weight:700}.lldd{color:#ef6c00}.llreason{font-size:13px;color:#546e7a;margin:4px 0}
+.llwarn{color:#c62828;font-weight:700;font-size:13px;margin:4px 0}
+.llib .btn,#lwPanel .btn,.lwbtns .btn,#llDetail .btn,#llCmp .btn,.lwf .btn{min-height:44px;font-size:14px}.llcmpl{gap:6px;cursor:pointer}
+.llw{overflow-x:auto;-webkit-overflow-scrolling:touch;max-width:100%;margin:4px 0}
+.llt{border-collapse:collapse;font-size:13px;min-width:100%}.llt th,.llt td{border:1px solid var(--line);padding:5px;vertical-align:top;text-align:left}
+.llt th{background:#f3f6fa;font-weight:600;white-space:nowrap}#llCmp thead th{min-width:130px}#llCmp th[scope=row]{position:sticky;left:0;z-index:1}
+.llt tr.llex{opacity:.55}.llsec{border-top:1px solid var(--line);margin-top:8px;padding-top:4px}.llsec h4{margin:4px 0;font-size:14px}.llsec ul{margin:4px 0;padding-left:18px}
+#llDetail,#lwPanel,#dcPanel{min-width:0;overflow-wrap:anywhere}
+.lwrow{border-top:1px dashed var(--line);padding:6px 0}.dcev{border-top:1px dashed var(--line);padding:6px 0}.dcev.dim{opacity:.45}
 
 /* 家人分享版：不露出新增旅遊規劃／整包備份 */
 #bakBtn,#toolsBak,#tlBak,#tlNew,#mods button[data-m="new"],#ltExport,#newBlank{display:none!important}
@@ -274,7 +299,12 @@ window.__FAMILY={trip:"2027-06-tokyo",prefix:"plan:family-tokyo:",meta:"plan:fam
  var CONTENT=/:(v1|notes:v1|custom:v1|decisions:v1|bookings:v1|selected_routes:v1)$|^tokyo2027_/;
  function h(ks){ var s="", x=0x811c9dc5; ks.slice().sort().forEach(function(k){ if(!CONTENT.test(k)) return; var v=null; try{ v=real.getItem(P+k); }catch(e){} s+=k+"\u0001"+(v==null?"\u0000":v)+"\u0002"; });
   for(var i=0;i<s.length;i++){ x^=s.charCodeAt(i); x=(x+((x<<1)+(x<<4)+(x<<7)+(x<<8)+(x<<24)))>>>0; } return x.toString(16)+":"+s.length; }
- function apply(){
+ /* fill＝true：只補不蓋（升版／第一次套用時用；已有的鍵一律不動，舊 seed 鍵也不刪；之後永遠視為家人已改過，不再自動整包取代） */
+ function apply(fill){
+  if(fill){ var ks0=Object.keys(seed.keys), add=0; ks0.forEach(function(k){ if(real.getItem(P+k)==null){ real.setItem(P+k,seed.keys[k]); add++; } });
+   var had=[]; try{ had=JSON.parse(real.getItem(M+"seed_keys")||"[]")||[]; }catch(e){ had=[]; }
+   real.setItem(M+"seed_id",seed.seed_id); real.setItem(M+"seed_keys",JSON.stringify(had.concat(ks0.filter(function(k){ return had.indexOf(k)<0; }))));
+   real.setItem(M+"seed_hash","fill-only"); real.removeItem(M+"seed_declined"); real.removeItem(M+"seed_rehash"); info.applied=true; info.filled=add; info.pending=false; return; }
   var old=[]; try{ old=JSON.parse(real.getItem(M+"seed_keys")||"[]")||[]; }catch(e){ old=[]; }
   old.forEach(function(k){ if(!Object.prototype.hasOwnProperty.call(seed.keys,k)) real.removeItem(P+k); });
   var ks=Object.keys(seed.keys); ks.forEach(function(k){ real.setItem(P+k,seed.keys[k]); });
@@ -287,15 +317,11 @@ window.__FAMILY={trip:"2027-06-tokyo",prefix:"plan:family-tokyo:",meta:"plan:fam
   setTimeout(function(){ try{ if(real.getItem(M+"seed_rehash")){ var ks=JSON.parse(real.getItem(M+"seed_keys")||"[]")||[]; real.setItem(M+"seed_hash",h(ks)); real.removeItem(M+"seed_rehash"); } }catch(e){} },2000); },250); });
  try{
   var cur=real.getItem(M+"seed_id");
-  if(!cur){ apply(); return; }
+  if(!cur){ apply(keys().length>0); return; }                          /* 這台已有家人版資料（沒有 seed 紀錄）：只補不蓋 */
   if(cur===seed.seed_id) return;
   var oks=[]; try{ oks=JSON.parse(real.getItem(M+"seed_keys")||"[]")||[]; }catch(e){}
   if(h(oks)===real.getItem(M+"seed_hash")){ apply(); return; }       /* 家人沒改過：直接換成新版 */
-  if(real.getItem(M+"seed_declined")===seed.seed_id) return;
-  info.pending=true;                                                   /* 家人改過：載入後詢問 */
-  window.addEventListener("load",function(){ setTimeout(function(){ if(!info.pending) return;
-   if(confirm("安宏更新了東京行程。要載入最新版嗎？\n（按「取消」保留你在這台裝置的修改；之後可在行程清單按「重新載入安宏版本」）")){ apply(); location.reload(); }
-   else { real.setItem(M+"seed_declined",seed.seed_id); info.pending=false; } },1500); });
+  apply(true);                                                         /* 家人改過：只補不蓋（不詢問、不取代；要整包換成安宏版本請按清單頁「重新載入安宏版本」） */
  }catch(e){}
 })();
 </script>
@@ -391,7 +417,7 @@ window.__FAMILY={trip:"2027-06-tokyo",prefix:"plan:family-tokyo:",meta:"plan:fam
 (function(){
 "use strict";
 const FAM=window.__FAMILY||null;
-const APPV="plan-multi-1.9.19+family-tokyo-1";
+const APPV="plan-multi-1.9.21+family-tokyo-1";
 /* 1.8 後台自動排路線（Cloudflare Worker）：網址部署後填入。空字串＝後台未啟用，網頁維持 1.7 行為（匯出 JSON＋複製文字）。site key 是公開值。 */
 const BACKEND_CFG={url:"",turnstile_site_key:""};   /* 家人版：不連後台（不會把需求送到 Mac mini） */
 const CAT={popular:"熱門",natural:"自然絕景",shrine:"神社寺院",historic:"歷史",onsen:"溫泉",hidden:"私房",food:"美食",experience:"親子／體驗",anime:"動漫",anime_game:"🎮 動漫・遊戲周邊",festival:"活動／花季",custom:"👤 自訂地點",auto:"🤖 後台路線景點",uncat:"🏷 待分類"};
@@ -1560,7 +1586,7 @@ function showTripList(push){
  TID=null; D=null; DRAFT=null; curMod="spots"; $("#app").hidden=true; $("#bnav").hidden=true; $("#mods").hidden=true; $("#modpanel").hidden=true; $("#loading").hidden=true; fillTripSel();
  $("#ttl").textContent="2027 夏 東京進出 自駕"; document.title="2027 夏 東京進出 自駕｜家人版"; $("#rsw").innerHTML=""; $("#routeSel").innerHTML=""; $("#rname").textContent="";
  const st={flights:"收集中",review:"品管中",final:"已定案"};
- const dsl=drVisible(), lts=ltVisible(); setTimeout(listPoll,0); $("#tripList").innerHTML=`<h2 style="font-size:18px">選擇行程</h2><div class="famnote" id="famNote">👪 <b>家人分享版</b>：這裡只有「2027 夏 東京進出 自駕」（路線 A～I）。內容是已上架的官方東京行程（預設路線 F），可依自己需要調整；你在這裡的修改只存在你自己的手機／電腦，不會傳給安宏，也不會改到他的行程。${window.__FAMSEED&&window.__FAMSEED.seed_id?`<br><button class="btn" type="button" onclick="__famReseed()">↺ 重新載入安宏版本</button>`:""}</div>`+(lts.length?`<div class="card"><h3>🧳 本機行程（尚未上架）</h3>${lts.map(t=>`<div class="drow"><a href="?trip=${encodeURIComponent(t.id)}" data-trip="${esc(t.id)}">🧳 ${esc(t.title||t.id)}（${ltN(t.id)} 套）</a> <span class="cnt">${esc(t.start_date||"")}～${esc(t.end_date||"")}・${esc(ltInc(ltGet(t.id)).map(rKeyOf).join("／"))}</span></div>`).join("")}</div>`:"")+(dsl.length?`<div class="card"><h3>本機草稿</h3>${dsl.map(d=>`<div class="drow"><a href="?trip=${encodeURIComponent(d.id)}&mod=new" data-draft="${esc(d.id)}">📝 草稿：${esc(drTitle(d.request||{}))}</a>${d.backend&&d.backend.view_code?`<div class="cnt">代號 ${esc(d.backend.job_id||"")}・<span data-drst="${esc(d.backend.view_code)}">${esc(ST_TXT[d.backend.status]||"⏳ 已送出")}</span><br><a href="${esc(viewUrl(d.backend.view_code).replace(/^.*\?/,"?"))}" data-drlink>查看連結</a> <button class="btn" type="button" data-drcopy="${esc(viewUrl(d.backend.view_code))}">📋 複製</button></div>`:""}</div>`).join("")}</div>`:"")+TRIPS.trips.map(t=>`<div class="card"><h3 data-trip="${esc(t.id)}">${esc(t.title)}</h3>
+ const dsl=drVisible(), lts=ltVisible(); setTimeout(listPoll,0); $("#tripList").innerHTML=`<h2 style="font-size:18px">選擇行程</h2><div class="famnote" id="famNote">👪 <b>家人分享版</b>：這裡只有「2027 夏 東京進出 自駕」（路線 A～K）。內容是已上架的官方東京行程（預設路線 F），可依自己需要調整；你在這裡的修改只存在你自己的手機／電腦，不會傳給安宏，也不會改到他的行程。${window.__FAMSEED&&window.__FAMSEED.seed_id?`<br><button class="btn" type="button" onclick="__famReseed()">↺ 重新載入安宏版本</button>`:""}</div>`+(lts.length?`<div class="card"><h3>🧳 本機行程（尚未上架）</h3>${lts.map(t=>`<div class="drow"><a href="?trip=${encodeURIComponent(t.id)}" data-trip="${esc(t.id)}">🧳 ${esc(t.title||t.id)}（${ltN(t.id)} 套）</a> <span class="cnt">${esc(t.start_date||"")}～${esc(t.end_date||"")}・${esc(ltInc(ltGet(t.id)).map(rKeyOf).join("／"))}</span></div>`).join("")}</div>`:"")+(dsl.length?`<div class="card"><h3>本機草稿</h3>${dsl.map(d=>`<div class="drow"><a href="?trip=${encodeURIComponent(d.id)}&mod=new" data-draft="${esc(d.id)}">📝 草稿：${esc(drTitle(d.request||{}))}</a>${d.backend&&d.backend.view_code?`<div class="cnt">代號 ${esc(d.backend.job_id||"")}・<span data-drst="${esc(d.backend.view_code)}">${esc(ST_TXT[d.backend.status]||"⏳ 已送出")}</span><br><a href="${esc(viewUrl(d.backend.view_code).replace(/^.*\?/,"?"))}" data-drlink>查看連結</a> <button class="btn" type="button" data-drcopy="${esc(viewUrl(d.backend.view_code))}">📋 複製</button></div>`:""}</div>`).join("")}</div>`:"")+TRIPS.trips.map(t=>`<div class="card"><h3 data-trip="${esc(t.id)}">${esc(t.title)}</h3>
   <div class="tags"><span class="tag">${esc(t.start_date)}～${esc(t.end_date)}</span>${t.travelers?`<span class="tag">大人 ${esc(t.travelers.adults||0)}${t.travelers.children?"、小孩 "+esc(t.travelers.children):""}</span>`:""}<span class="tag">景點 ${t.counts.spots}・餐廳 ${t.counts.restaurants}</span>${t.status_stage?`<span class="tag">${esc(st[t.status_stage]||t.status_stage)}</span>`:""}</div>
   <div class="desc">${esc(t.region||"")}</div>
   <div class="btns">${t.routes.map(r=>`<a class="btn ${r.key===t.default_route?"pri":""}" href="?trip=${encodeURIComponent(t.id)}&route=${encodeURIComponent(r.key)}" data-trip="${esc(t.id)}" data-route="${esc(r.key)}">路線 ${esc(r.key)}${r.key===t.default_route?"（推薦）":""}</a>`).join("")}</div>
@@ -1806,7 +1832,7 @@ window.__sw={state:"none"};
 /* ---------- 1.6 第一階段：模組外殼＋深連結＋已訂好＋decisions 匯出 ---------- */
 const MODS=["new","flights","car","lodging","route","spots","rests","daily"]; let curMod="spots";
 const BUF={pickup_after_arrival_min:90,return_before_departure_min:180};
-const AP={HND:"羽田空港",NRT:"成田空港",KIX:"関西国際空港",NGO:"中部国際空港",FUK:"福岡空港",CTS:"新千歳空港",OKA:"那覇空港"};
+const AP={HND:"羽田空港",NRT:"成田空港",KIX:"関西国際空港",NGO:"中部国際空港",CTS:"新千歳空港",OKA:"那覇空港"};
 const enc=encodeURIComponent;
 function addMin(date,hm,min){ if(!date||!hm) return ""; const [h,m]=hm.split(":").map(Number); const [y,mo,d]=date.split("-").map(Number); const t=new Date(Date.UTC(y,mo-1,d,h,m)+min*60000), p=n=>String(n).padStart(2,"0");
  return `${t.getUTCFullYear()}-${p(t.getUTCMonth()+1)}-${p(t.getUTCDate())}T${p(t.getUTCHours())}:${p(t.getUTCMinutes())}`;}
@@ -1865,10 +1891,12 @@ function renderMod(){ if(curMod==="new") return renderNew(); if(DRAFT||!D){$("#m
  } else if(curMod==="lodging"){ h+=fillRefBudgetHtml();
   const L=(D.lodging||[]).filter(l=>l.route===route);
   if(D.meta.local&&D.meta.rest_fill&&(D.meta.rest_fill.lodging_meal_status||[]).length) h+=`<div class="card"><h3>住宿含餐（餐廳部整理）</h3>${D.meta.rest_fill.lodging_meal_status.map(s=>`<div class="cnt">🏨 ${esc(s.base)}：${esc(s.meal_plan||"")}${(s.affected||[]).length?"（影響："+esc(s.affected.join("、"))+"）":""}</div>`).join("")}<div class="cnt">住宿含餐的那幾餐，請到「每日」把餐廳刪掉。</div></div>`;
+  h+=llTopHtml();
   h+=`<div class="cnt">路線 ${esc(route)}：${L.length} 個住宿據點。評分請點「樂天トラベル（評分）」或「在 Google 地圖看評分」。</div>`;
-  h+=L.map(l=>`<div class="card lod" data-base="${esc(l.base)}"><h3>${esc(l.area)}</h3><div class="desc">${l.booking?`✅ 已匯入訂房：${esc(l.booking.hotel_name||l.name)}${l.booking.booking_code?"・代號 "+esc(l.booking.booking_code):""}${l.booking.price_jpy!=null?"・¥"+esc(l.booking.price_jpy):""}${l.booking.price_twd!=null?"・NT$"+esc(l.booking.price_twd):""}${l.booking.payment_status?"・"+esc(l.booking.payment_status):""}（請安宏確認）`:l.status==="suggested"?`後台路線住宿點：${esc(l.name)}<br><span class="todo">飯店訂房資料尚未提供（可到「已訂好 → 手動輸入」，或由住宿部補）</span>`:`建議：${esc(l.name)}`}<br>${esc(l.check_in)}～${esc(l.check_out)}（${esc(l.nights)} 晚）</div><div class="btns">${lk(hotelLinks({name:l.name,area:l.area,checkin:l.check_in,checkout:l.check_out,adults:ad}))}</div>${fillRefLodgeBlock(l)}<details${decGet("lodging:"+l.base)?" open":""}><summary>已訂好 → 手動輸入</summary>${bookForm("lodging:"+l.base,{hotel:l.name,check_in:l.check_in,check_out:l.check_out})}</details></div>`).join("")||`<div class="cnt">此路線沒有住宿資料</div>`;
+  h+=L.map(l=>`<div class="card lod" data-base="${esc(l.base)}"><h3>${esc(l.area)}</h3><div class="desc">${l.booking?`✅ 已匯入訂房：${esc(l.booking.hotel_name||l.name)}${l.booking.booking_code?"・代號 "+esc(l.booking.booking_code):""}${l.booking.price_jpy!=null?"・¥"+esc(l.booking.price_jpy):""}${l.booking.price_twd!=null?"・NT$"+esc(l.booking.price_twd):""}${l.booking.payment_status?"・"+esc(l.booking.payment_status):""}（請安宏確認）`:l.status==="suggested"?`後台路線住宿點：${esc(l.name)}<br><span class="todo">飯店訂房資料尚未提供（可到「已訂好 → 手動輸入」，或由住宿部補）</span>`:`建議：${esc(l.name)}`}<br>${esc(l.check_in)}～${esc(l.check_out)}（${esc(l.nights)} 晚）</div><div class="btns">${lk(hotelLinks({name:l.name,area:l.area,checkin:l.check_in,checkout:l.check_out,adults:ad}))}</div>${llibHtml(l)}${lwBtnsHtml(l)}${fillRefLodgeBlock(l)}<details${decGet("lodging:"+l.base)?" open":""}><summary>已訂好 → 手動輸入</summary>${bookForm("lodging:"+l.base,{hotel:l.name,check_in:l.check_in,check_out:l.check_out})}</details></div>`).join("")||`<div class="cnt">此路線沒有住宿資料</div>`;
  }
  P.innerHTML=curRouteHtml()+h+note+`<div class="tools"><button class="btn expDec" type="button">⬇ 匯出決定（decisions JSON）</button></div>`;
+ if(curMod==="lodging") llKick();
 }
 function renderRbook(){const d=decLoad(); $("#rbookList").innerHTML=d.restaurants.map(r=>`<div class="card"><b>${esc(r.name)}</b> ${esc(r.date||"")} ${esc(r.time||"")}${r.people?"・"+esc(r.people)+" 人":""}${r.reservation_no?"・#"+esc(r.reservation_no):""} <div class="btns">${lk(restLinks({name:r.name}))}<button class="btn" type="button" data-rbdel="${esc(r.id)}">刪除</button></div></div>`).join("")||`<div class="cnt">還沒有訂位</div>`;
  $("#rbookForm").innerHTML=bookForm("restaurants");}
@@ -1883,7 +1911,7 @@ function showMod(m,noUrl){ if(MODS.indexOf(m)<0||(FAM&&m==="new")) m="spots"; cu
 /* ---------- 1.7 新增旅遊規劃（草稿行程 plan:drafts:v1、需求 JSON agency.new_trip_request.v1、路線複選 itin:<trip>:selected_routes:v1） ---------- */
 let DRAFT=null, INTAKE=null;
 const DRK="plan:drafts:v1", NTR="agency.new_trip_request.v1";
-const INTAKE_FALLBACK={version:0,questions:[{id:"region",label:"進出城市／區域",type:"single",allowCustom:true,options:["東京（羽田/成田）","大阪（關西）","福岡（九州）","札幌（北海道）","沖繩"]},{id:"preferences",label:"旅遊偏好",type:"multi",allowCustom:true,options:["溫泉","美食","自然景觀、絕景"]}]};
+const INTAKE_FALLBACK={version:0,questions:[{id:"region",label:"進出城市／區域",type:"single",allowCustom:true,options:["東京（羽田/成田）","大阪（關西）","札幌（北海道）","沖繩"]},{id:"preferences",label:"旅遊偏好",type:"multi",allowCustom:true,options:["溫泉","美食","自然景觀、絕景"]}]};
 function intakeQ(id){return ((INTAKE||INTAKE_FALLBACK).questions||[]).find(q=>q.id===id)||null;}
 function loadIntake(){ if(INTAKE) return Promise.resolve(INTAKE); return fetchJson("data/intake.options.json",true).then(j=>{INTAKE=j&&Array.isArray(j.questions)?j:INTAKE_FALLBACK; return INTAKE;});}
 function drLoad(){try{const j=JSON.parse(ls.get(DRK)||"null"); return j&&Array.isArray(j.drafts)?j.drafts.filter(d=>d&&/^draft-/.test(d.id)):[];}catch(e){return [];}}
@@ -1983,7 +2011,7 @@ function autoPoll(vc,now){clearTimeout(POLL_T); if(AUTO.vc!==vc){AUTO.status=nul
 function autoShow(s){drSetStatus(AUTO.vc,s.status); const el=$("#autoSt"); if(!el) return; el.innerHTML=stepHtml(s.status)+esc(ST_TXT[s.status]||s.status)+(s.status==="queued"&&s.position?"（前面還有 "+esc(s.position)+" 件）":"")+(s.error?"<br>"+esc(s.error):"")+`<br><span class="cnt">需求 ${esc(s.request_id||"")}・更新 ${esc((s.updated_at||"").slice(0,16).replace("T"," "))}</span>`;}
 window.addEventListener("hashchange",()=>{ if(curMod==="new"&&(hashView()||hashLodging())) renderMod();});
 /* 1.9.4 路線卡：中文名稱、每日摘要、收折待確認、「✅ 選這條路線」→ ③ 建立行程 */
-const CITY_ZH={hagi:"萩",shimonoseki:"下關",beppu:"別府",hyuga:"日向",takachiho:"高千穗",kamiamakusa:"上天草",amakusa:"天草",ureshino:"嬉野",fukuoka:"福岡",hakata:"博多",yufu:"由布",yufuin:"由布院",kurokawa:"黑川",aso:"阿蘇",kumamoto:"熊本",nagasaki:"長崎",sasebo:"佐世保",kagoshima:"鹿兒島",ibusuki:"指宿",miyazaki:"宮崎",saga:"佐賀",takeo:"武雄",karatsu:"唐津",kitakyushu:"北九州",dazaifu:"太宰府",oita:"大分",yamaguchi:"山口",kokura:"小倉",mojiko:"門司港",unzen:"雲仙",shimabara:"島原",kirishima:"霧島",nobeoka:"延岡",hita:"日田",itoshima:"糸島"};
+const CITY_ZH={};
 const HAS_CJK=/[\u3400-\u9fff]/;
 function areaZh(a){a=String(a||"").trim(); if(!a) return ""; if(HAS_CJK.test(a)){const ps=a.split(/[,，、]/).map(x=>x.trim()).filter(Boolean); let n=ps.find(x=>/市$/.test(x))||ps[0]; n=n.split(/[縣県郡]/).pop()||n; return n.replace(/(市|町|村)$/,"")||n;}
  const ws=a.match(/[A-Za-z]+/g)||[]; for(const w of ws){const z=CITY_ZH[w.toLowerCase()]; if(z) return z;} return a.split(",")[0].trim();}
@@ -2162,7 +2190,7 @@ function bnRow(b){b=b||{}; return `<div class="bnrow"><input name="b_area" place
 function newForm(r){r=r||{}; const d=r.dates||{}, t=r.travelers||{adults:2}, bu=r.budget_twd||{}, pf=r.preferences||{options:[]}, fl=r.flights||{}, Q=intakeQ;
  const regQ=Q("region"), regOpts=(regQ&&regQ.options)||[], regCustom=r.region&&regOpts.indexOf(r.region)<0;
  return `<form id="newForm" class="newf">
- <h4>目的地與日期</h4><div class="bkf"><label>進出城市／區域${optSel("region",regQ,regCustom?"__x":r.region,true).replace('value="__custom" ','value="__custom" '+(regCustom?"selected ":""))}</label><label>其他區域／補充<input name="region_custom" placeholder="例：九州（福岡進出）" value="${esc(regCustom?r.region:(r.region_custom||""))}"></label>
+ <h4>目的地與日期</h4><div class="bkf"><label>進出城市／區域${optSel("region",regQ,regCustom?"__x":r.region,true).replace('value="__custom" ','value="__custom" '+(regCustom?"selected ":""))}</label><label>其他區域／補充<input name="region_custom" placeholder="例：其他區域" value="${esc(regCustom?r.region:(r.region_custom||""))}"></label>
  <label>出發日<input type="date" name="start" value="${esc(d.start||"")}"></label><label>回程日<input type="date" name="end" value="${esc(d.end||"")}"></label><label>或天數<input type="number" name="days" min="1" max="60" value="${esc(d.days||"")}"></label><label class="inl"><input type="checkbox" name="date_flex" ${d.flexible?"checked":""}>日期可彈性</label></div>
  <h4>人數與預算</h4><div class="bkf"><label>大人<input type="number" name="adults" min="0" value="${esc(t.adults==null?2:t.adults)}"></label><label>小孩<input type="number" name="children" min="0" value="${esc(t.children||0)}"></label><label>人數補充<input name="trav_note" placeholder="例：含長輩" value="${esc(t.note||"")}"></label>
  <label>${esc((Q("budget_twd")||{}).label||"總預算")}${optSel("budget",Q("budget_twd"),bu.option||(bu.custom?"__custom":""),true).replace('value="__custom" ','value="__custom" '+(!bu.option&&bu.custom?"selected ":""))}</label><label>預算補充<input name="budget_custom" placeholder="例：30 萬台幣" value="${esc(bu.custom||"")}"></label></div>
@@ -2522,7 +2550,7 @@ function refFetch(id){ if(!id) return Promise.resolve(null);
   .then(j=>j&&j.schema==="agency.trip_fill_reference.v1"?j:null).catch(()=>null);}
 function fillRefTxt(v,n){ if(v==null||v==="") return ""; if(typeof v==="string"||typeof v==="number"||typeof v==="boolean") return String(v); if(Array.isArray(v)) return v.map(x=>fillRefTxt(x,n)).filter(Boolean).join("；"); if(typeof v!=="object") return "";
  if(v.option_a&&v.option_b) return "需安宏選擇："+v.option_a+" ／ "+v.option_b+(v.unresolved?"（尚未判定）":"");
- const pair=[]; if(v.lasoeur!=null) pair.push("ラ・スール福岡："+fillRefTxt(v.lasoeur,n)); if(v.monterey_fukuoka!=null) pair.push("ホテルモントレ福岡："+fillRefTxt(v.monterey_fukuoka,n)); if(pair.length) return pair.join("；");
+ const pair=[]; if(v.lasoeur!=null) pair.push("候選 A："+fillRefTxt(v.lasoeur,n)); if(v.monterey_fukuoka!=null) pair.push("候選 B："+fillRefTxt(v.monterey_fukuoka,n)); if(pair.length) return pair.join("；");
  if(v.lat!=null&&v.lng!=null) return v.lat+", "+v.lng; if(v.check_in&&v.check_out) return "入住 "+v.check_in+"、退房 "+v.check_out;
  if(v.main||v.reservation) return ["代表 "+(v.main||""),"預約 "+(v.reservation||"")].filter(s=>s.trim().length>3).join("；");
  try{ const s=JSON.stringify(v); return s&&s!=="{}"?(n&&s.length>n?s.slice(0,n)+"…":s):""; }catch(e){ return ""; } }
@@ -2535,7 +2563,7 @@ function fillRefFieldsHtml(fields,keys){ if(!fields) return ""; const ks=keys||O
 function fillRefBudgetHtml(){ const b=((D||{}).fill_ref||{}).budget; if(!b) return "";
   const vs=b.variants||{};
   const row=(k,fb)=>{const v=vs[k]; if(!v) return ""; const tot=v.total_twd!=null?v.total_twd:v.total; const n=tot!=null?Number(tot).toLocaleString("en-US"):""; return `<div class="cnt"><b>${esc(v.label||fb)}</b>：NT$ ${esc(n)}</div>`;};
-  return `<div class="card" id="fillRefBudget"><h3>預算三版（參考，須安宏確認）</h3><div class="cnt">${esc(b.disclaimer||"參考，須安宏確認。")}</div>
+  return `<div class="card" id="fillRefBudget"><h3>${Object.keys(vs).length>1?"預算三版":"預算"}（參考，須安宏確認）</h3><div class="cnt">${esc(b.disclaimer||"參考，須安宏確認。")}</div>
   ${row("comfort","舒適版")}${row("budget","平價版")}${row("mix","混搭版")}
   ${b.flights_note?`<div class="todo">${esc(String(b.flights_note))}</div>`:""}</div>`; }
 function fillRefFlightsHtml(){ const f=((D||{}).fill_ref||{}).flights; if(!f) return "";
@@ -2670,7 +2698,7 @@ document.addEventListener("click",e=>{const t=e.target.closest&&e.target.closest
  else if(k==="offer"){ if(D.rt_latest){D.rt_new=D.rt_latest; const ed=rtEdited(); if(ed.length) rtOffer(); else rtApply({});} }});
 /* ---------- 1.9.16 備份與轉移（整包匯出／匯入，不含快取與金鑰） ---------- */
 var BAK_SCHEMA="trip-maps-backup/1";
-var BAK_EXACT_IN=["plan:drafts:v1","plan:local_trips:v1","plan:bookings:new:v1","plan:lodging_jobs:v1","plan:clip_auto"];
+var BAK_EXACT_IN=["plan:drafts:v1","plan:local_trips:v1","plan:bookings:new:v1","plan:lodging_jobs:v1","plan:clip_auto","plan:lodging_prefs:v1"];
 var BAK_PREF_IN=["itin:","custom:","plan:local_trip:","plan:bookings:","plan:lodging_jobs:","plan:drafts:"];
 var BAK_EXACT_OUT=["plan:tile_cache","plan:quota_pause_until","plan:clip_seen","plan:backend_override"];
 var BAK_PREF_OUT=["search:cache:"];
@@ -2713,6 +2741,8 @@ function bakCollect(){
 function bakClassify(k){
   if(k==="plan:local_trips:v1" || k.indexOf("plan:local_trip:")===0) return "本機行程包";
   if(k==="plan:drafts:v1" || k.indexOf("plan:drafts:")===0) return "新增規劃草稿";
+  if(/:lodging_watch:/.test(k)) return "住宿追蹤清單";
+  if(k==="plan:lodging_prefs:v1") return "住宿比價條件";
   if(/:bookings:/.test(k) || k.indexOf("plan:bookings:")===0) return "訂房資料";
   if(/:decisions:/.test(k)) return "機票／租車／住宿已訂";
   if(/:notes:/.test(k) || /:final_notes$/.test(k)) return "行程備註";
@@ -3153,7 +3183,288 @@ window.__bak={
   saveFile:bakSaveFile, hint:bakHint, secretKey:bakSecretKey
 };
 
-window.__app={get AUTO(){return AUTO;},rtFetch,rtNewer,rtApply,rtOffer,rtKeepMine,rtRevert,rtEdited,parseLocationInput,queryVariants,qTokens,gmapsSearchUrl,dayArea,guessCat,classifyAg,findDup,enrichPlace,enrichAsync,searchPlaces,openSearch,bringIn,clipArm,clipTry,clipOn,suggestWhen,showPlaceCard,reverseAt,mapTypeahead,ensureMapSearch,cacheKey,nearbyParking,idbGet,idbSet,extractGmaps,applyBring,STAY_MIN,plClear,plClean,plApply,plAlert,alertTxt,alertHtml,ALERT_LV,plFetch,catsOf,restTagN,ltInc,ltAddRoute,ltDelRoute,adoptSet,rShort,ltGet,ltIndex,ltBuild,ltEntry,ltAdopt,cmpRender,cmpFromRs,cmpMetrics,rfClean,rfFetch,slotOf,get CMP(){return CMP;},lgShrink,LG_NMAX,quotaUntil,bkMsg,plQueued,plSched,QF,areaZh,zhText,userNotes,routeName,pickLoad,doneAlert,bkGate,listPoll,bkLoad,bkSave,bkRow,bkDateCell,buildXlsx,bkXlsxDownload,XLSX_COLS,lgOpen,flSplit,flJoin,flText,backendCfg,hashView,get AUTO(){return AUTO;},drLoad,drVisible,reqExport,reqText,readNewForm,selLoad,selectedRoutes,get DRAFT(){return DRAFT;},get INTAKE(){return INTAKE;},DL,BUF,decLoad,decSave,decExport,showMod,pickupDefault,dropoffDefault,get curMod(){return curMod;},bestDay,localNearby,SCATS,photonSearch,queryVariants,qTokens,localSearch,photonMulti,parseLocationInput,cpLoad,cpSave,cpId,sha1hex,searchPlaces,searchCenter,SEARCH_ENDPOINTS,openSearch,get SRVCP(){return SRVCP;},parseLoc,cuLoad,cuText,cuMerge,stopsOf,mergeByMeal,get SAME(){return SAME;},setRoute,openTrip,showTab,addTo,itin,suggested,store,exportJson,buildKml,buildCsv,buildFinal,importText,parseImport,
+/* ---------- 1.9.20 住宿找飯店 SOP：地區住宿庫／評價交叉核對／自駕與營業確認／開賣提醒／降價追蹤／優惠月曆（只讀同源 data/lodging_library/，不自動送出任何東西） ---------- */
+const LL_BASE="data/lodging_library/";
+const LL_SITES={ikyu:"一休",jalan:"じゃらん",rakuten:"楽天トラベル",agoda:"Agoda",google_hotels:"Google 飯店",official:"官網",booking:"Booking.com",expedia:"Expedia",trip:"Trip.com",other:"其他"};
+const LL_TYPES={onsen_ryokan:"溫泉旅館",ryokan:"旅館",onsen_hotel:"溫泉飯店",hotel:"飯店",pension:"民宿",other:"其他"};
+const LL_RATE={jalan:"じゃらん",rakuten:"楽天",ikyu:"一休",booking:"Booking.com",agoda:"Agoda",google:"Google"};
+const LL_TOPIC={onsen:"♨️",parking:"🅿",smoke:"🚬",noise:"🔊",meals:"🍱",renovation:"🔨"};
+const LL_OPBAD={suspended:"⛔ 停業",renovation:"⛔ 整修",closed:"⛔ 歇業",bankrupt:"⛔ 歇業（破產）"};
+const LL_STO={top_pick:0,candidate:1,rejected:2};
+const LL={state:"idle",index:null,regions:{},deals:{state:"idle",data:null},sel:{},open:{},hb:{},prefsOpen:false,_p:null};
+const LW_FAM=()=>!!window.__FAMILY;
+const LP_KEY="plan:lodging_prefs:v1";
+const LW_BAD=/booking_code|booking_ref|reservation|confirmation|payment|card|token|password/i;
+function llToday(){ if(typeof window.__LL_TODAY__==="string"&&/^\d{4}-\d{2}-\d{2}$/.test(window.__LL_TODAY__)) return window.__LL_TODAY__; const d=new Date(),p=n=>String(n).padStart(2,"0"); return d.getFullYear()+"-"+p(d.getMonth()+1)+"-"+p(d.getDate());}
+function llD(s){return typeof s==="string"&&/^\d{4}-\d{2}-\d{2}/.test(s)?s.slice(0,10):null;}
+function llAdd(ymd,n){const d=new Date(ymd+"T00:00:00Z"); d.setUTCDate(d.getUTCDate()+n); return d.toISOString().slice(0,10);}
+function llAddM(ymd,n){const d=new Date(ymd+"T00:00:00Z"); d.setUTCMonth(d.getUTCMonth()+n); return d.toISOString().slice(0,10);}
+function llDiff(a,b){return Math.round((Date.parse(a+"T00:00:00Z")-Date.parse(b+"T00:00:00Z"))/864e5);}
+function llS(v){return typeof v==="string"&&v.trim()?v:null;}
+function llN(v){return typeof v==="number"&&isFinite(v)?v:null;}
+function llA(v){return Array.isArray(v)?v:[];}
+function llO(v){return v&&typeof v==="object"&&!Array.isArray(v)?v:null;}
+function llV(v){return v==null||v===""?"查無":esc(v);}
+function llYen(n){return "¥"+Number(n).toLocaleString("en-US");}
+function llHttps(u){return !!(llS(u)&&/^https:\/\//i.test(u));}
+function llUrl(u,t){return llHttps(u)?`<a href="${esc(u)}" target="_blank" rel="noopener">${esc(t||"連結")} ↗</a>`:(llS(u)?esc(u):"查無");}
+function llMc(mc){return llS(mc)?mcHtml(mc):"查無";}
+function llSite(s){return esc(LL_SITES[s]||s||"其他");}
+function llRouteL(){return D?(D.lodging||[]).filter(l=>l.route===route):[];}
+/* 載入（只在打開「🏨 住宿」時呼叫） */
+function llLoad(force){
+ if(LL._p&&!force) return LL._p;
+ LL.state="loading"; LL.index=null; if(force){LL.regions={}; LL.deals={state:"idle",data:null};}
+ let st="building";
+ LL._p=fetchJson(LL_BASE+"index.json",false).then(j=>{
+  if(!llO(j)||j.schema!=="agency.lodging_library.index.v1"){st="error"; return;}
+  const regs=llA(j.regions).filter(r=>llO(r)&&llS(r.id)&&llS(r.file));
+  LL.index=Object.assign({},j,{regions:regs});
+  st=(j.status==="building"||!regs.length)?"building":"ready";
+ },e=>{st=(e&&e.name==="SyntaxError")?"error":"building";})
+ .then(()=>st==="ready"?llDealsLoad():(LL.deals={state:"building",data:null}))
+ .catch(()=>{LL.deals={state:"building",data:null};})
+ .then(()=>{LL.state=st; llRefresh(); llPrefetch();}).catch(()=>{});
+ return LL._p;
+}
+function llDealsLoad(){ const dc=llO(LL.index&&LL.index.deals_calendar); if(!dc||!llS(dc.file)){LL.deals={state:"building",data:null}; return Promise.resolve();}
+ LL.deals={state:"loading",data:null};
+ return fetchJson(LL_BASE+dc.file+"?v="+encodeURIComponent(dc.data_version||""),true).then(j=>{LL.deals=llO(j)&&j.schema==="agency.lodging_deals_calendar.v1"?{state:"ready",data:j}:{state:"building",data:null};});}
+function llRegionFor(l){ if(!l||!LL.index) return null; const R=LL.index.regions, mt=r=>llO(r.match)||{};
+ let r=R.find(x=>llA(mt(x).base_keys).indexOf(l.base)>=0); if(r) return r;
+ const tx=String(l.area||"")+" "+String(l.name||"");
+ r=R.find(x=>llA(mt(x).area_keywords).some(k=>llS(k)&&tx.indexOf(k)>=0)); if(r) return r;
+ const la=Number(l.lat), ln=Number(l.lng);
+ if(l.lat!=null&&l.lng!=null&&isFinite(la)&&isFinite(ln)) r=R.find(x=>{const b=mt(x).bbox; return Array.isArray(b)&&b.length===4&&la>=b[0]&&la<=b[2]&&ln>=b[1]&&ln<=b[3];});
+ return r||null;}
+function llRegLoad(r){ if(!r) return Promise.resolve(null); const c=LL.regions[r.id]; if(c&&c.p) return c.p;
+ const o={state:"loading",data:null,hotels:[]}; LL.regions[r.id]=o;
+ if(r.hotel_count===0){o.state="building"; o.p=Promise.resolve(o); return o.p;}
+ o.p=fetchJson(LL_BASE+r.file+"?v="+encodeURIComponent(r.data_version||""),true).then(j=>{
+  if(llO(j)&&j.schema==="agency.lodging_library.region.v1"){o.data=j; o.hotels=llA(j.hotels).filter(h=>llO(h)&&llS(h.id)); o.state="ready";} else o.state="building"; return o;});
+ return o.p;}
+function llLoadAll(){return Promise.all((LL.index?LL.index.regions:[]).map(llRegLoad));}
+function llPrefetch(){ if(LL.state!=="ready"||curMod!=="lodging") return; llRouteL().forEach(l=>{const r=llRegionFor(l); if(r) llRegLoad(r).then(()=>llFillLib(l.base));});}
+function llKick(){ if(LL.state==="idle") llLoad(); else if(LL.state==="ready") llPrefetch();}
+function llRefresh(){ if(curMod!=="lodging") return; const s=$("#llStatus"); if(s) s.outerHTML=llStatusHtml(); const dp=$("#dcPanel"); if(dp) dp.outerHTML=dcPanelHtml(); llRouteL().forEach(l=>llFillLib(l.base));}
+function llFillLib(base){ const d=[...document.querySelectorAll(".llib")].find(x=>x.dataset.base===base); if(!d) return; const l=llRouteL().find(x=>x.base===base); if(!l) return;
+ const x=llLibParts(l); d.querySelector("summary").textContent=x.sum; d.querySelector(".llbody").innerHTML=x.body;}
+function llFindHotel(id){ for(const k in LL.regions){ const c=LL.regions[k]; if(c&&c.state==="ready"){ const h=c.hotels.find(x=>x.id===id); if(h) return {h:h,rid:k}; } } return null;}
+function llBaseFor(h,base){ const L=llRouteL(); let l=base&&L.find(x=>x.base===base); if(l) return l;
+ if(LL.hb[h.id]){l=L.find(x=>x.base===LL.hb[h.id]); if(l) return l;}
+ const s=llA(h.near_segments).find(s=>llO(s)&&s.trip_id===TID&&s.route===route); if(s){l=L.find(x=>x.base===s.base_key); if(l) return l;}
+ return L.find(x=>{const r=llRegionFor(x), c=r&&LL.regions[r.id]; return c&&c.hotels&&c.hotels.indexOf(h)>=0;})||null;}
+/* 判斷 */
+function llStatus(h){const s=llO(h.screening), v=s&&s.status; return LL_STO.hasOwnProperty(v)?v:"candidate";}
+function llSort(hs){return hs.slice().sort((a,b)=>{const d=LL_STO[llStatus(a)]-LL_STO[llStatus(b)]; if(d) return d; const ra=llN((a.screening||{}).rank), rb=llN((b.screening||{}).rank); return (ra==null?999:ra)-(rb==null?999:rb);});}
+function llFbInf(h){const k=llA(h.recommendations).filter(llO).map(r=>r.kind); return k.indexOf("fb_group")>=0&&k.some(x=>/^(influencer|youtube|blog|ig|threads)$/.test(x));}
+function llNear(h,l){const ns=llA(h.near_segments).filter(s=>llO(s)&&s.trip_id===TID&&s.route===route); let s=ns.find(s=>s.base_key===l.base);
+ if(!s&&/^lb_/.test(String(l.base))){const r=llRegionFor(l), bk=r?llA((llO(r.match)||{}).base_keys):[]; s=ns.find(s=>bk.indexOf(s.base_key)>=0);} return s||null;}
+function llBest(ps,l){let b=null; ps.forEach(p=>{ if(p.status==="ok"&&p.price_basis==="total"&&llN(p.total_jpy)!=null&&p.check_in===l.check_in&&p.check_out===l.check_out&&(!b||p.total_jpy<b.total_jpy)) b=p;}); return b;}
+function llPriceTxt(p,l){ let t;
+ if(p.status==="not_on_sale") t="未開賣"; else if(p.status==="sold_out") t="滿房";
+ else if(p.status==="ok"){ if(p.price_basis==="per_night"&&llN(p.per_night_jpy)!=null){const n=llN(Number(l.nights))||llN(p.nights)||1; t=`${llYen(p.per_night_jpy)}／晚 ×${n} 晚≈${llYen(p.per_night_jpy*n)}（估算）`;} else t=llN(p.total_jpy)!=null?llYen(p.total_jpy):"查無";}
+ else t="查無";
+ const f=[]; if(p.tax==="unknown") f.push("稅別待確認");
+ const ca=llD(p.checked_at); if(ca&&llDiff(llToday(),ca)>=30) f.push(`<span class="llstale">舊價，需重新確認</span>`);
+ if((llS(p.check_in)&&p.check_in!==l.check_in)||(llS(p.check_out)&&p.check_out!==l.check_out)) f.push(`<span class="lldd">日期不同，僅參考</span>`);
+ return esc(t)+(f.length?"（"+f.join("・")+"）":"");}
+function llFit(h,pf){ const rs=llA(h.rooms).filter(llO), mn=llN(Number(pf.min_sqm));
+ if(rs.some(r=>r.fits_party===false||(llN(r.size_sqm)!=null&&mn!=null&&r.size_sqm<mn))) return `<span class="tag llbad">不符條件</span>`;
+ const t=rs.find(r=>llN(r.size_sqm)==null&&llN(r.tatami)!=null); return t?`<span class="tag">面積未核（${t.tatami} 疊）</span>`:"";}
+function llOpHtml(h){const o=llO(h.operation)||{}, s=o.status; if(s==="open") return `<span class="tag llop ok" data-op="open">✅ 營業中（確認於 ${llV(llD(o.checked_on))}）</span>`; if(LL_OPBAD[s]) return `<span class="tag llop bad" data-op="${s}">${LL_OPBAD[s]}</span>`; return `<span class="tag llop" data-op="unknown">營業未確認</span>`;}
+function llSaleHtml(h){const b=llO(h.booking_opens)||{}, s=b.status; if(s==="on_sale") return `<span class="tag llsale ok" data-sale="on_sale">已開賣</span>`;
+ if(s==="not_yet") return `<span class="tag llsale" data-sale="not_yet">${llD(b.opens_on)?`未開賣（預計 ${esc(llD(b.opens_on))} 開放）`:llS(b.rule)?`未開賣（規則：${esc(b.rule)}）`:"未開賣"}</span>`;
+ return `<span class="tag llsale" data-sale="unknown">開賣日查無</span>`;}
+function llRevParts(h){return llA(h.ratings).filter(llO).map(r=>{ if(r.source==="google") return llS(r.display)?`Google ${esc(r.display)}`:(llHttps(r.url)?`<a href="${esc(r.url)}" target="_blank" rel="noopener">Google 評分 ↗</a>`:"");
+ const s=llN(r.score); return s==null?"":`${esc(LL_RATE[r.source]||r.source||"其他")} ${s}${llN(r.count)!=null?`（${r.count.toLocaleString("en-US")} 則）`:""}`;}).filter(Boolean);}
+function llRevHtml(h){const p=llRevParts(h); return `<div class="llrev">⭐ ${p.length?p.join("・"):"評分查無"}</div>`;}
+function llNegHtml(h){const rc=llO(h.review_check); if(!rc) return "評價尚未交叉核對"; const ng=llA(rc.negatives).filter(llO); return ng.length?ng.map(n=>`${LL_TOPIC[n.topic]||"•"} ${esc(n.text||"")}`).join("<br>"):"查無";}
+function llOldRec(h,td){ const ds=llA(h.recommendations).filter(llO).map(r=>llD(r.published_at)).filter(Boolean).sort(); const last=ds[ds.length-1]||null, rc=llO(h.review_check);
+ return ((last&&llDiff(td,last)>730)||(rc&&rc.stale_recommendation===true))?`<div class="llwarn">⚠️ 推薦文較舊（${last?last.slice(0,4):"查無"}）</div>`:"";}
+function llClosedHit(dc,l){ const cd=llA(dc.closed_days).filter(x=>typeof x==="string"), ci=llD(l.check_in), co=llD(l.check_out); if(!ci||!cd.length) return null;
+ const wd=["sun","mon","tue","wed","thu","fri","sat"][new Date(ci+"T00:00:00Z").getUTCDay()]; if(cd.indexOf(wd)>=0) return ci;
+ const end=co&&co>ci?co:llAdd(ci,1); for(let d=ci; d<end; d=llAdd(d,1)) if(cd.indexOf(d)>=0) return d; return null;}
+function llRoomsTxt(h){const rs=llA(h.rooms).filter(llO); return rs.length?rs.map(r=>`${llV(r.room_name)}：${llN(r.size_sqm)!=null?r.size_sqm+"㎡":llN(r.tatami)!=null?"面積未核（"+r.tatami+" 疊）":"面積查無"}・最多 ${llN(r.max_guests)!=null?r.max_guests+" 人":"查無"}${r.fits_party===false?"・不符條件":""}`).join("<br>"):"查無";}
+function llParkTxt(pk){return llN(pk.lat)!=null&&llN(pk.lng)!=null?`${pk.lat}, ${pk.lng} <a class="btn" href="${esc(navUrl(pk.lat,pk.lng))}" target="_blank" rel="noopener">▶ 導航到停車場</a>`:"查無";}
+function llFields(h,l){ const pf=lpLoad(), ps=llA(h.prices).filter(llO).filter(p=>pf.excluded_sites.indexOf(p.site)<0), b=llBest(ps,l);
+ const dc=llO(h.drive_check)||{}, pk=llO(dc.parking)||{}, rd=llO(dc.road)||{}, bo=llO(h.booking_opens)||{};
+ let ns=llA(h.near_segments).filter(s=>llO(s)&&s.trip_id===TID); const nr=ns.filter(s=>s.route===route); if(nr.length) ns=nr;
+ const fcr=llA(h.prices).map(p=>p&&llS(p.free_cancel_rule_text)).filter(Boolean);
+ const recs=llA(h.recommendations).filter(llO);
+ const dn=[dc.note,rd.note,rd.night_drive,rd.winter_closure,pk.note,dc.closed_days_note].filter(llS);
+ return [
+  ["price","價格與比價來源",(b?`${llYen(b.total_jpy)}（${llSite(b.site)}・總價）`:"查無")+(ps.length?`<div class="cnt">來源：${[...new Set(ps.map(p=>LL_SITES[p.site]||p.site||"其他"))].map(esc).join("、")}</div>`:"")],
+  ["dinner_time","晚餐時間",llV(h.dinner_time)],
+  ["free_cancel_until","免費取消期限",llV(llD(h.free_cancel_until))+(fcr.length?`<div class="cnt">${esc(fcr[0])}</div>`:"")],
+  ["booking_opens","開放預訂時間",llSaleHtml(h)+(llS(bo.rule)?`<div class="cnt">規則：${esc(bo.rule)}</div>`:"")],
+  ["google_maps_url","Google Maps 店家頁",llUrl(h.google_maps_url,"Google 地圖")],
+  ["parking_coords","停車場座標",llParkTxt(pk)],
+  ["mapcode","MapCode",llMc(pk.mapcode||h.mapcode)],
+  ["phone","電話",llV(h.phone)],
+  ["near_segment","靠近行程哪一段",ns.length?ns.slice(0,4).map(s=>{const m=llN(s.drive_min_to_next_first_stop); return `路線 ${esc(s.route)}・${esc(s.base_key||"")} → 隔天第一站 ${llV(s.next_first_stop)}${m!=null?`（${m>60?`<span class="llwarn">${m} 分，超過 1 小時</span>`:m+" 分"}）`:""}`;}).join("<br>"):"查無"],
+  ["recommendations","推薦來源",recs.length?recs.map(r=>`${esc({fb_group:"FB 社團",youtube:"YouTube",blog:"部落格",influencer:"網紅",ig:"IG",threads:"Threads",other:"其他"}[r.kind]||"其他")}${r.published_at?"（"+esc(llD(r.published_at)||"")+"）":""}`).join("、"):"查無"],
+  ["ratings","評分與差評重點",(llRevParts(h).join("・")||"評分查無")+`<div class="cnt">${llNegHtml(h)}</div>`],
+  ["drive_notes","自駕注意事項",dn.length?dn.map(esc).join("；"):"查無"]];}
+/* 住宿模組 HTML */
+function llStatusHtml(){ const s=LL.state==="idle"?"loading":LL.state; let t;
+ if(s==="loading") t="讀取住宿庫中…";
+ else if(s==="building") t="📚 住宿庫建置中（住宿部整理中）。目前先用下方各訂房網連結比價。";
+ else if(s==="error") t="住宿庫資料格式有誤，已略過（其他功能不受影響）";
+ else { const R=LL.index.regions, m=R.reduce((a,r)=>a+(llN(r.hotel_count)||0),0); t=`📚 地區住宿庫：${R.length} 區、${m} 間（更新 ${llD(LL.index.updated_at)||"查無"}）`;}
+ return `<div class="card" id="llStatus" data-state="${s}"><div class="desc"><b>${esc(t)}</b></div>${s==="ready"&&LL.index.sample===true?`<div class="llsample">⚠️ 範例資料（測試用，非真實價格）</div>`:""}${s==="ready"?`<div class="cnt">各據點卡下方「📚 住宿庫候選」可看比價、評價核對、自駕與營業確認、開賣狀態；價格與評分都標查詢日，下訂前以訂房網頁面為準。只查詢與比較，不會自動訂房或付款。</div>`:""}</div>`;}
+function lpHtml(){const p=lpLoad(); return `<details class="card" id="lpPrefs"${LL.prefsOpen?" open":""}><summary>⚙️ 比價條件（${p.adults} 大人・${p.rooms} 間・≥${p.min_sqm}㎡${p.excluded_sites.length?"・不用 "+p.excluded_sites.map(s=>LL_SITES[s]).join("、"):""}）</summary><form id="lpForm" class="lpf"><label>人數<input name="adults" type="number" min="1" inputmode="numeric" value="${p.adults}"></label><label>房間數<input name="rooms" type="number" min="1" inputmode="numeric" value="${p.rooms}"></label><label>最小面積㎡<input name="min_sqm" type="number" min="0" inputmode="numeric" value="${p.min_sqm}"></label><fieldset><legend>不想用的訂房網（價格先隱藏，資料不刪）</legend>${Object.keys(LL_SITES).map(k=>`<label class="lpck"><input type="checkbox" name="excluded_sites" value="${k}"${p.excluded_sites.indexOf(k)>=0?" checked":""}> ${esc(LL_SITES[k])}</label>`).join("")}</fieldset><div class="cnt">比價預設不用 Booking.com（可取消勾選）；改動會立即套用，存在本機。</div></form></details>`;}
+function dcCover(ev){ if(!llD(ev.stay_from)&&!llD(ev.stay_to)) return null; const s=llD(TE&&TE.start_date), e=llD(TE&&TE.end_date)||s; if(!s) return null; return (!llD(ev.stay_from)||llD(ev.stay_from)<=s)&&(!llD(ev.stay_to)||llD(ev.stay_to)>=e);}
+function dcUpcoming(){ if(LL.deals.state!=="ready") return []; const td=llToday(), lim=llAddM(td,6), out=[];
+ llA(LL.deals.data.events).filter(llO).forEach(ev=>{ const s=llD(ev.start), e=llD(ev.end); let g;
+  if(!s&&!e){ if(!llS(ev.recurrence)) return; g=2;} else { if(e&&e<td) return; if(s&&s>lim) return; g=(!s||s<=td)?0:1;}
+  out.push({ev:ev,g:g,s:s||""});});
+ out.sort((a,b)=>a.g-b.g||(a.s<b.s?-1:a.s>b.s?1:0)); return out.map(x=>x.ev);}
+function dcT(s){s=llS(s); return s?(s.length>10?s.slice(0,16).replace("T"," "):s):"查無";}
+function dcPanelHtml(){ const st=LL.deals.state==="ready"?"ready":(LL.state==="idle"||LL.state==="loading"||LL.deals.state==="loading")?"loading":"building";
+ if(st!=="ready") return `<div class="card" id="dcPanel" data-state="${st}"><h3>🗓 訂房網優惠月曆</h3><div class="cnt">${st==="loading"?"讀取中…":"優惠月曆建置中"}</div></div>`;
+ const ex=lpLoad().excluded_sites, evs=dcUpcoming();
+ return `<div class="card" id="dcPanel" data-state="ready"><h3>🗓 訂房網優惠月曆（今天起 6 個月）</h3>${evs.map(ev=>{const c=dcCover(ev), jp=ev.timezone==="Asia/Tokyo";
+  const per=(llD(ev.start)||llD(ev.end))?`${esc(dcT(ev.start))}～${esc(dcT(ev.end))}${jp?"（日本時間）":""}`:`不固定：${esc(ev.recurrence||"查無")}`;
+  return `<div class="dcev${ex.indexOf(ev.site)>=0?" dim":""}" data-id="${esc(ev.id||"")}"><b>${llSite(ev.site)}</b> ${esc(ev.title||"")}${ev.status==="estimated"?' <span class="tag">估計</span>':""}<div class="cnt">${per}${llS(ev.conditions)?"｜"+esc(ev.conditions):""}${llD(ev.coupon_valid_until)?"｜折價券期限 "+esc(llD(ev.coupon_valid_until)):""}｜入住期：${c===true?"✅ 涵蓋本行程":c===false?"❌ 不涵蓋本行程":"未註明"}${llHttps(ev.source_url)?"｜"+llUrl(ev.source_url,"來源"):""}</div></div>`;}).join("")||`<div class="cnt">6 個月內沒有活動</div>`}<div class="cnt">日期以官方公告為準；標「估計」的是依往年推估。</div></div>`;}
+function lwPanelHtml(){ if(LW_FAM()) return ""; const td=llToday(), its=lwLoad().items.filter(x=>x.trip_id===TID||!x.trip_id);
+ return `<div class="card" id="lwPanel"><h3>🔔 住宿追蹤清單（${its.length}）</h3><div class="cnt">開賣提醒：排程每週檢查到開賣；降價追蹤：每週比價，免費取消期限前一週再查一次。要不要重訂由安宏決定。</div><div class="cnt">定期檢查由排程（Grok Bot）做，這裡不會自動送出任何東西；匯出後請交給 Grok Bot。</div>${its.map(x=>lwRowHtml(x,td)).join("")||`<div class="cnt">還沒有登記。可在各據點卡按「🔔 登記開賣提醒」；已訂的據點可按「📉 登記降價追蹤」。</div>`}<div class="btns"><button class="btn" type="button" id="lwExport">⬇ 匯出追蹤清單 JSON（給排程）</button><button class="btn" type="button" id="lwCopy">📋 複製</button></div></div>`;}
+function lwRowHtml(x,td){ let due;
+ if(x.kind==="price_drop"){ const fc=llD(x.free_cancel_until);
+  due=fc?(fc<td?`<span class="llwarn">已過期限（${esc(fc)}）</span>`:`免費取消期限 ${esc(fc)}（剩 ${llDiff(fc,td)} 天）`):"免費取消期限查無";
+  due+=`<div class="cnt">每週比價；期限前一週（${llV(llD(x.final_check_on))}）再查一次；過期自動標『已過期限』</div>`;
+  if(llO(x.baseline)&&llN(x.baseline.total_jpy)!=null) due+=`<div class="cnt">登記時總價 ${llYen(x.baseline.total_jpy)}${x.baseline.site?"（"+llSite(x.baseline.site)+"）":""}</div>`;
+ } else { const op=llD(x.opens_on); due=op?(td>=op?`<span class="llwarn">應已開賣，等排程確認（${esc(op)}）</span>`:`開賣日 ${esc(op)}（剩 ${llDiff(op,td)} 天）`):"開賣日查無：排程每週檢查"; if(llS(x.open_rule)) due+=`<div class="cnt">規則：${esc(x.open_rule)}</div>`;}
+ return `<div class="lwrow" data-id="${esc(x.id)}"><div><b>${x.kind==="price_drop"?"📉 降價追蹤":"🔔 開賣提醒"}</b>｜${esc(x.hotel_name||"查無")}｜據點 ${esc(x.base||"查無")}｜${esc(x.check_in||"")}～${esc(x.check_out||"")}｜${x.status==="done"?"已完成":"追蹤中"}</div><div class="desc">${due}</div><div class="btns">${x.status!=="done"?`<button class="btn" type="button" data-lwdone="${esc(x.id)}">✓ 完成</button>`:""}<button class="btn warn" type="button" data-lwdel="${esc(x.id)}">刪除</button></div></div>`;}
+function llTopHtml(){return llStatusHtml()+lpHtml()+dcPanelHtml()+lwPanelHtml();}
+function llCmpBar(base){const n=(LL.sel[base]||[]).length; return n>=2?`<button class="btn pri" type="button" data-llcmpgo="${esc(base)}">📊 比較已勾選（${n}）</button>`:`<span class="cnt">勾 2～4 間可並排比較</span>`;}
+function llRowHtml(h,l,isRej){ const st=llStatus(h), pf=lpLoad(), sc=llO(h.screening)||{}, sel=LL.sel[l.base]||[];
+ const bd=[`<span class="tag llst ${st}">${{top_pick:"首推",candidate:"候選",rejected:"剔除"}[st]}</span>`,llOpHtml(h),llSaleHtml(h)];
+ if(llFbInf(h)) bd.push(`<span class="tag llfb">FB＋網紅都推薦</span>`);
+ if(llNear(h,l)) bd.push(`<span class="tag llnear">本行程 路線${esc(route)}</span>`);
+ const fit=llFit(h,pf); if(fit) bd.push(fit);
+ const ps=llA(h.prices).filter(llO), ex=pf.excluded_sites, vis=ps.filter(p=>ex.indexOf(p.site)<0), nEx=new Set(ps.filter(p=>ex.indexOf(p.site)>=0).map(p=>p.site)).size, b=llBest(vis,l);
+ const nm=llS(h.name)||llS(h.name_ja)||h.id;
+ return `<div class="llc" data-hid="${esc(h.id)}" data-status="${st}"><div class="llh"><b>${esc(nm)}</b>${llS(h.name_zh)&&h.name_zh!==nm?` <span class="cnt">${esc(h.name_zh)}</span>`:""} <span class="cnt">${esc(LL_TYPES[h.type]||"類型查無")}</span></div><div class="tags">${bd.join("")}</div>${isRej?`<div class="llreason">剔除原因：${llV(llS(sc.reason))}</div>`:""}<div class="llp"><b>最低價</b> ${b?`${llYen(b.total_jpy)}（${llSite(b.site)}・總價）`:"查無"}${nEx?` <span class="cnt">已排除 ${nEx} 個訂房網</span>`:""}${vis.length?`<div class="cnt">${vis.map(p=>`${llSite(p.site)} ${llPriceTxt(p,l)}`).join("｜")}</div>`:""}</div>${llRevHtml(h)}<div class="btns llbtns"><button class="btn" type="button" data-lldetail="${esc(h.id)}">🔍 詳情</button><label class="btn llcmpl"><input type="checkbox" data-llcmp="${esc(h.id)}" data-base="${esc(l.base)}"${sel.indexOf(h.id)>=0?" checked":""}> 📊 加入比較</label>${llHttps(h.google_maps_url)?`<a class="btn" href="${esc(h.google_maps_url)}" target="_blank" rel="noopener">🗺 Google 地圖</a>`:""}${!LW_FAM()&&(llO(h.booking_opens)||{}).status!=="on_sale"?`<button class="btn" type="button" data-lwopen="${esc(h.id)}" data-base="${esc(l.base)}">🔔 登記開賣提醒</button>`:""}</div></div>`;}
+function llLibParts(l){ const S="📚 住宿庫候選";
+ if(LL.state==="idle"||LL.state==="loading") return {sum:S,body:`<div class="cnt">讀取住宿庫中…</div>`};
+ if(LL.state==="building") return {sum:S,body:`<div class="cnt">住宿庫建置中（住宿部整理中），先用上方訂房網連結比價。</div>`};
+ if(LL.state==="error") return {sum:S,body:`<div class="cnt">住宿庫資料格式有誤，已略過。</div>`};
+ const r=llRegionFor(l), c=r&&LL.regions[r.id];
+ if(!r) return {sum:S+"（0）",body:`<div class="cnt">此區尚無住宿庫</div>`};
+ if(!c||c.state==="loading") return {sum:S,body:`<div class="cnt">讀取「${esc(r.name||r.id)}」住宿庫中…</div>`};
+ if(c.state!=="ready") return {sum:S+"（0）",body:`<div class="cnt">此區住宿庫建置中</div>`};
+ const hs=llSort(c.hotels); hs.forEach(h=>{LL.hb[h.id]=l.base;});
+ const ids=hs.map(h=>h.id); LL.sel[l.base]=(LL.sel[l.base]||[]).filter(id=>ids.indexOf(id)>=0);
+ const act=hs.filter(h=>llStatus(h)!=="rejected"), rej=hs.filter(h=>llStatus(h)==="rejected");
+ let b=`<div class="cnt">地區：${esc(r.name||r.id)}（${hs.length} 間）</div>`+(act.map(h=>llRowHtml(h,l)).join("")||`<div class="cnt">沒有候選</div>`);
+ if(rej.length) b+=`<details class="llrej" open><summary>剔除名單（${rej.length}，附原因）</summary>${rej.map(h=>llRowHtml(h,l,true)).join("")}</details>`;
+ b+=`<div class="llcmpbar" data-base="${esc(l.base)}">${llCmpBar(l.base)}</div>`;
+ return {sum:`${S}（${hs.length}）`,body:b};}
+function llibHtml(l){const x=llLibParts(l); return `<details class="llib" data-base="${esc(l.base)}"${LL.open[l.base]?" open":""}><summary>${esc(x.sum)}</summary><div class="llbody">${x.body}</div></details>`;}
+function lwBtnsHtml(l){ if(LW_FAM()) return ""; const bk=!!(l.booking||decGet("lodging:"+l.base));
+ return `<div class="btns lwbtns"><button class="btn" type="button" data-lwopenm="${esc(l.base)}">🔔 登記開賣提醒</button>${bk?`<button class="btn" type="button" data-lwdrop="${esc(l.base)}">📉 登記降價追蹤</button>`:""}</div>`;}
+/* 詳情與比較 */
+function llOpenDetail(id,base){ const f=llFindHotel(id); if(f){llShowDetail(f.h,base); return Promise.resolve(true);}
+ return llLoad().then(()=>LL.state==="ready"?llLoadAll():null).then(()=>{const g=llFindHotel(id); if(g){llShowDetail(g.h,base); return true;} toast("住宿庫找不到這間"); return false;});}
+function llShowDetail(h,base){ const l=llBaseFor(h,base)||{}, pf=lpLoad(), td=llToday(), sec=(k,t,b)=>`<div class="llsec" data-sec="${k}"><h4>${t}</h4>${b}</div>`;
+ const ps=llA(h.prices).filter(llO), ex=pf.excluded_sites;
+ const pb=ps.length?`<div class="llw"><table class="llt"><tr><th>訂房網</th><th>價格</th><th>房型／餐食</th><th>免費取消</th><th>會員價／折價券</th><th>查詢日</th></tr>${ps.map(p=>{const c=llO(p.coupon), x=ex.indexOf(p.site)>=0;
+  return `<tr${x?' class="llex"':""}><td>${llHttps(p.url)?llUrl(p.url,LL_SITES[p.site]||p.site||"其他"):llSite(p.site)}${x?"（已排除）":""}</td><td>${llPriceTxt(p,l)}${llS(p.tax_note)?`<div class="cnt">${esc(p.tax_note)}</div>`:""}</td><td>${llV(p.room_name)}${llN(p.size_sqm)!=null?`（${p.size_sqm}㎡）`:""}／${llV(p.meals)}</td><td>${llV(llD(p.free_cancel_until))}${llS(p.free_cancel_rule_text)?`<div class="cnt">${esc(p.free_cancel_rule_text)}</div>`:""}</td><td>${llN(p.member_price_jpy)!=null?"會員價 "+llYen(p.member_price_jpy):"會員價 查無"}${c?`<div>🎟 ${esc(c.name||"折價券")} ${esc(c.discount||"")}（期限 ${llV(llD(c.valid_until))}）${llS(c.conditions)?"・"+esc(c.conditions):""}</div>`:""}</td><td>${llV(llD(p.checked_at))}</td></tr>`;}).join("")}</table></div>`:`<div class="cnt">價格查無</div>`;
+ const rt=llA(h.ratings).filter(llO), rc=llO(h.review_check);
+ let rb=rt.length?`<div class="llw"><table class="llt"><tr><th>來源</th><th>分數</th><th>則數</th><th>查詢日</th><th>連結</th></tr>${rt.map(r=>r.source==="google"?`<tr><td>Google</td><td>${llS(r.display)?esc(r.display):"只放連結"}</td><td>—</td><td>${llV(llD(r.checked_at))}</td><td>${llUrl(r.url,"Google 評分")}</td></tr>`:`<tr><td>${esc(LL_RATE[r.source]||r.source||"其他")}</td><td>${llN(r.score)!=null?r.score+"／"+(llN(r.scale)||5):"查無"}</td><td>${llN(r.count)!=null?r.count.toLocaleString("en-US")+" 則":"查無"}</td><td>${llV(llD(r.checked_at))}</td><td>${llUrl(r.url,"看評分")}</td></tr>`).join("")}</table></div>`:`<div class="cnt">評分查無</div>`;
+ if(!rc) rb+=`<div class="llwarn">評價尚未交叉核對</div>`;
+ else { if(rc.rating_gap===true) rb+=`<div class="llwarn">⚠️ 推薦與評分落差大${llS(rc.rating_gap_note)?"："+esc(rc.rating_gap_note):""}</div>`;
+  const ng=llA(rc.negatives).filter(llO); rb+=`<div class="desc"><b>${esc(llS(rc.period)||"近一年")}差評重點</b>（核對於 ${llV(llD(rc.checked_at))}）${ng.length?"<ul>"+ng.map(n=>`<li>${LL_TOPIC[n.topic]||"•"} ${esc(n.text||"")}${llD(n.date)?`（${esc(llD(n.date))}）`:""} ${llHttps(n.source_url)?llUrl(n.source_url,"來源"):""}</li>`).join("")+"</ul>":"：查無"}</div>${llS(rc.note)?`<div class="cnt">${esc(rc.note)}</div>`:""}`;}
+ rb+=llOldRec(h,td);
+ const dc=llO(h.drive_check); let db;
+ if(!dc) db=`<div class="cnt">自駕檢查查無</div>`;
+ else { const pk=llO(dc.parking)||{}, rd=llO(dc.road)||{}, fp=llO(dc.from_prev)||{}, yn=v=>v===true?"是":v===false?"否":"查無", cd=llA(dc.closed_days).filter(llS);
+  db=`<div class="llw"><table class="llt"><tr><th>停車場</th><td>${pk.available===true?"有":pk.available===false?"無":"查無"}；免費：${yn(pk.free)}；費用：${llV(pk.fee)}；需預約：${yn(pk.reservation_required)}；屋頂：${yn(pk.covered)}</td></tr><tr><th>限高／車寬</th><td>${llN(pk.height_limit_m)!=null?pk.height_limit_m+" m":"查無"}／${llN(pk.width_limit_m)!=null?pk.width_limit_m+" m":"查無"}</td></tr><tr><th>離櫃台</th><td>${llV(pk.distance_to_front)}</td></tr><tr><th>停車場座標</th><td>${llParkTxt(pk)}</td></tr><tr><th>MapCode</th><td>${llMc(pk.mapcode||h.mapcode)}${llS(pk.mapcode_source)?`<div class="cnt">來源：${esc(pk.mapcode_source)}</div>`:""}</td></tr><tr><th>路況</th><td>山路：${yn(rd.mountain_road)}；夜間：${llV(rd.night_drive)}；冬季封路：${llV(rd.winter_closure)}${llS(rd.note)?"；"+esc(rd.note):""}</td></tr><tr><th>前一站車程</th><td>${llS(fp.from)?esc(fp.from)+" → ":""}${llN(fp.minutes)!=null?fp.minutes+" 分":"查無"}${llS(fp.source)?`（${esc(fp.source)}）`:""}</td></tr><tr><th>時間</th><td>check-in ${llV(h.check_in_time)}；最晚 check-in ${llV(h.last_check_in)}；check-out ${llV(h.check_out_time)}；晚餐 ${llV(h.dinner_time)}${dc.dinner_fits===false?"（行程可能趕不上晚餐）":""}</td></tr><tr><th>公休日</th><td>${cd.length?cd.map(esc).join("、"):"查無"}${llS(dc.closed_days_note)?"（"+esc(dc.closed_days_note)+"）":""}</td></tr></table></div>${llS(pk.note)?`<div class="cnt">${esc(pk.note)}</div>`:""}${llS(dc.note)?`<div class="cnt">${esc(dc.note)}</div>`:""}`;
+  const hit=llClosedHit(dc,l); if(hit) db+=`<div class="llwarn">⚠️ 公休日撞到入住日（${esc(hit)}）</div>`;}
+ const op=llO(h.operation)||{}, ck=llD(op.checked_on), dep=llD(TE&&TE.start_date);
+ let ob=llOpHtml(h)+(llA(op.sources).filter(llO).length?`<ul>${llA(op.sources).filter(llO).map(s=>`<li>${llUrl(s.url,s.title||"來源")}（${llV(llD(s.checked_at))}）</li>`).join("")}</ul>`:"");
+ if(dep){const d30=llAdd(dep,-30); if(td>=d30&&(!ck||ck<d30)) ob+=`<div class="llwarn">⏰ 出發前一個月內需再確認營業</div>`;}
+ if(ck&&llDiff(td,ck)>180) ob+=`<div class="llwarn">營業確認已超過半年（${esc(ck)}）</div>`;
+ if(llS(op.note)) ob+=`<div class="cnt">${esc(op.note)}</div>`;
+ const bo=llO(h.booking_opens)||{}; let sb=llSaleHtml(h)+(llS(bo.rule)?`<div class="desc">規則：${esc(bo.rule)}</div>`:"");
+ const bs=llA(bo.by_site).filter(llO); if(bs.length) sb+=`<ul>${bs.map(s=>`<li>${llSite(s.site)}：${esc({on_sale:"已開賣",not_yet:"未開賣",unknown:"查無"}[s.status]||"查無")}${llD(s.opens_on)?"（預計 "+esc(llD(s.opens_on))+"）":""}${llS(s.rule)?"・"+esc(s.rule):""} ${llHttps(s.source_url)?llUrl(s.source_url,"來源"):""}（查詢 ${llV(llD(s.checked_at))}）</li>`).join("")}</ul>`;
+ const gd=llGoodDeals(h);
+ const dlb=LL.deals.state!=="ready"?`<div class="cnt">優惠月曆建置中</div>`:gd.length?gd.map(ev=>`<div class="desc">💡 下訂好時機：${llSite(ev.site)} ${esc(ev.title||"")}（${esc(dcT(ev.start))}～${esc(dcT(ev.end))}${ev.timezone==="Asia/Tokyo"?"，日本時間":""}）${ev.status==="estimated"?' <span class="tag">估計</span>':""}</div>`).join(""):`<div class="cnt">目前沒有對得上的訂房網活動</div>`;
+ const recs=llA(h.recommendations).filter(llO);
+ const srb=recs.length?`<ul>${recs.map(r=>`<li>${esc({fb_group:"FB 社團",youtube:"YouTube",blog:"部落格",influencer:"網紅",ig:"IG",threads:"Threads",other:"其他"}[r.kind]||"其他")}：${llUrl(r.url,r.title||"推薦文")}${llS(r.author)?"・"+esc(r.author):""}（${llV(llD(r.published_at))}）${llS(r.points)?`<div class="cnt">${esc(r.points)}</div>`:""}</li>`).join("")}</ul>${llFbInf(h)?'<div class="tag llfb">FB＋網紅都推薦</div>':""}`:`<div class="cnt">推薦來源查無</div>`;
+ const F=llFields(h,l), gaps=llA(h.data_gaps).filter(llS), fb=llA(h.stays_feedback).filter(llO), pn=llA(h.public_notes).filter(llS), sc=llO(h.screening)||{};
+ openModal(`<div id="llDetail" data-hid="${esc(h.id)}"><h3>${esc(llS(h.name)||h.id)}</h3><div class="tags"><span class="tag llst ${llStatus(h)}">${{top_pick:"首推",candidate:"候選",rejected:"剔除"}[llStatus(h)]}</span>${llOpHtml(h)}${llSaleHtml(h)}${llFit(h,pf)}</div><div class="cnt">${esc([h.name_ja!==h.name?h.name_ja:null,h.name_zh,LL_TYPES[h.type],h.address].filter(llS).join("｜"))}${l.base?`｜據點 ${esc(l.base)} ${esc(l.check_in||"")}～${esc(l.check_out||"")}（${esc(l.nights||"")} 晚）`:""}</div>${llS(sc.reason)?`<div class="desc">${llStatus(h)==="rejected"?"剔除原因":"篩選說明"}：${esc(sc.reason)}</div>`:""}${pn.length?sec("notes","📝 公開備註",`<ul>${pn.map(t=>`<li>${esc(t)}</li>`).join("")}</ul>`):""}${sec("price","💴 價格與比價來源",pb)}${sec("rating","⭐ 評價交叉核對",rb)}${sec("drive","🚗 自駕檢查",db)}${sec("open","🏪 營業確認",ob)}${sec("sale","🔔 開賣",sb)}${sec("deals","🗓 下訂好時機",dlb)}${sec("sources","📣 推薦來源",srb)}${sec("fields","📋 SOP 第 8 步總表",`<div class="llw"><table class="llt">${F.map(f=>`<tr data-f="${f[0]}"><th>${f[1]}</th><td>${f[2]}</td></tr>`).join("")}</table></div>`)}${sec("gaps","🧩 資料缺口",gaps.length?`<ul>${gaps.map(g=>`<li>${esc(g)}</li>`).join("")}</ul>`:`<div class="cnt">沒有列出資料缺口</div>`)}${sec("feedback","🛏 實際入住心得",fb.length?`<ul>${fb.map(x=>`<li>${llV(llD(x.date))}${llS(x.by)?"・"+esc(x.by):""}：${esc(x.text||"")}</li>`).join("")}</ul>`:`<div class="cnt">還沒有實際入住心得</div>`)}<div class="cnt">只查詢與比較；下訂、付款請安宏親自在訂房網確認。</div></div>`);}
+function llGoodDeals(h){ if(LL.deals.state!=="ready") return []; const sites=llA(h.prices).map(p=>p&&p.site), td=llToday();
+ return llA(LL.deals.data.events).filter(llO).filter(ev=>sites.indexOf(ev.site)>=0&&llD(ev.end)&&llD(ev.end)>=td&&dcCover(ev)!==false);}
+function llCompare(base){ const hs=(LL.sel[base]||[]).slice(0,4).map(id=>{const f=llFindHotel(id); return f&&f.h;}).filter(Boolean);
+ if(hs.length<2){toast("請勾 2～4 間再比較"); return false;}
+ const l=llRouteL().find(x=>x.base===base)||{}, F=hs.map(h=>llFields(h,l));
+ const rows=F[0].map((r,i)=>[r[1],F.map(f=>f[i][2])]).concat([["面積／可住人數",hs.map(llRoomsTxt)],["營業狀態",hs.map(llOpHtml)],["開賣狀態",hs.map(llSaleHtml)],["評分",hs.map(h=>llRevParts(h).join("・")||"查無")],["差評重點",hs.map(llNegHtml)],["剔除原因",hs.map(h=>llStatus(h)==="rejected"?llV(llS((h.screening||{}).reason)):"（未剔除）")]]);
+ openModal(`<h3>📊 比較：${esc(l.area||base)}</h3><div class="llw"><table id="llCmp" class="llt"><thead><tr><th scope="col">項目</th>${hs.map(h=>`<th scope="col">${esc(llS(h.name)||h.id)}</th>`).join("")}</tr></thead><tbody>${rows.map(r=>`<tr><th scope="row">${esc(r[0])}</th>${r[1].map(v=>`<td>${v}</td>`).join("")}</tr>`).join("")}</tbody></table></div><div class="cnt">缺值一律顯示「查無」；價格只比同日期、同人數、同房數的總價。</div>`);
+ return true;}
+/* 比價條件（plan:lodging_prefs:v1） */
+function lpLoad(){ let j=null; try{j=JSON.parse(ls.get(LP_KEY)||"null");}catch(e){}
+ const ta=TE&&TE.travelers&&llN(TE.travelers.adults); const o={schema:"agency.lodging_prefs.v1",adults:ta||2,rooms:1,min_sqm:25,excluded_sites:["booking"],updated_at:null};
+ if(llO(j)){ if(llN(j.adults)) o.adults=j.adults; if(llN(j.rooms)) o.rooms=j.rooms; if(llN(j.min_sqm)!=null) o.min_sqm=j.min_sqm; if(Array.isArray(j.excluded_sites)) o.excluded_sites=j.excluded_sites.filter(x=>LL_SITES.hasOwnProperty(x)); o.updated_at=llS(j.updated_at);}
+ return o;}
+function lpSave(o){ o=llO(o)||{}; const v={schema:"agency.lodging_prefs.v1",adults:Math.max(1,parseInt(o.adults,10)||2),rooms:Math.max(1,parseInt(o.rooms,10)||1),min_sqm:Math.max(0,Number(o.min_sqm)||0),excluded_sites:llA(o.excluded_sites).filter(x=>LL_SITES.hasOwnProperty(x)),updated_at:nowISO()};
+ ls.set(LP_KEY,JSON.stringify(v)); return v;}
+/* 追蹤清單（itin:<行程>:lodging_watch:v1）：只登記，檢查由排程做 */
+function lwKey(){return "itin:"+(TID||"none")+":lodging_watch:v1";}
+function lwLoad(){ let j=null; try{j=JSON.parse(ls.get(lwKey())||"null");}catch(e){} return {schema:"agency.lodging_watch.v1",updated_at:(j&&llS(j.updated_at))||null,items:j&&Array.isArray(j.items)?j.items.filter(llO):[]};}
+function lwClean(o){ if(Array.isArray(o)) return o.map(lwClean); if(!llO(o)) return o; const r={}; Object.keys(o).forEach(k=>{ if(!LW_BAD.test(k)) r[k]=lwClean(o[k]);}); return r;}
+function lwSave(w){ if(LW_FAM()) return null; const v={schema:"agency.lodging_watch.v1",updated_at:nowISO(),items:llA(w&&w.items).filter(llO).map(lwClean)}; ls.set(lwKey(),JSON.stringify(v)); return v;}
+function lwRender(){const p=$("#lwPanel"); if(p) p.outerHTML=lwPanelHtml();}
+function lwAdd(it){ if(LW_FAM()) return null; const w=lwLoad(), pf=lpLoad(), t=nowISO();
+ const o=lwClean(Object.assign({id:"lw_"+Date.now().toString(36)+"_"+Math.random().toString(36).slice(2,7),kind:"open_alert",trip_id:TID,route:route,base:null,hotel_id:null,hotel_name:"",check_in:null,check_out:null,adults:pf.adults,rooms:pf.rooms,sites:[],opens_on:null,open_rule:null,baseline:null,free_cancel_until:null,final_check_on:null,cadence:"weekly",status:"active",created_at:t,updated_at:t,note:""},llO(it)||{}));
+ if(o.kind!=="price_drop") o.kind="open_alert";
+ const seen={}; o.sites=llA(o.sites).filter(llO).map(s=>({site:LL_SITES.hasOwnProperty(s.site)?s.site:"other",url:llHttps(s.url)?s.url:null})).filter(s=>{const k=s.site+"|"+s.url; if(seen[k]) return false; seen[k]=1; return true;});
+ w.items.push(o); lwSave(w); lwRender(); return o;}
+function lwExportObj(){ const pf=lpLoad();
+ return lwClean({schema:"agency.lodging_watch.export.v1",trip_id:TID,trip_title:(TE&&TE.title)||null,app_version:APPV,generated_at:nowISO(),timezone:"Asia/Taipei",note:"PWA 只登記；檢查與通知由排程執行；不含訂房代號與付款資料",party:{adults:pf.adults,rooms:pf.rooms,min_sqm:pf.min_sqm},excluded_sites:pf.excluded_sites,items:lwLoad().items.filter(x=>x.status==="active"&&(x.trip_id===TID||!x.trip_id))});}
+function lwExport(){ if(LW_FAM()) return; const d=new Date(),p=n=>String(n).padStart(2,"0");
+ download(`lodging_watch_${TID}_${d.getFullYear()}${p(d.getMonth()+1)}${p(d.getDate())}-${p(d.getHours())}${p(d.getMinutes())}.json`,JSON.stringify(lwExportObj(),null,1),"application/json");}
+function lwFromLib(id,base){ if(LW_FAM()) return null; const f=llFindHotel(id); if(!f) return null; const h=f.h, l=llBaseFor(h,base)||{}, bo=llO(h.booking_opens)||{};
+ let sites=llA(bo.by_site).filter(llO).map(s=>({site:s.site,url:s.source_url})); if(!sites.length) sites=llA(h.prices).filter(llO).map(p=>({site:p.site,url:p.url}));
+ const o=lwAdd({kind:"open_alert",base:l.base||null,hotel_id:h.id,hotel_name:llS(h.name)||h.id,check_in:l.check_in||null,check_out:l.check_out||null,sites:sites,opens_on:llD(bo.opens_on),open_rule:llS(bo.rule)});
+ if(o) toast("已登記開賣提醒："+o.hotel_name); return o;}
+function lwFormOpen(kind,base){ if(LW_FAM()||!D) return; const l=(D.lodging||[]).find(x=>x.base===base&&x.route===route)||(D.lodging||[]).find(x=>x.base===base); if(!l) return;
+ const dec=decGet("lodging:"+base)||{}; let fc="";
+ if(kind==="price_drop"){ const b=bkLoad().find(b=>b&&b.check_in===l.check_in); if(b&&/^\d{4}-\d{2}-\d{2}$/.test(String(b.free_cancel_deadline||""))) fc=b.free_cancel_deadline;}
+ const nm=kind==="price_drop"?(dec.hotel||(l.booking&&l.booking.hotel_name)||l.name):l.name;
+ openModal(`<h3>${kind==="price_drop"?"📉 登記降價追蹤":"🔔 登記開賣提醒"}：${esc(l.area||base)}</h3><form id="lwForm" class="lwf" data-kind="${kind}" data-base="${esc(base)}"><label>館名<input name="hotel_name" value="${esc(nm||"")}" required></label><label>訂房網<select name="site">${Object.keys(LL_SITES).map(k=>`<option value="${k}">${esc(LL_SITES[k])}</option>`).join("")}</select></label><label>網址（選填，只收 https://）<input name="url" type="text" inputmode="url" placeholder="https://"></label>${kind==="open_alert"?`<label>開賣日（選填）<input name="opens_on" type="date"></label><label>規則（選填）<input name="open_rule" placeholder="例：入住日前 6 個月開放"></label>`:`<label>目前總價（日圓，必填）<input name="total_jpy" type="number" min="1" inputmode="numeric" required></label><label>房型<input name="room_name"></label><label>餐食<input name="meals"></label><label>免費取消期限<input name="free_cancel_until" type="date" value="${esc(fc)}"></label>`}<label>備註<input name="note"></label><div class="cnt">${esc(l.check_in||"")}～${esc(l.check_out||"")}；只登記在本機，不會送出；不存訂房代號與付款資料。</div><button class="btn pri" type="submit">登記</button></form>`);}
+document.addEventListener("click",e=>{ const t=e.target; if(!t||!t.closest) return; let b;
+ if((b=t.closest("[data-lldetail]"))){const lb=b.closest(".llib"); llOpenDetail(b.dataset.lldetail,lb&&lb.dataset.base); return;}
+ if((b=t.closest("[data-llcmpgo]"))){llCompare(b.dataset.llcmpgo); return;}
+ if((b=t.closest("[data-lwopen]"))){lwFromLib(b.dataset.lwopen,b.dataset.base); return;}
+ if((b=t.closest("[data-lwopenm]"))){lwFormOpen("open_alert",b.dataset.lwopenm); return;}
+ if((b=t.closest("[data-lwdrop]"))){lwFormOpen("price_drop",b.dataset.lwdrop); return;}
+ if((b=t.closest("[data-lwdone]"))){const w=lwLoad(); w.items.forEach(x=>{if(x.id===b.dataset.lwdone){x.status="done"; x.updated_at=nowISO();}}); lwSave(w); lwRender(); return;}
+ if((b=t.closest("[data-lwdel]"))){ if(!confirm("刪除這筆住宿追蹤？")) return; const w=lwLoad(); w.items=w.items.filter(x=>x.id!==b.dataset.lwdel); lwSave(w); lwRender(); return;}
+ if(t.closest("#lwExport")){lwExport(); return;}
+ if(t.closest("#lwCopy")){ if(!LW_FAM()) copyText(JSON.stringify(lwExportObj(),null,1),"已複製住宿追蹤清單"); return;}
+});
+document.addEventListener("change",e=>{ const t=e.target; if(!t||!t.closest) return;
+ const f=t.closest("#lpForm"); if(f){const fd=new FormData(f); lpSave({adults:fd.get("adults"),rooms:fd.get("rooms"),min_sqm:fd.get("min_sqm"),excluded_sites:fd.getAll("excluded_sites")}); LL.prefsOpen=true; if(curMod==="lodging") renderMod(); return;}
+ if(t.matches&&t.matches("input[data-llcmp]")){ const bs=t.dataset.base, a=LL.sel[bs]||(LL.sel[bs]=[]), id=t.dataset.llcmp, i=a.indexOf(id);
+  if(t.checked){ if(i<0){ if(a.length>=4){t.checked=false; toast("同一據點最多比較 4 間"); return;} a.push(id);} } else if(i>=0) a.splice(i,1);
+  const bar=[...document.querySelectorAll(".llcmpbar")].find(x=>x.dataset.base===bs); if(bar) bar.innerHTML=llCmpBar(bs);}
+});
+document.addEventListener("submit",e=>{ const f=e.target; if(!f||f.id!=="lwForm") return; e.preventDefault(); if(LW_FAM()) return;
+ const fd=new FormData(f), g=k=>String(fd.get(k)||"").trim(), kind=f.dataset.kind==="price_drop"?"price_drop":"open_alert", base=f.dataset.base;
+ const l=(D&&(D.lodging||[]).find(x=>x.base===base&&x.route===route))||(D&&(D.lodging||[]).find(x=>x.base===base))||{}, site=LL_SITES.hasOwnProperty(g("site"))?g("site"):"other";
+ const it={kind:kind,base:base,hotel_name:g("hotel_name")||l.name||"",check_in:l.check_in||null,check_out:l.check_out||null,sites:[{site:site,url:/^https:\/\//i.test(g("url"))?g("url"):null}],note:g("note")};
+ if(kind==="price_drop"){ const tj=Number(g("total_jpy")); if(!(tj>0)){toast("請填目前總價（日圓）"); return;} const fc=llD(g("free_cancel_until"));
+  Object.assign(it,{baseline:{total_jpy:tj,site:site,room_name:g("room_name")||null,meals:g("meals")||null,checked_at:llToday()},free_cancel_until:fc,final_check_on:fc?llAdd(fc,-7):null});}
+ else Object.assign(it,{opens_on:llD(g("opens_on")),open_rule:g("open_rule")||null});
+ closeModal(); lwAdd(it); toast(kind==="price_drop"?"已登記降價追蹤":"已登記開賣提醒");});
+document.addEventListener("toggle",e=>{ const d=e.target; if(!d||!d.classList) return;
+ if(d.classList.contains("llib")){ LL.open[d.dataset.base]=d.open; if(d.open&&LL.state==="ready"){ const l=llRouteL().find(x=>x.base===d.dataset.base), r=l&&llRegionFor(l); if(r) llRegLoad(r).then(()=>llFillLib(l.base));} }
+ else if(d.id==="lpPrefs") LL.prefsOpen=d.open;},true);
+/* 測試／主控台用（唯讀工具與關閉視窗；不含任何寫入外部的功能） */
+window.closeModal=closeModal; window.bakCollect=bakCollect; window.bakClassify=bakClassify;
+window.__app={get LL(){return LL;},llLoad,llRegionFor,llOpenDetail,llCompare,lwLoad,lwSave,lwAdd,lwExportObj,lwExport,dcUpcoming,lpLoad,lpSave,llToday,LL_BASE,lwClean,llFindHotel,get AUTO(){return AUTO;},rtFetch,rtNewer,rtApply,rtOffer,rtKeepMine,rtRevert,rtEdited,parseLocationInput,queryVariants,qTokens,gmapsSearchUrl,dayArea,guessCat,classifyAg,findDup,enrichPlace,enrichAsync,searchPlaces,openSearch,bringIn,clipArm,clipTry,clipOn,suggestWhen,showPlaceCard,reverseAt,mapTypeahead,ensureMapSearch,cacheKey,nearbyParking,idbGet,idbSet,extractGmaps,applyBring,STAY_MIN,plClear,plClean,plApply,plAlert,alertTxt,alertHtml,ALERT_LV,plFetch,catsOf,restTagN,ltInc,ltAddRoute,ltDelRoute,adoptSet,rShort,ltGet,ltIndex,ltBuild,ltEntry,ltAdopt,cmpRender,cmpFromRs,cmpMetrics,rfClean,rfFetch,slotOf,get CMP(){return CMP;},lgShrink,LG_NMAX,quotaUntil,bkMsg,plQueued,plSched,QF,areaZh,zhText,userNotes,routeName,pickLoad,doneAlert,bkGate,listPoll,bkLoad,bkSave,bkRow,bkDateCell,buildXlsx,bkXlsxDownload,XLSX_COLS,lgOpen,flSplit,flJoin,flText,backendCfg,hashView,get AUTO(){return AUTO;},drLoad,drVisible,reqExport,reqText,readNewForm,selLoad,selectedRoutes,get DRAFT(){return DRAFT;},get INTAKE(){return INTAKE;},DL,BUF,decLoad,decSave,decExport,showMod,pickupDefault,dropoffDefault,get curMod(){return curMod;},bestDay,localNearby,SCATS,photonSearch,queryVariants,qTokens,localSearch,photonMulti,parseLocationInput,cpLoad,cpSave,cpId,sha1hex,searchPlaces,searchCenter,SEARCH_ENDPOINTS,openSearch,get SRVCP(){return SRVCP;},parseLoc,cuLoad,cuText,cuMerge,stopsOf,mergeByMeal,get SAME(){return SAME;},setRoute,openTrip,showTab,addTo,itin,suggested,store,exportJson,buildKml,buildCsv,buildFinal,importText,parseImport,
  get TE(){return TE;},rvApply,rvMerge,rvAlias,rvLegacy,ovOpen,ovClose,ovDraw,ovPts,ovLabel,ovSorted,get OVSEL(){return OVSEL;},
  get trip(){return TID;},get route(){return route;},get day(){return curDay;},get RS(){return RS;},get SP(){return SP;},get D(){return D;},get RESTS(){return RESTS;},K};
 })();
