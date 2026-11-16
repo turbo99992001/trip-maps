@@ -68,6 +68,18 @@
      "name": "伊豆熱海·輕井澤·群馬頭文字D·日光 大人系自駕",
      "days": 16,
      "rank": 9
+    },
+    {
+     "key": "J",
+     "name": "池袋→河口湖→修善寺→箱根→熱海→羽田",
+     "days": 16,
+     "rank": 10
+    },
+    {
+     "key": "K",
+     "name": "池袋→河口湖→伊豆高原→箱根→熱海→羽田",
+     "days": 16,
+     "rank": 11
     }
    ],
    "default_route": "F",
@@ -100,11 +112,49 @@
       "trip_fill_reference.json"
      ],
      "note": "路線 I：企畫部 trip.json plans.I／daily_nav 轉出的靜態 handoff；A～H 仍用 data/2027-06-tokyo/ 舊檔，載入時合併，不覆蓋 A～H。"
+    },
+    {
+     "key": "J",
+     "routes": [
+      "J"
+     ],
+     "source": "handoff",
+     "request_id": "draft-20261116-152700-tokj",
+     "rank": 10,
+     "data_version": "59ece1a23e",
+     "files": [
+      "routes.json",
+      "places.json",
+      "trip_fill_reference.json",
+      "restaurants.json"
+     ],
+     "note": "路線 J：企畫部 trip.json（2026-11-16 15:27）plans.J／daily_nav／lodging.route_options[J]／restaurants jk_meal_candidates／transport v1.2 轉出的靜態 handoff；載入時合併，不覆蓋 A～I。"
+    },
+    {
+     "key": "K",
+     "routes": [
+      "K"
+     ],
+     "source": "handoff",
+     "request_id": "draft-20261116-152700-tokk",
+     "rank": 11,
+     "data_version": "ec27ce4285",
+     "files": [
+      "routes.json",
+      "places.json",
+      "trip_fill_reference.json",
+      "restaurants.json"
+     ],
+     "note": "路線 K：企畫部 trip.json（2026-11-16 15:27）plans.K／daily_nav／lodging.route_options[K]／restaurants jk_meal_candidates／transport v1.2 轉出的靜態 handoff；載入時合併，不覆蓋 A～I。"
     }
    ],
    "aliases": {
     "2027-06-tokyo-I": "I",
-    "draft-20261112-014659-toki": "I"
+    "draft-20261112-014659-toki": "I",
+    "2027-06-tokyo-J": "J",
+    "draft-20261116-152700-tokj": "J",
+    "2027-06-tokyo-K": "K",
+    "draft-20261116-152700-tokk": "K"
    }
   }
  ]
