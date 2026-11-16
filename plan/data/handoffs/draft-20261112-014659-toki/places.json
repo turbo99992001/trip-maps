@@ -2,7 +2,7 @@
   "schema": "agency.places.v1",
   "request_id": "draft-20261112-014659-toki",
   "version": "2026-11-12-tokyo-I",
-  "generated_at": "2026-11-12T02:14:12+08:00",
+  "generated_at": "2026-11-16T09:24:34+08:00",
   "department": "旅遊資訊部（由 trip.json spots、proposals/tokyo_route_I_spots、route_I_restaurants 組裝，未改來源檔）",
   "note": "路線 I 景點與餐廳補充資料。待查欄位標待查，不編造 MapCode。Google 評分只放連結。070／080／090 電話未寫入。伊香保石段街 region 以當下 trip.json 為準。",
   "places": {
@@ -46,7 +46,7 @@
       "mapcode_source": "景點座標經 Saibara ジオコード変換（https://saibara.sakura.ne.jp/map/convgeo.cgi）換算並反查（2）",
       "lat": 35.69836,
       "lng": 139.77313,
-      "google_maps_url": "https://www.google.com/maps/search/?api=1&query=35.698360,139.773130",
+      "google_maps_url": "https://www.google.com/maps/place/?q=place_id:ChIJzdWdgh2MGGARh4kg2pVZL3c",
       "description": "動漫、電玩、模型、女僕咖啡的聖地，中央通兩側大樓林立，假日中午起步行者天國。建議停留半天～一天。",
       "prefecture": "東京都",
       "area_group": "東京動漫",
@@ -90,7 +90,7 @@
       "phone": "03-5209-3330",
       "lat": 35.700502,
       "lng": 139.771723,
-      "google_maps_url": "https://www.google.com/maps/search/?api=1&query=35.700502,139.771723",
+      "google_maps_url": "https://www.google.com/maps/place/?q=place_id:ChIJAVf7lh2MGGARJylRnQ_3dpI",
       "description": "最大的動漫周邊連鎖 Animate 秋葉原店，新刊漫畫、角色周邊與特典齊全。建議停留 1 小時。",
       "prefecture": "東京都",
       "area_group": "東京動漫",
@@ -233,7 +233,7 @@
         }
       ],
       "checked_date": "2026-11-12",
-      "note": "Tabelog 電話 070-7793-3979 為 070/080/090 開頭，依規定不填",
+      "note": "Tabelog 電話 （手機號碼已略） 為 070/080/090 開頭，依規定不填",
       "field_status": {
         "phone": "待查"
       },
@@ -392,7 +392,7 @@
       "phone": "03-3988-1351",
       "lat": 35.731147,
       "lng": 139.715449,
-      "google_maps_url": "https://www.google.com/maps/search/?api=1&query=35.731147,139.715449",
+      "google_maps_url": "https://www.google.com/maps/place/?q=place_id:ChIJi0VhQ2-NGGARGsbajebyPVA",
       "description": "Animate 旗艦總店，多層樓集結漫畫、角色周邊、特典與活動空間，是池袋動漫購物的核心。建議停留 1.5 小時。",
       "prefecture": "東京都",
       "area_group": "東京動漫",
@@ -439,7 +439,7 @@
       "phone": "03-6709-0200",
       "lat": 35.7308314,
       "lng": 139.7124039,
-      "google_maps_url": "https://www.google.com/maps/search/?api=1&query=35.730831,139.712404",
+      "google_maps_url": "https://www.google.com/maps/place/?q=place_id:ChIJJaBrRgCNGGARZ50vvXYaBms",
       "description": "集英社官方授權的《週刊少年 Jump》周邊店，2026/3/27 進駐池袋 PARCO 本館 B2F「POP CULTURE BASE」。航海王、鬼滅之刃、咒術迴戰、HUNTER×HUNTER、SAKAMOTO DAYS 等作品集中一處，池袋站東口出來就到，是抵達日第一站。",
       "prefecture": "東京都",
       "area_group": "東京動漫",
@@ -753,7 +753,7 @@
       "mapcode_source": "景點座標經 Saibara ジオコード変換（https://saibara.sakura.ne.jp/map/convgeo.cgi）換算並反查（1）",
       "lat": 35.10377,
       "lng": 139.07876,
-      "google_maps_url": "https://www.google.com/maps/search/?api=1&query=35.103770,139.078760",
+      "google_maps_url": "https://www.google.com/maps/place/?q=place_id:ChIJ__-_AmO-GWARzNfK5NDnhIk",
       "description": "關東最具代表的海濱溫泉，車站前仲見世商店街有海鮮丼、溫泉饅頭；海岸的親水公園散步舒服。建議停留 2～3 小時。2026 年熱海海上花火大會 7 月場在 7/20、7/26，不在本次期間。",
       "prefecture": "静岡県",
       "area_group": "熱海／東伊豆",
@@ -803,7 +803,7 @@
       "phone": "0557-84-2511",
       "lat": 35.109262,
       "lng": 139.075334,
-      "google_maps_url": "https://www.google.com/maps/search/?api=1&query=35.109262,139.075334",
+      "google_maps_url": "https://www.google.com/maps/place/?q=place_id:ChIJjfhKF3y-GWAR4cJUHQTH3EA",
       "description": "山上美術館，收藏國寶尾形光琳《紅白梅圖屏風》等，杉本博司設計的展廳與能樂堂、黃金茶室都值得看。建議停留 2 小時。",
       "prefecture": "静岡県",
       "area_group": "熱海／東伊豆",
@@ -1021,20 +1021,253 @@
       "checked_date": "2026-11-12",
       "stay_minutes": 60
     },
-    "h_498ba322c1ff": {
+    "rI-izu_beer": {
       "kind": "restaurant",
-      "name": "杜の湯 きらの里 晚餐（預設 2食）",
-      "hours": "待查",
-      "closed_days": "待查",
+      "name": "伊豆高原ビール 本店レストラン（伊豆高原啤酒 本店餐廳）",
+      "name_ja": "伊豆高原ビール 本店レストラン",
+      "cuisine": "海鮮蓋飯,海鮮,啤酒館",
+      "cuisine_group": "海鮮蓋飯,海鮮,啤酒館",
+      "budget_lunch": "¥1,000–¥1,999（Tabelog）",
+      "budget_dinner": "¥2,000–¥2,999（Tabelog）",
+      "hours": "星期一，星期二，星期三，星期四，星期五 11:00 - 20:00 星期六，星期日 11:00 - 21:00 ■營業時間 [星期一至星期五] 最後入店→19:30 [星期六、星期日及國定假日繁忙期] 最後入店→20:00 午餐菜單需於15:00之前下單 ■店休日 不定休（每年有五天休業日）",
+      "closed_days": "Tabelog 註：不定休（每年有五天休業日）",
+      "reservation": {
+        "method": "不可預約（現場排隊）",
+        "note": null,
+        "source": "https://tabelog.com/shizuoka/A2205/A220503/22000061/",
+        "booked": false
+      },
+      "lat": 34.911948378998574,
+      "lng": 139.11948300706746,
+      "google_maps_url": "https://www.google.com/maps/search/?api=1&query=%E4%BC%8A%E8%B1%86%E9%AB%98%E5%8E%9F%E3%83%93%E3%83%BC%E3%83%AB%20%E6%9C%AC%E5%BA%97%E3%83%AC%E3%82%B9%E3%83%88%E3%83%A9%E3%83%B3%20%E9%9D%99%E5%B2%A1%E7%9C%8C%E4%BC%8A%E6%9D%B1%E5%B8%82%E5%AF%8C%E6%88%B81103-21",
+      "address": "静岡県伊東市富戸1103-21",
+      "phone": "0557-51-3000",
+      "mapcode": "488 584 051*65",
+      "mapcode_source": "saibara convgeo（https://saibara.sakura.ne.jp/map/convgeo.cgi）由座標 34.911948,139.119483 換算 488 584 051*65，反查回讀誤差 1.8 m；Mapion https://www.mapion.co.jp/m2/34.911948,139.119483,19 右鍵 得 488 584 051*66（以 saibara 反查誤差 2.5 m，末碼差異屬同點不同換算）",
+      "parking": {
+        "available": true,
+        "type": "dedicated",
+        "name": "店家停車場",
+        "walk_min": 0,
+        "note": "Tabelog 停車場欄：可 免費100臺；入口座標未公開，待查",
+        "source": "https://tabelog.com/shizuoka/A2205/A220503/22000061/"
+      },
+      "ratings": [
+        {
+          "source": "tabelog",
+          "url": "https://tabelog.com/shizuoka/A2205/A220503/22000061/",
+          "scale": 5,
+          "score": 3.49,
+          "checked_at": "2026-11-12"
+        },
+        {
+          "source": "google",
+          "url": "https://www.google.com/maps/search/?api=1&query=%E4%BC%8A%E8%B1%86%E9%AB%98%E5%8E%9F%E3%83%93%E3%83%BC%E3%83%AB%20%E6%9C%AC%E5%BA%97%E3%83%AC%E3%82%B9%E3%83%88%E3%83%A9%E3%83%B3%20%E9%9D%99%E5%B2%A1%E7%9C%8C%E4%BC%8A%E6%9D%B1%E5%B8%82%E5%AF%8C%E6%88%B81103-21",
+          "checked_at": "2026-11-12",
+          "note": "只放 Google 地圖連結，不填分數"
+        }
+      ],
+      "sources": [
+        {
+          "url": "https://tabelog.com/shizuoka/A2205/A220503/22000061/"
+        },
+        {
+          "url": "https://tabelog.com/tw/shizuoka/A2205/A220503/22000061/"
+        }
+      ],
+      "checked_date": "2026-11-12",
       "field_status": {
-        "hours": "待查",
-        "closed_days": "待查",
-        "phone": "待查",
-        "mapcode": "待查",
-        "address": "待查",
         "parking": "待查"
       },
       "stay_minutes": 60
+    },
+    "r-inatori-005": {
+      "kind": "restaurant",
+      "name": "まるたか（Marutaka（伊東 海鮮））",
+      "name_ja": "まるたか",
+      "cuisine": "海鮮",
+      "cuisine_group": "海鮮",
+      "budget_lunch": "¥1,000–¥1,999（Tabelog）",
+      "budget_dinner": "¥4,000–¥4,999（Tabelog）",
+      "hours": "星期一，星期二，星期三，星期四，星期五，星期六，星期日 11:00 - 14:30 17:00 - 22:00",
+      "closed_days": "Tabelog 未列公休日（無固定公休或未登錄）",
+      "reservation": {
+        "method": "不可預約（現場排隊）",
+        "note": "我們不接受預約。",
+        "source": "https://tabelog.com/shizuoka/A2205/A220503/22022300/",
+        "booked": false
+      },
+      "lat": 34.973652,
+      "lng": 139.092806,
+      "google_maps_url": "https://www.google.com/maps/search/?api=1&query=%E3%81%BE%E3%82%8B%E3%81%9F%E3%81%8B%20%E9%9D%99%E5%B2%A1%E7%9C%8C%E4%BC%8A%E6%9D%B1%E5%B8%82%E6%B9%AF%E5%B7%9D1-16-6",
+      "address": "静岡県伊東市湯川1-16-6",
+      "phone": "0557-38-0105",
+      "mapcode": "116 206 405*62",
+      "mapcode_source": "saibara convgeo（https://saibara.sakura.ne.jp/map/convgeo.cgi）由座標 34.973652,139.092806 換算 116 206 405*62，反查回讀誤差 0.3 m；既有資料（既有餐廳庫 Mapion 右鍵＋回讀） 得 116 206 405*62，完全一致",
+      "parking": {
+        "available": true,
+        "type": "nearby",
+        "name": "未命名停車場（OSM way/190194225）",
+        "lat": 34.973633,
+        "lng": 139.093142,
+        "mapcode": "116 206 406*61",
+        "mapcode_source": "saibara convgeo（https://saibara.sakura.ne.jp/map/convgeo.cgi）由座標 34.973633,139.093142 換算 116 206 406*61，反查回讀誤差 1.1 m；既有資料（既有餐廳庫 Mapion 地圖 https://www.mapion.co.jp/m2/34） 得 116 206 406*61，完全一致",
+        "walk_min": 1,
+        "note": "距店直線約 31 m；座標為停車場中心點（OSM）；OSM 未標名稱／用途，可能為其他設施專用，現場確認",
+        "source": "https://www.openstreetmap.org/way/190194225"
+      },
+      "ratings": [
+        {
+          "source": "tabelog",
+          "url": "https://tabelog.com/shizuoka/A2205/A220503/22022300/",
+          "scale": 5,
+          "score": 3.49,
+          "checked_at": "2026-11-12"
+        },
+        {
+          "source": "google",
+          "url": "https://www.google.com/maps/search/?api=1&query=%E3%81%BE%E3%82%8B%E3%81%9F%E3%81%8B%20%E9%9D%99%E5%B2%A1%E7%9C%8C%E4%BC%8A%E6%9D%B1%E5%B8%82%E6%B9%AF%E5%B7%9D1-16-6",
+          "checked_at": "2026-11-12",
+          "note": "只放 Google 地圖連結，不填分數"
+        }
+      ],
+      "description": "伊東站附近的漁師料理店，鯵魚拍拍丼、なめろう、金目鯛煮付；不接受預約、常排隊。",
+      "sources": [
+        {
+          "url": "https://tabelog.com/shizuoka/A2205/A220503/22022300/"
+        },
+        {
+          "url": "https://tabelog.com/tw/shizuoka/A2205/A220503/22022300/"
+        }
+      ],
+      "checked_date": "2026-11-12",
+      "stay_minutes": 60
+    },
+    "rI-atm_irori": {
+      "kind": "restaurant",
+      "name": "囲炉茶屋（圍爐茶屋（熱海站前海鮮））",
+      "name_ja": "囲炉茶屋",
+      "cuisine": "海鮮,郷土料理,串燒",
+      "cuisine_group": "海鮮,郷土料理,串燒",
+      "budget_lunch": "¥1,000–¥1,999（Tabelog）",
+      "budget_dinner": "¥3,000–¥3,999（Tabelog）",
+      "hours": "星期一，星期三，星期四，星期五，星期六，星期日 11:30 - 15:00 L.O. 14:15 16:30 - 21:00 星期二 公休日 【年末年初通知】 ・12月30日營業 ・12月31日休業 ・1月1日至1月5日營業 ・1月13日至1月15日休業 【臨時休業通知】 2026年11月3日（國定假日）將正常營業。4日（星期三）及11日（星期三）將休業。",
+      "closed_days": "週二",
+      "reservation": {
+        "method": "可預約（電話 0557-81-6433）",
+        "note": "・如需預約，請選擇套餐。 （午餐需五位以上，五點以後需兩位以上。） ・僅預約座位不可 ・當天取消需支付取消費用",
+        "source": "https://tabelog.com/shizuoka/A2205/A220502/22003032/",
+        "booked": false
+      },
+      "lat": 35.1017479588645,
+      "lng": 139.07700460901435,
+      "google_maps_url": "https://www.google.com/maps/search/?api=1&query=%E5%9B%B2%E7%82%89%E8%8C%B6%E5%B1%8B%20%E9%9D%99%E5%B2%A1%E7%9C%8C%E7%86%B1%E6%B5%B7%E5%B8%82%E7%94%B0%E5%8E%9F%E6%9C%AC%E7%94%BA2-6",
+      "address": "静岡県熱海市田原本町2-6",
+      "phone": "0557-81-6433",
+      "mapcode": "116 654 738*00",
+      "mapcode_source": "saibara convgeo（https://saibara.sakura.ne.jp/map/convgeo.cgi）由座標 35.101748,139.077005 換算 116 654 738*00，反查回讀誤差 1.1 m；Mapion https://www.mapion.co.jp/m2/35.101748,139.077005,19 右鍵 得 116 654 738*01（以 saibara 反查誤差 2.6 m，末碼差異屬同點不同換算）",
+      "parking": {
+        "available": true,
+        "type": "nearby",
+        "name": "停車場（OSM 未命名）",
+        "fee": "待查",
+        "lat": 35.1027745,
+        "lng": 139.0773491,
+        "mapcode": "116 654 859*78",
+        "mapcode_source": "saibara convgeo（https://saibara.sakura.ne.jp/map/convgeo.cgi）由座標 35.102775,139.077349 換算 116 654 859*78，反查回讀誤差 0.8 m；Mapion https://www.mapion.co.jp/m2/35.102775,139.077349,19 右鍵 得 116 654 859*70（以 saibara 反查誤差 2.0 m，末碼差異屬同點不同換算）",
+        "walk_min": 1,
+        "note": "距店直線約 118 m（步行分鐘為估計）；座標為 OSM 停車場中心點，非入口；是否為店家停車場未確認",
+        "source": "https://www.openstreetmap.org/node/4991532798"
+      },
+      "ratings": [
+        {
+          "source": "tabelog",
+          "url": "https://tabelog.com/shizuoka/A2205/A220502/22003032/",
+          "scale": 5,
+          "score": 3.49,
+          "checked_at": "2026-11-12"
+        },
+        {
+          "source": "google",
+          "url": "https://www.google.com/maps/search/?api=1&query=%E5%9B%B2%E7%82%89%E8%8C%B6%E5%B1%8B%20%E9%9D%99%E5%B2%A1%E7%9C%8C%E7%86%B1%E6%B5%B7%E5%B8%82%E7%94%B0%E5%8E%9F%E6%9C%AC%E7%94%BA2-6",
+          "checked_at": "2026-11-12",
+          "note": "只放 Google 地圖連結，不填分數"
+        }
+      ],
+      "sources": [
+        {
+          "url": "https://tabelog.com/shizuoka/A2205/A220502/22003032/"
+        },
+        {
+          "url": "https://tabelog.com/tw/shizuoka/A2205/A220502/22003032/"
+        }
+      ],
+      "checked_date": "2026-11-12",
+      "stay_minutes": 60
+    },
+    "h_43459e797c00": {
+      "kind": "spot",
+      "name": "含餐情境：最晚離開 MOA（估計 78 分，16:28 抵，17:00 前入住趕 17:30 第一部）",
+      "categories": [
+        "auto"
+      ],
+      "category_source": "route_I_item",
+      "note": "來源：景點部 MOA→きらの里估計 78 分；晚餐 17:30 預留 30 分。第二部 20:00 須入住時確認能否選到，不作為預設。",
+      "hours": "待查",
+      "field_status": {
+        "hours": "待查"
+      }
+    },
+    "h_4a7d6baedeed": {
+      "kind": "spot",
+      "name": "素泊情境：最晚離開 MOA（最終入館），估計 17:18 抵（早於樂天最終入住 19:00）",
+      "categories": [
+        "auto"
+      ],
+      "category_source": "route_I_item",
+      "hours": "待查",
+      "field_status": {
+        "hours": "待查"
+      }
+    },
+    "h_58513da151be": {
+      "kind": "spot",
+      "name": "含餐情境：最晚抵達／完成入住 きらの里",
+      "categories": [
+        "auto"
+      ],
+      "category_source": "route_I_item",
+      "note": "check-in 15:00 起；最晚為趕 17:30 第一部晚餐。實際車程約 16:28 到。",
+      "hours": "待查",
+      "field_status": {
+        "hours": "待查"
+      }
+    },
+    "h_87d084237d0f": {
+      "kind": "spot",
+      "name": "含餐情境：きらの里 晚餐第一部（鎖定 17:30；或 20:00 第二部，先到先選）",
+      "categories": [
+        "auto"
+      ],
+      "category_source": "route_I_item",
+      "note": "停留約 90 分；兩部制：1部 17:30～／2部 20:00～（楽天 2食方案）。目前比價的一休素泊方案不含晚餐。",
+      "hours": "待查",
+      "field_status": {
+        "hours": "待查"
+      },
+      "stay_minutes": 90
+    },
+    "h_2733f54016af": {
+      "kind": "spot",
+      "name": "素泊情境：最晚入住（樂天標準 19:00；一休素泊可至 23:00，不作為行程目標）",
+      "categories": [
+        "auto"
+      ],
+      "category_source": "route_I_item",
+      "hours": "待查",
+      "field_status": {
+        "hours": "待查"
+      }
     },
     "s_9d8a1016": {
       "kind": "spot",
@@ -1063,7 +1296,7 @@
       "phone": "0557-51-0258",
       "lat": 34.90314,
       "lng": 139.09476,
-      "google_maps_url": "https://www.google.com/maps/search/?api=1&query=34.903140,139.094760",
+      "google_maps_url": "https://www.google.com/maps/place/?q=place_id:ChIJH5uylDPDGWAR6Oep6Ma5bu4",
       "description": "碗狀的國家天然紀念物火山，搭吊椅上山頂繞火口步道一圈約 20 分鐘，晴天 360 度展望富士山與伊豆群島。建議停留 1 小時。",
       "prefecture": "静岡県",
       "area_group": "熱海／東伊豆",
@@ -1118,7 +1351,7 @@
       "mapcode_source": "景點座標經 Saibara ジオコード変換（https://saibara.sakura.ne.jp/map/convgeo.cgi）換算並反查（2）",
       "lat": 34.89053,
       "lng": 139.138749,
-      "google_maps_url": "https://www.google.com/maps/search/?api=1&query=34.890530,139.138749",
+      "google_maps_url": "https://www.google.com/maps/place/?q=place_id:ChIJay2a61HbGWARRAme3LCLFEM",
       "description": "大室山熔岩流入海形成的斷崖海岸，高 23 公尺的門脇吊橋懸於海上，旁有門脇燈塔。自然研究路串連海岸。建議停留 1 小時。",
       "prefecture": "静岡県",
       "area_group": "熱海／東伊豆",
@@ -1172,7 +1405,7 @@
       "phone": "0557-51-1111",
       "lat": 34.907204,
       "lng": 139.100859,
-      "google_maps_url": "https://www.google.com/maps/search/?api=1&query=34.907204,139.100859",
+      "google_maps_url": "https://www.google.com/maps/place/?q=place_id:ChIJ3cyF2zbDGWARKTSzSm4Er10",
       "description": "大室山山腳的動植物園，動物放養、可近距離接觸，溫室有 1,500 種仙人掌與多肉植物。",
       "prefecture": "静岡県",
       "area_group": "熱海／東伊豆",
@@ -1224,7 +1457,7 @@
       "mapcode_source": "景點座標經 Saibara ジオコード変換（https://saibara.sakura.ne.jp/map/convgeo.cgi）換算並反查（1）",
       "lat": 34.941071,
       "lng": 139.126512,
-      "google_maps_url": "https://www.google.com/maps/search/?api=1&query=34.941071,139.126512",
+      "google_maps_url": "https://www.google.com/maps/place/?q=place_id:ChIJWeIMQ4PEGWARxWI6ShnYB90",
       "description": "搭纜椅登上海拔 321 m 的小室山，360 度眺望相模灘、伊豆群島與富士山，山頂有景觀咖啡廳；杜鵑（5 月）季節已過。",
       "prefecture": "静岡県",
       "area_group": "熱海／東伊豆",
@@ -1268,7 +1501,7 @@
       "phone": "0557-54-5001",
       "lat": 34.877822,
       "lng": 139.11154,
-      "google_maps_url": "https://www.google.com/maps/search/?api=1&query=34.877822,139.111540",
+      "google_maps_url": "https://www.google.com/maps/place/?q=place_id:ChIJBel2jo_cGWARnJ0D8NNtY_M",
       "description": "伊豆高原站附近的泰迪熊博物館，展示古董泰迪熊與企劃展，商店、茶屋不需門票。",
       "prefecture": "静岡県",
       "area_group": "熱海／東伊豆",
@@ -1475,20 +1708,57 @@
       "checked_date": "2026-11-12",
       "stay_minutes": 60
     },
-    "h_057253ef3139": {
-      "kind": "restaurant",
-      "name": "きらの里 晚餐（預設 2食）",
+    "h_e222c273823b": {
+      "kind": "spot",
+      "name": "含餐情境：最晚離開城ヶ崎或備案園區，17:00 前返回趕 17:30 晚餐",
+      "categories": [
+        "auto"
+      ],
+      "category_source": "route_I_item",
+      "note": "シャボテン／小室山為纜椅停駛備案，含餐當日不要與城ヶ崎連排滿。",
       "hours": "待查",
-      "closed_days": "待查",
       "field_status": {
-        "hours": "待查",
-        "closed_days": "待查",
-        "phone": "待查",
-        "mapcode": "待查",
-        "address": "待查",
-        "parking": "待查"
+        "hours": "待查"
+      }
+    },
+    "h_6e5452aa0607": {
+      "kind": "spot",
+      "name": "含餐情境：最晚返回 きらの里",
+      "categories": [
+        "auto"
+      ],
+      "category_source": "route_I_item",
+      "note": "預留 30 分後 17:30 晚餐。",
+      "hours": "待查",
+      "field_status": {
+        "hours": "待查"
+      }
+    },
+    "h_523c63a7b416": {
+      "kind": "spot",
+      "name": "含餐情境：きらの里 晚餐第一部（鎖定 17:30）",
+      "categories": [
+        "auto"
+      ],
+      "category_source": "route_I_item",
+      "note": "停留約 90 分",
+      "hours": "待查",
+      "field_status": {
+        "hours": "待查"
       },
-      "stay_minutes": 60
+      "stay_minutes": 90
+    },
+    "h_79843a114f72": {
+      "kind": "spot",
+      "name": "素泊情境：最晚返回（樂天 19:00）",
+      "categories": [
+        "auto"
+      ],
+      "category_source": "route_I_item",
+      "hours": "待查",
+      "field_status": {
+        "hours": "待查"
+      }
     },
     "s_c113130a": {
       "kind": "spot",
@@ -1516,7 +1786,7 @@
       "mapcode_source": "景點座標經 Saibara ジオコード変換（https://saibara.sakura.ne.jp/map/convgeo.cgi）換算並反查（1）",
       "lat": 34.971528,
       "lng": 138.927573,
-      "google_maps_url": "https://www.google.com/maps/search/?api=1&query=34.971528,138.927573",
+      "google_maps_url": "https://www.google.com/maps/place/?q=place_id:ChIJOwdW99DsGWARousj-05vNbQ",
       "description": "伊豆最古老的溫泉鄉，弘法大師開創的修禪寺、桂川畔的「獨鈷之湯」、竹林小徑都在步行範圍內。溫泉街有黑米饅頭、蕎麥麵。建議停留 2 小時。",
       "prefecture": "静岡県",
       "area_group": "修善寺／中伊豆",
@@ -1724,20 +1994,67 @@
       "checked_date": "2026-11-12",
       "stay_minutes": 60
     },
-    "h_d2718785077c": {
-      "kind": "restaurant",
-      "name": "きらの里 晚餐（預設 2食，退房日次晨含早）",
+    "h_b5d9f47f190e": {
+      "kind": "spot",
+      "name": "含餐情境：最晚離開修善寺，估計 16:55 抵きらの里、17:00 前入住",
+      "categories": [
+        "auto"
+      ],
+      "category_source": "route_I_item",
       "hours": "待查",
-      "closed_days": "待查",
       "field_status": {
-        "hours": "待查",
-        "closed_days": "待查",
-        "phone": "待查",
-        "mapcode": "待查",
-        "address": "待查",
-        "parking": "待查"
+        "hours": "待查"
+      }
+    },
+    "h_cd1c09231a05": {
+      "kind": "spot",
+      "name": "含餐情境：最晚返回 きらの里",
+      "categories": [
+        "auto"
+      ],
+      "category_source": "route_I_item",
+      "hours": "待查",
+      "field_status": {
+        "hours": "待查"
+      }
+    },
+    "h_d366d61fef5f": {
+      "kind": "spot",
+      "name": "含餐情境：きらの里 晚餐第一部（鎖定 17:30）",
+      "categories": [
+        "auto"
+      ],
+      "category_source": "route_I_item",
+      "note": "停留約 90 分",
+      "hours": "待查",
+      "field_status": {
+        "hours": "待查"
       },
-      "stay_minutes": 60
+      "stay_minutes": 90
+    },
+    "h_477467f77212": {
+      "kind": "spot",
+      "name": "素泊情境：最晚離開修善寺（保守對齊樂天 19:00 最終入住，估計 17:55 抵）",
+      "categories": [
+        "auto"
+      ],
+      "category_source": "route_I_item",
+      "hours": "待查",
+      "field_status": {
+        "hours": "待查"
+      }
+    },
+    "h_e6851106d70b": {
+      "kind": "spot",
+      "name": "素泊情境：最晚返回（樂天 19:00）",
+      "categories": [
+        "auto"
+      ],
+      "category_source": "route_I_item",
+      "hours": "待查",
+      "field_status": {
+        "hours": "待查"
+      }
     },
     "h_cff2f2110192": {
       "kind": "spot",
@@ -1938,6 +2255,30 @@
       "checked_date": "2026-11-12",
       "stay_minutes": 60
     },
+    "h_21f4ba8f4aa8": {
+      "kind": "spot",
+      "name": "最晚離開きらの里（建議更早），以交通部 238 分估計 16:30 前抵輕井澤",
+      "categories": [
+        "auto"
+      ],
+      "category_source": "route_I_item",
+      "hours": "待查",
+      "field_status": {
+        "hours": "待查"
+      }
+    },
+    "h_eb02f1d2d8c2": {
+      "kind": "spot",
+      "name": "企畫目標：抵達 王子西館（入住時刻待查，未鎖定旅館官方時限）",
+      "categories": [
+        "auto"
+      ],
+      "category_source": "route_I_item",
+      "hours": "待查",
+      "field_status": {
+        "hours": "待查"
+      }
+    },
     "s_d62d724f": {
       "kind": "spot",
       "name": "軽井沢・プリンスショッピングプラザ（輕井澤王子購物廣場）",
@@ -1965,7 +2306,7 @@
       "phone": "0267-42-5211",
       "lat": 36.339162,
       "lng": 138.63311,
-      "google_maps_url": "https://www.google.com/maps/search/?api=1&query=36.339162,138.633110",
+      "google_maps_url": "https://www.google.com/maps/place/?q=place_id:ChIJs2bRqHvTHWARcl6bPa7ly-g",
       "description": "車站南口的大型 Outlet，約 240 家店，中央有大草坪與池塘。建議停留 2～3 小時。",
       "prefecture": "長野県",
       "area_group": "輕井澤",
@@ -2199,7 +2540,7 @@
       "mapcode_source": "景點座標經 Saibara ジオコード変換（https://saibara.sakura.ne.jp/map/convgeo.cgi）換算並反查（1）",
       "lat": 36.35209,
       "lng": 138.626885,
-      "google_maps_url": "https://www.google.com/maps/search/?api=1&query=36.352090,138.626885",
+      "google_maps_url": "https://www.google.com/maps/place/?q=place_id:ChIJ7bKhDZvTHWARQfIWff0_-Yo",
       "description": "又名「天鵝湖」，被森林環繞的細長池塘，倒影如畫，秋季紅葉最有名，初夏新綠也很美。建議停留 30 分鐘。",
       "prefecture": "長野県",
       "area_group": "輕井澤",
@@ -2242,7 +2583,7 @@
       "mapcode_source": "景點座標經 Saibara ジオコード変換（https://saibara.sakura.ne.jp/map/convgeo.cgi）換算並反查（1）",
       "lat": 36.359387,
       "lng": 138.590438,
-      "google_maps_url": "https://www.google.com/maps/search/?api=1&query=36.359387,138.590438",
+      "google_maps_url": "https://www.google.com/maps/place/?q=place_id:ChIJ5cLxXiXSHWARz4pWcUXMYWk",
       "description": "星野區域的森林商店街，沿湯川溪流的木平台串連 16 家餐廳咖啡與雜貨店，丸山咖啡很受歡迎。建議停留 1.5 小時，可順遊石之教會與蜻蜓之湯。",
       "prefecture": "長野県",
       "area_group": "輕井澤",
@@ -2487,7 +2828,7 @@
       "phone": "0267-44-3580",
       "lat": 36.362729,
       "lng": 138.588888,
-      "google_maps_url": "https://www.google.com/maps/search/?api=1&query=36.362729,138.588888",
+      "google_maps_url": "https://www.google.com/maps/place/?q=place_id:ChIJrWLlpijSHWARiSps5yzsnKg",
       "description": "大正時代開湯、北原白秋等文人愛去的星野溫泉日歸設施，露天風呂面對森林。建議停留 1.5 小時。",
       "prefecture": "長野県",
       "area_group": "輕井澤",
@@ -2527,7 +2868,7 @@
       "mapcode_source": "景點座標經 Saibara ジオコード変換（https://saibara.sakura.ne.jp/map/convgeo.cgi）換算並反查（0）",
       "lat": 36.41039,
       "lng": 138.59248,
-      "google_maps_url": "https://www.google.com/maps/search/?api=1&query=36.410390,138.592480",
+      "google_maps_url": "https://www.google.com/maps/place/?q=place_id:ChIJFYs9aaXYHWARsnooiOit2r0",
       "description": "高約 3 公尺、寬 70 公尺的弧形瀑布，地下水從岩層如白絲般流下，夏季涼爽。注意：此為長野縣輕井澤町，與靜岡縣富士宮的同名瀑布不同。建議停留 30 分鐘。",
       "prefecture": "長野県",
       "area_group": "輕井澤",
@@ -2574,7 +2915,7 @@
       "phone": "0279-72-3151",
       "lat": 36.497658,
       "lng": 138.916388,
-      "google_maps_url": "https://www.google.com/maps/search/?api=1&query=36.497658,138.916388",
+      "google_maps_url": "https://www.google.com/maps/place/?q=place_id:ChIJU9A8bHdjHmARFne5QTBYVUc",
       "description": "365 級石階兩側林立溫泉饅頭、射的屋的溫泉街，盡頭伊香保神社與河鹿橋。距草津約 1.5 小時，可當中途停留。建議停留 1.5 小時。",
       "prefecture": "群馬県",
       "area_group": "伊香保・榛名",
@@ -2836,6 +3177,58 @@
       "checked_date": "2026-11-12",
       "stay_minutes": 60
     },
+    "h_299d1842cdb1": {
+      "kind": "spot",
+      "name": "おかべ 晚餐（鎖定 18:00；或 18:30，入住時選）",
+      "categories": [
+        "auto"
+      ],
+      "category_source": "route_I_item",
+      "note": "停留約 60 分；晚餐（旅館）；夕朝食付。倒推最晚 17:30 完成入住。開餐時刻已由住宿部補上。",
+      "hours": "待查",
+      "field_status": {
+        "hours": "待查"
+      },
+      "stay_minutes": 60
+    },
+    "h_14d80e0ca7b6": {
+      "kind": "spot",
+      "name": "最晚離開王子西館（僅在延誤時；仍走白絲＋午餐則難以穩到 15:30，17:30 為硬性最晚抵達）",
+      "categories": [
+        "auto"
+      ],
+      "category_source": "route_I_item",
+      "note": "建議 09:00 出發。輕井澤→伊香保交通部 85 分，規劃以 2 小時計；白絲另加 21 分＋停留。",
+      "hours": "待查",
+      "field_status": {
+        "hours": "待查"
+      }
+    },
+    "h_4fb231b5d24e": {
+      "kind": "spot",
+      "name": "目標抵達／開始入住 あかりの宿 おかべ（15:00 起）",
+      "categories": [
+        "auto"
+      ],
+      "category_source": "route_I_item",
+      "note": "最晚 17:30。先 check-in 再逛石段街。",
+      "hours": "待查",
+      "field_status": {
+        "hours": "待查"
+      }
+    },
+    "h_42dab37ed0b7": {
+      "kind": "spot",
+      "name": "最晚抵達並完成入住 おかべ（晚餐 18:00 倒推，預留 30 分）",
+      "categories": [
+        "auto"
+      ],
+      "category_source": "route_I_item",
+      "hours": "待查",
+      "field_status": {
+        "hours": "待查"
+      }
+    },
     "s_6243bc70": {
       "kind": "spot",
       "name": "榛名山 五連ヘアピン（県道33号 渋川松井田線）",
@@ -2862,7 +3255,7 @@
       "mapcode_source": "景點點位 Mapion 右鍵換算 94 873 356*16；Saibara 反查誤差 1.4 m（Saibara 正換算 94 873 356*16，誤差 1.4 m）",
       "lat": 36.497941,
       "lng": 138.904268,
-      "google_maps_url": "https://www.google.com/maps/search/?api=1&query=36.497941,138.904268",
+      "google_maps_url": "https://www.google.com/maps/search/?api=1&query=%E6%A6%9B%E5%90%8D%E5%B1%B1+%E4%BA%94%E9%80%A3%E3%83%98%E3%82%A2%E3%83%94%E3%83%B3%EF%BC%88%E7%9C%8C%E9%81%9333%E5%8F%B7+%E6%B8%8B%E5%B7%9D%E6%9D%BE%E4%BA%95%E7%94%B0%E7%B7%9A%EF%BC%89+%E7%BE%A4%E9%A6%AC%E7%9C%8C%E6%B8%8B%E5%B7%9D%E5%B8%82%E4%BC%8A%E9%A6%99%E4%BF%9D%E7%94%BA%E6%B9%AF%E4%B8%AD%E5%AD%90",
       "description": "伊香保往榛名湖的縣道 33 號連續髮夾彎（實際為 4 個髮夾彎，彎道標號 No.17～13），因《頭文字D》秋名山取景聞名。代表點為 OSM 道路幾何的髮夾彎頂點。道路上不可停車，已設減速丘，請只在合法停車處下車拍照。",
       "prefecture": "群馬県",
       "area_group": "伊香保・榛名",
@@ -2904,7 +3297,7 @@
       "mapcode_source": "景點點位 Mapion 右鍵換算 295 209 704*26；Saibara 反查誤差 2.0 m（Saibara 正換算 295 209 704*26，誤差 2.0 m）",
       "lat": 36.4763945,
       "lng": 138.8674138,
-      "google_maps_url": "https://www.google.com/maps/search/?api=1&query=36.4763945,138.8674138",
+      "google_maps_url": "https://www.google.com/maps/place/?q=place_id:ChIJZ7OkkqR8HmARECbNyNEiw9o",
       "description": "榛名山火口湖，湖面倒映榛名富士，湖畔可散步、搭天鵝船。距伊香保約 30 分車程，可與髮夾彎同遊。",
       "prefecture": "群馬県",
       "area_group": "伊香保・榛名",
@@ -3167,6 +3560,44 @@
       "note": "True",
       "stay_minutes": 60
     },
+    "h_668e14f86713": {
+      "kind": "spot",
+      "name": "おかべ 晚餐（鎖定 18:00；或 18:30，入住時選）",
+      "categories": [
+        "auto"
+      ],
+      "category_source": "route_I_item",
+      "note": "停留約 60 分；晚餐（旅館）；開餐時刻待查。",
+      "hours": "待查",
+      "field_status": {
+        "hours": "待查"
+      },
+      "stay_minutes": 60
+    },
+    "h_8bfcdda3f886": {
+      "kind": "spot",
+      "name": "最晚離開榛名湖／髮夾彎（回程約 14–20 分）",
+      "categories": [
+        "auto"
+      ],
+      "category_source": "route_I_item",
+      "hours": "待查",
+      "field_status": {
+        "hours": "待查"
+      }
+    },
+    "h_5cf009fb7950": {
+      "kind": "spot",
+      "name": "最晚返回おかべ並預留入住後晚餐準備",
+      "categories": [
+        "auto"
+      ],
+      "category_source": "route_I_item",
+      "hours": "待查",
+      "field_status": {
+        "hours": "待查"
+      }
+    },
     "s_34a07cae": {
       "kind": "spot",
       "name": "金精道路（金精峠・金精トンネル）",
@@ -3193,7 +3624,7 @@
       "mapcode_source": "景點點位 Mapion 右鍵換算 735 227 833*65；Saibara 反查誤差 2.5 m（Saibara 正換算 735 227 833*57，誤差 1.6 m）",
       "lat": 36.8189603,
       "lng": 139.3949064,
-      "google_maps_url": "https://www.google.com/maps/search/?api=1&query=36.8189603,139.3949064",
+      "google_maps_url": "https://www.google.com/maps/place/?q=place_id:ChIJ45yH8gSzH2ARfbGauDRHwBY",
       "description": "國道 120 號群馬片品～奥日光湯元之間的山岳道路，冬季封閉。冬季封閉 2026/12/25～2027/4/23 12:00（群馬縣公告），6/29 在開通期內；日光白根山噴火警戒等級 3 以上時全面封閉（出發前再確認）。金精トンネル旁有小型停車場可眺望。",
       "prefecture": "群馬県",
       "area_group": "奥日光",
@@ -3238,7 +3669,7 @@
       "mapcode_source": "景點座標經 Saibara ジオコード変換（https://saibara.sakura.ne.jp/map/convgeo.cgi）換算並反查（1）",
       "lat": 36.739198,
       "lng": 139.492789,
-      "google_maps_url": "https://www.google.com/maps/search/?api=1&query=36.739198,139.492789",
+      "google_maps_url": "https://www.google.com/maps/place/?q=place_id:ChIJVe3KYi2sH2ARcHgBO2EHmhg",
       "description": "男體山噴發形成的高山湖（1,269m），夏季涼爽，可搭遊覽船。湖畔有英國、義大利大使館別墅紀念公園。建議停留 1～2 小時。",
       "prefecture": "栃木県",
       "area_group": "奥日光",
@@ -3291,7 +3722,7 @@
       "phone": "0288-55-0030",
       "lat": 36.738009,
       "lng": 139.501968,
-      "google_maps_url": "https://www.google.com/maps/search/?api=1&query=36.738009,139.501968",
+      "google_maps_url": "https://www.google.com/maps/place/?q=place_id:ChIJwb6wwMioH2ARjVZDylifnCc",
       "description": "日本三名瀑之一，中禪寺湖水從 97 公尺斷崖直落，搭電梯下觀瀑台可近距離感受震撼。建議停留 40 分鐘。",
       "prefecture": "栃木県",
       "area_group": "奥日光",
@@ -3316,55 +3747,6 @@
       ],
       "checked_date": "2026-11-12",
       "note": "座標來源：OSM node/3324186408（華厳滝）；停車場：県営華厳の滝第1駐車場（OSM way/48046140，距景點約 122 m，座標為停車場中心點/節點，非入口精確點）；MapCode 來源：Saibara ジオコード変換 https://saibara.sakura.ne.jp/map/convgeo.cgi 以停車場 WGS84 座標換算，反向換算誤差約 1 m；電話/時間來源：https://kegon.jp/；官網/參考：https://kegon.jp/；查詢日期 2026-10-24；【路線I 日程檢核 2026-11-12】6/29(二)：電梯 8:00～17:00 營業；本次更新來源見 sources／parkings.source，查詢日期 2026-11-12"
-    },
-    "s_6d96731f": {
-      "kind": "spot",
-      "name": "鬼怒川温泉（鬼怒川溫泉）",
-      "name_ja": "鬼怒川温泉",
-      "categories": [
-        "onsen"
-      ],
-      "category_source": "trip.json spots",
-      "hours": "溫泉街戶外全天；各湯屋依店家",
-      "closed_days": "溫泉街無；各店依店家",
-      "admission": "依各湯屋，待查",
-      "stay_minutes": 90,
-      "rain_ok": true,
-      "season_note": "適合：溫泉飯店區，雨天泡湯。；【路線I 雨季備案】雨天可泡旅館溫泉",
-      "parking": {
-        "available": true,
-        "type": "dedicated",
-        "name": "停車場",
-        "lat": 36.840424,
-        "lng": 139.7239604,
-        "mapcode": "367 627 428*85"
-      },
-      "mapcode": "367 566 432*60",
-      "mapcode_source": "景點座標經 Saibara ジオコード変換（https://saibara.sakura.ne.jp/map/convgeo.cgi）換算並反查（1）",
-      "lat": 36.82371,
-      "lng": 139.71689,
-      "google_maps_url": "https://www.google.com/maps/search/?api=1&query=36.823710,139.716890",
-      "description": "關東代表溫泉鄉之一，沿鬼怒川溪谷林立大型溫泉飯店，車站前有足湯與鬼怒太像。建議以住宿為主，停留半天。",
-      "prefecture": "栃木県",
-      "area_group": "鬼怒川",
-      "region": "鬼怒川",
-      "base": "NIKKO",
-      "sources": [
-        {
-          "url": "https://www.kinugawa-onsen.com/"
-        },
-        {
-          "url": "https://www.youtube.com/watch?v=Q85_Ri_evBY"
-        },
-        {
-          "url": "https://linshibi.com/?p=22266"
-        }
-      ],
-      "checked_date": "2026-11-12",
-      "note": "座標來源：OSM way/428686787 鬼怒川温泉駅；停車場未查到可靠公開座標；MapCode 未查到；電話未於官網查到；營業時間未於官網查到，出發前確認；官網/參考：https://www.kinugawa-onsen.com/；查詢日期 2026-10-24；【路線I 日程檢核 2026-11-12】6/29(二)～7/1(四)：溫泉街無公休；本次更新來源見 sources／parkings.source，查詢日期 2026-11-12",
-      "field_status": {
-        "phone": "待查"
-      }
     },
     "r-nikko-010": {
       "kind": "restaurant",
@@ -3548,20 +3930,166 @@
       "checked_date": "2026-11-12",
       "stay_minutes": 60
     },
-    "h_741be34af09e": {
+    "r-nikko-007": {
       "kind": "restaurant",
-      "name": "あさや 晚餐（兩版皆 2食）",
-      "hours": "待查",
-      "closed_days": "待查",
-      "field_status": {
-        "hours": "待查",
-        "closed_days": "待查",
-        "phone": "待查",
-        "mapcode": "待查",
-        "address": "待查",
-        "parking": "待查"
+      "name": "魚登久（魚登久（今市 鰻魚））",
+      "name_ja": "魚登久",
+      "cuisine": "在地名物",
+      "cuisine_group": "在地名物",
+      "budget_lunch": "¥2,000–¥2,999（Tabelog）",
+      "hours": "星期二，星期三，星期四，星期五，星期六，星期日 11:00 - 14:00 17:30 - 21:00 星期一 公休日 ■店休日 星期一，第三個星期日（有時會營業）",
+      "closed_days": "週一；Tabelog 註：星期一，第三個星期日（有時會營業）",
+      "reservation": {
+        "method": "可預約（電話 0288-21-0131）",
+        "note": null,
+        "source": "https://tabelog.com/tochigi/A0903/A090302/9000136/",
+        "booked": false
       },
+      "lat": 36.723957,
+      "lng": 139.685567,
+      "google_maps_url": "https://www.google.com/maps/search/?api=1&query=%E9%AD%9A%E7%99%BB%E4%B9%85%20%E6%A0%83%E6%9C%A8%E7%9C%8C%E6%97%A5%E5%85%89%E5%B8%82%E4%BB%8A%E5%B8%82467",
+      "address": "栃木県日光市今市467",
+      "phone": "0288-21-0131",
+      "mapcode": "132 787 469*75",
+      "mapcode_source": "saibara convgeo（https://saibara.sakura.ne.jp/map/convgeo.cgi）由座標 36.723957,139.685567 換算 132 787 469*75，反查回讀誤差 1.4 m；既有資料（既有餐廳庫 Mapion 右鍵＋回讀） 得 132 787 469*76（以 saibara 反查誤差 2.0 m，末碼差異屬同點不同換算）",
+      "parking": {
+        "available": true,
+        "type": "nearby",
+        "name": "未命名停車場（OSM way/308978047）",
+        "lat": 36.721265,
+        "lng": 139.686544,
+        "mapcode": "132 787 173*54",
+        "mapcode_source": "saibara convgeo（https://saibara.sakura.ne.jp/map/convgeo.cgi）由座標 36.721265,139.686544 換算 132 787 173*54，反查回讀誤差 1.6 m；既有資料（既有餐廳庫 Mapion 地圖 https://www.mapion.co.jp/m2/36） 得 132 787 173*54，完全一致",
+        "walk_min": 5,
+        "note": "距店直線約 312 m；座標為停車場中心點（OSM）；OSM 未標名稱／用途，可能為其他設施專用，現場確認",
+        "source": "https://www.openstreetmap.org/way/308978047"
+      },
+      "ratings": [
+        {
+          "source": "tabelog",
+          "url": "https://tabelog.com/tochigi/A0903/A090302/9000136/",
+          "scale": 5,
+          "score": 3.7,
+          "checked_at": "2026-11-12"
+        },
+        {
+          "source": "google",
+          "url": "https://www.google.com/maps/search/?api=1&query=%E9%AD%9A%E7%99%BB%E4%B9%85%20%E6%A0%83%E6%9C%A8%E7%9C%8C%E6%97%A5%E5%85%89%E5%B8%82%E4%BB%8A%E5%B8%82467",
+          "checked_at": "2026-11-12",
+          "note": "只放 Google 地圖連結，不填分數"
+        }
+      ],
+      "description": "今市的老字號鰻魚店，炭火蒲燒鰻重，Tabelog 3.70；週一公休，可預約，40 台停車。",
+      "sources": [
+        {
+          "url": "https://tabelog.com/tochigi/A0903/A090302/9000136/"
+        },
+        {
+          "url": "https://tabelog.com/tw/tochigi/A0903/A090302/9000136/"
+        }
+      ],
+      "checked_date": "2026-11-12",
       "stay_minutes": 60
+    },
+    "r-nikko-015": {
+      "kind": "restaurant",
+      "name": "渓谷のレストラン ステーキよし乃（溪谷餐廳 牛排吉乃（鬼怒川））",
+      "name_ja": "渓谷のレストラン ステーキよし乃",
+      "cuisine": "燒肉",
+      "cuisine_group": "燒肉",
+      "budget_lunch": "¥8,000–¥9,999（Tabelog）",
+      "budget_dinner": "¥8,000–¥9,999（Tabelog）",
+      "hours": "星期三，星期四，星期五，星期六，星期日 11:30 - 14:30 L.O. 14:00 17:00 - 20:30 L.O. 19:30 星期一，星期二 公休日 ■店休日 可能會有所變更，詳細資訊請參考我們的網站或社交媒體。",
+      "closed_days": "週一、週二；Tabelog 註：可能會有所變更，詳細資訊請參考我們的網站或社交媒體。",
+      "reservation": {
+        "method": "可預約（電話 0288-25-7762）；Tabelog 有網路訂位",
+        "note": "・對於過敏的處理我們無法提供協助。 ・如有五人以上的用餐需求，請聯繫店鋪。 ・使用包廂的顧客，請透過官方網站進行預約。 ※平日包廂費用為10000日圓，週末及假日為15000日圓。",
+        "source": "https://tabelog.com/tochigi/A0903/A090303/9021667/",
+        "booked": false
+      },
+      "lat": 36.815087,
+      "lng": 139.709677,
+      "google_maps_url": "https://www.google.com/maps/search/?api=1&query=%E6%B8%93%E8%B0%B7%E3%81%AE%E3%83%AC%E3%82%B9%E3%83%88%E3%83%A9%E3%83%B3%20%E3%82%B9%E3%83%86%E3%83%BC%E3%82%AD%E3%82%88%E3%81%97%E4%B9%83%20%E6%A0%83%E6%9C%A8%E7%9C%8C%E6%97%A5%E5%85%89%E5%B8%82%E9%AC%BC%E6%80%92%E5%B7%9D%E6%B8%A9%E6%B3%89%E5%A4%A7%E5%8E%9F680-1",
+      "address": "栃木県日光市鬼怒川温泉大原680-1",
+      "phone": "0288-25-7762",
+      "mapcode": "367 535 406*61",
+      "mapcode_source": "saibara convgeo（https://saibara.sakura.ne.jp/map/convgeo.cgi）由座標 36.815087,139.709677 換算 367 535 406*61，反查回讀誤差 1.5 m；既有資料（既有餐廳庫 Mapion 右鍵＋回讀） 得 367 535 406*61，完全一致",
+      "parking": {
+        "available": true,
+        "type": "nearby",
+        "name": "未命名停車場（OSM way/216969939）",
+        "lat": 36.817105,
+        "lng": 139.707316,
+        "mapcode": "367 535 608*85",
+        "mapcode_source": "saibara convgeo（https://saibara.sakura.ne.jp/map/convgeo.cgi）由座標 36.817105,139.707316 換算 367 535 608*85，反查回讀誤差 0.6 m；既有資料（既有餐廳庫 Mapion 地圖 https://www.mapion.co.jp/m2/36） 得 367 535 608*86（以 saibara 反查誤差 2.1 m，末碼差異屬同點不同換算）",
+        "walk_min": 5,
+        "note": "距店直線約 308 m；座標為停車場中心點（OSM）；OSM 未標名稱／用途，可能為其他設施專用，現場確認",
+        "source": "https://www.openstreetmap.org/way/216969939"
+      },
+      "ratings": [
+        {
+          "source": "tabelog",
+          "url": "https://tabelog.com/tochigi/A0903/A090303/9021667/",
+          "scale": 5,
+          "score": 3.56,
+          "checked_at": "2026-11-12"
+        },
+        {
+          "source": "google",
+          "url": "https://www.google.com/maps/search/?api=1&query=%E6%B8%93%E8%B0%B7%E3%81%AE%E3%83%AC%E3%82%B9%E3%83%88%E3%83%A9%E3%83%B3%20%E3%82%B9%E3%83%86%E3%83%BC%E3%82%AD%E3%82%88%E3%81%97%E4%B9%83%20%E6%A0%83%E6%9C%A8%E7%9C%8C%E6%97%A5%E5%85%89%E5%B8%82%E9%AC%BC%E6%80%92%E5%B7%9D%E6%B8%A9%E6%B3%89%E5%A4%A7%E5%8E%9F680-1",
+          "checked_at": "2026-11-12",
+          "note": "只放 Google 地圖連結，不填分數"
+        }
+      ],
+      "description": "鬼怒川溪谷旁的牛排餐廳；11:30～14:30、17:00～20:30，週一二休。",
+      "sources": [
+        {
+          "url": "https://tabelog.com/tochigi/A0903/A090303/9021667/"
+        },
+        {
+          "url": "https://tabelog.com/tw/tochigi/A0903/A090303/9021667/"
+        }
+      ],
+      "checked_date": "2026-11-12",
+      "stay_minutes": 60
+    },
+    "h_cab3e22f281f": {
+      "kind": "spot",
+      "name": "目標離開おかべ（朝食請選 8:00）。最晚出發 09:00",
+      "categories": [
+        "auto"
+      ],
+      "category_source": "route_I_item",
+      "note": "車程緩衝約 205 分（交通部 111+53 分×1.25，與景點部估計 206 分一致）。",
+      "hours": "待查",
+      "field_status": {
+        "hours": "待查"
+      }
+    },
+    "h_f8e9ce8c5de0": {
+      "kind": "spot",
+      "name": "最晚離開おかべ（晚於此時須再刪減中禪寺／華嚴）",
+      "categories": [
+        "auto"
+      ],
+      "category_source": "route_I_item",
+      "hours": "待查",
+      "field_status": {
+        "hours": "待查"
+      }
+    },
+    "h_ffb3e7a1221b": {
+      "kind": "spot",
+      "name": "最晚抵達 ホテル栂の季（鎖定 17:00 前；目標 16:30）",
+      "categories": [
+        "auto"
+      ],
+      "category_source": "route_I_item",
+      "note": "官網：17:00 後須先聯絡，21:00 後不受理。我們不聯絡飯店，故不以 18:00 最終入住為目標。目前素泊，無旅館晚餐時限。",
+      "hours": "待查",
+      "field_status": {
+        "hours": "待查"
+      }
     },
     "s_ecd75926": {
       "kind": "spot",
@@ -3589,7 +4117,7 @@
       "mapcode_source": "景點點位 Mapion 右鍵換算 367 212 548*70；Saibara 反查誤差 2.0 m（Saibara 正換算 367 212 548*78，誤差 1.8 m）",
       "lat": 36.7331459,
       "lng": 139.5158615,
-      "google_maps_url": "https://www.google.com/maps/search/?api=1&query=36.7331459,139.5158615",
+      "google_maps_url": "https://www.google.com/maps/place/?q=place_id:ChIJpRTs48SpH2ARRknw2u3uubE",
       "description": "連接日光市區與中禪寺湖的 48 個髮夾彎山路，上行為第二いろは坂、下行為第一いろは坂（單向）。第二いろは坂頂端有明智平（纜車展望台）。第一いろは坂途中不可停車。",
       "prefecture": "栃木県",
       "area_group": "日光市區・鬼怒川",
@@ -3632,7 +4160,7 @@
       "phone": "0288-54-0560",
       "lat": 36.757638,
       "lng": 139.59911,
-      "google_maps_url": "https://www.google.com/maps/search/?api=1&query=36.757638,139.599110",
+      "google_maps_url": "https://www.google.com/maps/place/?q=place_id:ChIJNSAhU8WmH2ARlA7wenFbUKs",
       "description": "供奉德川家康的世界遺產，陽明門、三猿、眠貓等華麗雕刻是日本建築巔峰。位於日光市區（山內），上奧日光前順遊。建議停留 1.5～2 小時。",
       "prefecture": "栃木県",
       "area_group": "奥日光",
@@ -3843,20 +4371,17 @@
       "checked_date": "2026-11-12",
       "stay_minutes": 60
     },
-    "h_b888b3717fdc": {
-      "kind": "restaurant",
-      "name": "あさや 晚餐（2食）",
+    "h_60607ea2566f": {
+      "kind": "spot",
+      "name": "建議最晚離開東照宮大駐車場（館 17:00 閉；回程估計 30 分）",
+      "categories": [
+        "auto"
+      ],
+      "category_source": "route_I_item",
       "hours": "待查",
-      "closed_days": "待查",
       "field_status": {
-        "hours": "待查",
-        "closed_days": "待查",
-        "phone": "待查",
-        "mapcode": "待查",
-        "address": "待查",
-        "parking": "待查"
-      },
-      "stay_minutes": 60
+        "hours": "待查"
+      }
     },
     "s_2b86ea27": {
       "kind": "spot",
@@ -3884,7 +4409,7 @@
       "mapcode_source": "景點座標經 Saibara ジオコード変換（https://saibara.sakura.ne.jp/map/convgeo.cgi）換算並反查（1）",
       "lat": 36.820694,
       "lng": 139.708412,
-      "google_maps_url": "https://www.google.com/maps/search/?api=1&query=36.820694,139.708412",
+      "google_maps_url": "https://www.google.com/maps/place/?q=place_id:ChIJ5xe-HQufH2AROc4RLdyRhHo",
       "description": "橫跨鬼怒川長 140 公尺的步行吊橋，俯瞰溪谷與溫泉飯店群，對岸可登楯岩展望台。建議停留 30 分鐘。",
       "prefecture": "栃木県",
       "area_group": "鬼怒川",
@@ -3937,7 +4462,7 @@
       "phone": "0288-77-0531",
       "lat": 36.826014,
       "lng": 139.715504,
-      "google_maps_url": "https://www.google.com/maps/search/?api=1&query=36.826014,139.715504",
+      "google_maps_url": "https://www.google.com/maps/place/?q=place_id:ChIJy6dPIDefH2ARcPbRPqVUpEU",
       "description": "船夫撐竿操舟沿鬼怒川急流而下約 40 分鐘，奇岩與溪谷近在眼前。",
       "prefecture": "栃木県",
       "area_group": "鬼怒川",
@@ -4081,21 +4606,6 @@
         }
       ],
       "checked_date": "2026-11-12",
-      "stay_minutes": 60
-    },
-    "h_dfc96d5d7c61": {
-      "kind": "restaurant",
-      "name": "あさや 晚餐（2食，最後一晚）",
-      "hours": "待查",
-      "closed_days": "待查",
-      "field_status": {
-        "hours": "待查",
-        "closed_days": "待查",
-        "phone": "待查",
-        "mapcode": "待查",
-        "address": "待查",
-        "parking": "待查"
-      },
       "stay_minutes": 60
     },
     "rI-utm_masashi": {
@@ -4446,7 +4956,7 @@
       "phone": "050-1809-3464",
       "lat": 36.2930054,
       "lng": 139.6048892,
-      "google_maps_url": "https://www.google.com/maps/search/?api=1&query=36.2930054,139.6048892",
+      "google_maps_url": "https://www.google.com/maps/place/?q=place_id:ChIJVVU5Ii1HH2ARuJlcT0IR768",
       "description": "北關東最大型 Outlet，約 180 店。鄰近東北道 佐野藤岡IC，週末 IC 附近易塞，建議走 佐野SA スマートIC。",
       "prefecture": "栃木県",
       "area_group": "宇都宮・佐野",
@@ -4502,7 +5012,7 @@
       "mapcode_source": "景點座標經 Saibara ジオコード変換（https://saibara.sakura.ne.jp/map/convgeo.cgi）換算並反查（2）",
       "lat": 35.545012,
       "lng": 139.767039,
-      "google_maps_url": "https://www.google.com/maps/search/?api=1&query=35.545012,139.767039",
+      "google_maps_url": "https://www.google.com/maps/place/?q=place_id:ChIJNUhg6GFhGGAR3CX1Keaj8Ow",
       "description": "國際線第 3 航廈 4 樓重現江戶街景的餐飲伴手禮區，有壽喜燒、拉麵、壽司與動漫周邊店。7/4 早班機前可提早到，在這裡吃早餐、買最後的伴手禮。",
       "prefecture": "東京都",
       "area_group": "東京動漫",
@@ -4743,7 +5253,7 @@
       "phone": "03-6459-9088",
       "lat": 35.5450118,
       "lng": 139.7670385,
-      "google_maps_url": "https://www.google.com/maps/search/?api=1&query=35.545012,139.767039",
+      "google_maps_url": "https://www.google.com/maps/place/?q=place_id:ChIJYTLmAlRhGGARPyOIQzeVakk",
       "description": "羽田第 3 航廈（國際線）5F「TOKYO POPTOWN」、安檢前區域的角色商品店，寶可夢、三麗鷗、吉卜力等人氣角色和羽田限定商品集中；回程日出境前最後補買的地方。",
       "prefecture": "東京都",
       "area_group": "羽田周邊",
@@ -4786,7 +5296,7 @@
       "mapcode_source": "景點座標經 Saibara ジオコード変換（https://saibara.sakura.ne.jp/map/convgeo.cgi）換算並反查（1）",
       "lat": 35.547997,
       "lng": 139.755987,
-      "google_maps_url": "https://www.google.com/maps/search/?api=1&query=35.547997,139.755987",
+      "google_maps_url": "https://www.google.com/maps/place/?q=place_id:ChIJe8W50P1hGGARrFUH8g4agXs",
       "description": "羽田機場旁天空橋站直結的新商業設施，頂樓免費足湯可看飛機起降，館內有餐廳與科技展示。最後兩晚住羽田時，傍晚來泡腳看飛機很放鬆。",
       "prefecture": "東京都",
       "area_group": "東京動漫",
@@ -5041,7 +5551,7 @@
       "mapcode_source": "景點座標經 Saibara ジオコード変換（https://saibara.sakura.ne.jp/map/convgeo.cgi）換算並反查（1）",
       "lat": 36.36968,
       "lng": 138.65624,
-      "google_maps_url": "https://www.google.com/maps/search/?api=1&query=36.369680,138.656240",
+      "google_maps_url": "https://www.google.com/maps/place/?q=place_id:ChIJewD5_mjUHWARkoSGzzO5OT8",
       "description": "橫跨長野與群馬縣界的神社，境內有縣界線，名物御神木「科の木」與力餅。旁邊見晴台可望淺間山。建議停留 40 分鐘。",
       "prefecture": "長野県",
       "area_group": "輕井澤",
@@ -5078,7 +5588,7 @@
       "phone": "0267-45-8579",
       "lat": 36.3672721,
       "lng": 138.6564275,
-      "google_maps_url": "https://www.google.com/maps/search/?api=1&query=36.3672721,138.6564275",
+      "google_maps_url": "https://www.google.com/maps/place/?q=place_id:ChIJkWtN0o3VHWARFZhxiPChK2w",
       "description": "展望台｜〒389-0101 長野県北佐久郡軽井沢町峠町｜Google 4.3（343 則）｜距輕井澤約 4.1 km（直線）",
       "prefecture": "長野県",
       "area_group": "輕井澤",
@@ -5123,7 +5633,7 @@
       "mapcode_source": "景點座標經 Saibara ジオコード変換（https://saibara.sakura.ne.jp/map/convgeo.cgi）換算並反查（1）",
       "lat": 36.666429,
       "lng": 138.534396,
-      "google_maps_url": "https://www.google.com/maps/search/?api=1&query=36.666429,138.534396",
+      "google_maps_url": "https://www.google.com/maps/place/?q=place_id:ChIJaUFlBjnvHWAR13nWJup-NG8",
       "description": "—。日期：2026/10 時點：火口 500 m 內禁止進入、山頂停車場停用，國道 292 號可通行；2027 年狀況未確認。建議：避開（不排湯釜）。",
       "prefecture": "群馬県",
       "area_group": "草津",
@@ -5163,7 +5673,7 @@
       "mapcode_source": "景點座標經 Saibara ジオコード変換（https://saibara.sakura.ne.jp/map/convgeo.cgi）換算並反查（1）",
       "lat": 36.666429,
       "lng": 138.534396,
-      "google_maps_url": "https://www.google.com/maps/search/?api=1&query=36.666429,138.534396",
+      "google_maps_url": "https://www.google.com/maps/place/?q=place_id:ChIJswHMDwrvHWARblIrYB1qu5E",
       "description": "連接草津與志賀高原的山岳公路，沿途火山荒原、殺生河原與高山植物，天晴時景觀絕佳，是自駕名路線。2026 年 5/29 全線通車，冬季封閉至隔年 4 月下旬。建議車程含停留 1.5～2 小時。",
       "prefecture": "群馬県",
       "area_group": "草津",
@@ -5203,7 +5713,7 @@
       "mapcode_source": "景點點位 Mapion 換算，Saibara 反查誤差 1.4 m",
       "lat": 36.4345724,
       "lng": 138.4210081,
-      "google_maps_url": "https://www.google.com/maps/search/?api=1&query=36.4345724,138.4210081",
+      "google_maps_url": "https://www.google.com/maps/place/?q=place_id:ChIJ65SMOefHHWARC4Oa_V2WWYI",
       "description": "季節活動／花期。2027 推估 6/5–6/30；距輕井澤約 30 km（群馬・長野縣境）",
       "prefecture": "群馬県",
       "area_group": "輕井澤",
