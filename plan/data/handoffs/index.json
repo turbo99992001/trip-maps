@@ -1,15 +1,21 @@
 {
   "schema": "agency.handoff_static_index.v1",
   "restaurants": [
-    "draft-20261030-234939-a42f"
+    "draft-20261030-234939-a42f",
+    "draft-20261116-152700-tokj",
+    "draft-20261116-152700-tokk"
   ],
-  "updated_at": "2026-11-12T02:14:12+08:00",
+  "updated_at": "2026-11-16T15:40:00+08:00",
   "places": [
     "draft-20261030-234939-a42f",
-    "draft-20261112-014659-toki"
+    "draft-20261112-014659-toki",
+    "draft-20261116-152700-tokj",
+    "draft-20261116-152700-tokk"
   ],
   "routes": [
     "draft-20261030-234939-a42f",
-    "draft-20261112-014659-toki"
+    "draft-20261112-014659-toki",
+    "draft-20261116-152700-tokj",
+    "draft-20261116-152700-tokk"
   ]
 }
